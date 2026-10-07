@@ -1,0 +1,4 @@
+*.log
+snapshots/
+renders/
+node_modules/

@@ -109,6 +109,12 @@ Quand BOS détecte qu'un skill spécialisé est nécessaire, il lance `diagnosis
 
 L'entrepreneur n'a jamais besoin de retenir une commande. Il arrive et BOS prend les rênes.
 
+#### Création vidéo — quel outil pour quoi
+- **Pubs vidéo avec scènes réalistes, personnages, produit en situation** → méthode actuelle : `creative-ia-center` (Higgsfield : images Nano Banana Pro, vidéos Kling ; voix ElevenLabs) + `montage-pub-ia` pour le montage. C'est la méthode par défaut pour toute « créa » / pub produit. Ne pas la remplacer par HyperFrames.
+- **Graphisme animé, sans personnage réaliste** → HyperFrames (`hyperframes` puis le workflow adapté) : texte animé, chiffres/prix animés, sous-titres karaoké ou intégrés (`embedded-captions`), incrustations sur une vidéo face caméra (`talking-head-recut`), démo produit/site, slides, cartes, packshot 3D simple (Three.js).
+- HyperFrames ne génère pas de personnes réalistes lui-même : il code la vidéo en HTML. Ses humains réalistes passent par HeyGen (avatar présentateur face caméra, compte HeyGen requis). Pour une pub avec des humains en action → `creative-ia-center`.
+- Combinaison possible : clips générés par `creative-ia-center`, puis couche graphique (sous-titres, prix, CTA animés) faite avec HyperFrames.
+
 ## Cadre des 6 Causes d'Inaction
 
 Quand l'entrepreneur ne fait pas ce qu'il devrait, diagnostiquer POURQUOI avec ces 6 causes racines. Chacune a une réponse différente :

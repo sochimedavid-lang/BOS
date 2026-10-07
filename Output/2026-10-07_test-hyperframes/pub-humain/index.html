@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Test pub humain — KORA</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Regular.otf"); font-weight: 400; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Black.otf"); font-weight: 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1b1d24; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Inter", sans-serif; color: #fff; }
+      .bg { position: absolute; inset: 0; }
+      #bg-cold { background: radial-gradient(120% 80% at 50% 60%, #4a4f5c 0%, #1b1d24 70%); }
+      #bg-warm { background: radial-gradient(120% 80% at 50% 60%, #f6b45c 0%, #c4572a 55%, #4a1a12 100%); opacity: 0; }
+      #stage { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+      .text-scene { position: absolute; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 80px; }
+      .top { top: 150px; }
+      .bottom { bottom: 170px; }
+      .hook { font-size: 92px; font-weight: 900; line-height: 1.02; letter-spacing: -0.03em; max-width: 920px; text-shadow: 0 6px 30px rgba(0, 0, 0, 0.55); }
+      .brand { font-size: 150px; font-weight: 900; letter-spacing: 0.12em; color: #fff4dc; text-shadow: 0 8px 40px rgba(90, 30, 0, 0.6); }
+      .sub { margin-top: 18px; font-size: 54px; font-weight: 700; line-height: 1.1; max-width: 880px; text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5); }
+      .pill { display: block; padding: 22px 44px; border-radius: 999px; background: rgba(255, 255, 255, 0.92); color: #5a1d0c; font-size: 50px; font-weight: 800; }
+      .pill + .pill { margin-top: 22px; }
+      .cta-card { display: flex; flex-direction: column; align-items: center; padding: 46px 64px 54px; border-radius: 48px; background: #fff; color: #2a0f06; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); }
+      .price { font-size: 128px; font-weight: 900; letter-spacing: -0.03em; color: #c4572a; line-height: 1; }
+      .cod { margin-top: 14px; font-size: 46px; font-weight: 700; }
+      .btn { display: block; margin-top: 30px; padding: 26px 60px; border-radius: 999px; background: #1f9d55; color: #fff; font-size: 52px; font-weight: 900; }
+      .tag { position: absolute; top: 48px; left: 48px; font-size: 26px; font-weight: 600; opacity: 0.55; letter-spacing: 0.08em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+      <div id="bg-cold" class="bg"></div>
+      <div id="bg-warm" class="bg"></div>
+
+      <svg id="stage" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="skin" cx="45%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#9a6040" />
+            <stop offset="100%" stop-color="#6b3d24" />
+          </radialGradient>
+          <linearGradient id="amber" x1="0" x2="1">
+            <stop offset="0%" stop-color="#7a3a08" />
+            <stop offset="45%" stop-color="#d07a1c" />
+            <stop offset="100%" stop-color="#8a4208" />
+          </linearGradient>
+          <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="rgba(0,0,0,0.45)" />
+            <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+          </radialGradient>
+        </defs>
+
+        <g id="character">
+          <!-- Cheveux (afro) -->
+          <g id="hair-wrap">
+            <g id="hair">
+              <circle cx="540" cy="760" r="250" fill="#1d120c" />
+              <circle cx="370" cy="700" r="140" fill="#1d120c" />
+              <circle cx="710" cy="700" r="140" fill="#1d120c" />
+              <circle cx="420" cy="560" r="130" fill="#1d120c" />
+              <circle cx="660" cy="560" r="130" fill="#1d120c" />
+              <circle cx="540" cy="510" r="140" fill="#1d120c" />
+              <circle cx="330" cy="860" r="110" fill="#1d120c" />
+              <circle cx="750" cy="860" r="110" fill="#1d120c" />
+            </g>
+          </g>
+          <!-- Corps -->
+          <path d="M300 1500 C300 1300 400 1240 540 1240 C680 1240 780 1300 780 1500 L780 1920 L300 1920 Z" fill="#e8673a" />
+          <path d="M470 1240 L540 1330 L610 1240 Z" fill="#6b3d24" />
+          <rect x="490" y="1100" width="100" height="170" rx="40" fill="#6b3d24" />
+          <!-- Visage -->
+          <ellipse cx="540" cy="900" rx="200" ry="240" fill="url(#skin)" />
+          <ellipse cx="342" cy="920" rx="30" ry="48" fill="#6b3d24" />
+          <ellipse cx="738" cy="920" rx="30" ry="48" fill="#6b3d24" />
+          <circle cx="338" cy="985" r="16" fill="#e2b345" />
+          <circle cx="742" cy="985" r="16" fill="#e2b345" />
+          <!-- Yeux -->
+          <ellipse cx="465" cy="880" rx="38" ry="26" fill="#fff" />
+          <ellipse cx="615" cy="880" rx="38" ry="26" fill="#fff" />
+          <circle cx="468" cy="882" r="17" fill="#2a1408" />
+          <circle cx="612" cy="882" r="17" fill="#2a1408" />
+          <!-- Sourcils -->
+          <path id="brow-l" d="M420 820 Q465 800 505 815" stroke="#1d120c" stroke-width="12" fill="none" stroke-linecap="round" />
+          <path id="brow-r" d="M575 815 Q615 800 660 820" stroke="#1d120c" stroke-width="12" fill="none" stroke-linecap="round" />
+          <!-- Nez -->
+          <path d="M528 965 Q540 980 552 965" stroke="#4e2a17" stroke-width="7" fill="none" stroke-linecap="round" />
+          <!-- Bouches -->
+          <path id="mouth-sad" d="M480 1060 Q540 1025 600 1060" stroke="#4a1a12" stroke-width="12" fill="none" stroke-linecap="round" />
+          <path id="mouth-happy" d="M465 1030 Q540 1110 615 1030 Z" fill="#7a1f1a" stroke="#4a1a12" stroke-width="6" opacity="0" />
+        </g>
+
+        <!-- Cheveux cassés qui tombent -->
+        <g id="strands" stroke="#1d120c" stroke-width="5" fill="none" stroke-linecap="round">
+          <path class="strand" d="M380 1010 q12 20 0 40" />
+          <path class="strand" d="M700 1000 q-12 20 0 40" />
+          <path class="strand" d="M300 900 q12 20 0 40" />
+          <path class="strand" d="M770 920 q-12 20 0 40" />
+          <path class="strand" d="M430 1090 q12 20 0 40" />
+          <path class="strand" d="M650 1080 q-12 20 0 40" />
+        </g>
+
+        <!-- Flacon KORA -->
+        <g id="bottle-wrap">
+          <g id="bottle">
+            <ellipse cx="0" cy="250" rx="110" ry="18" fill="url(#shadow)" />
+            <rect x="-28" y="-170" width="56" height="60" rx="8" fill="#c9952f" />
+            <rect x="-22" y="-115" width="44" height="40" fill="#a35512" />
+            <path d="M-95 -20 Q-95 -80 0 -80 Q95 -80 95 -20 L95 225 Q95 245 75 245 L-75 245 Q-95 245 -95 225 Z" fill="url(#amber)" />
+            <rect x="-95" y="40" width="190" height="120" fill="#fff4dc" />
+            <text x="0" y="110" text-anchor="middle" font-family="Inter" font-weight="900" font-size="58" fill="#5a1d0c">KORA</text>
+            <text x="0" y="143" text-anchor="middle" font-family="Inter" font-weight="700" font-size="17" fill="#5a1d0c">HUILE CAPILLAIRE</text>
+            <rect x="-70" y="-60" width="18" height="260" rx="9" fill="rgba(255,255,255,0.25)" />
+          </g>
+        </g>
+      </svg>
+
+      <section id="s-hook" class="clip text-scene top" data-start="0" data-duration="2.6" data-track-index="1">
+        <h1 id="hook-text" class="hook">Tes cheveux cassent à chaque coiffage ?</h1>
+      </section>
+      <section id="s-brand" class="clip text-scene top" data-start="2.6" data-duration="2.8" data-track-index="1">
+        <div id="brand-text" class="brand">KORA</div>
+        <p id="brand-sub" class="sub">7 huiles naturelles pour des cheveux forts</p>
+      </section>
+      <section id="s-proof" class="clip text-scene bottom" data-start="5.4" data-duration="2.6" data-track-index="1">
+        <span id="pill-1" class="pill">Sans silicone</span>
+        <span id="pill-2" class="pill">100 % naturelle</span>
+      </section>
+      <section id="s-cta" class="clip text-scene bottom" data-start="8" data-duration="2" data-track-index="1">
+        <div id="cta-card" class="cta-card">
+          <div class="price">15 000 FCFA</div>
+          <div class="cod">Paiement à la livraison</div>
+          <span id="cta-btn" class="btn">Commande maintenant</span>
+        </div>
+      </section>
+
+      <div class="tag">TEST HYPERFRAMES · HUMAIN (NATIF)</div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Personnage : léger balancement continu, descend pour laisser la place au texte
+      tl.fromTo("#character", { y: 120 }, { y: 160, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#hair-wrap", { scale: 0.86, svgOrigin: "540 760" }, { scale: 0.86, duration: 0.01 }, 0);
+
+      // Hook : cheveux qui tombent, sourcils inquiets
+      tl.fromTo("#brow-l", { rotation: 0, svgOrigin: "505 815" }, { rotation: -12, duration: 0.4 }, 0.2);
+      tl.fromTo("#brow-r", { rotation: 0, svgOrigin: "575 815" }, { rotation: 12, duration: 0.4 }, 0.2);
+      tl.fromTo(".strand", { y: 120, opacity: 0 }, { y: 820, opacity: 1, duration: 2.2, stagger: 0.15, ease: "power1.in" }, 0.2);
+      tl.to(".strand", { opacity: 0, duration: 0.3 }, 2.9);
+      tl.fromTo("#hook-text", { opacity: 0, y: 60, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 0.1);
+      tl.to("#hook-text", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 2.3);
+
+      // Produit : arrivée du flacon, fond chaud, cheveux qui se densifient, sourire
+      tl.to("#bg-warm", { opacity: 1, duration: 0.9, ease: "power2.out" }, 2.6);
+      tl.fromTo("#bottle-wrap", { x: 1500, y: 1180 }, { x: 830, y: 1180, duration: 0.7, ease: "back.out(1.3)" }, 2.7);
+      tl.fromTo("#bottle", { rotation: 25 }, { rotation: -6, duration: 0.7, ease: "back.out(1.3)" }, 2.7);
+      tl.to("#hair-wrap", { scale: 1.08, duration: 1.4, ease: "elastic.out(1, 0.6)" }, 3.6);
+      tl.to(["#brow-l", "#brow-r"], { rotation: 0, duration: 0.3 }, 3.6);
+      tl.to("#mouth-sad", { opacity: 0, duration: 0.2 }, 3.7);
+      tl.to("#mouth-happy", { opacity: 1, duration: 0.2 }, 3.7);
+      tl.fromTo("#brand-text", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }, 3.0);
+      tl.fromTo("#brand-sub", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 3.4);
+      tl.to(["#brand-text", "#brand-sub"], { opacity: 0, duration: 0.25 }, 5.15);
+
+      // Preuves
+      tl.fromTo("#pill-1", { opacity: 0, x: -200 }, { opacity: 1, x: 0, duration: 0.45, ease: "back.out(1.4)" }, 5.5);
+      tl.fromTo("#pill-2", { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.45, ease: "back.out(1.4)" }, 5.75);
+      tl.to(["#pill-1", "#pill-2"], { opacity: 0, duration: 0.25 }, 7.75);
+      tl.to("#character", { rotation: 3, svgOrigin: "540 1600", duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 5.4);
+
+      // CTA : le flacon passe au centre
+      tl.to("#bottle-wrap", { x: 540, y: 820, scale: 1.6, duration: 0.7, ease: "power3.inOut" }, 7.9);
+      tl.to("#character", { opacity: 0.35, duration: 0.5 }, 7.9);
+      tl.fromTo("#cta-card", { opacity: 0, y: 160, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, 8.05);
+      tl.fromTo("#cta-btn", { scale: 1 }, { scale: 1.07, duration: 0.35, ease: "sine.inOut", yoyo: true, repeat: 3 }, 8.6);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
