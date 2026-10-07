@@ -5,3 +5,4 @@ node_modules/
 work-*/
 .*.hf-transaction-*/
 kinoki-overlay/assets/kinoki.mp4
+.transcode-cache/
