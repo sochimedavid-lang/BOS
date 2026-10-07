@@ -7,7 +7,7 @@ E-commerce en paiement à la livraison (COD), marché Gambie. Marque Peryal. Acq
 | Produit | Prix | Coût de revient | Logistique | Marge / livraison |
 |---|---:|---:|---:|---:|
 | Miracle Balm | 1 950 | 233 | 420 | 1 297 |
-| Kinoki Detox Patches | 1 750 | 104 | 420 | 1 226 |
+| Kinoki Detox Patches | 1 650 | 104 | 420 | 1 126 |
 | North Moon Prostate Capsules | 1 850 | 109 | 420 | 1 321 |
 | Batana Hair Oil | 1 850 | 280 | 420 | 1 150 |
 | Turmeric Glow Pads | 1 900 | 215 | 420 | 1 265 (stock en transit) |

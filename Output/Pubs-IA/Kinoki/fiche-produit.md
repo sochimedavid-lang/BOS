@@ -16,7 +16,7 @@ _Remplie le 2026-10-07 depuis Cashel, Shopify et la page produit. « inconnu » 
 - Cible : adultes actifs debout toute la journée, jambes lourdes, mauvais sommeil (à confirmer)
 
 ## L'offre (vrai aujourd'hui)
-- Prix : **écart** — Shopify 1 650 GMD (barré 1 900), Cashel 1 750 GMD. À aligner
+- Prix : 1 650 GMD (barré 1 900), fixé le 07/10 dans Shopify et Cashel
 - Offre groupée : 2 achetés + 1 offert
 - Livraison gratuite annoncée en 24 h ; paiement à la livraison
 - Garantie : 30 jours satisfait ou remboursé
@@ -25,7 +25,7 @@ _Remplie le 2026-10-07 depuis Cashel, Shopify et la page produit. « inconnu » 
 ## La page produit
 - Lien : https://peryalgambie.myshopify.com/products/kinoki-detox-patches
 - Écarts et risques constatés :
-  - « Draws out toxins while you sleep » : allégation non prouvée. Le patch fonce au contact de la sueur et de l'humidité (vinaigre de bois), avec ou sans « toxines ». Les patchs Kinoki ont déjà fait l'objet de poursuites de la FTC (États-Unis, 2008) pour cette allégation
+  - « Draws out toxins while you sleep » : allégation non prouvée. Le patch fonce au contact de la sueur et de l'humidité (vinaigre de bois), avec ou sans « toxines ». La FTC (États-Unis) a poursuivi les vendeurs de Kinoki en 2009 pour cette allégation
   - 2 643 avis à 4,87/5 pour une fiche créée le 28/06/2026 : non crédible
 
 ## Preuves disponibles
@@ -35,4 +35,4 @@ _Remplie le 2026-10-07 depuis Cashel, Shopify et la page produit. « inconnu » 
 ## Choix créatifs
 - Créa K-1 : style à confirmer (voir SUIVI.md)
 - Créa K-3 : style à confirmer
-- Qui génère les images : à confirmer
+- Qui génère les images : l'entrepreneur sur Higgsfield (prompts fournis par BOS)

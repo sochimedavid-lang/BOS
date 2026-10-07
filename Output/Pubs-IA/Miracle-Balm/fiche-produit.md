@@ -39,4 +39,4 @@ _Remplie le 2026-10-07 depuis Cashel, Shopify et la page produit. « inconnu » 
 ## Choix créatifs
 - Créa MB-1 : style à confirmer (voir SUIVI.md)
 - Créa MB-2 : style à confirmer
-- Qui génère les images : à confirmer
+- Qui génère les images : l'entrepreneur sur Higgsfield (prompts fournis par BOS)
