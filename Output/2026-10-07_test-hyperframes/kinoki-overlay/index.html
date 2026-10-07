@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Kinoki — couche HyperFrames</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Regular.otf"); font-weight: 400; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Black.otf"); font-weight: 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Inter", sans-serif; color: #fff; }
+      #a-roll { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+      /* Bandeau haut : zone libre (mur) entre le bandeau "free delivery" et la tête */
+      .band { position: absolute; left: 0; right: 0; top: 110px; display: flex; justify-content: center; }
+
+      .band.low { top: 185px; }
+      .hook { display: flex; flex-direction: column; align-items: center; }
+      .hook-line { display: block; padding: 10px 30px; background: #000; font-size: 84px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; text-transform: uppercase; }
+      .hook-line + .hook-line { margin-top: 6px; }
+      .lime { color: #a3ef2c; }
+
+      .badge { display: flex; align-items: center; padding: 22px 38px 22px 26px; border-radius: 28px; background: #fff; color: #0d3b22; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35); }
+      .badge-icon { display: block; width: 104px; height: 104px; border-radius: 22px; background: #1f9d55; }
+      .badge-text { margin-left: 26px; }
+      .badge-name { font-size: 64px; font-weight: 900; letter-spacing: 0.04em; line-height: 1; }
+      .badge-sub { margin-top: 8px; font-size: 34px; font-weight: 700; color: #1f9d55; }
+
+      .night-day { display: flex; align-items: center; padding: 18px 34px; border-radius: 999px; background: rgba(0, 0, 0, 0.82); }
+      .nd-item { display: flex; align-items: center; font-size: 42px; font-weight: 900; text-transform: uppercase; }
+      .nd-item svg { display: block; width: 60px; height: 60px; margin-right: 16px; }
+      .nd-arrow { display: block; margin: 0 18px; font-size: 54px; font-weight: 900; color: #a3ef2c; }
+
+      #end-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(18px) brightness(0.45); transform: scale(1.08); }
+      #end-card { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 80px; }
+      .end-inner { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 64px 56px 70px; border-radius: 52px; background: #fff; color: #0d1f14; text-align: center; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5); }
+      .end-kicker { font-size: 38px; font-weight: 700; color: #1f9d55; letter-spacing: 0.06em; text-transform: uppercase; }
+      .end-title { margin-top: 14px; font-size: 104px; font-weight: 900; letter-spacing: 0.02em; line-height: 1; }
+      .end-sub { margin-top: 12px; font-size: 44px; font-weight: 700; }
+      .perks { margin-top: 40px; width: 100%; }
+      .perk { display: flex; align-items: center; justify-content: center; padding: 22px 0; border-top: 2px solid #e6eee9; font-size: 44px; font-weight: 800; }
+      .perk svg { display: block; width: 48px; height: 48px; margin-right: 18px; }
+      .order-btn { display: flex; align-items: center; margin-top: 40px; padding: 30px 64px; border-radius: 999px; background: #1f9d55; color: #fff; font-size: 60px; font-weight: 900; text-transform: uppercase; }
+      .order-btn svg { display: block; width: 54px; height: 54px; margin-left: 20px; }
+      .tag { position: absolute; bottom: 60px; left: 0; right: 0; text-align: center; font-size: 24px; font-weight: 600; opacity: 0.5; letter-spacing: 0.08em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="23" data-width="1080" data-height="1920">
+      <video id="a-roll" class="clip" src="assets/kinoki.mp4" data-has-audio="true" data-start="0" data-duration="20.08" data-track-index="0" playsinline></video>
+
+      <!-- 0–4.5 s : accroche sur le problème -->
+      <section id="s-hook" class="clip band" data-start="0" data-duration="4.6" data-track-index="1">
+        <div class="hook">
+          <span id="hook-1" class="hook-line">Tired every</span>
+          <span id="hook-2" class="hook-line lime">morning?</span>
+        </div>
+      </section>
+
+      <!-- 5.9–9 s : badge produit quand il le nomme -->
+      <section id="s-badge" class="clip band low" data-start="5.8" data-duration="3.4" data-track-index="2">
+        <div id="badge" class="badge">
+          <svg class="badge-icon" viewBox="0 0 104 104">
+            <rect width="104" height="104" rx="22" fill="#1f9d55" />
+            <path d="M40 22 C26 22 22 40 26 58 C29 72 32 84 42 84 C52 84 52 72 50 60 C48 48 56 40 54 30 C52 24 46 22 40 22 Z" fill="#fff" />
+            <rect x="30" y="44" width="22" height="26" rx="5" fill="#cfe9d8" />
+            <circle cx="72" cy="30" r="5" fill="#a3ef2c" />
+            <circle cx="80" cy="44" r="4" fill="#a3ef2c" />
+            <circle cx="70" cy="54" r="3" fill="#a3ef2c" />
+          </svg>
+          <div class="badge-text">
+            <div class="badge-name">KINOKI</div>
+            <div class="badge-sub">Detox foot patches · before bed</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 15.1–19.5 s : tonight → morning -->
+      <section id="s-nightday" class="clip band low" data-start="16.7" data-duration="3.38" data-track-index="3">
+        <div id="night-day" class="night-day">
+          <div id="nd-night" class="nd-item">
+            <svg viewBox="0 0 74 74"><path d="M50 10 A28 28 0 1 0 64 50 A22 22 0 1 1 50 10 Z" fill="#ffd76a" /></svg>
+            Tonight
+          </div>
+          <span id="nd-arrow" class="nd-arrow">→</span>
+          <div id="nd-day" class="nd-item">
+            <svg viewBox="0 0 74 74">
+              <circle cx="37" cy="37" r="15" fill="#ffb02e" />
+              <g stroke="#ffb02e" stroke-width="6" stroke-linecap="round">
+                <line x1="37" y1="4" x2="37" y2="13" /><line x1="37" y1="61" x2="37" y2="70" />
+                <line x1="4" y1="37" x2="13" y2="37" /><line x1="61" y1="37" x2="70" y2="37" />
+                <line x1="14" y1="14" x2="20" y2="20" /><line x1="54" y1="54" x2="60" y2="60" />
+                <line x1="14" y1="60" x2="20" y2="54" /><line x1="54" y1="20" x2="60" y2="14" />
+              </g>
+            </svg>
+            Fresh morning
+          </div>
+        </div>
+      </section>
+
+      <!-- 20.08–23 s : carte de fin / CTA -->
+      <img id="end-bg" class="clip" src="assets/last-frame.jpg" alt="" data-start="20.08" data-duration="2.92" data-track-index="4" />
+      <section id="end-card" class="clip" data-start="20.08" data-duration="2.92" data-track-index="5">
+        <div id="end-inner" class="end-inner">
+          <div class="end-kicker">Sleep better · wake up fresh</div>
+          <div class="end-title">KINOKI</div>
+          <div class="end-sub">Detox foot patches</div>
+          <div class="perks">
+            <div id="perk-1" class="perk">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#1f9d55" /><path d="M14 25 L21 32 L35 17" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              Free delivery
+            </div>
+            <div id="perk-2" class="perk">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#1f9d55" /><path d="M14 25 L21 32 L35 17" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              Pay cash on delivery
+            </div>
+          </div>
+          <div id="order-btn" class="order-btn">
+            Order now
+            <svg viewBox="0 0 54 54"><path d="M27 8 L27 44 M12 30 L27 45 L42 30" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </div>
+        </div>
+      </section>
+
+      <div class="tag">TEST · COUCHE HYPERFRAMES</div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Accroche
+      tl.fromTo("#hook-1", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.8)" }, 0.05);
+      tl.fromTo("#hook-2", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 2.25);
+      tl.to(["#hook-1", "#hook-2"], { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 4.3);
+
+      // Badge produit
+      tl.fromTo("#badge", { opacity: 0, y: -60, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 5.85);
+      tl.to("#badge", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 8.95);
+
+      // Tonight → fresh morning
+      tl.fromTo("#night-day", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, 16.75);
+      tl.fromTo("#nd-arrow", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 17.5);
+      tl.fromTo("#nd-day", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, 18.35);
+      tl.to("#nd-night", { opacity: 0.45, duration: 0.3 }, 18.35);
+
+      // Carte de fin
+      tl.fromTo("#end-bg", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 20.08);
+      tl.fromTo("#end-inner", { opacity: 0, y: 140, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.5)" }, 20.15);
+      tl.fromTo("#perk-1", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.3 }, 20.55);
+      tl.fromTo("#perk-2", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.3 }, 20.7);
+      tl.fromTo("#order-btn", { scale: 1 }, { scale: 1.07, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 3 }, 21.0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
