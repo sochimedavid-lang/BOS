@@ -114,6 +114,7 @@ L'entrepreneur n'a jamais besoin de retenir une commande. Il arrive et BOS prend
 - **Graphisme animé, sans personnage réaliste** → HyperFrames (`hyperframes` puis le workflow adapté) : texte animé, chiffres/prix animés, sous-titres karaoké ou intégrés (`embedded-captions`), incrustations sur une vidéo face caméra (`talking-head-recut`), démo produit/site, slides, cartes, packshot 3D simple (Three.js).
 - HyperFrames ne génère pas de personnes réalistes lui-même : il code la vidéo en HTML. Ses humains réalistes passent par HeyGen (avatar présentateur face caméra, compte HeyGen requis). Pour une pub avec des humains en action → `creative-ia-center`.
 - Combinaison possible : clips générés par `creative-ia-center`, puis couche graphique (sous-titres, prix, CTA animés) faite avec HyperFrames.
+- **Étape d'habillage (validée par l'entrepreneur le 2026-10-07)** : une fois le montage d'une créa validé (`montage-pub-ia`), appliquer `habillage-pub`. Ça ajoute la phrase d'accroche animée en haut au début, puis la carte de fin CTA. Proposer cette étape automatiquement à chaque nouvelle créa. Sans prix sur la carte, sauf demande explicite.
 
 ## Cadre des 6 Causes d'Inaction
 

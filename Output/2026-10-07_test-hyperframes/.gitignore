@@ -6,3 +6,4 @@ work-*/
 .*.hf-transaction-*/
 kinoki-overlay/assets/kinoki.mp4
 .transcode-cache/
+habillage-build/

@@ -1,0 +1,25 @@
+{
+  "video": "/root/.claude/uploads/bdfd3532-77c8-5814-9de0-a3875826700c/3fec524a-Kinoki_C.mp4",
+  "out": "kinoki-habillee-v2.mp4",
+  "hook": {
+    "lines": [
+      { "text": "Her bedtime habit" },
+      { "text": "changed her mornings", "highlight": ["mornings"] }
+    ],
+    "start": 0.05,
+    "end": 4.3,
+    "top": 280,
+    "style": "boites"
+  },
+  "endcard": {
+    "duration": 3.2,
+    "kicker": "Free delivery today",
+    "product_image": "kinoki-boite.png",
+    "title": "KINOKI",
+    "subtitle": "Detox foot patches for your bedtime routine",
+    "perks": ["Free delivery", "Pay on delivery"],
+    "cta": "Order now",
+    "cta_note": "Tap the button below",
+    "accent": "#1f9d55"
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=__W__, height=__H__" />
+    <title>Accroche</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-ExtraBold.ttf"); font-weight: 800; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: __W__px; height: __H__px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; }
+      /* Tout est dessiné sur une scène 1080x1920 mise à l'échelle de la vidéo */
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; font-family: "Montserrat", sans-serif; }
+      #hook { position: absolute; left: 40px; right: 40px; display: flex; flex-direction: column; align-items: center; }
+      .line { display: block; padding: 0.1em 0.36em 0.14em; line-height: 1.1; font-weight: 800; text-align: center; white-space: nowrap; }
+      .line + .line { margin-top: 0.12em; }
+      .style-boites .line { background: #000; color: #fff; }
+      .style-blanc .line { background: #fff; color: #111; }
+      .style-contour .line { color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 4px 16px rgba(0, 0, 0, 0.75); }
+      .hl { display: inline-block; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="__W__" data-height="__H__" data-duration="__DURATION__">
+      <section id="s-hook" class="clip" data-start="0" data-duration="__DURATION__" data-track-index="0">
+        <div id="stage"><div id="hook"></div></div>
+      </section>
+    </div>
+    <script>
+      const CFG = __CONFIG__;
+      const H = CFG.hook;
+      document.getElementById("stage").style.transform = "scale(" + CFG.scale + ")";
+      const hook = document.getElementById("hook");
+      hook.className = "style-" + (H.style || "boites");
+      hook.style.top = (H.top ?? 280) + "px";
+      const HL = H.highlight_color || "#A3FB02";
+      const UPPER = H.uppercase !== false;
+
+      function esc(s) {
+        return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      }
+
+      function build() {
+        const measure = document.createElement("canvas").getContext("2d");
+        const maxW = 1000;
+        const lines = [];
+        // Une seule taille pour toutes les lignes : la plus grande qui fait tenir la ligne la plus longue
+        const texts = H.lines.map((ln) => (UPPER ? ln.text.toUpperCase() : ln.text));
+        let size = H.size || 86;
+        const fits = (sz) => texts.every((t) => {
+          measure.font = "800 " + sz + "px Montserrat";
+          return measure.measureText(t).width + sz * 0.72 <= maxW;
+        });
+        while (!fits(size) && size > 40) size -= 2;
+        H.lines.forEach((ln, i) => {
+          const text = texts[i];
+          // Mots surlignés : liste de mots (insensible à la casse)
+          const hl = (ln.highlight || []).map((w) => w.toLowerCase());
+          const html = text
+            .split(" ")
+            .map((w) => {
+              const bare = w.toLowerCase().replace(/[^\p{L}\p{N}']/gu, "");
+              return hl.includes(bare) ? '<span class="hl" style="color:' + HL + '">' + esc(w) + "</span>" : esc(w);
+            })
+            .join(" ");
+          const el = document.createElement("span");
+          el.className = "line";
+          el.id = "line-" + i;
+          el.style.fontSize = (ln.size || size) + "px";
+          el.innerHTML = html;
+          hook.appendChild(el);
+          lines.push({ el, at: ln.at ?? (H.start ?? 0.05) + i * 0.18 });
+        });
+
+        const tl = gsap.timeline({ paused: true });
+        const end = H.end;
+        lines.forEach(({ el, at }) => {
+          tl.fromTo(el, { opacity: 0, y: -46, scale: 0.88 }, { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "back.out(1.9)" }, at);
+          const hls = el.querySelectorAll(".hl");
+          if (hls.length) tl.fromTo(hls, { scale: 1 }, { scale: 1.12, duration: 0.16, ease: "power2.out", yoyo: true, repeat: 1 }, at + 0.3);
+        });
+        tl.to(lines.map((l) => l.el), { opacity: 0, y: -30, duration: 0.26, ease: "power2.in", stagger: 0.04 }, end - 0.3);
+        window.__timelines["main"] = tl;
+      }
+
+      document.fonts.load("800 40px Montserrat").then(build);
+    </script>
+  </body>
+</html>
