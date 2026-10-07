@@ -18,3 +18,6 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 
 ## Reste à faire
 - Corriger la page produit (voir fiche-produit.md, « Écarts et risques »).
+
+## Swipe
+- Crea 7 = créative 1763855117982850 « Wake Up Lighter, Not Exhausted », description « Natural overnight detox. Try it tonight. » ; vidéo non téléchargeable via l'API. Fichier à fournir par l'entrepreneur.
