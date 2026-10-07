@@ -71,10 +71,10 @@ Ne pas désigner de méchant médical (médecins, hôpitaux) : risque de conform
 - Pas de prix à l'écran. Pas de résultat daté (la page dit « Visible results in just 3 days » : ne pas le reprendre).
 - Pas de nom de maladie affirmé (« neuropathy », « diabetes ») comme diagnostic du spectateur. Parler d'un personnage.
 - Garantie 30 jours, livraison gratuite, paiement à la livraison : vrais, citables.
-- **Composition inconnue** : aucun ingrédient ne peut être cité. À obtenir auprès du fournisseur.
+- **Fiche fournisseur (07/10)** : baume 30 g vendu pour la circulation et le confort des jambes (« promotes blood circulation, soothes and relieves leg discomfort »). Pas de liste d'ingrédients ; vitamine E et calendula suggérés par les visuels. Mécanisme défendable : **massage + baume qui active la circulation et apaise**. L'angle « nerfs » est un choix de Peryal, conservé par l'entrepreneur.
 - Décision de l'entrepreneur (07/10) : garder les angles d'origine (témoignage long, explication du pied en mode expert).
 
 ## 7. Ce qui manque
 - Verbatims de vrais clients gambiens livrés. Le moyen le plus rapide : l'équipe de confirmation rappelle 10 clientes ou clients livrés et note leurs mots exacts.
-- Composition du baume.
+- Liste INCI du baume (à demander au fournisseur sur Alibaba).
 - Qui utilise le produit (acheteur ou proche).

@@ -37,7 +37,6 @@ Crea 7 (« TWO YEARS AGO », mains qui posent le patch) : histoire à la premiè
 - « Ça marche vraiment ? » → le patch qu'on voit changer, le réveil plus léger, la garantie
 - « Je dois demander à mon mari / ma mère » → la pub montre le couple, la famille
 - « Pas d'argent aujourd'hui » → commande maintenant, paiement à la livraison
-- « J'ai vu une autre offre » → une seule offre partout : 2 achetés + 1 offert
 
 ## Chaînes de croyances
 Voir `croyances.md`.

@@ -45,7 +45,6 @@ Ils travaillent dur, ne se plaignent pas, et pensent qu'un corps fatigué doit �
 
 ## 5. Objections relevées dans Cashel
 - **Prix** : « Very expensive he can't afford it » ; « He said for him what he ordered the price is not exceed 1,650 » (cohérent avec le prix désormais fixé à 1 650 GMD).
-- **Offre mal comprise** : « Buy 1 get 2 for free we don't have that promotion ». Une pub ou une page a annoncé une offre différente de « 2 achetés + 1 offert ». À vérifier dans les textes de pub.
 - **Argent pas encore disponible** : salaire, retrait, rentrée attendue.
 - **Accord d'un proche** : mère, mari, médecin.
 - **Voyage, absence**.
@@ -60,4 +59,3 @@ Ils travaillent dur, ne se plaignent pas, et pensent qu'un corps fatigué doit �
 
 ## 7. Ce qui manque
 - Verbatims de vrais clients livrés (sensation au réveil, ce qu'ils ont vu sur le patch).
-- Texte exact des pubs qui ont annoncé « Buy 1 get 2 ».

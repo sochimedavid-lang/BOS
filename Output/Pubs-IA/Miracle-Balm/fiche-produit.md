@@ -4,11 +4,13 @@ _Remplie le 2026-10-07 depuis Cashel, Shopify et la page produit. « inconnu » 
 
 ## Le produit
 - Nom affiché : Miracle Balm™ (Peryal)
-- Ce que c'est : baume à masser, pieds, articulations, mains, bas du dos. Contenance : inconnu
+- Ce que c'est : baume rose en boîte métal, 30 g (1 oz), marque fournisseur « ximonth », mention « Soothing & Healing ». Fournisseur : Shanxi Xindanqing Biotechnology (Alibaba, ~1,05–1,33 $ l'unité). https://www.alibaba.com/product-detail/subject_1601699047851.html
+- Positionnement fournisseur : **jambes** — « Promotes blood circulation, soothes and relieves leg discomfort, promotes overall leg health » ; visuels avant/après de varicosités et schéma de veine. Rien sur les nerfs ni les pieds qui brûlent : ce positionnement vient de Peryal
 - Mode d'emploi (page) : petite quantité, masser 30 à 60 s, 2 à 3 fois par jour
+- Mode d'emploi (boîte) : nettoyer et sécher la peau ; appliquer une quantité suffisante sur la zone ; masser jusqu'à absorption
 - Durée couverte par un pot : inconnu
-- Composition : page = « 100 % natural », aucun ingrédient listé. Ne citer aucun ingrédient
-- Mentions à ne pas montrer à l'écran : inconnu (vérifier l'emballage)
+- Composition : aucune liste d'ingrédients sur la fiche ni sur les faces visibles de la boîte. Visuels du fournisseur : vitamine E et fleurs de calendula (indices, pas une liste). À demander au fournisseur (liste INCI). D'ici là, ne citer aucun ingrédient
+- Mentions à l'écran : la boîte ne porte que « Miracle Balm », « Soothing & Healing », « 30g ». Aucun nom de maladie : montrable tel quel
 - Photo produit : https://cdn.shopify.com/s/files/1/0740/5653/2143/files/14_c68be86b-d3cc-448d-8efa-59de998660cd.jpg
 
 ## Le marché

@@ -15,7 +15,7 @@ Des fils électriques à nu dans le pied : le courant passe mal, ça grésille e
 Les nerfs du pied, irrités et fatigués (la chaleur, la station debout, l'âge), envoient des signaux de brûlure. Le problème est sous la peau ; les crèmes hydratantes restent à la surface.
 
 ## UMS (mécanisme unique de la solution)
-Un baume conçu pour les pieds, massé 30 à 60 secondes 2 à 3 fois par jour, qui apaise la sensation de brûlure à l'endroit où elle naît. **À compléter avec la composition réelle** ; sans elle, l'UMS reste une promesse de rituel et d'apaisement.
+Un baume conçu pour les pieds, massé 30 à 60 secondes 2 à 3 fois par jour, qui apaise la sensation de brûlure à l'endroit où elle naît. Appui factuel (fiche fournisseur) : un baume conçu pour activer la circulation et apaiser l'inconfort, à faire pénétrer par massage. Version script : « le massage avec le baume réveille la circulation dans le pied, et la brûlure se calme ». Ingrédients non cités tant que la liste INCI n'est pas obtenue.
 
 ## Gourou
 Créas d'origine : la femme âgée qui témoigne (Nouv. Crea 4) et l'explication anatomique du pied (Anc. Crea 2). Choix de l'entrepreneur : garder ces angles.
