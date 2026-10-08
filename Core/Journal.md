@@ -9,3 +9,7 @@
 - Script MB-1 v0 écrit (témoignage Mama Fatou + fils au port). Vidéos gagnantes non récupérables via Meta : fichiers demandés à l'entrepreneur.
 - 08/10 : swipe fait sur 4 vidéos. Découverte : 3 gagnantes MB sont des pubs américaines « Senzio » reprises (nom de marque, ingrédients et garantie 60 j différents du produit réel).
 - 08/10 : organisation MB-1/2/3 validée ; « natural herbal formula » ; garantie 30 j. Script MB-1 v1 (nerfs) écrit.
+
+### 2026-10-08 (suite) — Voix off MB-1
+- ElevenLabs connecté. Voix off MB-1 (accroche A + corps) générée en 2 versions sur eleven_v4 : Christophe 108,9 s, Olaniyi Victor 121,0 s. Coût : 2 × 1 729 crédits (~1,26 $).
+- Contrôle par transcription : texte complet sur les deux, aucun mot sauté. Choix de la voix en attente de l'entrepreneur.
