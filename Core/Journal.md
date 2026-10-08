@@ -18,3 +18,4 @@
 - Storyboard MB-1 v1 livré : 40 plans calés au mot près sur la voix (36 version A + 4 accroche B), 3 portraits de référence. Prochaine étape côté entrepreneur : générer les images sur Higgsfield.
 - Portraits de référence MB-1 générés par l'entrepreneur et validés (Awa, Ebrima, Mariama). Mariama : dents normales, sans écart (choix de l'entrepreneur). Descriptions du storyboard alignées sur les portraits.
 - 1re série d'images MB-1 reçue (A1, A2, A3, A4, 17). A1, A2, A4 validées. Plan 17 : « SENZIO » écrit sur la boîte et le pot, à corriger. A3 : petit texte illisible au-dessus du nom, à corriger aussi. Référence produit propre créée (references/produit.png) et règle ajoutée aux prompts : aucun autre nom de marque.
+- Images A3 et 17 gardées avec « SENZIO » sur l'emballage (décision de l'entrepreneur). Script MB-2 v1 écrit (jambes lourdes, Binta et sa fille, anime 2D, ~2 min 10).
