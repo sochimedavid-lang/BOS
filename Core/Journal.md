@@ -26,3 +26,4 @@
 - Originaux MB-1 A et B (124 et 119 Mo) : trop gros pour GitHub (fork public : >100 Mo et Git LFS refusés). Déposés sur Higgsfield (bibliothèque) et dans la bibliothèque vidéo Meta du compte **Peryal Gambie Secours** (vidéos 1606608711202069 et 4489490761290223) : l'outil d'envoi n'est pas encore activé sur le compte principal Peryal Gambie.
 - MB-2 : style passé de l'anime 2D au 3D animé (décision de l'entrepreneur). Storyboard v2 régénéré, mêmes 46 plans et mêmes timecodes.
 - MB-2 : 1er portrait de Binta refusé (rendu 3D trop réaliste). Style précisé : 3D cartoon façon Pixar, en tête de chaque prompt. Règle ajoutée dans CLAUDE.md.
+- MB-2 : 2e essai de portraits (Binta trop réaliste, Isatou trop enfantine). L'entrepreneur veut le style de sa référence : personnages adultes caricaturés façon Les Indestructibles. Storyboard v4 : fiches personnages 3 vues en 16:9 avec la référence de style jointe.
