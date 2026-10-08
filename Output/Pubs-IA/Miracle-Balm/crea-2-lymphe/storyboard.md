@@ -1,15 +1,15 @@
-# MB-2 — Storyboard anime (v1, 08/10/2026)
+# MB-2 — Storyboard 3D animé (v2, 08/10/2026)
 
 Voix : Christopher Smooth. Corps + accroche A : `voix-off-christopher-smooth.mp3` (125,6 s). Accroche B : `accroche-B-christopher-smooth.mp3` (4,9 s). Timecodes = début exact des mots.
 
 ## Comment produire
-1. Génère d'abord les 2 portraits de référence (Binta, Isatou) avec les prompts ci-dessous, en anime.
+1. Génère d'abord les 2 portraits de référence (Binta, Isatou) avec les prompts ci-dessous, en 3D animé.
 2. Pour chaque plan : joins le portrait des personnages présents, et `../crea-1-nerfs/references/produit.png` pour tout plan avec le produit.
 3. Les plans 13 et 14 réutilisent les images A2 et A3 : rien à générer.
 4. Animation : Kling 3.0 **standard**, 5 s, sans son.
 
 ## Référence (Crea 5, Senzio lymphe)
-- Anime 2D aquarelle, plans courts, schémas de jambe translucides avec liquide bleu lumineux.
+- Original en anime 2D ; ici transposé en **3D animé façon film familial** (décision de l'entrepreneur, 08/10). On garde : plans courts, schémas de jambe translucides avec liquide bleu lumineux.
 - Héroïne unique suivie dans son quotidien, gros plans sur jambes et chevilles.
 - Sous-titres karaoké jaunes au centre.
 
@@ -19,14 +19,14 @@ Voix : Christopher Smooth. Corps + accroche A : `voix-off-christopher-smooth.mp3
 - **Infirmière (39a-b)** : a Gambian female nurse about 35 years old, dark-brown skin, calm face, wearing a white nurse uniform and a navy-blue head scarf.
 - **Livreur (43-44)** : a young Gambian delivery rider about 25 years old, athletic, dark-brown skin, short black hair, wearing a red polo shirt and a black open-face motorbike helmet.
 - **Produit** : the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing'.
-- **Schéma jambe** : a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee.
+- **Schéma jambe** : a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee.
 
-- **Style** : Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
-- **Style schémas** : 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+- **Style** : Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
+- **Style schémas** : Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Portraits de référence**
-- Binta : `Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Front-facing head-and-shoulders portrait, plain soft beige background, calm friendly expression. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.`
-- Isatou : `Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Front-facing head-and-shoulders portrait, plain soft beige background, calm friendly expression. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.`
+- Binta : `Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Front-facing head-and-shoulders portrait, plain soft beige background, calm friendly expression. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.`
+- Isatou : `Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Front-facing head-and-shoulders portrait, plain soft beige background, calm friendly expression. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.`
 
 **Voix** : narrateur hors champ (Christopher Smooth), aucun personnage ne parle.
 
@@ -40,10 +40,10 @@ Voix : Christopher Smooth. Corps + accroche A : `voix-off-christopher-smooth.mp3
 “Are your legs swollen and heavy at the end of the day?”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on a wooden bench outside her compound at dusk, rubbing her swollen heavy calves with both hands, tired face, medium shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on a wooden bench outside her compound at dusk, rubbing her swollen heavy calves with both hands, tired face, medium shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) rubs her heavy calves slowly and lets her shoulders drop. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) rubs her heavy calves slowly and lets her shoulders drop. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Soir : grillons, vent léger. Voix toujours dominante.
@@ -56,10 +56,10 @@ Soir : grillons, vent léger. Voix toujours dominante.
 “Ankles so big your shoes don't fit?”
 
 **Text-to-image prompt**
-Close-up of the swollen ankles and feet of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, a leather sandal strap pressing tightly into the puffy skin. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the swollen ankles and feet of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, a leather sandal strap pressing tightly into the puffy skin. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The swollen foot of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) pushes against the tight sandal strap, which does not close. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The swollen foot of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) pushes against the tight sandal strap, which does not close. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : léger grincement de cuir. Voix toujours dominante.
@@ -72,10 +72,10 @@ Effet : léger grincement de cuir. Voix toujours dominante.
 “Skin turning dark?”
 
 **Text-to-image prompt**
-Close-up of the lower shins of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, the skin around the ankles slightly darker, tight and shiny, her fingers touching it with worry. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the lower shins of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, the skin around the ankles slightly darker, tight and shiny, her fingers touching it with worry. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The fingers of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) touch the tight, darker skin of her shin gently. Very slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The fingers of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) touch the tight, darker skin of her shin gently. Very slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : nappe grave discrète. Voix toujours dominante.
@@ -88,10 +88,10 @@ Effet : nappe grave discrète. Voix toujours dominante.
 “Before you do anything else, watch this.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Leaning forward on the bench, looking straight at the viewer with a serious, caring expression, medium close-up. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Leaning forward on the bench, looking straight at the viewer with a serious, caring expression, medium close-up. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) leans slightly toward the camera with a serious, caring look, no speaking. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) leans slightly toward the camera with a serious, caring look, no speaking. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : whoosh doux à la coupe. Voix toujours dominante.
@@ -106,10 +106,10 @@ Effet : whoosh doux à la coupe. Voix toujours dominante.
 “Why do your legs feel heavier every evening…”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Walking slowly along a sandy street at sunset, heavy steps, one hand on her lower back, full-body shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Walking slowly along a sandy street at sunset, heavy steps, one hand on her lower back, full-body shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) takes slow, heavy steps toward the camera, tired. Camera tracks backward. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) takes slow, heavy steps toward the camera, tired. Camera tracks backward. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Soir : pas lents sur le sable. Voix toujours dominante.
@@ -122,10 +122,10 @@ Soir : pas lents sur le sable. Voix toujours dominante.
 “even on the days you rested?”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Lying on a bed with her legs raised on a pillow, looking at her swollen ankles with a puzzled frown, warm evening light. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Lying on a bed with her legs raised on a pillow, looking at her swollen ankles with a puzzled frown, warm evening light. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) lifts her head to look at her ankles and frowns, puzzled. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) lifts her head to look at her ankles and frowns, puzzled. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : petit « hmm » musical (note grave). Voix toujours dominante.
@@ -140,10 +140,10 @@ Effet : petit « hmm » musical (note grave). Voix toujours dominante.
 “Many things can make legs swell.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing behind her colourful vegetable stall in a busy Gambian market, legs visible under the kaftan, midday sun, wide shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing behind her colourful vegetable stall in a busy Gambian market, legs visible under the kaftan, midday sun, wide shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Market life moves around Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who shifts her weight from one leg to the other. Slow lateral pan. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Market life moves around Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who shifts her weight from one leg to the other. Slow lateral pan. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Marché animé, bas. Voix toujours dominante.
@@ -156,10 +156,10 @@ Marché animé, bas. Voix toujours dominante.
 “But there is one hidden cause most people never think about.”
 
 **Text-to-image prompt**
-A large illustrated magnifying glass hovering over the swollen lower leg of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, a soft glow inside the lens. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+A large 3D magnifying glass hovering over the swollen lower leg of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, a soft glow inside the lens. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The magnifying glass slides slowly up the leg of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), the glow pulsing. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The magnifying glass slides slowly up the leg of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), the glow pulsing. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : scintillement discret. Voix toujours dominante.
@@ -172,10 +172,10 @@ Effet : scintillement discret. Voix toujours dominante.
 “Fluid that is stuck in your legs.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, pale-blue fluid pooled and trapped around the ankle. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, pale-blue fluid pooled and trapped around the ankle. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-The pale-blue fluid in the semi-transparent illustrated leg swirls slowly but stays trapped at the ankle. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The pale-blue fluid in the semi-transparent 3D leg swirls slowly but stays trapped at the ankle. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : bulle d'eau étouffée. Voix toujours dominante.
@@ -188,10 +188,10 @@ Effet : bulle d'eau étouffée. Voix toujours dominante.
 “Your body has its own drainage system. It's called the lymph.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, the full lymph network glowing softly from the foot up to the knee like small rivers of light. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, the full lymph network glowing softly from the foot up to the knee like small rivers of light. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-The lymph vessels of the semi-transparent illustrated leg light up one after another from the foot to the knee. Slow tilt up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The lymph vessels of the semi-transparent 3D leg light up one after another from the foot to the knee. Slow tilt up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : montée cristalline douce. Voix toujours dominante.
@@ -204,10 +204,10 @@ Effet : montée cristalline douce. Voix toujours dominante.
 “Every day, it collects old fluid and waste, and carries it away.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, tiny pale-blue particles flowing smoothly upward through the glowing vessels. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, tiny pale-blue particles flowing smoothly upward through the glowing vessels. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-Tiny particles flow steadily upward through the semi-transparent illustrated leg. Slow tilt up following the flow. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Tiny particles flow steadily upward through the semi-transparent 3D leg. Slow tilt up following the flow. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : ruissellement léger. Voix toujours dominante.
@@ -220,10 +220,10 @@ Effet : ruissellement léger. Voix toujours dominante.
 “But when this fluid moves too slowly, it stays in your legs.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, the particles nearly stopped, pale-blue fluid gathering heavily around the ankle and foot. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, the particles nearly stopped, pale-blue fluid gathering heavily around the ankle and foot. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-The particles in the semi-transparent illustrated leg slow down and pile up at the ankle. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The particles in the semi-transparent 3D leg slow down and pile up at the ankle. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : ralenti sonore, note grave. Voix toujours dominante.
@@ -236,10 +236,10 @@ Effet : ralenti sonore, note grave. Voix toujours dominante.
 “Day after day.”
 
 **Text-to-image prompt**
-The window of a Gambian bedroom showing the sun setting behind palm trees, a calendar-free simple room, warm light. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+The window of a Gambian bedroom showing the sun setting behind palm trees, a calendar-free simple room, warm light. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Time-lapse: the sun sets and the moon rises behind the palm trees. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Time-lapse: the sun sets and the moon rises behind the palm trees. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : tic-tac doux. Voix toujours dominante.
@@ -252,10 +252,10 @@ Effet : tic-tac doux. Voix toujours dominante.
 “That's why your legs feel heavy like stone.”
 
 **Text-to-image prompt**
-The lower legs of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan drawn as if made of heavy grey stone up to the knee, as she sits on her bed, a visual metaphor. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+The lower legs of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan rendered as if made of heavy grey stone up to the knee, as she sits on her bed, a visual metaphor. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Grey stone texture spreads slowly up the legs of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan). Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Grey stone texture spreads slowly up the legs of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan). Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : frottement de pierre, grave. Voix toujours dominante.
@@ -300,10 +300,10 @@ Pas d'effet. Voix toujours dominante.
 “And in the heat, after standing all day”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing at her market stall under a blazing sun, wiping sweat from her forehead with a cloth, heat haze, medium shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing at her market stall under a blazing sun, wiping sweat from her forehead with a cloth, heat haze, medium shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) wipes her forehead and shifts her weight wearily. Heat haze shimmers. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) wipes her forehead and shifts her weight wearily. Heat haze shimmers. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Marché bas, cigales. Voix toujours dominante.
@@ -316,10 +316,10 @@ Marché bas, cigales. Voix toujours dominante.
 “or sitting for hours, it gets even worse.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on a low wooden stool for a long time beside her stall, swollen ankles, grimacing slightly, late afternoon light, medium shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on a low wooden stool for a long time beside her stall, swollen ankles, grimacing slightly, late afternoon light, medium shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) tries to stand, winces and sits back down. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) tries to stand, winces and sits back down. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : soupir musical. Voix toujours dominante.
@@ -332,10 +332,10 @@ Effet : soupir musical. Voix toujours dominante.
 “Binta knows this well.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Portrait at her market stall, tired but warm smile toward the viewer, medium close-up. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Portrait at her market stall, tired but warm smile toward the viewer, medium close-up. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) looks up at the camera with a tired, warm smile. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) looks up at the camera with a tired, warm smile. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Marché très bas. Voix toujours dominante.
@@ -348,10 +348,10 @@ Marché très bas. Voix toujours dominante.
 “Every evening, her legs were so heavy she could hardly walk home from the market.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Walking home slowly at dusk along a sandy road, carrying an empty enamel basin under her arm, heavy steps, full-body shot from the side. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Walking home slowly at dusk along a sandy road, carrying an empty enamel basin under her arm, heavy steps, full-body shot from the side. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) walks slowly, stops to rest a hand on a wall, then continues. Camera pans to follow. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) walks slowly, stops to rest a hand on a wall, then continues. Camera pans to follow. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Soir : pas lents, oiseaux du soir. Voix toujours dominante.
@@ -364,10 +364,10 @@ Soir : pas lents, oiseaux du soir. Voix toujours dominante.
 “She tried everything.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed surrounded by a pillow, a plastic basin, a pair of tight socks and a small calabash of shea butter, shrugging, evening light. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed surrounded by a pillow, a plastic basin, a pair of tight socks and a small calabash of shea butter, shrugging, evening light. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) looks at the remedies around her and shrugs, discouraged. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) looks at the remedies around her and shrugs, discouraged. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Pas d'effet. Voix toujours dominante.
@@ -380,10 +380,10 @@ Pas d'effet. Voix toujours dominante.
 “Legs up on a pillow.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Lying on her bed with both legs raised on a big pillow, staring at the ceiling. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Lying on her bed with both legs raised on a big pillow, staring at the ceiling. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) adjusts the pillow under her legs and sighs. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) adjusts the pillow under her legs and sighs. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : froissement de coussin. Voix toujours dominante.
@@ -396,10 +396,10 @@ Effet : froissement de coussin. Voix toujours dominante.
 “Hot water with salt.”
 
 **Text-to-image prompt**
-Close-up of the feet of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan soaking in a plastic basin of steaming salty water on a concrete floor. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the feet of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan soaking in a plastic basin of steaming salty water on a concrete floor. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Steam rises as the feet of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) move slowly in the water. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Steam rises as the feet of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) move slowly in the water. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : clapotis. Voix toujours dominante.
@@ -412,10 +412,10 @@ Effet : clapotis. Voix toujours dominante.
 “Tight socks.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Pulling a tight beige compression sock up her calf with effort, sitting on the bed edge. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Pulling a tight beige compression sock up her calf with effort, sitting on the bed edge. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) tugs the tight sock up her calf with effort. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) tugs the tight sock up her calf with effort. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : tissu élastique. Voix toujours dominante.
@@ -428,10 +428,10 @@ Effet : tissu élastique. Voix toujours dominante.
 “Shea butter.”
 
 **Text-to-image prompt**
-Close-up of the hands of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan scooping shea butter from a small calabash bowl. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the hands of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan scooping shea butter from a small calabash bowl. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The hands of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) scoop and rub shea butter between the palms. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The hands of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) scoop and rub shea butter between the palms. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Pas d'effet. Voix toujours dominante.
@@ -444,10 +444,10 @@ Pas d'effet. Voix toujours dominante.
 “It helped for one hour.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed with a brief relieved smile, a simple wall clock behind her. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed with a brief relieved smile, a simple wall clock behind her. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The clock hands move forward quickly while Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) smiles briefly. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The clock hands move forward quickly while Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) smiles briefly. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : tic-tac accéléré. Voix toujours dominante.
@@ -460,10 +460,10 @@ Effet : tic-tac accéléré. Voix toujours dominante.
 “But the next evening, the heaviness was back.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed at night under a lamp, holding her heavy swollen calf, discouraged face. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed at night under a lamp, holding her heavy swollen calf, discouraged face. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) lowers her head, hand on her heavy calf. Very slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) lowers her head, hand on her heavy calf. Very slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Nuit : grillons. Voix toujours dominante.
@@ -476,10 +476,10 @@ Nuit : grillons. Voix toujours dominante.
 “Because nothing was helping the fluid move.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, pale-blue fluid still trapped at the ankle, vessels dim and still. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, pale-blue fluid still trapped at the ankle, vessels dim and still. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-Nothing moves in the semi-transparent illustrated leg; the trapped fluid at the ankle pulses dimly. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Nothing moves in the semi-transparent 3D leg; the trapped fluid at the ankle pulses dimly. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : note grave tenue. Voix toujours dominante.
@@ -492,10 +492,10 @@ Effet : note grave tenue. Voix toujours dominante.
 “Then her daughter brought her something new.”
 
 **Text-to-image prompt**
-Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Entering her mother's room with a small parcel, smiling, while Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan sits on the bed looking up in surprise, warm evening light. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Entering her mother's room with a small parcel, smiling, while Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan sits on the bed looking up in surprise, warm evening light. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Isatou (young Gambian woman, short twists, coral-pink blouse) walks in and holds out the parcel to Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who looks up surprised. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Isatou (young Gambian woman, short twists, coral-pink blouse) walks in and holds out the parcel to Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who looks up surprised. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : porte qui s'ouvre, doux. Voix toujours dominante.
@@ -508,10 +508,10 @@ Effet : porte qui s'ouvre, doux. Voix toujours dominante.
 “Miracle Balm.”
 
 **Text-to-image prompt**
-the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing', placed on a woven raffia mat with soft warm light, product hero shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing', placed on a woven raffia mat with soft warm light, product hero shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Soft light sweeps across the lime-green Miracle Balm box and silver tin. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Soft light sweeps across the lime-green Miracle Balm box and silver tin. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : carillon clair. Voix toujours dominante.
@@ -524,10 +524,10 @@ Effet : carillon clair. Voix toujours dominante.
 “A natural herbal formula, made to be massaged into the legs.”
 
 **Text-to-image prompt**
-the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing', the open tin surrounded by fresh green leaves and small white daisy flowers on a wooden table. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing', the open tin surrounded by fresh green leaves and small white daisy flowers on a wooden table. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-A few leaves drift down around the lime-green Miracle Balm box and silver tin. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+A few leaves drift down around the lime-green Miracle Balm box and silver tin. Slow push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : bruissement de feuilles. Voix toujours dominante.
@@ -540,10 +540,10 @@ Effet : bruissement de feuilles. Voix toujours dominante.
 “The balm and the massage work together to wake up the circulation,”
 
 **Text-to-image prompt**
-Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt kneeling and massaging pink balm into the calf of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, who sits on the bed smiling, a soft warm glow around the calf. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt kneeling and massaging pink balm into the calf of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, who sits on the bed smiling, a soft warm glow around the calf. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Isatou (young Gambian woman, short twists, coral-pink blouse) massages upward along the calf of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan); a warm glow follows her hands. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Isatou (young Gambian woman, short twists, coral-pink blouse) massages upward along the calf of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan); a warm glow follows her hands. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : montée douce. Voix toujours dominante.
@@ -556,10 +556,10 @@ Effet : montée douce. Voix toujours dominante.
 “so the stuck fluid can start moving again.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, the pale-blue fluid at the ankle starting to flow upward again through brightening vessels. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, the pale-blue fluid at the ankle starting to flow upward again through brightening vessels. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-The trapped fluid in the semi-transparent illustrated leg starts flowing upward. Slow tilt up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The trapped fluid in the semi-transparent 3D leg starts flowing upward. Slow tilt up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : ruissellement qui repart. Voix toujours dominante.
@@ -572,10 +572,10 @@ Effet : ruissellement qui repart. Voix toujours dominante.
 “Up, and out of the legs.”
 
 **Text-to-image prompt**
-a semi-transparent illustrated human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, bright particles rising past the knee, the ankle area now clear and slim, the whole leg glowing lightly. 2D anime medical illustration in a soft watercolor style, semi-transparent warm-brown skin over a glowing network of light-blue lymph vessels, deep navy background, vertical 9:16, no text, no labels.
+a semi-transparent 3D human lower leg and foot seen from the side, showing the network of lymph vessels running from the ankle up to the knee, bright particles rising past the knee, the ankle area now clear and slim, the whole leg glowing lightly. Stylized 3D medical visualization render, semi-transparent glossy warm-brown skin over a glowing network of light-blue lymph vessels, soft volumetric light, deep navy background, vertical 9:16, no text, no labels.
 
 **Image-to-video prompt**
-Bright particles rise past the knee of the semi-transparent illustrated leg and the ankle clears. Slow tilt up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Bright particles rise past the knee of the semi-transparent 3D leg and the ankle clears. Slow tilt up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : scintillement. Voix toujours dominante.
@@ -588,10 +588,10 @@ Effet : scintillement. Voix toujours dominante.
 “Every evening, massage it from the ankle up to the knee for a few minutes.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed in the evening, massaging balm from her ankle up toward her knee, the open tin beside her. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Sitting on her bed in the evening, massaging balm from her ankle up toward her knee, the open tin beside her. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) slides her hands from the ankle up to the knee in long strokes. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) slides her hands from the ankle up to the knee in long strokes. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Soir calme. Voix toujours dominante.
@@ -604,10 +604,10 @@ Soir calme. Voix toujours dominante.
 “Always upward.”
 
 **Text-to-image prompt**
-Close-up of the hands of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan sliding upward on her calf, soft light trails showing the upward direction. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the hands of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan sliding upward on her calf, soft light trails showing the upward direction. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The hands of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) glide upward on the calf, leaving a soft light trail. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The hands of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) glide upward on the calf, leaving a soft light trail. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : swoosh doux montant. Voix toujours dominante.
@@ -620,10 +620,10 @@ Effet : swoosh doux montant. Voix toujours dominante.
 “Many people feel their legs lighter in the first days…”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing up easily from her bed in the morning, a light, surprised smile, small light petals floating around her legs. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing up easily from her bed in the morning, a light, surprised smile, small light petals floating around her legs. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) rises easily and smiles, petals floating around her. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) rises easily and smiles, petals floating around her. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Matin : oiseaux. Voix toujours dominante.
@@ -636,10 +636,10 @@ Matin : oiseaux. Voix toujours dominante.
 “and it keeps getting better as they keep the habit.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan and Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt sitting together on the veranda at sunset, the Miracle Balm tin on a small table between them, laughing. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan and Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt sitting together on the veranda at sunset, the Miracle Balm tin on a small table between them, laughing. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) and Isatou (young Gambian woman, short twists, coral-pink blouse) laugh together softly, no speaking. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) and Isatou (young Gambian woman, short twists, coral-pink blouse) laugh together softly, no speaking. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Soir : oiseaux. Voix toujours dominante.
@@ -652,10 +652,10 @@ Soir : oiseaux. Voix toujours dominante.
 “Imagine legs that don't feel like stone.”
 
 **Text-to-image prompt**
-The lower legs of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, the grey stone texture cracking and falling away to reveal healthy dark-brown skin, a visual metaphor. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+The lower legs of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, the grey stone texture cracking and falling away to reveal healthy dark-brown skin, a visual metaphor. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The stone shell cracks and falls away from the legs of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan). Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The stone shell cracks and falls away from the legs of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan). Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : pierre qui se fissure, léger. Voix toujours dominante.
@@ -668,10 +668,10 @@ Effet : pierre qui se fissure, léger. Voix toujours dominante.
 “Shoes that fit again.”
 
 **Text-to-image prompt**
-Close-up of the feet of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan slipping easily into leather sandals, the straps fitting comfortably. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the feet of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan slipping easily into leather sandals, the straps fitting comfortably. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The feet of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) slide into the sandals and the strap closes easily. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The feet of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) slide into the sandals and the strap closes easily. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : clic de boucle. Voix toujours dominante.
@@ -684,10 +684,10 @@ Effet : clic de boucle. Voix toujours dominante.
 “Walking to the market without stopping to rest.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Walking briskly to the market in the morning sun carrying an enamel basin of vegetables on her head, smiling, full-body shot. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Walking briskly to the market in the morning sun carrying an enamel basin of vegetables on her head, smiling, full-body shot. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) walks briskly and confidently toward the camera. Camera tracks backward. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) walks briskly and confidently toward the camera. Camera tracks backward. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Rue du matin, vivante. Voix toujours dominante.
@@ -700,10 +700,10 @@ Rue du matin, vivante. Voix toujours dominante.
 “If one leg is suddenly swollen, hot and painful,”
 
 **Text-to-image prompt**
-a Gambian female nurse about 35 years old, dark-brown skin, calm face, wearing a white nurse uniform and a navy-blue head scarf. Kneeling and gently examining the lower leg of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, who sits on a clinic chair in a simple bright health centre. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+a Gambian female nurse about 35 years old, dark-brown skin, calm face, wearing a white nurse uniform and a navy-blue head scarf. Kneeling and gently examining the lower leg of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, who sits on a clinic chair in a simple bright health centre. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The nurse gently examines the leg of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who watches attentively. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The nurse gently examines the leg of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who watches attentively. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Ambiance feutrée. Musique baisse. Voix toujours dominante.
@@ -716,10 +716,10 @@ Ambiance feutrée. Musique baisse. Voix toujours dominante.
 “or if there is a wound, see a doctor first.”
 
 **Text-to-image prompt**
-a Gambian female nurse about 35 years old, dark-brown skin, calm face, wearing a white nurse uniform and a navy-blue head scarf talking calmly with Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan in a simple bright health centre, reassuring hand gesture. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+a Gambian female nurse about 35 years old, dark-brown skin, calm face, wearing a white nurse uniform and a navy-blue head scarf talking calmly with Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan in a simple bright health centre, reassuring hand gesture. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The nurse speaks calmly with a reassuring gesture; Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) nods. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The nurse speaks calmly with a reassuring gesture; Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) nods. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Ambiance feutrée. Voix toujours dominante.
@@ -732,10 +732,10 @@ Ambiance feutrée. Voix toujours dominante.
 “Try Miracle Balm today, without any risk.”
 
 **Text-to-image prompt**
-Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Holding the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing' toward the viewer with a confident smile, warm light. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Holding the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing' toward the viewer with a confident smile, warm light. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Isatou (young Gambian woman, short twists, coral-pink blouse) lifts the lime-green Miracle Balm box and silver tin toward the camera and nods. Slight push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Isatou (young Gambian woman, short twists, coral-pink blouse) lifts the lime-green Miracle Balm box and silver tin toward the camera and nods. Slight push-in. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Musique : énergie finale. Voix toujours dominante.
@@ -748,10 +748,10 @@ Musique : énergie finale. Voix toujours dominante.
 “You have thirty days. If your legs don't feel lighter, you get your money back.”
 
 **Text-to-image prompt**
-Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing in her compound with one hand on her heart and the other holding the round silver tin of the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing', reassuring smile. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan. Standing in her compound with one hand on her heart and the other holding the round silver tin of the Miracle Balm product: a small lime-green cardboard box with a dark-green leafy wreath illustration around bold white text 'MIRACLE BALM' and small white daisy flowers, next to a round silver metal tin whose lid shows the same dark-green leaf wreath and 'MIRACLE BALM', the open tin revealing a smooth light-pink balm; the only words on the packaging are 'MIRACLE BALM' and 'Soothing & Healing', reassuring smile. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) nods reassuringly, hand on heart. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) nods reassuringly, hand on heart. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : petit son de validation. Voix toujours dominante.
@@ -764,10 +764,10 @@ Effet : petit son de validation. Voix toujours dominante.
 “Click below to order.”
 
 **Text-to-image prompt**
-Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Pointing down toward the bottom of the frame with an encouraging smile. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Isatou, Binta's daughter, a Gambian woman about 28 years old, slim, dark-brown skin, oval face with bright eyes and a warm smile, short natural black hair in small twists, wearing a plain coral-pink blouse and a dark-blue wrap skirt. Pointing down toward the bottom of the frame with an encouraging smile. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-Isatou (young Gambian woman, short twists, coral-pink blouse) points down twice with an encouraging smile. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+Isatou (young Gambian woman, short twists, coral-pink blouse) points down twice with an encouraging smile. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : pop. Voix toujours dominante.
@@ -780,10 +780,10 @@ Effet : pop. Voix toujours dominante.
 “Free delivery today, and cash on delivery —”
 
 **Text-to-image prompt**
-a young Gambian delivery rider about 25 years old, athletic, dark-brown skin, short black hair, wearing a red polo shirt and a black open-face motorbike helmet. Stopped on his motorbike at the metal gate of a compound, handing a small parcel to Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, who reaches out smiling. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+a young Gambian delivery rider about 25 years old, athletic, dark-brown skin, short black hair, wearing a red polo shirt and a black open-face motorbike helmet. Stopped on his motorbike at the metal gate of a compound, handing a small parcel to Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan, who reaches out smiling. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The rider hands the parcel to Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who takes it smiling. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The rider hands the parcel to Binta (Gambian woman ~55, green-and-yellow head tie and kaftan), who takes it smiling. Static camera. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : moto au ralenti. Voix toujours dominante.
@@ -796,10 +796,10 @@ Effet : moto au ralenti. Voix toujours dominante.
 “you pay only when it's in your hand.”
 
 **Text-to-image prompt**
-Close-up of the hands of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan holding the lime-green Miracle Balm box while handing Gambian dalasi banknotes to a young Gambian delivery rider about 25 years old, athletic, dark-brown skin, short black hair, wearing a red polo shirt and a black open-face motorbike helmet. Soft hand-painted 2D anime illustration in a warm watercolor style, gentle clean linework, expressive faces, cinematic warm lighting, vertical 9:16, no text, no captions, no watermark.
+Close-up of the hands of Binta, a Gambian woman about 55 years old, plump build, deep dark-brown skin, round kind face with soft cheeks and warm brown eyes, small gold hoop earrings, hair wrapped in a green-and-yellow patterned head tie, wearing a loose green-and-yellow wax-print kaftan holding the lime-green Miracle Balm box while handing Gambian dalasi banknotes to a young Gambian delivery rider about 25 years old, athletic, dark-brown skin, short black hair, wearing a red polo shirt and a black open-face motorbike helmet. Stylized 3D animated feature-film render, soft rounded shapes, expressive friendly faces, rich subsurface skin shading on dark-brown skin, warm cinematic lighting with soft global illumination, shallow depth of field, vertical 9:16, no text, no captions, no watermark.
 
 **Image-to-video prompt**
-The hands of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) pass the banknotes to the rider. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the 2D anime watercolor style exactly.
+The hands of Binta (Gambian woman ~55, green-and-yellow head tie and kaftan) pass the banknotes to the rider. Static close-up. Nobody speaks; mouths stay closed or relaxed. Preserve faces, bodies, clothing, product design and the stylized 3D animated look exactly.
 
 **Son**
 Effet : billets. Voix toujours dominante.

@@ -1,10 +1,10 @@
 # Créa MB-2 — Argumentaire « jambes lourdes / liquide coincé » (v1)
 
-**Format de référence :** Crea 5 (pub Senzio, 4 min 36, CPA 1,24 $), illustrée en anime 2D. Même structure : accroche peur (jambes gonflées, peau qui fonce) → ennemi caché (liquide coincé, système lymphatique) → pourquoi ça s'aggrave → histoire d'une femme qui a tout essayé → fausses solutions → produit → mécanisme → mode d'emploi → projection → garantie → appel.
+**Format de référence :** Crea 5 (pub Senzio, 4 min 36, CPA 1,24 $), transposée en 3D animé (original Crea 5 en anime 2D). Même structure : accroche peur (jambes gonflées, peau qui fonce) → ennemi caché (liquide coincé, système lymphatique) → pourquoi ça s'aggrave → histoire d'une femme qui a tout essayé → fausses solutions → produit → mécanisme → mode d'emploi → projection → garantie → appel.
 **Question à laquelle elle répond :** « Pourquoi mes jambes sont lourdes et gonflées chaque soir ? »
 **Croyance visée :** du liquide reste coincé dans les jambes ; le massage avec le baume réveille la circulation pour le faire remonter. Cohérent avec la fiche fournisseur (« promotes blood circulation, relieves leg discomfort »).
 **Langue / voix :** anglais simple, voix Christopher Smooth (même voix que MB-1, à confirmer).
-**Visuels :** anime 2D peint à la main, personnages gambiens (Binta, vendeuse au marché, et sa fille), schémas illustrés du liquide dans les jambes comme l'original.
+**Visuels :** 3D animé façon film familial (décision du 08/10, au lieu de l'anime 2D), personnages gambiens (Binta, vendeuse au marché, et sa fille), schémas illustrés du liquide dans les jambes comme l'original.
 **Durée estimée :** ~345 mots ≈ 2 min 10 (l'original fait 4 min 36 : pas d'ingrédients, pas de fausses statistiques).
 **Ce qui est cité parce que vrai aujourd'hui :** formule naturelle à base de plantes, massage, effet circulation (fiche fournisseur), livraison gratuite, paiement à la livraison, garantie 30 jours.
 **Ce qui n'est pas cité :** Senzio, médecin fondatrice (inventée), ingrédients, « 70 % » et « 73 % » (statistiques non sourcées), « 2 000 ans », « études cliniques », « toxines » et « reins », « pas sur Amazon », rareté, garantie 60 jours, prix.
@@ -67,7 +67,7 @@ Click below to order. Free delivery today, and cash on delivery: you pay only wh
 |---|---|---|---|
 | Question | Pourquoi rien n'a calmé la brûlure ? | Pourquoi mes jambes sont lourdes et gonflées ? | Est-ce que ça marche pour quelqu'un comme ma mère ? |
 | Croyance | La brûlure vient des nerfs, sous la peau | Le liquide reste coincé dans les jambes | Des gens d'ici l'utilisent |
-| Forme | Voix off + plans réalistes | Anime 2D + histoire de Binta | Témoignage |
+| Forme | Voix off + plans réalistes | 3D animé + histoire de Binta | Témoignage |
 | Zone | Pieds | Jambes et chevilles | Pieds |
 
 ## Relecture
