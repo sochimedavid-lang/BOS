@@ -28,3 +28,4 @@
 - MB-2 : 1er portrait de Binta refusé (rendu 3D trop réaliste). Style précisé : 3D cartoon façon Pixar, en tête de chaque prompt. Règle ajoutée dans CLAUDE.md.
 - MB-2 : 2e essai de portraits (Binta trop réaliste, Isatou trop enfantine). L'entrepreneur veut le style de sa référence : personnages adultes caricaturés façon Les Indestructibles. Storyboard v4 : fiches personnages 3 vues en 16:9 avec la référence de style jointe.
 - MB-2 : fiches Binta et Isatou validées (references/). Storyboard v5 : descriptions alignées sur les fiches, éclairage selon la scène.
+- MB-2 : 46 images lancées sur Higgsfield (une génération par plan, 2K, 2 crédits l'image). 45 réussies, le 28 a échoué. Défauts repérés : 11 (homme en trop), 27 (personnage en trop sur le plan produit), 35 (Binta dupliquée) ; 20 en option (pieds dans la bassine avec les sandales). Régénération en attente de validation.
