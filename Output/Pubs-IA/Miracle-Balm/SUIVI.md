@@ -20,3 +20,7 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 ## Swipe
 - Vidéos gagnantes non téléchargeables via l'API Meta (download_hd_url vide, Facebook bloque sans connexion). Fichiers à fournir par l'entrepreneur : Anc. Crea 2 (164 s, vidéo 3747839405368199), Nouv. Crea 4 (161 s, vidéo 1638897844593453), Crea 5 (276 s, vidéo 2497772320743106).
 - Texte de pub des gagnantes : « Comfort Isn't Luck. It's a Habit. »
+
+## Swipe (08/10)
+- Analyse faite : 02-swipes/synthese.md. Anc. Crea 2 et Nouv. Crea 4 = même pub « Senzio » (argumentaire nerfs) ; Crea 5 = pub Senzio lymphe en anime 2D.
+- MB-1 réorienté : remake de l'argumentaire nerfs. Le témoignage Mama Fatou devient MB-3.

@@ -7,3 +7,4 @@
 - Retour entrepreneur : Batana reste actif ; non-livraisons COD acceptées comme réalité du marché (règle ajoutée dans CLAUDE.md). Focus : créas Miracle Balm et Kinoki.
 - Angles créas d'origine conservés malgré le risque de conformité signalé. Prix Kinoki fixé à 1 650 GMD (Cashel mis à jour). Recherche faite par BOS : 4 documents fondateurs par produit. Découvertes : acheteurs majoritairement masculins (MB ~80 %), 30 % de commandes Kinoki multi-boîtes, achat calé sur le salaire et validé par un proche.
 - Script MB-1 v0 écrit (témoignage Mama Fatou + fils au port). Vidéos gagnantes non récupérables via Meta : fichiers demandés à l'entrepreneur.
+- 08/10 : swipe fait sur 4 vidéos. Découverte : 3 gagnantes MB sont des pubs américaines « Senzio » reprises (nom de marque, ingrédients et garantie 60 j différents du produit réel).
