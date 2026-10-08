@@ -77,7 +77,7 @@ Click below to order. Free delivery today, and cash on delivery: you pay only wh
 - Retirés car inventés pour un autre produit : « 42,340 people », « in four seconds », « two weeks », « doctors », « for the first time in history ».
 
 ## Points à valider
-1. **Voix** : voix off masculine à accent ouest-africain (proche de ta cible) ou voix américaine comme l'original ?
+1. **Voix** : 3 versions générées le 08/10 — Christophe (français), Olaniyi Victor (Nigeria), Christopher Smooth (américaine, grave, pub). Choix de l'entrepreneur en attente.
 2. **Les deux accroches** : je propose de produire le corps une fois et de coller les deux accroches (comme Anc. Crea 2 / Nouv. Crea 4). Coût : seulement les plans de l'accroche en double.
 3. **Durée 2 min** : plus courte que l'original (2 min 40). Si tu veux retrouver la longueur, j'ajoute un bloc « ce que disent les gens d'ici » plutôt que des promesses.
 

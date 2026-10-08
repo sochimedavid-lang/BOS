@@ -8,13 +8,13 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 - 2026-10-07 : l'entrepreneur génère les images lui-même sur Higgsfield ; je fournis les prompts et je choisis.
 - 2026-10-07 : priorité créas Miracle Balm et Kinoki (batch 1 : MB-1, MB-2, K-1, K-3).
 
-- 2026-10-08 : voix MB-1 = Christophe (M9MhEgzxZ8w5I27Tl1h5), version de comparaison Olaniyi Victor (U7wWSnxIJwCjioxt86mk). Flow ElevenLabs cwoDt679MfYDhyAJnQBk, modèle eleven_v4.
+- 2026-10-08 : voix MB-1 = Christophe (M9MhEgzxZ8w5I27Tl1h5), version de comparaison Olaniyi Victor (U7wWSnxIJwCjioxt86mk), puis Christopher Smooth (SSfU0eLfP3qeuR4j2bwD) proposée par l'entrepreneur. Flow ElevenLabs cwoDt679MfYDhyAJnQBk, modèle eleven_v4.
 - 2026-10-08 : organisation MB-1 nerfs / MB-2 lymphe / MB-3 témoignage validée. Ingrédients : « natural herbal formula » sans détail. Garantie citée : 30 jours.
 
 ## Créas
 | Créa | Format | Style | Étape | Crédits dépensés |
 |---|---|---|---|---:|
-| MB-1 | Argumentaire nerfs (remake Anc. Crea 2 / Nouv. Crea 4) — `crea-1-nerfs/` | Humain IA réaliste + schémas | Script v1 validé (2 accroches). Voix off générée : Christophe + Olaniyi Victor, choix en attente | 3 458 ElevenLabs (~1,26 $) |
+| MB-1 | Argumentaire nerfs (remake Anc. Crea 2 / Nouv. Crea 4) — `crea-1-nerfs/` | Humain IA réaliste + schémas | Script v1 validé (2 accroches). Voix off générée : Christophe, Olaniyi Victor, Christopher Smooth — choix en attente | 5 187 ElevenLabs (~1,89 $) |
 | MB-2 | Argumentaire lymphe / jambes lourdes (remake Crea 5) | Anime 2D, personnages gambiens | À écrire | 0 |
 | MB-3 | Témoignage Mama Fatou — `crea-3-temoignage-mama/` | Humain IA réaliste | Script v0 | 0 |
 

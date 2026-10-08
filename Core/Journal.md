@@ -13,3 +13,4 @@
 ### 2026-10-08 (suite) — Voix off MB-1
 - ElevenLabs connecté. Voix off MB-1 (accroche A + corps) générée en 2 versions sur eleven_v4 : Christophe 108,9 s, Olaniyi Victor 121,0 s. Coût : 2 × 1 729 crédits (~1,26 $).
 - Contrôle par transcription : texte complet sur les deux, aucun mot sauté. Choix de la voix en attente de l'entrepreneur.
+- 3e version de la voix off MB-1 avec Christopher Smooth (voix américaine grave, choisie par l'entrepreneur) : 111,3 s, texte complet. Coût : 1 729 crédits (~0,63 $). Total voix MB-1 : 5 187 crédits (~1,89 $).
