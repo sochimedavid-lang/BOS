@@ -3,7 +3,7 @@
 *Focus au 2026-10-07 : produire les créas Miracle Balm et Kinoki.*
 
 - [x] Recherche (4 documents fondateurs) Miracle Balm et Kinoki : Output/Pubs-IA/*/01-recherche/
-- [ ] **Batch 1 créas : MB-1, MB-2, K-1, K-3** — prochaine étape : swipe des créas gagnantes, puis script MB-1 (BOS) ; images générées par l'entrepreneur
+- [ ] **Batch 1 créas : MB-1, MB-2, K-1, K-3** — MB-1 : voix + storyboard faits (08/10) → **toi : générer les 3 portraits puis les 40 images sur Higgsfield** ; BOS : script MB-2, puis K-1 et K-3
 - [ ] **Hook swaps MB-6 et K-4** : récupérer les fichiers vidéo originaux de Miracle Balm Anc. Crea 2 et Kinoki Crea 7 (entrepreneur)
 - [ ] Corriger la headline des 15 pubs Kinoki (« Tonight. Not Next Month. » est la headline North Moon)
 - [ ] Relance des gagnantes : Miracle Balm 10 $/j, North Moon 8 $/j, Batana 4 $/j, Kinoki 3 $/j (validation Asa)
