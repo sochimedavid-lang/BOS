@@ -16,7 +16,7 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 ## Créas
 | Créa | Format | Style | Étape | Crédits dépensés |
 |---|---|---|---|---:|
-| MB-1 | Argumentaire nerfs (remake Anc. Crea 2 / Nouv. Crea 4) — `crea-1-nerfs/` | Humain IA réaliste + schémas | Voix Christopher Smooth validée (corps + accroches A et B). Storyboard v1 : 40 plans. Portraits Awa, Ebrima, Mariama validés (references/) — 40 images à générer par l'entrepreneur | 5 353 ElevenLabs (~1,95 $) |
+| MB-1 | Argumentaire nerfs (remake Anc. Crea 2 / Nouv. Crea 4) — `crea-1-nerfs/` | Humain IA réaliste + schémas | Voix validée. Storyboard v1. **40 images reçues et validées** (images/, planche-images.jpg) — prochaine étape : animation Kling (kling-prompts.md) | 5 353 ElevenLabs (~1,95 $) |
 | MB-2 | Argumentaire lymphe / jambes lourdes (remake Crea 5) — `crea-2-lymphe/` | Anime 2D, personnages gambiens | Script v1 écrit, en attente de validation | 0 |
 | MB-3 | Témoignage Mama Fatou — `crea-3-temoignage-mama/` | Humain IA réaliste | Script v0 | 0 |
 
