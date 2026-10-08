@@ -233,6 +233,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 
 - **COD en Afrique : la non-livraison est une donnée du modèle.** Des clients commandent sans vouloir être livrés, n'ont pas l'argent à la livraison, ne répondent pas. L'entrepreneur l'accepte comme une réalité du marché. Ne pas présenter les commandes non livrées comme un dysfonctionnement à corriger ni comme une alerte. Les intégrer comme un paramètre (taux de livraison) dans les calculs de rentabilité, sans ton alarmiste.
 - **Génération IA : toujours la qualité standard.** Images, vidéos, voix : utiliser le mode standard / la résolution par défaut. Jamais de mode supérieur (pro, 4K, 1080p payant, etc.) sans l'accord explicite de l'entrepreneur, même si l'écart de prix paraît faible. Annoncer le coût avant de lancer.
+- **« 3D » = 3D cartoon façon Pixar.** Quand l'entrepreneur demande de la 3D pour une créa, écrire « Pixar-style 3D animation » en tête de chaque prompt image, avec des proportions cartoon (grosse tête, grands yeux, peau lisse) et « NOT photorealistic ». Un rendu 3D semi-réaliste a été refusé (MB-2, 08/10).
 
 ## Ton
 
