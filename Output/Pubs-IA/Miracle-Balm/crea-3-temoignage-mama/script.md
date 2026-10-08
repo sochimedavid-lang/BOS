@@ -1,4 +1,4 @@
-# Créa MB-1 — Témoignage de Mama Fatou (v0)
+# Créa MB-3 — Témoignage de Mama Fatou (v0)
 
 **Format de référence :** Nouv. Crea 4 (161 s, femme âgée qui tient le baume, 1,62 $ de CPA) — témoignage long, histoire avant produit. _v0 écrite avant d'avoir vu la vidéo : à caler sur sa structure dès réception du fichier._
 **Question à laquelle elle répond :** « J'ai tout essayé, pourquoi ça marcherait cette fois ? »
