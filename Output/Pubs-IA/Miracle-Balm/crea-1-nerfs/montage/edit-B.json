@@ -1,0 +1,347 @@
+{
+ "duration": 111.14,
+ "fps": 30,
+ "size": [
+  1080,
+  1920
+ ],
+ "outputs": {
+  "video": "build/video-B.mp4",
+  "audio": "build/mix-B.wav"
+ },
+ "voiceover": {
+  "src": "audio/voiceover-B.mp3",
+  "at": 0.0,
+  "lufs": -16
+ },
+ "clips": [
+  {
+   "src": "clips/B1.mp4",
+   "start": 0.0,
+   "in": 0.0
+  },
+  {
+   "src": "clips/B2.mp4",
+   "start": 4.12,
+   "in": 0.0
+  },
+  {
+   "src": "clips/B3.mp4",
+   "start": 5.9,
+   "in": 0.0
+  },
+  {
+   "src": "clips/B4.mp4",
+   "start": 8.32,
+   "in": 0.0
+  },
+  {
+   "src": "clips/05.mp4",
+   "start": 11.82,
+   "in": 0.0
+  },
+  {
+   "src": "clips/06.mp4",
+   "start": 13.9,
+   "in": 0.0
+  },
+  {
+   "src": "clips/07.mp4",
+   "start": 16.9,
+   "in": 0.0
+  },
+  {
+   "src": "clips/08.mp4",
+   "start": 19.4,
+   "in": 0.0
+  },
+  {
+   "src": "clips/09.mp4",
+   "start": 21.82,
+   "in": 0.0
+  },
+  {
+   "src": "clips/10.mp4",
+   "start": 24.22,
+   "in": 0.0
+  },
+  {
+   "src": "clips/11.mp4",
+   "start": 26.22,
+   "in": 0.0
+  },
+  {
+   "src": "clips/12.mp4",
+   "start": 28.88,
+   "in": 0.0
+  },
+  {
+   "src": "clips/13.mp4",
+   "start": 33.72,
+   "in": 0.0
+  },
+  {
+   "src": "clips/14.mp4",
+   "start": 37.2,
+   "in": 0.0
+  },
+  {
+   "src": "clips/15.mp4",
+   "start": 40.32,
+   "in": 0.0
+  },
+  {
+   "src": "clips/16.mp4",
+   "start": 43.64,
+   "in": 0.0
+  },
+  {
+   "src": "clips/17.mp4",
+   "start": 47.44,
+   "in": 0.0
+  },
+  {
+   "src": "clips/18.mp4",
+   "start": 49.52,
+   "in": 0.0
+  },
+  {
+   "src": "clips/19.mp4",
+   "start": 51.76,
+   "in": 0.0
+  },
+  {
+   "src": "clips/20.mp4",
+   "start": 53.98,
+   "in": 0.0
+  },
+  {
+   "src": "clips/21.mp4",
+   "start": 58.44,
+   "in": 0.0
+  },
+  {
+   "src": "clips/22.mp4",
+   "start": 61.62,
+   "in": 0.0
+  },
+  {
+   "src": "clips/23.mp4",
+   "start": 64.22,
+   "in": 2.0
+  },
+  {
+   "src": "clips/24.mp4",
+   "start": 67.18,
+   "in": 0.0
+  },
+  {
+   "src": "clips/25.mp4",
+   "start": 71.4,
+   "in": 0.0
+  },
+  {
+   "src": "clips/26.mp4",
+   "start": 74.36,
+   "in": 0.0
+  },
+  {
+   "src": "clips/27.mp4",
+   "start": 77.78,
+   "in": 0.0
+  },
+  {
+   "src": "clips/28.mp4",
+   "start": 80.8,
+   "in": 0.0
+  },
+  {
+   "src": "clips/29.mp4",
+   "start": 84.76,
+   "in": 0.0
+  },
+  {
+   "src": "clips/30.mp4",
+   "start": 88.22,
+   "in": 0.0
+  },
+  {
+   "src": "clips/31.mp4",
+   "start": 91.54,
+   "in": 0.0
+  },
+  {
+   "src": "clips/32.mp4",
+   "start": 96.36,
+   "in": 0.0
+  },
+  {
+   "src": "clips/33.mp4",
+   "start": 99.46,
+   "in": 0.0
+  },
+  {
+   "src": "clips/34.mp4",
+   "start": 104.18,
+   "in": 0.0
+  },
+  {
+   "src": "clips/35-36.mp4",
+   "start": 106.14,
+   "in": 0.0
+  }
+ ],
+ "music": {
+  "src": "audio/music/pad-loop.mp3",
+  "_why": "fond ElevenLabs 30 s bouclé : écart-type 0,79 dB, amplitude 3,6 dB — régulier, reste sous la voix",
+  "in": 0.0,
+  "under_voice_db": 18,
+  "envelope": [
+   [
+    0,
+    -60
+   ],
+   [
+    0.5,
+    0
+   ],
+   [
+    47.44,
+    0
+   ],
+   [
+    48.04,
+    3
+   ],
+   [
+    109.64,
+    3
+   ],
+   [
+    111.14,
+    -60
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "name": "nuit — accroche",
+   "src": "audio/sfx/night.mp3",
+   "at": 0.0,
+   "under_voice_db": 18,
+   "out": 4.1,
+   "fade_out": 0.4
+  },
+  {
+   "name": "whoosh — coupe marché",
+   "src": "audio/sfx/whoosh-short.mp3",
+   "at": 11.66,
+   "under_voice_db": 8
+  },
+  {
+   "name": "ambiance marché",
+   "src": "audio/sfx/market.mp3",
+   "at": 11.82,
+   "under_voice_db": 16,
+   "out": 4.8,
+   "fade_in": 0.2,
+   "fade_out": 0.5
+  },
+  {
+   "name": "nuit — Awa dort",
+   "src": "audio/sfx/night.mp3",
+   "at": 19.4,
+   "under_voice_db": 18,
+   "out": 2.4,
+   "fade_in": 0.2,
+   "fade_out": 0.3
+  },
+  {
+   "name": "comprimés",
+   "src": "audio/sfx/pills.mp3",
+   "at": 26.29,
+   "under_voice_db": 10
+  },
+  {
+   "name": "eau bassine",
+   "src": "audio/sfx/water.mp3",
+   "at": 34.04,
+   "under_voice_db": 10
+  },
+  {
+   "name": "grésillement nerfs",
+   "src": "audio/sfx/zap.mp3",
+   "at": 40.44,
+   "under_voice_db": 9
+  },
+  {
+   "name": "carillon — Miracle Balm",
+   "src": "audio/sfx/chime.mp3",
+   "at": 47.66,
+   "under_voice_db": 9,
+   "fade_out": 0.5
+  },
+  {
+   "name": "zap — burning",
+   "src": "audio/sfx/zap.mp3",
+   "at": 58.81,
+   "under_voice_db": 11
+  },
+  {
+   "name": "zap — tingling",
+   "src": "audio/sfx/zap.mp3",
+   "at": 59.69,
+   "under_voice_db": 11
+  },
+  {
+   "name": "zap — needles",
+   "src": "audio/sfx/zap.mp3",
+   "at": 60.57,
+   "under_voice_db": 11
+  },
+  {
+   "name": "montée — wake up circulation",
+   "src": "audio/sfx/riser.mp3",
+   "at": 66.68,
+   "under_voice_db": 12,
+   "out": 3.4,
+   "fade_out": 0.3
+  },
+  {
+   "name": "scintillement — nerfs dorés",
+   "src": "audio/sfx/sparkle.mp3",
+   "at": 71.31,
+   "under_voice_db": 10
+  },
+  {
+   "name": "nuit — Ebrima soulagé",
+   "src": "audio/sfx/night.mp3",
+   "at": 84.76,
+   "under_voice_db": 18,
+   "out": 3.4,
+   "fade_in": 0.2,
+   "fade_out": 0.3
+  },
+  {
+   "name": "pop — Click below",
+   "src": "audio/sfx/pop.mp3",
+   "at": 104.18,
+   "under_voice_db": 10
+  },
+  {
+   "name": "moto livreur",
+   "src": "audio/sfx/moto.mp3",
+   "at": 106.14,
+   "under_voice_db": 16,
+   "out": 2.0,
+   "fade_in": 0.1,
+   "fade_out": 0.5
+  },
+  {
+   "name": "billets",
+   "src": "audio/sfx/money.mp3",
+   "at": 108.75,
+   "under_voice_db": 10
+  }
+ ]
+}

@@ -232,6 +232,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 ## Règles apprises
 
 - **COD en Afrique : la non-livraison est une donnée du modèle.** Des clients commandent sans vouloir être livrés, n'ont pas l'argent à la livraison, ne répondent pas. L'entrepreneur l'accepte comme une réalité du marché. Ne pas présenter les commandes non livrées comme un dysfonctionnement à corriger ni comme une alerte. Les intégrer comme un paramètre (taux de livraison) dans les calculs de rentabilité, sans ton alarmiste.
+- **Génération IA : toujours la qualité standard.** Images, vidéos, voix : utiliser le mode standard / la résolution par défaut. Jamais de mode supérieur (pro, 4K, 1080p payant, etc.) sans l'accord explicite de l'entrepreneur, même si l'écart de prix paraît faible. Annoncer le coût avant de lancer.
 
 ## Ton
 

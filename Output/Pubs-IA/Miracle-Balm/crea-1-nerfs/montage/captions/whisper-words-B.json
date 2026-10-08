@@ -1,0 +1,1580 @@
+{
+"backend": "faster-whisper-small-local",
+"words": [
+{
+"word": "For",
+"start": 0.0,
+"end": 0.18
+},
+{
+"word": "years,",
+"start": 0.18,
+"end": 0.62
+},
+{
+"word": "people",
+"start": 1.1,
+"end": 1.3
+},
+{
+"word": "with",
+"start": 1.3,
+"end": 1.54
+},
+{
+"word": "burning,",
+"start": 1.54,
+"end": 1.98
+},
+{
+"word": "tingling",
+"start": 2.44,
+"end": 2.8
+},
+{
+"word": "feet",
+"start": 2.8,
+"end": 3.22
+},
+{
+"word": "were",
+"start": 3.22,
+"end": 3.44
+},
+{
+"word": "told,",
+"start": 3.44,
+"end": 3.7
+},
+{
+"word": "you",
+"start": 4.26,
+"end": 4.42
+},
+{
+"word": "have",
+"start": 4.42,
+"end": 4.68
+},
+{
+"word": "to",
+"start": 4.68,
+"end": 4.84
+},
+{
+"word": "live",
+"start": 4.84,
+"end": 5.08
+},
+{
+"word": "with",
+"start": 5.08,
+"end": 5.32
+},
+{
+"word": "it.",
+"start": 5.32,
+"end": 5.48
+},
+{
+"word": "But",
+"start": 5.96,
+"end": 6.2
+},
+{
+"word": "one",
+"start": 6.2,
+"end": 6.46
+},
+{
+"word": "question",
+"start": 6.46,
+"end": 6.88
+},
+{
+"word": "kept",
+"start": 6.88,
+"end": 7.2
+},
+{
+"word": "coming",
+"start": 7.2,
+"end": 7.5
+},
+{
+"word": "back.",
+"start": 7.5,
+"end": 7.84
+},
+{
+"word": "Why",
+"start": 8.54,
+"end": 8.76
+},
+{
+"word": "does",
+"start": 8.76,
+"end": 8.96
+},
+{
+"word": "the",
+"start": 8.96,
+"end": 9.1
+},
+{
+"word": "burning",
+"start": 9.1,
+"end": 9.44
+},
+{
+"word": "always",
+"start": 9.44,
+"end": 9.98
+},
+{
+"word": "get",
+"start": 9.98,
+"end": 10.26
+},
+{
+"word": "worse",
+"start": 10.26,
+"end": 10.58
+},
+{
+"word": "at",
+"start": 10.58,
+"end": 10.78
+},
+{
+"word": "night?",
+"start": 10.78,
+"end": 11.06
+},
+{
+"word": "From",
+"start": 11.94,
+"end": 12.06
+},
+{
+"word": "Saracunda",
+"start": 12.06,
+"end": 12.72
+},
+{
+"word": "to",
+"start": 12.72,
+"end": 12.98
+},
+{
+"word": "Bricama,",
+"start": 12.98,
+"end": 13.46
+},
+{
+"word": "more",
+"start": 14.04,
+"end": 14.26
+},
+{
+"word": "and",
+"start": 14.26,
+"end": 14.5
+},
+{
+"word": "more",
+"start": 14.5,
+"end": 14.78
+},
+{
+"word": "people",
+"start": 14.78,
+"end": 15.16
+},
+{
+"word": "are",
+"start": 15.16,
+"end": 15.42
+},
+{
+"word": "switching",
+"start": 15.42,
+"end": 15.76
+},
+{
+"word": "to",
+"start": 15.76,
+"end": 16.02
+},
+{
+"word": "this.",
+"start": 16.02,
+"end": 16.32
+},
+{
+"word": "And",
+"start": 16.82,
+"end": 17.02
+},
+{
+"word": "what",
+"start": 17.02,
+"end": 17.16
+},
+{
+"word": "they",
+"start": 17.16,
+"end": 17.32
+},
+{
+"word": "tell",
+"start": 17.32,
+"end": 17.56
+},
+{
+"word": "us",
+"start": 17.56,
+"end": 17.76
+},
+{
+"word": "is",
+"start": 17.76,
+"end": 17.94
+},
+{
+"word": "always",
+"start": 17.94,
+"end": 18.4
+},
+{
+"word": "the",
+"start": 18.4,
+"end": 18.66
+},
+{
+"word": "same.",
+"start": 18.66,
+"end": 18.94
+},
+{
+"word": "They",
+"start": 19.6,
+"end": 19.72
+},
+{
+"word": "finally",
+"start": 19.72,
+"end": 20.28
+},
+{
+"word": "sleep",
+"start": 20.28,
+"end": 20.7
+},
+{
+"word": "through",
+"start": 20.7,
+"end": 20.98
+},
+{
+"word": "the",
+"start": 20.98,
+"end": 21.12
+},
+{
+"word": "night,",
+"start": 21.12,
+"end": 21.42
+},
+{
+"word": "less",
+"start": 22.04,
+"end": 22.32
+},
+{
+"word": "burning,",
+"start": 22.32,
+"end": 22.7
+},
+{
+"word": "less",
+"start": 23.2,
+"end": 23.36
+},
+{
+"word": "tingling.",
+"start": 23.36,
+"end": 23.82
+},
+{
+"word": "They",
+"start": 24.36,
+"end": 24.6
+},
+{
+"word": "are",
+"start": 24.6,
+"end": 24.84
+},
+{
+"word": "back",
+"start": 24.84,
+"end": 25.16
+},
+{
+"word": "on",
+"start": 25.16,
+"end": 25.38
+},
+{
+"word": "their",
+"start": 25.38,
+"end": 25.5
+},
+{
+"word": "feet.",
+"start": 25.5,
+"end": 25.76
+},
+{
+"word": "This",
+"start": 26.38,
+"end": 26.66
+},
+{
+"word": "is",
+"start": 26.66,
+"end": 26.82
+},
+{
+"word": "not",
+"start": 26.82,
+"end": 27.08
+},
+{
+"word": "another",
+"start": 27.08,
+"end": 27.44
+},
+{
+"word": "tablet",
+"start": 27.44,
+"end": 27.86
+},
+{
+"word": "you",
+"start": 27.86,
+"end": 28.06
+},
+{
+"word": "swallow",
+"start": 28.06,
+"end": 28.36
+},
+{
+"word": "every",
+"start": 28.36,
+"end": 28.66
+},
+{
+"word": "day,",
+"start": 28.66,
+"end": 28.94
+},
+{
+"word": "not",
+"start": 28.94,
+"end": 29.54
+},
+{
+"word": "a",
+"start": 29.54,
+"end": 29.68
+},
+{
+"word": "cream",
+"start": 29.68,
+"end": 30.02
+},
+{
+"word": "that",
+"start": 30.02,
+"end": 30.28
+},
+{
+"word": "only",
+"start": 30.28,
+"end": 30.56
+},
+{
+"word": "makes",
+"start": 30.56,
+"end": 30.8
+},
+{
+"word": "the",
+"start": 30.8,
+"end": 30.96
+},
+{
+"word": "skin",
+"start": 30.96,
+"end": 31.28
+},
+{
+"word": "soft",
+"start": 31.28,
+"end": 31.66
+},
+{
+"word": "and",
+"start": 31.66,
+"end": 32.1
+},
+{
+"word": "does",
+"start": 32.1,
+"end": 32.26
+},
+{
+"word": "nothing",
+"start": 32.26,
+"end": 32.64
+},
+{
+"word": "for",
+"start": 32.64,
+"end": 32.9
+},
+{
+"word": "the",
+"start": 32.9,
+"end": 33.0
+},
+{
+"word": "burning.",
+"start": 33.0,
+"end": 33.28
+},
+{
+"word": "Not",
+"start": 33.76,
+"end": 34.14
+},
+{
+"word": "hot",
+"start": 34.14,
+"end": 34.46
+},
+{
+"word": "water",
+"start": 34.46,
+"end": 34.72
+},
+{
+"word": "with",
+"start": 34.72,
+"end": 34.92
+},
+{
+"word": "salt",
+"start": 34.92,
+"end": 35.28
+},
+{
+"word": "that",
+"start": 35.28,
+"end": 35.62
+},
+{
+"word": "calms",
+"start": 35.62,
+"end": 36.04
+},
+{
+"word": "you",
+"start": 36.04,
+"end": 36.14
+},
+{
+"word": "for",
+"start": 36.14,
+"end": 36.32
+},
+{
+"word": "one",
+"start": 36.32,
+"end": 36.62
+},
+{
+"word": "hour.",
+"start": 36.62,
+"end": 37.0
+},
+{
+"word": "Because",
+"start": 37.4,
+"end": 37.72
+},
+{
+"word": "the",
+"start": 37.72,
+"end": 37.92
+},
+{
+"word": "burning",
+"start": 37.92,
+"end": 38.22
+},
+{
+"word": "does",
+"start": 38.22,
+"end": 38.56
+},
+{
+"word": "not",
+"start": 38.56,
+"end": 38.84
+},
+{
+"word": "start",
+"start": 38.84,
+"end": 39.28
+},
+{
+"word": "in",
+"start": 39.28,
+"end": 39.52
+},
+{
+"word": "the",
+"start": 39.52,
+"end": 39.62
+},
+{
+"word": "skin.",
+"start": 39.62,
+"end": 39.96
+},
+{
+"word": "It",
+"start": 40.42,
+"end": 40.62
+},
+{
+"word": "starts",
+"start": 40.62,
+"end": 40.86
+},
+{
+"word": "deeper",
+"start": 40.86,
+"end": 41.38
+},
+{
+"word": "in",
+"start": 41.38,
+"end": 42.02
+},
+{
+"word": "the",
+"start": 42.02,
+"end": 42.14
+},
+{
+"word": "nerves",
+"start": 42.14,
+"end": 42.58
+},
+{
+"word": "of",
+"start": 42.58,
+"end": 42.8
+},
+{
+"word": "the",
+"start": 42.8,
+"end": 42.9
+},
+{
+"word": "feet.",
+"start": 42.9,
+"end": 43.2
+},
+{
+"word": "And",
+"start": 43.78,
+"end": 44.0
+},
+{
+"word": "the",
+"start": 44.0,
+"end": 44.12
+},
+{
+"word": "funny",
+"start": 44.12,
+"end": 44.28
+},
+{
+"word": "thing",
+"start": 44.28,
+"end": 44.52
+},
+{
+"word": "is,",
+"start": 44.52,
+"end": 44.8
+},
+{
+"word": "the",
+"start": 45.08,
+"end": 45.22
+},
+{
+"word": "answer",
+"start": 45.22,
+"end": 45.56
+},
+{
+"word": "is",
+"start": 45.56,
+"end": 45.82
+},
+{
+"word": "very",
+"start": 45.82,
+"end": 46.2
+},
+{
+"word": "simple",
+"start": 46.2,
+"end": 46.6
+},
+{
+"word": "to",
+"start": 46.6,
+"end": 46.8
+},
+{
+"word": "use.",
+"start": 46.8,
+"end": 47.1
+},
+{
+"word": "It's",
+"start": 47.58,
+"end": 47.82
+},
+{
+"word": "called",
+"start": 47.82,
+"end": 48.08
+},
+{
+"word": "miracle",
+"start": 48.08,
+"end": 48.68
+},
+{
+"word": "balm.",
+"start": 48.68,
+"end": 49.08
+},
+{
+"word": "Here",
+"start": 49.64,
+"end": 49.96
+},
+{
+"word": "is",
+"start": 49.96,
+"end": 50.18
+},
+{
+"word": "why",
+"start": 50.18,
+"end": 50.42
+},
+{
+"word": "it",
+"start": 50.42,
+"end": 50.6
+},
+{
+"word": "works",
+"start": 50.6,
+"end": 50.82
+},
+{
+"word": "differently.",
+"start": 50.82,
+"end": 51.24
+},
+{
+"word": "Tired",
+"start": 51.9,
+"end": 52.26
+},
+{
+"word": "nerves",
+"start": 52.26,
+"end": 52.7
+},
+{
+"word": "need",
+"start": 52.7,
+"end": 53.06
+},
+{
+"word": "blood.",
+"start": 53.06,
+"end": 53.48
+},
+{
+"word": "When",
+"start": 54.1,
+"end": 54.28
+},
+{
+"word": "the",
+"start": 54.28,
+"end": 54.38
+},
+{
+"word": "blood",
+"start": 54.38,
+"end": 54.6
+},
+{
+"word": "moves",
+"start": 54.6,
+"end": 54.88
+},
+{
+"word": "slowly",
+"start": 54.88,
+"end": 55.34
+},
+{
+"word": "in",
+"start": 55.34,
+"end": 55.56
+},
+{
+"word": "the",
+"start": 55.56,
+"end": 55.66
+},
+{
+"word": "feet,",
+"start": 55.66,
+"end": 55.98
+},
+{
+"word": "the",
+"start": 56.3,
+"end": 56.42
+},
+{
+"word": "nerves",
+"start": 56.42,
+"end": 56.74
+},
+{
+"word": "don't",
+"start": 56.74,
+"end": 57.06
+},
+{
+"word": "get",
+"start": 57.06,
+"end": 57.28
+},
+{
+"word": "what",
+"start": 57.28,
+"end": 57.46
+},
+{
+"word": "they",
+"start": 57.46,
+"end": 57.6
+},
+{
+"word": "need.",
+"start": 57.6,
+"end": 57.94
+},
+{
+"word": "So",
+"start": 57.94,
+"end": 58.56
+},
+{
+"word": "they",
+"start": 58.56,
+"end": 58.72
+},
+{
+"word": "send",
+"start": 58.72,
+"end": 58.96
+},
+{
+"word": "burning,",
+"start": 58.96,
+"end": 59.34
+},
+{
+"word": "tingling,",
+"start": 59.84,
+"end": 60.26
+},
+{
+"word": "needles.",
+"start": 60.72,
+"end": 61.0
+},
+{
+"word": "Miracle",
+"start": 61.74,
+"end": 62.22
+},
+{
+"word": "balm",
+"start": 62.22,
+"end": 62.48
+},
+{
+"word": "is",
+"start": 62.48,
+"end": 62.76
+},
+{
+"word": "a",
+"start": 62.76,
+"end": 62.88
+},
+{
+"word": "natural",
+"start": 62.88,
+"end": 63.36
+},
+{
+"word": "herbal",
+"start": 63.36,
+"end": 63.8
+},
+{
+"word": "formula",
+"start": 63.8,
+"end": 64.34
+},
+{
+"word": "made",
+"start": 64.34,
+"end": 64.9
+},
+{
+"word": "to",
+"start": 64.9,
+"end": 65.1
+},
+{
+"word": "be",
+"start": 65.1,
+"end": 65.22
+},
+{
+"word": "massaged",
+"start": 65.22,
+"end": 65.72
+},
+{
+"word": "deep",
+"start": 65.72,
+"end": 66.02
+},
+{
+"word": "into",
+"start": 66.02,
+"end": 66.34
+},
+{
+"word": "the",
+"start": 66.34,
+"end": 66.5
+},
+{
+"word": "feet.",
+"start": 66.5,
+"end": 66.74
+},
+{
+"word": "The",
+"start": 67.38,
+"end": 67.54
+},
+{
+"word": "balm",
+"start": 67.54,
+"end": 67.88
+},
+{
+"word": "and",
+"start": 67.88,
+"end": 68.08
+},
+{
+"word": "the",
+"start": 68.08,
+"end": 68.18
+},
+{
+"word": "massage",
+"start": 68.18,
+"end": 68.56
+},
+{
+"word": "work",
+"start": 68.56,
+"end": 68.88
+},
+{
+"word": "together",
+"start": 68.88,
+"end": 69.42
+},
+{
+"word": "to",
+"start": 69.42,
+"end": 69.72
+},
+{
+"word": "wake",
+"start": 69.72,
+"end": 70.02
+},
+{
+"word": "up",
+"start": 70.02,
+"end": 70.22
+},
+{
+"word": "the",
+"start": 70.22,
+"end": 70.36
+},
+{
+"word": "circulation",
+"start": 70.36,
+"end": 70.94
+},
+{
+"word": "so",
+"start": 70.94,
+"end": 71.52
+},
+{
+"word": "fresh",
+"start": 71.52,
+"end": 71.9
+},
+{
+"word": "blood",
+"start": 71.9,
+"end": 72.2
+},
+{
+"word": "can",
+"start": 72.2,
+"end": 72.46
+},
+{
+"word": "reach",
+"start": 72.46,
+"end": 72.76
+},
+{
+"word": "the",
+"start": 72.76,
+"end": 72.98
+},
+{
+"word": "tired",
+"start": 72.98,
+"end": 73.36
+},
+{
+"word": "nerves",
+"start": 73.36,
+"end": 73.72
+},
+{
+"word": "again.",
+"start": 73.72,
+"end": 73.98
+},
+{
+"word": "That's",
+"start": 74.44,
+"end": 74.9
+},
+{
+"word": "why",
+"start": 74.9,
+"end": 75.06
+},
+{
+"word": "you",
+"start": 75.06,
+"end": 75.24
+},
+{
+"word": "are",
+"start": 75.24,
+"end": 75.32
+},
+{
+"word": "not",
+"start": 75.32,
+"end": 75.54
+},
+{
+"word": "just",
+"start": 75.54,
+"end": 75.78
+},
+{
+"word": "covering",
+"start": 75.78,
+"end": 76.2
+},
+{
+"word": "the",
+"start": 76.2,
+"end": 76.4
+},
+{
+"word": "pain",
+"start": 76.4,
+"end": 76.68
+},
+{
+"word": "on",
+"start": 76.68,
+"end": 76.88
+},
+{
+"word": "top",
+"start": 76.88,
+"end": 77.12
+},
+{
+"word": "of",
+"start": 77.12,
+"end": 77.26
+},
+{
+"word": "the",
+"start": 77.26,
+"end": 77.38
+},
+{
+"word": "skin.",
+"start": 77.38,
+"end": 77.68
+},
+{
+"word": "You",
+"start": 78.1,
+"end": 78.36
+},
+{
+"word": "are",
+"start": 78.36,
+"end": 78.48
+},
+{
+"word": "helping",
+"start": 78.48,
+"end": 78.82
+},
+{
+"word": "your",
+"start": 78.82,
+"end": 79.06
+},
+{
+"word": "feet",
+"start": 79.06,
+"end": 79.32
+},
+{
+"word": "from",
+"start": 79.32,
+"end": 79.56
+},
+{
+"word": "the",
+"start": 79.56,
+"end": 79.7
+},
+{
+"word": "inside.",
+"start": 79.7,
+"end": 80.18
+},
+{
+"word": "Morning",
+"start": 80.94,
+"end": 81.26
+},
+{
+"word": "and",
+"start": 81.26,
+"end": 81.56
+},
+{
+"word": "night,",
+"start": 81.56,
+"end": 81.8
+},
+{
+"word": "massage",
+"start": 82.16,
+"end": 82.48
+},
+{
+"word": "it",
+"start": 82.48,
+"end": 82.68
+},
+{
+"word": "into",
+"start": 82.68,
+"end": 82.9
+},
+{
+"word": "each",
+"start": 82.9,
+"end": 83.26
+},
+{
+"word": "foot",
+"start": 83.26,
+"end": 83.54
+},
+{
+"word": "for",
+"start": 83.54,
+"end": 83.78
+},
+{
+"word": "one",
+"start": 83.78,
+"end": 84.08
+},
+{
+"word": "minute.",
+"start": 84.08,
+"end": 84.38
+},
+{
+"word": "Many",
+"start": 84.9,
+"end": 85.18
+},
+{
+"word": "people",
+"start": 85.18,
+"end": 85.52
+},
+{
+"word": "feel",
+"start": 85.52,
+"end": 85.84
+},
+{
+"word": "the",
+"start": 85.84,
+"end": 86.0
+},
+{
+"word": "burning",
+"start": 86.0,
+"end": 86.22
+},
+{
+"word": "calm",
+"start": 86.22,
+"end": 86.58
+},
+{
+"word": "down",
+"start": 86.58,
+"end": 86.92
+},
+{
+"word": "in",
+"start": 86.92,
+"end": 87.1
+},
+{
+"word": "the",
+"start": 87.1,
+"end": 87.18
+},
+{
+"word": "first",
+"start": 87.18,
+"end": 87.44
+},
+{
+"word": "nights",
+"start": 87.44,
+"end": 87.8
+},
+{
+"word": "and",
+"start": 87.8,
+"end": 88.34
+},
+{
+"word": "it",
+"start": 88.34,
+"end": 88.44
+},
+{
+"word": "keeps",
+"start": 88.44,
+"end": 88.76
+},
+{
+"word": "getting",
+"start": 88.76,
+"end": 89.02
+},
+{
+"word": "better",
+"start": 89.02,
+"end": 89.4
+},
+{
+"word": "as",
+"start": 89.4,
+"end": 89.68
+},
+{
+"word": "they",
+"start": 89.68,
+"end": 89.82
+},
+{
+"word": "keep",
+"start": 89.82,
+"end": 90.06
+},
+{
+"word": "the",
+"start": 90.06,
+"end": 90.22
+},
+{
+"word": "habit.",
+"start": 90.22,
+"end": 90.52
+},
+{
+"word": "If",
+"start": 91.06,
+"end": 91.18
+},
+{
+"word": "there",
+"start": 91.18,
+"end": 91.32
+},
+{
+"word": "is",
+"start": 91.32,
+"end": 91.46
+},
+{
+"word": "a",
+"start": 91.46,
+"end": 91.58
+},
+{
+"word": "wound",
+"start": 91.58,
+"end": 91.86
+},
+{
+"word": "that",
+"start": 91.86,
+"end": 92.04
+},
+{
+"word": "does",
+"start": 92.04,
+"end": 92.26
+},
+{
+"word": "not",
+"start": 92.26,
+"end": 92.42
+},
+{
+"word": "heal",
+"start": 92.42,
+"end": 92.8
+},
+{
+"word": "or",
+"start": 92.8,
+"end": 93.2
+},
+{
+"word": "very",
+"start": 93.2,
+"end": 93.6
+},
+{
+"word": "strong",
+"start": 93.6,
+"end": 93.98
+},
+{
+"word": "pain,",
+"start": 93.98,
+"end": 94.36
+},
+{
+"word": "see",
+"start": 94.72,
+"end": 94.96
+},
+{
+"word": "a",
+"start": 94.96,
+"end": 95.08
+},
+{
+"word": "doctor",
+"start": 95.08,
+"end": 95.36
+},
+{
+"word": "first.",
+"start": 95.36,
+"end": 95.8
+},
+{
+"word": "Try",
+"start": 96.48,
+"end": 96.74
+},
+{
+"word": "miracle",
+"start": 96.74,
+"end": 97.14
+},
+{
+"word": "balm",
+"start": 97.14,
+"end": 97.5
+},
+{
+"word": "today",
+"start": 97.5,
+"end": 97.84
+},
+{
+"word": "without",
+"start": 97.84,
+"end": 98.38
+},
+{
+"word": "any",
+"start": 98.38,
+"end": 98.82
+},
+{
+"word": "risk.",
+"start": 98.82,
+"end": 99.22
+},
+{
+"word": "You",
+"start": 99.56,
+"end": 99.7
+},
+{
+"word": "have",
+"start": 99.7,
+"end": 99.84
+},
+{
+"word": "30",
+"start": 99.84,
+"end": 100.16
+},
+{
+"word": "days.",
+"start": 100.16,
+"end": 100.46
+},
+{
+"word": "If",
+"start": 101.16,
+"end": 101.26
+},
+{
+"word": "the",
+"start": 101.26,
+"end": 101.38
+},
+{
+"word": "burning",
+"start": 101.38,
+"end": 101.64
+},
+{
+"word": "doesn't",
+"start": 101.64,
+"end": 102.04
+},
+{
+"word": "calm",
+"start": 102.04,
+"end": 102.28
+},
+{
+"word": "down,",
+"start": 102.28,
+"end": 102.56
+},
+{
+"word": "you",
+"start": 102.9,
+"end": 103.0
+},
+{
+"word": "get",
+"start": 103.0,
+"end": 103.24
+},
+{
+"word": "your",
+"start": 103.24,
+"end": 103.38
+},
+{
+"word": "money",
+"start": 103.38,
+"end": 103.6
+},
+{
+"word": "back.",
+"start": 103.6,
+"end": 103.9
+},
+{
+"word": "Click",
+"start": 104.3,
+"end": 104.62
+},
+{
+"word": "below",
+"start": 104.62,
+"end": 104.96
+},
+{
+"word": "to",
+"start": 104.96,
+"end": 105.16
+},
+{
+"word": "order.",
+"start": 105.16,
+"end": 105.42
+},
+{
+"word": "Free",
+"start": 105.86,
+"end": 106.14
+},
+{
+"word": "delivery",
+"start": 106.14,
+"end": 106.48
+},
+{
+"word": "today",
+"start": 106.48,
+"end": 106.84
+},
+{
+"word": "and",
+"start": 106.84,
+"end": 107.34
+},
+{
+"word": "cash",
+"start": 107.34,
+"end": 107.7
+},
+{
+"word": "on",
+"start": 107.7,
+"end": 107.92
+},
+{
+"word": "delivery.",
+"start": 107.92,
+"end": 108.24
+},
+{
+"word": "You",
+"start": 108.7,
+"end": 108.88
+},
+{
+"word": "pay",
+"start": 108.88,
+"end": 109.1
+},
+{
+"word": "only",
+"start": 109.1,
+"end": 109.54
+},
+{
+"word": "when",
+"start": 109.54,
+"end": 109.78
+},
+{
+"word": "it's",
+"start": 109.78,
+"end": 109.96
+},
+{
+"word": "in",
+"start": 109.96,
+"end": 110.14
+},
+{
+"word": "your",
+"start": 110.14,
+"end": 110.28
+},
+{
+"word": "hand.",
+"start": 110.28,
+"end": 110.56
+}
+]
+}

@@ -1,0 +1,36 @@
+{
+ "video": "renders/MB-1-A-v1.mp4",
+ "out": "renders/MB-1-A-v1-habillee.mp4",
+ "hook": {
+  "lines": [
+   {
+    "text": "This evening habit"
+   },
+   {
+    "text": "is spreading in The Gambia",
+    "highlight": [
+     "The Gambia"
+    ]
+   }
+  ],
+  "start": 0.05,
+  "end": 5.3,
+  "top": 560,
+  "style": "boites"
+ },
+ "endcard": {
+  "duration": 3.4,
+  "kicker": "Free delivery today",
+  "product_image": "ref/produit.png",
+  "title": "MIRACLE BALM",
+  "subtitle": "Herbal foot massage balm, morning and night",
+  "perks": [
+   "Free delivery",
+   "Pay on delivery",
+   "30-day money back"
+  ],
+  "cta": "Order now",
+  "cta_note": "Tap the button below",
+  "accent": "#3a8f2a"
+ }
+}

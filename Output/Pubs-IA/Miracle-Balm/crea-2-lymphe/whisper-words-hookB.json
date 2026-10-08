@@ -1,0 +1,75 @@
+{
+"backend": "faster-whisper-small-local",
+"words": [
+{
+"word": "Why",
+"start": 0.0,
+"end": 0.26
+},
+{
+"word": "do",
+"start": 0.26,
+"end": 0.38
+},
+{
+"word": "your",
+"start": 0.38,
+"end": 0.5
+},
+{
+"word": "legs",
+"start": 0.5,
+"end": 0.88
+},
+{
+"word": "feel",
+"start": 0.88,
+"end": 1.16
+},
+{
+"word": "heavier",
+"start": 1.16,
+"end": 1.68
+},
+{
+"word": "every",
+"start": 1.68,
+"end": 2.1
+},
+{
+"word": "evening,",
+"start": 2.1,
+"end": 2.54
+},
+{
+"word": "even",
+"start": 3.18,
+"end": 3.42
+},
+{
+"word": "on",
+"start": 3.42,
+"end": 3.6
+},
+{
+"word": "the",
+"start": 3.6,
+"end": 3.7
+},
+{
+"word": "days",
+"start": 3.7,
+"end": 3.96
+},
+{
+"word": "you",
+"start": 3.96,
+"end": 4.12
+},
+{
+"word": "rested?",
+"start": 4.12,
+"end": 4.48
+}
+]
+}

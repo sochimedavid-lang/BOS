@@ -16,8 +16,8 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 ## Créas
 | Créa | Format | Style | Étape | Crédits dépensés |
 |---|---|---|---|---:|
-| MB-1 | Argumentaire nerfs (remake Anc. Crea 2 / Nouv. Crea 4) — `crea-1-nerfs/` | Humain IA réaliste + schémas | Voix validée. Storyboard v1. **40 images reçues et validées** (images/, planche-images.jpg) — prochaine étape : animation Kling (kling-prompts.md) | 5 353 ElevenLabs (~1,95 $) |
-| MB-2 | Argumentaire lymphe / jambes lourdes (remake Crea 5) — `crea-2-lymphe/` | Anime 2D, personnages gambiens | Script v1 écrit, en attente de validation | 0 |
+| MB-1 | Argumentaire nerfs — `crea-1-nerfs/` | Humain IA réaliste + schémas | **Montée** (versions A et B, habillage accroche + carte de fin). 39 clips Kling std ; 09 et B1 remplacés par zoom sur image (pied déformé) | ElevenLabs ~5 900 crédits ; Higgsfield 292,5 crédits |
+| MB-2 | Jambes lourdes (remake Crea 5) — `crea-2-lymphe/` | Anime 2D | Voix Christopher Smooth générée (125,6 s + accroche B). Storyboard v1 : 46 images + 2 portraits | ElevenLabs 1 943 crédits |
 | MB-3 | Témoignage Mama Fatou — `crea-3-temoignage-mama/` | Humain IA réaliste | Script v0 | 0 |
 
 ## Reste à faire
