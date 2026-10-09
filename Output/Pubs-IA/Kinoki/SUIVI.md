@@ -13,7 +13,7 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 ## Créas
 | Créa | Format | Style | Étape | Crédits dépensés |
 |---|---|---|---|---:|
-| K-1 | « TWO YEARS AGO » (base Crea 7) — `crea-1-two-years-ago/` | Humain IA réaliste, voix off Christopher Smooth | Script v1 validé (09/10, sans « toxins »). Fiches Lamin et Fatou : prompts fournis, génération par l'entrepreneur | 0 |
+| K-1 | « TWO YEARS AGO » (base Crea 7) — `crea-1-two-years-ago/` | Humain IA réaliste, voix off Christopher Smooth | Script v1 validé (09/10, sans « toxins »). Voix générée (eleven_v4, 68,0 s + accroche B 3,3 s). Fiches Lamin et Fatou : prompts fournis, génération par l'entrepreneur | ElevenLabs 1 146 |
 | K-3 | Patch qui noircit pendant la nuit | 3D façon Pixar | Recherche faite | 0 |
 
 ## Reste à faire

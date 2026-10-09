@@ -1,0 +1,60 @@
+{
+"backend": "faster-whisper-small-local",
+"words": [
+{
+"word": "Put",
+"start": 0.0,
+"end": 0.26
+},
+{
+"word": "one",
+"start": 0.26,
+"end": 0.52
+},
+{
+"word": "under",
+"start": 0.52,
+"end": 0.82
+},
+{
+"word": "each",
+"start": 0.82,
+"end": 1.1
+},
+{
+"word": "foot",
+"start": 1.1,
+"end": 1.32
+},
+{
+"word": "tonight.",
+"start": 1.32,
+"end": 1.68
+},
+{
+"word": "Look",
+"start": 2.0,
+"end": 2.24
+},
+{
+"word": "at",
+"start": 2.24,
+"end": 2.36
+},
+{
+"word": "it",
+"start": 2.36,
+"end": 2.44
+},
+{
+"word": "tomorrow",
+"start": 2.44,
+"end": 2.68
+},
+{
+"word": "morning.",
+"start": 2.68,
+"end": 3.04
+}
+]
+}
