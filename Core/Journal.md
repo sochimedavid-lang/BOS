@@ -36,3 +36,4 @@
 - Correction de l'entrepreneur : les vidéos vont dans Peryal Gambie, pas dans Secours. Nouvel essai d'envoi sur Peryal Gambie : toujours refusé par l'outil Meta (déploiement progressif). Règle ajoutée dans CLAUDE.md ; import manuel par l'entrepreneur depuis les liens.
 - K-1 validé : sans « toxins », voix off, Christopher Smooth, réaliste ; l'entrepreneur génère les images lui-même. Prompts des fiches Lamin et Fatou fournis.
 - K-1 : voix Christopher Smooth en eleven_v4, une prise (corps + accroche A 68,0 s, 1 085 crédits ; accroche B 3,3 s, 61 crédits). Texte complet à la transcription.
+- K-1 : storyboard v1 calé sur la voix (35 plans, prompts image et Kling, à joindre : fiches Lamin/Fatou ; pas de photo du vrai emballage). Animation estimée 159 crédits Higgsfield.
