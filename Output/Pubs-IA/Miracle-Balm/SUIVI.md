@@ -17,7 +17,7 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 | Créa | Format | Style | Étape | Crédits dépensés |
 |---|---|---|---|---:|
 | MB-1 | Argumentaire nerfs — `crea-1-nerfs/` | Humain IA réaliste + schémas | **Montée** (versions A et B, habillage accroche + carte de fin). 39 clips Kling std ; 09 et B1 remplacés par zoom sur image (pied déformé) | ElevenLabs ~5 900 crédits ; Higgsfield 292,5 crédits |
-| MB-2 | Jambes lourdes (remake Crea 5) — `crea-2-lymphe/` | 3D animé (au lieu de 2D, 08/10) | Voix Christopher Smooth (125,6 s + accroche B). 46/46 images validées (Higgsfield, 2K ; 11, 20, 27, 28, 35 refaites). Prochaine étape : animation Kling std | ElevenLabs 1 943 · Higgsfield ~100 crédits images |
+| MB-2 | Jambes lourdes (remake Crea 5) — `crea-2-lymphe/` | 3D animé (au lieu de 2D, 08/10) | Voix Christopher Smooth (125,6 s + accroche B). **Montée** (versions A 129,5 s et B 123,9 s, habillage accroche + carte de fin, −16 LUFS). 46 clips Kling std aux durées utiles (3 à 5 s) ; 29 remplacé par zoom sur image (manchon rose parasite). Accroches écran : A « The hidden cause of heavy, swollen legs », B « Why your legs feel like stone » | ElevenLabs 1 943 · Higgsfield ~100 images + 228 animation |
 | MB-3 | Témoignage Mama Fatou — `crea-3-temoignage-mama/` | Humain IA réaliste | Script v0 | 0 |
 
 ## Reste à faire

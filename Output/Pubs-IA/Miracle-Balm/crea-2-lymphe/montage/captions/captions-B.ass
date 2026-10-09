@@ -1,0 +1,344 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Karaoke,Montserrat ExtraBold,72,&H00FFFFFF,&H00FFFFFF,&H40101010,&H8C000000,0,0,0,0,100,100,0,0,1,2.1,2.6,5,30,30,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.26,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WHY{\c&H00FFFFFF&} DO YOUR LEGS
+Dialogue: 0,0:00:00.26,0:00:00.40,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WHY {\c&H0034FFF0&}DO{\c&H00FFFFFF&} YOUR LEGS
+Dialogue: 0,0:00:00.40,0:00:00.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WHY DO {\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:00:00.52,0:00:00.88,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WHY DO YOUR {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.88,0:00:01.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FEEL{\c&H00FFFFFF&} HEAVIER
+Dialogue: 0,0:00:01.18,0:00:01.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FEEL {\c&H0034FFF0&}HEAVIER{\c&H00FFFFFF&}
+Dialogue: 0,0:00:01.66,0:00:02.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}EVERY{\c&H00FFFFFF&} EVENING…
+Dialogue: 0,0:00:02.08,0:00:02.89,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVERY {\c&H0034FFF0&}EVENING…{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.26,0:00:03.42,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}EVEN{\c&H00FFFFFF&} ON THE DAYS
+Dialogue: 0,0:00:03.42,0:00:03.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVEN {\c&H0034FFF0&}ON{\c&H00FFFFFF&} THE DAYS
+Dialogue: 0,0:00:03.62,0:00:03.70,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVEN ON {\c&H0034FFF0&}THE{\c&H00FFFFFF&} DAYS
+Dialogue: 0,0:00:03.70,0:00:03.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVEN ON THE {\c&H0034FFF0&}DAYS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.96,0:00:04.12,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}YOU{\c&H00FFFFFF&} RESTED?
+Dialogue: 0,0:00:04.12,0:00:04.83,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOU {\c&H0034FFF0&}RESTED?{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.44,0:00:05.72,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MANY{\c&H00FFFFFF&} THINGS CAN
+Dialogue: 0,0:00:05.72,0:00:06.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MANY {\c&H0034FFF0&}THINGS{\c&H00FFFFFF&} CAN
+Dialogue: 0,0:00:06.08,0:00:06.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MANY THINGS {\c&H0034FFF0&}CAN{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.30,0:00:06.54,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MAKE{\c&H00FFFFFF&} LEGS SWELL
+Dialogue: 0,0:00:06.54,0:00:06.82,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MAKE {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&} SWELL
+Dialogue: 0,0:00:06.82,0:00:07.78,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MAKE LEGS {\c&H0034FFF0&}SWELL{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.78,0:00:07.84,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}BUT{\c&H00FFFFFF&} THERE IS
+Dialogue: 0,0:00:07.84,0:00:08.00,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT {\c&H0034FFF0&}THERE{\c&H00FFFFFF&} IS
+Dialogue: 0,0:00:08.00,0:00:08.14,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT THERE {\c&H0034FFF0&}IS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.14,0:00:08.46,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}ONE{\c&H00FFFFFF&} HIDDEN CAUSE
+Dialogue: 0,0:00:08.46,0:00:08.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ONE {\c&H0034FFF0&}HIDDEN{\c&H00FFFFFF&} CAUSE
+Dialogue: 0,0:00:08.86,0:00:09.26,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ONE HIDDEN {\c&H0034FFF0&}CAUSE{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.26,0:00:09.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MOST{\c&H00FFFFFF&} PEOPLE
+Dialogue: 0,0:00:09.66,0:00:10.00,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MOST {\c&H0034FFF0&}PEOPLE{\c&H00FFFFFF&}
+Dialogue: 0,0:00:10.00,0:00:10.40,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}NEVER{\c&H00FFFFFF&} THINK ABOUT
+Dialogue: 0,0:00:10.40,0:00:10.72,Karaoke,,0,0,0,,{\an5\pos(540,1208)}NEVER {\c&H0034FFF0&}THINK{\c&H00FFFFFF&} ABOUT
+Dialogue: 0,0:00:10.72,0:00:11.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}NEVER THINK {\c&H0034FFF0&}ABOUT{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.62,0:00:11.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FLUID{\c&H00FFFFFF&} THAT IS STUCK
+Dialogue: 0,0:00:11.96,0:00:12.38,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FLUID {\c&H0034FFF0&}THAT{\c&H00FFFFFF&} IS STUCK
+Dialogue: 0,0:00:12.38,0:00:12.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FLUID THAT {\c&H0034FFF0&}IS{\c&H00FFFFFF&} STUCK
+Dialogue: 0,0:00:12.52,0:00:12.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FLUID THAT IS {\c&H0034FFF0&}STUCK{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.86,0:00:13.16,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IN{\c&H00FFFFFF&} YOUR LEGS
+Dialogue: 0,0:00:13.16,0:00:13.28,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN {\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:00:13.28,0:00:13.99,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN YOUR {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.45,0:00:14.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} BODY HAS
+Dialogue: 0,0:00:14.58,0:00:14.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOUR {\c&H0034FFF0&}BODY{\c&H00FFFFFF&} HAS
+Dialogue: 0,0:00:14.90,0:00:15.14,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOUR BODY {\c&H0034FFF0&}HAS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.14,0:00:15.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}ITS{\c&H00FFFFFF&} OWN
+Dialogue: 0,0:00:15.30,0:00:15.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ITS {\c&H0034FFF0&}OWN{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.62,0:00:16.04,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}DRAINAGE{\c&H00FFFFFF&} SYSTEM
+Dialogue: 0,0:00:16.04,0:00:16.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}DRAINAGE {\c&H0034FFF0&}SYSTEM{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.92,0:00:17.06,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IT'S{\c&H00FFFFFF&} CALLED
+Dialogue: 0,0:00:17.06,0:00:17.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT'S {\c&H0034FFF0&}CALLED{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.34,0:00:17.60,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THE{\c&H00FFFFFF&} LYMPH
+Dialogue: 0,0:00:17.60,0:00:18.21,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE {\c&H0034FFF0&}LYMPH{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.63,0:00:18.84,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}EVERY{\c&H00FFFFFF&} DAY
+Dialogue: 0,0:00:18.84,0:00:19.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVERY {\c&H0034FFF0&}DAY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.32,0:00:19.40,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IT{\c&H00FFFFFF&} COLLECTS
+Dialogue: 0,0:00:19.40,0:00:19.74,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT {\c&H0034FFF0&}COLLECTS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.74,0:00:20.12,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}OLD{\c&H00FFFFFF&} FLUID
+Dialogue: 0,0:00:20.12,0:00:20.50,Karaoke,,0,0,0,,{\an5\pos(540,1208)}OLD {\c&H0034FFF0&}FLUID{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.50,0:00:20.72,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} WASTE
+Dialogue: 0,0:00:20.72,0:00:21.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}WASTE{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.08,0:00:21.38,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} CARRIES IT AWAY
+Dialogue: 0,0:00:21.38,0:00:21.70,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}CARRIES{\c&H00FFFFFF&} IT AWAY
+Dialogue: 0,0:00:21.70,0:00:21.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND CARRIES {\c&H0034FFF0&}IT{\c&H00FFFFFF&} AWAY
+Dialogue: 0,0:00:21.86,0:00:22.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND CARRIES IT {\c&H0034FFF0&}AWAY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.86,0:00:22.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}BUT{\c&H00FFFFFF&} WHEN THIS FLUID
+Dialogue: 0,0:00:22.92,0:00:23.10,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT {\c&H0034FFF0&}WHEN{\c&H00FFFFFF&} THIS FLUID
+Dialogue: 0,0:00:23.10,0:00:23.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT WHEN {\c&H0034FFF0&}THIS{\c&H00FFFFFF&} FLUID
+Dialogue: 0,0:00:23.30,0:00:23.56,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT WHEN THIS {\c&H0034FFF0&}FLUID{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.56,0:00:23.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MOVES{\c&H00FFFFFF&} TOO SLOWLY
+Dialogue: 0,0:00:23.92,0:00:24.14,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MOVES {\c&H0034FFF0&}TOO{\c&H00FFFFFF&} SLOWLY
+Dialogue: 0,0:00:24.14,0:00:25.09,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MOVES TOO {\c&H0034FFF0&}SLOWLY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.09,0:00:25.20,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IT{\c&H00FFFFFF&} STAYS
+Dialogue: 0,0:00:25.20,0:00:25.56,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT {\c&H0034FFF0&}STAYS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.56,0:00:25.82,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IN{\c&H00FFFFFF&} YOUR LEGS
+Dialogue: 0,0:00:25.82,0:00:25.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN {\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:00:25.92,0:00:26.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN YOUR {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.32,0:00:27.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}DAY{\c&H00FFFFFF&} AFTER DAY
+Dialogue: 0,0:00:27.02,0:00:27.48,Karaoke,,0,0,0,,{\an5\pos(540,1208)}DAY {\c&H0034FFF0&}AFTER{\c&H00FFFFFF&} DAY
+Dialogue: 0,0:00:27.48,0:00:28.25,Karaoke,,0,0,0,,{\an5\pos(540,1208)}DAY AFTER {\c&H0034FFF0&}DAY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.66,0:00:28.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THAT'S{\c&H00FFFFFF&} WHY
+Dialogue: 0,0:00:28.90,0:00:29.04,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THAT'S {\c&H0034FFF0&}WHY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.04,0:00:29.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} LEGS FEEL
+Dialogue: 0,0:00:29.18,0:00:29.42,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOUR {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&} FEEL
+Dialogue: 0,0:00:29.42,0:00:29.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOUR LEGS {\c&H0034FFF0&}FEEL{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.66,0:00:30.35,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}HEAVY{\c&H00FFFFFF&} LIKE STONE
+Dialogue: 0,0:00:30.35,0:00:30.46,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HEAVY {\c&H0034FFF0&}LIKE{\c&H00FFFFFF&} STONE
+Dialogue: 0,0:00:30.46,0:00:31.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HEAVY LIKE {\c&H0034FFF0&}STONE{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.52,0:00:31.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WHY{\c&H00FFFFFF&} YOUR ANKLES SWELL
+Dialogue: 0,0:00:31.62,0:00:31.76,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WHY {\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} ANKLES SWELL
+Dialogue: 0,0:00:31.76,0:00:32.12,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WHY YOUR {\c&H0034FFF0&}ANKLES{\c&H00FFFFFF&} SWELL
+Dialogue: 0,0:00:32.12,0:00:33.11,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WHY YOUR ANKLES {\c&H0034FFF0&}SWELL{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.11,0:00:33.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} WHY THE SKIN
+Dialogue: 0,0:00:33.18,0:00:33.36,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}WHY{\c&H00FFFFFF&} THE SKIN
+Dialogue: 0,0:00:33.36,0:00:33.54,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND WHY {\c&H0034FFF0&}THE{\c&H00FFFFFF&} SKIN
+Dialogue: 0,0:00:33.54,0:00:33.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND WHY THE {\c&H0034FFF0&}SKIN{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.92,0:00:34.10,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}CAN{\c&H00FFFFFF&} LOOK
+Dialogue: 0,0:00:34.10,0:00:34.41,Karaoke,,0,0,0,,{\an5\pos(540,1208)}CAN {\c&H0034FFF0&}LOOK{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.41,0:00:34.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TIGHT{\c&H00FFFFFF&} AND DARK
+Dialogue: 0,0:00:34.66,0:00:34.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TIGHT {\c&H0034FFF0&}AND{\c&H00FFFFFF&} DARK
+Dialogue: 0,0:00:34.96,0:00:35.61,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TIGHT AND {\c&H0034FFF0&}DARK{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.99,0:00:36.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} IN THE HEAT
+Dialogue: 0,0:00:36.08,0:00:36.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}IN{\c&H00FFFFFF&} THE HEAT
+Dialogue: 0,0:00:36.18,0:00:36.28,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND IN {\c&H0034FFF0&}THE{\c&H00FFFFFF&} HEAT
+Dialogue: 0,0:00:36.28,0:00:36.91,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND IN THE {\c&H0034FFF0&}HEAT{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.91,0:00:37.10,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AFTER{\c&H00FFFFFF&} STANDING
+Dialogue: 0,0:00:37.10,0:00:37.54,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AFTER {\c&H0034FFF0&}STANDING{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.54,0:00:37.78,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}ALL{\c&H00FFFFFF&} DAY
+Dialogue: 0,0:00:37.78,0:00:38.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ALL {\c&H0034FFF0&}DAY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.02,0:00:38.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}OR{\c&H00FFFFFF&} SITTING
+Dialogue: 0,0:00:38.24,0:00:38.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}OR {\c&H0034FFF0&}SITTING{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.58,0:00:38.80,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FOR{\c&H00FFFFFF&} HOURS
+Dialogue: 0,0:00:38.80,0:00:39.74,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FOR {\c&H0034FFF0&}HOURS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:39.74,0:00:39.89,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IT{\c&H00FFFFFF&} GETS
+Dialogue: 0,0:00:39.89,0:00:40.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT {\c&H0034FFF0&}GETS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:40.08,0:00:40.36,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}EVEN{\c&H00FFFFFF&} WORSE
+Dialogue: 0,0:00:40.36,0:00:41.13,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVEN {\c&H0034FFF0&}WORSE{\c&H00FFFFFF&}
+Dialogue: 0,0:00:41.57,0:00:41.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}BINTA{\c&H00FFFFFF&} KNOWS
+Dialogue: 0,0:00:41.90,0:00:42.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BINTA {\c&H0034FFF0&}KNOWS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:42.24,0:00:42.44,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THIS{\c&H00FFFFFF&} WELL
+Dialogue: 0,0:00:42.44,0:00:43.38,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THIS {\c&H0034FFF0&}WELL{\c&H00FFFFFF&}
+Dialogue: 0,0:00:43.38,0:00:43.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}EVERY{\c&H00FFFFFF&} EVENING
+Dialogue: 0,0:00:43.62,0:00:44.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVERY {\c&H0034FFF0&}EVENING{\c&H00FFFFFF&}
+Dialogue: 0,0:00:44.18,0:00:44.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}HER{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:00:44.32,0:00:44.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HER {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:44.58,0:00:44.80,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WERE{\c&H00FFFFFF&} SO HEAVY
+Dialogue: 0,0:00:44.80,0:00:45.16,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WERE {\c&H0034FFF0&}SO{\c&H00FFFFFF&} HEAVY
+Dialogue: 0,0:00:45.16,0:00:45.56,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WERE SO {\c&H0034FFF0&}HEAVY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:45.56,0:00:45.78,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SHE{\c&H00FFFFFF&} COULD HARDLY
+Dialogue: 0,0:00:45.78,0:00:45.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SHE {\c&H0034FFF0&}COULD{\c&H00FFFFFF&} HARDLY
+Dialogue: 0,0:00:45.94,0:00:46.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SHE COULD {\c&H0034FFF0&}HARDLY{\c&H00FFFFFF&}
+Dialogue: 0,0:00:46.34,0:00:46.60,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WALK{\c&H00FFFFFF&} HOME
+Dialogue: 0,0:00:46.60,0:00:46.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WALK {\c&H0034FFF0&}HOME{\c&H00FFFFFF&}
+Dialogue: 0,0:00:46.92,0:00:47.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FROM{\c&H00FFFFFF&} THE MARKET
+Dialogue: 0,0:00:47.08,0:00:47.22,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FROM {\c&H0034FFF0&}THE{\c&H00FFFFFF&} MARKET
+Dialogue: 0,0:00:47.22,0:00:48.15,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FROM THE {\c&H0034FFF0&}MARKET{\c&H00FFFFFF&}
+Dialogue: 0,0:00:48.15,0:00:48.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SHE{\c&H00FFFFFF&} TRIED EVERYTHING
+Dialogue: 0,0:00:48.32,0:00:48.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SHE {\c&H0034FFF0&}TRIED{\c&H00FFFFFF&} EVERYTHING
+Dialogue: 0,0:00:48.68,0:00:49.95,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SHE TRIED {\c&H0034FFF0&}EVERYTHING{\c&H00FFFFFF&}
+Dialogue: 0,0:00:49.95,0:00:50.22,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}LEGS{\c&H00FFFFFF&} UP
+Dialogue: 0,0:00:50.22,0:00:50.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}LEGS {\c&H0034FFF0&}UP{\c&H00FFFFFF&}
+Dialogue: 0,0:00:50.32,0:00:50.46,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}ON{\c&H00FFFFFF&} A PILLOW
+Dialogue: 0,0:00:50.46,0:00:50.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ON {\c&H0034FFF0&}A{\c&H00FFFFFF&} PILLOW
+Dialogue: 0,0:00:50.58,0:00:51.35,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ON A {\c&H0034FFF0&}PILLOW{\c&H00FFFFFF&}
+Dialogue: 0,0:00:51.35,0:00:51.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}HOT{\c&H00FFFFFF&} WATER
+Dialogue: 0,0:00:51.52,0:00:51.84,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HOT {\c&H0034FFF0&}WATER{\c&H00FFFFFF&}
+Dialogue: 0,0:00:51.84,0:00:52.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WITH{\c&H00FFFFFF&} SALT
+Dialogue: 0,0:00:52.02,0:00:52.88,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WITH {\c&H0034FFF0&}SALT{\c&H00FFFFFF&}
+Dialogue: 0,0:00:52.88,0:00:53.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TIGHT{\c&H00FFFFFF&} SOCKS
+Dialogue: 0,0:00:53.08,0:00:53.95,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TIGHT {\c&H0034FFF0&}SOCKS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:53.95,0:00:54.26,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SHEA{\c&H00FFFFFF&} BUTTER
+Dialogue: 0,0:00:54.26,0:00:54.79,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SHEA {\c&H0034FFF0&}BUTTER{\c&H00FFFFFF&}
+Dialogue: 0,0:00:55.20,0:00:55.28,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IT{\c&H00FFFFFF&} HELPED
+Dialogue: 0,0:00:55.28,0:00:55.54,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT {\c&H0034FFF0&}HELPED{\c&H00FFFFFF&}
+Dialogue: 0,0:00:55.54,0:00:55.80,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FOR{\c&H00FFFFFF&} ONE HOUR
+Dialogue: 0,0:00:55.80,0:00:56.12,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FOR {\c&H0034FFF0&}ONE{\c&H00FFFFFF&} HOUR
+Dialogue: 0,0:00:56.12,0:00:56.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FOR ONE {\c&H0034FFF0&}HOUR{\c&H00FFFFFF&}
+Dialogue: 0,0:00:56.52,0:00:57.06,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}BUT{\c&H00FFFFFF&} THE NEXT EVENING
+Dialogue: 0,0:00:57.06,0:00:57.20,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT {\c&H0034FFF0&}THE{\c&H00FFFFFF&} NEXT EVENING
+Dialogue: 0,0:00:57.20,0:00:57.42,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT THE {\c&H0034FFF0&}NEXT{\c&H00FFFFFF&} EVENING
+Dialogue: 0,0:00:57.42,0:00:58.21,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BUT THE NEXT {\c&H0034FFF0&}EVENING{\c&H00FFFFFF&}
+Dialogue: 0,0:00:58.21,0:00:58.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THE{\c&H00FFFFFF&} HEAVINESS
+Dialogue: 0,0:00:58.30,0:00:58.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE {\c&H0034FFF0&}HEAVINESS{\c&H00FFFFFF&}
+Dialogue: 0,0:00:58.68,0:00:58.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WAS{\c&H00FFFFFF&} BACK
+Dialogue: 0,0:00:58.90,0:00:59.78,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WAS {\c&H0034FFF0&}BACK{\c&H00FFFFFF&}
+Dialogue: 0,0:00:59.78,0:00:59.98,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}BECAUSE{\c&H00FFFFFF&} NOTHING
+Dialogue: 0,0:00:59.98,0:01:00.40,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BECAUSE {\c&H0034FFF0&}NOTHING{\c&H00FFFFFF&}
+Dialogue: 0,0:01:00.40,0:01:00.70,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WAS{\c&H00FFFFFF&} HELPING
+Dialogue: 0,0:01:00.70,0:01:01.00,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WAS {\c&H0034FFF0&}HELPING{\c&H00FFFFFF&}
+Dialogue: 0,0:01:01.00,0:01:01.20,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THE{\c&H00FFFFFF&} FLUID MOVE
+Dialogue: 0,0:01:01.20,0:01:01.50,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE {\c&H0034FFF0&}FLUID{\c&H00FFFFFF&} MOVE
+Dialogue: 0,0:01:01.50,0:01:02.63,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE FLUID {\c&H0034FFF0&}MOVE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:02.63,0:01:02.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THEN{\c&H00FFFFFF&} HER DAUGHTER
+Dialogue: 0,0:01:02.94,0:01:03.22,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THEN {\c&H0034FFF0&}HER{\c&H00FFFFFF&} DAUGHTER
+Dialogue: 0,0:01:03.22,0:01:03.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THEN HER {\c&H0034FFF0&}DAUGHTER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:03.58,0:01:03.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}BROUGHT{\c&H00FFFFFF&} HER
+Dialogue: 0,0:01:03.86,0:01:04.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}BROUGHT {\c&H0034FFF0&}HER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:04.02,0:01:04.28,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SOMETHING{\c&H00FFFFFF&} NEW
+Dialogue: 0,0:01:04.28,0:01:05.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SOMETHING {\c&H0034FFF0&}NEW{\c&H00FFFFFF&}
+Dialogue: 0,0:01:05.18,0:01:05.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MIRACLE{\c&H00FFFFFF&} BALM
+Dialogue: 0,0:01:05.68,0:01:06.61,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MIRACLE {\c&H0034FFF0&}BALM{\c&H00FFFFFF&}
+Dialogue: 0,0:01:06.61,0:01:06.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}A{\c&H00FFFFFF&} NATURAL
+Dialogue: 0,0:01:06.68,0:01:07.14,Karaoke,,0,0,0,,{\an5\pos(540,1208)}A {\c&H0034FFF0&}NATURAL{\c&H00FFFFFF&}
+Dialogue: 0,0:01:07.14,0:01:07.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}HERBAL{\c&H00FFFFFF&} FORMULA
+Dialogue: 0,0:01:07.52,0:01:08.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HERBAL {\c&H0034FFF0&}FORMULA{\c&H00FFFFFF&}
+Dialogue: 0,0:01:08.08,0:01:08.48,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MADE{\c&H00FFFFFF&} TO BE
+Dialogue: 0,0:01:08.48,0:01:08.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MADE {\c&H0034FFF0&}TO{\c&H00FFFFFF&} BE
+Dialogue: 0,0:01:08.66,0:01:08.78,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MADE TO {\c&H0034FFF0&}BE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:08.78,0:01:09.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MASSAGED{\c&H00FFFFFF&}
+Dialogue: 0,0:01:09.34,0:01:09.64,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}INTO{\c&H00FFFFFF&} THE LEGS
+Dialogue: 0,0:01:09.64,0:01:09.82,Karaoke,,0,0,0,,{\an5\pos(540,1208)}INTO {\c&H0034FFF0&}THE{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:01:09.82,0:01:10.49,Karaoke,,0,0,0,,{\an5\pos(540,1208)}INTO THE {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:10.85,0:01:10.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THE{\c&H00FFFFFF&} BALM
+Dialogue: 0,0:01:10.94,0:01:11.26,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE {\c&H0034FFF0&}BALM{\c&H00FFFFFF&}
+Dialogue: 0,0:01:11.26,0:01:11.50,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} THE MASSAGE
+Dialogue: 0,0:01:11.50,0:01:11.60,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}THE{\c&H00FFFFFF&} MASSAGE
+Dialogue: 0,0:01:11.60,0:01:12.00,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND THE {\c&H0034FFF0&}MASSAGE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:12.00,0:01:12.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WORK{\c&H00FFFFFF&} TOGETHER
+Dialogue: 0,0:01:12.32,0:01:12.80,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WORK {\c&H0034FFF0&}TOGETHER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:12.80,0:01:13.14,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TO{\c&H00FFFFFF&} WAKE UP
+Dialogue: 0,0:01:13.14,0:01:13.44,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TO {\c&H0034FFF0&}WAKE{\c&H00FFFFFF&} UP
+Dialogue: 0,0:01:13.44,0:01:13.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TO WAKE {\c&H0034FFF0&}UP{\c&H00FFFFFF&}
+Dialogue: 0,0:01:13.62,0:01:13.76,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THE{\c&H00FFFFFF&} CIRCULATION
+Dialogue: 0,0:01:13.76,0:01:14.36,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE {\c&H0034FFF0&}CIRCULATION{\c&H00FFFFFF&}
+Dialogue: 0,0:01:14.36,0:01:14.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SO{\c&H00FFFFFF&} THE STUCK FLUID
+Dialogue: 0,0:01:14.86,0:01:15.00,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SO {\c&H0034FFF0&}THE{\c&H00FFFFFF&} STUCK FLUID
+Dialogue: 0,0:01:15.00,0:01:15.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SO THE {\c&H0034FFF0&}STUCK{\c&H00FFFFFF&} FLUID
+Dialogue: 0,0:01:15.32,0:01:15.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SO THE STUCK {\c&H0034FFF0&}FLUID{\c&H00FFFFFF&}
+Dialogue: 0,0:01:15.68,0:01:15.92,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}CAN{\c&H00FFFFFF&} START
+Dialogue: 0,0:01:15.92,0:01:16.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}CAN {\c&H0034FFF0&}START{\c&H00FFFFFF&}
+Dialogue: 0,0:01:16.18,0:01:16.50,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MOVING{\c&H00FFFFFF&} AGAIN
+Dialogue: 0,0:01:16.50,0:01:17.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MOVING {\c&H0034FFF0&}AGAIN{\c&H00FFFFFF&}
+Dialogue: 0,0:01:17.34,0:01:17.79,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}UP{\c&H00FFFFFF&}
+Dialogue: 0,0:01:17.79,0:01:17.88,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} OUT
+Dialogue: 0,0:01:17.88,0:01:18.20,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}OUT{\c&H00FFFFFF&}
+Dialogue: 0,0:01:18.20,0:01:18.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}OF{\c&H00FFFFFF&} THE LEGS
+Dialogue: 0,0:01:18.34,0:01:18.42,Karaoke,,0,0,0,,{\an5\pos(540,1208)}OF {\c&H0034FFF0&}THE{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:01:18.42,0:01:18.99,Karaoke,,0,0,0,,{\an5\pos(540,1208)}OF THE {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:19.48,0:01:19.70,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}EVERY{\c&H00FFFFFF&} EVENING
+Dialogue: 0,0:01:19.70,0:01:20.38,Karaoke,,0,0,0,,{\an5\pos(540,1208)}EVERY {\c&H0034FFF0&}EVENING{\c&H00FFFFFF&}
+Dialogue: 0,0:01:20.38,0:01:20.74,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MASSAGE{\c&H00FFFFFF&} IT
+Dialogue: 0,0:01:20.74,0:01:20.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MASSAGE {\c&H0034FFF0&}IT{\c&H00FFFFFF&}
+Dialogue: 0,0:01:20.94,0:01:21.10,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FROM{\c&H00FFFFFF&} THE ANKLE
+Dialogue: 0,0:01:21.10,0:01:21.22,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FROM {\c&H0034FFF0&}THE{\c&H00FFFFFF&} ANKLE
+Dialogue: 0,0:01:21.22,0:01:21.60,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FROM THE {\c&H0034FFF0&}ANKLE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:21.60,0:01:21.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}UP{\c&H00FFFFFF&} TO THE KNEE
+Dialogue: 0,0:01:21.94,0:01:22.12,Karaoke,,0,0,0,,{\an5\pos(540,1208)}UP {\c&H0034FFF0&}TO{\c&H00FFFFFF&} THE KNEE
+Dialogue: 0,0:01:22.12,0:01:22.22,Karaoke,,0,0,0,,{\an5\pos(540,1208)}UP TO {\c&H0034FFF0&}THE{\c&H00FFFFFF&} KNEE
+Dialogue: 0,0:01:22.22,0:01:22.48,Karaoke,,0,0,0,,{\an5\pos(540,1208)}UP TO THE {\c&H0034FFF0&}KNEE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:22.48,0:01:22.70,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FOR{\c&H00FFFFFF&} A FEW MINUTES
+Dialogue: 0,0:01:22.70,0:01:22.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FOR {\c&H0034FFF0&}A{\c&H00FFFFFF&} FEW MINUTES
+Dialogue: 0,0:01:22.86,0:01:22.98,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FOR A {\c&H0034FFF0&}FEW{\c&H00FFFFFF&} MINUTES
+Dialogue: 0,0:01:22.98,0:01:23.83,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FOR A FEW {\c&H0034FFF0&}MINUTES{\c&H00FFFFFF&}
+Dialogue: 0,0:01:23.83,0:01:24.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}ALWAYS{\c&H00FFFFFF&} UPWARD
+Dialogue: 0,0:01:24.18,0:01:25.03,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ALWAYS {\c&H0034FFF0&}UPWARD{\c&H00FFFFFF&}
+Dialogue: 0,0:01:25.48,0:01:25.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}MANY{\c&H00FFFFFF&} PEOPLE
+Dialogue: 0,0:01:25.66,0:01:26.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}MANY {\c&H0034FFF0&}PEOPLE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:26.02,0:01:26.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FEEL{\c&H00FFFFFF&} THEIR LEGS
+Dialogue: 0,0:01:26.30,0:01:26.46,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FEEL {\c&H0034FFF0&}THEIR{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:01:26.46,0:01:26.70,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FEEL THEIR {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:26.70,0:01:27.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}LIGHTER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:27.08,0:01:27.28,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IN{\c&H00FFFFFF&} THE FIRST DAYS…
+Dialogue: 0,0:01:27.28,0:01:27.38,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN {\c&H0034FFF0&}THE{\c&H00FFFFFF&} FIRST DAYS…
+Dialogue: 0,0:01:27.38,0:01:27.56,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN THE {\c&H0034FFF0&}FIRST{\c&H00FFFFFF&} DAYS…
+Dialogue: 0,0:01:27.56,0:01:27.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IN THE FIRST {\c&H0034FFF0&}DAYS…{\c&H00FFFFFF&}
+Dialogue: 0,0:01:27.94,0:01:28.50,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} IT KEEPS
+Dialogue: 0,0:01:28.50,0:01:28.71,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}IT{\c&H00FFFFFF&} KEEPS
+Dialogue: 0,0:01:28.71,0:01:28.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND IT {\c&H0034FFF0&}KEEPS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:28.94,0:01:29.22,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}GETTING{\c&H00FFFFFF&} BETTER
+Dialogue: 0,0:01:29.22,0:01:29.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}GETTING {\c&H0034FFF0&}BETTER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:29.62,0:01:29.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AS{\c&H00FFFFFF&} THEY KEEP
+Dialogue: 0,0:01:29.90,0:01:30.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AS {\c&H0034FFF0&}THEY{\c&H00FFFFFF&} KEEP
+Dialogue: 0,0:01:30.02,0:01:30.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AS THEY {\c&H0034FFF0&}KEEP{\c&H00FFFFFF&}
+Dialogue: 0,0:01:30.24,0:01:30.44,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THE{\c&H00FFFFFF&} HABIT
+Dialogue: 0,0:01:30.44,0:01:31.40,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THE {\c&H0034FFF0&}HABIT{\c&H00FFFFFF&}
+Dialogue: 0,0:01:31.40,0:01:31.74,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IMAGINE{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:01:31.74,0:01:32.20,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IMAGINE {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:32.20,0:01:32.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THAT{\c&H00FFFFFF&} DON'T FEEL
+Dialogue: 0,0:01:32.62,0:01:32.86,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THAT {\c&H0034FFF0&}DON'T{\c&H00FFFFFF&} FEEL
+Dialogue: 0,0:01:32.86,0:01:33.10,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THAT DON'T {\c&H0034FFF0&}FEEL{\c&H00FFFFFF&}
+Dialogue: 0,0:01:33.10,0:01:33.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}LIKE{\c&H00FFFFFF&} STONE
+Dialogue: 0,0:01:33.34,0:01:34.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}LIKE {\c&H0034FFF0&}STONE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:34.30,0:01:34.74,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SHOES{\c&H00FFFFFF&} THAT
+Dialogue: 0,0:01:34.74,0:01:34.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SHOES {\c&H0034FFF0&}THAT{\c&H00FFFFFF&}
+Dialogue: 0,0:01:34.90,0:01:35.16,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FIT{\c&H00FFFFFF&} AGAIN
+Dialogue: 0,0:01:35.16,0:01:36.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FIT {\c&H0034FFF0&}AGAIN{\c&H00FFFFFF&}
+Dialogue: 0,0:01:36.02,0:01:36.26,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WALKING{\c&H00FFFFFF&}
+Dialogue: 0,0:01:36.26,0:01:36.50,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TO{\c&H00FFFFFF&} THE MARKET
+Dialogue: 0,0:01:36.50,0:01:36.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TO {\c&H0034FFF0&}THE{\c&H00FFFFFF&} MARKET
+Dialogue: 0,0:01:36.58,0:01:36.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TO THE {\c&H0034FFF0&}MARKET{\c&H00FFFFFF&}
+Dialogue: 0,0:01:36.90,0:01:37.32,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WITHOUT{\c&H00FFFFFF&} STOPPING
+Dialogue: 0,0:01:37.32,0:01:37.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WITHOUT {\c&H0034FFF0&}STOPPING{\c&H00FFFFFF&}
+Dialogue: 0,0:01:37.90,0:01:38.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TO{\c&H00FFFFFF&} REST
+Dialogue: 0,0:01:38.08,0:01:39.14,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TO {\c&H0034FFF0&}REST{\c&H00FFFFFF&}
+Dialogue: 0,0:01:39.14,0:01:39.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IF{\c&H00FFFFFF&} ONE LEG
+Dialogue: 0,0:01:39.24,0:01:39.52,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IF {\c&H0034FFF0&}ONE{\c&H00FFFFFF&} LEG
+Dialogue: 0,0:01:39.52,0:01:39.74,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IF ONE {\c&H0034FFF0&}LEG{\c&H00FFFFFF&}
+Dialogue: 0,0:01:39.74,0:01:39.90,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IS{\c&H00FFFFFF&} SUDDENLY SWOLLEN
+Dialogue: 0,0:01:39.90,0:01:40.26,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IS {\c&H0034FFF0&}SUDDENLY{\c&H00FFFFFF&} SWOLLEN
+Dialogue: 0,0:01:40.26,0:01:41.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IS SUDDENLY {\c&H0034FFF0&}SWOLLEN{\c&H00FFFFFF&}
+Dialogue: 0,0:01:41.08,0:01:41.40,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}HOT{\c&H00FFFFFF&} AND PAINFUL
+Dialogue: 0,0:01:41.40,0:01:41.60,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HOT {\c&H0034FFF0&}AND{\c&H00FFFFFF&} PAINFUL
+Dialogue: 0,0:01:41.60,0:01:42.53,Karaoke,,0,0,0,,{\an5\pos(540,1208)}HOT AND {\c&H0034FFF0&}PAINFUL{\c&H00FFFFFF&}
+Dialogue: 0,0:01:42.53,0:01:42.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}OR{\c&H00FFFFFF&} IF THERE
+Dialogue: 0,0:01:42.68,0:01:42.82,Karaoke,,0,0,0,,{\an5\pos(540,1208)}OR {\c&H0034FFF0&}IF{\c&H00FFFFFF&} THERE
+Dialogue: 0,0:01:42.82,0:01:42.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)}OR IF {\c&H0034FFF0&}THERE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:42.94,0:01:43.06,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IS{\c&H00FFFFFF&} A WOUND
+Dialogue: 0,0:01:43.06,0:01:43.20,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IS {\c&H0034FFF0&}A{\c&H00FFFFFF&} WOUND
+Dialogue: 0,0:01:43.20,0:01:43.83,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IS A {\c&H0034FFF0&}WOUND{\c&H00FFFFFF&}
+Dialogue: 0,0:01:43.83,0:01:44.08,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}SEE{\c&H00FFFFFF&} A DOCTOR FIRST
+Dialogue: 0,0:01:44.08,0:01:44.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SEE {\c&H0034FFF0&}A{\c&H00FFFFFF&} DOCTOR FIRST
+Dialogue: 0,0:01:44.24,0:01:44.48,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SEE A {\c&H0034FFF0&}DOCTOR{\c&H00FFFFFF&} FIRST
+Dialogue: 0,0:01:44.48,0:01:45.31,Karaoke,,0,0,0,,{\an5\pos(540,1208)}SEE A DOCTOR {\c&H0034FFF0&}FIRST{\c&H00FFFFFF&}
+Dialogue: 0,0:01:45.69,0:01:45.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TRY{\c&H00FFFFFF&} MIRACLE BALM
+Dialogue: 0,0:01:45.96,0:01:46.44,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TRY {\c&H0034FFF0&}MIRACLE{\c&H00FFFFFF&} BALM
+Dialogue: 0,0:01:46.44,0:01:46.80,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TRY MIRACLE {\c&H0034FFF0&}BALM{\c&H00FFFFFF&}
+Dialogue: 0,0:01:46.80,0:01:47.12,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TODAY{\c&H00FFFFFF&}
+Dialogue: 0,0:01:47.12,0:01:47.68,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}WITHOUT{\c&H00FFFFFF&} ANY RISK
+Dialogue: 0,0:01:47.68,0:01:48.10,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WITHOUT {\c&H0034FFF0&}ANY{\c&H00FFFFFF&} RISK
+Dialogue: 0,0:01:48.10,0:01:48.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}WITHOUT ANY {\c&H0034FFF0&}RISK{\c&H00FFFFFF&}
+Dialogue: 0,0:01:48.96,0:01:49.06,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}YOU{\c&H00FFFFFF&} HAVE
+Dialogue: 0,0:01:49.06,0:01:49.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOU {\c&H0034FFF0&}HAVE{\c&H00FFFFFF&}
+Dialogue: 0,0:01:49.24,0:01:49.60,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}THIRTY{\c&H00FFFFFF&} DAYS
+Dialogue: 0,0:01:49.60,0:01:50.54,Karaoke,,0,0,0,,{\an5\pos(540,1208)}THIRTY {\c&H0034FFF0&}DAYS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:50.54,0:01:50.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IF{\c&H00FFFFFF&} YOUR LEGS
+Dialogue: 0,0:01:50.66,0:01:50.78,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IF {\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} LEGS
+Dialogue: 0,0:01:50.78,0:01:51.02,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IF YOUR {\c&H0034FFF0&}LEGS{\c&H00FFFFFF&}
+Dialogue: 0,0:01:51.02,0:01:51.38,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}DON'T{\c&H00FFFFFF&} FEEL LIGHTER
+Dialogue: 0,0:01:51.38,0:01:51.56,Karaoke,,0,0,0,,{\an5\pos(540,1208)}DON'T {\c&H0034FFF0&}FEEL{\c&H00FFFFFF&} LIGHTER
+Dialogue: 0,0:01:51.56,0:01:52.24,Karaoke,,0,0,0,,{\an5\pos(540,1208)}DON'T FEEL {\c&H0034FFF0&}LIGHTER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:52.24,0:01:52.36,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}YOU{\c&H00FFFFFF&} GET
+Dialogue: 0,0:01:52.36,0:01:52.54,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOU {\c&H0034FFF0&}GET{\c&H00FFFFFF&}
+Dialogue: 0,0:01:52.54,0:01:52.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} MONEY BACK
+Dialogue: 0,0:01:52.66,0:01:52.88,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOUR {\c&H0034FFF0&}MONEY{\c&H00FFFFFF&} BACK
+Dialogue: 0,0:01:52.88,0:01:53.62,Karaoke,,0,0,0,,{\an5\pos(540,1208)}YOUR MONEY {\c&H0034FFF0&}BACK{\c&H00FFFFFF&}
+Dialogue: 0,0:01:53.62,0:01:53.76,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}CLICK{\c&H00FFFFFF&} BELOW
+Dialogue: 0,0:01:53.76,0:01:54.16,Karaoke,,0,0,0,,{\an5\pos(540,1208)}CLICK {\c&H0034FFF0&}BELOW{\c&H00FFFFFF&}
+Dialogue: 0,0:01:54.16,0:01:54.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}TO{\c&H00FFFFFF&} ORDER
+Dialogue: 0,0:01:54.34,0:01:55.04,Karaoke,,0,0,0,,{\an5\pos(540,1208)}TO {\c&H0034FFF0&}ORDER{\c&H00FFFFFF&}
+Dialogue: 0,0:01:55.04,0:01:55.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}FREE{\c&H00FFFFFF&} DELIVERY TODAY
+Dialogue: 0,0:01:55.30,0:01:55.66,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FREE {\c&H0034FFF0&}DELIVERY{\c&H00FFFFFF&} TODAY
+Dialogue: 0,0:01:55.66,0:01:55.98,Karaoke,,0,0,0,,{\an5\pos(540,1208)}FREE DELIVERY {\c&H0034FFF0&}TODAY{\c&H00FFFFFF&}
+Dialogue: 0,0:01:55.98,0:01:56.42,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}AND{\c&H00FFFFFF&} CASH ON DELIVERY
+Dialogue: 0,0:01:56.42,0:01:56.76,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND {\c&H0034FFF0&}CASH{\c&H00FFFFFF&} ON DELIVERY
+Dialogue: 0,0:01:56.76,0:01:56.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND CASH {\c&H0034FFF0&}ON{\c&H00FFFFFF&} DELIVERY
+Dialogue: 0,0:01:56.96,0:01:57.30,Karaoke,,0,0,0,,{\an5\pos(540,1208)}AND CASH ON {\c&H0034FFF0&}DELIVERY{\c&H00FFFFFF&}
+Dialogue: 0,0:01:57.30,0:01:57.84,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}{\c&H00FFFFFF&} YOU PAY
+Dialogue: 0,0:01:57.84,0:01:57.94,Karaoke,,0,0,0,,{\an5\pos(540,1208)} {\c&H0034FFF0&}YOU{\c&H00FFFFFF&} PAY
+Dialogue: 0,0:01:57.94,0:01:58.16,Karaoke,,0,0,0,,{\an5\pos(540,1208)} YOU {\c&H0034FFF0&}PAY{\c&H00FFFFFF&}
+Dialogue: 0,0:01:58.16,0:01:58.58,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}ONLY{\c&H00FFFFFF&} WHEN
+Dialogue: 0,0:01:58.58,0:01:58.84,Karaoke,,0,0,0,,{\an5\pos(540,1208)}ONLY {\c&H0034FFF0&}WHEN{\c&H00FFFFFF&}
+Dialogue: 0,0:01:58.84,0:01:59.04,Karaoke,,0,0,0,,{\an5\pos(540,1208)}{\c&H0034FFF0&}IT'S{\c&H00FFFFFF&} IN YOUR HAND
+Dialogue: 0,0:01:59.04,0:01:59.18,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT'S {\c&H0034FFF0&}IN{\c&H00FFFFFF&} YOUR HAND
+Dialogue: 0,0:01:59.18,0:01:59.34,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT'S IN {\c&H0034FFF0&}YOUR{\c&H00FFFFFF&} HAND
+Dialogue: 0,0:01:59.34,0:01:59.96,Karaoke,,0,0,0,,{\an5\pos(540,1208)}IT'S IN YOUR {\c&H0034FFF0&}HAND{\c&H00FFFFFF&}

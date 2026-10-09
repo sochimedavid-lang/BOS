@@ -1,0 +1,3116 @@
+[
+ {
+  "text": "ARE",
+  "key": "are",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 0.0,
+  "end": 0.12
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 0.12,
+  "end": 0.28
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 0.28,
+  "end": 0.58
+ },
+ {
+  "text": "SWOLLEN",
+  "key": "swollen",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 0.58,
+  "end": 1.14
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 1.14,
+  "end": 1.44
+ },
+ {
+  "text": "HEAVY",
+  "key": "heavy",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 1.44,
+  "end": 1.84
+ },
+ {
+  "text": "AT",
+  "key": "at",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 1.84,
+  "end": 2.08
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.08,
+  "end": 2.16
+ },
+ {
+  "text": "END",
+  "key": "end",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.16,
+  "end": 2.3
+ },
+ {
+  "text": "OF",
+  "key": "of",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.3,
+  "end": 2.4
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.4,
+  "end": 2.48
+ },
+ {
+  "text": "DAY?",
+  "key": "day",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 2.48,
+  "end": 2.7
+ },
+ {
+  "text": "ANKLES",
+  "key": "ankles",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 3.306,
+  "end": 3.62
+ },
+ {
+  "text": "SO",
+  "key": "so",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 3.62,
+  "end": 3.94
+ },
+ {
+  "text": "BIG",
+  "key": "big",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 3.94,
+  "end": 4.28
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 4.28,
+  "end": 4.5
+ },
+ {
+  "text": "SHOES",
+  "key": "shoes",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 4.5,
+  "end": 4.84
+ },
+ {
+  "text": "DON'T",
+  "key": "don't",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 4.84,
+  "end": 5.14
+ },
+ {
+  "text": "FIT?",
+  "key": "fit",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 5.14,
+  "end": 5.36
+ },
+ {
+  "text": "SKIN",
+  "key": "skin",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 5.955,
+  "end": 6.3
+ },
+ {
+  "text": "TURNING",
+  "key": "turning",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 6.3,
+  "end": 6.64
+ },
+ {
+  "text": "DARK?",
+  "key": "dark",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 6.64,
+  "end": 7.02
+ },
+ {
+  "text": "BEFORE",
+  "key": "before",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 7.72,
+  "end": 8.0
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 8.0,
+  "end": 8.24
+ },
+ {
+  "text": "DO",
+  "key": "do",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 8.24,
+  "end": 8.4
+ },
+ {
+  "text": "ANYTHING",
+  "key": "anything",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 8.4,
+  "end": 8.86
+ },
+ {
+  "text": "ELSE",
+  "key": "else",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 8.86,
+  "end": 9.32
+ },
+ {
+  "text": "WATCH",
+  "key": "watch",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 9.667,
+  "end": 9.94
+ },
+ {
+  "text": "THIS",
+  "key": "this",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 9.94,
+  "end": 10.34
+ },
+ {
+  "text": "MANY",
+  "key": "many",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 11.113,
+  "end": 11.38
+ },
+ {
+  "text": "THINGS",
+  "key": "things",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 11.38,
+  "end": 11.76
+ },
+ {
+  "text": "CAN",
+  "key": "can",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 11.76,
+  "end": 11.98
+ },
+ {
+  "text": "MAKE",
+  "key": "make",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 11.98,
+  "end": 12.2
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 12.2,
+  "end": 12.5
+ },
+ {
+  "text": "SWELL",
+  "key": "swell",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 12.5,
+  "end": 12.86
+ },
+ {
+  "text": "BUT",
+  "key": "but",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 13.444,
+  "end": 13.511
+ },
+ {
+  "text": "THERE",
+  "key": "there",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 13.511,
+  "end": 13.68
+ },
+ {
+  "text": "IS",
+  "key": "is",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 13.68,
+  "end": 13.82
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 13.82,
+  "end": 14.14
+ },
+ {
+  "text": "HIDDEN",
+  "key": "hidden",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 14.14,
+  "end": 14.54
+ },
+ {
+  "text": "CAUSE",
+  "key": "cause",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 14.54,
+  "end": 14.94
+ },
+ {
+  "text": "MOST",
+  "key": "most",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 14.94,
+  "end": 15.32
+ },
+ {
+  "text": "PEOPLE",
+  "key": "people",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 15.32,
+  "end": 15.66
+ },
+ {
+  "text": "NEVER",
+  "key": "never",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 15.66,
+  "end": 16.06
+ },
+ {
+  "text": "THINK",
+  "key": "think",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 16.06,
+  "end": 16.36
+ },
+ {
+  "text": "ABOUT",
+  "key": "about",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 16.36,
+  "end": 16.66
+ },
+ {
+  "text": "FLUID",
+  "key": "fluid",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 17.289,
+  "end": 17.64
+ },
+ {
+  "text": "THAT",
+  "key": "that",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 17.64,
+  "end": 18.04
+ },
+ {
+  "text": "IS",
+  "key": "is",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 18.04,
+  "end": 18.18
+ },
+ {
+  "text": "STUCK",
+  "key": "stuck",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 18.18,
+  "end": 18.54
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 18.54,
+  "end": 18.84
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 18.84,
+  "end": 18.96
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 18.96,
+  "end": 19.3
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 20.122,
+  "end": 20.26
+ },
+ {
+  "text": "BODY",
+  "key": "body",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 20.26,
+  "end": 20.56
+ },
+ {
+  "text": "HAS",
+  "key": "has",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 20.56,
+  "end": 20.82
+ },
+ {
+  "text": "ITS",
+  "key": "its",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 20.82,
+  "end": 20.98
+ },
+ {
+  "text": "OWN",
+  "key": "own",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 20.98,
+  "end": 21.28
+ },
+ {
+  "text": "DRAINAGE",
+  "key": "drainage",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 21.28,
+  "end": 21.68
+ },
+ {
+  "text": "SYSTEM",
+  "key": "system",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 21.68,
+  "end": 22.14
+ },
+ {
+  "text": "IT'S",
+  "key": "it's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 22.591,
+  "end": 22.76
+ },
+ {
+  "text": "CALLED",
+  "key": "called",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 22.76,
+  "end": 23.0
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 23.0,
+  "end": 23.28
+ },
+ {
+  "text": "LYMPH",
+  "key": "lymph",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 23.28,
+  "end": 23.52
+ },
+ {
+  "text": "EVERY",
+  "key": "every",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 24.297,
+  "end": 24.52
+ },
+ {
+  "text": "DAY",
+  "key": "day",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 24.52,
+  "end": 24.82
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 24.92,
+  "end": 25.08
+ },
+ {
+  "text": "COLLECTS",
+  "key": "collects",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 25.08,
+  "end": 25.42
+ },
+ {
+  "text": "OLD",
+  "key": "old",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 25.42,
+  "end": 25.8
+ },
+ {
+  "text": "FLUID",
+  "key": "fluid",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 25.8,
+  "end": 26.16
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 26.16,
+  "end": 26.38
+ },
+ {
+  "text": "WASTE",
+  "key": "waste",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 26.38,
+  "end": 26.74
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 26.74,
+  "end": 27.06
+ },
+ {
+  "text": "CARRIES",
+  "key": "carries",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 27.06,
+  "end": 27.38
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 27.38,
+  "end": 27.54
+ },
+ {
+  "text": "AWAY",
+  "key": "away",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 27.54,
+  "end": 27.82
+ },
+ {
+  "text": "BUT",
+  "key": "but",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 28.528,
+  "end": 28.595
+ },
+ {
+  "text": "WHEN",
+  "key": "when",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 28.595,
+  "end": 28.78
+ },
+ {
+  "text": "THIS",
+  "key": "this",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 28.78,
+  "end": 28.98
+ },
+ {
+  "text": "FLUID",
+  "key": "fluid",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 28.98,
+  "end": 29.24
+ },
+ {
+  "text": "MOVES",
+  "key": "moves",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 29.24,
+  "end": 29.6
+ },
+ {
+  "text": "TOO",
+  "key": "too",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 29.6,
+  "end": 29.82
+ },
+ {
+  "text": "SLOWLY",
+  "key": "slowly",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 29.82,
+  "end": 30.36
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 30.76,
+  "end": 30.86
+ },
+ {
+  "text": "STAYS",
+  "key": "stays",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 30.86,
+  "end": 31.26
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 31.26,
+  "end": 31.48
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 31.48,
+  "end": 31.6
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 31.6,
+  "end": 31.96
+ },
+ {
+  "text": "DAY",
+  "key": "day",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 32.495,
+  "end": 32.7
+ },
+ {
+  "text": "AFTER",
+  "key": "after",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 32.7,
+  "end": 33.16
+ },
+ {
+  "text": "DAY",
+  "key": "day",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 33.16,
+  "end": 33.56
+ },
+ {
+  "text": "THAT'S",
+  "key": "that's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.333,
+  "end": 34.58
+ },
+ {
+  "text": "WHY",
+  "key": "why",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 34.58,
+  "end": 34.72
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.72,
+  "end": 34.86
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.86,
+  "end": 35.1
+ },
+ {
+  "text": "FEEL",
+  "key": "feel",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 35.1,
+  "end": 35.34
+ },
+ {
+  "text": "HEAVY",
+  "key": "heavy",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 35.34,
+  "end": 35.78
+ },
+ {
+  "text": "LIKE",
+  "key": "like",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 35.78,
+  "end": 36.12
+ },
+ {
+  "text": "STONE",
+  "key": "stone",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 36.12,
+  "end": 36.56
+ },
+ {
+  "text": "WHY",
+  "key": "why",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 37.186,
+  "end": 37.3
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 37.3,
+  "end": 37.44
+ },
+ {
+  "text": "ANKLES",
+  "key": "ankles",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 37.44,
+  "end": 37.82
+ },
+ {
+  "text": "SWELL",
+  "key": "swell",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 37.82,
+  "end": 38.2
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 38.781,
+  "end": 38.86
+ },
+ {
+  "text": "WHY",
+  "key": "why",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 38.86,
+  "end": 39.04
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 39.04,
+  "end": 39.2
+ },
+ {
+  "text": "SKIN",
+  "key": "skin",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 39.2,
+  "end": 39.6
+ },
+ {
+  "text": "CAN",
+  "key": "can",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 39.6,
+  "end": 39.78
+ },
+ {
+  "text": "LOOK",
+  "key": "look",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 39.78,
+  "end": 39.931
+ },
+ {
+  "text": "TIGHT",
+  "key": "tight",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 40.083,
+  "end": 40.36
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 40.525,
+  "end": 40.62
+ },
+ {
+  "text": "DARK",
+  "key": "dark",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 40.62,
+  "end": 40.925
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 41.658,
+  "end": 41.74
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 41.74,
+  "end": 41.84
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 41.84,
+  "end": 41.96
+ },
+ {
+  "text": "HEAT",
+  "key": "heat",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 41.96,
+  "end": 42.3
+ },
+ {
+  "text": "AFTER",
+  "key": "after",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 42.579,
+  "end": 42.78
+ },
+ {
+  "text": "STANDING",
+  "key": "standing",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 42.78,
+  "end": 43.2
+ },
+ {
+  "text": "ALL",
+  "key": "all",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 43.2,
+  "end": 43.44
+ },
+ {
+  "text": "DAY",
+  "key": "day",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 43.44,
+  "end": 43.68
+ },
+ {
+  "text": "OR",
+  "key": "or",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 43.68,
+  "end": 43.9
+ },
+ {
+  "text": "SITTING",
+  "key": "sitting",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 43.9,
+  "end": 44.24
+ },
+ {
+  "text": "FOR",
+  "key": "for",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 44.24,
+  "end": 44.48
+ },
+ {
+  "text": "HOURS",
+  "key": "hours",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 44.48,
+  "end": 44.9
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 45.409,
+  "end": 45.476
+ },
+ {
+  "text": "GETS",
+  "key": "gets",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 45.566,
+  "end": 45.74
+ },
+ {
+  "text": "EVEN",
+  "key": "even",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 45.74,
+  "end": 46.06
+ },
+ {
+  "text": "WORSE",
+  "key": "worse",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 46.06,
+  "end": 46.46
+ },
+ {
+  "text": "BINTA",
+  "key": "binta",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 47.229,
+  "end": 47.58
+ },
+ {
+  "text": "KNOWS",
+  "key": "knows",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 47.58,
+  "end": 47.92
+ },
+ {
+  "text": "THIS",
+  "key": "this",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 47.92,
+  "end": 48.12
+ },
+ {
+  "text": "WELL",
+  "key": "well",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 48.12,
+  "end": 48.42
+ },
+ {
+  "text": "EVERY",
+  "key": "every",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 49.046,
+  "end": 49.3
+ },
+ {
+  "text": "EVENING",
+  "key": "evening",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 49.3,
+  "end": 49.68
+ },
+ {
+  "text": "HER",
+  "key": "her",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 49.86,
+  "end": 49.98
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 49.98,
+  "end": 50.26
+ },
+ {
+  "text": "WERE",
+  "key": "were",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 50.26,
+  "end": 50.46
+ },
+ {
+  "text": "SO",
+  "key": "so",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 50.46,
+  "end": 50.82
+ },
+ {
+  "text": "HEAVY",
+  "key": "heavy",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 50.82,
+  "end": 51.24
+ },
+ {
+  "text": "SHE",
+  "key": "she",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 51.24,
+  "end": 51.46
+ },
+ {
+  "text": "COULD",
+  "key": "could",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 51.46,
+  "end": 51.62
+ },
+ {
+  "text": "HARDLY",
+  "key": "hardly",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 51.62,
+  "end": 52.02
+ },
+ {
+  "text": "WALK",
+  "key": "walk",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 52.02,
+  "end": 52.26
+ },
+ {
+  "text": "HOME",
+  "key": "home",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 52.26,
+  "end": 52.58
+ },
+ {
+  "text": "FROM",
+  "key": "from",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 52.58,
+  "end": 52.76
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 52.76,
+  "end": 52.88
+ },
+ {
+  "text": "MARKET",
+  "key": "market",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 52.88,
+  "end": 53.18
+ },
+ {
+  "text": "SHE",
+  "key": "she",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 53.821,
+  "end": 53.98
+ },
+ {
+  "text": "TRIED",
+  "key": "tried",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 53.98,
+  "end": 54.34
+ },
+ {
+  "text": "EVERYTHING",
+  "key": "everything",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 54.34,
+  "end": 54.94
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 55.616,
+  "end": 55.82
+ },
+ {
+  "text": "UP",
+  "key": "up",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 55.82,
+  "end": 56.0
+ },
+ {
+  "text": "ON",
+  "key": "on",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 56.0,
+  "end": 56.14
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 56.14,
+  "end": 56.26
+ },
+ {
+  "text": "PILLOW",
+  "key": "pillow",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 56.26,
+  "end": 56.48
+ },
+ {
+  "text": "HOT",
+  "key": "hot",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 57.018,
+  "end": 57.12
+ },
+ {
+  "text": "WATER",
+  "key": "water",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 57.12,
+  "end": 57.52
+ },
+ {
+  "text": "WITH",
+  "key": "with",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 57.52,
+  "end": 57.7
+ },
+ {
+  "text": "SALT",
+  "key": "salt",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 57.7,
+  "end": 58.04
+ },
+ {
+  "text": "TIGHT",
+  "key": "tight",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 58.551,
+  "end": 58.74
+ },
+ {
+  "text": "SOCKS",
+  "key": "socks",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 58.74,
+  "end": 59.14
+ },
+ {
+  "text": "SHEA",
+  "key": "shea",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 59.623,
+  "end": 59.94
+ },
+ {
+  "text": "BUTTER",
+  "key": "butter",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 59.94,
+  "end": 60.12
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 60.866,
+  "end": 60.94
+ },
+ {
+  "text": "HELPED",
+  "key": "helped",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 60.94,
+  "end": 61.22
+ },
+ {
+  "text": "FOR",
+  "key": "for",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 61.22,
+  "end": 61.48
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 61.48,
+  "end": 61.82
+ },
+ {
+  "text": "HOUR",
+  "key": "hour",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 61.82,
+  "end": 62.2
+ },
+ {
+  "text": "BUT",
+  "key": "but",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 62.687,
+  "end": 62.754
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 62.754,
+  "end": 62.88
+ },
+ {
+  "text": "NEXT",
+  "key": "next",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 62.88,
+  "end": 63.1
+ },
+ {
+  "text": "EVENING",
+  "key": "evening",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 63.1,
+  "end": 63.48
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 63.877,
+  "end": 63.98
+ },
+ {
+  "text": "HEAVINESS",
+  "key": "heaviness",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 63.98,
+  "end": 64.34
+ },
+ {
+  "text": "WAS",
+  "key": "was",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 64.34,
+  "end": 64.58
+ },
+ {
+  "text": "BACK",
+  "key": "back",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 64.58,
+  "end": 64.898
+ },
+ {
+  "text": "BECAUSE",
+  "key": "because",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 65.453,
+  "end": 65.64
+ },
+ {
+  "text": "NOTHING",
+  "key": "nothing",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 65.64,
+  "end": 66.06
+ },
+ {
+  "text": "WAS",
+  "key": "was",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 66.06,
+  "end": 66.38
+ },
+ {
+  "text": "HELPING",
+  "key": "helping",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 66.38,
+  "end": 66.68
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 66.68,
+  "end": 66.88
+ },
+ {
+  "text": "FLUID",
+  "key": "fluid",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 66.88,
+  "end": 67.16
+ },
+ {
+  "text": "MOVE",
+  "key": "move",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 67.16,
+  "end": 67.66
+ },
+ {
+  "text": "THEN",
+  "key": "then",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 68.303,
+  "end": 68.62
+ },
+ {
+  "text": "HER",
+  "key": "her",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 68.62,
+  "end": 68.88
+ },
+ {
+  "text": "DAUGHTER",
+  "key": "daughter",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 68.88,
+  "end": 69.24
+ },
+ {
+  "text": "BROUGHT",
+  "key": "brought",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 69.24,
+  "end": 69.52
+ },
+ {
+  "text": "HER",
+  "key": "her",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 69.52,
+  "end": 69.68
+ },
+ {
+  "text": "SOMETHING",
+  "key": "something",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 69.68,
+  "end": 69.96
+ },
+ {
+  "text": "NEW",
+  "key": "new",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 69.96,
+  "end": 70.36
+ },
+ {
+  "text": "MIRACLE",
+  "key": "miracle",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 70.85,
+  "end": 71.24
+ },
+ {
+  "text": "BALM",
+  "key": "balm",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 71.24,
+  "end": 71.68
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 72.28,
+  "end": 72.36
+ },
+ {
+  "text": "NATURAL",
+  "key": "natural",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 72.36,
+  "end": 72.8
+ },
+ {
+  "text": "HERBAL",
+  "key": "herbal",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 72.8,
+  "end": 73.2
+ },
+ {
+  "text": "FORMULA",
+  "key": "formula",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 73.2,
+  "end": 73.76
+ },
+ {
+  "text": "MADE",
+  "key": "made",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 73.76,
+  "end": 74.14
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 74.14,
+  "end": 74.34
+ },
+ {
+  "text": "BE",
+  "key": "be",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 74.34,
+  "end": 74.44
+ },
+ {
+  "text": "MASSAGED",
+  "key": "massaged",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 74.44,
+  "end": 75.02
+ },
+ {
+  "text": "INTO",
+  "key": "into",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 75.02,
+  "end": 75.3
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 75.3,
+  "end": 75.48
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 75.48,
+  "end": 75.8
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 76.521,
+  "end": 76.6
+ },
+ {
+  "text": "BALM",
+  "key": "balm",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 76.6,
+  "end": 76.94
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 76.94,
+  "end": 77.16
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 77.16,
+  "end": 77.26
+ },
+ {
+  "text": "MASSAGE",
+  "key": "massage",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 77.26,
+  "end": 77.66
+ },
+ {
+  "text": "WORK",
+  "key": "work",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 77.66,
+  "end": 78.0
+ },
+ {
+  "text": "TOGETHER",
+  "key": "together",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 78.0,
+  "end": 78.54
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 78.54,
+  "end": 78.82
+ },
+ {
+  "text": "WAKE",
+  "key": "wake",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 78.82,
+  "end": 79.12
+ },
+ {
+  "text": "UP",
+  "key": "up",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 79.12,
+  "end": 79.3
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 79.3,
+  "end": 79.42
+ },
+ {
+  "text": "CIRCULATION",
+  "key": "circulation",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 79.42,
+  "end": 80.04
+ },
+ {
+  "text": "SO",
+  "key": "so",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 80.04,
+  "end": 80.54
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 80.54,
+  "end": 80.66
+ },
+ {
+  "text": "STUCK",
+  "key": "stuck",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 80.66,
+  "end": 81.0
+ },
+ {
+  "text": "FLUID",
+  "key": "fluid",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 81.0,
+  "end": 81.36
+ },
+ {
+  "text": "CAN",
+  "key": "can",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 81.36,
+  "end": 81.6
+ },
+ {
+  "text": "START",
+  "key": "start",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 81.6,
+  "end": 81.84
+ },
+ {
+  "text": "MOVING",
+  "key": "moving",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 81.84,
+  "end": 82.18
+ },
+ {
+  "text": "AGAIN",
+  "key": "again",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 82.18,
+  "end": 82.535
+ },
+ {
+  "text": "UP",
+  "key": "up",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 83.007,
+  "end": 83.141
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 83.459,
+  "end": 83.56
+ },
+ {
+  "text": "OUT",
+  "key": "out",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 83.731,
+  "end": 83.88
+ },
+ {
+  "text": "OF",
+  "key": "of",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 83.88,
+  "end": 84.0
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 84.0,
+  "end": 84.1
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 84.1,
+  "end": 84.42
+ },
+ {
+  "text": "EVERY",
+  "key": "every",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 85.145,
+  "end": 85.36
+ },
+ {
+  "text": "EVENING",
+  "key": "evening",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 85.36,
+  "end": 85.74
+ },
+ {
+  "text": "MASSAGE",
+  "key": "massage",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 86.046,
+  "end": 86.42
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 86.42,
+  "end": 86.62
+ },
+ {
+  "text": "FROM",
+  "key": "from",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 86.62,
+  "end": 86.78
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 86.78,
+  "end": 86.92
+ },
+ {
+  "text": "ANKLE",
+  "key": "ankle",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 86.92,
+  "end": 87.3
+ },
+ {
+  "text": "UP",
+  "key": "up",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 87.3,
+  "end": 87.62
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 87.62,
+  "end": 87.8
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 87.8,
+  "end": 87.88
+ },
+ {
+  "text": "KNEE",
+  "key": "knee",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 87.88,
+  "end": 88.16
+ },
+ {
+  "text": "FOR",
+  "key": "for",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 88.16,
+  "end": 88.36
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 88.36,
+  "end": 88.52
+ },
+ {
+  "text": "FEW",
+  "key": "few",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 88.52,
+  "end": 88.64
+ },
+ {
+  "text": "MINUTES",
+  "key": "minutes",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 88.64,
+  "end": 88.98
+ },
+ {
+  "text": "ALWAYS",
+  "key": "always",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 89.502,
+  "end": 89.84
+ },
+ {
+  "text": "UPWARD",
+  "key": "upward",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 89.84,
+  "end": 90.36
+ },
+ {
+  "text": "MANY",
+  "key": "many",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 91.147,
+  "end": 91.36
+ },
+ {
+  "text": "PEOPLE",
+  "key": "people",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 91.36,
+  "end": 91.7
+ },
+ {
+  "text": "FEEL",
+  "key": "feel",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 91.7,
+  "end": 91.96
+ },
+ {
+  "text": "THEIR",
+  "key": "their",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 91.96,
+  "end": 92.14
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 92.14,
+  "end": 92.38
+ },
+ {
+  "text": "LIGHTER",
+  "key": "lighter",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 92.38,
+  "end": 92.74
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 92.74,
+  "end": 92.94
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 92.94,
+  "end": 93.04
+ },
+ {
+  "text": "FIRST",
+  "key": "first",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 93.04,
+  "end": 93.22
+ },
+ {
+  "text": "DAYS…",
+  "key": "days",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 93.22,
+  "end": 93.62
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 93.62,
+  "end": 94.18
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 94.18,
+  "end": 94.247
+ },
+ {
+  "text": "KEEPS",
+  "key": "keeps",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 94.38,
+  "end": 94.62
+ },
+ {
+  "text": "GETTING",
+  "key": "getting",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 94.62,
+  "end": 94.86
+ },
+ {
+  "text": "BETTER",
+  "key": "better",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 94.86,
+  "end": 95.28
+ },
+ {
+  "text": "AS",
+  "key": "as",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 95.28,
+  "end": 95.56
+ },
+ {
+  "text": "THEY",
+  "key": "they",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 95.56,
+  "end": 95.7
+ },
+ {
+  "text": "KEEP",
+  "key": "keep",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 95.7,
+  "end": 95.92
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 95.92,
+  "end": 96.08
+ },
+ {
+  "text": "HABIT",
+  "key": "habit",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 96.08,
+  "end": 96.391
+ },
+ {
+  "text": "IMAGINE",
+  "key": "imagine",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 97.053,
+  "end": 97.42
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 97.42,
+  "end": 97.88
+ },
+ {
+  "text": "THAT",
+  "key": "that",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 97.88,
+  "end": 98.08
+ },
+ {
+  "text": "DON'T",
+  "key": "don't",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 98.292,
+  "end": 98.46
+ },
+ {
+  "text": "FEEL",
+  "key": "feel",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 98.46,
+  "end": 98.78
+ },
+ {
+  "text": "LIKE",
+  "key": "like",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 98.78,
+  "end": 99.02
+ },
+ {
+  "text": "STONE",
+  "key": "stone",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 99.02,
+  "end": 99.42
+ },
+ {
+  "text": "SHOES",
+  "key": "shoes",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 99.966,
+  "end": 100.3
+ },
+ {
+  "text": "THAT",
+  "key": "that",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 100.3,
+  "end": 100.58
+ },
+ {
+  "text": "FIT",
+  "key": "fit",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 100.58,
+  "end": 100.84
+ },
+ {
+  "text": "AGAIN",
+  "key": "again",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 100.84,
+  "end": 101.14
+ },
+ {
+  "text": "WALKING",
+  "key": "walking",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 101.692,
+  "end": 101.94
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 101.94,
+  "end": 102.16
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 102.16,
+  "end": 102.26
+ },
+ {
+  "text": "MARKET",
+  "key": "market",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 102.26,
+  "end": 102.56
+ },
+ {
+  "text": "WITHOUT",
+  "key": "without",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 102.56,
+  "end": 102.98
+ },
+ {
+  "text": "STOPPING",
+  "key": "stopping",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 102.98,
+  "end": 103.56
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 103.56,
+  "end": 103.76
+ },
+ {
+  "text": "REST",
+  "key": "rest",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 103.76,
+  "end": 104.12
+ },
+ {
+  "text": "IF",
+  "key": "if",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 104.806,
+  "end": 104.92
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 104.92,
+  "end": 105.18
+ },
+ {
+  "text": "LEG",
+  "key": "leg",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 105.18,
+  "end": 105.42
+ },
+ {
+  "text": "IS",
+  "key": "is",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 105.42,
+  "end": 105.56
+ },
+ {
+  "text": "SUDDENLY",
+  "key": "suddenly",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 105.56,
+  "end": 105.92
+ },
+ {
+  "text": "SWOLLEN",
+  "key": "swollen",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 105.92,
+  "end": 106.4
+ },
+ {
+  "text": "HOT",
+  "key": "hot",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 106.78,
+  "end": 107.1
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 107.1,
+  "end": 107.3
+ },
+ {
+  "text": "PAINFUL",
+  "key": "painful",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 107.3,
+  "end": 107.76
+ },
+ {
+  "text": "OR",
+  "key": "or",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 108.2,
+  "end": 108.34
+ },
+ {
+  "text": "IF",
+  "key": "if",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 108.34,
+  "end": 108.48
+ },
+ {
+  "text": "THERE",
+  "key": "there",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 108.48,
+  "end": 108.6
+ },
+ {
+  "text": "IS",
+  "key": "is",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 108.6,
+  "end": 108.72
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 108.72,
+  "end": 108.86
+ },
+ {
+  "text": "WOUND",
+  "key": "wound",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 108.86,
+  "end": 109.12
+ },
+ {
+  "text": "SEE",
+  "key": "see",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 109.497,
+  "end": 109.76
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 109.76,
+  "end": 109.88
+ },
+ {
+  "text": "DOCTOR",
+  "key": "doctor",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 109.88,
+  "end": 110.16
+ },
+ {
+  "text": "FIRST",
+  "key": "first",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 110.16,
+  "end": 110.62
+ },
+ {
+  "text": "TRY",
+  "key": "try",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 111.361,
+  "end": 111.56
+ },
+ {
+  "text": "MIRACLE",
+  "key": "miracle",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 111.56,
+  "end": 112.02
+ },
+ {
+  "text": "BALM",
+  "key": "balm",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 112.02,
+  "end": 112.42
+ },
+ {
+  "text": "TODAY",
+  "key": "today",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 112.42,
+  "end": 112.78
+ },
+ {
+  "text": "WITHOUT",
+  "key": "without",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 112.78,
+  "end": 113.36
+ },
+ {
+  "text": "ANY",
+  "key": "any",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 113.36,
+  "end": 113.76
+ },
+ {
+  "text": "RISK",
+  "key": "risk",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 113.76,
+  "end": 114.2
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 114.635,
+  "end": 114.72
+ },
+ {
+  "text": "HAVE",
+  "key": "have",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 114.72,
+  "end": 114.9
+ },
+ {
+  "text": "THIRTY",
+  "key": "30",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 114.9,
+  "end": 115.24
+ },
+ {
+  "text": "DAYS",
+  "key": "days",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 115.24,
+  "end": 115.58
+ },
+ {
+  "text": "IF",
+  "key": "if",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 116.213,
+  "end": 116.32
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 116.32,
+  "end": 116.44
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 116.44,
+  "end": 116.68
+ },
+ {
+  "text": "DON'T",
+  "key": "don't",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 116.68,
+  "end": 117.06
+ },
+ {
+  "text": "FEEL",
+  "key": "feel",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 117.06,
+  "end": 117.24
+ },
+ {
+  "text": "LIGHTER",
+  "key": "lighter",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 117.24,
+  "end": 117.56
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 117.909,
+  "end": 118.02
+ },
+ {
+  "text": "GET",
+  "key": "get",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 118.02,
+  "end": 118.2
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 118.2,
+  "end": 118.32
+ },
+ {
+  "text": "MONEY",
+  "key": "money",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 118.32,
+  "end": 118.54
+ },
+ {
+  "text": "BACK",
+  "key": "back",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 118.54,
+  "end": 118.78
+ },
+ {
+  "text": "CLICK",
+  "key": "click",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 119.295,
+  "end": 119.44
+ },
+ {
+  "text": "BELOW",
+  "key": "below",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 119.584,
+  "end": 119.82
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 119.82,
+  "end": 120.02
+ },
+ {
+  "text": "ORDER",
+  "key": "order",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 120.02,
+  "end": 120.28
+ },
+ {
+  "text": "FREE",
+  "key": "free",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 120.712,
+  "end": 120.96
+ },
+ {
+  "text": "DELIVERY",
+  "key": "delivery",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 120.96,
+  "end": 121.32
+ },
+ {
+  "text": "TODAY",
+  "key": "today",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 121.32,
+  "end": 121.66
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 121.66,
+  "end": 122.08
+ },
+ {
+  "text": "CASH",
+  "key": "cash",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 122.08,
+  "end": 122.42
+ },
+ {
+  "text": "ON",
+  "key": "on",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 122.42,
+  "end": 122.64
+ },
+ {
+  "text": "DELIVERY",
+  "key": "delivery",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 122.64,
+  "end": 122.96
+ },
+ {
+  "text": "",
+  "key": "",
+  "brk": true,
+  "eol": false,
+  "cut": false,
+  "start": 122.96,
+  "end": 123.143
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 123.505,
+  "end": 123.62
+ },
+ {
+  "text": "PAY",
+  "key": "pay",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 123.62,
+  "end": 123.84
+ },
+ {
+  "text": "ONLY",
+  "key": "only",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 123.84,
+  "end": 124.26
+ },
+ {
+  "text": "WHEN",
+  "key": "when",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 124.26,
+  "end": 124.5
+ },
+ {
+  "text": "IT'S",
+  "key": "it's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 124.5,
+  "end": 124.72
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 124.72,
+  "end": 124.84
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 124.84,
+  "end": 125.0
+ },
+ {
+  "text": "HAND",
+  "key": "hand",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 125.0,
+  "end": 125.284
+ }
+]

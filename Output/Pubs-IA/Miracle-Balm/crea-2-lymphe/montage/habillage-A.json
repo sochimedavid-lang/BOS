@@ -1,0 +1,38 @@
+{
+ "video": "renders/MB-2-A-v1.mp4",
+ "out": "renders/MB-2-A-v1-habillee.mp4",
+ "hook": {
+  "lines": [
+   {
+    "text": "The hidden cause"
+   },
+   {
+    "text": "of heavy, swollen legs",
+    "highlight": [
+     "heavy",
+     "swollen",
+     "legs"
+    ]
+   }
+  ],
+  "start": 0.05,
+  "end": 5.3,
+  "top": 560,
+  "style": "boites"
+ },
+ "endcard": {
+  "duration": 3.4,
+  "kicker": "Free delivery today",
+  "product_image": "ref/produit.png",
+  "title": "MIRACLE BALM",
+  "subtitle": "Herbal massage balm for tired, heavy legs",
+  "perks": [
+   "Free delivery",
+   "Pay on delivery",
+   "30-day money back"
+  ],
+  "cta": "Order now",
+  "cta_note": "Tap the button below",
+  "accent": "#3a8f2a"
+ }
+}

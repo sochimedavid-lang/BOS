@@ -1,0 +1,404 @@
+{
+ "duration": 126.1,
+ "fps": 30,
+ "size": [
+  1080,
+  1920
+ ],
+ "outputs": {
+  "video": "build/video-A.mp4",
+  "audio": "build/mix-A.wav"
+ },
+ "voiceover": {
+  "src": "audio/voiceover.mp3",
+  "at": 0.0,
+  "lufs": -16
+ },
+ "music": {
+  "src": "audio/music/pad-loop.mp3",
+  "_why": "même fond que MB-1 (pad ElevenLabs bouclé, régulier, sous la voix) ; +3 dB à l'apparition du produit",
+  "in": 0.0,
+  "under_voice_db": 18,
+  "envelope": [
+   [
+    0,
+    -60
+   ],
+   [
+    0.5,
+    0
+   ],
+   [
+    70.7,
+    0
+   ],
+   [
+    71.3,
+    3
+   ],
+   [
+    124.6,
+    3
+   ],
+   [
+    126.1,
+    -60
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "name": "soir — grillons",
+   "src": "audio/sfx/night.mp3",
+   "at": 0.0,
+   "under_voice_db": 18,
+   "out": 3.0,
+   "fade_out": 0.4
+  },
+  {
+   "name": "whoosh — coupe",
+   "src": "audio/sfx/whoosh-short.mp3",
+   "at": 7.64,
+   "under_voice_db": 9
+  },
+  {
+   "name": "marché",
+   "src": "audio/sfx/market.mp3",
+   "at": 11.0,
+   "under_voice_db": 16,
+   "out": 2.3,
+   "fade_in": 0.2,
+   "fade_out": 0.5
+  },
+  {
+   "name": "scintillement loupe",
+   "src": "audio/sfx/sparkle.mp3",
+   "at": 13.4,
+   "under_voice_db": 11
+  },
+  {
+   "name": "montée cristalline",
+   "src": "audio/sfx/riser.mp3",
+   "at": 20.0,
+   "under_voice_db": 13,
+   "out": 4.0,
+   "fade_out": 0.4
+  },
+  {
+   "name": "ruissellement",
+   "src": "audio/sfx/water.mp3",
+   "at": 24.2,
+   "under_voice_db": 12
+  },
+  {
+   "name": "marché — chaleur",
+   "src": "audio/sfx/market.mp3",
+   "at": 41.42,
+   "under_voice_db": 17,
+   "out": 2.2,
+   "fade_in": 0.2,
+   "fade_out": 0.5
+  },
+  {
+   "name": "clapotis bassine",
+   "src": "audio/sfx/water.mp3",
+   "at": 56.8,
+   "under_voice_db": 10
+  },
+  {
+   "name": "nuit — grillons",
+   "src": "audio/sfx/night.mp3",
+   "at": 62.42,
+   "under_voice_db": 18,
+   "out": 3.1,
+   "fade_in": 0.2,
+   "fade_out": 0.4
+  },
+  {
+   "name": "carillon — Miracle Balm",
+   "src": "audio/sfx/chime.mp3",
+   "at": 70.78,
+   "under_voice_db": 9,
+   "fade_out": 0.5
+  },
+  {
+   "name": "montée — massage",
+   "src": "audio/sfx/riser.mp3",
+   "at": 76.3,
+   "under_voice_db": 13,
+   "out": 4.0,
+   "fade_out": 0.4
+  },
+  {
+   "name": "ruissellement repart",
+   "src": "audio/sfx/water.mp3",
+   "at": 80.6,
+   "under_voice_db": 11
+  },
+  {
+   "name": "scintillement — jambe libérée",
+   "src": "audio/sfx/sparkle.mp3",
+   "at": 82.95,
+   "under_voice_db": 10
+  },
+  {
+   "name": "whoosh montant",
+   "src": "audio/sfx/whoosh-short.mp3",
+   "at": 89.4,
+   "under_voice_db": 9
+  },
+  {
+   "name": "pop — Click below",
+   "src": "audio/sfx/pop.mp3",
+   "at": 119.22,
+   "under_voice_db": 10
+  },
+  {
+   "name": "moto livreur",
+   "src": "audio/sfx/moto.mp3",
+   "at": 120.7,
+   "under_voice_db": 16,
+   "out": 2.0,
+   "fade_in": 0.1,
+   "fade_out": 0.5
+  },
+  {
+   "name": "billets",
+   "src": "audio/sfx/money.mp3",
+   "at": 123.5,
+   "under_voice_db": 10
+  }
+ ],
+ "clips": [
+  {
+   "src": "clips-fit/A1.mp4",
+   "start": 0,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/A2.mp4",
+   "start": 3.08,
+   "in": 0.0
+  },
+  {
+   "src": "clips/A3.mp4",
+   "start": 5.82,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/A4.mp4",
+   "start": 7.64,
+   "in": 0.0
+  },
+  {
+   "src": "clips/05.mp4",
+   "start": 11.0,
+   "in": 0.0
+  },
+  {
+   "src": "clips/06.mp4",
+   "start": 13.26,
+   "in": 0.0
+  },
+  {
+   "src": "clips/07.mp4",
+   "start": 17.04,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/08.mp4",
+   "start": 19.98,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/09.mp4",
+   "start": 24.02,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/10.mp4",
+   "start": 28.16,
+   "in": 0.0
+  },
+  {
+   "src": "clips/11.mp4",
+   "start": 32.3,
+   "in": 0.0
+  },
+  {
+   "src": "clips/12.mp4",
+   "start": 34.16,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/A2.mp4",
+   "start": 36.98,
+   "in": 2.45
+  },
+  {
+   "src": "clips/A3.mp4",
+   "start": 38.54,
+   "in": 2.0
+  },
+  {
+   "src": "clips/15a.mp4",
+   "start": 41.42,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/15b.mp4",
+   "start": 43.6,
+   "in": 0.0
+  },
+  {
+   "src": "clips/16.mp4",
+   "start": 47.12,
+   "in": 0.0
+  },
+  {
+   "src": "clips/17.mp4",
+   "start": 48.9,
+   "in": 0.0
+  },
+  {
+   "src": "clips/18.mp4",
+   "start": 53.66,
+   "in": 0.0
+  },
+  {
+   "src": "clips/19.mp4",
+   "start": 55.44,
+   "in": 0.0
+  },
+  {
+   "src": "clips/20.mp4",
+   "start": 56.7,
+   "in": 0.0
+  },
+  {
+   "src": "clips/21.mp4",
+   "start": 58.4,
+   "in": 0.0
+  },
+  {
+   "src": "clips/22.mp4",
+   "start": 59.64,
+   "in": 0.0
+  },
+  {
+   "src": "clips/23.mp4",
+   "start": 60.68,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/24.mp4",
+   "start": 62.42,
+   "in": 0.0
+  },
+  {
+   "src": "clips/25.mp4",
+   "start": 65.56,
+   "in": 0.0
+  },
+  {
+   "src": "clips/26.mp4",
+   "start": 68.08,
+   "in": 0.0
+  },
+  {
+   "src": "clips/27.mp4",
+   "start": 70.74,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/28.mp4",
+   "start": 72.2,
+   "in": 0.0
+  },
+  {
+   "src": "clips/29.mp4",
+   "start": 76.3,
+   "in": 0.0
+  },
+  {
+   "src": "clips/30.mp4",
+   "start": 80.46,
+   "in": 0.0
+  },
+  {
+   "src": "clips/31.mp4",
+   "start": 82.82,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/32.mp4",
+   "start": 84.99,
+   "in": 0.0
+  },
+  {
+   "src": "clips/33.mp4",
+   "start": 89.36,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/34.mp4",
+   "start": 90.98,
+   "in": 0.0
+  },
+  {
+   "src": "clips/35.mp4",
+   "start": 94.1,
+   "in": 0.0
+  },
+  {
+   "src": "clips/36.mp4",
+   "start": 96.94,
+   "in": 0.0
+  },
+  {
+   "src": "clips/37.mp4",
+   "start": 99.82,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/38.mp4",
+   "start": 101.58,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/39a.mp4",
+   "start": 104.66,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/39b.mp4",
+   "start": 108.04,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/40.mp4",
+   "start": 111.18,
+   "in": 0.0
+  },
+  {
+   "src": "clips/41.mp4",
+   "start": 114.46,
+   "in": 0.0
+  },
+  {
+   "src": "clips/42.mp4",
+   "start": 119.12,
+   "in": 0.0
+  },
+  {
+   "src": "clips/43.mp4",
+   "start": 120.68,
+   "in": 0.0
+  },
+  {
+   "src": "clips/44.mp4",
+   "start": 123.36,
+   "in": 0.0
+  }
+ ]
+}
