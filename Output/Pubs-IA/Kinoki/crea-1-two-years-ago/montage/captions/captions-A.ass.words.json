@@ -1,0 +1,1838 @@
+[
+ {
+  "text": "TWO",
+  "key": "2",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 0.0,
+  "end": 0.2
+ },
+ {
+  "text": "YEARS",
+  "key": "years",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 0.2,
+  "end": 0.46
+ },
+ {
+  "text": "AGO",
+  "key": "ago",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 0.46,
+  "end": 0.8
+ },
+ {
+  "text": "LAMIN",
+  "key": "lamin",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 1.0,
+  "end": 1.16
+ },
+ {
+  "text": "COULD",
+  "key": "could",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 1.16,
+  "end": 1.44
+ },
+ {
+  "text": "NOT",
+  "key": "not",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 1.44,
+  "end": 1.62
+ },
+ {
+  "text": "FINISH",
+  "key": "finish",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 1.786,
+  "end": 1.92
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 1.92,
+  "end": 2.12
+ },
+ {
+  "text": "DAY",
+  "key": "day",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.12,
+  "end": 2.28
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.28,
+  "end": 2.36
+ },
+ {
+  "text": "HIS",
+  "key": "his",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 2.36,
+  "end": 2.5
+ },
+ {
+  "text": "TAXI",
+  "key": "taxi",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 2.666,
+  "end": 2.88
+ },
+ {
+  "text": "BY",
+  "key": "by",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 3.485,
+  "end": 3.58
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 3.58,
+  "end": 3.68
+ },
+ {
+  "text": "AFTERNOON",
+  "key": "afternoon",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 3.68,
+  "end": 4.14
+ },
+ {
+  "text": "HIS",
+  "key": "his",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 4.36,
+  "end": 4.48
+ },
+ {
+  "text": "LEGS",
+  "key": "legs",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 4.48,
+  "end": 4.7
+ },
+ {
+  "text": "WERE",
+  "key": "were",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 4.7,
+  "end": 4.86
+ },
+ {
+  "text": "HEAVY",
+  "key": "heavy",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 4.86,
+  "end": 5.16
+ },
+ {
+  "text": "LIKE",
+  "key": "like",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 5.16,
+  "end": 5.42
+ },
+ {
+  "text": "CEMENT",
+  "key": "cement",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 5.42,
+  "end": 5.76
+ },
+ {
+  "text": "HIS",
+  "key": "his",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 6.33,
+  "end": 6.44
+ },
+ {
+  "text": "FEET",
+  "key": "feet",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 6.44,
+  "end": 6.72
+ },
+ {
+  "text": "WERE",
+  "key": "were",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 6.72,
+  "end": 6.94
+ },
+ {
+  "text": "SWOLLEN",
+  "key": "swollen",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 6.94,
+  "end": 7.38
+ },
+ {
+  "text": "INSIDE",
+  "key": "inside",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 7.38,
+  "end": 7.86
+ },
+ {
+  "text": "HIS",
+  "key": "his",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 7.86,
+  "end": 8.12
+ },
+ {
+  "text": "SHOES",
+  "key": "shoes",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 8.12,
+  "end": 8.44
+ },
+ {
+  "text": "EVERY",
+  "key": "every",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 9.099,
+  "end": 9.28
+ },
+ {
+  "text": "NIGHT",
+  "key": "night",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 9.28,
+  "end": 9.54
+ },
+ {
+  "text": "HE",
+  "key": "he",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 9.54,
+  "end": 9.74
+ },
+ {
+  "text": "WENT",
+  "key": "went",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 9.74,
+  "end": 9.9
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 9.9,
+  "end": 10.04
+ },
+ {
+  "text": "BED",
+  "key": "bed",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 10.04,
+  "end": 10.157
+ },
+ {
+  "text": "TIRED",
+  "key": "tired",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 10.406,
+  "end": 10.62
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 11.134,
+  "end": 11.22
+ },
+ {
+  "text": "EVERY",
+  "key": "every",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 11.22,
+  "end": 11.48
+ },
+ {
+  "text": "MORNING",
+  "key": "morning",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 11.48,
+  "end": 11.76
+ },
+ {
+  "text": "HE",
+  "key": "he",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 11.76,
+  "end": 12.02
+ },
+ {
+  "text": "WOKE",
+  "key": "woke",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 12.02,
+  "end": 12.24
+ },
+ {
+  "text": "UP",
+  "key": "up",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 12.24,
+  "end": 12.36
+ },
+ {
+  "text": "TIRED",
+  "key": "tired",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 12.496,
+  "end": 12.82
+ },
+ {
+  "text": "LIKE",
+  "key": "like",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 13.371,
+  "end": 13.5
+ },
+ {
+  "text": "HE",
+  "key": "he",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 13.5,
+  "end": 13.62
+ },
+ {
+  "text": "NEVER",
+  "key": "never",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 13.62,
+  "end": 13.78
+ },
+ {
+  "text": "SLEPT",
+  "key": "slept",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 13.78,
+  "end": 14.06
+ },
+ {
+  "text": "AT",
+  "key": "at",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 14.06,
+  "end": 14.24
+ },
+ {
+  "text": "ALL",
+  "key": "all",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 14.24,
+  "end": 14.5
+ },
+ {
+  "text": "HOT",
+  "key": "hot",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 15.1,
+  "end": 15.2
+ },
+ {
+  "text": "WATER",
+  "key": "water",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 15.2,
+  "end": 15.46
+ },
+ {
+  "text": "WITH",
+  "key": "with",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 15.46,
+  "end": 15.64
+ },
+ {
+  "text": "SALT",
+  "key": "salt",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 15.64,
+  "end": 15.96
+ },
+ {
+  "text": "TABLETS",
+  "key": "tablets",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 16.557,
+  "end": 16.84
+ },
+ {
+  "text": "GOING",
+  "key": "going",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 17.331,
+  "end": 17.46
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 17.46,
+  "end": 17.64
+ },
+ {
+  "text": "BED",
+  "key": "bed",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 17.64,
+  "end": 17.8
+ },
+ {
+  "text": "EARLY",
+  "key": "early",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 17.8,
+  "end": 18.08
+ },
+ {
+  "text": "NOTHING",
+  "key": "nothing",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 18.66,
+  "end": 18.98
+ },
+ {
+  "text": "LASTED",
+  "key": "lasted",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 18.98,
+  "end": 19.52
+ },
+ {
+  "text": "THEN",
+  "key": "then",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 20.172,
+  "end": 20.26
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 20.26,
+  "end": 20.42
+ },
+ {
+  "text": "EVENING",
+  "key": "evening",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 20.42,
+  "end": 20.84
+ },
+ {
+  "text": "HIS",
+  "key": "his",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 21.08,
+  "end": 21.18
+ },
+ {
+  "text": "WIFE",
+  "key": "wife",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 21.18,
+  "end": 21.42
+ },
+ {
+  "text": "FATOU",
+  "key": "fatou",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 21.545,
+  "end": 21.8
+ },
+ {
+  "text": "CAME",
+  "key": "came",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 21.8,
+  "end": 22.06
+ },
+ {
+  "text": "HOME",
+  "key": "home",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 22.06,
+  "end": 22.32
+ },
+ {
+  "text": "WITH",
+  "key": "with",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 22.32,
+  "end": 22.5
+ },
+ {
+  "text": "THIS",
+  "key": "this",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 22.5,
+  "end": 22.74
+ },
+ {
+  "text": "SHE",
+  "key": "she",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 22.74,
+  "end": 23.38
+ },
+ {
+  "text": "SAID",
+  "key": "said",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 23.38,
+  "end": 23.7
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 24.099,
+  "end": 24.32
+ },
+ {
+  "text": "UNDER",
+  "key": "under",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 24.32,
+  "end": 24.74
+ },
+ {
+  "text": "EACH",
+  "key": "each",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 24.74,
+  "end": 25.0
+ },
+ {
+  "text": "FOOT",
+  "key": "foot",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 25.0,
+  "end": 25.319
+ },
+ {
+  "text": "BEFORE",
+  "key": "before",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 25.632,
+  "end": 25.699
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 25.802,
+  "end": 26.04
+ },
+ {
+  "text": "SLEEP",
+  "key": "sleep",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 26.04,
+  "end": 26.315
+ },
+ {
+  "text": "THAT'S",
+  "key": "that's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 26.802,
+  "end": 27.06
+ },
+ {
+  "text": "ALL",
+  "key": "all",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 27.06,
+  "end": 27.26
+ },
+ {
+  "text": "LAMIN",
+  "key": "lamin",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 27.831,
+  "end": 28.04
+ },
+ {
+  "text": "LAUGHED",
+  "key": "laughed",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 28.04,
+  "end": 28.401
+ },
+ {
+  "text": "BUT",
+  "key": "but",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 28.924,
+  "end": 28.991
+ },
+ {
+  "text": "THAT",
+  "key": "that",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 28.991,
+  "end": 29.2
+ },
+ {
+  "text": "NIGHT",
+  "key": "night",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 29.2,
+  "end": 29.42
+ },
+ {
+  "text": "HE",
+  "key": "he",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 29.42,
+  "end": 29.6
+ },
+ {
+  "text": "TRIED",
+  "key": "tried",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 29.6,
+  "end": 29.96
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 30.509,
+  "end": 30.58
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 30.58,
+  "end": 30.68
+ },
+ {
+  "text": "MORNING",
+  "key": "morning",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 30.68,
+  "end": 30.96
+ },
+ {
+  "text": "HE",
+  "key": "he",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 30.96,
+  "end": 31.187
+ },
+ {
+  "text": "PEELED",
+  "key": "peeled",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 31.348,
+  "end": 31.46
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 31.46,
+  "end": 31.64
+ },
+ {
+  "text": "OFF…",
+  "key": "off",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 31.64,
+  "end": 31.848
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 32.307,
+  "end": 32.4
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 32.4,
+  "end": 32.54
+ },
+ {
+  "text": "PATCH",
+  "key": "patch",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 32.54,
+  "end": 32.84
+ },
+ {
+  "text": "HAD",
+  "key": "had",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 32.84,
+  "end": 33.06
+ },
+ {
+  "text": "TURNED",
+  "key": "turned",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 33.06,
+  "end": 33.3
+ },
+ {
+  "text": "DARK",
+  "key": "dark",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 33.3,
+  "end": 33.606
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.102,
+  "end": 34.18
+ },
+ {
+  "text": "FOR",
+  "key": "for",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.18,
+  "end": 34.34
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.34,
+  "end": 34.44
+ },
+ {
+  "text": "FIRST",
+  "key": "first",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 34.587,
+  "end": 34.76
+ },
+ {
+  "text": "TIME",
+  "key": "time",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 34.76,
+  "end": 35.02
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 35.02,
+  "end": 35.18
+ },
+ {
+  "text": "MONTHS",
+  "key": "months",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 35.18,
+  "end": 35.56
+ },
+ {
+  "text": "HE",
+  "key": "he",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 35.854,
+  "end": 35.921
+ },
+ {
+  "text": "GOT",
+  "key": "got",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 35.921,
+  "end": 36.1
+ },
+ {
+  "text": "UP",
+  "key": "up",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 36.1,
+  "end": 36.24
+ },
+ {
+  "text": "LIGHT",
+  "key": "light",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 36.24,
+  "end": 36.48
+ },
+ {
+  "text": "READY",
+  "key": "ready",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 37.021,
+  "end": 37.2
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 37.2,
+  "end": 37.38
+ },
+ {
+  "text": "DRIVE",
+  "key": "drive",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 37.38,
+  "end": 37.7
+ },
+ {
+  "text": "NOW",
+  "key": "now",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 38.269,
+  "end": 38.46
+ },
+ {
+  "text": "IT'S",
+  "key": "it's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 38.46,
+  "end": 38.66
+ },
+ {
+  "text": "THEIR",
+  "key": "their",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 38.66,
+  "end": 38.8
+ },
+ {
+  "text": "EVENING",
+  "key": "evening",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 38.8,
+  "end": 39.12
+ },
+ {
+  "text": "HABIT",
+  "key": "habit",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 39.12,
+  "end": 39.5
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 40.002,
+  "end": 40.18
+ },
+ {
+  "text": "PATCH",
+  "key": "patch",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 40.18,
+  "end": 40.48
+ },
+ {
+  "text": "UNDER",
+  "key": "under",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 40.48,
+  "end": 40.86
+ },
+ {
+  "text": "EACH",
+  "key": "each",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 40.86,
+  "end": 41.16
+ },
+ {
+  "text": "FOOT",
+  "key": "foot",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 41.302,
+  "end": 41.396
+ },
+ {
+  "text": "BEFORE",
+  "key": "before",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 41.535,
+  "end": 41.72
+ },
+ {
+  "text": "SLEEPING",
+  "key": "sleeping",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 41.72,
+  "end": 42.2
+ },
+ {
+  "text": "REMOVE",
+  "key": "remove",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 42.706,
+  "end": 42.9
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 42.9,
+  "end": 43.08
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 43.08,
+  "end": 43.2
+ },
+ {
+  "text": "THE",
+  "key": "the",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 43.2,
+  "end": 43.28
+ },
+ {
+  "text": "MORNING",
+  "key": "morning",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 43.28,
+  "end": 43.52
+ },
+ {
+  "text": "THAT'S",
+  "key": "that's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 44.025,
+  "end": 44.3
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 44.3,
+  "end": 44.423
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 44.934,
+  "end": 45.1
+ },
+ {
+  "text": "BOX",
+  "key": "box",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 45.1,
+  "end": 45.44
+ },
+ {
+  "text": "IS",
+  "key": "is",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 45.44,
+  "end": 45.72
+ },
+ {
+  "text": "FIVE",
+  "key": "5",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 45.866,
+  "end": 46.02
+ },
+ {
+  "text": "NIGHTS",
+  "key": "nights",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 46.02,
+  "end": 46.38
+ },
+ {
+  "text": "KINOKI",
+  "key": "kinoki",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 46.89,
+  "end": 47.14
+ },
+ {
+  "text": "FOOT",
+  "key": "foot",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 47.14,
+  "end": 47.44
+ },
+ {
+  "text": "PATCHES",
+  "key": "patches",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 47.44,
+  "end": 47.82
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 47.82,
+  "end": 48.44
+ },
+ {
+  "text": "FEET",
+  "key": "feet",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 48.44,
+  "end": 48.68
+ },
+ {
+  "text": "CARRY",
+  "key": "carry",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 48.812,
+  "end": 49.0
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 49.0,
+  "end": 49.2
+ },
+ {
+  "text": "ALL",
+  "key": "all",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 49.2,
+  "end": 49.48
+ },
+ {
+  "text": "DAY",
+  "key": "day",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 49.48,
+  "end": 49.8
+ },
+ {
+  "text": "AT",
+  "key": "at",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 50.189,
+  "end": 50.28
+ },
+ {
+  "text": "NIGHT",
+  "key": "night",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 50.28,
+  "end": 50.56
+ },
+ {
+  "text": "LET",
+  "key": "let",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 50.78,
+  "end": 50.9
+ },
+ {
+  "text": "THEM",
+  "key": "them",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 50.9,
+  "end": 51.08
+ },
+ {
+  "text": "REST",
+  "key": "rest",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 51.08,
+  "end": 51.42
+ },
+ {
+  "text": "NOT",
+  "key": "not",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 51.88,
+  "end": 52.04
+ },
+ {
+  "text": "ON",
+  "key": "on",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 52.04,
+  "end": 52.22
+ },
+ {
+  "text": "DAMAGED",
+  "key": "damaged",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 52.22,
+  "end": 52.52
+ },
+ {
+  "text": "SKIN",
+  "key": "skin",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 52.52,
+  "end": 52.94
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 53.532,
+  "end": 53.62
+ },
+ {
+  "text": "IF",
+  "key": "if",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 53.62,
+  "end": 53.74
+ },
+ {
+  "text": "ONE",
+  "key": "1",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 53.74,
+  "end": 53.96
+ },
+ {
+  "text": "LEG",
+  "key": "leg",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 53.96,
+  "end": 54.18
+ },
+ {
+  "text": "IS",
+  "key": "is",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 54.18,
+  "end": 54.34
+ },
+ {
+  "text": "SUDDENLY",
+  "key": "suddenly",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 54.34,
+  "end": 54.62
+ },
+ {
+  "text": "SWOLLEN",
+  "key": "swollen",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 54.62,
+  "end": 55.06
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 55.06,
+  "end": 55.24
+ },
+ {
+  "text": "PAINFUL",
+  "key": "painful",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 55.24,
+  "end": 55.64
+ },
+ {
+  "text": "SEE",
+  "key": "see",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 56.06,
+  "end": 56.18
+ },
+ {
+  "text": "A",
+  "key": "a",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 56.18,
+  "end": 56.3
+ },
+ {
+  "text": "DOCTOR",
+  "key": "doctor",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 56.3,
+  "end": 56.52
+ },
+ {
+  "text": "FIRST",
+  "key": "first",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 56.52,
+  "end": 56.88
+ },
+ {
+  "text": "IF",
+  "key": "if",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 57.501,
+  "end": 57.58
+ },
+ {
+  "text": "THIS",
+  "key": "this",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 57.58,
+  "end": 57.78
+ },
+ {
+  "text": "SOUNDS",
+  "key": "sounds",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 57.78,
+  "end": 58.04
+ },
+ {
+  "text": "LIKE",
+  "key": "like",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 58.04,
+  "end": 58.24
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 58.24,
+  "end": 58.44
+ },
+ {
+  "text": "EVENINGS",
+  "key": "evenings",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 58.44,
+  "end": 58.82
+ },
+ {
+  "text": "TRY",
+  "key": "try",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 59.242,
+  "end": 59.48
+ },
+ {
+  "text": "IT",
+  "key": "it",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 59.48,
+  "end": 59.66
+ },
+ {
+  "text": "WITHOUT",
+  "key": "without",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 59.66,
+  "end": 59.88
+ },
+ {
+  "text": "ANY",
+  "key": "any",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 59.88,
+  "end": 60.2
+ },
+ {
+  "text": "RISK",
+  "key": "risk",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 60.2,
+  "end": 60.56
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 60.96,
+  "end": 61.027
+ },
+ {
+  "text": "HAVE",
+  "key": "have",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 61.027,
+  "end": 61.138
+ },
+ {
+  "text": "THIRTY",
+  "key": "30",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 61.335,
+  "end": 61.48
+ },
+ {
+  "text": "DAYS",
+  "key": "days",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 61.48,
+  "end": 61.784
+ },
+ {
+  "text": "CLICK",
+  "key": "click",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 62.456,
+  "end": 62.523
+ },
+ {
+  "text": "BELOW",
+  "key": "below",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 62.666,
+  "end": 62.8
+ },
+ {
+  "text": "TO",
+  "key": "to",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 62.8,
+  "end": 63.0
+ },
+ {
+  "text": "ORDER",
+  "key": "order",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 63.0,
+  "end": 63.26
+ },
+ {
+  "text": "FREE",
+  "key": "free",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 63.833,
+  "end": 63.9
+ },
+ {
+  "text": "DELIVERY",
+  "key": "delivery",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 63.9,
+  "end": 64.24
+ },
+ {
+  "text": "TODAY",
+  "key": "today",
+  "brk": true,
+  "eol": false,
+  "cut": true,
+  "start": 64.24,
+  "end": 64.56
+ },
+ {
+  "text": "AND",
+  "key": "and",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 64.893,
+  "end": 64.96
+ },
+ {
+  "text": "CASH",
+  "key": "cash",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 64.96,
+  "end": 65.26
+ },
+ {
+  "text": "ON",
+  "key": "on",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 65.26,
+  "end": 65.44
+ },
+ {
+  "text": "DELIVERY",
+  "key": "delivery",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 65.44,
+  "end": 65.78
+ },
+ {
+  "text": "",
+  "key": "",
+  "brk": true,
+  "eol": false,
+  "cut": false,
+  "start": 65.78,
+  "end": 66.32
+ },
+ {
+  "text": "YOU",
+  "key": "you",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 66.32,
+  "end": 66.4
+ },
+ {
+  "text": "PAY",
+  "key": "pay",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 66.4,
+  "end": 66.6
+ },
+ {
+  "text": "ONLY",
+  "key": "only",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 66.6,
+  "end": 66.98
+ },
+ {
+  "text": "WHEN",
+  "key": "when",
+  "brk": false,
+  "eol": false,
+  "cut": true,
+  "start": 66.98,
+  "end": 67.2
+ },
+ {
+  "text": "IT'S",
+  "key": "it's",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 67.2,
+  "end": 67.38
+ },
+ {
+  "text": "IN",
+  "key": "in",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 67.38,
+  "end": 67.48
+ },
+ {
+  "text": "YOUR",
+  "key": "your",
+  "brk": false,
+  "eol": false,
+  "cut": false,
+  "start": 67.48,
+  "end": 67.6
+ },
+ {
+  "text": "HAND",
+  "key": "hand",
+  "brk": true,
+  "eol": true,
+  "cut": true,
+  "start": 67.6,
+  "end": 67.874
+ }
+]

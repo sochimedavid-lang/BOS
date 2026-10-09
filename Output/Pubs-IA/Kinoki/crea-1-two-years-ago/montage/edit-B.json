@@ -1,0 +1,299 @@
+{
+ "duration": 63.52,
+ "fps": 30,
+ "size": [
+  1080,
+  1920
+ ],
+ "outputs": {
+  "video": "build/video-B.mp4",
+  "audio": "build/mix-B.wav"
+ },
+ "voiceover": {
+  "src": "audio/voiceover-B.mp3",
+  "at": 0.0,
+  "lufs": -16
+ },
+ "music": {
+  "src": "audio/music/pad-loop.mp3",
+  "_why": "même fond que MB-1/MB-2 (pad ElevenLabs bouclé, sous la voix) ; +3 dB au nom du produit",
+  "in": 0.0,
+  "under_voice_db": 18,
+  "envelope": [
+   [
+    0,
+    -60
+   ],
+   [
+    0.5,
+    0
+   ],
+   [
+    41.617000000000004,
+    0
+   ],
+   [
+    42.217,
+    3
+   ],
+   [
+    62.02,
+    3
+   ],
+   [
+    63.52,
+    -60
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "name": "nuit — patch posé",
+   "src": "audio/sfx/night.mp3",
+   "at": 0.0,
+   "under_voice_db": 18,
+   "out": 1.9,
+   "fade_out": 0.3
+  },
+  {
+   "name": "révélation — patch du matin",
+   "src": "audio/sfx/sparkle.mp3",
+   "at": 1.95,
+   "under_voice_db": 10
+  },
+  {
+   "name": "nuit — couché épuisé",
+   "src": "audio/sfx/night.mp3",
+   "at": 3.92,
+   "under_voice_db": 18,
+   "out": 2.0,
+   "fade_in": 0.2,
+   "fade_out": 0.4
+  },
+  {
+   "name": "eau bassine",
+   "src": "audio/sfx/water.mp3",
+   "at": 9.97,
+   "under_voice_db": 10
+  },
+  {
+   "name": "comprimés",
+   "src": "audio/sfx/pills.mp3",
+   "at": 11.36,
+   "under_voice_db": 10
+  },
+  {
+   "name": "révélation — patch foncé",
+   "src": "audio/sfx/sparkle.mp3",
+   "at": 27.02,
+   "under_voice_db": 10
+  },
+  {
+   "name": "montée — réveil léger",
+   "src": "audio/sfx/riser.mp3",
+   "at": 28.82,
+   "under_voice_db": 13,
+   "out": 3.0,
+   "fade_out": 0.4
+  },
+  {
+   "name": "carillon — Kinoki",
+   "src": "audio/sfx/chime.mp3",
+   "at": 41.76,
+   "under_voice_db": 9,
+   "fade_out": 0.5
+  },
+  {
+   "name": "nuit — pieds au repos",
+   "src": "audio/sfx/night.mp3",
+   "at": 45.1,
+   "under_voice_db": 18,
+   "out": 1.7,
+   "fade_in": 0.2,
+   "fade_out": 0.4
+  },
+  {
+   "name": "pop — Click below",
+   "src": "audio/sfx/pop.mp3",
+   "at": 57.26,
+   "under_voice_db": 10
+  },
+  {
+   "name": "moto livreur",
+   "src": "audio/sfx/moto.mp3",
+   "at": 58.62,
+   "under_voice_db": 16,
+   "out": 2.0,
+   "fade_in": 0.1,
+   "fade_out": 0.5
+  },
+  {
+   "name": "billets",
+   "src": "audio/sfx/money.mp3",
+   "at": 61.27,
+   "under_voice_db": 10
+  }
+ ],
+ "clips": [
+  {
+   "src": "clips/B1.mp4",
+   "start": 0,
+   "in": 0.0
+  },
+  {
+   "src": "clips/B2.mp4",
+   "start": 1.92,
+   "in": 0.0
+  },
+  {
+   "src": "clips/05.mp4",
+   "start": 3.837,
+   "in": 0.0
+  },
+  {
+   "src": "clips/06.mp4",
+   "start": 5.937,
+   "in": 0.0
+  },
+  {
+   "src": "clips/07.mp4",
+   "start": 8.097,
+   "in": 0.0
+  },
+  {
+   "src": "clips/08.mp4",
+   "start": 9.857,
+   "in": 0.0
+  },
+  {
+   "src": "clips/09.mp4",
+   "start": 11.277,
+   "in": 0.0
+  },
+  {
+   "src": "clips/10.mp4",
+   "start": 12.097,
+   "in": 0.0
+  },
+  {
+   "src": "clips/11.mp4",
+   "start": 13.497,
+   "in": 0.0
+  },
+  {
+   "src": "clips/12.mp4",
+   "start": 14.897,
+   "in": 0.0
+  },
+  {
+   "src": "clips/13a.mp4",
+   "start": 17.577,
+   "in": 0.0
+  },
+  {
+   "src": "clips/13b.mp4",
+   "start": 20.197,
+   "in": 0.0
+  },
+  {
+   "src": "clips/14.mp4",
+   "start": 22.577,
+   "in": 0.0
+  },
+  {
+   "src": "clips/15.mp4",
+   "start": 23.657,
+   "in": 0.0
+  },
+  {
+   "src": "clips/16.mp4",
+   "start": 25.277,
+   "in": 0.0
+  },
+  {
+   "src": "clips/17.mp4",
+   "start": 26.917,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/18.mp4",
+   "start": 28.777,
+   "in": 0.0
+  },
+  {
+   "src": "clips/19.mp4",
+   "start": 31.777,
+   "in": 0.0
+  },
+  {
+   "src": "clips/20.mp4",
+   "start": 33.037,
+   "in": 0.0
+  },
+  {
+   "src": "clips/21.mp4",
+   "start": 34.737,
+   "in": 0.0
+  },
+  {
+   "src": "clips/22.mp4",
+   "start": 37.497,
+   "in": 0.0
+  },
+  {
+   "src": "clips/23.mp4",
+   "start": 39.677,
+   "in": 0.0
+  },
+  {
+   "src": "clips/24.mp4",
+   "start": 41.677,
+   "in": 0.0
+  },
+  {
+   "src": "clips/25.mp4",
+   "start": 42.657,
+   "in": 0.0
+  },
+  {
+   "src": "clips/26.mp4",
+   "start": 45.017,
+   "in": 0.0
+  },
+  {
+   "src": "clips/27.mp4",
+   "start": 46.717,
+   "in": 0.0
+  },
+  {
+   "src": "clips/28.mp4",
+   "start": 48.317,
+   "in": 0.0
+  },
+  {
+   "src": "clips-fit/29.mp4",
+   "start": 52.297,
+   "in": 0.0
+  },
+  {
+   "src": "clips/30.mp4",
+   "start": 55.797,
+   "in": 0.0
+  },
+  {
+   "src": "clips/31.mp4",
+   "start": 57.177,
+   "in": 0.0
+  },
+  {
+   "src": "clips/32.mp4",
+   "start": 58.557,
+   "in": 0.0
+  },
+  {
+   "src": "clips/33.mp4",
+   "start": 61.157,
+   "in": 0.0
+  }
+ ]
+}

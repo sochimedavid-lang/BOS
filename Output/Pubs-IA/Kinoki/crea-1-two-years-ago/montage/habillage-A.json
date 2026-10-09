@@ -1,0 +1,37 @@
+{
+ "video": "renders/K-1-A-v1.mp4",
+ "out": "renders/K-1-A-v1-habillee.mp4",
+ "hook": {
+  "lines": [
+   {
+    "text": "He used to wake up"
+   },
+   {
+    "text": "already tired",
+    "highlight": [
+     "already",
+     "tired"
+    ]
+   }
+  ],
+  "start": 0.05,
+  "end": 5.5,
+  "top": 560,
+  "style": "boites"
+ },
+ "endcard": {
+  "duration": 3.4,
+  "kicker": "Free delivery today",
+  "product_image": "ref/produit.png",
+  "title": "KINOKI",
+  "subtitle": "Foot patches for your evening routine",
+  "perks": [
+   "Free delivery",
+   "Pay on delivery",
+   "30-day money back"
+  ],
+  "cta": "Order now",
+  "cta_note": "Tap the button below",
+  "accent": "#1f7a3a"
+ }
+}

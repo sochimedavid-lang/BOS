@@ -13,7 +13,7 @@ Phase 1 terminée (07/10) : 4 documents fondateurs dans 01-recherche/. Prochaine
 ## Créas
 | Créa | Format | Style | Étape | Crédits dépensés |
 |---|---|---|---|---:|
-| K-1 | « TWO YEARS AGO » (base Crea 7) — `crea-1-two-years-ago/` | Humain IA réaliste, voix off Christopher Smooth | Script v1 validé (09/10, sans « toxins »). Voix générée (eleven_v4, 68,0 s + accroche B 3,3 s). Storyboard v1 : 35 plans (33 version A + 2 accroche B), animation estimée 159 crédits. 35 images (21 refaite par l'entrepreneur). 34 clips Kling std (154,5 crédits) ; 21 (pied en trop) et 26 (pas d'image) faits en zoom sur image fixe | ElevenLabs 1 146 · Higgsfield 154,5 |
+| K-1 | « TWO YEARS AGO » (base Crea 7) — `crea-1-two-years-ago/` | Humain IA réaliste, voix off Christopher Smooth | Script v1 validé (09/10, sans « toxins »). Voix générée (eleven_v4, 68,0 s + accroche B 3,3 s). Storyboard v1 : 35 plans (33 version A + 2 accroche B), animation estimée 159 crédits. 35 images (21 refaite par l'entrepreneur). 34 clips Kling std (154,5 crédits) ; 21 (pied en trop) et 26 (pas d'image) faits en zoom sur image fixe ; **montée** (A 72,0 s, B 66,9 s, habillage accroche + carte de fin, −16 LUFS) | ElevenLabs 1 146 · Higgsfield 154,5 |
 | K-3 | Patch qui noircit pendant la nuit | 3D façon Pixar | Recherche faite | 0 |
 
 ## Reste à faire
