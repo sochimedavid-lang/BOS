@@ -10,7 +10,7 @@
   "audio": "build/mix-B.wav"
  },
  "voiceover": {
-  "src": "audio/voiceover-B.mp3",
+  "src": "audio/voiceover-B.wav",
   "at": 0.0,
   "lufs": -16
  },
