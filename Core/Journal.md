@@ -38,3 +38,4 @@
 - K-1 : voix Christopher Smooth en eleven_v4, une prise (corps + accroche A 68,0 s, 1 085 crédits ; accroche B 3,3 s, 61 crédits). Texte complet à la transcription.
 - K-1 : storyboard v1 calé sur la voix (35 plans, prompts image et Kling, à joindre : fiches Lamin/Fatou ; pas de photo du vrai emballage). Animation estimée 159 crédits Higgsfield.
 - K-1 : 35 images reçues de l'entrepreneur (sans fiches préalables, visages de Lamin et Fatou cohérents). Rangées par plan. 21 et 26 à refaire : patchs gris-brun avant la nuit, ce qui casse la révélation du patch foncé.
+- K-1 : 34 clips Kling 3.0 std aux durées utiles (154,5 crédits). Plan 21 remplacé par un zoom sur l'image (pied en trop à 1 s) ; plan 26 fait en zoom sur l'image du plan 15 (pas de régénération). Montage en cours.
