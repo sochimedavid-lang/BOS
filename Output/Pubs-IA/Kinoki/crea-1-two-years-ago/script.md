@@ -1,14 +1,14 @@
-# Créa K-1 — « Two years ago » (v1)
+# Créa K-1 — « Two years ago » (v1, validée le 09/10)
 
 **Format de référence :** Kinoki Crea 7 (44 s, 1,17 $ la 1re semaine) — accroche « avant » → vie épuisée → le conjoint rapporte le patch → consigne simple → patch foncé au réveil → réveil léger → « if you see yourself » → appel.
 **Question à laquelle elle répond :** « Pourquoi je me réveille aussi fatigué que je me suis couché ? »
 **Croyance visée :** les pieds portent toute la journée ; un patch sous chaque pied pendant la nuit est un rituel simple qui se voit (le patch a foncé) et se sent (réveil plus léger).
-**Langue / voix :** anglais simple, voix off masculine posée, accent ouest-africain (narrateur hors champ, personne ne parle à l'écran).
+**Langue / voix :** anglais simple, voix off Christopher Smooth (ElevenLabs, SSfU0eLfP3qeuR4j2bwD), narrateur hors champ, personne ne parle à l'écran.
 **Héros :** Lamin, ~48 ans, chauffeur de taxi à Serekunda ; sa femme Fatou, ~44 ans. Humain IA réaliste.
 **Durée estimée :** 203 mots avec l'accroche A ≈ 80 s (à mesurer sur la voix).
 **Ce qui est cité parce que vrai aujourd'hui :** un patch sous chaque pied avant de dormir, retiré le matin ; le patch fonce pendant la nuit ; 10 patchs = 5 nuits ; pas sur peau abîmée ; garantie 30 jours ; livraison gratuite ; paiement à la livraison.
 **Ce qui n'est pas cité :** « toxines » (voir points à valider), poids, tension, maux de tête, résultats chiffrés ou datés, ingrédients, prix, offre 2 + 1, religion, « free today and tomorrow only » (fausse urgence de la Crea 7).
-_Historique : v1 (09/10) — remake de la Crea 7 pour la Gambie, raconté en voix off sur un couple gambien._
+_Historique : v1 (09/10) — remake de la Crea 7 pour la Gambie, raconté en voix off sur un couple gambien. Validée le 09/10 : sans « toxins », voix off, voix Christopher Smooth, style humain IA réaliste, images générées par l'entrepreneur sur Higgsfield._
 
 ## Script
 
