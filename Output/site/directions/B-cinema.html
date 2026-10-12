@@ -1,0 +1,48 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction B — Cinéma</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060606;--ink:#f4f1ea;--mut:#9a958b;--line:#1f1e1b;--acc:#F2B33D}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.hero{position:relative;height:760px;overflow:hidden}
+.film{position:absolute;inset:0;background:
+ radial-gradient(500px 360px at 70% 30%,rgba(242,179,61,.55),transparent 60%),
+ radial-gradient(420px 300px at 20% 60%,rgba(214,72,32,.45),transparent 60%),
+ linear-gradient(180deg,#1a120a,#060606 90%)}
+.film::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px)}
+.obj{position:absolute;right:-30px;top:120px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(255,255,255,.25)}
+.obj2{position:absolute;right:40px;top:190px;width:160px;height:160px;border-radius:50%;background:conic-gradient(from 200deg,#F2B33D,#d64820,#F2B33D);filter:blur(.3px);box-shadow:0 0 80px rgba(242,179,61,.5)}
+.rec{position:absolute;top:22px;left:22px;right:22px;display:flex;justify-content:space-between;font-size:12px;letter-spacing:.18em;color:rgba(255,255,255,.75);font-weight:600}
+.rec b{color:#ff3b30}
+.content{position:absolute;left:0;right:0;bottom:0;padding:0 22px 30px;background:linear-gradient(0deg,#060606 55%,transparent)}
+.kicker{font-size:12px;letter-spacing:.22em;color:var(--acc);font-weight:600;margin-bottom:14px}
+h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:56px;line-height:.92;letter-spacing:-.045em;text-transform:none}
+h1 span{color:var(--acc)}
+.sub{color:var(--mut);font-size:17px;line-height:1.5;margin:18px 0 24px}
+.btn{display:flex;justify-content:center;gap:10px;align-items:center;background:var(--acc);color:#111;border-radius:999px;padding:19px;font-weight:700;font-size:17px;text-decoration:none}
+.meta{display:flex;justify-content:center;gap:14px;font-size:12px;color:var(--mut);margin-top:14px;letter-spacing:.04em}
+.strip{display:flex;gap:10px;padding:26px 22px;overflow:hidden}
+.clip{flex:0 0 150px;height:250px;border-radius:14px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.clip small{position:absolute;left:10px;bottom:10px;font-size:11px;font-weight:600;letter-spacing:.06em;color:#fff}
+.c1{background:linear-gradient(160deg,#3a1d0b,#d64820)}.c1 .x{position:absolute;inset:60px 14px auto;font-family:"Bricolage Grotesque";font-weight:800;font-size:24px;line-height:.95}
+.c2{background:#111}.c2 .x{position:absolute;top:70px;left:0;right:0;text-align:center;font-family:"Bricolage Grotesque";font-weight:800;font-size:44px;color:var(--acc)}
+.c3{background:linear-gradient(200deg,#0d2b25,#0a0a0a)}.c3 .x{position:absolute;top:50px;left:50%;transform:translateX(-50%);width:80px;height:80px;border-radius:20px;background:#F2B33D;box-shadow:0 0 50px rgba(242,179,61,.6)}
+.sec{padding:40px 22px;border-top:1px solid var(--line)}
+.sec h2{font-family:"Bricolage Grotesque";font-weight:800;font-size:36px;letter-spacing:-.04em;line-height:1}
+.sec h2 span{color:var(--acc)}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.stat div{border:1px solid var(--line);border-radius:16px;padding:18px}
+.stat b{font-family:"Bricolage Grotesque";font-size:30px;display:block}.stat small{color:var(--mut);font-size:13px}
+</style></head><body>
+<div class="hero"><div class="film"></div><div class="obj"></div><div class="obj2"></div>
+<div class="rec"><span><b>●</b> REC · CRÉÉ AVEC L'IA</span><span>00:07</span></div>
+<div class="content"><div class="kicker">MOTION IA · FORMATION</div>
+<h1>Des vidéos qui font vendre. <span>Faites par l'IA.</span></h1>
+<p class="sub">Apprends à créer des vidéos motion design pour les entreprises de ta ville, même sans savoir monter. Accès immédiat.</p>
+<a class="btn" href="#">Commencer maintenant · 9 900 F</a>
+<div class="meta"><span>Garantie 7 jours</span><span>·</span><span>MTN · Moov · Carte</span></div></div></div>
+<div class="strip"><div class="clip c1"><div class="x">Grande<br>Ouverture</div><small>INAUGURATION</small></div><div class="clip c2"><div class="x">-30%</div><small>PROMO</small></div><div class="clip c3"><div class="x"></div><small>LOGO ANIMÉ</small></div></div>
+<div class="sec"><h2>Pas de logiciel. <span>Pas de montage.</span> Juste la méthode.</h2>
+<div class="stat"><div><b>6</b><small>formats qui se vendent</small></div><div><b>7 j</b><small>pour ta 1re vidéo, ou remboursé</small></div></div></div>
+</body></html>
