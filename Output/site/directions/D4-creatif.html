@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion IA — Style 4 · Créatif</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demos.css">
+<style>
+:root{--ink:#0D0D0D;--ink2:#161616;--paper:#F1EEE7;--hot:#FF4D1C;--mut:#8b877e;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:"Inter Tight",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.w{max-width:1280px;margin:0 auto;padding:0 20px}
+.disp{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-weight:400;letter-spacing:-.01em;line-height:.86}
+.serif{font-family:"Instrument Serif",serif;font-style:italic;text-transform:none;letter-spacing:-.02em}
+
+/* Loader */
+#loader{position:fixed;inset:0;z-index:100;background:var(--hot);display:flex;align-items:flex-end;justify-content:space-between;padding:20px;color:var(--ink)}
+#loader .n{font-family:Anton;font-size:28vw;line-height:.8}
+#loader small{font-weight:800;letter-spacing:.1em;font-size:12px;margin-bottom:12px}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;mix-blend-mode:difference;color:#fff}
+.logo{font-weight:900;font-size:18px;letter-spacing:-.03em}.logo em{font-family:"Instrument Serif";font-weight:400;font-size:22px}
+.navcta{font-weight:700;font-size:14px;border:1.5px solid #fff;border-radius:99px;padding:9px 16px}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 20px 28px;position:relative}
+.static .hero{min-height:860px}
+.meta-top{display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
+.meta-top b{color:var(--hot)}
+.hero h1{font-size:clamp(64px,15.5vw,230px)}
+.hero h1 .ln{display:block;overflow:hidden;padding-top:.1em;margin-top:-.1em}
+.hero h1 .ln span{display:block}
+.hero h1 .hot{color:var(--hot)}
+.hero h1 .serif{font-size:.92em;line-height:1}
+.hero-bottom{display:grid;grid-template-columns:1fr;gap:22px;margin-top:26px;align-items:end}
+.hero-bottom p{font-size:18px;line-height:1.5;color:#c9c5bc;max-width:460px}
+.cta{display:inline-flex;align-items:center;gap:14px;background:var(--hot);color:var(--ink);font-weight:800;font-size:18px;border-radius:99px;padding:8px 8px 8px 26px;transition:transform .3s}
+.cta:hover{transform:scale(1.03)}
+.cta .arr{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--hot);display:grid;place-items:center;font-size:20px;transition:transform .3s}
+.cta:hover .arr{transform:rotate(-45deg)}
+.cta small{font-weight:600;opacity:.75;margin-left:-6px}
+.trust{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut);margin-top:14px}
+.trust span::before{content:"✺ ";color:var(--hot)}
+.seal{position:absolute;right:20px;top:76px;width:104px;height:104px;animation:rot 14s linear infinite}
+.seal text{font-size:12px;font-weight:800;letter-spacing:.24em;fill:var(--paper)}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* Marquee */
+.marquee{background:var(--hot);color:var(--ink);overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-2deg) scale(1.04);margin:40px 0}
+.marquee .track{display:inline-flex;gap:28px;animation:mq 22s linear infinite;font-family:Anton;font-size:44px;text-transform:uppercase}
+.marquee .track span:nth-child(even){font-family:"Instrument Serif";font-style:italic;text-transform:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Demos */
+.sec{padding:90px 0}
+.kick{display:flex;gap:12px;align-items:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:20px}
+.kick::before{content:"";width:28px;height:1.5px;background:var(--hot)}
+.h2{font-size:clamp(46px,9vw,120px)}
+.h2 .serif{color:var(--hot)}
+.reel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 20px 10px;scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.reel .demo{flex:0 0 min(62vw,270px);scroll-snap-align:center;transition:transform .4s}
+.reel .demo:hover{transform:translateY(-8px) rotate(-1deg)}
+.hint{font-size:13px;color:var(--mut);padding:0 20px}
+
+/* Statement */
+.statement{background:var(--paper);color:var(--ink);padding:110px 0}
+.statement p{font-family:Anton;text-transform:uppercase;font-size:clamp(40px,8vw,110px);line-height:.95}
+.statement p .word{opacity:.12;transition:opacity .2s}
+.statement p .serif{font-family:"Instrument Serif";text-transform:none;color:var(--hot)}
+
+/* Steps */
+.steps{display:grid;gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--line)}
+.step .n{font-family:Anton;font-size:64px;line-height:.8;color:var(--hot)}
+.step h3{font-size:26px;font-weight:800;letter-spacing:-.03em}
+.step p{color:#b5b1a8;margin-top:6px;font-size:16px;line-height:1.5;grid-column:2}
+
+/* Programme */
+.mods{margin-top:40px}
+.mod{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:26px 14px;border-top:1px solid var(--line);transition:background .3s,color .3s;border-radius:4px}
+.mod:last-child{border-bottom:1px solid var(--line)}
+.mod:hover{background:var(--hot);color:var(--ink)}
+.mod:hover p,.mod:hover .res{color:var(--ink)}
+.mod .n{font-family:"Instrument Serif";font-style:italic;font-size:40px;line-height:.9}
+.mod h3{font-family:Anton;text-transform:uppercase;font-weight:400;font-size:clamp(26px,4vw,44px);line-height:1}
+.mod p{color:#b5b1a8;margin-top:8px;max-width:640px;line-height:1.5}
+.mod .res{display:inline-block;margin-top:10px;font-weight:700;font-size:14px;color:var(--hot)}
+
+/* Rates */
+.rates{background:var(--hot);color:var(--ink)}
+.rates .h2 .serif{color:var(--paper)}
+.rate{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:22px 0;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+.rate span:first-child{font-weight:700;font-size:18px}
+.rate span:last-child{font-family:Anton;font-size:clamp(30px,5vw,56px);line-height:1}
+.disc{margin-top:18px;font-size:13px;font-weight:600}
+
+/* Compare */
+.cmp{display:grid;grid-template-columns:1fr;gap:14px;margin-top:40px}
+.col{border:1px solid var(--line);border-radius:22px;padding:28px}
+.col.us{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.col h3{font-family:Anton;text-transform:uppercase;font-weight:400;font-size:34px;margin-bottom:16px}
+.col li{list-style:none;padding:10px 0;border-bottom:1px solid rgba(128,128,128,.25);font-weight:600}
+.col.them li{color:var(--mut);font-weight:500}
+.col.us li::before{content:"✺ ";color:var(--hot)}
+
+/* Guarantee */
+.guar{display:grid;gap:30px;align-items:center}
+.guar .big{font-family:Anton;font-size:clamp(120px,30vw,380px);line-height:.8;color:var(--hot)}
+.guar h3{font-size:30px;font-weight:800;letter-spacing:-.03em}
+.guar p{color:#b5b1a8;margin-top:10px;font-size:17px;line-height:1.55;max-width:520px}
+
+/* FAQ */
+details{border-top:1px solid var(--line);padding:22px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-weight:700;font-size:19px}
+summary::after{content:"+";font-family:Anton;font-size:28px;color:var(--hot);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:#b5b1a8;margin-top:12px;line-height:1.6;max-width:720px}
+
+/* Final */
+.final{padding:120px 0 80px;text-align:center}
+.final .disp{font-size:clamp(90px,26vw,400px);color:var(--paper)}
+.final .disp .serif{color:var(--hot)}
+.final p{color:#b5b1a8;font-size:18px;margin:22px auto 30px;max-width:520px}
+footer{padding:30px 20px 110px;border-top:1px solid var(--line);font-size:12px;color:var(--mut);display:flex;flex-direction:column;gap:6px}
+
+/* Sticky (mobile) */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex;justify-content:space-between;align-items:center;background:var(--paper);color:var(--ink);border-radius:99px;padding:8px 8px 8px 22px;box-shadow:0 20px 50px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.sticky.on{transform:none}
+.sticky b{font-family:Anton;font-size:24px;font-weight:400}.sticky small{display:block;font-size:11px;font-weight:600;color:#6b675f}
+.sticky a{background:var(--hot);border-radius:99px;padding:14px 20px;font-weight:800}
+
+/* Cursor (desktop) */
+.cursor{position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--hot);pointer-events:none;z-index:200;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .25s,height .25s;display:none}
+.cursor.big{width:70px;height:70px}
+
+@media(min-width:900px){
+  .w{padding:0 40px}
+  nav{padding:22px 40px}
+  .hero-bottom{grid-template-columns:1fr auto}
+  .seal{right:40px;top:110px;width:150px;height:150px}
+  .hero{padding:140px 40px 40px}
+  .reel{padding:40px 40px 10px}.hint{padding:0 40px}
+  .step{grid-template-columns:160px 1fr 1fr}.step p{margin-top:0;grid-column:auto}
+  .cmp{grid-template-columns:1fr 1fr}
+  .guar{grid-template-columns:auto 1fr}
+  .sticky{display:none}
+  .cursor{display:block}
+  footer{padding:30px 40px;flex-direction:row;justify-content:space-between}
+}
+</style>
+</head>
+<body>
+<div id="loader"><span class="n" id="count">0</span><small>CHARGEMENT</small></div>
+<div class="cursor" id="cursor"></div>
+
+<nav><a class="logo" href="#">Motion<em>IA</em></a><a class="navcta js-buy" href="#">Commencer →</a></nav>
+
+<header class="hero w">
+  <svg class="seal" viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs><text><textPath href="#c">CRÉÉ AVEC L'IA ✺ SANS MONTAGE ✺</textPath></text></svg>
+  <div class="meta-top"><span>(Formation) — Bénin</span><span><b>●</b> Accès immédiat</span></div>
+  <h1 class="disp">
+    <span class="ln"><span>Fais des vidéos</span></span>
+    <span class="ln"><span>qui font vendre.</span></span>
+    <span class="ln"><span class="hot"><span class="serif">avec</span>&nbsp;l'IA.</span></span>
+  </h1>
+  <div class="hero-bottom">
+    <p>Apprends à créer des vidéos motion design pour les boutiques, restaurants et entreprises autour de toi. Même si tu n'as jamais fait de montage. Tu commences ce soir.</p>
+    <div>
+      <a class="cta js-buy" href="#">Commencer <small class="js-price">9 900 F</small><span class="arr">→</span></a>
+      <div class="trust"><span>Garantie 7 jours</span><span>MTN · Moov · Carte</span><span>Communauté WhatsApp</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track">
+  <span>Logo animé</span><span>✺ promo produit ✺</span><span>Menu animé</span><span>✺ statut WhatsApp ✺</span><span>Inauguration</span><span>✺ reel vertical ✺</span>
+  <span>Logo animé</span><span>✺ promo produit ✺</span><span>Menu animé</span><span>✺ statut WhatsApp ✺</span><span>Inauguration</span><span>✺ reel vertical ✺</span>
+</div></div>
+
+<section class="sec" id="demos">
+  <div class="w"><div class="kick">Exemples</div><h2 class="disp h2 rv">Tout ça a été <span class="serif">créé</span> avec l'IA.</h2></div>
+  <div class="reel">
+<div class="demo d-logo"><span class="ai">CRÉÉ AVEC L'IA</span><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><text class="mono" x="70" y="86" text-anchor="middle">R</text></svg><div class="name">CHEZ MAMAN ROSE</div><span class="lbl">Logo animé</span></div>
+<div class="demo d-promo"><span class="ai">CRÉÉ AVEC L'IA</span><div class="burst"></div><div class="pct">-30%</div><div class="sub">Ce week-end seulement</div><span class="lbl">Promo</span></div>
+<div class="demo d-menu"><span class="ai">CRÉÉ AVEC L'IA</span><h4>Menu du jour</h4><small>MAQUIS LE BON GOÛT</small><div class="it">Amiwo poulet<b>3 000 F</b></div><div class="it i2">Pâte rouge<b>1 500 F</b></div><div class="it i3">Atassi<b>1 000 F</b></div><div class="it i4">Poisson braisé<b>2 500 F</b></div><span class="lbl">Menu animé</span></div>
+<div class="demo d-open"><span class="ai">CRÉÉ AVEC L'IA</span><i></i><i></i><i></i><i></i><i></i><div class="l"><span>Grande</span></div><div class="l l2"><span>Ouverture</span></div><div class="date">Samedi · Cotonou</div><span class="lbl">Inauguration</span></div>
+<div class="demo d-story"><span class="ai">CRÉÉ AVEC L'IA</span><div class="bars"><span></span><span></span><span></span></div><div class="who"><b></b>Salon Élégance</div><div class="txt">Nouvelles tresses<br><span>dispo dès demain</span></div><span class="lbl">Statut WhatsApp</span></div>
+<div class="demo d-stats"><span class="ai">CRÉÉ AVEC L'IA</span><div class="t">Transfert Express<br>Bilan du trimestre</div><div class="bar b1">Jan</div><div class="bar b2">Fév</div><div class="bar b3">Mar</div><span class="lbl">Chiffres clés</span></div>
+
+  </div>
+  <p class="hint">← Fais glisser pour voir les exemples →</p>
+</section>
+
+<section class="statement">
+  <div class="w"><p id="stmt">Les entreprises veulent des vidéos. L'IA fait la partie technique. <span class="serif">Toi,</span> tu trouves les clients et tu livres.</p></div>
+</section>
+
+<section class="sec">
+  <div class="w">
+    <div class="kick">Comment ça marche</div>
+    <h2 class="disp h2 rv">Trois étapes. <span class="serif">Zéro logiciel.</span></h2>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>Tu décris la vidéo</h3><p>« Un logo animé orange pour le restaurant Chez Maman Rose. » En français, comme à un collègue.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>Claude l'anime</h3><p>L'IA écrit l'animation et l'exporte en vidéo. Tu corriges avec des mots, pas avec un logiciel.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>Tu livres au client</h3><p>Tu envoies la vidéo, il la publie sur Facebook, TikTok ou en statut WhatsApp. Tu factures.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="w">
+    <div class="kick">Le programme</div>
+    <h2 class="disp h2 rv">De zéro à ton <span class="serif">premier client.</span></h2>
+    <div class="mods">
+      <div class="mod rv"><div class="n">00</div><div><h3>Démarrage</h3><p>Payer Claude depuis le Bénin avec MTN Mobile Money, installer les outils pas à pas.</p><span class="res">→ Ta première vidéo exportée</span></div></div>
+      <div class="mod rv"><div class="n">01</div><div><h3>Les 6 formats qui se vendent</h3><p>Logo animé, promo, menu, statut WhatsApp, inauguration, reel. Avec les instructions exactes à copier.</p><span class="res">→ Tu sais produire chaque format</span></div></div>
+      <div class="mod rv"><div class="n">02</div><div><h3>Du brief à la livraison</h3><p>Comprendre ce que veut le client, écrire le script, générer, corriger, ajouter musique et voix.</p><span class="res">→ Un process de production complet</span></div></div>
+      <div class="mod rv"><div class="n">03</div><div><h3>Ton portfolio en 3 jours</h3><p>5 vidéos de démonstration pour de vraies entreprises de ta ville. C'est ce que tu montreras aux prospects.</p><span class="res">→ Un portfolio prêt à montrer</span></div></div>
+      <div class="mod rv"><div class="n">04</div><div><h3>Trouver des clients</h3><p>Boutiques du quartier, Marketplace, pages qui font déjà de la pub. La méthode : leur envoyer une vidéo avec leur logo avant de parler prix.</p><span class="res">→ Tes premiers prospects contactés</span></div></div>
+      <div class="mod rv"><div class="n">05</div><div><h3>Présenter ton prix, conclure</h3><p>Quoi dire, combien demander, le devis, l'acompte, l'abonnement mensuel.</p><span class="res">→ Ton premier contrat</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rates">
+  <div class="w">
+    <div class="kick" style="color:var(--ink)">Ce que tu peux facturer</div>
+    <h2 class="disp h2 rv">La grille <span class="serif">de prix.</span></h2>
+    <div style="margin-top:30px">
+      <div class="rate rv"><span>Logo animé</span><span>15 – 25 000 F</span></div>
+      <div class="rate rv"><span>Vidéo promo produit</span><span>25 – 50 000 F</span></div>
+      <div class="rate rv"><span>Pack mensuel (4 vidéos)</span><span>100 000 F +</span></div>
+      <div class="rate rv"><span>Gros projets sur mesure</span><span>Jusqu'à 500 000 F</span></div>
+    </div>
+    <p class="disc">Ce sont des repères enseignés dans la formation. Tes résultats dépendent de ton travail et de tes clients. Aucun revenu n'est garanti.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="w">
+    <div class="kick">Pourquoi ici</div>
+    <h2 class="disp h2 rv">Commence <span class="serif">ce soir.</span></h2>
+    <div class="cmp">
+      <div class="col them rv"><h3>Ailleurs</h3><ul><li>Tu attends la date du prochain live</li><li>Horaires imposés</li><li>Pas de garantie</li><li>Deux ou trois exemples</li></ul></div>
+      <div class="col us rv"><h3>Motion IA</h3><ul><li>Accès immédiat, à ton rythme</li><li>9 900 F, prix de lancement</li><li>Remboursé si pas de vidéo en 7 jours</li><li>Communauté WhatsApp privée</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="w guar">
+    <div class="big rv">7J</div>
+    <div class="rv"><h3>Ta première vidéo, ou remboursé.</h3><p>Suis les modules 0 à 2 et fais les exercices. Si au bout de 7 jours tu n'as pas exporté ta première vidéo motion, écris-nous : on te rembourse intégralement.</p></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="w">
+    <div class="kick">Questions</div>
+    <details><summary>Je n'y connais rien. C'est pour moi ?</summary><p>Oui. On part de zéro et on installe tout ensemble. C'est l'IA qui écrit l'animation ; toi, tu apprends à lui dire quoi faire.</p></details>
+    <details><summary>Qu'est-ce qu'il me faut ?</summary><p>Un ordinateur, même modeste, et un abonnement Claude (environ 12 000 F par mois, payable avec MTN Mobile Money : on te montre comment).</p></details>
+    <details><summary>Quand est-ce que j'ai accès ?</summary><p>Juste après le paiement : accès à la formation et lien de la communauté WhatsApp.</p></details>
+    <details><summary>Je suis sûr de gagner de l'argent ?</summary><p>Non, et méfie-toi de quiconque te le garantit. On te donne la compétence, la méthode et les modèles. Les résultats viennent de ce que tu en fais.</p></details>
+  </div>
+</section>
+
+<section class="final w">
+  <h2 class="disp rv">Ce <span class="serif">soir.</span></h2>
+  <p>Rejoins la formation au prix de lancement, jusqu'au dimanche 18 octobre.</p>
+  <a class="cta js-buy" href="#">J'accède à la formation <small class="js-price">9 900 F</small><span class="arr">→</span></a>
+</section>
+
+<footer><span>© 2026 Motion IA</span><span>Claude est une marque d'Anthropic. Formation indépendante, non affiliée.</span></footer>
+
+<div class="sticky" id="sticky"><div><b class="js-price">9 900 F</b><small>Prix de lancement</small></div><a class="js-buy" href="#">Commencer →</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const STATIC = location.search.includes("static"); if (STATIC) document.documentElement.classList.add("static");
+// Statement: split words
+const st = document.getElementById("stmt");
+st.innerHTML = st.innerHTML.replace(/(<span class="serif">[^<]*<\/span>)|([^\s<]+)/g, (m) => `<span class="word">${m}</span>`);
+
+const loader = document.getElementById("loader");
+function done(){ loader.remove(); }
+if (STATIC || !window.gsap) {
+  done(); document.querySelectorAll(".statement .word").forEach(w=>w.style.opacity=1);
+} else {
+  gsap.registerPlugin(ScrollTrigger);
+  const c = {v:0};
+  gsap.to(c,{v:100,duration:1.1,ease:"power2.inOut",onUpdate:()=>document.getElementById("count").textContent=Math.round(c.v)});
+  gsap.to(loader,{yPercent:-100,duration:.9,ease:"expo.inOut",delay:1.2,onComplete:done});
+  gsap.from(".hero h1 .ln > span",{yPercent:110,duration:1.2,ease:"expo.out",stagger:.1,delay:1.6});
+  gsap.from(".hero-bottom > *, .meta-top",{y:30,opacity:0,duration:1,ease:"power3.out",stagger:.1,delay:2});
+  gsap.from(".seal",{scale:0,duration:1,ease:"back.out(2)",delay:2.2});
+  gsap.utils.toArray(".rv").forEach(el=>gsap.from(el,{y:60,opacity:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 88%"}}));
+  gsap.to(".statement .word",{opacity:1,stagger:.1,ease:"none",scrollTrigger:{trigger:".statement",start:"top 70%",end:"bottom 60%",scrub:true}});
+  gsap.from(".reel .demo",{y:80,opacity:0,stagger:.08,duration:1,ease:"power3.out",scrollTrigger:{trigger:".reel",start:"top 85%"}});
+  // Cursor
+  const cur=document.getElementById("cursor");
+  addEventListener("mousemove",e=>gsap.to(cur,{x:e.clientX,y:e.clientY,duration:.15}));
+  document.querySelectorAll("a,.demo,.mod").forEach(el=>{el.addEventListener("mouseenter",()=>cur.classList.add("big"));el.addEventListener("mouseleave",()=>cur.classList.remove("big"));});
+}
+// Sticky CTA after hero
+const sticky=document.getElementById("sticky");
+addEventListener("scroll",()=>sticky.classList.toggle("on",scrollY>innerHeight*.8));
+</script>
+</body>
+</html>
