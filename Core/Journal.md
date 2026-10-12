@@ -19,3 +19,9 @@
 - Question critique posée : la « personne aux contrats de 500 000 F » est-elle Ibrahim Oué ? Si oui, ses preuves ne sont pas utilisables.
 - Retour : aucune des 3 directions ne plaît. La personne aux preuves n'est pas Ibrahim Oué. Selon l'entrepreneur, les « 15 000 apprenants » d'Ibrahim sont faux.
 - BOS : on change de méthode → références de goût de l'entrepreneur avant toute nouvelle maquette.
+
+## 2026-10-12 — Page de vente finale (V2)
+- L'entrepreneur adore le style D2 (tech chaleureux) ; références de goût : ofmstarter.com (captures fournies).
+- BOS : page finale `Output/site/index.html` sur la structure d'OFM Starter, adaptée sans faux témoignages : hero + lecteur vidéo + « ce qui est inclus » (valeur estimée 80 000 F → 9 900 F), chiffres produit, bandeau, démo « phrase → vidéo », « pourquoi 9 900 F », exemples, programme, grille de prix, 3 étapes, manifeste, garantie, FAQ, carte finale, avertissement revenus.
+- Emplacements prêts (cachés tant que vides) : vidéo de présentation, témoignages, preuves. Tout se règle dans le bloc CONFIG.
+- V1 archivée : `Output/site/v1-rejetee.html`.
