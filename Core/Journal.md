@@ -17,3 +17,5 @@
 - L'entrepreneur rejette la page V1 (pas assez pro/belle). Concurrent fourni : Ibrahim Oué (analysé → Business.md › Concurrence).
 - BOS : 3 directions visuelles maquettées (A Studio, B Cinéma, C Afro-moderne) → `Output/site/directions/`. En attente du choix.
 - Question critique posée : la « personne aux contrats de 500 000 F » est-elle Ibrahim Oué ? Si oui, ses preuves ne sont pas utilisables.
+- Retour : aucune des 3 directions ne plaît. La personne aux preuves n'est pas Ibrahim Oué. Selon l'entrepreneur, les « 15 000 apprenants » d'Ibrahim sont faux.
+- BOS : on change de méthode → références de goût de l'entrepreneur avant toute nouvelle maquette.

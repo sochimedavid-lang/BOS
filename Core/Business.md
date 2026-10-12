@@ -27,7 +27,7 @@ Béninois 20-35 ans, étudiants / jeunes diplômés / salariés mal payés / fre
 - Contrainte : politique Meta interdit les promesses de revenus rapides → pubs axées compétence, pas argent.
 
 ## Preuves
-- Une personne (tiers) a signé des contrats motion importants (« plus de 500 000 euros » — montant/devise à confirmer). Autorisation d'utilisation à confirmer.
+- Une personne (tiers, PAS Ibrahim Oué — confirmé le 12/10) a signé des contrats motion d’environ 500 000 FCFA. Identité, preuves et autorisation à recevoir.
 
 ## Finances
 - Revenue : 0. Budget pub : disponible (montant à préciser).
@@ -43,6 +43,6 @@ Solo (+ éventuellement la personne qui détient les preuves).
 ## Concurrence
 ### Ibrahim Oué — « Challenge Vibe Motion Design » (ibrahimoue.com/vibe-motion), analysé le 12/10/2026
 - Même produit, même marché (Cotonou cité). 20 000 FCFA, 3 lives (26/10 → 01/11), 20 places, inscriptions closes le 15/10.
-- Forces : récit perso (vidéo restaurant vendue 65 000 F, contrat > 500 000 F), autorité revendiquée (formateur officiel Chariow, 15 000 apprenants), 3 bonus dont sous-traitance agence (70 000 F sur 100 000 F), section prérequis claire, « pour toi / pas pour toi ».
+- Forces : récit perso (vidéo restaurant vendue 65 000 F, contrat > 500 000 F), autorité revendiquée (formateur officiel Chariow, « 15 000 apprenants » — chiffre contesté par l’entrepreneur), 3 bonus dont sous-traitance agence (70 000 F sur 100 000 F), section prérequis claire, « pour toi / pas pour toi ».
 - Faiblesses : design générique (violet + vert fluo, emojis, tout centré), 2 exemples vidéo seulement, pas de garantie, attente de 2 semaines avant de commencer, horaires imposés (20h GMT).
 - Notre angle : accès immédiat, à ton rythme, 9 900 F, garantie 7 jours, 10 exemples, design pro.
