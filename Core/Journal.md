@@ -25,3 +25,8 @@
 - BOS : page finale `Output/site/index.html` sur la structure d'OFM Starter, adaptée sans faux témoignages : hero + lecteur vidéo + « ce qui est inclus » (valeur estimée 80 000 F → 9 900 F), chiffres produit, bandeau, démo « phrase → vidéo », « pourquoi 9 900 F », exemples, programme, grille de prix, 3 étapes, manifeste, garantie, FAQ, carte finale, avertissement revenus.
 - Emplacements prêts (cachés tant que vides) : vidéo de présentation, témoignages, preuves. Tout se règle dans le bloc CONFIG.
 - V1 archivée : `Output/site/v1-rejetee.html`.
+
+## 2026-10-12 — Nom du produit
+- BOS a proposé Motion Starter (reco), Motion 7, Studio IA, Prompt Motion. L'entrepreneur choisit « Vibe Motion ».
+- BOS a déconseillé (nom du challenge d'Ibrahim Oué). Vérif. bibliothèque pub Meta : aucune pub « Vibe Motion » active, mais Ibrahim a déjà fait des pubs (sept. 2025, juin 2026) et des affiliés diffusent des pubs à son nom (dont une créée le 11/10/2026). Décision de l'entrepreneur respectée.
+- Page renommée « Vibe Motion ». Description Chariow rédigée : `Output/2026-10-13_Description_Chariow_Vibe_Motion.md`.

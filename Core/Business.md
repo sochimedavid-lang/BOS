@@ -3,7 +3,8 @@
 **Stade :** Pré-lancement (0 vente). Lancement visé : 13/10/2026.
 
 ## Offre
-### Produit A — Formation Motion design avec l'IA (middle ticket) — PRIORITÉ 1
+### Produit A — « Vibe Motion » : formation motion design avec l'IA — PRIORITÉ 1
+- Nom choisi par l'entrepreneur le 12/10 malgré l'avis contraire de BOS (nom identique au challenge d'Ibrahim Oué → risque de confusion, de trafic offert au concurrent et de signalement).
 - Apprendre à créer des vidéos motion design avec Claude (Remotion + skills officielles), puis vendre ce service aux entreprises locales (contrats 50 000 – 500 000 FCFA d'après l'entrepreneur).
 - Contenu voulu : payer Claude, installer skills, produire du motion, prospecter, pitcher.
 - Spec complète : `Output/2026-10-12_Offre_Formation_Motion_IA.md`

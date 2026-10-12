@@ -39,3 +39,4 @@
 |------|-----------|--------|
 | 2026-10-12 | Diagnostic initial créé | Onboarding |
 | 2026-10-12 | Prix passé à 9 900 FCFA (low ticket) | Choix de l'entrepreneur : volume. Nouveau risque : rentabilité pub à ce prix → surveiller le coût par vente |
+| 2026-10-12 | Nouveau risque : nom « Vibe Motion » identique au produit du concurrent | Choix de l'entrepreneur ; surveiller confusion/signalement |
