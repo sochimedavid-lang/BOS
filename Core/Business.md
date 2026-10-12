@@ -7,7 +7,9 @@
 - Apprendre à créer des vidéos motion design avec Claude (Remotion + skills officielles), puis vendre ce service aux entreprises locales (contrats 50 000 – 500 000 FCFA d'après l'entrepreneur).
 - Contenu voulu : payer Claude, installer skills, produire du motion, prospecter, pitcher.
 - Spec complète : `Output/2026-10-12_Offre_Formation_Motion_IA.md`
-- Prix recommandé : 35 000 FCFA prévente (30 places fondateurs) → 50 000 FCFA ensuite. À valider par le marché.
+- Prix décidé (12/10) : **9 900 FCFA** prix de lancement jusqu'au 18/10, puis 15 000 FCFA (plafond fixé par l'entrepreneur). Devient de fait un low ticket : la marge viendra d'une offre complémentaire.
+- Funnel décidé : pub → page de vente (site) → paiement Chariow → accès + communauté WhatsApp. Pas de closing WhatsApp.
+- Page de vente V1 : `Output/site/index.html`
 
 ### Produit B — Formation pubs vidéo IA automatisées (Claude + Higgsfield) (low ticket) — EN ATTENTE
 - Reporté jusqu'à validation du produit A. Candidat naturel en upsell/downsell.
@@ -20,7 +22,7 @@ Béninois 20-35 ans, étudiants / jeunes diplômés / salariés mal payés / fre
 
 ## Marketing
 - Pas d'audience. Acquisition 100 % pub payante.
-- Canal 1 : Meta Ads (Facebook + Instagram) → conversation WhatsApp → paiement. Canal 2 (après validation) : TikTok Ads.
+- Canal 1 : Meta Ads (Facebook + Instagram) → page de vente → paiement Chariow. Canal 2 (après validation) : TikTok Ads.
 - Cible géo : Bénin d'abord, Côte d'Ivoire ensuite.
 - Contrainte : politique Meta interdit les promesses de revenus rapides → pubs axées compétence, pas argent.
 

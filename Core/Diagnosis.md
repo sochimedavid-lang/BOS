@@ -1,6 +1,6 @@
 # Diagnostic
 
-**Dernière MAJ :** 2026-10-12
+**Dernière MAJ :** 2026-10-12 (soir)
 **Bottleneck :** Aucune offre encore mise devant le marché — il faut lancer la formation motion en prévente au Bénin et obtenir les 10 premières ventes pour valider offre + canal.
 
 ---
@@ -38,3 +38,4 @@
 | Date | Changement | Raison |
 |------|-----------|--------|
 | 2026-10-12 | Diagnostic initial créé | Onboarding |
+| 2026-10-12 | Prix passé à 9 900 FCFA (low ticket) | Choix de l'entrepreneur : volume. Nouveau risque : rentabilité pub à ce prix → surveiller le coût par vente |
