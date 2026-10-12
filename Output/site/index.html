@@ -107,9 +107,9 @@ h2 em,h1 em{font-family:"Instrument Serif";font-weight:400;font-style:italic;let
 .cta-row{display:flex;justify-content:center;margin-top:40px}
 
 /* Background */
-.bg{position:absolute;inset:0 0 auto 0;height:1200px;z-index:-1;overflow:hidden;pointer-events:none}
-.bg::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 560px at 50% -10%,rgba(150,58,18,.8),rgba(90,30,10,.35) 45%,transparent 75%);animation:breathe 7s ease-in-out infinite}
-.bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(900px 700px at 50% 0,#000 30%,transparent 80%);mask-image:radial-gradient(900px 700px at 50% 0,#000 30%,transparent 80%)}
+.bg{position:absolute;top:0;left:0;right:0;height:1400px;z-index:-1;overflow:hidden;pointer-events:none}
+.bg::before{content:"";position:absolute;inset:0;background:radial-gradient(1100px 700px at 50% -5%,rgba(150,58,18,.8),rgba(90,30,10,.38) 45%,transparent 78%);animation:breathe 7s ease-in-out infinite}
+.bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,236,214,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(255,236,214,.075) 1px,transparent 1px);background-size:56px 56px;background-position:center top;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%)}
 @keyframes breathe{50%{opacity:.7}}
 
 /* Hero */
@@ -528,6 +528,8 @@ const CONFIG = {
 };
 /* ============================================================== */
 const STATIC = location.search.includes("static");
+function sizeBg(){const h=document.querySelector("header.hero");document.querySelector(".bg").style.height=(h.offsetTop+h.offsetHeight+60)+"px";}
+addEventListener("load",sizeBg);addEventListener("resize",sizeBg);
 if (STATIC) document.documentElement.classList.add("static");
 
 // Texte / liens
