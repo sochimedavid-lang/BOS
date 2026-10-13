@@ -10,7 +10,7 @@
 | # | Action | Qui | Pourquoi | Deadline | Statut |
 |---|--------|-----|----------|----------|--------|
 | 1 | **Écrire le script de la vidéo de présentation (2 min) → la tourner** | BOS écrit / Toi tournes (15 min) | Plus gros levier de conversion de la page | Mar 13 | À faire |
-| 2 | **Contenu des modules 0 et 1 (scripts écran + prompts)** | BOS écrit / Toi enregistres | Accès immédiat promis sur la page | Mar 13 | À faire |
+| 2 | **Guide PDF complet (modules 0-5 + bonus)** | BOS ✓ / Toi : donner lien WhatsApp + contact | Livré par Chariow à l'achat | Mar 13 | Presque fini |
 | 3 | **Créer le produit sur Chariow + lien de paiement + redirection communauté WhatsApp** | Toi (30 min) | Encaisser | Mar 13 | À faire |
 | 4 | **Envoyer : méthode exacte de paiement Claude via MTN MoMo, preuves + accord, numéro WhatsApp** | Toi (15 min) | Module 0 + section preuves + contact | Mar 13 | À faire |
 | 5 | **3 scripts de pub conformes Meta (angle « créé sans savoir monter »)** | BOS | Trafic | Mar 13 | À faire |

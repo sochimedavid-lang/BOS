@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Vibe Motion — Le guide complet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+:root{--bg:#100E0C;--s1:#1A1714;--s2:#221E1A;--line:rgba(255,236,214,.12);--text:#F3EEE7;--mut:#B3AA9F;--acc:#F4511E;--acc2:#FF7A45;--lime:#DDF247;--green:#3DDC84}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;font-size:10pt;line-height:1.52}
+.page{width:210mm;padding:18mm 18mm 16mm;position:relative;background:var(--bg);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.page.brk{break-before:page;page-break-before:always}
+.cover{height:297mm;padding:20mm 18mm 18mm}
+.page.cont{padding-top:6mm}
+.flow{width:210mm;padding:0 18mm}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em;line-height:1.15}
+h1{font-size:30pt;font-weight:800;margin-bottom:10pt}
+h1 em,h2 em{font-family:"Instrument Serif";font-style:italic;font-weight:400;color:var(--acc2);letter-spacing:0}
+h2{font-size:15pt;font-weight:800;margin:16pt 0 7pt;break-after:avoid}
+h3{font-size:12pt;font-weight:700;margin:14pt 0 5pt;break-after:avoid}
+p{margin:0 0 7pt;color:var(--text)}
+.mut{color:var(--mut)}
+ul,ol{margin:0 0 9pt 16pt}
+li{margin-bottom:3.5pt}
+strong{color:#fff}
+a{color:var(--acc2)}
+.tag{display:inline-block;border:1px solid rgba(244,81,30,.6);background:rgba(244,81,30,.1);color:var(--acc2);border-radius:99px;padding:3pt 10pt;font-size:8.5pt;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10pt}
+.lead{font-size:12pt;color:var(--mut);margin-bottom:14pt}
+.box{background:var(--s1);border:1px solid var(--line);border-radius:10pt;padding:9pt 12pt;margin:8pt 0;break-inside:avoid}
+.box.tip{border-left:3pt solid var(--lime)}
+.box.warn{border-left:3pt solid var(--acc)}
+.box.ok{border-left:3pt solid var(--green)}
+.box h4{font-family:"Bricolage Grotesque";font-size:10.5pt;margin-bottom:4pt}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.prompt{background:#0A0908;border:1px solid var(--line);border-radius:9pt;padding:10pt 12pt;margin:8pt 0 10pt;font-family:"JetBrains Mono",monospace;font-size:8.6pt;line-height:1.55;color:#EFE6DA;white-space:pre-wrap;break-inside:avoid;position:relative}
+.prompt::before{content:"À COPIER";position:absolute;top:-7pt;right:10pt;background:var(--acc);color:#fff;font-family:Inter;font-size:6.5pt;font-weight:700;letter-spacing:.08em;padding:2pt 6pt;border-radius:99px}
+.cmd{background:#0A0908;border:1px solid var(--line);border-radius:7pt;padding:7pt 10pt;margin:6pt 0 9pt;font-family:"JetBrains Mono",monospace;font-size:8.6pt;color:var(--lime);break-inside:avoid}
+code{font-family:"JetBrains Mono",monospace;font-size:8.8pt;background:#0A0908;border:1px solid var(--line);border-radius:4pt;padding:0 4pt;color:var(--lime)}
+table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;break-inside:avoid}
+th{text-align:left;font-weight:700;color:var(--acc2);font-size:8.5pt;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--line);padding:6pt 6pt}
+td{border-bottom:1px solid var(--line);padding:6.5pt 6pt;vertical-align:top}
+.steps{counter-reset:s;list-style:none;margin-left:0}
+.steps>li{counter-increment:s;position:relative;padding-left:26pt;margin-bottom:8pt}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:17pt;height:17pt;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;font-size:8.5pt;display:grid;place-items:center}
+.check{list-style:none;margin-left:0}
+.check li{padding-left:18pt;position:relative}
+.check li::before{content:"☐";position:absolute;left:0;color:var(--lime)}
+.mhead{display:flex;align-items:center;gap:12pt;margin-bottom:6pt}
+.mnum{font-family:"Bricolage Grotesque";font-weight:800;font-size:42pt;color:var(--acc2);line-height:1}
+.res{display:inline-block;background:var(--lime);color:#14120f;font-weight:700;font-size:9pt;border-radius:99px;padding:3pt 10pt;margin-bottom:12pt}
+.foot{display:none;position:absolute;left:18mm;right:18mm;bottom:9mm;display:flex;justify-content:space-between;font-size:7.5pt;color:#776f66;letter-spacing:.04em}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9pt}
+.fmt{background:var(--s1);border:1px solid var(--line);border-radius:10pt;padding:10pt 12pt;break-inside:avoid}
+.fmt b{font-family:"Bricolage Grotesque";font-size:11pt}
+.fmt small{display:block;color:var(--mut);font-size:8.5pt;margin-top:2pt}
+.p50{counter-reset:p;list-style:none;margin:0}
+.p50 li{counter-increment:p;background:var(--s1);border:1px solid var(--line);border-radius:7pt;padding:6pt 9pt 6pt 30pt;margin-bottom:5pt;position:relative;font-size:9pt;break-inside:avoid}
+.p50 li::before{content:counter(p);position:absolute;left:8pt;top:6pt;font-weight:800;color:var(--acc2);font-family:"Bricolage Grotesque"}
+.p50 h3{margin-top:12pt}
+
+/* Cover */
+.cover{display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(160mm 120mm at 50% -10%,rgba(160,62,18,.85),rgba(90,30,10,.35) 50%,transparent 80%),var(--bg);overflow:hidden}
+.cover::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,236,214,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,236,214,.07) 1px,transparent 1px);background-size:14mm 14mm;-webkit-mask-image:linear-gradient(to bottom,#000 40%,transparent 95%);z-index:0}
+.cover>*{position:relative;z-index:1}
+.pill{display:inline-flex;border:1px solid rgba(255,236,214,.2);background:rgba(255,255,255,.05);border-radius:99px;font-size:9pt;font-weight:600;letter-spacing:.08em;overflow:hidden}
+.pill span{padding:5pt 11pt}.pill span:first-child{color:var(--mut)}.pill span:last-child{background:rgba(255,255,255,.08)}
+.cover h1{font-size:50pt;line-height:1;margin:16pt 0 14pt}
+.cover .sub{font-size:14pt;color:var(--mut);max-width:150mm}
+.cover .chk{display:inline-block;background:var(--lime);color:#14120f;font-weight:700;border-radius:99px;padding:5pt 13pt;margin-top:16pt;font-size:10pt}
+.toc{background:rgba(26,23,20,.85);border:1px solid var(--line);border-radius:12pt;padding:14pt 16pt}
+.toc div{display:flex;justify-content:space-between;padding:4.5pt 0;border-bottom:1px solid var(--line);font-size:10pt}
+.toc div:last-child{border:0}
+.toc span:first-child b{color:var(--acc2);margin-right:8pt;font-family:"Bricolage Grotesque"}
+h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
+</style>
+</head>
+<body>
+
+<!-- ===================== COUVERTURE ===================== -->
+<section class="page cover">
+  <div>
+    <div class="pill"><span>● Formation</span><span>Vibe Motion</span></div>
+    <h1>Crée des vidéos motion qui font vendre, <em>avec l'IA.</em></h1>
+    <p class="sub">Le guide complet : de l'installation à ton premier client. Écrit pour les débutants, au Bénin et en Afrique francophone.</p>
+    <span class="chk">✓ Aucune expérience en montage requise</span>
+  </div>
+  <div class="toc">
+    <div><span><b>00</b>Démarrage : payer Claude, installer, 1re vidéo</span></div>
+    <div><span><b>01</b>Les 6 formats qui se vendent</span></div>
+    <div><span><b>02</b>Du brief client à la livraison</span></div>
+    <div><span><b>03</b>Ton portfolio en 3 jours</span></div>
+    <div><span><b>04</b>Trouver des clients près de chez toi</span></div>
+    <div><span><b>05</b>Présenter ton prix et conclure</span></div>
+    <div><span><b>+</b>Bonus : 50 instructions prêtes à copier</span></div>
+    <div><span><b>+</b>Ton plan d'action 7 jours</span></div>
+  </div>
+</section>
+
+<!-- ===================== BIENVENUE ===================== -->
+<section class="page brk">
+  <span class="tag">Bienvenue</span>
+  <h1>Bienvenue dans <em>Vibe Motion.</em></h1>
+  <p class="lead">Tu viens de faire le premier pas. Dans 7 jours, tu auras exporté ta première vidéo motion. Dans quelques semaines, tu pourras proposer tes vidéos aux entreprises autour de toi.</p>
+
+  <h2>Ce que tu vas apprendre</h2>
+  <p>Le motion design, ce sont des vidéos où des textes, des formes, des logos et des images bougent : une promo qui apparaît, un logo qui se dessine, un menu de restaurant qui défile. Les entreprises en ont besoin pour Facebook, TikTok, Instagram et les statuts WhatsApp.</p>
+  <p>Avant, il fallait After Effects, un ordinateur puissant et des mois d'apprentissage. Aujourd'hui, <strong>tu décris la vidéo en français et l'IA (Claude) écrit l'animation à ta place.</strong> Ton travail : savoir quoi demander, corriger, livrer, et trouver des clients. C'est exactement ce que ce guide t'apprend.</p>
+
+  <h2>Comment utiliser ce guide</h2>
+  <ol class="steps">
+    <li><strong>Suis les modules dans l'ordre.</strong> Le module 0 installe tout. Ne saute pas d'étape.</li>
+    <li><strong>Copie les instructions telles quelles.</strong> Les blocs marqués « À COPIER » sont prêts : tu les colles dans Claude, tu changes juste le nom de l'entreprise, les couleurs ou les textes.</li>
+    <li><strong>Pratique un peu chaque jour.</strong> 1 heure par jour la première semaine suffit. Le plan d'action 7 jours, à la fin du guide, te dit quoi faire chaque jour.</li>
+    <li><strong>Pose tes questions dans la communauté.</strong> Tu bloques ? Envoie une capture d'écran dans le groupe WhatsApp.</li>
+  </ol>
+
+  <div class="box ok">
+    <h4>👥 Rejoins la communauté WhatsApp privée</h4>
+    <p>C'est là que tu poses tes questions, que tu montres tes vidéos et que tu reçois un suivi.<br><strong>Lien : <span id="wa">{{LIEN_COMMUNAUTE_WHATSAPP}}</span></strong></p>
+  </div>
+
+  <div class="box tip">
+    <h4>🛡️ Ta garantie 7 jours</h4>
+    <p>Suis les modules 0 à 2 et fais les exercices. Si au bout de 7 jours tu n'as pas exporté ta première vidéo motion, écris-nous dans la communauté ou au contact indiqué à la fin du guide : on te rembourse intégralement.</p>
+  </div>
+
+  <h2>Une vérité avant de commencer</h2>
+  <p>Ce guide te donne la compétence et la méthode. Il ne fait pas le travail à ta place. Ceux qui réussissent sont ceux qui <strong>pratiquent tous les jours</strong> et qui <strong>vont parler aux entreprises</strong>, même quand ça fait un peu peur. Si tu fais ces deux choses, tu as toutes tes chances.</p>
+</section>
+
+<!-- ===================== SOMMAIRE DÉTAILLÉ / LEXIQUE ===================== -->
+<section class="page cont" style="padding-top:8mm">
+  <span class="tag">Les mots à connaître</span>
+  <h1>Le petit <em>lexique.</em></h1>
+  <p class="lead">Tu vas croiser ces mots. Pas besoin de tout retenir maintenant : reviens ici quand tu bloques.</p>
+  <table>
+    <tr><th style="width:32%">Mot</th><th>Ce que ça veut dire</th></tr>
+    <tr><td><strong>Claude</strong></td><td>L'intelligence artificielle d'Anthropic. C'est elle qui écrit l'animation de tes vidéos.</td></tr>
+    <tr><td><strong>Claude Pro</strong></td><td>L'abonnement payant de Claude (environ 20 $ par mois). Il est obligatoire : la version gratuite ne donne pas accès à l'outil qui crée les vidéos.</td></tr>
+    <tr><td><strong>Claude Code</strong></td><td>La partie de Claude qui peut créer des fichiers et lancer des programmes sur ton ordinateur. C'est elle qu'on utilise pour fabriquer les vidéos.</td></tr>
+    <tr><td><strong>Remotion</strong></td><td>Un outil gratuit qui transforme du code en vidéo. Claude écrit le code, Remotion fabrique la vidéo.</td></tr>
+    <tr><td><strong>Skills Remotion</strong></td><td>Un « manuel » officiel que tu installes une fois. Il apprend à Claude à faire de belles animations avec Remotion.</td></tr>
+    <tr><td><strong>Remotion Studio</strong></td><td>La page qui s'ouvre dans ton navigateur pour voir ta vidéo avant de l'exporter.</td></tr>
+    <tr><td><strong>Node.js</strong></td><td>Un programme gratuit dont Remotion a besoin pour fonctionner. Tu l'installes une seule fois.</td></tr>
+    <tr><td><strong>Exporter / rendre (render)</strong></td><td>Transformer ton animation en vrai fichier vidéo MP4 que tu peux envoyer.</td></tr>
+    <tr><td><strong>Instruction (prompt)</strong></td><td>Le message que tu écris à Claude pour lui demander une vidéo.</td></tr>
+    <tr><td><strong>Format 9:16</strong></td><td>Vidéo verticale (1080 × 1920) : statuts WhatsApp, TikTok, Reels, Stories.</td></tr>
+    <tr><td><strong>Format 1:1</strong></td><td>Vidéo carrée (1080 × 1080) : publications Facebook et Instagram.</td></tr>
+    <tr><td><strong>Format 16:9</strong></td><td>Vidéo horizontale (1920 × 1080) : YouTube, écrans, présentations.</td></tr>
+    <tr><td><strong>Brief</strong></td><td>Ce que le client veut : message, textes, couleurs, logo, durée, format.</td></tr>
+    <tr><td><strong>Acompte</strong></td><td>La partie du prix payée avant de commencer (on conseille 50 %).</td></tr>
+    <tr><td><strong>Portfolio</strong></td><td>Tes meilleures vidéos, prêtes à montrer aux prospects.</td></tr>
+    <tr><td><strong>Prospect</strong></td><td>Une entreprise qui pourrait devenir ton client.</td></tr>
+  </table>
+</section>
+
+<!-- ===================== MODULE 0 ===================== -->
+<section class="page brk">
+  <div class="mhead"><span class="mnum">00</span><div><span class="tag">Module 0</span><h1 style="margin:0">Démarrage</h1></div></div>
+  <span class="res">→ Résultat : ta première vidéo exportée en MP4</span>
+  <p class="lead">On installe tout, une seule fois. Compte entre 1 et 2 heures. Prends ton temps et suis les étapes dans l'ordre.</p>
+
+  <h2>0.1 · Ce dont tu as besoin</h2>
+  <table>
+    <tr><th style="width:32%">Élément</th><th>Détail</th></tr>
+    <tr><td><strong>Un ordinateur</strong></td><td>Windows 10 (version 1809 ou plus récente) ou Windows 11, ou un Mac avec macOS 13 ou plus récent. Minimum 4 Go de mémoire vive ; 8 Go c'est plus confortable. Pas besoin d'un ordinateur puissant.</td></tr>
+    <tr><td><strong>Une connexion internet</strong></td><td>Wi-Fi ou partage de connexion du téléphone. L'installation télécharge quelques centaines de Mo.</td></tr>
+    <tr><td><strong>Claude Pro</strong></td><td>Environ 20 $ par mois (autour de 12 000 F CFA, le montant exact dépend du taux et des frais). On voit comment payer juste après.</td></tr>
+    <tr><td><strong>Un compte e-mail</strong></td><td>Gmail ou autre, pour créer ton compte Claude.</td></tr>
+  </table>
+  <div class="box warn"><h4>📱 Et avec seulement un téléphone ?</h4><p>Pour produire des vidéos de qualité professionnelle avec cette méthode, il faut un ordinateur. Un portable d'entrée de gamme, même d'occasion, suffit.</p></div>
+
+  <h2>0.2 · Payer Claude Pro depuis le Bénin</h2>
+  <p>Claude est disponible au Bénin et en Côte d'Ivoire. Le paiement se fait par carte Visa ou Mastercard. Si tu n'as pas de carte bancaire, la solution la plus simple est une <strong>carte virtuelle prépayée rechargée depuis ton Mobile Money</strong>.</p>
+  <ol class="steps">
+    <li><strong>Obtiens une carte virtuelle.</strong> MTN Bénin propose une carte virtuelle prépayée MoMo (« MoMo Card ») utilisable pour les achats en ligne et les abonnements. Cherche-la dans ton application MoMo ; si tu ne la trouves pas, demande au service client MTN comment l'activer. Autre option : une carte prépayée Visa de ta banque.</li>
+    <li><strong>Recharge la carte</strong> d'un peu plus que le prix de l'abonnement (par exemple 13 000 à 14 000 F) pour couvrir le taux de change et les frais.</li>
+    <li><strong>Crée ton compte</strong> sur <code>claude.ai</code> avec ton e-mail.</li>
+    <li><strong>Passe à Pro :</strong> clique sur ton nom (en bas à gauche) → <em>Paramètres</em> → <em>Facturation</em> (ou le bouton « Passer à Pro »), choisis <strong>Pro</strong>, puis entre le numéro, la date et le code de ta carte virtuelle.</li>
+  </ol>
+  <div class="box tip"><h4>💡 Si le paiement est refusé</h4><ul><li>Vérifie que la carte est bien rechargée et active.</li><li>Vérifie que les paiements internationaux / en ligne sont autorisés sur la carte.</li><li>Réessaie après quelques minutes, ou essaie une autre carte prépayée.</li><li>Toujours bloqué ? Envoie une capture dans la communauté.</li></ul></div>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">0.3 · Installer Node.js</h2>
+  <p>Remotion (l'outil qui fabrique les vidéos) a besoin de Node.js.</p>
+  <ol class="steps">
+    <li>Va sur <code>nodejs.org</code> et télécharge la version <strong>LTS</strong> (le bouton recommandé).</li>
+    <li>Ouvre le fichier téléchargé et clique sur <em>Suivant</em> jusqu'à la fin, sans rien changer.</li>
+    <li>Redémarre ton ordinateur (ça évite beaucoup de problèmes).</li>
+  </ol>
+
+  <h2>0.4 · Installer Claude sur ton ordinateur</h2>
+  <p>Il y a deux façons. <strong>Choisis l'option A si tu n'as jamais utilisé de terminal.</strong></p>
+  <h3>Option A (recommandée) : l'application Claude</h3>
+  <ol class="steps">
+    <li>Télécharge l'application Claude pour ordinateur sur <code>claude.com/download</code> (Windows ou Mac) et installe-la.</li>
+    <li>Ouvre-la et connecte-toi avec ton compte Pro.</li>
+    <li>Ouvre l'onglet <strong>Code</strong> de l'application. C'est Claude Code, sans terminal : tu choisis un dossier de ton ordinateur et tu discutes avec Claude, qui crée les fichiers pour toi.</li>
+  </ol>
+  <h3>Option B : par le terminal</h3>
+  <p>Ouvre le terminal (Windows : cherche « PowerShell » dans le menu Démarrer ; Mac : cherche « Terminal »), colle la commande qui correspond à ton système, puis appuie sur Entrée :</p>
+  <p class="mut" style="margin-bottom:2pt">Windows (PowerShell) :</p>
+  <div class="cmd">irm https://claude.ai/install.ps1 | iex</div>
+  <p class="mut" style="margin-bottom:2pt">Mac :</p>
+  <div class="cmd">curl -fsSL https://claude.ai/install.sh | bash</div>
+  <p>L'installation n'affiche pas de progression : attends qu'elle se termine. Ensuite, <strong>ferme et rouvre le terminal</strong> et tape <code>claude --version</code>. Si un numéro de version s'affiche, c'est bon. Pour démarrer, tape <code>claude</code> et connecte-toi dans le navigateur qui s'ouvre.</p>
+  <div class="box tip"><h4>💡 Sur Windows</h4><p>Si Claude te propose d'installer <strong>Git pour Windows</strong> (<code>git-scm.com</code>), accepte : ça l'aide à lancer les commandes. Ce n'est pas obligatoire, mais c'est plus fiable.</p></div>
+
+  <h2>0.5 · Créer ton atelier vidéo</h2>
+  <ol class="steps">
+    <li>Crée un dossier sur ton bureau et appelle-le <code>vibe-motion</code>.</li>
+    <li>Ouvre ce dossier avec Claude (Option A : sélectionne-le dans l'onglet Code ; Option B : dans le terminal, va dans le dossier puis tape <code>claude</code>).</li>
+    <li>Colle cette instruction et envoie-la :</li>
+  </ol>
+  <div class="prompt">Je suis débutant. Dans ce dossier, crée un nouveau projet vidéo Remotion (modèle vide, TypeScript) et installe tout ce qu'il faut. Ensuite installe les skills Remotion officielles avec la commande : npx skills add remotion-dev/skills
+Puis lance le Remotion Studio et dis-moi exactement quelle adresse ouvrir dans mon navigateur. Explique-moi chaque étape en français, simplement.</div>
+  <p>Claude va te demander la permission avant de lancer certaines commandes : <strong>accepte</strong>. Ça peut prendre quelques minutes. À la fin, il te donne une adresse du type <code>http://localhost:3000</code> : ouvre-la dans ton navigateur. Tu vois le Remotion Studio ? Ton atelier est prêt. 🎉</p>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">0.6 · Ta première vidéo</h2>
+  <p>Dans la même conversation avec Claude, colle cette instruction :</p>
+  <div class="prompt">Crée une nouvelle composition Remotion appelée LogoMamanRose : format vertical 1080x1920, 30 images par seconde, durée 6 secondes.
+- Fond : dégradé radial orange, du #FFB54A au centre vers #FF4D1C puis #5C1500 sur les bords.
+- De 0 à 1,5 s : un cercle blanc fin se dessine au centre de l'écran.
+- De 1,2 à 2,5 s : la lettre « R » apparaît en fondu au centre du cercle, police élégante en italique.
+- De 2,5 à 4 s : le texte « CHEZ MAMAN ROSE » apparaît sous le cercle, lettres très espacées qui se resserrent doucement.
+- De 4 à 6 s : léger zoom avant sur l'ensemble.
+Utilise des animations fluides (spring ou easing). Affiche-la dans le Studio.</div>
+  <p>Regarde le résultat dans le Studio. Tu veux changer quelque chose ? Dis-le simplement :</p>
+  <div class="prompt">Rends le texte plus gros et plus gras, et fais apparaître le cercle un peu plus lentement.</div>
+  <p>Quand ça te plaît, exporte :</p>
+  <div class="prompt">Exporte la composition LogoMamanRose en MP4 dans un dossier « out », puis dis-moi où se trouve le fichier.</div>
+  <div class="box ok"><h4>✅ Bravo !</h4><p>Ouvre le fichier MP4 : c'est ta première vidéo motion, faite avec l'IA. Envoie-la dans la communauté WhatsApp, on veut la voir. Tu viens de valider le résultat du module 0.</p></div>
+
+  <h2>0.7 · Les problèmes fréquents</h2>
+  <table>
+    <tr><th style="width:38%">Problème</th><th>Solution</th></tr>
+    <tr><td>« claude n'est pas reconnu »</td><td>Ferme le terminal, rouvre-le, réessaie. Toujours pas ? Redémarre l'ordinateur. Sinon, utilise l'option A (l'application).</td></tr>
+    <tr><td>« npm » ou « node » introuvable</td><td>Node.js n'est pas installé ou l'ordinateur n'a pas redémarré. Refais l'étape 0.3.</td></tr>
+    <tr><td>Le Studio ne s'ouvre pas</td><td>Demande à Claude : « Relance le Remotion Studio et donne-moi l'adresse. »</td></tr>
+    <tr><td>Une erreur rouge s'affiche</td><td>Copie l'erreur et colle-la à Claude : « J'ai cette erreur, corrige-la. » Il sait réparer.</td></tr>
+    <tr><td>Claude dit que la limite d'utilisation est atteinte</td><td>L'abonnement Pro a des limites par période. Attends l'heure indiquée. Astuce : écris des instructions précises (comme dans ce guide) pour éviter les allers-retours.</td></tr>
+    <tr><td>L'export est lent</td><td>Normal sur un petit ordinateur. Ferme les autres programmes. Une vidéo de 10 s prend en général de quelques secondes à quelques minutes.</td></tr>
+  </table>
+  <div class="box tip"><h4>💡 Règle d'or</h4><p>Quand quelque chose ne marche pas, <strong>demande à Claude</strong>. Décris ce que tu vois ou colle le message d'erreur. Ton assistant sait aussi dépanner.</p></div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 0 · suite</span>
+  <h1>Bien parler <em>à Claude.</em></h1>
+  <p class="lead">La qualité de ta vidéo dépend de la qualité de ton instruction. Voici la recette qui marche à chaque fois.</p>
+  <h2>Les 8 ingrédients d'une bonne instruction</h2>
+  <table>
+    <tr><th style="width:28%">Ingrédient</th><th>Exemple</th></tr>
+    <tr><td><strong>1. Format</strong></td><td>« vertical 1080x1920 » (statut, TikTok) · « carré 1080x1080 » · « horizontal 1920x1080 »</td></tr>
+    <tr><td><strong>2. Durée</strong></td><td>« 8 secondes, 30 images par seconde »</td></tr>
+    <tr><td><strong>3. Couleurs</strong></td><td>« orange #FF4D1C, noir #111111, blanc ». Prends les couleurs du logo du client.</td></tr>
+    <tr><td><strong>4. Textes exacts</strong></td><td>Écris les textes entre guillemets, avec les accents : « -30 % ce week-end »</td></tr>
+    <tr><td><strong>5. Déroulé seconde par seconde</strong></td><td>« de 0 à 2 s le logo apparaît, de 2 à 4 s le prix arrive… »</td></tr>
+    <tr><td><strong>6. Style</strong></td><td>« élégant et calme » · « dynamique et énergique » · « moderne et minimaliste »</td></tr>
+    <tr><td><strong>7. Fichiers</strong></td><td>« utilise le logo public/logo.png et la photo public/produit.jpg »</td></tr>
+    <tr><td><strong>8. Son</strong></td><td>« ajoute public/musique.mp3 à 30 % du volume, fondu sur la dernière seconde »</td></tr>
+  </table>
+
+  <h2>Utiliser les fichiers du client</h2>
+  <p>Logo, photos de produits, musique : mets-les dans le dossier <code>public</code> de ton projet (Claude l'a créé). Donne des noms simples sans espaces : <code>logo.png</code>, <code>plat1.jpg</code>, <code>musique.mp3</code>. Puis cite-les dans ton instruction.</p>
+  <div class="box tip"><h4>💡 Logo de mauvaise qualité ?</h4><p>Les clients envoient souvent une photo floue de leur logo. Demande-leur le fichier d'origine (PNG, idéalement avec fond transparent). Sinon, Claude peut recréer un logo texte simple et propre avec le nom de l'entreprise : précise-le dans ton instruction.</p></div>
+
+  <h2>Le vocabulaire des corrections</h2>
+  <div class="grid2">
+    <div class="fmt"><b>Rythme</b><small>« plus rapide » · « plus lent » · « laisse le texte affiché 1 seconde de plus » · « enchaîne sans pause »</small></div>
+    <div class="fmt"><b>Taille et place</b><small>« plus gros » · « centre-le » · « monte le texte » · « laisse plus d'espace en haut »</small></div>
+    <div class="fmt"><b>Mouvement</b><small>« fais-le rebondir » · « glisser depuis la gauche » · « apparition en fondu » · « petit zoom »</small></div>
+    <div class="fmt"><b>Style</b><small>« plus élégant » · « plus pop » · « police plus grasse » · « ajoute une ombre au texte »</small></div>
+  </div>
+  <div class="box ok" style="margin-top:12pt"><h4>✅ Astuce pro</h4><p>Quand une vidéo te plaît, demande à Claude : « Transforme cette composition en modèle réutilisable où je peux changer le nom, les couleurs et le logo facilement. » Tu pourras ensuite produire une nouvelle vidéo pour un autre client en 5 minutes.</p></div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 0 · suite</span>
+  <h1>Les formats <em>d'export.</em></h1>
+  <p class="lead">Chaque réseau a son format. Exporte toujours dans le bon, sinon la vidéo sera coupée ou entourée de bandes noires.</p>
+  <table>
+    <tr><th>Où sera publiée la vidéo</th><th>Format</th><th>Taille</th><th>Durée conseillée</th></tr>
+    <tr><td>Statut WhatsApp</td><td>Vertical 9:16</td><td>1080 × 1920</td><td>10 à 30 s</td></tr>
+    <tr><td>TikTok, Reels, Stories</td><td>Vertical 9:16</td><td>1080 × 1920</td><td>8 à 30 s</td></tr>
+    <tr><td>Publication Facebook / Instagram</td><td>Carré 1:1 (ou 4:5)</td><td>1080 × 1080 (1080 × 1350)</td><td>6 à 20 s</td></tr>
+    <tr><td>YouTube, écran de boutique, présentation</td><td>Horizontal 16:9</td><td>1920 × 1080</td><td>Libre</td></tr>
+    <tr><td>Logo animé (intro, signature)</td><td>Selon l'usage</td><td>1080 × 1080 ou 1080 × 1920</td><td>4 à 8 s</td></tr>
+  </table>
+  <div class="box tip"><h4>💡 Une vidéo, trois formats</h4><p>Une fois la version verticale terminée, demande : « Crée aussi une version carrée 1080x1080 et une version horizontale 1920x1080 de cette composition, en réorganisant les éléments pour qu'ils restent bien placés. » Tu vends ensuite le pack 3 formats plus cher.</p></div>
+
+  <h2>Ton checklist du module 0</h2>
+  <ul class="check">
+    <li>J'ai un compte Claude Pro actif</li>
+    <li>Node.js est installé</li>
+    <li>Claude (application ou terminal) est installé et connecté</li>
+    <li>Mon projet Remotion est créé et les skills Remotion sont installées</li>
+    <li>J'ai vu le Remotion Studio dans mon navigateur</li>
+    <li>J'ai exporté ma première vidéo en MP4</li>
+    <li>Je l'ai partagée dans la communauté WhatsApp</li>
+  </ul>
+  <div class="box ok"><h4>🎯 Prochaine étape</h4><p>Tout est coché ? Passe au module 1 : tu vas apprendre les 6 formats que les entreprises achètent vraiment.</p></div>
+</section>
+
+<!-- ===================== MODULE 1 ===================== -->
+<section class="page brk">
+  <div class="mhead"><span class="mnum">01</span><div><span class="tag">Module 1</span><h1 style="margin:0">Les 6 formats qui se vendent</h1></div></div>
+  <span class="res">→ Résultat : tu sais produire chaque format</span>
+  <p class="lead">Tu n'as pas besoin de savoir tout faire. Ces 6 formats couvrent l'essentiel de ce que demandent les boutiques, restaurants et PME. Maîtrise-les et tu as une offre complète.</p>
+  <div class="grid2">
+    <div class="fmt"><b>1. Logo animé</b><small>Pour toutes les entreprises. Intro de leurs vidéos, signature, statut. 4 à 8 s.</small></div>
+    <div class="fmt"><b>2. Promo produit</b><small>Boutiques, e-commerce. Mettre un produit en avant avec prix et bouton d'action. 10 à 20 s.</small></div>
+    <div class="fmt"><b>3. Annonce promo</b><small>Soldes, réductions, offres du week-end. Gros chiffres, urgence. 6 à 12 s.</small></div>
+    <div class="fmt"><b>4. Menu animé</b><small>Restaurants, maquis, fast-foods, pâtisseries. Plats et prix qui défilent. 10 à 20 s.</small></div>
+    <div class="fmt"><b>5. Statut WhatsApp</b><small>Salons, boutiques, services. Message court et vertical pour leurs contacts. 10 à 15 s.</small></div>
+    <div class="fmt"><b>6. Inauguration / événement</b><small>Ouverture, nouvel arrivage, événement, inscriptions. Date, lieu, ambiance. 10 à 20 s.</small></div>
+  </div>
+  <div class="box tip" style="margin-top:12pt"><h4>💡 Comment utiliser les modèles des pages suivantes</h4><p>Chaque format a une instruction modèle. Remplace ce qui est entre crochets <code>[ ]</code> par les infos de ton client. Garde le reste : c'est la structure qui donne un résultat pro.</p></div>
+
+  <h2>Format 1 · Le logo animé</h2>
+  <p><strong>Pourquoi ça se vend :</strong> chaque entreprise a un logo, presque aucune ne l'a en vidéo. C'est ton produit d'appel : rapide à faire, facile à vendre, et il ouvre la porte aux autres vidéos.</p>
+  <div class="prompt">Crée une composition Remotion « Logo[NomClient] » : carré 1080x1080, 30 images/s, 6 secondes.
+Utilise le logo public/logo.png. Couleurs de la marque : [couleur 1] et [couleur 2].
+- 0 à 1,5 s : des formes géométriques simples aux couleurs de la marque entrent depuis les bords et convergent vers le centre.
+- 1,5 à 3 s : le logo apparaît au centre avec un effet de zoom doux (de 80 % à 100 %) et un léger rebond.
+- 3 à 4,5 s : le slogan « [slogan du client] » apparaît sous le logo, mot par mot.
+- 4,5 à 6 s : tout reste affiché, avec un léger reflet lumineux qui traverse le logo.
+Style : [élégant / moderne / dynamique]. Fond : [couleur unie ou dégradé].</div>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Format 2 · La promo produit</h2>
+  <p><strong>Pourquoi ça se vend :</strong> les boutiques et vendeurs en ligne publient des photos fixes. Une vidéo qui met le produit en mouvement attire plus l'œil dans le fil d'actualité.</p>
+  <div class="prompt">Crée une composition « Promo[Produit] » : vertical 1080x1920, 30 images/s, 15 secondes.
+Photo du produit : public/produit.png (fond détouré si possible). Couleurs : [couleur 1], [couleur 2].
+- 0 à 2 s : accroche en gros texte en haut : « [Accroche, ex. Tu cherches la montre parfaite ?] ».
+- 2 à 5 s : le produit entre par le bas avec un rebond et tourne légèrement.
+- 5 à 9 s : 3 points forts apparaissent un par un à côté du produit, avec une icône : « [atout 1] », « [atout 2] », « [atout 3] ».
+- 9 à 12 s : le prix « [prix] F CFA » arrive en grand dans une pastille [couleur], avec un petit effet de pulsation.
+- 12 à 15 s : bouton d'action « [Commande sur WhatsApp : numéro] » et nom de la boutique « [Nom] ».
+Style dynamique et moderne. Textes très lisibles sur téléphone.</div>
+
+  <h2>Format 3 · L'annonce promo</h2>
+  <p><strong>Pourquoi ça se vend :</strong> chaque boutique fait des soldes, des offres du week-end, des déstockages. C'est un besoin qui revient chaque mois, donc idéal pour un abonnement.</p>
+  <div class="prompt">Crée une composition « Promo[NomClient] » : vertical 1080x1920, 30 images/s, 10 secondes.
+Fond [couleur foncée]. Couleur d'accent : [jaune / rouge / orange vif].
+- 0 à 1,5 s : le texte « [PROMO / SOLDES / OFFRE SPÉCIALE] » claque à l'écran avec un effet de zoom rapide.
+- 1,5 à 4 s : une étoile/badge d'accent tourne lentement derrière le chiffre « [-30 %] » qui apparaît en très gros avec un rebond.
+- 4 à 6,5 s : « [sur tous les articles / sur la nouvelle collection] » glisse depuis le bas.
+- 6,5 à 8,5 s : « [Ce week-end seulement · du ... au ...] » apparaît, avec une petite animation qui attire l'œil.
+- 8,5 à 10 s : logo public/logo.png + adresse « [quartier, ville] » + numéro WhatsApp.
+Style énergique, gros textes, contraste fort.</div>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Format 4 · Le menu animé</h2>
+  <p><strong>Pourquoi ça se vend :</strong> les restaurants et maquis changent leur menu du jour et leurs prix. Une vidéo de menu se partage en statut tous les jours. Excellent pour un abonnement hebdomadaire.</p>
+  <div class="prompt">Crée une composition « Menu[NomRestaurant] » : vertical 1080x1920, 30 images/s, 15 secondes.
+Fond [vert foncé / bordeaux / noir], couleur d'accent [jaune / or].
+- 0 à 2 s : en haut, le titre « Menu du jour » en police élégante italique, puis le nom « [NOM DU RESTAURANT] » en petites majuscules espacées.
+- 2 à 10 s : les plats apparaissent un par un en glissant depuis la gauche, chacun sur une ligne avec des pointillés et le prix à droite en couleur d'accent :
+  « [Plat 1] — [prix] F », « [Plat 2] — [prix] F », « [Plat 3] — [prix] F », « [Plat 4] — [prix] F ».
+  Si j'ajoute des photos public/plat1.jpg, plat2.jpg…, affiche-les en petit rond à gauche de chaque plat.
+- 10 à 13 s : bandeau « Sur place ou à emporter · Livraison : [numéro] ».
+- 13 à 15 s : logo public/logo.png et adresse.
+Style chaleureux et appétissant.</div>
+
+  <h2>Format 5 · Le statut WhatsApp</h2>
+  <p><strong>Pourquoi ça se vend :</strong> au Bénin, les statuts WhatsApp sont une vitrine. Les salons de coiffure, couturiers, boutiques les utilisent chaque jour, souvent avec des visuels pauvres.</p>
+  <div class="prompt">Crée une composition « Statut[NomClient] » : vertical 1080x1920, 30 images/s, 12 secondes, style « story ».
+Fond dégradé [couleur 1] vers [couleur 2].
+- En haut : 3 petites barres de progression comme une story, avec un rond blanc et le nom « [Nom du commerce] ».
+- 0 à 3 s : grand texte « [Message principal, ex. Nouvelles tresses] » qui apparaît mot par mot.
+- 3 à 6 s : sous-titre dans un bloc blanc arrondi : « [ex. dispo dès demain] », qui fait un petit « pop ».
+- 6 à 9 s : si j'ajoute public/photo.jpg, elle apparaît dans un cadre arrondi avec un léger zoom.
+- 9 à 12 s : « Réserve au [numéro] » avec une icône de téléphone qui vibre légèrement.
+Textes très gros, lisibles en un coup d'œil.</div>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Format 6 · L'inauguration / l'événement</h2>
+  <p><strong>Pourquoi ça se vend :</strong> une ouverture, un nouvel arrivage, des inscriptions scolaires, un concert, une soirée : l'entreprise veut faire du bruit vite. Le client est souvent prêt à payer plus cher, parce que c'est urgent.</p>
+  <div class="prompt">Crée une composition « Event[NomClient] » : vertical 1080x1920, 30 images/s, 15 secondes.
+Fond [couleur vive], textes en blanc et [couleur 2].
+- 0 à 3 s : « GRANDE » puis « OUVERTURE » (ou « [titre de l'événement] ») montent depuis le bas, ligne par ligne, en très grosses lettres.
+- 3 à 6 s : des confettis colorés tombent doucement sur tout l'écran.
+- 6 à 9 s : « [Jour et date] » puis « [Heure] » apparaissent dans des pastilles arrondies.
+- 9 à 12 s : « [Lieu précis, quartier, ville] » avec une icône de localisation qui rebondit.
+- 12 à 15 s : « [Offre spéciale ou message, ex. -20 % le jour J] » + logo public/logo.png.
+Ambiance festive et joyeuse.</div>
+
+  <h2>Pour aller plus loin : le reel et les chiffres</h2>
+  <p>Deux variantes qui marchent bien une fois les 6 formats maîtrisés :</p>
+  <ul>
+    <li><strong>Le reel explicatif</strong> (20 à 30 s, vertical) : 3 à 5 écrans de texte qui expliquent un service, avec transitions dynamiques. Idéal pour les agences, écoles, cabinets.</li>
+    <li><strong>Les chiffres clés</strong> (10 à 15 s) : « 500 clients satisfaits », « 10 ans d'expérience » qui s'affichent avec des compteurs animés et des barres. Les entreprises adorent pour leur image.</li>
+  </ul>
+  <div class="prompt">Crée une composition « Chiffres[NomClient] » : carré 1080x1080, 30 images/s, 12 secondes.
+Fond [couleur foncée], accent en dégradé [couleur 1] vers [couleur 2].
+Affiche 3 chiffres clés l'un après l'autre (3 s chacun), avec un compteur qui monte de 0 jusqu'au chiffre et une courte légende :
+« [chiffre 1] » — « [légende 1] », « [chiffre 2] » — « [légende 2] », « [chiffre 3] » — « [légende 3] ».
+Termine sur le logo public/logo.png et le slogan « [slogan] ».</div>
+
+  <h2>Exercice du module 1</h2>
+  <div class="box ok"><h4>🎯 À faire</h4><p>Produis <strong>une vidéo de chaque format</strong> pour des entreprises imaginaires (ou celles de ton quartier). Exporte-les. Tu en réutiliseras certaines dans ton portfolio au module 3.</p></div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 1 · suite</span>
+  <h1>Ce qui rend une vidéo <em>pro.</em></h1>
+  <p class="lead">Les 7 règles qui font la différence entre une vidéo amateur et une vidéo pour laquelle on te paie.</p>
+  <ol class="steps">
+    <li><strong>Une seule idée par vidéo.</strong> Une promo, un plat, un événement. Si le client veut tout dire, fais plusieurs vidéos (et facture-les).</li>
+    <li><strong>L'essentiel dans les 2 premières secondes.</strong> Sur Facebook et TikTok, les gens décident très vite s'ils regardent. Mets l'accroche ou le chiffre fort tout de suite.</li>
+    <li><strong>Des textes énormes.</strong> La vidéo sera vue sur un téléphone, souvent sans le son. Si tu dois plisser les yeux, c'est trop petit.</li>
+    <li><strong>2 ou 3 couleurs maximum</strong>, celles de la marque. Trop de couleurs = vidéo « cheap ».</li>
+    <li><strong>Laisser respirer.</strong> Chaque texte doit rester affiché assez longtemps pour être lu (compte 1 seconde pour 3 mots environ).</li>
+    <li><strong>Toujours finir par une action :</strong> numéro WhatsApp, adresse, « commande maintenant ». Une belle vidéo sans action ne fait pas vendre le client.</li>
+    <li><strong>Respecter les zones sûres.</strong> En vertical, ne mets rien d'important tout en haut ni tout en bas : l'interface de TikTok, des Reels ou de WhatsApp le cache. Demande à Claude : « garde une marge de sécurité de 250 pixels en haut et en bas ».</li>
+  </ol>
+
+  <h2>Les erreurs de débutant</h2>
+  <table>
+    <tr><th style="width:42%">Erreur</th><th>Correction</th></tr>
+    <tr><td>Fautes d'orthographe dans les textes</td><td>Relis chaque texte. Une faute sur la vidéo d'un client = client mécontent.</td></tr>
+    <tr><td>Logo pixelisé</td><td>Demande le fichier d'origine au client, ou recrée un logo texte propre.</td></tr>
+    <tr><td>Animation trop rapide, on ne lit rien</td><td>« Ralentis toutes les animations de 30 % et laisse chaque texte 1 seconde de plus. »</td></tr>
+    <tr><td>Trop d'effets différents</td><td>Choisis 2 ou 3 types de mouvements et garde-les dans toute la vidéo.</td></tr>
+    <tr><td>Musique trop forte</td><td>Volume de la musique à 20–30 % s'il y a une voix.</td></tr>
+  </table>
+</section>
+
+<!-- ===================== MODULE 2 ===================== -->
+<section class="page brk">
+  <div class="mhead"><span class="mnum">02</span><div><span class="tag">Module 2</span><h1 style="margin:0">Du brief client à la livraison</h1></div></div>
+  <span class="res">→ Résultat : un process de production complet</span>
+  <p class="lead">Savoir faire une vidéo ne suffit pas. Il faut savoir faire <em>la</em> vidéo que le client veut, sans 10 allers-retours. Voici le process en 6 étapes.</p>
+
+  <h2>Étape 1 · Le brief (les 10 questions)</h2>
+  <p>Avant de commencer, envoie ces questions au client (sur WhatsApp, c'est parfait) :</p>
+  <ol>
+    <li>Quel est le but de la vidéo ? (promo, faire connaître, annoncer un événement…)</li>
+    <li>Où sera-t-elle publiée ? (statut WhatsApp, Facebook, TikTok…)</li>
+    <li>Quel est le message principal, en une phrase ?</li>
+    <li>Quels textes exacts doivent apparaître ? (prix, dates, offre)</li>
+    <li>Quel numéro ou adresse mettre à la fin ?</li>
+    <li>Peux-tu m'envoyer ton logo (le fichier d'origine) ?</li>
+    <li>As-tu des photos de tes produits / de ton local ?</li>
+    <li>Quelles sont tes couleurs ?</li>
+    <li>Quelle ambiance veux-tu ? (élégant, festif, sérieux, jeune…)</li>
+    <li>Pour quand en as-tu besoin ?</li>
+  </ol>
+  <div class="box tip"><h4>💡 Astuce</h4><p>Garde ces questions dans une note sur ton téléphone pour les copier-coller en 2 secondes.</p></div>
+
+  <h2>Étape 2 · Le script</h2>
+  <p>Toute vidéo courte suit la même structure en 3 parties :</p>
+  <table>
+    <tr><th style="width:25%">Partie</th><th style="width:20%">Durée</th><th>Contenu</th></tr>
+    <tr><td><strong>Accroche</strong></td><td>0 à 2 s</td><td>Ce qui arrête le pouce : le chiffre, la question, l'image forte.</td></tr>
+    <tr><td><strong>Message</strong></td><td>Le milieu</td><td>Le produit, l'offre, les détails, les atouts.</td></tr>
+    <tr><td><strong>Action</strong></td><td>2 à 3 dernières s</td><td>Quoi faire maintenant : appeler, venir, commander.</td></tr>
+  </table>
+  <p>Tu peux demander à Claude de t'aider à écrire le script :</p>
+  <div class="prompt">Voici le brief de mon client : [colle les réponses du client]. Propose-moi 2 scripts de vidéo de [durée] secondes au format [vertical / carré], avec l'accroche, le message et l'action, seconde par seconde. Textes courts et percutants, en français simple.</div>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Étape 3 · Valider avant de produire</h2>
+  <p>Envoie le script au client <strong>avant</strong> de faire la vidéo : « Voici ce que je propose, tu valides ? » Ça t'évite de tout refaire parce qu'un prix ou une date était faux.</p>
+
+  <h2>Étape 4 · Produire</h2>
+  <ol class="steps">
+    <li>Mets le logo et les photos dans le dossier <code>public</code>.</li>
+    <li>Transforme le script validé en instruction (avec les 8 ingrédients du module 0).</li>
+    <li>Regarde le résultat dans le Studio, corrige avec le vocabulaire des corrections.</li>
+    <li>Relis tous les textes (orthographe, prix, numéro).</li>
+  </ol>
+
+  <h2>Étape 5 · Le son</h2>
+  <ul>
+    <li><strong>Musique :</strong> utilise des musiques <strong>libres de droits pour un usage commercial</strong> (par exemple la bibliothèque musicale de Pixabay, ou la bibliothèque audio de YouTube). <strong>Vérifie toujours la licence</strong> de chaque morceau. N'utilise jamais une chanson connue sans autorisation : la vidéo du client peut être bloquée.</li>
+    <li><strong>Voix off :</strong> enregistre-la avec ton téléphone dans une pièce calme (dans un placard plein de vêtements, le son est meilleur), ou demande au client de l'enregistrer. Mets le fichier dans <code>public</code> et demande à Claude de l'ajouter et de caler les textes dessus.</li>
+    <li><strong>Sans son :</strong> beaucoup de gens regardent sans le son. La vidéo doit se comprendre avec les textes seuls.</li>
+  </ul>
+  <div class="prompt">Ajoute la musique public/musique.mp3 en fond à 25 % du volume avec un fondu d'entrée et de sortie d'une seconde. Ajoute aussi la voix public/voix.mp3 à 100 % à partir de 0,5 s, et cale l'apparition de chaque texte sur le moment où la voix le prononce.</div>
+
+  <h2>Étape 6 · La livraison</h2>
+  <ul>
+    <li><strong>Attention :</strong> WhatsApp compresse les vidéos envoyées normalement. Envoie la vidéo <strong>comme document</strong> (pièce jointe → Document) ou via un lien Google Drive pour garder la qualité.</li>
+    <li>Envoie d'abord un aperçu, attends la validation, puis la version finale.</li>
+    <li>Inclus <strong>2 séries de corrections</strong> dans ton prix. Au-delà, c'est payant : annonce-le dès le début.</li>
+    <li>Garde toujours le projet : le client reviendra pour une nouvelle version.</li>
+  </ul>
+  <div class="box ok"><h4>🎯 Exercice du module 2</h4><p>Choisis un commerce que tu connais. Envoie-lui (ou imagine) les 10 questions, écris le script avec Claude, produis la vidéo et exporte-la en vertical et en carré.</p></div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 2 · suite</span>
+  <h1>Ton système <em>de production.</em></h1>
+  <p class="lead">Pour aller vite quand les clients arrivent, organise-toi dès maintenant.</p>
+  <h2>Organise tes dossiers</h2>
+  <p>Un projet Remotion peut contenir plusieurs compositions. Garde un seul atelier <code>vibe-motion</code> et demande à Claude de ranger chaque client à part :</p>
+  <div class="prompt">Organise le projet pour que chaque client ait son propre sous-dossier de compositions et de fichiers (logo, photos, musique). Crée le dossier pour le client « [Nom du client] » et mets-y la composition [nom].</div>
+  <h2>Crée tes modèles</h2>
+  <p>Chaque fois qu'un format fonctionne, transforme-le en modèle (voir l'astuce du module 0). Au bout de quelques semaines, tu auras une bibliothèque de modèles prêts : changer un nom, des couleurs et un logo te prendra quelques minutes au lieu d'une heure.</p>
+  <h2>Ton temps de production cible</h2>
+  <table>
+    <tr><th>Vidéo</th><th>Au début</th><th>Avec tes modèles</th></tr>
+    <tr><td>Logo animé</td><td>45 min à 1 h</td><td>10 à 15 min</td></tr>
+    <tr><td>Promo / annonce</td><td>1 h à 1 h 30</td><td>15 à 30 min</td></tr>
+    <tr><td>Menu animé</td><td>1 h à 1 h 30</td><td>15 à 20 min</td></tr>
+    <tr><td>Inauguration / événement</td><td>1 h 30</td><td>30 min</td></tr>
+  </table>
+  <p class="mut">Ce sont des repères : tu iras plus vite avec la pratique.</p>
+  <h2>Ton checklist avant chaque livraison</h2>
+  <ul class="check">
+    <li>Tous les textes relus (orthographe, prix, dates, numéro)</li>
+    <li>Le logo est net</li>
+    <li>Le format correspond à l'endroit où le client va publier</li>
+    <li>Rien d'important n'est caché en haut ou en bas de l'écran</li>
+    <li>La vidéo se comprend sans le son</li>
+    <li>La musique est libre de droits pour un usage commercial</li>
+    <li>La vidéo finit par une action claire</li>
+    <li>Envoi en document ou par lien (pas compressé)</li>
+  </ul>
+</section>
+
+<!-- ===================== MODULE 3 ===================== -->
+<section class="page brk">
+  <div class="mhead"><span class="mnum">03</span><div><span class="tag">Module 3</span><h1 style="margin:0">Ton portfolio en 3 jours</h1></div></div>
+  <span class="res">→ Résultat : un portfolio prêt à montrer</span>
+  <p class="lead">Personne n'achète sans voir. Ton portfolio, ce sont 5 vidéos qui prouvent ce que tu sais faire. Et la meilleure astuce : les faire pour de vraies entreprises de ta ville.</p>
+  <h2>Pourquoi de vraies entreprises ?</h2>
+  <p>Une vidéo pour « Restaurant Imaginaire » impressionne moins qu'une vidéo avec le vrai nom d'un maquis que tout le quartier connaît. Et surtout : <strong>chaque vidéo de démonstration est aussi un prospect.</strong> Tu la fais pour l'entreprise, puis tu la lui montres (module 4).</p>
+
+  <h2>Le plan sur 3 jours</h2>
+  <table>
+    <tr><th style="width:18%">Jour</th><th>À faire</th></tr>
+    <tr><td><strong>Jour 1</strong></td><td>Choisis 5 entreprises réelles de types différents : un restaurant ou maquis, une boutique de vêtements, un salon de coiffure, une pharmacie ou supérette, une école ou un service. Récupère leur nom, leur logo (photo de l'enseigne ou de leur page Facebook), leurs couleurs, leur numéro. Note tout.</td></tr>
+    <tr><td><strong>Jour 2</strong></td><td>Produis 3 vidéos (une heure chacune environ) avec les modèles du module 1 : menu pour le restaurant, promo pour la boutique, statut pour le salon.</td></tr>
+    <tr><td><strong>Jour 3</strong></td><td>Produis les 2 dernières (logo animé, inauguration ou chiffres). Puis range ton portfolio (voir ci-dessous).</td></tr>
+  </table>
+  <div class="box warn"><h4>⚠️ Règle importante</h4><p>Ces vidéos sont des <strong>démonstrations</strong>. Tu peux les montrer en privé à l'entreprise concernée. Mais ne les <strong>publie pas publiquement</strong> avec leur nom et leur logo sans leur accord. Pour ta vitrine publique, utilise soit des vidéos validées par les entreprises, soit des versions avec des noms inventés.</p></div>
+
+  <h2>Ranger ton portfolio</h2>
+  <ul>
+    <li><strong>Un dossier Google Drive</strong> « Portfolio [Ton nom] Motion » avec tes meilleures vidéos, partagé en lien (lecture seule).</li>
+    <li><strong>Ton statut WhatsApp</strong> : publie une vidéo par jour (version avec noms inventés ou validée). Tes contacts voient ce que tu fais, sans que tu aies à prospecter.</li>
+    <li><strong>Une page Facebook ou un compte TikTok</strong> à ton nom de créateur (ex. « [Prénom] Motion ») : publie tes réalisations régulièrement.</li>
+  </ul>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Ton nom de créateur</h2>
+  <p>Les entreprises font plus confiance à un « studio » qu'à « un gars qui fait des vidéos ». Choisis un nom simple : <strong>[Prénom] Motion</strong>, <strong>[Prénom] Studio</strong>, ou le nom de ton quartier + Motion. Demande à Claude :</p>
+  <div class="prompt">Je lance mon activité de vidéos motion design pour les entreprises de [ville]. Propose-moi 10 noms de studio courts, faciles à retenir et à prononcer en français, et crée un logo animé de 5 secondes pour celui que je choisirai.</div>
+
+  <h2>Ta vidéo de présentation</h2>
+  <p>Assemble tes 5 démos dans une seule vidéo de 30 secondes : c'est ta « bande démo », la première chose que tu envoies à un prospect.</p>
+  <div class="prompt">Crée une composition « BandeDemo » verticale 1080x1920 de 30 secondes qui enchaîne mes vidéos out/[video1].mp4, out/[video2].mp4, out/[video3].mp4, out/[video4].mp4, out/[video5].mp4 (environ 5 s de chaque, les meilleurs passages), avec des transitions rapides. Commence par « Des vidéos qui font vendre » et termine par « [Nom de ton studio] · [ton numéro WhatsApp] ».</div>
+
+  <h2>Checklist du module 3</h2>
+  <ul class="check">
+    <li>5 entreprises réelles choisies, infos récupérées</li>
+    <li>5 vidéos de démonstration produites et exportées</li>
+    <li>Un nom de studio choisi, et son logo animé</li>
+    <li>Une bande démo de 30 secondes</li>
+    <li>Un dossier Google Drive partageable</li>
+    <li>Ma première vidéo publiée sur mon statut WhatsApp</li>
+  </ul>
+  <div class="box ok"><h4>🎯 Prochaine étape</h4><p>Tu as maintenant quelque chose à montrer. Au module 4, tu vas le montrer aux bonnes personnes, de la bonne façon.</p></div>
+</section>
+
+<!-- ===================== MODULE 4 ===================== -->
+<section class="page brk">
+  <div class="mhead"><span class="mnum">04</span><div><span class="tag">Module 4</span><h1 style="margin:0">Trouver des clients</h1></div></div>
+  <span class="res">→ Résultat : tes premiers prospects contactés</span>
+  <p class="lead">Tes clients sont autour de toi : dans ton quartier, dans ton téléphone, sur Facebook. La seule méthode à retenir : <strong>montrer avant de vendre.</strong></p>
+
+  <h2>La méthode de la démo personnalisée</h2>
+  <p>Au lieu d'écrire « Bonjour, je fais des vidéos, ça vous intéresse ? » (que tout le monde ignore), tu envoies <strong>une courte vidéo déjà faite avec leur nom et leur logo</strong>. Le commerçant se voit déjà sur Facebook. C'est 10 fois plus efficace.</p>
+  <ol class="steps">
+    <li>Repère une entreprise (voir les 5 sources ci-dessous).</li>
+    <li>Récupère son nom, son logo ou la photo de son enseigne, ses couleurs.</li>
+    <li>Fais une démo de 5 à 8 secondes avec un de tes modèles (15 minutes avec un modèle).</li>
+    <li>Envoie-la avec le message ci-dessous.</li>
+    <li>Relance 2 jours plus tard si pas de réponse.</li>
+  </ol>
+
+  <h2>Les 5 sources de clients</h2>
+  <table>
+    <tr><th style="width:30%">Source</th><th>Comment faire</th></tr>
+    <tr><td><strong>1. Ton quartier</strong></td><td>Fais le tour des boutiques, restaurants, salons, pharmacies autour de chez toi. Prends en photo les enseignes (et les numéros affichés). Ce sont tes prospects les plus chauds : ils te voient, ils te font confiance.</td></tr>
+    <tr><td><strong>2. Ton téléphone</strong></td><td>Parcours tes contacts et tes groupes WhatsApp. Qui a un commerce ? Qui connaît quelqu'un qui en a un ? Tes proches peuvent te recommander.</td></tr>
+    <tr><td><strong>3. Facebook Marketplace et les pages qui font de la pub</strong></td><td>Les vendeurs qui publient déjà des annonces ou des pubs <strong>dépensent déjà de l'argent</strong> pour se faire voir. Ce sont les meilleurs prospects : montre-leur qu'une vidéo ferait mieux que leur photo.</td></tr>
+    <tr><td><strong>4. Google Maps</strong></td><td>Cherche « restaurant », « boutique », « salon de coiffure » + ton quartier. Tu trouves le nom, le numéro, parfois le logo.</td></tr>
+    <tr><td><strong>5. Ton statut WhatsApp</strong></td><td>Publie une vidéo par jour. Ajoute : « Tu veux la même pour ton commerce ? Écris-moi. » Les clients viennent à toi.</td></tr>
+  </table>
+  <div class="box tip"><h4>💡 Ton objectif quotidien</h4><p><strong>10 entreprises contactées par jour</strong> (dont au moins 3 avec une démo personnalisée). Sur une semaine, ça fait 50 contacts. C'est ce volume qui crée les premiers clients.</p></div>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Les messages à copier</h2>
+  <h3>Message 1 · Le premier contact (avec démo)</h3>
+  <div class="prompt">Bonjour [Prénom ou nom du commerce] 👋
+Je m'appelle [ton prénom], je crée des vidéos animées pour les commerces de [quartier / ville].
+Je me suis permis de faire cette petite vidéo pour [nom du commerce] 👇 (c'est cadeau, juste pour vous montrer ce que ça peut donner).
+Ce genre de vidéo attire beaucoup plus l'attention sur Facebook et en statut WhatsApp qu'une simple photo.
+Ça vous plaît ?</div>
+  <h3>Message 2 · La relance (2 jours après)</h3>
+  <div class="prompt">Bonjour [Prénom], j'espère que vous allez bien. Avez-vous pu regarder la petite vidéo pour [nom du commerce] ? Je peux vous en faire une complète pour votre prochaine promo ou votre menu. Dites-moi si ça vous intéresse 🙂</div>
+  <h3>Message 3 · Dernière relance (5 jours après)</h3>
+  <div class="prompt">Bonjour [Prénom], je ne veux pas vous déranger, c'est mon dernier message 🙂 Si un jour vous avez besoin d'une vidéo pour une promo, un nouvel arrivage ou un événement, gardez mon numéro. Bonne continuation à [nom du commerce] !</div>
+  <h3>Message 4 · Quand on te recommande</h3>
+  <div class="prompt">Bonjour [Prénom], c'est [nom de la personne qui te recommande] qui m'a donné votre numéro. Je crée des vidéos animées pour les commerces (voici quelques exemples : [lien Drive]). [Personne] m'a dit que vous pourriez en avoir besoin pour [son commerce]. Je peux vous faire une proposition ?</div>
+  <h3>Sur le terrain (en boutique)</h3>
+  <div class="prompt">« Bonjour ! Je suis [prénom], je fais des vidéos animées pour les commerces du quartier, pour Facebook et les statuts WhatsApp. Regardez, j'en ai fait une pour [commerce voisin ou démo] [montre ton téléphone]. Je peux vous en préparer une avec votre nom, gratuitement, pour que vous voyiez le résultat. Je vous l'envoie sur quel numéro ? »</div>
+  <div class="box warn"><h4>😬 Ça fait peur ? C'est normal.</h4><p>Les premiers messages et la première visite sont les plus durs. La plupart des gens ne répondront pas, ou diront non : ce n'est pas un rejet de toi, c'est juste « pas maintenant ». Chaque « non » te rapproche du « oui ». Commence par les commerces où tu vas déjà. Et si tu bloques, parles-en dans la communauté : tout le monde passe par là.</p></div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 4 · suite</span>
+  <h1>Ton tableau <em>de suivi.</em></h1>
+  <p class="lead">Sans suivi, tu oublies de relancer et tu perds des clients. Un simple tableau suffit (cahier, Google Sheets ou note du téléphone).</p>
+  <table>
+    <tr><th>Commerce</th><th>Contact</th><th>Source</th><th>Démo envoyée</th><th>Relance 1</th><th>Relance 2</th><th>Statut</th></tr>
+    <tr><td>Maquis Le Bon Goût</td><td>97 xx xx xx</td><td>Quartier</td><td>Lun ✓</td><td>Mer ✓</td><td>—</td><td>Intéressé</td></tr>
+    <tr><td>Boutique Élégance</td><td>96 xx xx xx</td><td>Marketplace</td><td>Lun ✓</td><td>Mer</td><td></td><td>En attente</td></tr>
+    <tr><td>Salon Belle Tresse</td><td>95 xx xx xx</td><td>Statut</td><td>Mar ✓</td><td></td><td></td><td>Devis envoyé</td></tr>
+    <tr><td>…</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="mut">Les numéros ci-dessus sont des exemples.</p>
+  <h2>Faire travailler Claude pour toi</h2>
+  <p>Claude peut aussi t'aider à prospecter :</p>
+  <div class="prompt">Je vends des vidéos motion design aux petites entreprises de [ville]. Propose-moi 20 types de commerces qui ont le plus besoin de vidéos pour Facebook et WhatsApp, et pour chacun, une idée de vidéo précise que je pourrais leur proposer.</div>
+  <div class="prompt">Voici le message qu'un prospect m'a répondu : « [colle sa réponse] ». Aide-moi à lui répondre de façon naturelle et convaincante pour obtenir un rendez-vous ou une commande.</div>
+  <h2>Checklist du module 4</h2>
+  <ul class="check">
+    <li>J'ai listé 30 commerces à contacter (quartier, contacts, Marketplace, Maps)</li>
+    <li>J'ai créé mon tableau de suivi</li>
+    <li>J'ai envoyé mes 10 premiers messages</li>
+    <li>J'ai envoyé au moins 3 démos personnalisées</li>
+    <li>J'ai fait au moins une visite en boutique</li>
+    <li>Je publie une vidéo par jour sur mon statut</li>
+  </ul>
+</section>
+
+<!-- ===================== MODULE 5 ===================== -->
+<section class="page brk">
+  <div class="mhead"><span class="mnum">05</span><div><span class="tag">Module 5</span><h1 style="margin:0">Présenter ton prix et conclure</h1></div></div>
+  <span class="res">→ Résultat : ton premier contrat</span>
+  <p class="lead">Le prospect est intéressé. Maintenant il faut annoncer un prix sans trembler, répondre aux objections et encaisser un acompte.</p>
+  <h2>La grille de prix (repères)</h2>
+  <table>
+    <tr><th>Prestation</th><th>Prix repère</th><th>Pour qui</th></tr>
+    <tr><td>Logo animé</td><td>15 000 – 25 000 F</td><td>Tous</td></tr>
+    <tr><td>Vidéo promo / annonce / statut</td><td>20 000 – 35 000 F</td><td>Boutiques, salons, services</td></tr>
+    <tr><td>Vidéo promo produit ou menu complet</td><td>25 000 – 50 000 F</td><td>Restaurants, e-commerce</td></tr>
+    <tr><td>Pack 3 formats (vertical + carré + horizontal)</td><td>+ 50 % du prix</td><td>Ceux qui publient partout</td></tr>
+    <tr><td>Pack mensuel (4 vidéos par mois)</td><td>100 000 F et +</td><td>Commerces actifs sur les réseaux</td></tr>
+    <tr><td>Gros projets sur mesure</td><td>jusqu'à 500 000 F</td><td>Entreprises, institutions, événements</td></tr>
+  </table>
+  <p class="mut">Ces montants sont des repères. Adapte-les à la taille de l'entreprise et à l'urgence. Aucun revenu n'est garanti : tes résultats dépendent de ton travail et de tes clients.</p>
+  <div class="box tip"><h4>💡 Ne vends pas trop bas</h4><p>Un prix trop bas fait penser que ton travail est de mauvaise qualité, et attire les clients les plus difficiles. Tu ne vends pas « 1 heure de travail », tu vends une vidéo qui va faire venir des clients chez lui.</p></div>
+
+  <h2>Comment annoncer le prix</h2>
+  <ol class="steps">
+    <li><strong>Rappelle le résultat avant le prix :</strong> « Cette vidéo, vous pourrez la mettre en statut et sur Facebook pendant toute la promo. »</li>
+    <li><strong>Annonce le prix calmement, puis tais-toi :</strong> « Pour cette vidéo, c'est 25 000 F, avec 2 séries de corrections incluses. »</li>
+    <li><strong>Propose toujours 2 options :</strong> « Ou le pack 3 formats à 37 500 F pour Facebook, TikTok et WhatsApp. » Le client choisit entre deux options au lieu de dire oui ou non.</li>
+    <li><strong>Demande l'acompte :</strong> « Je commence dès réception de 50 % par MoMo ou Moov, et vous avez la vidéo [jour]. »</li>
+  </ol>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">Répondre aux objections</h2>
+  <table>
+    <tr><th style="width:30%">Le client dit…</th><th>Tu réponds…</th></tr>
+    <tr><td>« C'est trop cher. »</td><td>« Je comprends. Combien vous rapporte un client de plus ? Si la vidéo vous en ramène deux ou trois, elle est déjà remboursée. Sinon, je peux vous proposer une version plus courte à [prix plus bas]. »</td></tr>
+    <tr><td>« Je vais réfléchir. »</td><td>« Bien sûr. Qu'est-ce qui vous fait hésiter ? Le prix, le délai ? » (Souvent, il y a une vraie question derrière. Réponds-y.)</td></tr>
+    <tr><td>« Mon neveu fait ça. »</td><td>« Super ! Gardez ma démo, et si un jour vous voulez une vidéo en 48 h, je suis là. » (Reste aimable, relance plus tard.)</td></tr>
+    <tr><td>« Je n'ai pas de budget en ce moment. »</td><td>« Pas de souci. Quand est votre prochaine promo ou votre prochain événement ? Je vous recontacte une semaine avant. »</td></tr>
+    <tr><td>« Fais-moi une vidéo gratuite d'abord. »</td><td>« La démo que je vous ai envoyée était offerte. Pour une vidéo complète avec vos textes et vos photos, je demande 50 % d'acompte. Si elle ne vous plaît pas après 2 corrections, je vous rembourse l'acompte. »</td></tr>
+    <tr><td>« C'est fait par une IA, ça ne vaut rien. »</td><td>« L'IA est un outil, comme un appareil photo. Ce qui compte, c'est le résultat pour votre commerce : regardez la démo. »</td></tr>
+  </table>
+
+  <h2>Encaisser et sécuriser</h2>
+  <ul>
+    <li><strong>Toujours 50 % d'acompte</strong> avant de commencer, le reste à la livraison (avant d'envoyer la version finale sans filigrane, si tu veux te protéger).</li>
+    <li>Paiement par <strong>MTN MoMo ou Moov Money</strong> : envoie ton numéro et le nom qui s'affiche.</li>
+    <li>Confirme tout par écrit sur WhatsApp : ce qui est inclus, le délai, le prix, le nombre de corrections. Ça vaut contrat simple.</li>
+  </ul>
+  <h3>Le message de confirmation (à copier)</h3>
+  <div class="prompt">Parfait, merci pour votre confiance ! Je récapitule :
+✅ Vidéo : [description] — format [vertical / carré]
+✅ Textes : [textes validés]
+✅ Livraison : [date]
+✅ 2 séries de corrections incluses
+✅ Prix : [prix] F — acompte de [50 %] à envoyer au [numéro MoMo / Moov] ([nom])
+Je commence dès réception de l'acompte 🙏</div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 5 · suite</span>
+  <h1>Garder tes clients <em>et en trouver d'autres.</em></h1>
+  <p class="lead">Un client satisfait, c'est un client qui revient chaque mois et qui t'en envoie d'autres.</p>
+  <h2>Le devis simple</h2>
+  <table>
+    <tr><th colspan="2">DEVIS · [Nom de ton studio] · [Date]</th></tr>
+    <tr><td style="width:40%">Client</td><td>[Nom du commerce, contact]</td></tr>
+    <tr><td>Prestation</td><td>[Ex. Vidéo promo verticale de 15 s + version carrée]</td></tr>
+    <tr><td>Inclus</td><td>Script, animation, musique libre de droits, 2 séries de corrections</td></tr>
+    <tr><td>Délai</td><td>[X] jours après réception de l'acompte et des éléments (logo, textes, photos)</td></tr>
+    <tr><td>Prix</td><td>[Montant] F CFA</td></tr>
+    <tr><td>Paiement</td><td>50 % à la commande, 50 % à la livraison · MoMo / Moov [numéro]</td></tr>
+  </table>
+  <p>Demande à Claude de le mettre en page proprement à ton nom : « Crée-moi un modèle de devis élégant en PDF avec ces informations ».</p>
+
+  <h2>L'abonnement mensuel : ton vrai objectif</h2>
+  <p>Une vidéo ponctuelle, c'est bien. <strong>Un client qui paie chaque mois</strong>, c'est ce qui construit un revenu stable. Après une première vidéo réussie, propose :</p>
+  <div class="prompt">Merci pour votre retour, ça me fait plaisir que la vidéo vous plaise ! 🙌 Beaucoup de commerces publient une nouvelle vidéo chaque semaine pour rester visibles. Je propose un pack mensuel : 4 vidéos par mois (promos, nouveautés, menu…) pour [prix] F au lieu de [prix × 4]. Vous voulez qu'on démarre ce mois-ci ?</div>
+
+  <h2>Le témoignage et la recommandation</h2>
+  <p>Après chaque livraison réussie, demande les deux :</p>
+  <div class="prompt">Est-ce que je peux partager votre vidéo dans mes réalisations ? Et si vous avez 30 secondes, un petit message vocal ou écrit sur ce que vous en pensez m'aiderait beaucoup 🙏 Enfin, si vous connaissez un autre commerçant qui pourrait en avoir besoin, n'hésitez pas à lui donner mon numéro.</div>
+  <div class="box ok"><h4>🎯 Checklist du module 5</h4><ul class="check"><li>Ma grille de prix est prête</li><li>Mon message de confirmation est enregistré</li><li>Mon modèle de devis est prêt</li><li>Je sais répondre aux 6 objections</li><li>J'ai proposé un prix à au moins un prospect</li></ul></div>
+</section>
+
+<!-- ===================== BONUS 50 INSTRUCTIONS ===================== -->
+<section class="page brk">
+  <span class="tag">Bonus</span>
+  <h1>50 instructions <em>prêtes à copier.</em></h1>
+  <p class="lead">Ajoute ces phrases à tes instructions (ou envoie-les seules pour modifier une vidéo existante). Remplace ce qui est entre crochets.</p>
+  <ol class="p50">
+    <h3>Entrées et apparitions</h3>
+    <li>Fais apparaître le texte mot par mot, avec un léger mouvement vers le haut.</li>
+    <li>Fais entrer le logo avec un zoom de 70 % à 100 % et un petit rebond.</li>
+    <li>Fais glisser chaque élément depuis la gauche, avec un décalage de 0,2 s entre eux.</li>
+    <li>Fais apparaître le texte lettre par lettre, comme une machine à écrire.</li>
+    <li>Fais « claquer » le chiffre à l'écran : il arrive très gros puis se stabilise.</li>
+    <li>Révèle le texte avec un masque qui glisse de gauche à droite.</li>
+    <li>Fais dessiner le contour du logo, puis remplis-le de couleur.</li>
+    <li>Fais tomber les éléments du haut de l'écran avec un effet de gravité.</li>
+    <h3>Mouvements et rythme</h3>
+    <li>Ajoute un léger zoom lent et continu sur toute la vidéo pour la rendre vivante.</li>
+    <li>Fais pulser doucement le bouton d'action pour attirer l'œil.</li>
+    <li>Fais tourner lentement le badge de promotion derrière le prix.</li>
+    <li>Ralentis toutes les animations de 30 %.</li>
+    <li>Accélère le début : l'accroche doit être lisible avant la 2e seconde.</li>
+    <li>Laisse chaque texte affiché au moins 1,5 seconde avant qu'il disparaisse.</li>
+    <li>Synchronise les apparitions sur le rythme de la musique public/musique.mp3.</li>
+    <li>Ajoute une petite vibration au téléphone ou à l'icône d'appel.</li>
+  </ol>
+</section>
+
+<section class="page cont">
+  <ol class="p50" start="17" style="counter-reset:p 16">
+    <h3 style="margin-top:0">Transitions</h3>
+    <li>Entre chaque scène, utilise une transition en glissement horizontal rapide.</li>
+    <li>Utilise une transition en fondu enchaîné de 0,4 s entre les scènes.</li>
+    <li>Fais une transition où un cercle de couleur [couleur] s'agrandit et couvre l'écran.</li>
+    <li>Fais une transition en volets : des bandes de couleur traversent l'écran.</li>
+    <li>Fais une transition par zoom : on plonge dans l'élément central pour passer à la scène suivante.</li>
+    <h3>Style et décor</h3>
+    <li>Ajoute un dégradé animé lent en fond, de [couleur 1] vers [couleur 2].</li>
+    <li>Ajoute des formes géométriques floues qui flottent lentement en arrière-plan.</li>
+    <li>Ajoute un léger grain de film sur toute la vidéo pour un rendu plus « pro ».</li>
+    <li>Mets le texte principal dans un bloc arrondi de couleur [couleur] avec une ombre douce.</li>
+    <li>Utilise une police très grasse et moderne pour les titres, et une police simple pour le reste.</li>
+    <li>Ajoute un reflet lumineux qui traverse le logo une fois à la fin.</li>
+    <li>Ajoute des confettis aux couleurs de la marque qui tombent doucement.</li>
+    <li>Ajoute des particules lumineuses dorées pour une ambiance festive.</li>
+    <li>Rends le style plus élégant : moins de couleurs, plus d'espace, animations plus lentes.</li>
+    <li>Rends le style plus jeune et pop : couleurs vives, mouvements rebondissants.</li>
+    <h3>Textes et lisibilité</h3>
+    <li>Agrandis tous les textes de 30 % : ils doivent être lisibles sur un petit téléphone.</li>
+    <li>Ajoute un contour ou une ombre aux textes pour qu'ils restent lisibles sur la photo.</li>
+    <li>Garde une marge de sécurité de 250 pixels en haut et en bas de l'écran.</li>
+    <li>Ajoute des sous-titres en bas, synchronisés avec la voix public/voix.mp3.</li>
+    <li>Mets en surbrillance [couleur] le mot « [mot important] » quand il apparaît.</li>
+  </ol>
+</section>
+
+<section class="page cont">
+  <ol class="p50" start="37" style="counter-reset:p 36">
+    <h3 style="margin-top:0">Médias du client</h3>
+    <li>Utilise la photo public/produit.png, détourée, et fais-la tourner légèrement en 3D.</li>
+    <li>Fais défiler les photos public/photo1.jpg à photo5.jpg en diaporama dynamique avec zoom lent.</li>
+    <li>Affiche la photo dans un cadre de téléphone pour montrer le produit « en vrai ».</li>
+    <li>Recrée un logo texte propre avec le nom « [Nom] » dans la police [style], le logo du client étant flou.</li>
+    <li>Ajoute la musique public/musique.mp3 à 25 % du volume avec fondus d'entrée et de sortie.</li>
+    <h3>Formats et export</h3>
+    <li>Crée une version carrée 1080x1080 et une version horizontale 1920x1080 de cette vidéo, en réorganisant les éléments.</li>
+    <li>Fais une version courte de 6 secondes de cette vidéo pour un statut rapide.</li>
+    <li>Exporte la composition [nom] en MP4 dans le dossier out, en bonne qualité.</li>
+    <li>Exporte aussi une image fixe (PNG) de la dernière seconde, pour une publication photo.</li>
+    <h3>Productivité</h3>
+    <li>Transforme cette composition en modèle où je peux changer le nom, les couleurs, les textes et le logo dans un seul endroit.</li>
+    <li>Duplique ce modèle pour le client « [Nom] » avec les couleurs [couleurs] et les textes suivants : [textes].</li>
+    <li>Fais 3 variantes de cette vidéo avec des accroches différentes pour que le client choisisse.</li>
+    <li>Liste toutes mes compositions existantes et dis-moi à quel client chacune correspond.</li>
+    <li>Explique-moi en français simple ce que tu as changé, pour que je puisse le refaire seul.</li>
+  </ol>
+  <div class="box tip"><h4>💡 Combine-les</h4><p>Les meilleures vidéos combinent 3 ou 4 de ces instructions. Exemple : un format du module 1 + n°2 (logo qui rebondit) + n°22 (dégradé animé) + n°33 (marges de sécurité) + n°41 (musique).</p></div>
+</section>
+
+<!-- ===================== PLAN 7 JOURS ===================== -->
+<section class="page brk">
+  <span class="tag">Plan d'action</span>
+  <h1>Tes 7 premiers <em>jours.</em></h1>
+  <p class="lead">Environ 1 heure par jour. Coche chaque jour terminé. À la fin de la semaine, tu as une compétence, un portfolio et tes premiers prospects.</p>
+  <table>
+    <tr><th style="width:15%">Jour</th><th style="width:30%">Objectif</th><th>À faire</th></tr>
+    <tr><td><strong>☐ Jour 1</strong></td><td>Tout installer</td><td>Module 0 en entier : Claude Pro, Node.js, Claude, projet Remotion. Ta première vidéo exportée et partagée dans la communauté.</td></tr>
+    <tr><td><strong>☐ Jour 2</strong></td><td>3 premiers formats</td><td>Module 1 : logo animé, promo produit, annonce promo. Une vidéo de chaque.</td></tr>
+    <tr><td><strong>☐ Jour 3</strong></td><td>3 formats suivants</td><td>Menu animé, statut WhatsApp, inauguration. Lis « Ce qui rend une vidéo pro ».</td></tr>
+    <tr><td><strong>☐ Jour 4</strong></td><td>Le process client</td><td>Module 2 : fais tout le process (brief, script, production, son) pour un commerce que tu connais. Crée ton premier modèle réutilisable.</td></tr>
+    <tr><td><strong>☐ Jour 5</strong></td><td>Ton portfolio</td><td>Module 3 : choisis 5 entreprises réelles, produis tes démos, ton nom de studio et ta bande démo.</td></tr>
+    <tr><td><strong>☐ Jour 6</strong></td><td>Premiers contacts</td><td>Module 4 : liste 30 commerces, crée ton tableau de suivi, envoie 10 messages dont 3 démos personnalisées, publie ton premier statut.</td></tr>
+    <tr><td><strong>☐ Jour 7</strong></td><td>Prêt à vendre</td><td>Module 5 : prépare ta grille de prix, ton devis et ton message de confirmation. Relance tes contacts du jour 6, envoie 10 nouveaux messages.</td></tr>
+  </table>
+  <div class="box ok"><h4>🏁 Et après ?</h4><p>Continue la routine qui fait venir les clients : <strong>10 contacts par jour, une vidéo par jour sur ton statut, et des relances à J+2 et J+5.</strong> Partage chaque victoire dans la communauté : premier « oui », premier acompte, premier client récurrent.</p></div>
+</section>
+
+<section class="page brk" style="display:flex;flex-direction:column;justify-content:center">
+  <span class="tag">Le mot de la fin</span>
+  <h1>Maintenant, <em>à toi de jouer.</em></h1>
+  <p class="lead">Tu as entre les mains une compétence que très peu de gens autour de toi maîtrisent encore. L'outil est là, la méthode est là. Ce qui fera la différence, c'est ta pratique et ton courage d'aller voir les entreprises.</p>
+  <div class="box ok"><h4>👥 La communauté WhatsApp</h4><p>Questions, blocages, vidéos à montrer, victoires à partager : <strong><span>{{LIEN_COMMUNAUTE_WHATSAPP}}</span></strong></p></div>
+  <div class="box tip"><h4>🛡️ Rappel de ta garantie 7 jours</h4><p>Modules 0 à 2 suivis, exercices faits, et pas de vidéo exportée au bout de 7 jours ? Écris-nous : <strong>{{CONTACT_SUPPORT}}</strong>. Remboursement intégral.</p></div>
+  <div class="box"><h4>⚖️ À savoir</h4><p class="mut" style="font-size:9pt">Les prix et montants cités dans ce guide sont des repères. Aucun revenu n'est garanti : tes résultats dépendent de ton travail, de ta régularité et de tes clients. Claude est une marque d'Anthropic ; Remotion est un logiciel de Remotion AG ; Vibe Motion est une formation indépendante, non affiliée à ces entreprises. Vérifie les conditions de licence de Remotion pour ton usage (gratuite pour les indépendants et les petites structures selon ses conditions). Ce guide est réservé à son acheteur : merci de ne pas le partager.</p></div>
+</section>
+
+</body>
+</html>

@@ -33,3 +33,8 @@
 
 ## 2026-10-13 — Visuels Chariow
 - Vignette 1200×1200 (1:1, sans texte superposé) et bannière 1620×600 (ratio 2,7) aux formats recommandés par Chariow → `Output/visuels/`.
+
+## 2026-10-13 — Guide PDF (produit livré par Chariow)
+- `Output/formation/Vibe-Motion-Guide.pdf` (~31 p.) : bienvenue, lexique, modules 0 à 5 complets avec instructions à copier, 50 instructions bonus, plan 7 jours, garantie.
+- Vérifié : install Claude Code (docs officielles), Claude Pro requis pour Claude Code, Bénin et CI dans les pays supportés, carte virtuelle MoMo Card MTN Bénin (CG déc. 2025), commande skills Remotion `npx skills add remotion-dev/skills`.
+- À compléter : lien communauté WhatsApp + contact support (repères rouges dans le PDF).
