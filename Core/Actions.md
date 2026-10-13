@@ -3,6 +3,8 @@
 **Semaine du :** 12/10/2026 → 18/10/2026
 **Focus :** Lancer la formation motion au Bénin d'ici mardi soir / mercredi max — 10 ventes avant dimanche (Diagnosis #1)
 
+> Prochaine session : voix off Gemini de la pub Noël (voir Journal du 13/10), puis suite des exemples motion pour la page de vente.
+
 ---
 
 ## Cette semaine (par priorité)
