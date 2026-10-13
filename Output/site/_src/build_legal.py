@@ -2,11 +2,11 @@
 # Remplir INFO puis relancer : python3 _src/build_legal.py
 import html, os
 INFO = {
-  "editeur": "",        # nom complet ou nom de l'entreprise
+  "editeur": "Vibe Motion",        # nom complet ou nom de l'entreprise
   "statut": "",         # ex. « entrepreneur individuel », « SARL »
   "ifu_rccm": "",       # numéro IFU et/ou RCCM (facultatif si pas encore immatriculé)
-  "adresse": "",        # ville + quartier ou adresse
-  "email": "",          # e-mail de contact
+  "adresse": "Cotonou",        # ville + quartier ou adresse
+  "email": "risenofm@gmail.com",          # e-mail de contact
   "whatsapp": "",       # numéro WhatsApp au format international, ex. 22990000000
 }
 MAJ = "13 octobre 2026"
@@ -14,13 +14,13 @@ def v(k, label):
     return html.escape(INFO[k]) if INFO[k] else f'<mark>[à compléter : {label}]</mark>'
 wa = (f'<a href="https://wa.me/{INFO["whatsapp"]}">WhatsApp +{INFO["whatsapp"]}</a>' if INFO["whatsapp"] else v("whatsapp","numéro WhatsApp"))
 mail = (f'<a href="mailto:{INFO["email"]}">{html.escape(INFO["email"])}</a>' if INFO["email"] else v("email","e-mail de contact"))
-CONTACT = f'{wa} ou {mail}'
+CONTACT = f'{wa} ou {mail}' if INFO["whatsapp"] else mail
 
 PAGES = {
 "mentions-legales": ("Mentions légales", f"""
 <h2>Éditeur du site</h2>
-<p>Le site vibemotionafrica.com et la formation Vibe Motion sont édités par {v("editeur","nom ou raison sociale")}, {v("statut","statut juridique")}, {v("adresse","adresse")}, Bénin.</p>
-<p>Identifiant fiscal / registre : {v("ifu_rccm","IFU et/ou RCCM")}.</p>
+<p>Le site vibemotionafrica.com et la formation Vibe Motion sont édités par {v("editeur","nom ou raison sociale")}{(", " + html.escape(INFO["statut"])) if INFO["statut"] else ""}, {v("adresse","adresse")}, Bénin.</p>
+{('<p>Identifiant fiscal / registre : ' + html.escape(INFO["ifu_rccm"]) + '.</p>') if INFO["ifu_rccm"] else ""}
 <p>Contact : {CONTACT}.</p>
 <h2>Hébergement</h2>
 <p>Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com). Le nom de domaine est enregistré auprès de Hostinger.</p>
@@ -118,7 +118,7 @@ footer a{{color:var(--mut)}}
 </div></body></html>
 """
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-missing = [k for k,x in INFO.items() if not x]
+missing = [k for k,x in INFO.items() if not x and k not in ("statut","ifu_rccm","whatsapp")]
 for slug,(title,body) in PAGES.items():
     open(os.path.join(root, slug + ".html"), "w").write(TPL.format(title=title, maj=MAJ, body=body.strip()))
 print("pages générées ; infos manquantes :", ", ".join(missing) or "aucune")
