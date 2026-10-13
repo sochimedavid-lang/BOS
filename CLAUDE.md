@@ -238,6 +238,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 - **Visuels avec des personnes : uniquement des personnes afro / africaines** (marché Bénin–Côte d'Ivoire), visages visibles de préférence ; vérifier chaque photo avant de l'utiliser. Ajouté le 2026-10-13 à la demande de l'entrepreneur.
 - **Ne jamais supposer les prérequis ou le contenu de la formation Vibe Motion** : les vérifier dans `Core/Business.md` (section Prérequis) et demander si l'info manque. La formation se fait **depuis un téléphone** (Claude + dépôt GitHub), pas besoin d'ordinateur. Ajouté le 2026-10-13 après une section « pour qui » qui excluait à tort les personnes sans ordinateur.
 - **Pubs de Vibe Motion (ses propres pubs) : valider les textes avec l'entrepreneur AVANT de générer la voix et de produire.** La règle « lancer directement » vaut pour les vidéos de portfolio, pas pour les pubs qui portent son offre. Ajouté le 2026-10-13 après « on doit s'entendre sur les textes d'abord ».
+- **Pubs Vibe Motion : pleine image par défaut, sans contrainte de zones sûres Reels** (visuels grands, sur tout l'écran). Chaque pub se décline en deux styles à tester : motion sombre « pleine image » et gabarit « récit » (style Eden Food). Ajouté le 2026-10-13 : l'entrepreneur préfère les versions sans restriction d'espace et veut tester les deux styles.
 
 ## Ton
 
