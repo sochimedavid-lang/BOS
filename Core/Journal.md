@@ -117,3 +117,4 @@
 ### 2026-10-13 · Site : section Exemples avec les 11 vidéos
 - Ajout de toutes les vidéos produites (SERVTHEM chic et v1 marquées « VRAI CLIENT » : SERVTHEM appartient à une amie de l'entrepreneur, accord pour l'utiliser sur le site), Sikaflow, Rempart, Eden récit, Motion/Lab, STOPSCROLL, Noël, Eden Studio, Miroir, Menu maquis. Médias 720p dans `Output/site/media/`, aperçu autonome `Output/site/apercu.html` (8,8 Mo).
 - Référence n°8 (pub Kenetik d'un autre studio) envoyée pour le site : non ajoutée, car ce n'est pas notre création. Proposé d'en faire notre propre version.
+- Site : les maquettes CSS (Chez Maman Rose, -30 %, menu, inauguration, statut, chiffres) remplacées partout par les vraies vidéos : lecteur du haut qui enchaîne 5 vidéos (son au toucher), démonstration = cas SERVTHEM (vraie vidéo livrée), 3 téléphones « Pourquoi 9 900 F » = Sikaflow, Eden récit, Rempart. Section « Les 6 formats » supprimée à la demande de l'entrepreneur.

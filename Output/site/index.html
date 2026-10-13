@@ -135,6 +135,11 @@ h1{font-size:clamp(32px,6vw,60px);font-weight:800;max-width:860px;margin:0 auto}
 .screen .demo{position:absolute;inset:0;border-radius:0;aspect-ratio:auto;opacity:0;transition:opacity .6s}
 .screen .demo.on{opacity:1}
 .screen .demo .lbl{bottom:64px}
+.demo.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.demo.vid .snd{position:absolute;right:10px;bottom:10px;z-index:6;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.demo.vid .snd.on{background:var(--acc)}
+.demo .ai.cl{background:var(--acc);border-color:var(--acc)}
+.vsl{cursor:pointer}
 .screen video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:8}
 .vsl{position:absolute;left:12px;right:12px;bottom:12px;z-index:9;display:flex;align-items:center;gap:10px;background:rgba(14,12,10,.82);backdrop-filter:blur(10px);border:1px solid var(--line2);border-radius:14px;padding:9px 11px;font-size:12px;color:var(--mut)}
 .vsl i{width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:var(--acc);display:grid;place-items:center;color:#fff;font-style:normal;font-size:12px}
@@ -306,13 +311,8 @@ footer .disc2 b{color:var(--text)}
   <div class="hero-grid">
     <div class="panel player rv">
       <div class="screen" id="screen">
-<div class="demo d-logo"><span class="ai">CRÉÉ AVEC L'IA</span><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><text class="mono" x="70" y="86" text-anchor="middle">R</text></svg><div class="name">CHEZ MAMAN ROSE</div><span class="lbl">Logo animé</span></div>
-<div class="demo d-promo"><span class="ai">CRÉÉ AVEC L'IA</span><div class="burst"></div><div class="pct">-30%</div><div class="sub">Ce week-end seulement</div><span class="lbl">Promo</span></div>
-<div class="demo d-menu"><span class="ai">CRÉÉ AVEC L'IA</span><h4>Menu du jour</h4><small>MAQUIS LE BON GOÛT</small><div class="it">Amiwo poulet<b>3 000 F</b></div><div class="it i2">Pâte rouge<b>1 500 F</b></div><div class="it i3">Atassi<b>1 000 F</b></div><div class="it i4">Poisson braisé<b>2 500 F</b></div><span class="lbl">Menu animé</span></div>
-<div class="demo d-open"><span class="ai">CRÉÉ AVEC L'IA</span><i></i><i></i><i></i><i></i><i></i><div class="l"><span>Grande</span></div><div class="l l2"><span>Ouverture</span></div><div class="date">Samedi · Cotonou</div><span class="lbl">Inauguration</span></div>
-<div class="demo d-story"><span class="ai">CRÉÉ AVEC L'IA</span><div class="bars"><span></span><span></span><span></span></div><div class="who"><b></b>Salon Élégance</div><div class="txt">Nouvelles tresses<br><span>dispo dès demain</span></div><span class="lbl">Statut WhatsApp</span></div>
-<div class="demo d-stats"><span class="ai">CRÉÉ AVEC L'IA</span><div class="t">Transfert Express<br>Bilan du trimestre</div><div class="bar b1">Jan</div><div class="bar b2">Fév</div><div class="bar b3">Mar</div><span class="lbl">Chiffres clés</span></div>
-        <div class="vsl" id="vslHint"><i>▶</i><div><b>Vidéo de présentation</b>Exemples créés avec l'IA</div></div>
+        <video id="heroVid" src="media/pub-servthem-chic.mp4" poster="media/pub-servthem-chic.jpg" muted playsinline preload="metadata"></video>
+        <div class="vsl" id="vslHint"><i id="heroSnd">🔇</i><div><b id="heroLbl">Pub restaurant · vrai client</b>Touche pour écouter le son</div></div>
       </div>
     </div>
     <div class="panel inc rv" style="text-align:left">
@@ -359,16 +359,16 @@ footer .disc2 b{color:var(--text)}
     <div class="phone rv">
       <div class="hd">Toi → Claude</div>
       <div class="chat" id="chat">
-        <div class="bub me">Crée un logo animé pour le restaurant « Chez Maman Rose ». Couleurs orange, style élégant, format vertical pour les statuts WhatsApp.</div>
+        <div class="bub me">Fais une pub vidéo chic pour SERVTHEM, le restaurant de mon amie. Style élégant, vert et or, format vertical pour Instagram et WhatsApp.</div>
         <div class="bub ai"><span class="typing"><i></i><i></i><i></i></span></div>
-        <div class="bub ai">C'est prêt ✓ J'ai créé un cercle qui se dessine, l'initiale <b>R</b> et le nom qui apparaît en fondu. <b>Export : chez-maman-rose.mp4</b></div>
-        <div class="bub me">Parfait ! Ajoute une musique douce.</div>
+        <div class="bub ai">C'est prêt ✓ Titre « <b>Le goût du service</b> » animé, couleurs de la marque, musique et bruitages calés. <b>Export : servthem.mp4</b></div>
+        <div class="bub me">Parfait ! Je l'envoie tout de suite.</div>
       </div>
     </div>
     <div class="arrow rv">Résultat<b>→</b></div>
     <div class="phone rv">
       <div class="hd">Vidéo livrée au client</div>
-<div class="demo d-logo"><span class="ai">CRÉÉ AVEC L'IA</span><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><text class="mono" x="70" y="86" text-anchor="middle">R</text></svg><div class="name">CHEZ MAMAN ROSE</div><span class="lbl">Logo animé</span></div>
+<div class="demo vid"><video data-auto src="media/pub-servthem-chic.mp4" poster="media/pub-servthem-chic.jpg" muted loop playsinline preload="none"></video><span class="ai cl">VRAI CLIENT</span><button class="snd" aria-label="Activer le son">🔇</button></div>
     </div>
   </div>
   <div class="cta-row"><a class="btn js-buy" href="#">Accéder maintenant</a></div>
@@ -395,9 +395,9 @@ footer .disc2 b{color:var(--text)}
     <div class="brand" style="padding:0"><div class="avatar"><div class="js-avatar">M</div></div><div style="text-align:left"><b class="js-brand">Vibe Motion</b><small>Formation · Bénin</small></div></div>
     <h2 class="rv" style="margin-top:18px">Pourquoi tout ça <em>pour 9 900 F ?</em></h2>
     <div class="phones">
-<div class="demo d-promo"><span class="ai">CRÉÉ AVEC L'IA</span><div class="burst"></div><div class="pct">-30%</div><div class="sub">Ce week-end seulement</div><span class="lbl">Promo</span></div>
-<div class="demo d-menu"><span class="ai">CRÉÉ AVEC L'IA</span><h4>Menu du jour</h4><small>MAQUIS LE BON GOÛT</small><div class="it">Amiwo poulet<b>3 000 F</b></div><div class="it i2">Pâte rouge<b>1 500 F</b></div><div class="it i3">Atassi<b>1 000 F</b></div><div class="it i4">Poisson braisé<b>2 500 F</b></div><span class="lbl">Menu animé</span></div>
-<div class="demo d-story"><span class="ai">CRÉÉ AVEC L'IA</span><div class="bars"><span></span><span></span><span></span></div><div class="who"><b></b>Salon Élégance</div><div class="txt">Nouvelles tresses<br><span>dispo dès demain</span></div><span class="lbl">Statut WhatsApp</span></div>
+<div class="demo vid"><video data-auto src="media/pub-sikaflow.mp4" poster="media/pub-sikaflow.jpg" muted loop playsinline preload="none"></video></div>
+<div class="demo vid"><video data-auto src="media/pub-eden-recit.mp4" poster="media/pub-eden-recit.jpg" muted loop playsinline preload="none"></video></div>
+<div class="demo vid"><video data-auto src="media/pub-rempart.mp4" poster="media/pub-rempart.jpg" muted loop playsinline preload="none"></video></div>
     </div>
     <p class="rv">Tu te demandes sûrement où est le piège. Il n'y en a pas.</p>
     <p class="rv">Je lance Vibe Motion. Je veux mes <strong>100 premiers élèves</strong> et surtout leurs résultats : leurs premières vidéos, leurs premiers clients. C'est pour ça que le prix est aussi bas au lancement.</p>
@@ -425,15 +425,6 @@ footer .disc2 b{color:var(--text)}
     <div class="reel"><video src="media/menu-maquis.mp4" poster="media/menu-maquis.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Menu animé</span></div>
   </div>
   <p class="reels-cap">11 vidéos, toutes faites avec Claude et la méthode de la formation. Touche 🔇 pour écouter le son.</p>
-  <p class="bento-h rv">Les 6 formats que tu vas apprendre</p>
-  <div class="bento" style="text-align:left;margin-top:20px">
-<div class="demo d-logo"><span class="ai">CRÉÉ AVEC L'IA</span><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><text class="mono" x="70" y="86" text-anchor="middle">R</text></svg><div class="name">CHEZ MAMAN ROSE</div><span class="lbl">Logo animé</span></div>
-<div class="demo d-promo"><span class="ai">CRÉÉ AVEC L'IA</span><div class="burst"></div><div class="pct">-30%</div><div class="sub">Ce week-end seulement</div><span class="lbl">Promo</span></div>
-<div class="demo d-menu"><span class="ai">CRÉÉ AVEC L'IA</span><h4>Menu du jour</h4><small>MAQUIS LE BON GOÛT</small><div class="it">Amiwo poulet<b>3 000 F</b></div><div class="it i2">Pâte rouge<b>1 500 F</b></div><div class="it i3">Atassi<b>1 000 F</b></div><div class="it i4">Poisson braisé<b>2 500 F</b></div><span class="lbl">Menu animé</span></div>
-<div class="demo d-open"><span class="ai">CRÉÉ AVEC L'IA</span><i></i><i></i><i></i><i></i><i></i><div class="l"><span>Grande</span></div><div class="l l2"><span>Ouverture</span></div><div class="date">Samedi · Cotonou</div><span class="lbl">Inauguration</span></div>
-<div class="demo d-story"><span class="ai">CRÉÉ AVEC L'IA</span><div class="bars"><span></span><span></span><span></span></div><div class="who"><b></b>Salon Élégance</div><div class="txt">Nouvelles tresses<br><span>dispo dès demain</span></div><span class="lbl">Statut WhatsApp</span></div>
-<div class="demo d-stats"><span class="ai">CRÉÉ AVEC L'IA</span><div class="t">Transfert Express<br>Bilan du trimestre</div><div class="bar b1">Jan</div><div class="bar b2">Fév</div><div class="bar b3">Mar</div><span class="lbl">Chiffres clés</span></div>
-  </div>
 </section>
 
 <!-- ================= PROGRAMME ================= -->
@@ -622,24 +613,28 @@ if(CONFIG.avatarUrl)document.querySelectorAll("#avatar,.js-avatar").forEach(d=>d
 
 // Lecteur : vidéo de présentation ou défilé des exemples
 const screen=document.getElementById("screen");
-const demos=[...screen.querySelectorAll(".demo")];
+const HERO=[["pub-servthem-chic","Pub restaurant · vrai client"],["pub-sikaflow","Pub appli"],["pub-rempart","Pub tech"],["pub-eden-recit","Récit de marque"],["pub-motion-lab","Pub agence"]];
 if(CONFIG.vslUrl){
   const v=document.createElement("video");Object.assign(v,{src:CONFIG.vslUrl,autoplay:true,muted:true,loop:true,playsInline:true});
-  screen.appendChild(v);document.getElementById("vslHint").remove();
+  screen.innerHTML="";screen.appendChild(v);
   const u=document.createElement("div");u.className="unmute";u.innerHTML="La vidéo a commencé<span>🔇</span>Clique pour écouter";
   u.onclick=()=>{v.muted=false;v.currentTime=0;v.play();u.remove();};screen.appendChild(u);
 } else {
-  let k=0;demos[0].classList.add("on");
-  if(!STATIC)setInterval(()=>{demos[k].classList.remove("on");k=(k+1)%demos.length;demos[k].classList.add("on");},4000);
+  const hv=document.getElementById("heroVid"),hs=document.getElementById("heroSnd"),hl=document.getElementById("heroLbl");let h=0;
+  const M=window.MEDIA||{},src=f=>M[f]||"media/"+f;
+  const load=k=>{h=k;hv.src=src(HERO[k][0]+".mp4");hv.poster=src(HERO[k][0]+".jpg");hl.textContent=HERO[k][1];if(!STATIC)hv.play().catch(()=>{});};
+  hv.addEventListener("ended",()=>load((h+1)%HERO.length));
+  if(!STATIC)hv.play().catch(()=>{});
+  document.getElementById("vslHint").addEventListener("click",()=>{hv.muted=!hv.muted;hs.textContent=hv.muted?"🔇":"🔊";if(!hv.muted){document.querySelectorAll("video[data-auto],.reel video").forEach(o=>o.muted=true);document.querySelectorAll(".reel .snd, .demo.vid .snd").forEach(x=>{x.classList.remove("on");x.textContent="🔇";});hv.play().catch(()=>{});}});
 }
 
 // Exemples vidéo : lecture muette quand visibles, son au toucher (un seul à la fois)
-const reels=[...document.querySelectorAll(".reel video")];
+const reels=[...document.querySelectorAll(".reel video, video[data-auto]")];
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.play().catch(()=>{});}else{e.target.pause();}}),{threshold:.35}):null;
 reels.forEach(v=>{if(io&&!STATIC)io.observe(v);});
-document.querySelectorAll(".reel .snd").forEach(b=>b.addEventListener("click",()=>{
+document.querySelectorAll(".reel .snd, .demo.vid .snd").forEach(b=>b.addEventListener("click",()=>{
   const v=b.parentNode.querySelector("video"),on=v.muted;
-  reels.forEach(o=>{o.muted=true;});document.querySelectorAll(".reel .snd").forEach(x=>{x.classList.remove("on");x.textContent="🔇";});
+  reels.forEach(o=>{o.muted=true;});const hv0=document.getElementById("heroVid");if(hv0){hv0.muted=true;const hs0=document.getElementById("heroSnd");if(hs0)hs0.textContent="🔇";}document.querySelectorAll(".reel .snd, .demo.vid .snd").forEach(x=>{x.classList.remove("on");x.textContent="🔇";});
   if(on){v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.classList.add("on");b.textContent="🔊";}
 }));
 
@@ -655,7 +650,6 @@ if(!STATIC&&window.gsap){
   gsap.registerPlugin(ScrollTrigger);
   gsap.from("header .rv",{y:30,opacity:0,duration:.9,ease:"power3.out",stagger:.07});
   gsap.utils.toArray("section .rv").forEach(el=>gsap.from(el,{y:40,opacity:0,duration:.9,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 90%"}}));
-  gsap.from(".bento .demo",{y:50,opacity:0,stagger:.07,duration:.9,ease:"power3.out",scrollTrigger:{trigger:".bento",start:"top 85%"}});
   document.querySelectorAll(".stat b[data-n]").forEach(b=>{const n=+b.dataset.n,suf=b.textContent.replace(/[0-9]/g,""),o={v:0};gsap.to(o,{v:n,duration:1.4,ease:"power2.out",scrollTrigger:{trigger:b,start:"top 95%"},onUpdate:()=>b.textContent=Math.round(o.v)+suf});});
   // Conversation : bulles qui apparaissent une à une
   const bubs=[...document.querySelectorAll("#chat .bub")];
