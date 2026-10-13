@@ -1,0 +1,20 @@
+{
+  "total": 24.0,
+  "voice": {
+    "file": "audio/voix.mp3",
+    "start": 0.3
+  },
+  "music": {
+    "preset": "pulse",
+    "bpm": 120,
+    "sections": [
+      [
+        0,
+        24.0,
+        "full"
+      ]
+    ]
+  },
+  "sfx": [],
+  "out": "audio/mix.wav"
+}
