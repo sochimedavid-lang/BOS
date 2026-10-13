@@ -138,3 +138,5 @@
 - DNS : CNAME www → 979eb6291df8c4ac.vercel-dns-017.com (valeur recommandée par Vercel pour le projet).
 - Pages légales complétées : éditeur « Vibe Motion », Cotonou, contact risenofm@gmail.com (pas de WhatsApp ni d'IFU, choix de l'entrepreneur). Bouton Contact du site → e-mail.
 - Site : lecteur du haut commence par Sikaflow puis Eden récit. Galerie et téléphones : versions légères 540p (-40 % de poids) + préchargement ~1 écran avant d'arriver sur la vidéo, lecture dès 20 % visible.
+- Prix Chariow confirmé à 2 900 F par l'entrepreneur. Site prêt pour le lancement. Prochaine action : statut WhatsApp + message privé à 10 contacts.
+- Incohérence repérée : le guide PDF livré dit « il faut un ordinateur » (Node, FFmpeg, appli Claude bureau) alors que le site promet « tout depuis ton téléphone ». À corriger avant les premières ventes.

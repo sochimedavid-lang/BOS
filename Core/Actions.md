@@ -16,7 +16,8 @@
 | 3 | **Produit Chariow + lien de paiement** | Toi | Encaisser | Mar 13 | ✓ Fait (prd_zqv7lcu4) — reste : lien WhatsApp dans le message post-achat |
 | 4 | **Envoyer : méthode exacte MoMo, preuves + accord, contact support (lien communauté ✓ reçu)** | Toi (15 min) | Module 0 + section preuves + contact | Mar 13 | À faire |
 | 5 | **3 scripts de pub conformes Meta (angle « créé sans savoir monter »)** | BOS | Trafic | Mar 13 | À faire |
-| 6 | Mettre le site en ligne (Netlify Drop) + pixel Meta | Toi, quand TU valides la page | Page publique | — | En attente de ta validation |
+| 6 | Mettre le site en ligne + pixel Meta | Toi + BOS | Page publique | — | ✓ En ligne sur www.vibemotionafrica.com (Vercel + domaine Hostinger) ; reste : pixel Meta |
+| 6b | **Guide PDF : ajouter le parcours 100 % téléphone (Claude Code web + GitHub) + contact risenofm@gmail.com** | BOS | Le site promet « depuis ton téléphone » mais le guide dit « il faut un ordinateur » → risque de remboursements | Avant la 1re vente | À faire |
 | 7 | Lancer la campagne Meta, Bénin, budget test | Toi (45 min, guidé) | Premières ventes + métriques | Mer 14 | À faire |
 | 8 | Modules 2 à 5 | BOS écrit / Toi enregistres | Livraison | Dim 18 | À faire |
 
