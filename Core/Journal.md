@@ -39,3 +39,6 @@
 - Vérifié : install Claude Code (docs officielles), Claude Pro requis pour Claude Code, Bénin et CI dans les pays supportés, carte virtuelle MoMo Card MTN Bénin (CG déc. 2025), commande skills Remotion `npx skills add remotion-dev/skills`.
 - À compléter : lien communauté WhatsApp + contact support (repères rouges dans le PDF).
 - Guide basculé de Remotion vers HyperFrames (demande de l'entrepreneur : c'est l'outil qu'il a testé). Prérequis ajoutés : Node 22+, FFmpeg, `npx skills add heygen-com/hyperframes`, `npx hyperframes browser ensure`, preview/render. Sources : quickstart + GitHub HyperFrames.
+
+## 2026-10-13 — Paiement branché
+- Produit Chariow créé : https://peryal.mychariow.shop/prd_zqv7lcu4/checkout (boutique « peryal »). Branché sur tous les boutons de la page de vente (lien direct plutôt que widget, pour garder le design).

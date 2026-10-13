@@ -11,7 +11,7 @@
 |---|--------|-----|----------|----------|--------|
 | 1 | **Écrire le script de la vidéo de présentation (2 min) → la tourner** | BOS écrit / Toi tournes (15 min) | Plus gros levier de conversion de la page | Mar 13 | À faire |
 | 2 | **Guide PDF complet (modules 0-5 + bonus)** | BOS ✓ / Toi : donner lien WhatsApp + contact | Livré par Chariow à l'achat | Mar 13 | Presque fini |
-| 3 | **Créer le produit sur Chariow + lien de paiement + redirection communauté WhatsApp** | Toi (30 min) | Encaisser | Mar 13 | À faire |
+| 3 | **Produit Chariow + lien de paiement** | Toi | Encaisser | Mar 13 | ✓ Fait (prd_zqv7lcu4) — reste : lien WhatsApp dans le message post-achat |
 | 4 | **Envoyer : méthode exacte de paiement Claude via MTN MoMo, preuves + accord, numéro WhatsApp** | Toi (15 min) | Module 0 + section preuves + contact | Mar 13 | À faire |
 | 5 | **3 scripts de pub conformes Meta (angle « créé sans savoir monter »)** | BOS | Trafic | Mar 13 | À faire |
 | 6 | Mettre le site en ligne (Netlify Drop) + pixel Meta | Toi (10 min, guidé) | Page publique | Mer 14 | À faire |
