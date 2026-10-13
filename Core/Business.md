@@ -8,7 +8,7 @@
 - Apprendre à créer des vidéos motion design avec Claude (Remotion + skills officielles), puis vendre ce service aux entreprises locales (contrats 50 000 – 500 000 FCFA d'après l'entrepreneur).
 - Contenu voulu : payer Claude, installer skills, produire du motion, prospecter, pitcher.
 - Spec complète : `Output/2026-10-12_Offre_Formation_Motion_IA.md`
-- Prix décidé (12/10) : 9 900 FCFA. **Modifié le 13/10 par l'entrepreneur : 2 900 FCFA** prix de lancement jusqu'au 18/10, puis 15 000 FCFA (plafond fixé par l'entrepreneur). À répercuter dans Chariow. Devient de fait un low ticket : la marge viendra d'une offre complémentaire.
+- Prix décidé (12/10) : 9 900 FCFA. **Modifié le 13/10 par l'entrepreneur : 2 900 FCFA pour les 50 premiers élèves, ensuite 10 000 FCFA.** À répercuter dans Chariow (prix + passage à 10 000 F au 51e acheteur). Devient de fait un low ticket : la marge viendra d'une offre complémentaire.
 - Funnel décidé : pub → page de vente (site) → paiement Chariow → accès + communauté WhatsApp. Pas de closing WhatsApp.
 - Page de vente V1 : `Output/site/index.html`
 
