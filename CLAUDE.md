@@ -236,6 +236,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 - **Page / site à montrer : toujours un seul fichier HTML autonome (médias intégrés) envoyé en affichage direct dans la conversation**, jamais de zip ni de dossier à décompresser tant que l'entrepreneur n'a pas dit « on héberge ». Ajouté le 2026-10-13 après l'envoi d'un zip alors qu'il voulait visionner directement.
 - **Production vidéo : vitesse par défaut sans baisser la qualité.** Lancer directement avec la recommandation de BOS (texte, voix, marque) et laisser l'entrepreneur corriger après, plutôt que d'attendre une validation à chaque étape ; utiliser le kit `motion-kit` ; 30 i/s par défaut (60 seulement si demandé) ; un seul rendu final, vérifications sur captures avant. Ajouté le 2026-10-13 après la remarque « ça te prend beaucoup de temps ».
 - **Visuels avec des personnes : uniquement des personnes afro / africaines** (marché Bénin–Côte d'Ivoire), visages visibles de préférence ; vérifier chaque photo avant de l'utiliser. Ajouté le 2026-10-13 à la demande de l'entrepreneur.
+- **Ne jamais supposer les prérequis ou le contenu de la formation Vibe Motion** : les vérifier dans `Core/Business.md` (section Prérequis) et demander si l'info manque. La formation se fait **depuis un téléphone** (Claude + dépôt GitHub), pas besoin d'ordinateur. Ajouté le 2026-10-13 après une section « pour qui » qui excluait à tort les personnes sans ordinateur.
 
 ## Ton
 

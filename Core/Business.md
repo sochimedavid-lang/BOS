@@ -50,3 +50,8 @@ Solo (+ éventuellement la personne qui détient les preuves).
 
 ## Clients / exemples réels
 - **SERVTHEM** (restaurant, amie de l'entrepreneur) : 2 vidéos faites (v1 et chic). Accord pour les montrer sur le site comme résultat réel.
+
+
+## Prérequis de la formation (précisé par l'entrepreneur le 13/10)
+- **Un téléphone suffit** : tout se fait depuis le téléphone (Claude + dépôt GitHub). Un ordinateur marche aussi. C'est un argument central : la cible n'a souvent qu'un téléphone.
+- Abonnement Claude (~12 000 F/mois, payable via MTN MoMo) + connexion internet.
