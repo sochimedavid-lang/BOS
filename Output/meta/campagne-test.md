@@ -23,7 +23,7 @@ Miniatures : https://www.vibemotionafrica.com/media/ads/<nom>.jpg
 - Optimisation : **InitiateCheckout** (clic « Accéder » sur le site). Passage à Purchase quand ~10 achats/semaine remontent.
 - Ciblage : Bénin + Côte d'Ivoire, 18-35 ans, large (Advantage+), placements automatiques.
 - Lien : https://www.vibemotionafrica.com — bouton « En savoir plus ».
-- Budget : **à confirmer par l'entrepreneur** (proposition : 8 $/jour × 4 jours).
+- Budget : **8 $/jour, budget quotidien au niveau campagne, diffusion continue (sans date de fin)** — validé le 13/10.
 
 ## Textes proposés (à valider)
 **Texte principal (commun aux 7 pubs)**
@@ -44,3 +44,40 @@ Miniatures : https://www.vibemotionafrica.com/media/ads/<nom>.jpg
 4. Ton premier client payant
 
 **Description** : 2 900 F · 50 premiers élèves
+
+## Brouillon créé dans Ads Manager (13/10) — en attente du feu vert
+- Campagne 52642750335687 « VM · Test 1 · Ventes · BJ+CI » — 8 $/jour, coût le plus bas, sans date de fin.
+- Ensemble 52642750341887 « BJ+CI · 18-35 · Large · InitiateCheckout ».
+- 7 pubs validées, texte A, sans erreur :
+  | Pub | ad_id |
+  |---|---|
+  | Pub1 Flyer · pleine image | 52642750633887 |
+  | Pub1 Flyer · récit | 52642750661087 |
+  | Pub2 Phrase · pleine image | 52642750661887 |
+  | Pub2 Phrase · récit | 52642750663687 |
+  | Pub3 Opportunité · pleine image | 52642750664887 |
+  | Pub3 Opportunité · récit | 52642750668087 |
+  | Pub4 Méthode · plan-séquence | 52642750669487 |
+- 7 anciens brouillons en erreur (miniature déclarée deux fois) marqués « supprimés » : 52642750500687, …505487, …508287, …513687, …514287, …514487, …514687.
+- Le format multi-textes (MMU) n'est pas disponible sur ce compte : les textes B et C seront testés en vague 2 sur les 2 meilleures vidéos.
+
+## Textes B et C (à valider)
+**Texte B — angle « ton téléphone »**
+> Tu passes déjà des heures sur ton téléphone. Et si ces heures t'amenaient tes premiers clients ?
+>
+> Les restaurants, boutiques et salons autour de toi publient des flyers que personne ne regarde. Une vidéo animée, elle, arrête le scroll.
+>
+> Vibe Motion te montre comment créer ces vidéos avec l'IA, étape par étape, et comment les proposer aux commerces de ton quartier.
+>
+> 👉 Tout se fait depuis ton téléphone
+> 👉 Aucune expérience nécessaire
+> 👉 Ta première vidéo en 7 jours, ou remboursé
+>
+> 2 900 F au lieu de 10 000 F, réservé aux 50 premiers.
+
+**Texte C — court et direct**
+> Les commerces paient pour des pubs vidéo. Toi, tu peux les faire avec ton téléphone et l'IA.
+>
+> Vibe Motion : la méthode complète pour créer des pubs en motion design et décrocher ton premier client.
+>
+> 2 900 F · 50 places · Remboursé si tu n'as pas fait ta première vidéo en 7 jours.
