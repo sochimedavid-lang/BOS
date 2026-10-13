@@ -235,6 +235,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 - **Voix off : toujours une seule prise continue** (ElevenLabs par défaut, préféré à Gemini par l'entrepreneur), jamais des phrases générées séparément puis accélérées au cas par cas : le débit devient irrégulier. Pour caler, recaler l'animation sur les mots et n'ajouter que de courtes respirations aux changements de scène. Ajouté le 2026-10-13 après une version jugée « trop rapide puis d'un coup lente ».
 - **Page / site à montrer : toujours un seul fichier HTML autonome (médias intégrés) envoyé en affichage direct dans la conversation**, jamais de zip ni de dossier à décompresser tant que l'entrepreneur n'a pas dit « on héberge ». Ajouté le 2026-10-13 après l'envoi d'un zip alors qu'il voulait visionner directement.
 - **Production vidéo : vitesse par défaut sans baisser la qualité.** Lancer directement avec la recommandation de BOS (texte, voix, marque) et laisser l'entrepreneur corriger après, plutôt que d'attendre une validation à chaque étape ; utiliser le kit `motion-kit` ; 30 i/s par défaut (60 seulement si demandé) ; un seul rendu final, vérifications sur captures avant. Ajouté le 2026-10-13 après la remarque « ça te prend beaucoup de temps ».
+- **Visuels avec des personnes : uniquement des personnes afro / africaines** (marché Bénin–Côte d'Ivoire), visages visibles de préférence ; vérifier chaque photo avant de l'utiliser. Ajouté le 2026-10-13 à la demande de l'entrepreneur.
 
 ## Ton
 
