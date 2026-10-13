@@ -126,3 +126,4 @@
 - Site : « 6 formats » remplacé par « Les formats qui se vendent » (programme, inclus) ; chiffre clé « 6 formats » remplacé par « 11 vidéos d'exemple créées avec l'IA ».
 - Site : section « Est-ce que c'est pour toi ? » ajoutée après le programme (5 critères oui / 5 critères non, dont ordinateur obligatoire et abonnement Claude ~12 000 F/mois). À l'essai : l'entrepreneur décide de la garder ou non.
 - Correction de l'entrepreneur : la formation se fait depuis un téléphone (Claude + GitHub). Site corrigé (section pour qui + FAQ), Business.md et règle CLAUDE.md ajoutés.
+- Ligne « abonnement Claude » retirée de la section « pour qui » à la demande de l'entrepreneur (mention conservée dans la FAQ « Qu'est-ce qu'il me faut ? », en attente de sa décision).
