@@ -466,8 +466,8 @@ footer .disc2 b{color:var(--text)}
   <span class="tag">★ Pour qui</span>
   <h2 class="rv">Est-ce que c'est <em>pour toi ?</em></h2>
   <div class="fit">
-    <div class="col yes rv"><h3>C'est pour toi si…</h3><ul><li><i>✓</i><span>Tu veux apprendre une compétence qui se vend, sans diplôme ni expérience en montage.</span></li><li><i>✓</i><span>Tu n'as qu'un téléphone : tout se fait depuis ton téléphone (un ordinateur marche aussi).</span></li><li><i>✓</i><span>Tu peux y consacrer 1 à 2 heures par jour.</span></li><li><i>✓</i><span>Tu veux des clients autour de toi : restaurants, boutiques, salons, créateurs, entreprises.</span></li><li><i>✓</i><span>Tu es prêt à montrer ton travail et à contacter des clients.</span></li></ul></div>
-    <div class="col no rv"><h3>Ce n'est pas pour toi si…</h3><ul><li><i>✕</i><span>Tu cherches à gagner de l'argent sans rien faire.</span></li><li><i>✕</i><span>Tu n'as pas de connexion internet régulière.</span></li><li><i>✕</i><span>Tu abandonnes au premier « non » d'un client.</span></li><li><i>✕</i><span>Tu veux apprendre After Effects ou Premiere Pro : ici, c'est l'IA qui fait le travail technique.</span></li></ul></div>
+    <div class="col yes rv"><h3>C'est pour toi si…</h3><ul><li><i>✓</i><span>Tu veux apprendre une compétence qui se vend, sans diplôme ni expérience en montage.</span></li><li><i>✓</i><span>Tu n'as qu'un téléphone : tout se fait depuis ton téléphone (un ordinateur marche aussi).</span></li><li><i>✓</i><span>Tu peux y consacrer environ 2 heures par jour.</span></li><li><i>✓</i><span>Tu veux des clients autour de toi : restaurants, boutiques, salons, créateurs, entreprises.</span></li><li><i>✓</i><span>Tu es prêt à montrer ton travail et à contacter des clients.</span></li></ul></div>
+    <div class="col no rv"><h3>Ce n'est pas pour toi si…</h3><ul><li><i>✕</i><span>Tu cherches à gagner de l'argent sans rien faire.</span></li><li><i>✕</i><span>Tu abandonnes au premier « non » d'un client.</span></li><li><i>✕</i><span>Tu veux apprendre After Effects ou Premiere Pro : ici, c'est l'IA qui fait le travail technique.</span></li></ul></div>
   </div>
 </section>
 
@@ -506,7 +506,6 @@ footer .disc2 b{color:var(--text)}
     <p class="rv">Il y a deux ans, faire une vidéo motion demandait After Effects, un ordinateur puissant et des mois d'apprentissage. Les agences facturaient cher parce que peu de gens savaient le faire.</p>
     <p class="rv">Aujourd'hui, l'IA écrit l'animation à ta place. La compétence rare est devenue accessible, mais très peu de gens le savent encore autour de toi.</p>
     <p class="strong rv">Ceux qui s'y mettent maintenant prennent les clients avant les autres.</p>
-    <p class="rv">L'argent facile n'existe pas : il faudra pratiquer et aller voir les entreprises. Mais tu as maintenant l'outil et la méthode.</p>
     <div class="cta-row"><a class="btn js-buy" href="#">Accéder maintenant</a></div>
   </div>
 </section>
@@ -524,12 +523,11 @@ footer .disc2 b{color:var(--text)}
   <span class="tag">Questions</span>
   <h2 class="rv">Questions fréquentes</h2>
   <div class="faq narrow">
-    <details><summary>Où est le piège ?</summary><p>Il n'y en a pas. Le prix est bas parce que c'est le lancement. Tu paies une fois, l'accès est à vie.</p></details>
-    <details><summary>Je n'y connais rien. C'est pour moi ?</summary><p>Oui. On part de zéro et on installe tout ensemble. C'est l'IA qui écrit l'animation ; toi, tu apprends à lui dire quoi faire.</p></details>
-    <details><summary>Qu'est-ce qu'il me faut ?</summary><p>Ton téléphone suffit (un ordinateur marche aussi), une connexion internet et un abonnement Claude (environ 12 000 F par mois, payable avec MTN Mobile Money : on te montre comment dans le module 0).</p></details>
-    <details><summary>Quand est-ce que j'ai accès ?</summary><p>Juste après le paiement : accès à la formation et lien de la communauté WhatsApp.</p></details>
-    <details><summary>J'ai peu de temps. Je peux le faire ?</summary><p>Oui. Tout est enregistré, tu avances à ton rythme. Compte environ 1 h par jour la première semaine pour faire ta première vidéo.</p></details>
-    <details><summary>Je suis sûr de gagner de l'argent ?</summary><p>Non, et méfie-toi de quiconque te le garantit. On te donne la compétence, la méthode et les modèles. Les résultats viennent de ce que tu en fais.</p></details>
+    <details name="faq"><summary>Où est le piège ?</summary><p>Il n'y en a pas. Le prix est bas parce que c'est le lancement. Tu paies une fois, l'accès est à vie.</p></details>
+    <details name="faq"><summary>Je n'y connais rien. C'est pour moi ?</summary><p>Oui. On part de zéro et on installe tout ensemble. C'est l'IA qui écrit l'animation ; toi, tu apprends à lui dire quoi faire.</p></details>
+    <details name="faq"><summary>Qu'est-ce qu'il me faut ?</summary><p>Un téléphone ou un ordinateur, une connexion internet et environ 2 h de disponibilité par jour.</p></details>
+    <details name="faq"><summary>Quand est-ce que j'ai accès ?</summary><p>Juste après le paiement : accès à la formation et lien de la communauté WhatsApp.</p></details>
+    <details name="faq"><summary>J'ai peu de temps. Je peux le faire ?</summary><p>Oui. Tout est enregistré, tu avances à ton rythme. Compte environ 2 h par jour pour avancer vite et faire ta première vidéo.</p></details>
   </div>
 </section>
 
@@ -657,6 +655,9 @@ if(CONFIG.vslUrl){
   if(!STATIC)hv.play().catch(()=>{});
   document.getElementById("vslHint").addEventListener("click",()=>{hv.muted=!hv.muted;hs.textContent=hv.muted?"🔇":"🔊";if(!hv.muted){document.querySelectorAll("video[data-auto],.reel video").forEach(o=>o.muted=true);document.querySelectorAll(".reel .snd, .demo.vid .snd").forEach(x=>{x.classList.remove("on");x.textContent="🔇";});hv.play().catch(()=>{});}});
 }
+
+// FAQ : une seule réponse ouverte à la fois
+document.querySelectorAll("details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)document.querySelectorAll("details").forEach(o=>{if(o!==d)o.open=false;});}));
 
 // Exemples vidéo : lecture muette quand visibles, son au toucher (un seul à la fois)
 const reels=[...document.querySelectorAll(".reel video, video[data-auto]")];
