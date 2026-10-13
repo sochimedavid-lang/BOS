@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #100E0C; --acc: #F4511E; --acc2: #FF7A45; --lime: #DDF247; --tx: #F6F1EA; --mut: #A39A8F;
+              --font: "Inter", sans-serif; --display: "Bricolage Grotesque", sans-serif; }
+      .display { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; }
+      .serif { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; }
+      .glow { position: absolute; border-radius: 50%; pointer-events: none; }
+      .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,236,214,.05) 2px, transparent 2px), linear-gradient(90deg, rgba(255,236,214,.05) 2px, transparent 2px); background-size: 90px 90px; }
+
+      /* sous-titres : bande basse de la zone sûre Reels */
+      #cap { top: 1450px; left: 60px; right: 60px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 60px; line-height: 1.15; color: #fff;
+             text-shadow: 0 3px 0 rgba(0,0,0,.55), 0 0 26px rgba(0,0,0,.85), 0 0 8px rgba(0,0,0,.9); }
+
+      /* S1 : flyer */
+      #fly { position: absolute; left: 190px; top: 330px; width: 700px; height: 1050px; border-radius: 22px; overflow: hidden; box-shadow: 0 40px 90px rgba(0,0,0,.6); }
+      #fly img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      #flyRing { position: absolute; left: 180px; top: 320px; width: 720px; height: 1070px; border-radius: 30px; border: 6px solid var(--acc); box-shadow: 0 0 60px rgba(244,81,30,.7), inset 0 0 40px rgba(244,81,30,.35); }
+      #views { position: absolute; left: 620px; top: 1290px; display: flex; align-items: center; gap: 12px; padding: 14px 26px; border-radius: 999px; background: rgba(20,18,16,.92); border: 2px solid rgba(255,255,255,.18); font-weight: 700; font-size: 40px; color: #fff; }
+      #stamp { position: absolute; left: 210px; top: 720px; width: 660px; text-align: center; font-family: var(--display); font-weight: 800; font-size: 165px; color: #FF5A4E; border: 10px solid #FF5A4E; border-radius: 20px; padding: 6px 0 14px; background: rgba(16,14,12,.55); letter-spacing: .02em; }
+
+      /* S2 : la vraie pub SERVTHEM en plein écran */
+      #s2v { position: absolute; inset: 0; }
+      #s2v video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #s2shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 62%, rgba(0,0,0,.6) 82%, rgba(0,0,0,.35) 100%); }
+      .tag { position: absolute; display: inline-flex; align-items: center; gap: 14px; padding: 16px 32px; border-radius: 999px; font-weight: 800; font-size: 40px; white-space: nowrap; }
+      .tag i { width: 16px; height: 16px; border-radius: 50%; background: currentColor; display: block; }
+      #tagMotion { left: 0; right: 0; margin: 0 auto; width: max-content; top: 230px; background: var(--acc); color: #fff; box-shadow: 0 16px 40px rgba(244,81,30,.45); }
+
+      /* S3 : téléphone + conversation */
+      #p3 { position: absolute; inset: 0; background: radial-gradient(800px 700px at 50% 45%, #2A1A12 0%, #100E0C 70%); }
+      #phone { position: absolute; left: 255px; top: 280px; width: 570px; height: 1130px; border-radius: 62px; background: #0B0A09; border: 12px solid #2B2723; box-shadow: 0 50px 110px rgba(0,0,0,.7), 0 0 0 2px rgba(255,255,255,.08); overflow: hidden; }
+      #phone .notch { position: absolute; left: 50%; top: 14px; width: 120px; height: 30px; margin-left: -60px; border-radius: 20px; background: #000; }
+      #phone .hd { position: absolute; left: 0; right: 0; top: 60px; height: 78px; display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 700; font-size: 32px; color: #EDE6DC; border-bottom: 2px solid rgba(255,255,255,.07); }
+      #phone .hd b { color: var(--acc2); font-size: 30px; }
+      #ask { position: absolute; right: 22px; top: 170px; width: 440px; min-height: 70px; padding: 20px 24px; border-radius: 28px 28px 6px 28px; background: #2E2A26; color: #F3EEE6; font-size: 29px; line-height: 1.35; font-weight: 500; }
+      #reply { position: absolute; left: 22px; top: 440px; color: #EDE6DC; font-size: 29px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+      #reply b { color: var(--acc2); font-size: 28px; }
+      #vidCard { position: absolute; left: 22px; top: 500px; width: 320px; height: 569px; border-radius: 18px; overflow: hidden; border: 2px solid rgba(255,255,255,.14); box-shadow: 0 20px 40px rgba(0,0,0,.6); }
+      #vidCard video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #dl { position: absolute; left: 360px; top: 1010px; padding: 14px 20px; border-radius: 16px; background: var(--acc); color: #fff; font-size: 26px; font-weight: 700; }
+      #tagIA { left: 20px; top: 340px; font-size: 46px; background: #fff; color: #161311; transform: rotate(-5deg); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+      #tagTel { left: 540px; top: 1300px; font-size: 46px; background: var(--lime); color: #161311; transform: rotate(4deg); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+
+      /* S4 : trois types de clients */
+      #p4 { position: absolute; inset: 0; background: radial-gradient(900px 800px at 50% 40%, #241812 0%, #100E0C 72%); }
+      .tile { position: absolute; top: 400px; width: 340px; height: 604px; border-radius: 24px; overflow: hidden; border: 3px solid rgba(255,255,255,.14); box-shadow: 0 30px 70px rgba(0,0,0,.55); }
+      .tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #t1 { left: 10px; } #t2 { left: 370px; } #t3 { left: 730px; }
+      .lab { position: absolute; top: 1040px; width: 340px; text-align: center; }
+      .lab span { display: inline-block; padding: 14px 30px; border-radius: 999px; background: #fff; color: #161311; font-weight: 800; font-size: 42px; }
+      #l1 { left: 10px; } #l2 { left: 370px; } #l3 { left: 730px; }
+      #days { position: absolute; left: 0; right: 0; top: 1170px; display: flex; justify-content: center; gap: 14px; }
+      .day { width: 120px; height: 120px; border-radius: 22px; background: #221E1A; border: 2px solid rgba(255,255,255,.12); display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; font-size: 28px; color: var(--mut); }
+      .day svg { width: 40px; height: 40px; margin-top: 2px; }
+
+      /* S5 : marque */
+      #p5 { position: absolute; inset: 0; background: radial-gradient(760px 760px at 50% 44%, rgba(244,81,30,.42) 0%, rgba(244,81,30,0) 70%), #100E0C; }
+      #brand { position: absolute; left: 0; right: 0; top: 500px; text-align: center; font-size: 170px; line-height: 1; }
+      #brand .display { text-transform: none; }
+      #brand .display { color: #fff; }
+      #brand .serif { color: var(--acc2); font-size: 190px; }
+      #k1 { position: absolute; left: 0; right: 0; top: 840px; text-align: center; }
+      #k2 { position: absolute; left: 0; right: 0; top: 1060px; text-align: center; }
+      .kw { font-size: 170px; text-transform: uppercase; color: #fff; }
+      #k2 .kw { background: var(--acc); padding: 0 .16em .04em; border-radius: .1em; }
+
+      /* S6 : prix + lien */
+      #p6 { position: absolute; inset: 0; background: radial-gradient(900px 700px at 50% 40%, #2B1710 0%, #100E0C 70%); }
+      #launch { left: 0; right: 0; margin: 0 auto; width: max-content; top: 420px; background: rgba(244,81,30,.16); color: var(--acc2); border: 2px solid rgba(244,81,30,.6); font-size: 34px; letter-spacing: .06em; }
+      #was { position: absolute; left: 0; right: 0; top: 550px; text-align: center; font-size: 46px; font-weight: 600; color: var(--mut); }
+      #was s { text-decoration-thickness: 4px; text-decoration-color: #FF5A4E; }
+      #price { position: absolute; left: 0; right: 0; top: 610px; text-align: center; font-size: 270px; line-height: 1.05; color: #fff; white-space: nowrap; }
+      #price em { font-style: normal; color: var(--acc2); }
+      #fifty { left: 0; right: 0; margin: 0 auto; width: max-content; top: 940px; background: var(--lime); color: #161311; font-size: 44px; }
+      #url { position: absolute; left: 70px; width: 940px; top: 1080px; padding: 26px 0; border-radius: 26px; background: #fff; color: #161311; text-align: center; font-weight: 800; font-size: 62px; letter-spacing: -.01em; box-shadow: 0 26px 60px rgba(0,0,0,.5); }
+      #wm { position: absolute; z-index: 40; left: 0; right: 0; top: 1330px; text-align: center; font-weight: 700; font-size: 32px; letter-spacing: .04em; color: rgba(246,241,234,.5); }
+      #arrow { position: absolute; left: 475px; top: 1260px; width: 130px; height: 130px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="24" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="24" data-track-index="10"></audio>
+
+      <!-- S1 : le flyer que personne ne regarde -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div class="grid"></div>
+        <div id="flyRing" data-layout-allow-overlap></div>
+        <div id="fly"><img src="img/flyer.jpg" alt="Flyer SERVTHEM" /></div>
+        <div id="views" data-layout-allow-overlap>
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 20L20 4" stroke="#FF5A4E"/></svg>
+          <span>0 vue</span>
+        </div>
+        <div id="stamp" data-layout-allow-overlap>IGNORÉ</div>
+      </div>
+
+      <!-- S2 : la même pub, en motion -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="s2v"><video id="v-serv1" class="clip" src="img/servthem.mp4" muted playsinline data-start="4" data-duration="3.1" data-media-start="5" data-track-index="1"></video></div>
+        <div id="s2shade"></div>
+        <div id="tagMotion" class="tag"><i></i>MOTION DESIGN</div>
+      </div>
+
+      <!-- S3 : faite avec l'IA, depuis un téléphone -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="p3"></div>
+        <div id="phone">
+          <div class="notch"></div>
+          <div class="hd"><b>✳</b>Claude</div>
+          <div id="ask"></div>
+          <div id="reply"><b>✳</b>Voilà ta pub :</div>
+          <div id="vidCard"><video id="v-serv2" class="clip" src="img/servthem.mp4" muted playsinline data-start="9" data-duration="1.95" data-media-start="20.6" data-track-index="2"></video></div>
+          <div id="dl">Télécharger</div>
+        </div>
+        <div id="tagIA" class="tag" data-layout-allow-overlap><i style="color:var(--acc)"></i>Faite avec l'IA</div>
+        <div id="tagTel" class="tag" data-layout-allow-overlap><i></i>Depuis un téléphone</div>
+      </div>
+
+      <!-- S4 : boutiques, restos, entreprises -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="p4"></div>
+        <div id="t1" class="tile"><video id="v-sika" class="clip" src="img/sikaflow.mp4" muted playsinline data-start="10.8" data-duration="4.15" data-media-start="0.4" data-track-index="3"></video></div>
+        <div id="t2" class="tile"><video id="v-eden" class="clip" src="img/eden-recit.mp4" muted playsinline data-start="10.8" data-duration="4.15" data-media-start="0.4" data-track-index="4"></video></div>
+        <div id="t3" class="tile"><video id="v-remp" class="clip" src="img/rempart.mp4" muted playsinline data-start="10.8" data-duration="4.15" data-media-start="0.4" data-track-index="5"></video></div>
+        <div id="l1" class="lab"><span>Boutiques</span></div>
+        <div id="l2" class="lab"><span>Restos</span></div>
+        <div id="l3" class="lab"><span>Entreprises</span></div>
+        <div id="days"></div>
+      </div>
+
+      <!-- S5 : Vibe Motion -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="p5"></div>
+        <div id="brand"><div class="m"><span id="brandIn"><span class="display">Vibe </span><span class="serif">Motion</span></span></div></div>
+        <div id="k1"><div class="m"><span id="k1t" class="display kw">Crée-les.</span></div></div>
+        <div id="k2"><div class="m"><span id="k2t" class="display kw">Vends-les.</span></div></div>
+      </div>
+
+      <!-- S6 : prix + lien -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="p6"></div>
+        <div id="launch" class="tag">PRIX DE LANCEMENT</div>
+        <div id="was">Valeur <s>25 000 F</s></div>
+        <div id="price" class="display">2 900 <em>F</em></div>
+        <div id="fifty" class="tag">Réservé aux 50 premiers élèves</div>
+        <div id="url">www.vibemotionafrica.com</div>
+        <svg id="arrow" viewBox="0 0 100 100" fill="none" stroke="#FF7A45" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M50 12v70M20 54l30 30 30-30"/></svg>
+      </div>
+
+      <div id="cap"></div>
+    </div>
+    <script>
+      const TOTAL = 24;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      MK.scenes(tl, [["#s1", 0, 4.5], ["#s2", 4.0, 7.05], ["#s3", 6.85, 10.85], ["#s4", 10.8, 15.25], ["#s5", 14.85, 18.75], ["#s6", 18.4, TOTAL]], TOTAL);
+
+      /* ---------- S1 : flyer ignoré ---------- */
+      gsap.set("#fly", { scale: 1.1, filter: "grayscale(0) brightness(1)" });
+      tl.to("#fly", { scale: 1, duration: 1.1, ease: E.card }, 0);
+      tl.to("#fly", { filter: "grayscale(1) brightness(0.5)", duration: 0.6, ease: "power2.out" }, 1.3);
+      tl.to("#fly", { y: -26, duration: 1.7, ease: "sine.inOut" }, 1.3);
+      MK.pop(tl, "#views", 1.6);
+      MK.stamp(tl, "#stamp", 2.2);
+      MK.shake(tl, "#fly", 2.25, 8);
+      // « la même pub » : le flyer reprend ses couleurs et s'allume
+      tl.to("#stamp", { opacity: 0, scale: 0.8, duration: 0.25 }, 3.03);
+      tl.to("#views", { opacity: 0, y: 20, duration: 0.25 }, 3.03);
+      tl.to("#fly", { filter: "grayscale(0) brightness(1)", y: 0, duration: 0.45, ease: "power2.out" }, 3.03);
+      gsap.set("#flyRing", { opacity: 0, scale: 0.94 });
+      tl.to("#flyRing", { opacity: 1, scale: 1, duration: 0.5, ease: E.ui }, 3.1);
+      tl.to(["#fly", "#flyRing"], { scale: 1.06, duration: 0.9, ease: "power1.in" }, 3.3);
+
+      /* ---------- S2 : en motion design, on s'arrête ---------- */
+      MK.circleIn(tl, "#s2", 3.95, { x: 540, y: 855, dur: 0.5 });
+      gsap.set("#s2v", { scale: 1.12 });
+      tl.to("#s2v", { scale: 1, duration: 1.2, ease: E.card }, 4.0);
+      MK.pop(tl, "#tagMotion", 4.55);
+      tl.to("#s2v", { scale: 1.07, duration: 0.12, ease: "power2.out" }, 6.06);
+      tl.to("#s2v", { scale: 1.03, duration: 0.5, ease: E.ui }, 6.18);
+      MK.shake(tl, "#s2v", 6.06, 10);
+
+      /* ---------- S3 : téléphone ---------- */
+      MK.wipeUp(tl, "#p3", 6.85, 0.3);
+      MK.slide(tl, "#phone", 6.95, { y: 1200, dur: 0.7 });
+      MK.type(tl, "#ask", "Crée une pub motion pour mon resto SERVTHEM : vert et or, ton chaleureux, 25 s.", 7.3, { cps: 52 });
+      MK.pop(tl, "#ask", 7.2, { from: 0.85, dur: 0.4 });
+      MK.fadeIn(tl, "#reply", 9.0, 0.2);
+      MK.pop(tl, "#vidCard", 9.15, { from: 0.6 });
+      MK.pop(tl, "#dl", 9.6, { from: 0.6 });
+      MK.pop(tl, "#tagIA", 9.21);
+      MK.pop(tl, "#tagTel", 10.1);
+      tl.to("#phone", { scale: 1.03, duration: 1.4, ease: "sine.inOut" }, 9.2);
+      tl.to(["#phone", "#tagIA", "#tagTel"], { opacity: 0, scale: 0.9, duration: 0.25, ease: "power2.in" }, 10.6);
+
+      /* ---------- S4 : trois clients, tous les jours ---------- */
+      const DAYS = ["L", "M", "M", "J", "V", "S", "D"];
+      const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="#DDF247" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+      DAYS.forEach((d, i) => MK.el("div", "day", "#days", `<span>${d}</span>${CHECK}`, {}).id = "d" + i);
+      MK.pop(tl, "#t1", 10.88, { from: 0.7 }); MK.pop(tl, "#l1", 10.98);
+      MK.pop(tl, "#t2", 11.72, { from: 0.7 }); MK.pop(tl, "#l2", 11.82);
+      MK.pop(tl, "#t3", 12.41, { from: 0.7 }); MK.pop(tl, "#l3", 12.51);
+      gsap.set("#days .day svg", { scale: 0, opacity: 0 });
+      MK.pop(tl, "#days .day", 13.3, { stagger: 0.04, from: 0.6 });
+      DAYS.forEach((_, i) => {
+        tl.to(`#d${i} svg`, { scale: 1, opacity: 1, duration: 0.3, ease: E.ui }, 13.95 + i * 0.09);
+        tl.to(`#d${i}`, { background: "#2C3311", borderColor: "rgba(221,242,71,.55)", color: "#DDF247", duration: 0.15 }, 13.95 + i * 0.09);
+      });
+      MK.pulse(tl, ["#t1", "#t2", "#t3"], [14.54], 1.04);
+
+      /* ---------- S5 : Vibe Motion, crée-les, vends-les ---------- */
+      MK.circleIn(tl, "#s5", 14.85, { x: 540, y: 1230, dur: 0.45 });
+      MK.rise(tl, "#brandIn", 15.05);
+      tl.to("#brand", { y: -10, duration: 3, ease: "sine.inOut" }, 15.2);
+      MK.rise(tl, "#k1t", 16.95);
+      MK.rise(tl, "#k2t", 17.85);
+      MK.pulse(tl, "#k2", [18.1], 1.05);
+
+      /* ---------- S6 : prix, 50 premiers, lien ---------- */
+      MK.wipeUp(tl, "#p6", 18.4, 0.3);
+      MK.pop(tl, "#launch", 18.5);
+      MK.stamp(tl, "#price", 18.68);
+      MK.fadeIn(tl, "#was", 19.3, 0.3);
+      MK.pop(tl, "#fifty", 20.0);
+      MK.pulse(tl, "#fifty", [20.34], 1.06);
+      MK.slide(tl, "#url", 20.99, { y: 50, dur: 0.5 });
+      MK.fadeIn(tl, "#url", 20.99, 0.2);
+      MK.pop(tl, "#arrow", 21.8);
+      for (let k = 0; k < 5; k++) {
+        tl.to("#arrow", { y: 26, duration: 0.22, ease: "power2.in" }, 22.1 + k * 0.38);
+        tl.to("#arrow", { y: 0, duration: 0.16, ease: "power2.out" }, 22.32 + k * 0.38);
+      }
+      MK.pulse(tl, "#url", [21.1, 23.3], 1.04);
+
+      /* ---------- sous-titres ---------- */
+      MK.captions(tl, "#cap", [
+        [0.35, "Ce flyer…"],
+        [1.29, "Personne ne le regarde."],
+        [3.03, "La même pub, en motion design…"],
+        [5.41, "Là, on s'arrête !"],
+        [7.03, "Et cette vidéo,"],
+        [8.07, "je l'ai faite avec l'IA,"],
+        [9.43, "depuis mon téléphone."],
+        [10.93, "Les boutiques,"],
+        [11.72, "les restos,"],
+        [12.41, "les entreprises"],
+        [13.3, "en ont besoin tous les jours."],
+        [14.97, "Avec Vibe Motion,"],
+        [16.05, "tu apprends à les créer…"],
+        [17.34, "et à les vendre."],
+        [18.68, "2 900 F pour les 50 premiers."],
+        [20.99, "Le lien est juste en dessous."],
+        [22.9, ""]
+      ]);
+
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

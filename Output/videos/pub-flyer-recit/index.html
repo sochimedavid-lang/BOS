@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600;1,700&family=Poppins:wght@500;600;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      /* gabarit « récit » d'Eden Food, aux couleurs de Vibe Motion */
+      :root { --bg: #F3ECE3; --ink: #1E1712; --acc: #E2451A; --acc2: #FF8A57; }
+      #root { background: var(--bg); }
+      .bgc { position: absolute; inset: 0; background: radial-gradient(900px 1100px at 50% 45%, #FCF8F3 0%, #F3ECE3 55%, #E4D8CB 100%); }
+      .pf { font-family: "Playfair Display", serif; font-style: italic; color: var(--ink); line-height: 1; white-space: nowrap; }
+      .sm { font-size: 48px; font-weight: 500; color: #5E534A; }
+      .big { font-weight: 700; }
+      .or { color: var(--acc); }
+      .leaf { position: absolute; filter: blur(5px); }
+      .card { position: absolute; border-radius: 44px; overflow: hidden; box-shadow: 0 50px 90px rgba(60,30,10,.35); }
+      .card img, .card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #flyer { left: 280px; top: 560px; width: 520px; height: 780px; }
+      #vcard { left: 280px; top: 560px; width: 520px; height: 780px; }
+      #phone { position: absolute; left: 325px; top: 500px; width: 430px; height: 880px; border-radius: 64px; background: #fff; padding: 16px; box-shadow: 0 50px 100px rgba(60,30,10,.38), inset 0 0 0 2px #E7DED4; }
+      #screen { position: relative; width: 100%; height: 100%; border-radius: 50px; overflow: hidden; background: #15110E; }
+      #screen .notch { position: absolute; left: 50%; top: 14px; width: 110px; height: 28px; margin-left: -55px; border-radius: 16px; background: #000; z-index: 2; }
+      #ask { position: absolute; right: 16px; top: 64px; width: 330px; min-height: 56px; padding: 14px 18px; border-radius: 22px 22px 6px 22px; background: #2E2A26; color: #F3EEE6; font-family: Poppins; font-size: 21px; line-height: 1.35; font-weight: 500; }
+      #pv { position: absolute; left: 16px; top: 220px; width: 340px; height: 604px; border-radius: 22px; overflow: hidden; }
+      #pv video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .k { left: 290px; top: 470px; width: 500px; height: 820px; }
+      .sig { font-family: Poppins; font-weight: 800; color: var(--ink); letter-spacing: -.02em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="24" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="24" data-track-index="10"></audio>
+      <div class="bgc" data-layout-allow-occlusion></div>
+
+      <!-- filigrane : le « play » de Vibe Motion -->
+      <svg id="wm" class="abs" style="left:90px; top:510px; opacity:.07" width="900" height="900" viewBox="0 0 24 24"><path d="M7 4.2 C 7 3.2, 8 2.7, 8.9 3.2 L 20 10.3 C 20.8 10.8, 20.8 12.2, 20 12.7 L 8.9 19.8 C 8 20.3, 7 19.8, 7 18.8 Z" fill="#E2451A"/></svg>
+
+      <!-- rubans orange -->
+      <svg id="rib" class="abs" style="left:0; top:0" width="1080" height="1920" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+        <path id="rb1" d="M-120 520 C 200 640, 420 760, 560 980 S 900 1300, 1220 1180" fill="none" stroke="#E2451A" stroke-width="64" stroke-linecap="round"/>
+        <path id="rb2" d="M-120 520 C 200 640, 420 760, 560 980 S 900 1300, 1220 1180" fill="none" stroke="#FF9A6B" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+      </svg>
+      <svg id="ribB" class="abs" style="left:0; top:0" width="1080" height="1920" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+        <path id="rc1" d="M1220 1740 C 940 1640, 720 1840, 520 1770 S 160 1640, -140 1760" fill="none" stroke="#E2451A" stroke-width="64" stroke-linecap="round"/>
+        <path id="rc2" d="M1220 1740 C 940 1640, 720 1840, 520 1770 S 160 1640, -140 1760" fill="none" stroke="#FF9A6B" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+      </svg>
+
+      <!-- le flyer, puis la vraie pub (objets qui traversent les scènes, comme le gobelet d'Eden) -->
+      <div id="flyer" class="card"><img src="img/flyer.jpg" alt="Flyer SERVTHEM" /></div>
+      <div id="vcard" class="card"><video id="v-card" src="img/servthem.mp4" muted playsinline data-start="3.6" data-duration="3.5" data-media-start="4.4" data-track-index="1"></video></div>
+      <div id="phone"><div id="screen"><div class="notch"></div><div id="ask"></div>
+        <div id="pv"><video id="v-phone" src="img/servthem.mp4" muted playsinline data-start="8.9" data-duration="2" data-media-start="20.2" data-track-index="2"></video></div>
+      </div></div>
+
+      <!-- 1. Ce flyer… personne ne le regarde. -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:300px; top:330px; transform:rotate(-6deg); transform-origin:0 0">
+          <div class="m" style="font-size:118px"><span id="a1" class="pf big" style="font-size:118px">Ce flyer…</span></div>
+        </div>
+        <div class="abs" style="left:150px; top:1430px; transform:rotate(-4deg); transform-origin:0 0">
+          <div class="m" style="font-size:48px"><span id="a2" class="pf sm">personne ne le</span></div>
+          <div class="m" style="font-size:132px"><span id="a3" class="pf big or" style="font-size:132px">regarde.</span></div>
+        </div>
+      </div>
+
+      <!-- 2. La même pub, en motion design… -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:0; right:0; top:420px; text-align:center">
+          <div class="m" style="font-size:52px"><span id="b1" class="pf sm" style="font-size:52px">La même pub,</span></div>
+        </div>
+        <div class="abs" style="left:0; right:0; top:1420px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="b2" class="pf sm">en</span></div>
+          <div class="m" style="font-size:120px"><span id="b3" class="pf big or" style="font-size:120px">motion design…</span></div>
+        </div>
+      </div>
+
+      <!-- 3. Là, on s'arrête. -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:150px; top:1440px; transform:rotate(-4deg); transform-origin:0 0">
+          <div class="m" style="font-size:52px"><span id="c1" class="pf sm" style="font-size:52px">Là,</span></div>
+          <div class="m" style="font-size:132px"><span id="c2" class="pf big" style="font-size:132px">on s'arrête.</span></div>
+        </div>
+      </div>
+
+      <!-- 4. Et cette vidéo, je l'ai faite avec l'IA, depuis mon téléphone. -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:0; right:0; top:200px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="d1" class="pf sm">Et cette vidéo,</span></div>
+          <div class="m" style="font-size:48px"><span id="d2" class="pf sm">je l'ai faite avec</span></div>
+          <div class="m" style="font-size:112px"><span id="d3" class="pf big or" style="font-size:112px">l'IA,</span></div>
+        </div>
+        <div class="abs" style="left:0; right:0; top:1440px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="d4" class="pf sm">depuis mon</span></div>
+          <div class="m" style="font-size:132px"><span id="d5" class="pf big" style="font-size:132px">téléphone.</span></div>
+        </div>
+      </div>
+
+      <!-- 5. Les boutiques, les restos, les entreprises en ont besoin tous les jours. -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion style="perspective:1600px">
+        <div class="abs" style="left:0; right:0; top:300px; text-align:center">
+          <div id="h1" class="pf" style="position:absolute; left:0; right:0; font-size:84px">les <b class="or">boutiques</b></div>
+          <div id="h2" class="pf" style="position:absolute; left:0; right:0; font-size:84px">les <b class="or">restos</b></div>
+          <div id="h3" class="pf" style="position:absolute; left:0; right:0; font-size:84px">les <b class="or">entreprises</b></div>
+        </div>
+        <div id="k1" class="card k"><video id="v-k1" src="img/sikaflow.mp4" muted playsinline data-start="10.75" data-duration="1.4" data-media-start="0.6" data-track-index="3"></video></div>
+        <div id="k2" class="card k"><video id="v-k2" src="img/eden-recit.mp4" muted playsinline data-start="11.5" data-duration="1.3" data-media-start="1.0" data-track-index="4"></video></div>
+        <div id="k3" class="card k"><video id="v-k3" src="img/rempart.mp4" muted playsinline data-start="12.2" data-duration="2.6" data-media-start="0.6" data-track-index="5"></video></div>
+        <div class="abs" style="left:0; right:0; top:1400px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="e1" class="pf sm">en ont besoin</span></div>
+          <div class="m" style="font-size:124px"><span id="e2" class="pf big" style="font-size:124px">tous les jours.</span></div>
+        </div>
+      </div>
+
+      <!-- 6. Avec Vibe Motion, tu apprends à les créer… et à les vendre. -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:170px; top:330px; transform:rotate(-5deg); transform-origin:0 0">
+          <div class="m" style="font-size:52px"><span id="f1" class="pf sm" style="font-size:52px">Avec</span></div>
+          <div class="m" style="font-size:126px"><span id="f2" class="pf big" style="font-size:126px">Vibe <span class="or">Motion,</span></span></div>
+        </div>
+        <div class="abs" style="left:0; right:0; top:820px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="f3" class="pf sm">tu apprends à les</span></div>
+          <div class="m" style="font-size:150px"><span id="f4" class="pf big" style="font-size:150px">créer…</span></div>
+        </div>
+        <div class="abs" style="left:300px; top:1290px; transform:rotate(-4deg); transform-origin:0 0">
+          <div class="m" style="font-size:48px"><span id="f5" class="pf sm">et à les</span></div>
+          <div class="m" style="font-size:150px"><span id="f6" class="pf big or" style="font-size:150px">vendre.</span></div>
+        </div>
+      </div>
+
+      <!-- 7. 2 900 F pour les 50 premiers. Le lien est juste en dessous. -->
+      <div id="s7" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:0; right:0; top:330px; text-align:center">
+          <div class="m" style="font-size:44px"><span id="g0" class="pf sm" style="font-size:44px">Prix de lancement</span></div>
+          <div class="m" style="font-size:210px"><span id="g1" class="pf big" style="font-size:210px">2 900 <span class="or">F</span></span></div>
+        </div>
+        <div class="abs" style="left:0; right:0; top:700px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="g2" class="pf sm">pour les</span></div>
+          <div class="m" style="font-size:120px"><span id="g3" class="pf big" style="font-size:120px">50 premiers.</span></div>
+        </div>
+        <div class="abs" style="left:0; right:0; top:1010px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="g4" class="pf sm">Le lien est</span></div>
+          <div class="m" style="font-size:94px"><span id="g5" class="pf big or" style="font-size:94px">juste en dessous.</span></div>
+        </div>
+        <div id="sig" class="abs center" style="left:0; right:0; top:1360px; flex-direction:column">
+          <div class="sig" style="font-size:64px">Vibe <span style="color:var(--acc)">Motion</span></div>
+          <div style="font-family:Poppins; font-weight:600; font-size:32px; color:#5E534A; letter-spacing:.12em; margin-top:8px">www.vibemotionafrica.com</div>
+        </div>
+        <svg id="arrow" class="abs" style="left:490px; top:1540px" width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#E2451A" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M50 12v70M20 54l30 30 30-30"/></svg>
+      </div>
+
+      <!-- formes floues au premier plan -->
+      <div id="leaves" class="clip" data-layout-allow-occlusion style="pointer-events:none"></div>
+    </div>
+
+    <script>
+      const TOTAL = 24;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      // formes sombres en coins (même grammaire que le récit Eden)
+      const leafSVG = (n, rot) => `<svg width="520" height="520" viewBox="-260 -260 520 520">${Array.from({ length: n }, (_, i) => `<ellipse cx="0" cy="-120" rx="34" ry="130" fill="#2A160C" transform="rotate(${rot + i * (360 / n)})"/>`).join("")}<circle r="20" fill="#2A160C"/></svg>`;
+      const L = [[-200, 1450, 5, 10], [760, -180, 6, 0], [820, 1550, 4, 30], [-280, 760, 3, 60]].map(([x, y, n, r]) => MK.el("div", "leaf", "#leaves", leafSVG(n, r), { left: x + "px", top: y + "px" }));
+      L.forEach((l, i) => tl.to(l, { rotation: (i % 2 ? -1 : 1) * 40, x: (i % 2 ? 60 : -60), y: (i < 2 ? 40 : -40), duration: TOTAL, ease: "sine.inOut" }, 0));
+
+      MK.scenes(tl, [["#s1", 0, 3.0], ["#s2", 3.0, 5.3], ["#s3", 5.3, 6.9], ["#s4", 6.9, 10.75], ["#s5", 10.75, 14.8], ["#s6", 14.8, 18.45], ["#s7", 18.45, TOTAL]], TOTAL);
+
+      /* filigrane + rubans */
+      tl.fromTo("#wm", { scale: 0.9, rotation: -8 }, { scale: 1.08, rotation: 6, duration: TOTAL, ease: "none", immediateRender: false }, 0);
+      MK.draw(tl, "#rb1", 0.9, 1.5); MK.draw(tl, "#rb2", 1.0, 1.5);
+      tl.to("#rib", { y: -120, duration: 9, ease: "sine.inOut" }, 2.5);
+      tl.to("#rib", { opacity: 0, duration: 0.4 }, 14.4);
+      MK.draw(tl, "#rc1", 15.0, 1.4); MK.draw(tl, "#rc2", 15.1, 1.4);
+      tl.to("#ribB", { y: -40, duration: 8, ease: "sine.inOut" }, 15.5);
+
+      gsap.set(["#flyer", "#vcard"], { transformPerspective: 1600 });
+      /* 1. le flyer arrive puis s'éteint */
+      gsap.set("#flyer", { y: 900, rotation: 14, filter: "grayscale(0) brightness(1)" });
+      tl.to("#flyer", { y: 0, rotation: -4, duration: 0.9, ease: E.card }, 0.0);
+      tl.to("#flyer", { rotation: 2, y: -15, duration: 2.4, ease: "sine.inOut" }, 0.9);
+      MK.rise(tl, "#a1", 0.35);
+      MK.rise(tl, "#a2", 1.29); MK.rise(tl, "#a3", 2.2);
+      tl.to("#flyer", { filter: "grayscale(1) brightness(0.75)", duration: 0.6 }, 1.4);
+
+      /* 2. la même pub : le flyer se retourne et devient la vraie pub en motion */
+      MK.rise(tl, "#b1", 3.03);
+      tl.to("#flyer", { filter: "grayscale(0) brightness(1)", duration: 0.3 }, 3.03);
+      tl.to("#flyer", { rotationY: 90, rotation: 0, y: 0, duration: 0.3, ease: "power2.in" }, 3.45);
+      tl.set("#flyer", { opacity: 0 }, 3.75);
+      gsap.set("#vcard", { rotationY: -90, opacity: 0 });
+      tl.set("#vcard", { opacity: 1 }, 3.75);
+      tl.to("#vcard", { rotationY: 0, rotation: -3, duration: 0.55, ease: E.card }, 3.75);
+      MK.rise(tl, "#b2", 4.0); MK.rise(tl, "#b3", 4.37);
+
+      /* 3. Là, on s'arrête : arrêt net sur la pub */
+      tl.to("#vcard", { scale: 1.12, rotation: 0, y: -40, duration: 0.25, ease: "power3.out" }, 5.35);
+      MK.rise(tl, "#c1", 5.41); MK.rise(tl, "#c2", 6.06);
+      MK.shake(tl, "#vcard", 6.06, 8);
+
+      /* 4. téléphone : la phrase tapée, puis la vidéo */
+      tl.to("#vcard", { y: -1800, rotation: -20, duration: 0.45, ease: "power3.in" }, 6.8);
+      tl.set("#vcard", { opacity: 0 }, 7.3);
+      gsap.set("#phone", { y: 1600, rotation: 10 });
+      tl.to("#phone", { y: 0, rotation: -3, duration: 0.8, ease: E.card }, 6.95);
+      MK.rise(tl, "#d1", 7.03); MK.rise(tl, "#d2", 8.07); MK.rise(tl, "#d3", 9.21);
+      MK.type(tl, "#ask", "Crée une pub motion pour mon resto SERVTHEM : vert et or, ton chaleureux.", 7.4, { cps: 52 });
+      gsap.set("#pv", { scale: 0.7, opacity: 0 });
+      tl.to("#pv", { scale: 1, opacity: 1, duration: 0.5, ease: E.card }, 8.95);
+      MK.rise(tl, "#d4", 9.43); MK.rise(tl, "#d5", 10.12);
+      tl.to("#phone", { rotation: 2, duration: 2, ease: "sine.inOut" }, 8.6);
+      tl.to("#phone", { y: -1800, rotation: -15, duration: 0.45, ease: "power3.in" }, 10.4);
+      tl.set("#phone", { opacity: 0 }, 10.9);
+
+      /* 5. cartes : boutiques, restos, entreprises (défilé 3D du récit Eden) */
+      const K = [[10.85, "#k1", "#h1"], [11.6, "#k2", "#h2"], [12.3, "#k3", "#h3"]];
+      gsap.set(["#h1", "#h2", "#h3"], { opacity: 0 });
+      K.forEach(([t, k, h], i) => {
+        gsap.set(k, { x: i ? 1000 : 0, y: i ? 0 : 1200, rotationY: i ? -35 : 0, rotation: i ? 8 : -10, opacity: 0 });
+        tl.set(k, { opacity: 1 }, t - 0.05);
+        tl.to(k, { x: 0, y: 0, rotationY: 0, rotation: (i % 2 ? 3 : -3), duration: 0.55, ease: E.card }, t - 0.05);
+        tl.set(h, { opacity: 1 }, t);
+        tl.fromTo(h, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, t);
+        if (i < 2) {
+          const n = K[i + 1][0];
+          tl.to(k, { x: -1000, rotationY: 35, rotation: -8, duration: 0.4, ease: "power3.in" }, n - 0.3);
+          tl.to(h, { opacity: 0, y: -30, duration: 0.2 }, n - 0.2);
+        }
+      });
+      MK.rise(tl, "#e1", 13.3); MK.rise(tl, "#e2", 14.07);
+      tl.to(["#k3", "#h3"], { y: -1400, rotation: -12, duration: 0.45, ease: "power3.in" }, 14.45);
+
+      /* 6. Vibe Motion : crée-les, vends-les */
+      MK.rise(tl, "#f1", 14.97); MK.rise(tl, "#f2", 15.19);
+      MK.rise(tl, "#f3", 16.05); MK.rise(tl, "#f4", 17.06);
+      MK.rise(tl, "#f5", 17.34); MK.rise(tl, "#f6", 17.93);
+
+      /* 7. prix, 50 premiers, lien */
+      MK.rise(tl, "#g0", 18.5); MK.rise(tl, "#g1", 18.68);
+      MK.rise(tl, "#g2", 19.37); MK.rise(tl, "#g3", 20.0);
+      MK.rise(tl, "#g4", 20.99); MK.rise(tl, "#g5", 21.5);
+      MK.fadeIn(tl, "#sig", 21.8, 0.5);
+      MK.pop(tl, "#arrow", 22.0);
+      for (let k = 0; k < 4; k++) {
+        tl.to("#arrow", { y: 26, duration: 0.22, ease: "power2.in" }, 22.4 + k * 0.38);
+        tl.to("#arrow", { y: 0, duration: 0.16, ease: "power2.out" }, 22.62 + k * 0.38);
+      }
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
