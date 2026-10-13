@@ -1,0 +1,440 @@
+[
+  {
+    "text": "tes",
+    "start": 0.11,
+    "end": 0.19,
+    "id": "w0"
+  },
+  {
+    "text": "revenus",
+    "start": 0.19,
+    "end": 0.63,
+    "id": "w1"
+  },
+  {
+    "text": "sont",
+    "start": 0.63,
+    "end": 0.88,
+    "id": "w2"
+  },
+  {
+    "text": "le",
+    "start": 0.88,
+    "end": 1,
+    "id": "w3"
+  },
+  {
+    "text": "reflet",
+    "start": 1,
+    "end": 1.38,
+    "id": "w4"
+  },
+  {
+    "text": "de",
+    "start": 1.38,
+    "end": 1.5,
+    "id": "w5"
+  },
+  {
+    "text": "tes",
+    "start": 1.5,
+    "end": 1.69,
+    "id": "w6"
+  },
+  {
+    "text": "habitudes.",
+    "start": 1.69,
+    "end": 2.56,
+    "id": "w7"
+  },
+  {
+    "text": "Ce",
+    "start": 2.56,
+    "end": 2.67,
+    "id": "w8"
+  },
+  {
+    "text": "que",
+    "start": 2.67,
+    "end": 2.83,
+    "id": "w9"
+  },
+  {
+    "text": "tu",
+    "start": 2.83,
+    "end": 2.94,
+    "id": "w10"
+  },
+  {
+    "text": "repousses",
+    "start": 2.94,
+    "end": 3.42,
+    "id": "w11"
+  },
+  {
+    "text": "chaque",
+    "start": 3.42,
+    "end": 3.75,
+    "id": "w12"
+  },
+  {
+    "text": "jour",
+    "start": 3.75,
+    "end": 4,
+    "id": "w13"
+  },
+  {
+    "text": "finit",
+    "start": 4,
+    "end": 4.36,
+    "id": "w14"
+  },
+  {
+    "text": "toujours",
+    "start": 4.36,
+    "end": 4.78,
+    "id": "w15"
+  },
+  {
+    "text": "sur",
+    "start": 4.87,
+    "end": 4.88,
+    "id": "w16"
+  },
+  {
+    "text": "ton",
+    "start": 5.18,
+    "end": 5.22,
+    "id": "w17"
+  },
+  {
+    "text": "compte",
+    "start": 5.27,
+    "end": 5.56,
+    "id": "w18"
+  },
+  {
+    "text": "en",
+    "start": 5.56,
+    "end": 5.67,
+    "id": "w19"
+  },
+  {
+    "text": "banque.",
+    "start": 5.67,
+    "end": 6.2,
+    "id": "w20"
+  },
+  {
+    "text": "Tu",
+    "start": 6.31,
+    "end": 6.32,
+    "id": "w21"
+  },
+  {
+    "text": "dépenses",
+    "start": 6.32,
+    "end": 6.83,
+    "id": "w22"
+  },
+  {
+    "text": "sans",
+    "start": 6.83,
+    "end": 7.08,
+    "id": "w23"
+  },
+  {
+    "text": "compter,",
+    "start": 7.08,
+    "end": 7.66,
+    "id": "w24"
+  },
+  {
+    "text": "tu",
+    "start": 7.66,
+    "end": 7.75,
+    "id": "w25"
+  },
+  {
+    "text": "gagneras",
+    "start": 7.75,
+    "end": 8.1,
+    "id": "w26"
+  },
+  {
+    "text": "sans",
+    "start": 8.16,
+    "end": 8.38,
+    "id": "w27"
+  },
+  {
+    "text": "compter",
+    "start": 8.38,
+    "end": 8.74,
+    "id": "w28"
+  },
+  {
+    "text": "non",
+    "start": 8.82,
+    "end": 8.9,
+    "id": "w29"
+  },
+  {
+    "text": "plus.",
+    "start": 8.9,
+    "end": 9.32,
+    "id": "w30"
+  },
+  {
+    "text": "Tu",
+    "start": 9.32,
+    "end": 9.43,
+    "id": "w31"
+  },
+  {
+    "text": "remets",
+    "start": 9.43,
+    "end": 9.77,
+    "id": "w32"
+  },
+  {
+    "text": "tout",
+    "start": 9.77,
+    "end": 9.97,
+    "id": "w33"
+  },
+  {
+    "text": "à",
+    "start": 9.98,
+    "end": 10,
+    "id": "w34"
+  },
+  {
+    "text": "demain,",
+    "start": 10.16,
+    "end": 10.52,
+    "id": "w35"
+  },
+  {
+    "text": "tes",
+    "start": 10.52,
+    "end": 10.69,
+    "id": "w36"
+  },
+  {
+    "text": "clients",
+    "start": 10.69,
+    "end": 11.1,
+    "id": "w37"
+  },
+  {
+    "text": "aussi",
+    "start": 11.1,
+    "end": 11.39,
+    "id": "w38"
+  },
+  {
+    "text": "te",
+    "start": 11.39,
+    "end": 11.5,
+    "id": "w39"
+  },
+  {
+    "text": "remettront",
+    "start": 11.5,
+    "end": 12.07,
+    "id": "w40"
+  },
+  {
+    "text": "à",
+    "start": 12.07,
+    "end": 12.12,
+    "id": "w41"
+  },
+  {
+    "text": "demain.",
+    "start": 12.13,
+    "end": 12.72,
+    "id": "w42"
+  },
+  {
+    "text": "Tout",
+    "start": 12.83,
+    "end": 12.96,
+    "id": "w43"
+  },
+  {
+    "text": "le",
+    "start": 12.96,
+    "end": 13.08,
+    "id": "w44"
+  },
+  {
+    "text": "monde",
+    "start": 13.08,
+    "end": 13.36,
+    "id": "w45"
+  },
+  {
+    "text": "veut",
+    "start": 13.56,
+    "end": 13.63,
+    "id": "w46"
+  },
+  {
+    "text": "gagner",
+    "start": 13.63,
+    "end": 13.93,
+    "id": "w47"
+  },
+  {
+    "text": "plus,",
+    "start": 14.05,
+    "end": 14.37,
+    "id": "w48"
+  },
+  {
+    "text": "sans",
+    "start": 14.37,
+    "end": 14.55,
+    "id": "w49"
+  },
+  {
+    "text": "devenir",
+    "start": 14.55,
+    "end": 14.89,
+    "id": "w50"
+  },
+  {
+    "text": "quelqu'un",
+    "start": 14.89,
+    "end": 15.36,
+    "id": "w51"
+  },
+  {
+    "text": "qui",
+    "start": 15.38,
+    "end": 15.64,
+    "id": "w52"
+  },
+  {
+    "text": "mérite",
+    "start": 15.64,
+    "end": 16.18,
+    "id": "w53"
+  },
+  {
+    "text": "plus.",
+    "start": 16.19,
+    "end": 16.88,
+    "id": "w54"
+  },
+  {
+    "text": "La",
+    "start": 16.99,
+    "end": 17.03,
+    "id": "w55"
+  },
+  {
+    "text": "vérité",
+    "start": 17.03,
+    "end": 17.48,
+    "id": "w56"
+  },
+  {
+    "text": "est",
+    "start": 17.48,
+    "end": 17.54,
+    "id": "w57"
+  },
+  {
+    "text": "simple,",
+    "start": 17.72,
+    "end": 18.35,
+    "id": "w58"
+  },
+  {
+    "text": "change",
+    "start": 18.35,
+    "end": 18.77,
+    "id": "w59"
+  },
+  {
+    "text": "tes",
+    "start": 18.78,
+    "end": 18.99,
+    "id": "w60"
+  },
+  {
+    "text": "habitudes",
+    "start": 18.99,
+    "end": 19.64,
+    "id": "w61"
+  },
+  {
+    "text": "et",
+    "start": 19.64,
+    "end": 19.77,
+    "id": "w62"
+  },
+  {
+    "text": "tes",
+    "start": 19.79,
+    "end": 19.96,
+    "id": "w63"
+  },
+  {
+    "text": "revenus",
+    "start": 19.96,
+    "end": 20.41,
+    "id": "w64"
+  },
+  {
+    "text": "suivent.",
+    "start": 20.41,
+    "end": 21.08,
+    "id": "w65"
+  },
+  {
+    "text": "Envoie",
+    "start": 21.17,
+    "end": 21.35,
+    "id": "w66"
+  },
+  {
+    "text": "ça",
+    "start": 21.35,
+    "end": 21.44,
+    "id": "w67"
+  },
+  {
+    "text": "à",
+    "start": 21.44,
+    "end": 21.48,
+    "id": "w68"
+  },
+  {
+    "text": "quelqu'un",
+    "start": 21.48,
+    "end": 21.87,
+    "id": "w69"
+  },
+  {
+    "text": "qui",
+    "start": 21.92,
+    "end": 22.01,
+    "id": "w70"
+  },
+  {
+    "text": "doit",
+    "start": 22.01,
+    "end": 22.18,
+    "id": "w71"
+  },
+  {
+    "text": "l'entendre.",
+    "start": 22.18,
+    "end": 22.84,
+    "id": "w72"
+  }
+]

@@ -81,3 +81,7 @@
 - Peut servir d'exemple n°1 sur la page de vente (l'exemple qui montre le « avant / après » vendable aux e-commerçants).
 - Validé par l'entrepreneur. STOPSCROLL et la pub Noël (version ElevenLabs, verticale) ajoutées en tête de la section Exemples de la page de vente : 2 vraies vidéos, lecture muette quand elles sont visibles, bouton son. Versions web légères dans Output/site/media/ (1,1 Mo et 2,4 Mo). Paquet de mise en ligne mis à jour (pas encore hébergé : on attend le feu vert).
 - Correction : l'entrepreneur veut visionner la page directement, pas de zip. Envoyé Output/site/apercu.html (un seul fichier, vidéos intégrées). Règle ajoutée dans CLAUDE.md.
+
+### 2026-10-13 — Références « à reproduire » (11 vidéos Pinterest)
+- Analyse : 7 sur 11 sont reproductibles en HTML. Les 3 photoréalistes et l'animation dessinée relèvent de la 3D ou de la vidéo IA. Recommandation acceptée : reprendre structure, rythme et effets, mais avec un contenu à nous (pas de copie à l'identique pour la vitrine).
+- Vidéo n° 1 adaptée en « Tes revenus sont le reflet de tes habitudes » (version 2 du texte, choisie par l'entrepreneur). Voix ElevenLabs « Micha » (Nathan Roy demande le forfait Creator). ElevenLabs a été rechargé. Rendu : Output/videos/miroir-revenus/out/final.mp4, 24,6 s, 60 i/s.

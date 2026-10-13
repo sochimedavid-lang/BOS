@@ -14,3 +14,4 @@ __pycache__/
 Output/videos/*/.*.hf-transaction-*/
 Output/videos/*/work-*/
 Output/videos/*/render-*.log
+Output/videos/*/refs/*.mp4
