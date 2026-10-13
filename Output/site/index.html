@@ -185,6 +185,11 @@ h1{font-size:clamp(32px,6vw,60px);font-weight:800;max-width:860px;margin:0 auto}
 .bub.me{align-self:flex-end;background:#7C5CFF;color:#fff;border-bottom-right-radius:4px}
 .bub.ai{align-self:flex-start;background:#26221E;color:#eae3d9;border-bottom-left-radius:4px}
 .bub.ai b{color:var(--lime)}
+.bub.prompt{position:relative;max-width:94%;font-size:12.5px;line-height:1.55;text-align:left}
+.bub.prompt b{color:#fff;font-weight:700}
+.bub.prompt .pt{max-height:10.85em;overflow:hidden}
+.bub.prompt .bl{position:absolute;left:0;right:0;top:calc(10px + 7.75em);height:3.3em;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);background:linear-gradient(rgba(124,92,255,.15),rgba(124,92,255,.85));pointer-events:none}
+.bub.prompt .more{position:relative;display:inline-block;margin-top:6px;padding:3px 10px;border-radius:99px;background:rgba(255,255,255,.18);font-size:11.5px;font-weight:700;cursor:default}
 .typing{display:inline-flex;gap:4px}.typing i{width:6px;height:6px;border-radius:50%;background:#8d857b;animation:dot 1.2s infinite}.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
 @keyframes dot{0%,80%,100%{opacity:.3}40%{opacity:1}}
 .arrow{color:var(--acc2);font-weight:800;font-size:12px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
@@ -359,9 +364,9 @@ footer .disc2 b{color:var(--text)}
     <div class="phone rv">
       <div class="hd">Toi → Claude</div>
       <div class="chat" id="chat">
-        <div class="bub me">Fais une pub vidéo chic pour SERVTHEM, le restaurant de mon amie. Style élégant, vert et or, format vertical pour Instagram et WhatsApp.</div>
+        <div class="bub me prompt"><div class="pt"><b>Rôle :</b> directeur artistique motion senior. <b>Format :</b> vertical 1080×1920, 27 s, 30 i/s. <b>Client :</b> SERVTHEM, restaurant à Cotonou. <b>Objectif :</b> réservations ce soir. <b>Cible :</b> couples et familles 25-45 ans. <b>Direction artistique :</b> vert profond, or mat, crème ; titres en capitales condensées, accroche manuscrite, grain léger. <b>Structure :</b> 1) accroche « LE GOÛT DU SERVICE » mot par mot, impact sonore sur chaque mot ; 2) les plats entrent en parallaxe avec un ressort amorti ; 3) la promesse du service en trois mots, fondus or ; 4) voix off grave en une seule prise ; 5) logo et appel à réserver, son mixé à -14 LUFS, bruitages sur chaque transition</div><i class="bl" aria-hidden="true"></i><span class="more">Voir plus ▾</span></div>
         <div class="bub ai"><span class="typing"><i></i><i></i><i></i></span></div>
-        <div class="bub ai">C'est prêt ✓ Titre « <b>Le goût du service</b> » animé, couleurs de la marque, musique et bruitages calés. <b>Export : servthem.mp4</b></div>
+        <div class="bub ai">C'est prêt ✓ Pub de 27 s : accroche « <b>Le goût du service</b> » animée, voix off, musique et bruitages calés sur chaque transition. <b>Export : servthem.mp4</b></div>
         <div class="bub me">Parfait ! Je l'envoie tout de suite.</div>
       </div>
     </div>
@@ -655,7 +660,7 @@ if(!STATIC&&window.gsap){
   const bubs=[...document.querySelectorAll("#chat .bub")];
   gsap.set(bubs,{opacity:0,y:10});
   const tl=gsap.timeline({repeat:-1,repeatDelay:2,scrollTrigger:{trigger:"#chat",start:"top 80%"}});
-  tl.to(bubs[0],{opacity:1,y:0,duration:.4}).to(bubs[1],{opacity:1,y:0,duration:.3},"+=.6").to(bubs[1],{opacity:0,height:0,padding:0,duration:.2},"+=1.4")
+  tl.to(bubs[0],{opacity:1,y:0,duration:.4}).to(bubs[1],{opacity:1,y:0,duration:.3},"+=1.8").to(bubs[1],{opacity:0,height:0,padding:0,duration:.2},"+=1.4")
     .to(bubs[2],{opacity:1,y:0,duration:.4}).to(bubs[3],{opacity:1,y:0,duration:.4},"+=1.2").to(bubs,{opacity:0,duration:.4},"+=2.5").set(bubs[1],{clearProps:"height,padding"});
 }
 const sticky=document.getElementById("sticky");
