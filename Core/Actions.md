@@ -17,7 +17,7 @@
 | 4 | **Envoyer : méthode exacte MoMo, preuves + accord, contact support (lien communauté ✓ reçu)** | Toi (15 min) | Module 0 + section preuves + contact | Mar 13 | À faire |
 | 5 | **3 scripts de pub conformes Meta (angle « créé sans savoir monter »)** | BOS | Trafic | Mar 13 | À faire |
 | 6 | Mettre le site en ligne + pixel Meta | Toi + BOS | Page publique | — | ✓ En ligne sur www.vibemotionafrica.com (Vercel + domaine Hostinger) ; reste : pixel Meta |
-| 6b | **Guide PDF : ajouter le parcours 100 % téléphone (Claude Code web + GitHub) + contact risenofm@gmail.com** | BOS | Le site promet « depuis ton téléphone » mais le guide dit « il faut un ordinateur » → risque de remboursements | Avant la 1re vente | À faire |
+| 6b | **Guide PDF : parcours téléphone + kit Vibe Motion** | BOS ✓ / Toi : mettre les 2 fichiers dans Chariow | Le site promet « depuis ton téléphone » mais le guide dit « il faut un ordinateur » → risque de remboursements | Avant la 1re vente | Fichiers prêts |
 | 7 | Lancer la campagne Meta, Bénin, budget test | Toi (45 min, guidé) | Premières ventes + métriques | Mer 14 | À faire |
 | 8 | Modules 2 à 5 | BOS écrit / Toi enregistres | Livraison | Dim 18 | À faire |
 

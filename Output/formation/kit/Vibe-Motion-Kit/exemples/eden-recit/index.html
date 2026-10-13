@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600;1,700&family=Poppins:wght@500;600;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #E8ECE9; --ink: #1B1F1C; --green: #1E6B45; --green2: #2E8B57; }
+      #root { background: var(--bg); }
+      .bgc { position: absolute; inset: 0; background: radial-gradient(900px 1100px at 50% 45%, #F7F8F6 0%, #E8ECE9 55%, #D4DAD5 100%); }
+      .pf { font-family: "Playfair Display", serif; font-style: italic; color: var(--ink); line-height: 1; white-space: nowrap; }
+      .sm { font-size: 48px; font-weight: 500; color: #4A524C; }
+      .card { position: absolute; left: 270px; top: 600px; width: 540px; height: 760px; border-radius: 44px; overflow: hidden; box-shadow: 0 50px 90px rgba(20,40,25,.35); }
+      .card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .leaf { position: absolute; filter: blur(5px); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15.5" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="15.5" data-track-index="10"></audio>
+      <div class="bgc" data-layout-allow-occlusion></div>
+
+      <!-- logo Eden en filigrane -->
+      <svg id="wm" class="abs" style="left:90px; top:510px; opacity:.07" width="900" height="900" viewBox="0 0 24 24"><path d="M12 22 C 4 18, 3 9, 12 2 C 21 9, 20 18, 12 22 Z" fill="#1E6B45"/><path d="M12 22 L12 8" stroke="#E8ECE9" stroke-width=".7"/><path d="M12 14 L8.5 11 M12 17 L15.5 14" stroke="#E8ECE9" stroke-width=".6"/></svg>
+
+      <!-- ruban vert -->
+      <svg id="rib" class="abs" style="left:0; top:0" width="1080" height="1920" viewBox="0 0 1080 1920">
+        <path id="rb1" d="M-120 520 C 200 640, 420 760, 560 980 S 900 1300, 1220 1180" fill="none" stroke="#1E6B45" stroke-width="64" stroke-linecap="round"/>
+        <path id="rb2" d="M-120 520 C 200 640, 420 760, 560 980 S 900 1300, 1220 1180" fill="none" stroke="#3FA36B" stroke-width="16" stroke-linecap="round" opacity=".7"/>
+      </svg>
+
+      <!-- 1. Voici comment Eden Food… -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:390px; top:300px; transform:rotate(-6deg); transform-origin:0 0">
+          <div class="m" style="font-size:48px"><span id="a1" class="pf sm">Voici comment</span></div>
+          <div class="m" style="font-size:118px"><span id="a2" class="pf" style="font-size:118px; font-weight:700">Eden Food</span></div>
+        </div>
+        <div class="abs" style="left:150px; top:1420px; transform:rotate(-4deg); transform-origin:0 0">
+          <div class="m" style="font-size:48px"><span id="a3" class="pf sm">est devenu un</span></div>
+          <div class="m" style="font-size:132px"><span id="a4" class="pf" style="font-size:132px; font-weight:700; color:var(--green)">rendez-vous</span></div>
+        </div>
+      </div>
+
+      <!-- gobelet Eden (produit) -->
+      <svg id="cup" data-layout-allow-overflow class="abs" style="left:375px; top:640px; overflow:visible" width="330" height="560" viewBox="0 0 330 560">
+        <defs>
+          <linearGradient id="cw" x1="0" x2="1"><stop offset="0" stop-color="#D9DDD9"/><stop offset=".25" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#F3F5F3"/><stop offset="1" stop-color="#C9CFCA"/></linearGradient>
+          <linearGradient id="cs" x1="0" x2="1"><stop offset="0" stop-color="#14502F"/><stop offset=".35" stop-color="#2E8B57"/><stop offset="1" stop-color="#11402A"/></linearGradient>
+        </defs>
+        <ellipse cx="165" cy="548" rx="120" ry="16" fill="rgba(20,40,25,.25)"/>
+        <path d="M30 70 L300 70 L262 540 L68 540 Z" fill="url(#cw)"/>
+        <path d="M48 250 L282 250 L270 400 L60 400 Z" fill="url(#cs)"/>
+        <g transform="translate(165 325) scale(4.2) translate(-12 -12)"><path d="M12 22 C 4 18, 3 9, 12 2 C 21 9, 20 18, 12 22 Z" fill="#E9F3EC"/><path d="M12 22 L12 8" stroke="#2E8B57" stroke-width=".8"/></g>
+        <rect x="14" y="40" width="302" height="40" rx="12" fill="#F7F8F6"/><rect x="40" y="18" width="250" height="30" rx="10" fill="#E6EAE7"/>
+        <text x="165" y="470" text-anchor="middle" font-family="Playfair Display" font-style="italic" font-weight="700" font-size="38" fill="#1E6B45">Eden</text>
+      </svg>
+
+      <!-- 2. bien plus qu'un restaurant : assiette + cercle pointillé -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:0; right:0; top:420px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="b1" class="pf sm">bien plus qu'un</span></div>
+        </div>
+        <svg id="dash" class="abs" style="left:250px; top:560px" width="580" height="580" viewBox="0 0 580 580"><circle cx="290" cy="290" r="270" fill="none" stroke="#1B1F1C" stroke-width="3" stroke-dasharray="10 12"/></svg>
+        <div id="plate" class="abs" style="left:300px; top:610px; width:480px; height:480px; border-radius:50%; overflow:hidden; box-shadow:0 40px 80px rgba(20,40,25,.35)"><img src="img/p17952748.jpg" style="width:100%; height:100%; object-fit:cover"></div>
+        <div class="abs" style="left:0; right:0; top:1230px; text-align:center">
+          <div class="m" style="font-size:140px"><span id="b2" class="pf" style="font-size:140px; font-weight:700">restaurant.</span></div>
+        </div>
+      </div>
+
+      <!-- 3. l'expérience : cartes photo -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion style="perspective:1600px">
+        <div class="abs" style="left:0; right:0; top:330px; text-align:center">
+          <div id="h0" class="pf" style="position:absolute; left:0; right:0; top:-60px; font-size:58px; line-height:1.15">Ils ont misé sur<br><b style="font-weight:700; font-size:84px; color:var(--green)">l'expérience</b></div>
+          <div id="h1" class="pf" style="position:absolute; left:0; right:0; font-size:76px">les pauses du midi</div>
+          <div id="h2" class="pf" style="position:absolute; left:0; right:0; font-size:76px">les dîners en famille</div>
+          <div id="h3" class="pf" style="position:absolute; left:0; right:0; font-size:76px">les soirées entre amis</div>
+        </div>
+        <div id="k0" class="card"><img src="img/p36861445.jpg" style="object-position:45% 50%"></div>
+        <div id="k1" class="card"><img src="img/p28732879.jpg" style="object-position:50% 30%"></div>
+        <div id="k2" class="card"><img src="img/p4262170.jpg" style="object-position:50% 50%"></div>
+        <div id="k3" class="card"><img src="img/p31412505.jpg" style="object-position:50% 30%"></div>
+      </div>
+
+      <!-- 4. Ce n'était pas une question de repas -->
+      <div id="s4" class="sc" data-layout-allow-overflow>
+        <div class="abs" style="left:0; right:0; top:440px; text-align:center">
+          <div class="m" style="font-size:48px"><span id="c1" class="pf sm">Ce n'était pas une question de</span></div>
+        </div>
+        <div class="abs" style="left:0; right:0; top:1280px; text-align:center">
+          <div class="m" style="font-size:150px"><span id="c2" class="pf" style="font-size:150px; font-weight:700">repas</span></div>
+        </div>
+      </div>
+
+      <!-- 5. C'était une question de moments -->
+      <div id="s5" class="sc" data-layout-allow-overflow>
+        <div class="abs" style="left:380px; top:720px; transform:rotate(-5deg); transform-origin:0 0">
+          <div class="m" style="font-size:52px"><span id="d1" class="pf sm">C'était une</span></div>
+          <div class="m" style="font-size:52px"><span id="d2" class="pf sm">question de</span></div>
+          <div class="m" style="font-size:132px"><span id="d3" class="pf" style="font-size:132px; font-weight:700; color:var(--green)">moments.</span></div>
+        </div>
+        <div id="sig" class="abs center" style="left:0; right:0; top:1500px; flex-direction:column">
+          <div style="font-family:Poppins; font-weight:800; font-size:64px; color:var(--ink); letter-spacing:-.02em">Eden <span style="color:var(--green)">Food</span></div>
+          <div style="font-family:Poppins; font-weight:500; font-size:30px; color:#5B635D; letter-spacing:.3em; text-transform:uppercase; margin-top:6px">Restaurant · Cotonou</div>
+        </div>
+      </div>
+
+      <!-- feuillages flous au premier plan -->
+      <div id="leaves" class="clip" data-layout-allow-occlusion style="pointer-events:none"></div>
+    </div>
+
+    <script>
+      const TOTAL = 15.5;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      // feuillages sombres en coins (déterministes)
+      const leafSVG = (n, rot) => `<svg width="520" height="520" viewBox="-260 -260 520 520">${Array.from({ length: n }, (_, i) => `<ellipse cx="0" cy="-120" rx="34" ry="130" fill="#0E2418" transform="rotate(${rot + i * (360 / n)})"/>`).join("")}<circle r="20" fill="#0E2418"/></svg>`;
+      const L = [[-200, 1450, 5, 10], [760, -180, 6, 0], [820, 1550, 4, 30], [-280, 760, 3, 60]].map(([x, y, n, r]) => MK.el("div", "leaf", "#leaves", leafSVG(n, r), { left: x + "px", top: y + "px" }));
+      L.forEach((l, i) => tl.to(l, { rotation: (i % 2 ? -1 : 1) * 40, x: (i % 2 ? 60 : -60), y: (i < 2 ? 40 : -40), duration: TOTAL, ease: "sine.inOut" }, 0));
+
+      MK.scenes(tl, [["#s1", 0, 3.15], ["#s2", 3.15, 4.65], ["#s3", 4.65, 10.4], ["#s4", 10.4, 12.2], ["#s5", 12.2, TOTAL]], TOTAL);
+
+      /* filigrane + ruban */
+      tl.fromTo("#wm", { scale: 0.9, rotation: -8 }, { scale: 1.08, rotation: 6, duration: TOTAL, ease: "none", immediateRender: false }, 0);
+      MK.draw(tl, "#rb1", 0.9, 1.5, "power2.inOut");
+      MK.draw(tl, "#rb2", 1.0, 1.5, "power2.inOut");
+      tl.to("#rib", { y: -120, duration: 9, ease: "sine.inOut" }, 2.5);
+      tl.to("#rib", { opacity: 0, duration: 0.4 }, 10.2);
+
+      /* 1. gobelet + titres inclinés */
+      gsap.set("#cup", { y: 900, rotation: 18 });
+      tl.to("#cup", { y: 0, rotation: -6, duration: 0.9, ease: E.card }, 0.05);
+      tl.to("#cup", { rotation: 4, y: -20, duration: 2.2, ease: "sine.inOut" }, 1.0);
+      MK.rise(tl, "#a1", 0.44); MK.rise(tl, "#a2", 1.12);
+      MK.rise(tl, "#a3", 1.82); MK.rise(tl, "#a4", 2.3);
+      tl.to("#cup", { y: -1300, rotation: -25, duration: 0.45, ease: "power3.in" }, 3.0);
+
+      /* 2. bien plus qu'un restaurant */
+      gsap.set("#plate", { scale: 0.3, opacity: 0, rotation: -60 });
+      tl.to("#plate", { scale: 1, opacity: 1, rotation: 0, duration: 0.7, ease: E.card }, 3.15);
+      MK.draw(tl, "#dash circle", 3.3, 0.6);
+      tl.to("#dash", { rotation: 90, duration: 1.6, ease: "none" }, 3.15);
+      MK.rise(tl, "#b1", 3.2); MK.rise(tl, "#b2", 3.85);
+      tl.to(["#plate", "#dash"], { y: 1300, rotation: 40, duration: 0.4, ease: "power3.in" }, 4.3);
+
+      /* 3. cartes de l'expérience */
+      const K = [[4.68, "#k0", "#h0"], [6.75, "#k1", "#h1"], [7.84, "#k2", "#h2"], [9.08, "#k3", "#h3"]];
+      gsap.set(["#h0", "#h1", "#h2", "#h3"], { opacity: 0 });
+      K.forEach(([t, k, h], i) => {
+        gsap.set(k, { x: i ? 1000 : 0, y: i ? 0 : 1200, rotationY: i ? -35 : 0, rotation: i ? 8 : -10, opacity: 0 });
+        tl.set(k, { opacity: 1 }, t - 0.05);
+        tl.to(k, { x: 0, y: 0, rotationY: 0, rotation: (i % 2 ? 3 : -3), duration: 0.6, ease: E.card }, t - 0.05);
+        tl.fromTo(`${k} img`, { scale: 1.25 }, { scale: 1.05, duration: 1.8, ease: "sine.out", immediateRender: false }, t);
+        tl.set(h, { opacity: 1 }, t);
+        tl.fromTo(h, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false }, t);
+        if (i < 3) {
+          const n = K[i + 1][0];
+          tl.to(k, { x: -1000, rotationY: 35, rotation: -8, duration: 0.45, ease: "power3.in" }, n - 0.35);
+          tl.to(h, { opacity: 0, y: -30, duration: 0.25 }, n - 0.25);
+        }
+      });
+      tl.to(["#k3", "#h3"], { y: -1400, rotation: -12, duration: 0.45, ease: "power3.in" }, 10.0);
+
+      /* 4. Ce n'était pas une question de repas : le gobelet revient */
+      tl.set("#cup", { y: 700, rotation: 15, scale: 0.85 }, 10.35);
+      tl.to("#cup", { y: 0, rotation: 0, duration: 0.7, ease: E.card }, 10.4);
+      MK.rise(tl, "#c1", 10.45); MK.rise(tl, "#c2", 11.75);
+
+      /* 5. gros plan sur le gobelet + moments */
+      tl.to("#cup", { x: -560, y: 260, scale: 2.7, rotation: 8, duration: 0.6, ease: "power3.inOut" }, 12.2);
+      MK.rise(tl, ["#d1", "#d2"], 12.25, { stagger: 0.18 });
+      MK.rise(tl, "#d3", 13.35);
+      MK.fadeIn(tl, "#sig", 14.0, 0.5);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -38,6 +38,8 @@ a{color:var(--acc2)}
 .cmd{background:#0A0908;border:1px solid var(--line);border-radius:7pt;padding:7pt 10pt;margin:6pt 0 9pt;font-family:"JetBrains Mono",monospace;font-size:8.6pt;color:var(--lime);break-inside:avoid}
 code{font-family:"JetBrains Mono",monospace;font-size:8.8pt;background:#0A0908;border:1px solid var(--line);border-radius:4pt;padding:0 4pt;color:var(--lime)}
 table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;break-inside:avoid}
+table.long{break-inside:auto}
+table.long tr{break-inside:avoid}
 th{text-align:left;font-weight:700;color:var(--acc2);font-size:8.5pt;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--line);padding:6pt 6pt}
 td{border-bottom:1px solid var(--line);padding:6.5pt 6pt;vertical-align:top}
 .steps{counter-reset:s;list-style:none;margin-left:0}
@@ -86,7 +88,7 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
     <span class="chk">✓ Aucune expérience en montage requise</span>
   </div>
   <div class="toc">
-    <div><span><b>00</b>Démarrage : payer Claude, installer, 1re vidéo</span></div>
+    <div><span><b>00</b>Démarrage : depuis ton téléphone ou ton ordinateur, 1re vidéo</span></div>
     <div><span><b>01</b>Les 6 formats qui se vendent</span></div>
     <div><span><b>02</b>Du brief client à la livraison</span></div>
     <div><span><b>03</b>Ton portfolio en 3 jours</span></div>
@@ -120,9 +122,14 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
     <p>C'est là que tu poses tes questions, que tu montres tes vidéos et que tu reçois un suivi.<br><strong>Lien : <a href="https://chat.whatsapp.com/G7s34pJD8KQ78a97hKKRQu?mode=gi_t">Rejoindre le groupe WhatsApp</a> · <span class="mut" style="font-size:8pt">https://chat.whatsapp.com/G7s34pJD8KQ78a97hKKRQu?mode=gi_t</span></strong></p>
   </div>
 
+  <div class="box ok">
+    <h4>🧰 Ton kit Vibe Motion</h4>
+    <p>Avec ce guide, tu as reçu le fichier <strong>Vibe-Motion-Kit.zip</strong> : le skill Vibe Motion (la méthode et les animations prêtes à l'emploi), les consignes pour Claude et 3 vidéos d'exemple complètes. Tu l'installes au module 0. <strong>Garde-le précieusement.</strong></p>
+  </div>
+
   <div class="box tip">
     <h4>🛡️ Ta garantie 7 jours</h4>
-    <p>Suis les modules 0 à 2 et fais les exercices. Si au bout de 7 jours tu n'as pas exporté ta première vidéo motion, écris-nous dans la communauté ou au contact indiqué à la fin du guide : on te rembourse intégralement.</p>
+    <p>Suis les modules 0 à 2 et fais les exercices. Si au bout de 7 jours tu n'as pas exporté ta première vidéo motion, écris-nous à <strong>risenofm@gmail.com</strong> : on te rembourse intégralement.</p>
   </div>
 
   <h2>Une vérité avant de commencer</h2>
@@ -134,11 +141,13 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
   <span class="tag">Les mots à connaître</span>
   <h1>Le petit <em>lexique.</em></h1>
   <p class="lead">Tu vas croiser ces mots. Pas besoin de tout retenir maintenant : reviens ici quand tu bloques.</p>
-  <table>
+  <table class="long">
     <tr><th style="width:32%">Mot</th><th>Ce que ça veut dire</th></tr>
     <tr><td><strong>Claude</strong></td><td>L'intelligence artificielle d'Anthropic. C'est elle qui écrit l'animation de tes vidéos.</td></tr>
     <tr><td><strong>Claude Pro</strong></td><td>L'abonnement payant de Claude (environ 20 $ par mois). Il est obligatoire : la version gratuite ne donne pas accès à l'outil qui crée les vidéos.</td></tr>
-    <tr><td><strong>Claude Code</strong></td><td>La partie de Claude qui peut créer des fichiers et lancer des programmes sur ton ordinateur. C'est elle qu'on utilise pour fabriquer les vidéos.</td></tr>
+    <tr><td><strong>Claude Code</strong></td><td>La partie de Claude qui crée des fichiers et lance des programmes. Elle tourne <strong>dans le cloud depuis l'application Claude sur ton téléphone</strong>, ou sur ton ordinateur. C'est elle qui fabrique les vidéos.</td></tr>
+    <tr><td><strong>GitHub · dépôt</strong></td><td>GitHub est un site gratuit qui range tes projets en ligne. Un « dépôt », c'est ton dossier de travail sur GitHub : depuis ton téléphone, Claude y enregistre tes vidéos et tu les télécharges ensuite.</td></tr>
+    <tr><td><strong>Kit Vibe Motion</strong></td><td>Le fichier Vibe-Motion-Kit.zip reçu avec ce guide : la méthode, les animations prêtes à l'emploi et des exemples, que Claude utilise automatiquement.</td></tr>
     <tr><td><strong>HyperFrames</strong></td><td>Un outil gratuit et open source (créé par HeyGen) qui transforme une page web animée en vidéo. Claude écrit l'animation, HyperFrames fabrique la vidéo MP4.</td></tr>
     <tr><td><strong>Skills HyperFrames</strong></td><td>Un « manuel » officiel que tu installes une fois. Il apprend à Claude à faire de belles vidéos avec HyperFrames. Tu l'appelles en écrivant <code>/hyperframes</code> dans ta demande.</td></tr>
     <tr><td><strong>Aperçu (preview)</strong></td><td>La page qui s'ouvre dans ton navigateur pour voir ta vidéo avant de l'exporter. Elle se met à jour toute seule quand Claude modifie la vidéo.</td></tr>
@@ -165,12 +174,13 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
   <h2>0.1 · Ce dont tu as besoin</h2>
   <table>
     <tr><th style="width:32%">Élément</th><th>Détail</th></tr>
-    <tr><td><strong>Un ordinateur</strong></td><td>Windows 10 (version 1809 ou plus récente) ou Windows 11, ou un Mac avec macOS 13 ou plus récent. Minimum 4 Go de mémoire vive ; 8 Go c'est plus confortable. Pas besoin d'un ordinateur puissant.</td></tr>
+    <tr><td><strong>Un téléphone</strong></td><td>Android ou iPhone récent, avec l'application Claude. <strong>C'est suffisant</strong> : tout le travail lourd se fait dans le cloud. Un ordinateur (Windows ou Mac) marche aussi si tu en as un.</td></tr>
     <tr><td><strong>Une connexion internet</strong></td><td>Wi-Fi ou partage de connexion du téléphone. L'installation télécharge quelques centaines de Mo.</td></tr>
     <tr><td><strong>Claude Pro</strong></td><td>Environ 20 $ par mois (autour de 12 000 F CFA, le montant exact dépend du taux et des frais). On voit comment payer juste après.</td></tr>
-    <tr><td><strong>Un compte e-mail</strong></td><td>Gmail ou autre, pour créer ton compte Claude.</td></tr>
+    <tr><td><strong>Un compte e-mail</strong></td><td>Gmail ou autre, pour créer ton compte Claude et ton compte GitHub.</td></tr>
+    <tr><td><strong>Un compte GitHub</strong></td><td>Gratuit (parcours téléphone). On le crée ensemble à l'étape A2.</td></tr>
   </table>
-  <div class="box warn"><h4>📱 Et avec seulement un téléphone ?</h4><p>Pour produire des vidéos de qualité professionnelle avec cette méthode, il faut un ordinateur. Un portable d'entrée de gamme, même d'occasion, suffit.</p></div>
+  <div class="box ok"><h4>📱 Deux parcours, même résultat</h4><p><strong>Parcours A · Téléphone</strong> (le plus simple, recommandé) : tout se fait dans l'application Claude, la vidéo est fabriquée dans le cloud. <strong>Parcours B · Ordinateur</strong> : si tu préfères travailler sur un PC ou un Mac. Fais l'étape 0.2, puis <strong>un seul</strong> des deux parcours.</p></div>
 
   <h2>0.2 · Payer Claude Pro depuis le Bénin</h2>
   <p>Claude est disponible au Bénin et en Côte d'Ivoire. Le paiement se fait par carte Visa ou Mastercard. Si tu n'as pas de carte bancaire, la solution la plus simple est une <strong>carte virtuelle prépayée rechargée depuis ton Mobile Money</strong>.</p>
@@ -184,7 +194,69 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
 </section>
 
 <section class="page cont">
-  <h2 style="margin-top:0">0.3 · Installer Node.js</h2>
+  <span class="tag">Module 0 · Parcours A</span>
+  <h1>100 % depuis <em>ton téléphone.</em></h1>
+  <p class="lead">Ton téléphone sert de télécommande : Claude travaille dans le cloud, sur un ordinateur puissant, et range tes vidéos sur GitHub. Compte environ 1 heure la première fois.</p>
+
+  <h2>A1 · Installer l'application Claude</h2>
+  <ol class="steps">
+    <li>Installe <strong>Claude</strong> depuis le Play Store (Android) ou l'App Store (iPhone).</li>
+    <li>Connecte-toi avec ton compte <strong>Pro</strong> (étape 0.2).</li>
+  </ol>
+
+  <h2>A2 · Créer ton compte GitHub</h2>
+  <ol class="steps">
+    <li>Dans le navigateur de ton téléphone, va sur <code>github.com</code> → <em>Sign up</em>. Utilise ton e-mail, choisis un nom d'utilisateur simple.</li>
+    <li>Valide ton e-mail. Le compte gratuit suffit.</li>
+  </ol>
+
+  <h2>A3 · Créer ton atelier (ton dépôt)</h2>
+  <ol class="steps">
+    <li>Sur <code>github.com</code>, touche <strong>+</strong> (en haut) → <em>New repository</em>.</li>
+    <li>Nom : <code>vibe-motion-atelier</code>. Choisis <strong>Private</strong>. Coche <em>Add a README file</em>. Touche <em>Create repository</em>.</li>
+  </ol>
+  <div class="box tip"><h4>💡 Bouton introuvable sur téléphone ?</h4><p>Dans le menu de ton navigateur, active <strong>« Version pour ordinateur »</strong> : GitHub affiche alors tous les boutons.</p></div>
+
+  <h2>A4 · Ajouter ton kit Vibe Motion</h2>
+  <ol class="steps">
+    <li>Télécharge <strong>Vibe-Motion-Kit.zip</strong> sur ton téléphone (il est livré avec ce guide).</li>
+    <li>Dans ton dépôt sur GitHub : <em>Add file</em> → <em>Upload files</em> → choisis <code>Vibe-Motion-Kit.zip</code> → <em>Commit changes</em>.</li>
+  </ol>
+</section>
+
+<section class="page cont">
+  <h2 style="margin-top:0">A5 · Connecter Claude à ton atelier</h2>
+  <ol class="steps">
+    <li>Dans l'application Claude, ouvre <strong>Code</strong> (dans le menu de l'application).</li>
+    <li>La première fois, Claude te demande de <strong>connecter GitHub</strong> : accepte et autorise l'accès à ton dépôt <code>vibe-motion-atelier</code>. Si ce n'est pas proposé, va sur <code>claude.ai/connect-github</code> depuis ton navigateur.</li>
+    <li>Choisis le dépôt <code>vibe-motion-atelier</code> et démarre une nouvelle session.</li>
+    <li>Envoie cette instruction :</li>
+  </ol>
+  <div class="prompt">Je suis débutant et je travaille depuis mon téléphone. Décompresse Vibe-Motion-Kit.zip à la racine du dépôt (le contenu du dossier Vibe-Motion-Kit doit se retrouver directement à la racine), puis supprime le fichier zip. Ensuite installe ce qu'il faut pour faire des vidéos : les skills HyperFrames (npx skills add heygen-com/hyperframes, choisis les « Core Skills »), le navigateur de rendu (npx hyperframes browser ensure), FFmpeg s'il manque, et les modules Python numpy et scipy. Fais un commit, pousse sur GitHub, et explique-moi chaque étape simplement.</div>
+  <p>Claude peut te demander la permission de lancer des commandes : <strong>accepte</strong>. Ça prend 5 à 15 minutes. Ton atelier est prêt. 🎉</p>
+  <div class="box tip"><h4>💡 « Accès réseau bloqué » ?</h4><p>Si Claude te dit qu'un téléchargement est bloqué, ouvre les réglages de l'environnement (menu de l'environnement en haut de la session → <em>Modifier</em>) et choisis un <strong>accès réseau plus large</strong>. Puis dis à Claude : « C'est débloqué, continue. »</p></div>
+
+  <h2>A6 · Ta première vidéo (depuis le téléphone)</h2>
+  <p>Sur téléphone, il n'y a pas d'aperçu dans un navigateur : Claude te montre des <strong>captures</strong> à la place. Envoie :</p>
+  <div class="prompt">Avec le skill motion-kit, crée une vidéo appelée logo-maman-rose : vertical 1080x1920, 30 images par seconde, 6 secondes.
+- Fond : dégradé radial orange, du #FFB54A au centre vers #FF4D1C puis #5C1500 sur les bords.
+- De 0 à 1,5 s : un cercle blanc fin se dessine au centre.
+- De 1,2 à 2,5 s : la lettre « R » apparaît en fondu au centre du cercle, police élégante en italique.
+- De 2,5 à 4 s : « CHEZ MAMAN ROSE » apparaît sous le cercle, lettres espacées qui se resserrent.
+- De 4 à 6 s : léger zoom avant.
+Montre-moi d'abord une planche de captures.</div>
+  <p>Corrige si besoin (« texte plus gros », « cercle plus lent »…), puis :</p>
+  <div class="prompt">C'est bon, exporte la vidéo en MP4, fais un commit et pousse sur GitHub, puis dis-moi où la télécharger.</div>
+  <p><strong>Récupérer ta vidéo :</strong> sur <code>github.com</code> → ton dépôt → <code>videos</code> → <code>logo-maman-rose</code> → <code>out</code> → <code>final.mp4</code> → bouton <strong>Télécharger</strong> (icône ⤓). La vidéo arrive dans ta galerie ou tes téléchargements : envoie-la sur WhatsApp. ✅</p>
+  <div class="box ok"><h4>✅ Bravo !</h4><p>Ta première vidéo motion, faite avec l'IA, depuis ton téléphone. Partage-la dans la communauté WhatsApp. Tu peux passer directement à « Bien parler à Claude ».</p></div>
+</section>
+
+<section class="page cont">
+  <span class="tag">Module 0 · Parcours B</span>
+  <h1>Sur <em>ordinateur.</em></h1>
+  <p class="lead">Tu as fait le parcours A ? Passe directement à « Les problèmes fréquents ». Ce parcours est pour ceux qui préfèrent travailler sur un PC ou un Mac (Windows 10/11 ou macOS 13+, 4 Go de mémoire minimum).</p>
+
+  <h2>B1 · Installer Node.js</h2>
   <p>HyperFrames (l'outil qui fabrique les vidéos) a besoin de Node.js, <strong>version 22 ou plus récente</strong>.</p>
   <ol class="steps">
     <li>Va sur <code>nodejs.org</code> et télécharge la version <strong>LTS</strong> (le bouton recommandé).</li>
@@ -192,7 +264,7 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
     <li>Redémarre ton ordinateur (ça évite beaucoup de problèmes).</li>
   </ol>
 
-  <h2>0.4 · Installer Claude sur ton ordinateur</h2>
+  <h2>B2 · Installer Claude sur ton ordinateur</h2>
   <p>Il y a deux façons. <strong>Choisis l'option A si tu n'as jamais utilisé de terminal.</strong></p>
   <h3>Option A (recommandée) : l'application Claude</h3>
   <ol class="steps">
@@ -209,9 +281,9 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
   <p>L'installation n'affiche pas de progression : attends qu'elle se termine. Ensuite, <strong>ferme et rouvre le terminal</strong> et tape <code>claude --version</code>. Si un numéro de version s'affiche, c'est bon. Pour démarrer, tape <code>claude</code> et connecte-toi dans le navigateur qui s'ouvre.</p>
   <div class="box tip"><h4>💡 Sur Windows</h4><p>Si Claude te propose d'installer <strong>Git pour Windows</strong> (<code>git-scm.com</code>), accepte : ça l'aide à lancer les commandes. Ce n'est pas obligatoire, mais c'est plus fiable.</p></div>
 
-  <h2>0.5 · Créer ton atelier vidéo</h2>
+  <h2>B3 · Créer ton atelier vidéo</h2>
   <ol class="steps">
-    <li>Crée un dossier sur ton bureau et appelle-le <code>vibe-motion</code>.</li>
+    <li>Crée un dossier sur ton bureau et appelle-le <code>vibe-motion</code>. Décompresse <strong>Vibe-Motion-Kit.zip</strong> et mets son <strong>contenu</strong> dans ce dossier (le dossier <code>.claude</code> est caché : c'est normal).</li>
     <li>Ouvre ce dossier avec Claude (Option A : sélectionne-le dans l'onglet Code ; Option B : dans le terminal, va dans le dossier puis tape <code>claude</code>).</li>
     <li>Colle cette instruction et envoie-la :</li>
   </ol>
@@ -220,14 +292,15 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
 2. Vérifie si FFmpeg est installé. Sinon, installe-le pour moi (sur Windows avec winget, sur Mac avec Homebrew) et explique-moi ce que tu fais.
 3. Installe les skills HyperFrames avec la commande : npx skills add heygen-com/hyperframes (choisis les « Core Skills »).
 4. Lance : npx hyperframes browser ensure (ça télécharge le navigateur qui sert au rendu).
-5. Crée un projet vidéo de départ dans ce dossier.
+5. Installe les modules Python numpy et scipy (pour la bande-son du kit Vibe Motion).
+6. Lis CLAUDE.md et LISEZMOI.md, puis crée un projet vidéo de départ dans ce dossier.
 Explique-moi chaque étape en français, simplement.</div>
   <p>Claude va te demander la permission avant de lancer certaines commandes : <strong>accepte</strong>. Ça peut prendre 5 à 15 minutes selon ta connexion (le navigateur de rendu pèse environ 150 Mo). Une fois les skills installées, <strong>ferme et relance Claude dans le même dossier</strong> pour qu'il les prenne en compte. Ton atelier est prêt. 🎉</p>
   <div class="box tip"><h4>💡 FFmpeg à la main (si besoin)</h4><p>Si Claude n'arrive pas à installer FFmpeg : sur Windows, ouvre PowerShell et tape <code>winget install --id Gyan.FFmpeg -e</code>, puis redémarre l'ordinateur. Sur Mac, installe Homebrew (<code>brew.sh</code>) puis tape <code>brew install ffmpeg</code>.</p></div>
 </section>
 
 <section class="page cont">
-  <h2 style="margin-top:0">0.6 · Ta première vidéo</h2>
+  <h2 style="margin-top:0">B4 · Ta première vidéo</h2>
   <p>Dans la même conversation avec Claude, colle cette instruction :</p>
   <div class="prompt">Avec /hyperframes, crée une vidéo appelée logo-maman-rose : format vertical 1080x1920, 30 images par seconde, durée 6 secondes.
 - Fond : dégradé radial orange, du #FFB54A au centre vers #FF4D1C puis #5C1500 sur les bords.
@@ -243,14 +316,17 @@ Utilise des animations fluides. Ouvre l'aperçu dans mon navigateur quand c'est 
   <p class="mut">Pour info, Claude utilise les commandes <code>npx hyperframes preview</code> (aperçu) et <code>npx hyperframes render --output out/video.mp4</code> (export). Tu peux aussi les taper toi-même dans le dossier du projet.</p>
   <div class="box ok"><h4>✅ Bravo !</h4><p>Ouvre le fichier MP4 : c'est ta première vidéo motion, faite avec l'IA. Envoie-la dans la communauté WhatsApp, on veut la voir. Tu viens de valider le résultat du module 0.</p></div>
 
-  <h2>0.7 · Les problèmes fréquents</h2>
+  <h2>0.3 · Les problèmes fréquents</h2>
   <table>
     <tr><th style="width:38%">Problème</th><th>Solution</th></tr>
     <tr><td>« claude n'est pas reconnu »</td><td>Ferme le terminal, rouvre-le, réessaie. Toujours pas ? Redémarre l'ordinateur. Sinon, utilise l'option A (l'application).</td></tr>
-    <tr><td>« npm » ou « node » introuvable</td><td>Node.js n'est pas installé ou l'ordinateur n'a pas redémarré. Refais l'étape 0.3.</td></tr>
+    <tr><td>« npm » ou « node » introuvable</td><td>Node.js n'est pas installé ou l'ordinateur n'a pas redémarré. Refais l'étape B1.</td></tr>
     <tr><td>L'aperçu ne s'ouvre pas</td><td>Demande à Claude : « Relance l'aperçu HyperFrames (npx hyperframes preview) et donne-moi l'adresse. »</td></tr>
-    <tr><td>L'export échoue avec « ffmpeg » dans l'erreur</td><td>FFmpeg n'est pas installé : voir l'encadré « FFmpeg à la main » (étape 0.5).</td></tr>
+    <tr><td>L'export échoue avec « ffmpeg » dans l'erreur</td><td>FFmpeg n'est pas installé : voir l'encadré « FFmpeg à la main » (étape B3).</td></tr>
     <tr><td>Claude ne connaît pas /hyperframes</td><td>Les skills ne sont pas chargées : ferme Claude, relance-le dans le dossier du projet. Sinon, demande-lui : « Lance npx hyperframes skills update ».</td></tr>
+    <tr><td>📱 Je ne trouve pas « Code » dans l'application</td><td>Mets l'application Claude à jour. Vérifie que ton compte est bien en <strong>Pro</strong>. Tu peux aussi ouvrir <code>claude.ai/code</code> dans le navigateur du téléphone.</td></tr>
+    <tr><td>📱 Claude ne voit pas mon dépôt</td><td>Va sur <code>claude.ai/connect-github</code>, reconnecte GitHub et autorise l'accès à <code>vibe-motion-atelier</code>. Puis démarre une nouvelle session en choisissant ce dépôt.</td></tr>
+    <tr><td>📱 Je ne trouve pas ma vidéo sur GitHub</td><td>Demande à Claude : « As-tu bien fait le commit et poussé la vidéo ? Donne-moi le lien exact du fichier. »</td></tr>
     <tr><td>Une erreur rouge s'affiche</td><td>Copie l'erreur et colle-la à Claude : « J'ai cette erreur, corrige-la. » Il sait réparer.</td></tr>
     <tr><td>Claude dit que la limite d'utilisation est atteinte</td><td>L'abonnement Pro a des limites par période. Attends l'heure indiquée. Astuce : écris des instructions précises (comme dans ce guide) pour éviter les allers-retours.</td></tr>
     <tr><td>L'export est lent</td><td>Normal sur un petit ordinateur. Ferme les autres programmes. Une vidéo de 10 s prend en général de quelques secondes à quelques minutes.</td></tr>
@@ -306,10 +382,9 @@ Utilise des animations fluides. Ouvre l'aperçu dans mon navigateur quand c'est 
   <h2>Ton checklist du module 0</h2>
   <ul class="check">
     <li>J'ai un compte Claude Pro actif</li>
-    <li>Node.js est installé</li>
-    <li>Claude (application ou terminal) est installé et connecté</li>
-    <li>FFmpeg est installé et les skills HyperFrames sont installées</li>
-    <li>J'ai vu l'aperçu de ma vidéo dans mon navigateur</li>
+    <li>Mon atelier est prêt (téléphone : dépôt GitHub connecté à Claude · ordinateur : Node.js, Claude et FFmpeg installés)</li>
+    <li>Mon kit Vibe Motion est installé, ainsi que les skills HyperFrames</li>
+    <li>J'ai vu ma vidéo avant l'export (captures ou aperçu)</li>
     <li>J'ai exporté ma première vidéo en MP4</li>
     <li>Je l'ai partagée dans la communauté WhatsApp</li>
   </ul>
@@ -840,8 +915,9 @@ Je commence dès réception de l'acompte 🙏</div>
   <span class="tag">Le mot de la fin</span>
   <h1>Maintenant, <em>à toi de jouer.</em></h1>
   <p class="lead">Tu as entre les mains une compétence que très peu de gens autour de toi maîtrisent encore. L'outil est là, la méthode est là. Ce qui fera la différence, c'est ta pratique et ton courage d'aller voir les entreprises.</p>
+  <div class="box"><h4>✉️ Contact</h4><p>Une question sur ton achat, ton accès ou la garantie : <strong>risenofm@gmail.com</strong></p></div>
   <div class="box ok"><h4>👥 La communauté WhatsApp</h4><p>Questions, blocages, vidéos à montrer, victoires à partager : <strong><a href="https://chat.whatsapp.com/G7s34pJD8KQ78a97hKKRQu?mode=gi_t">Rejoindre le groupe WhatsApp</a></strong></p></div>
-  <div class="box tip"><h4>🛡️ Rappel de ta garantie 7 jours</h4><p>Modules 0 à 2 suivis, exercices faits, et pas de vidéo exportée au bout de 7 jours ? Écris-nous : <strong>en message privé à l'administrateur de la communauté WhatsApp</strong>. Remboursement intégral.</p></div>
+  <div class="box tip"><h4>🛡️ Rappel de ta garantie 7 jours</h4><p>Modules 0 à 2 suivis, exercices faits, et pas de vidéo exportée au bout de 7 jours ? Écris-nous à <strong>risenofm@gmail.com</strong>. Remboursement intégral.</p></div>
   <div class="box"><h4>⚖️ À savoir</h4><p class="mut" style="font-size:9pt">Les prix et montants cités dans ce guide sont des repères. Aucun revenu n'est garanti : tes résultats dépendent de ton travail, de ta régularité et de tes clients. Claude est une marque d'Anthropic ; HyperFrames est un logiciel open source de HeyGen (licence Apache 2.0) ; Vibe Motion est une formation indépendante, non affiliée à ces entreprises. Ce guide est réservé à son acheteur : merci de ne pas le partager.</p></div>
 </section>
 

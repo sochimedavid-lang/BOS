@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #020B0B; --tl: #2EF0C2; --tl2: #14B89A; --gd: #F5B23A; --font: "Space Grotesk", sans-serif; }
+      #root { color: #EAFBF6; }
+      .t { font-weight: 600; letter-spacing: -.02em; white-space: nowrap; line-height: 1.05; }
+      .glow { text-shadow: 0 0 28px rgba(46,240,194,.55), 0 0 4px rgba(255,255,255,.6); }
+      .glowg { text-shadow: 0 0 30px rgba(245,178,58,.7), 0 0 4px rgba(255,255,255,.6); }
+      .blob { position: absolute; border-radius: 50%; }
+      #grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(46,240,194,.06) 2px, transparent 2px), linear-gradient(90deg, rgba(46,240,194,.06) 2px, transparent 2px); background-size: 90px 90px; }
+      .dot { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #BFFFEF; box-shadow: 0 0 12px #2EF0C2; }
+      .mo { position: absolute; top: 1150px; font-size: 34px; color: rgba(255,226,170,.55); font-weight: 500; }
+      .glass { position: absolute; border-radius: 34px; background: linear-gradient(160deg, rgba(20,60,56,.85), rgba(6,22,22,.92)); border: 2px solid rgba(46,240,194,.35); box-shadow: 0 0 60px rgba(46,240,194,.18), 0 40px 80px rgba(0,0,0,.5); }
+      .row { display: flex; align-items: center; gap: 26px; padding: 30px 34px; border-bottom: 2px solid rgba(46,240,194,.12); font-size: 40px; font-weight: 500; white-space: nowrap; }
+      .row:last-child { border-bottom: 0; }
+      .row .ic { width: 78px; height: 78px; border-radius: 22px; background: rgba(46,240,194,.12); display: flex; align-items: center; justify-content: center; font-size: 38px; flex: none; }
+      .tg { margin-left: auto; width: 110px; height: 58px; border-radius: 99px; background: rgba(255,255,255,.12); position: relative; flex: none; }
+      .tg i { position: absolute; left: 6px; top: 6px; width: 46px; height: 46px; border-radius: 50%; background: #9AA9A6; }
+      .ok { position: absolute; right: 168px; font-size: 30px; color: var(--tl); font-weight: 600; }
+      .ln { height: 18px; border-radius: 9px; background: rgba(46,240,194,.22); margin: 22px 0; transform-origin: 0 50%; }
+      .btn { display: inline-flex; padding: 30px 70px; border-radius: 22px; background: var(--tl); color: #02201A; font-weight: 700; font-size: 48px; box-shadow: 0 0 50px rgba(46,240,194,.55); }
+      .wm { font-weight: 600; letter-spacing: -.03em; white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25.8" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="25.8" data-track-index="10"></audio>
+
+      <!-- fonds : or puis sarcelle -->
+      <div id="bgG" class="clip" data-layout-allow-overflow style="background:#060402; overflow:hidden">
+        <div class="blob" id="G1" style="left:-500px; top:-300px; width:1400px; height:1400px; background:radial-gradient(circle, rgba(245,178,58,.75), rgba(160,90,10,.25) 40%, rgba(0,0,0,0) 68%)"></div>
+        <div class="blob" id="G2" style="left:350px; top:1100px; width:1200px; height:1200px; background:radial-gradient(circle, rgba(245,150,40,.45), rgba(0,0,0,0) 65%)"></div>
+      </div>
+      <div id="bgT" class="clip" data-layout-allow-overflow style="background:#020B0B; overflow:hidden">
+        <div class="blob" id="T1" style="left:-450px; top:-350px; width:1300px; height:1300px; background:radial-gradient(circle, rgba(46,240,194,.42), rgba(20,120,110,.18) 40%, rgba(0,0,0,0) 68%)"></div>
+        <div class="blob" id="T2" style="left:380px; top:1150px; width:1300px; height:1300px; background:radial-gradient(circle, rgba(46,240,194,.38), rgba(0,0,0,0) 65%)"></div>
+        <div id="grid"></div>
+        <div id="dots"></div>
+      </div>
+      <div id="flash" class="clip" style="background:radial-gradient(circle at 50% 50%, #CFFFF2, #2EF0C2 40%, rgba(46,240,194,0) 75%); opacity:0"></div>
+
+      <!-- 1. Protéger les données… prend des mois (frise) -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:760px; flex-direction:column; gap:8px">
+          <div class="m" style="font-size:86px"><span id="a1" class="t glowg" style="font-size:86px">Protéger les données</span></div>
+          <div class="m" style="font-size:86px"><span id="a2" class="t glowg" style="font-size:86px">de ton entreprise…</span></div>
+        </div>
+        <div id="axis" class="abs" style="left:0; top:1120px; width:3000px; height:4px; background:linear-gradient(90deg, rgba(245,178,58,0), rgba(245,178,58,.8) 20%, rgba(245,178,58,.8) 80%, rgba(245,178,58,0))"></div>
+        <div id="mos"></div>
+        <div id="spark" class="abs" style="left:520px; top:1104px; width:36px; height:36px; border-radius:50%; background:#FFF3D6; box-shadow:0 0 30px 12px rgba(245,178,58,.9)"></div>
+      </div>
+
+      <!-- 2. prend des mois / et coûte des millions (cadran) -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <svg id="dial" class="abs" style="left:-260px; top:560px; overflow:visible" width="1600" height="1600" viewBox="0 0 1600 1600">
+          <circle cx="800" cy="800" r="760" fill="none" stroke="rgba(245,178,58,.45)" stroke-width="4"/>
+          <g id="ticks"></g>
+          <line id="needle" x1="800" y1="800" x2="800" y2="110" stroke="#FFD27A" stroke-width="8" stroke-linecap="round" style="filter:drop-shadow(0 0 12px #F5B23A)"/>
+        </svg>
+        <div class="abs center" style="left:0; right:0; top:820px; height:200px">
+          <div class="m" style="font-size:96px; position:absolute"><span id="b1" class="t glowg" style="font-size:96px">prend des mois.</span></div>
+          <div class="abs center" style="left:0; right:0; flex-direction:column; gap:6px">
+            <div class="m" style="font-size:72px"><span id="b2" class="t glowg" style="font-size:72px; font-weight:500">Et coûte</span></div>
+            <div class="m" style="font-size:120px"><span id="b3" class="t glowg" style="font-size:120px; color:#FFC65C">des millions.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Voici Rempart Défense -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:700px">
+          <div class="m" style="font-size:80px"><span id="c1" class="t glow" style="font-size:80px; font-weight:500">Voici</span></div>
+        </div>
+        <div class="abs center" style="left:0; right:0; top:880px">
+          <div class="wm glow" style="font-size:120px"><span id="wm1">rempart</span> <span id="wm2" style="color:var(--tl)">défense</span></div>
+        </div>
+        <div id="rings"></div>
+      </div>
+
+      <!-- 4. bouclier : on sécurise tout, de bout en bout -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion style="perspective:1800px">
+        <div class="abs center" style="left:0; right:0; top:300px">
+          <div class="m" style="font-size:84px"><span id="d1" class="t glow" style="font-size:84px">On sécurise tout,</span></div>
+        </div>
+        <div id="shield" class="abs" style="left:290px; top:560px; width:500px; height:600px; transform-style:preserve-3d"></div>
+        <div class="abs center" style="left:0; right:0; top:1290px">
+          <div class="m" style="font-size:84px"><span id="d2" class="t glow" style="font-size:84px; color:var(--tl)">de bout en bout.</span></div>
+        </div>
+      </div>
+
+      <!-- 5. comptes, fichiers clients, Mobile Money -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="sh5" class="abs center" style="left:0; right:0; top:300px; flex-direction:column; gap:26px">
+          <svg width="130" height="156" viewBox="0 0 500 600" style="filter:drop-shadow(0 0 24px rgba(46,240,194,.6))"><path d="M250 20 L460 100 L460 300 C460 440 360 530 250 580 C140 530 40 440 40 300 L40 100 Z" fill="rgba(46,240,194,.2)" stroke="#2EF0C2" stroke-width="22" stroke-linejoin="round"/><path d="M175 300 L235 360 L345 240" fill="none" stroke="#2EF0C2" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="t glow" style="font-size:64px">Tout est sous contrôle</div>
+        </div>
+        <div id="list" class="glass" style="left:90px; top:620px; width:900px; padding:14px 0">
+          <div style="padding:22px 34px 10px; font-size:30px; color:rgba(234,251,246,.6); letter-spacing:.12em; text-transform:uppercase">Protection active</div>
+          <div class="row" id="r1"><div class="ic">👤</div>Tes comptes<span class="ok" id="o1">Protégé</span><div class="tg"><i></i></div></div>
+          <div class="row" id="r2"><div class="ic">🗂️</div>Tes fichiers clients<span class="ok" id="o2">Protégé</span><div class="tg"><i></i></div></div>
+          <div class="row" id="r3"><div class="ic">📱</div>Ton Mobile Money<span class="ok" id="o3">Protégé</span><div class="tg"><i></i></div></div>
+        </div>
+      </div>
+
+      <!-- 6. rapport en moins de 30 minutes -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:330px">
+          <div class="m" style="font-size:76px"><span id="e1" class="t glow" style="font-size:76px">Ton rapport de sécurité ?</span></div>
+        </div>
+        <div id="doc" class="glass" style="left:200px; top:560px; width:680px; height:640px; padding:50px 54px">
+          <div style="display:flex; align-items:center; gap:18px; font-size:34px; font-weight:600"><span style="width:20px; height:20px; border-radius:50%; background:var(--tl); box-shadow:0 0 14px var(--tl)"></span>Rapport_securite.pdf</div>
+          <div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:84%"></div><div class="ln" style="width:58%"></div><div class="ln" style="width:88%"></div><div class="ln" style="width:66%"></div><div class="ln" style="width:76%"></div>
+          <div id="bar" style="position:absolute; left:54px; right:54px; bottom:50px; height:14px; border-radius:7px; background:rgba(255,255,255,.08); overflow:hidden"><i id="barf" style="display:block; height:100%; width:100%; background:var(--tl); box-shadow:0 0 14px var(--tl); transform-origin:0 50%"></i></div>
+        </div>
+        <div class="abs center" style="left:0; right:0; top:1300px; flex-direction:column; gap:4px">
+          <div class="m" style="font-size:60px"><span id="e2" class="t" style="font-size:60px; font-weight:500; color:rgba(234,251,246,.8)">Prêt en moins de</span></div>
+          <div id="e3" class="t glow" style="font-size:200px; font-weight:700">&lt;30 min</div>
+        </div>
+      </div>
+
+      <!-- 7. score en temps réel -->
+      <div id="s7" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:360px">
+          <div class="m" style="font-size:76px"><span id="f1" class="t glow" style="font-size:76px">Ton score de protection</span></div>
+        </div>
+        <svg class="abs" style="left:190px; top:600px; overflow:visible" width="700" height="700" viewBox="0 0 700 700">
+          <path d="M 110 560 A 300 300 0 1 1 590 560" fill="none" stroke="rgba(46,240,194,.12)" stroke-width="44" stroke-linecap="round"/>
+          <path id="arc" d="M 110 560 A 300 300 0 1 1 590 560" fill="none" stroke="#2EF0C2" stroke-width="44" stroke-linecap="round" style="filter:drop-shadow(0 0 16px #2EF0C2)"/>
+        </svg>
+        <div class="abs center" style="left:0; right:0; top:800px; flex-direction:column">
+          <div class="t glow" style="font-size:200px; font-weight:700"><span id="sc">0</span></div>
+          <div style="font-size:40px; color:rgba(234,251,246,.6); margin-top:-10px">/ 100</div>
+        </div>
+        <div id="live" class="abs center" style="left:0; right:0; top:1350px; gap:22px">
+          <span id="ld" style="width:30px; height:30px; border-radius:50%; background:#FF5A5A; box-shadow:0 0 18px #FF5A5A"></span>
+          <div class="m" style="font-size:64px"><span id="f2" class="t glow" style="font-size:64px">en temps réel</span></div>
+        </div>
+      </div>
+
+      <!-- 8. protégé en quelques jours, sans te ruiner -->
+      <div id="s8" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:640px">
+          <div id="g1" class="t" style="font-size:230px; font-weight:700; color:var(--tl); letter-spacing:-.05em; text-shadow:0 0 60px rgba(46,240,194,.6)">PROTÉGÉ</div>
+        </div>
+        <div class="abs center" style="left:0; right:0; top:960px; flex-direction:column; gap:12px">
+          <div class="m" style="font-size:80px"><span id="g2" class="t glow" style="font-size:80px">en quelques jours,</span></div>
+          <div class="m" style="font-size:80px"><span id="g3" class="t glow" style="font-size:80px; color:var(--tl)">sans te ruiner.</span></div>
+        </div>
+      </div>
+
+      <!-- 9. fin -->
+      <div id="s9" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="logo2" class="abs center" style="left:0; right:0; top:620px; flex-direction:column; gap:40px">
+          <svg width="150" height="180" viewBox="0 0 500 600"><path d="M250 20 L460 100 L460 300 C460 440 360 530 250 580 C140 530 40 440 40 300 L40 100 Z" fill="rgba(46,240,194,.18)" stroke="#2EF0C2" stroke-width="22" stroke-linejoin="round"/><path d="M175 300 L235 360 L345 240" fill="none" stroke="#2EF0C2" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="wm glow" style="font-size:120px">rempart <span style="color:var(--tl)">défense</span></div>
+        </div>
+        <div id="cta" class="abs center" style="left:0; right:0; top:1150px"><div class="btn" id="btn">Réserve ta démo</div></div>
+        <svg id="cur" class="abs" style="left:0; top:0" width="70" height="86" viewBox="0 0 70 86"><path d="M6 4 L6 70 L24 54 L36 82 L48 76 L36 50 L60 50 Z" fill="#fff" stroke="#02201A" stroke-width="5" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+    <script>
+      const TOTAL = 25.8;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+      const r = MK.rng(23);
+      const $1 = (s) => document.querySelector(s);
+
+      MK.scenes(tl, [["#s1", 0, 2.6], ["#s2", 2.6, 5.45], ["#s3", 5.45, 7.3], ["#s4", 7.3, 9.75], ["#s5", 9.75, 13.1], ["#s6", 13.1, 16.45], ["#s7", 16.45, 19.0], ["#s8", 19.0, 22.25], ["#s9", 22.25, TOTAL]], TOTAL);
+
+      /* fonds */
+      gsap.set("#bgT", { opacity: 0 });
+      tl.set("#bgT", { opacity: 1 }, 5.45);
+      tl.set("#bgG", { opacity: 0 }, 5.45);
+      tl.fromTo("#flash", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1.3, duration: 0.18, ease: "power2.in", immediateRender: false }, 5.3);
+      tl.to("#flash", { opacity: 0, duration: 0.5, ease: "power2.out" }, 5.48);
+      [["#G1", 200, 160], ["#G2", -200, -160], ["#T1", 240, 260], ["#T2", -260, -240]].forEach(([s, x, y]) => tl.to(s, { x, y, duration: TOTAL / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0));
+      for (let i = 0; i < 40; i++) {
+        const d = MK.el("i", "dot", "#dots", "", { left: r() * 1080 + "px", top: r() * 1920 + "px", opacity: 0.25 + r() * 0.6 });
+        gsap.set(d, { scale: 0.5 + r() });
+        tl.to(d, { y: -200 - r() * 400, x: (r() - 0.5) * 120, duration: TOTAL, ease: "none" }, 0);
+      }
+
+      /* 1. frise des mois */
+      MK.rise(tl, "#a1", 0.3); MK.rise(tl, "#a2", 1.25);
+      ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."].forEach((m, i) => MK.el("div", "mo", "#mos", m, { left: 120 + i * 230 + "px" }));
+      tl.to(["#mos", "#axis"], { x: -1500, duration: 2.6, ease: "none" }, 0);
+      gsap.set("#spark", { scale: 0 }); tl.to("#spark", { scale: 1, duration: 0.4, ease: E.ui }, 0.2);
+      MK.pulse(tl, "#spark", [0.9, 1.6, 2.3], 1.4);
+      tl.to("#s1 .center", { y: -60, opacity: 0, duration: 0.25, ease: "power2.in" }, 2.4);
+
+      /* 2. cadran */
+      for (let i = 0; i < 60; i++) {
+        const a = (i / 60) * Math.PI * 2, big = i % 5 === 0;
+        const r1 = big ? 690 : 715, r2 = 745;
+        const ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        ln.setAttribute("x1", 800 + Math.sin(a) * r1); ln.setAttribute("y1", 800 - Math.cos(a) * r1);
+        ln.setAttribute("x2", 800 + Math.sin(a) * r2); ln.setAttribute("y2", 800 - Math.cos(a) * r2);
+        ln.setAttribute("stroke", big ? "rgba(255,210,122,.9)" : "rgba(245,178,58,.4)"); ln.setAttribute("stroke-width", big ? 6 : 3);
+        $1("#ticks").appendChild(ln);
+      }
+      gsap.set("#dial", { scale: 0.6, opacity: 0, rotation: -30, transformOrigin: "800px 800px" });
+      tl.to("#dial", { scale: 1, opacity: 1, rotation: 0, duration: 0.8, ease: E.card }, 2.6);
+      gsap.set("#needle", { rotation: -60, svgOrigin: "800 800" });
+      tl.to("#needle", { rotation: 40, duration: 1.0, ease: E.card }, 2.7);
+      tl.to("#needle", { rotation: 300, duration: 1.4, ease: "power3.inOut" }, 3.9);
+      MK.rise(tl, "#b1", 2.65); MK.exitUp(tl, "#b1", 3.75);
+      MK.rise(tl, "#b2", 3.85); MK.rise(tl, "#b3", 4.55);
+      MK.shake(tl, "#b3", 4.9, 8);
+      tl.to("#dial", { scale: 1.6, opacity: 0, duration: 0.4, ease: "power3.in" }, 5.1);
+
+      /* 3. Voici Rempart Défense */
+      MK.rise(tl, "#c1", 5.5);
+      const L = [...MK.split("#wm1"), ...MK.split("#wm2")];
+      L.forEach((c, i) => {
+        gsap.set(c, { x: (r() - 0.5) * 900, y: (r() - 0.5) * 900, rotation: (r() - 0.5) * 180, scale: 0.3, opacity: 0, filter: "blur(14px)" });
+        tl.to(c, { x: 0, y: 0, rotation: 0, scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.75, ease: "power3.out" }, 5.95 + i * 0.035);
+      });
+      for (let i = 0; i < 3; i++) {
+        const g = MK.el("div", "", "#rings", "", { position: "absolute", left: "540px", top: "950px", width: "10px", height: "10px", borderRadius: "50%", border: "4px solid rgba(46,240,194,.7)", boxShadow: "0 0 30px rgba(46,240,194,.6)" });
+        gsap.set(g, { xPercent: -50, yPercent: -50, opacity: 0 });
+        tl.set(g, { opacity: 1 }, 6.6 + i * 0.18);
+        tl.to(g, { width: 1600, height: 1600, opacity: 0, duration: 1.1, ease: "power2.out" }, 6.6 + i * 0.18);
+      }
+      tl.to("#s3 .center", { scale: 1.15, opacity: 0, duration: 0.3, ease: "power2.in" }, 7.05);
+
+      /* 4. bouclier 3D (couches extrudées) */
+      const SH = "M250 20 L460 100 L460 300 C460 440 360 530 250 580 C140 530 40 440 40 300 L40 100 Z";
+      for (let i = 0; i < 9; i++) {
+        const back = i < 8;
+        MK.el("div", "", "#shield", `<svg width="500" height="600" viewBox="0 0 500 600" style="overflow:visible"><defs><linearGradient id="sg${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${back ? "#0B5C52" : "#7FFFE0"}"/><stop offset=".55" stop-color="${back ? "#063A34" : "#1FC9A4"}"/><stop offset="1" stop-color="${back ? "#03201D" : "#0A6E60"}"/></linearGradient></defs><path d="${SH}" fill="url(#sg${i})" ${back ? "" : 'stroke="#BFFFF0" stroke-width="6"'} stroke-linejoin="round"/>${back ? "" : '<path d="M250 70 L410 132 L410 300 C410 405 335 478 250 520" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="10" stroke-linecap="round"/><path d="M165 300 L230 365 L345 245" fill="none" stroke="#04241F" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>'}</svg>`, { position: "absolute", left: 0, top: 0, transform: `translateZ(${(i - 8) * 7}px)` });
+      }
+      gsap.set("#shield", { scale: 0.2, opacity: 0, rotationY: -70, rotationX: 10 });
+      tl.set("#shield", { opacity: 1 }, 7.35);
+      tl.to("#shield", { scale: 1, rotationY: 25, duration: 0.9, ease: E.card }, 7.35);
+      tl.to("#shield", { rotationY: -25, duration: 1.4, ease: "sine.inOut" }, 8.25);
+      MK.rise(tl, "#d1", 7.6); MK.rise(tl, "#d2", 8.75);
+      tl.to("#shield", { scale: 0.35, y: -470, rotationY: 0, duration: 0.5, ease: E.card }, 9.65);
+      tl.to(["#d1", "#d2"], { opacity: 0, duration: 0.2 }, 9.6);
+
+      /* 5. liste protégée */
+      MK.pop(tl, "#sh5", 9.75);
+      MK.slide(tl, "#list", 9.8, { y: 1300 });
+      tl.to("#sh5", { y: -1500, duration: 0.45, ease: "power3.in" }, 12.85);
+      gsap.set(["#o1", "#o2", "#o3"], { opacity: 0, x: 20 });
+      [["#r1", "#o1", 10.15], ["#r2", "#o2", 10.95], ["#r3", "#o3", 12.3]].forEach(([row, o, t]) => {
+        tl.to(`${row} .tg`, { background: "rgba(46,240,194,.85)", duration: 0.2 }, t);
+        tl.to(`${row} .tg i`, { x: 52, background: "#fff", duration: 0.35, ease: E.ui }, t);
+        tl.to(o, { opacity: 1, x: 0, duration: 0.3 }, t + 0.05);
+        tl.to(`${row} .ic`, { background: "rgba(46,240,194,.35)", duration: 0.2 }, t);
+      });
+      tl.to("#list", { y: -1500, rotation: -4, duration: 0.45, ease: "power3.in" }, 12.9);
+
+      /* 6. rapport */
+      MK.rise(tl, "#e1", 13.2);
+      MK.slide(tl, "#doc", 13.3, { y: 1300 });
+      gsap.set("#doc .ln", { scaleX: 0 });
+      tl.to("#doc .ln", { scaleX: 1, duration: 0.35, ease: "power2.out", stagger: 0.18 }, 13.8);
+      gsap.set("#barf", { scaleX: 0 }); tl.to("#barf", { scaleX: 1, duration: 1.8, ease: "power1.inOut" }, 13.8);
+      MK.rise(tl, "#e2", 14.6);
+      gsap.set("#e3", { scale: 0.4, opacity: 0, filter: "blur(20px)" });
+      tl.to("#e3", { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: E.ui }, 15.55);
+      tl.to(["#doc", "#e1", "#e2", "#e3"], { y: "-=1600", duration: 0.45, ease: "power3.in", stagger: 0.03 }, 16.15);
+
+      /* 7. score */
+      MK.rise(tl, "#f1", 16.55);
+      const arcL = $1("#arc").getTotalLength();
+      gsap.set("#arc", { strokeDasharray: arcL, strokeDashoffset: arcL });
+      tl.to("#arc", { strokeDashoffset: arcL * 0.06, duration: 1.4, ease: "power2.out" }, 16.7);
+      MK.count(tl, "#sc", 0, 94, 16.7, 1.4);
+      MK.rise(tl, "#f2", 18.1);
+      MK.pulse(tl, "#ld", [18.1, 18.6], 1.5);
+
+      /* 8. PROTÉGÉ */
+      gsap.set("#g1", { scale: 2.4, opacity: 0, filter: "blur(30px)" });
+      tl.to("#g1", { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.7, ease: "power3.out" }, 19.15);
+      MK.rise(tl, "#g2", 19.9); MK.rise(tl, "#g3", 21.0);
+      tl.to("#s8 > *", { y: -120, opacity: 0, duration: 0.3, ease: "power2.in" }, 22.0);
+
+      /* 9. fin */
+      gsap.set("#logo2", { scale: 0.7, opacity: 0, filter: "blur(16px)" });
+      tl.to("#logo2", { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, 22.3);
+      MK.pop(tl, "#cta", 23.4);
+      gsap.set("#cur", { x: 1100, y: 1800 });
+      tl.to("#cur", { x: 640, y: 1220, duration: 0.7, ease: "power2.out" }, 23.6);
+      tl.to("#cur", { scale: 0.85, duration: 0.08 }, 24.35); tl.to("#cur", { scale: 1, duration: 0.2 }, 24.43);
+      MK.pulse(tl, "#btn", [24.35], 0.92);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
