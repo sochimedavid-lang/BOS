@@ -45,3 +45,4 @@
 - Widget Chariow intégré à la demande de l'entrepreneur : bouton natif masqué, nos 6 boutons ouvrent la fenêtre de paiement Chariow (couleur #F4511E) ; repli automatique sur le lien de paiement si le widget ne charge pas. Testé : widget chargé + fenêtre ouverte au clic.
 - Consigne de l'entrepreneur : livrer la page en HTML pour vérification ; c'est lui qui décide quand héberger.
 - Lien communauté WhatsApp reçu et intégré au PDF (cliquable). Contact support provisoire : message privé à l'admin du groupe (en attente d'un numéro/e-mail dédié).
+- Paiement 100 % dans la page : si le widget Chariow n'est pas chargé/bloqué, une fenêtre de secours affiche le même formulaire Chariow (iframe widget checkout) au lieu d'ouvrir la page Chariow. Testé : widget OK, secours OK, le visiteur reste sur la page.

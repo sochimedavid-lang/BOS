@@ -525,6 +525,12 @@ footer .disc2 b{color:var(--text)}
 <style>
 #chariow-widget .cw-button-base{position:fixed!important;left:-9999px!important;top:0!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
 #chariow-widget .cw-modal-content{border-radius:16px}
+#payModal{display:none}#payModal.on{display:block}
+#payModal .pm-bg{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000}
+#payModal .pm-box{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(600px,calc(100% - 24px));background:#fff;border-radius:16px;z-index:1001;overflow:visible}
+#payModal .pm-if{display:block;width:100%;height:min(720px,86vh);border:0;border-radius:16px}
+#payModal .pm-x{position:absolute;top:-14px;right:-8px;width:36px;height:36px;border-radius:50%;border:0;background:#fff;color:#1a1a2e;font-size:16px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+
 </style>
 <script>
 (function(){
@@ -560,10 +566,32 @@ document.querySelectorAll(".js-note").forEach(n=>n.textContent=CONFIG.priceNote)
 document.querySelectorAll("#brandName,.js-brand").forEach(n=>n.textContent=CONFIG.brandName);
 document.querySelectorAll(".js-buy").forEach(a=>{a.href=CONFIG.checkoutUrl||"#";a.addEventListener("click",e=>{
   if(window.fbq)fbq("track","InitiateCheckout");
+  e.preventDefault();
   const native=document.querySelector("#chariow-widget .cw-button-base");
-  if(native){e.preventDefault();native.click();}   // fenêtre de paiement Chariow sur la page
-  // sinon (widget pas encore chargé ou bloqué) : le lien ouvre la page de paiement Chariow
+  if(native){native.click();}   // fenêtre de paiement Chariow sur la page
+  else{openPay();}              // widget pas encore chargé ou bloqué : notre propre fenêtre de paiement
 });});
+
+// Fenêtre de paiement de secours (même formulaire Chariow, sans quitter la page)
+const PAY_URL="https://peryal.mychariow.shop/widget/prd_zqv7lcu4/checkout?primary_color=%23F4511E&background_color=%23FFFFFF&border_style=rounded&locale=fr";
+function openPay(){
+  let m=document.getElementById("payModal");
+  if(!m){
+    m=document.createElement("div");m.id="payModal";
+    m.innerHTML='<div class="pm-bg"></div><div class="pm-box"><button class="pm-x" aria-label="Fermer">✕</button><iframe class="pm-if" src="'+PAY_URL+'" allow="payment"></iframe></div>';
+    document.body.appendChild(m);
+    m.querySelector(".pm-bg").onclick=m.querySelector(".pm-x").onclick=()=>m.classList.remove("on");
+  }
+  m.classList.add("on");
+}
+addEventListener("message",ev=>{
+  const d=ev.data||{}; const f=document.querySelector("#payModal .pm-if");
+  if(!f||ev.source!==f.contentWindow) return;
+  if(d.type==="chariow-checkout-redirect"&&typeof d.url==="string"&&d.url.startsWith("https:")){location.href=d.url;return;}
+  if(d.eventType==="PAYMENT_SUCCESSFUL"&&d.eventData&&d.eventData.return_url){location.href=d.eventData.return_url;return;}
+  if(d.type==="chariow-purchase-completed"&&d.purchaseId){location.href="https://peryal.mychariow.shop/purchase/"+d.purchaseId;return;}
+  if(d.type==="chariow-iframe-height"&&d.height){f.style.height=Math.min(d.height,innerHeight*0.86)+"px";}
+});
 if(CONFIG.whatsappContact)document.querySelectorAll(".js-contact").forEach(a=>a.href="https://wa.me/"+CONFIG.whatsappContact);
 if(CONFIG.avatarUrl)document.querySelectorAll("#avatar,.js-avatar").forEach(d=>d.innerHTML=`<img src="${CONFIG.avatarUrl}" alt="">`);
 
