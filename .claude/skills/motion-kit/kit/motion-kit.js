@@ -31,8 +31,9 @@
   /* ---------- entrées et sorties ---------- */
   // le masque .m prend la taille de police de son texte pour que sa marge (en em) laisse passer les accents des capitales
   MK.fitMask = (sel) => $$(sel).forEach((e) => { const m = e.parentElement; if (m && m.classList.contains("m") && !m.style.fontSize) m.style.fontSize = getComputedStyle(e).fontSize; });
-  MK.rise = (tl, sel, t, { dur = 0.75, stagger = 0, ease = MK.ease.type, from = 115 } = {}) => { MK.fitMask(sel); gsap.set(sel, { yPercent: from }); tl.to(sel, { yPercent: 0, duration: dur, ease, stagger }, t); };
-  MK.exitUp = (tl, sel, t, { dur = 0.35, stagger = 0.04 } = {}) => tl.to(sel, { yPercent: -120, opacity: 0, duration: dur, ease: "power3.in", stagger }, t);
+  // invisible tant qu'il n'est pas monté : rien ne dépasse du masque (textes empilés au même endroit)
+  MK.rise = (tl, sel, t, { dur = 0.75, stagger = 0, ease = MK.ease.type, from = 130 } = {}) => { MK.fitMask(sel); gsap.set(sel, { yPercent: from, opacity: 0 }); tl.set(sel, { opacity: 1 }, t); tl.to(sel, { yPercent: 0, duration: dur, ease, stagger }, t); };
+  MK.exitUp = (tl, sel, t, { dur = 0.35, stagger = 0.04 } = {}) => tl.to(sel, { yPercent: -140, opacity: 0, duration: dur, ease: "power3.in", stagger }, t);
   MK.pop = (tl, sel, t, { dur = 0.6, stagger = 0, from = 0 } = {}) => { gsap.set(sel, { scale: from, opacity: 0 }); tl.to(sel, { scale: 1, opacity: 1, duration: dur, ease: MK.ease.ui, stagger }, t); };
   MK.slide = (tl, sel, t, { x = 0, y = 0, dur = 0.8, ease = MK.ease.card, stagger = 0 } = {}) => { gsap.set(sel, { x, y }); tl.to(sel, { x: 0, y: 0, duration: dur, ease, stagger }, t); };
   MK.fadeIn = (tl, sel, t, dur = 0.3) => { gsap.set(sel, { opacity: 0 }); tl.to(sel, { opacity: 1, duration: dur }, t); };

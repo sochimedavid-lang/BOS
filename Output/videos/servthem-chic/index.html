@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Montserrat:wght@600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #071613; --gold: #D9B25E; --gold2: #F0D58F; --cream: #F5EFE3; --green: #0C2B25; --teal: #3FB59F; }
+      .creambg { position: absolute; inset: 0; background: radial-gradient(1200px 1200px at 50% 40%, #FBF7EF 0%, #F2EADB 70%, #E7DCC7 100%); }
+      .script { font-family: "Kaushan Script", cursive; color: var(--gold); line-height: 1.05; }
+      .mont { font-family: "Montserrat", sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .01em; }
+      .lab { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 30px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+      .tw { color: var(--cream); font-family: "Poppins", sans-serif; font-weight: 600; }
+      .goldhl { display: inline-block; padding: .04em .28em .1em; border-radius: .14em; background: linear-gradient(135deg, #F0D58F, #C99A3E); color: var(--green); }
+      .disc { width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #FFFDF8, #F2EADB 60%, #DCCDB0); box-shadow: 0 16px 40px rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; }
+      .disc svg { width: 70px; height: 70px; fill: none; stroke: #0C2B25; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+      .dlab { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); text-align: center; margin-top: 14px; white-space: nowrap; }
+      .rg { position: absolute; border-radius: 50%; }
+      .cut { position: absolute; inset: 0; }
+      .cut img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) brightness(.8); }
+      .shine { position: absolute; top: -200px; width: 260px; height: 2400px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,240,200,.55), rgba(255,255,255,0)); transform: rotate(18deg); mix-blend-mode: overlay; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="27" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="27" data-track-index="10"></audio>
+      <div id="fbg" class="clip" data-layout-allow-occlusion style="background:#071613"></div>
+
+      <!-- 1. Chaque jour, 10 000 repas -->
+      <div id="s1" class="sc" data-layout-allow-overflow>
+        <div class="abs" style="left:0; right:0; top:860px; text-align:center; white-space:nowrap">
+          <span id="ty1" class="tw" style="font-size:72px"></span>
+          <div style="margin-top:26px"><span id="hl1" class="goldhl mont" style="font-size:96px"><span id="n1">0</span> repas</span></div>
+        </div>
+        <svg id="cur1" class="cursor" viewBox="0 0 24 32" style="left:0; top:0; width:44px; height:60px"><path d="M2 2 L2 26 L8 20 L12 30 L16 28 L12 18 L20 18 Z" fill="#F5EFE3" stroke="#071613" stroke-width="1.5"/></svg>
+      </div>
+
+      <!-- 2. À chaque assiette, la même exigence -->
+      <div id="s2" class="sc"><div class="creambg"></div>
+        <div class="abs center" style="inset:0; flex-direction:column">
+          <div id="l2" class="lab" style="color:#9C7A33">À chaque assiette</div>
+          <div class="m" style="font-size:150px; margin-top:28px"><span id="t2a" class="mont" style="font-size:150px; color:var(--green); line-height:.95">La même</span></div>
+          <div class="m" style="font-size:190px"><span id="t2b" class="script" style="font-size:190px; color:#B8892F">exigence.</span></div>
+        </div>
+      </div>
+
+      <!-- 3. Les 4 engagements autour de l'assiette -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="core" class="abs" style="left:240px; top:660px; width:600px; height:600px">
+          <div class="rg" style="inset:-26px; border:3px solid rgba(217,178,94,.85)"></div>
+          <div class="rg" style="inset:-56px; border:1.5px solid rgba(217,178,94,.35)"></div>
+          <div class="rg" style="inset:0; overflow:hidden; box-shadow:0 40px 90px rgba(0,0,0,.6)">
+            <div id="cp1" class="cut"><img src="img/p13994299.jpg"></div>
+            <div id="cp2" class="cut"><img src="img/p2252584.jpg"></div>
+            <div id="cp3" class="cut"><img src="img/p28736731.jpg" style="object-position:40% 40%"></div>
+            <div id="cp4" class="cut"><img src="img/p36505864.jpg" style="object-position:45% 40%"></div>
+          </div>
+        </div>
+        <div id="ic1" class="abs" style="left:780px; top:330px; width:180px"><div class="disc" style="margin:auto"><svg viewBox="0 0 24 24"><path d="M7 14a4 4 0 0 1-1-7.9A5 5 0 0 1 12 3a5 5 0 0 1 6 3.1A4 4 0 0 1 17 14"/><path d="M7 14h10v6H7z"/><path d="M10 17h4"/></svg></div><div class="dlab">Qualité</div></div>
+        <div id="ic2" class="abs" style="left:110px; top:430px; width:180px"><div class="disc" style="margin:auto"><svg viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19L13 11"/></svg></div><div class="dlab">Fraîcheur</div></div>
+        <div id="ic3" class="abs" style="left:110px; top:1320px; width:180px"><div class="disc" style="margin:auto"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6"/><path d="M14 20c.3-3 1.6-4.5 3-4.5 2.4 0 4.5 1.5 5 4.5"/></svg></div><div class="dlab">Service</div></div>
+        <div id="ic4" class="abs" style="left:780px; top:1420px; width:180px"><div class="disc" style="margin:auto"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div class="dlab">Hygiène</div></div>
+        <div class="abs" style="left:0; right:0; top:1660px; height:160px; text-align:center">
+          <div class="m abs" style="left:0; right:0; font-size:96px"><span id="w1" class="script" style="font-size:96px">Savoureuse.</span></div>
+          <div class="m abs" style="left:0; right:0; font-size:96px"><span id="w2" class="script" style="font-size:96px">Fraîche.</span></div>
+          <div class="m abs" style="left:0; right:0; font-size:96px"><span id="w3" class="script" style="font-size:96px">À l'écoute.</span></div>
+          <div class="m abs" style="left:0; right:0; font-size:96px"><span id="w4" class="script" style="font-size:96px">Irréprochable.</span></div>
+        </div>
+      </div>
+
+      <!-- 4. Secteurs sur la vague crème -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <svg id="wave" class="abs" style="left:0; top:1220px" width="2160" height="760" viewBox="0 0 2160 760">
+          <path d="M0 150 C 270 20, 540 290, 810 150 S 1350 20, 1620 150 S 2160 290, 2160 150 L2160 760 L0 760 Z" fill="#F5EFE3"/>
+          <path d="M0 150 C 270 20, 540 290, 810 150 S 1350 20, 1620 150 S 2160 290, 2160 150" fill="none" stroke="#D9B25E" stroke-width="5"/>
+        </svg>
+        <div id="l4" class="lab abs" style="left:0; right:0; top:420px; text-align:center">Nous servons</div>
+        <div id="d4" class="abs" style="left:100px; top:720px"><div class="disc" style="width:230px; height:230px; box-shadow:0 0 0 14px rgba(217,178,94,.25), 0 20px 50px rgba(0,0,0,.45)">
+          <svg id="i41" class="abs" viewBox="0 0 24 24" style="width:110px; height:110px"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18"/><path d="M16 3c2 1 3 3 3 6s-1 4-3 4v8"/></svg>
+          <svg id="i42" class="abs" viewBox="0 0 24 24" style="width:110px; height:110px"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg>
+          <svg id="i43" class="abs" viewBox="0 0 24 24" style="width:110px; height:110px"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M9 6V3h6v3M12 10v7M8.5 13.5h7"/></svg>
+          <svg id="i44" class="abs" viewBox="0 0 24 24" style="width:110px; height:110px"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 9V7M10 7h4"/></svg>
+        </div></div>
+        <div class="abs" style="left:390px; top:700px; width:680px; height:300px">
+          <div id="sc1" class="abs"><div class="mont" style="font-size:82px; color:var(--cream)">Écoles</div><div class="tw" style="font-size:40px; color:var(--gold); font-weight:500">Cantines scolaires</div></div>
+          <div id="sc2" class="abs"><div class="mont" style="font-size:82px; color:var(--cream)">Entreprises</div><div class="tw" style="font-size:40px; color:var(--gold); font-weight:500">Restaurants du personnel</div></div>
+          <div id="sc3" class="abs"><div class="mont" style="font-size:82px; color:var(--cream)">Hôpitaux</div><div class="tw" style="font-size:40px; color:var(--gold); font-weight:500">Repas des patients</div></div>
+          <div id="sc4" class="abs"><div class="mont" style="font-size:66px; color:var(--cream)">Administrations</div><div class="tw" style="font-size:40px; color:var(--gold); font-weight:500">Restauration collective</div></div>
+        </div>
+      </div>
+
+      <!-- 5. Nous nourrissons ceux qui font avancer le pays -->
+      <div id="s5" class="sc" data-layout-allow-overflow>
+        <div id="f1" class="cut"><img src="img/p32224391.jpg" style="object-position:50% 25%"></div>
+        <div id="f2" class="cut"><img src="img/p30952836.jpg" style="object-position:50% 20%"></div>
+        <div id="f3" class="cut"><img src="img/p36505864.jpg" style="object-position:45% 40%"></div>
+        <div class="abs" style="inset:0; background:linear-gradient(180deg, rgba(7,22,19,0) 35%, rgba(7,22,19,.9) 80%)"></div>
+        <div id="t5" class="abs center" style="left:0; right:0; top:1300px; flex-direction:column; text-align:center">
+          <div class="m" style="font-size:72px"><span id="t5a" class="tw" style="font-size:72px">Nous nourrissons</span></div>
+          <div class="m" style="font-size:72px"><span id="t5b" class="tw" style="font-size:72px; font-weight:500">ceux qui font avancer</span></div>
+        </div>
+        <div id="pays" class="abs center" style="inset:0; flex-direction:column; background:transparent">
+          <div class="m" style="font-size:330px"><span id="py" class="display" style="font-size:330px; color:var(--cream)">Le pays</span></div>
+        </div>
+      </div>
+
+      <!-- 6. SERVTHEM : cercle crème + logo -->
+      <div id="s6" class="sc"><div id="w6" class="creambg"></div>
+        <div class="abs center" style="inset:0; flex-direction:column">
+          <svg id="lgo" width="400" height="146" viewBox="0 0 330 120">
+            <defs><linearGradient id="lg1" x1="0" x2="1"><stop offset="0" stop-color="#C9D0CE"/><stop offset="1" stop-color="#8E9997"/></linearGradient><linearGradient id="lg2" x1="0" x2="1"><stop offset="0" stop-color="#5FC9B2"/><stop offset="1" stop-color="#22846F"/></linearGradient></defs>
+            <polygon id="b1" points="110,6 320,6 290,30 80,30" fill="url(#lg1)"/><polygon id="b2" points="60,40 300,40 268,72 28,72" fill="url(#lg2)"/><polygon id="b3" points="30,82 250,82 222,108 2,108" fill="#1F6F60"/>
+          </svg>
+          <div class="m" style="font-size:150px; margin-top:20px"><span id="nm" class="mont" style="font-size:150px; letter-spacing:.1em; color:var(--green)">SERVTHEM</span></div>
+          <div id="nsub" class="lab" style="font-size:26px; letter-spacing:.24em; color:#9C7A33">Solutions en restauration collective</div>
+        </div>
+      </div>
+
+      <!-- 7. LE GOÛT DU SERVICE -->
+      <div id="s7" class="sc" data-layout-allow-overflow>
+        <div class="abs center" style="inset:0; flex-direction:column">
+          <div id="g1" class="display" style="font-size:300px; color:var(--cream); line-height:.88">Le goût</div>
+          <div id="g2" class="display" style="font-size:300px; color:var(--gold); line-height:.88">du service</div>
+          <div class="m" style="font-size:110px; margin-top:30px"><span id="g3" class="script" style="font-size:110px; color:var(--cream)">au cœur de vos repas</span></div>
+        </div>
+        <div id="sh7" class="shine" style="left:-400px"></div>
+      </div>
+
+      <!-- 8. Carte de fin -->
+      <div id="s8" class="sc"><div class="creambg"></div>
+        <div class="abs center" style="left:0; right:0; top:300px; flex-direction:column">
+          <svg width="300" height="110" viewBox="0 0 330 120"><polygon points="110,6 320,6 290,30 80,30" fill="url(#lg1)"/><polygon points="60,40 300,40 268,72 28,72" fill="url(#lg2)"/><polygon points="30,82 250,82 222,108 2,108" fill="#1F6F60"/></svg>
+          <div class="mont" style="font-size:110px; letter-spacing:.1em; color:var(--green); margin-top:16px">SERVTHEM</div>
+          <div id="e1" class="script" style="font-size:84px; color:#B8892F; margin-top:40px; text-align:center; line-height:1.15">Le goût du service,<br>au cœur de vos repas</div>
+        </div>
+        <div id="e2" class="abs" style="left:0; right:0; top:1260px; display:flex; flex-direction:column; align-items:center; gap:24px">
+          <div class="pill" style="background:var(--green); color:var(--cream); font-size:44px; padding:22px 40px"><span style="width:56px; height:56px; border-radius:50%; background:var(--teal); display:inline-flex; align-items:center; justify-content:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>+229 42 88 19 22</div>
+          <div class="pill" style="background:transparent; color:var(--green); border:3px solid var(--gold); box-shadow:none; font-size:38px; padding:18px 36px">servthemofficiel@gmail.com</div>
+          <div class="lab" style="color:#9C7A33; font-size:24px; letter-spacing:.2em; margin-top:26px">Écoles · Entreprises · Hôpitaux · Administrations</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const TOTAL = 27;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      // fond fluide vert profond aux reflets dorés
+      const blobs = MK.fluid("#fbg", ["#1F6F60", "#0E3B33", "#2E9C86", "#03100D", "#8C6A2A", "#0B2A24"], 21);
+      MK.drift(tl, blobs, TOTAL, 8);
+      MK.scenes(tl, [["#s1", 0, 2.75], ["#s2", 2.75, 5.2], ["#s3", 5.2, 14.15], ["#s4", 14.15, 17.75], ["#s5", 17.75, 20.1], ["#s6", 20.1, 21.15], ["#s7", 21.15, 23.6], ["#s8", 23.6, TOTAL]], TOTAL);
+
+      /* 1. frappe + pastille dorée qui compte */
+      MK.type(tl, "#ty1", "Chaque jour,", 0.4, { cps: 14 });
+      MK.pop(tl, "#hl1", 1.25, { from: 0.6 });
+      MK.count(tl, "#n1", 0, 10000, 1.3, 0.8, (v) => (v >= 9999.5 ? "10 000" : Math.round(v).toLocaleString("fr-FR")));
+      gsap.set("#cur1", { x: 820, y: 1260, opacity: 0 });
+      tl.to("#cur1", { opacity: 1, duration: 0.1 }, 1.4);
+      tl.to("#cur1", { x: 700, y: 1060, duration: 0.45, ease: "power2.out" }, 1.4);
+      MK.pulse(tl, "#hl1", [2.05], 1.08);
+
+      /* 2. la même exigence (crème) */
+      MK.fadeIn(tl, "#l2", 2.85, 0.3);
+      MK.rise(tl, "#t2a", 3.95);
+      MK.rise(tl, "#t2b", 4.3);
+      tl.to("#s2 .center", { scale: 1.05, duration: 2.4, ease: "none" }, 2.75);
+
+      /* 3. l'assiette au centre, les 4 engagements apparaissent autour */
+      gsap.set("#core", { scale: 0.2, opacity: 0, rotation: -40 });
+      tl.to("#core", { scale: 1, opacity: 1, rotation: 0, duration: 0.8, ease: E.card }, 5.2);
+      gsap.set(["#cp2", "#cp3", "#cp4"], { opacity: 0 });
+      const P = [[5.29, "#ic1", "#w1", null, 18, -10], [7.73, "#ic2", "#w2", "#cp2", -18, -10], [10.29, "#ic3", "#w3", "#cp3", -18, 10], [12.44, "#ic4", "#w4", "#cp4", 18, 10]];
+      P.forEach(([t, ic, w, cp, dx, dy], i) => {
+        MK.pop(tl, ic, t + 0.1);
+        MK.rise(tl, w, t + 0.35);
+        if (i < 3) MK.exitUp(tl, w, P[i + 1][0] - 0.1, { dur: 0.3 });
+        if (cp) tl.to(cp, { opacity: 1, duration: 0.35 }, t);
+        tl.to("#core", { x: dx, y: dy, rotation: dx > 0 ? 6 : -6, duration: 0.5, ease: E.card }, t);
+        tl.fromTo(`${cp || "#cp1"} img`, { scale: 1.25 }, { scale: 1.05, duration: 2.2, ease: "sine.out", immediateRender: false }, t);
+      });
+      tl.to("#core", { scale: 0.05, rotation: 60, duration: 0.45, ease: "power3.in" }, 13.75);
+      tl.to(["#ic1", "#ic2", "#ic3", "#ic4"], { x: (i) => [-240, 330, 330, -240][i], y: (i) => [520, 420, -420, -520][i], scale: 0.2, opacity: 0, duration: 0.4, ease: "power3.in" }, 13.75);
+      MK.exitUp(tl, "#w4", 13.8, { dur: 0.3 });
+
+      /* 4. secteurs sur la vague crème */
+      gsap.set("#wave", { y: 520 });
+      tl.to("#wave", { y: 0, duration: 0.6, ease: E.card }, 14.15);
+      tl.to("#wave", { x: -1080, duration: 3.6, ease: "none" }, 14.15);
+      MK.pop(tl, "#d4", 14.2);
+      MK.fadeIn(tl, "#l4", 14.3, 0.3);
+      gsap.set(["#i41", "#i42", "#i43", "#i44", "#sc1", "#sc2", "#sc3", "#sc4"], { opacity: 0 });
+      const SC = [[14.25, 1], [14.78, 2], [15.74, 3], [16.65, 4]];
+      SC.forEach(([t, k], i) => {
+        tl.set([`#i4${k}`, `#sc${k}`], { opacity: 1 }, t);
+        MK.slide(tl, `#sc${k}`, t, { x: 140, dur: 0.55 });
+        MK.pulse(tl, "#d4", [t], 1.07);
+        if (i < 3) tl.set([`#i4${k}`, `#sc${k}`], { opacity: 0 }, SC[i + 1][0]);
+      });
+      tl.to(["#d4", "#sc4", "#l4"], { opacity: 0, duration: 0.25 }, 17.45);
+
+      /* 5. visages en coupes rapides, puis LE PAYS */
+      gsap.set(["#f1", "#f2", "#f3", "#pays"], { opacity: 0 });
+      [["#f1", 17.75, 18.35], ["#f2", 18.35, 18.95], ["#f3", 18.95, 19.5]].forEach(([f, a, b]) => {
+        tl.set(f, { opacity: 1 }, a); tl.set(f, { opacity: 0 }, b);
+        tl.fromTo(`${f} img`, { scale: 1.18 }, { scale: 1.04, duration: 0.7, ease: "power2.out", immediateRender: false }, a);
+      });
+      MK.rise(tl, "#t5a", 17.8);
+      MK.rise(tl, "#t5b", 18.2);
+      tl.set("#t5", { opacity: 0 }, 19.5);
+      tl.set("#pays", { opacity: 1 }, 19.5);
+      MK.rise(tl, "#py", 19.5, { dur: 0.6 });
+      MK.shake(tl, "#s5", 19.55, 10);
+
+      /* 6. cercle crème + logo */
+      MK.circleIn(tl, "#w6", 20.1, { x: 540, y: 960, dur: 0.4 });
+      gsap.set(["#b1", "#b2", "#b3"], { x: -380, opacity: 0 });
+      tl.to(["#b3", "#b2", "#b1"], { x: 0, opacity: 1, duration: 0.5, ease: E.card, stagger: 0.07 }, 20.2);
+      MK.rise(tl, "#nm", 20.3, { dur: 0.6 });
+      MK.fadeIn(tl, "#nsub", 20.6, 0.3);
+
+      /* 7. LE GOÛT / DU SERVICE + reflet doré */
+      gsap.set(["#g1", "#g2"], { x: 0 });
+      tl.fromTo("#g1", { x: -900 }, { x: 0, duration: 0.5, ease: E.type, immediateRender: false }, 21.15);
+      tl.fromTo("#g2", { x: 900 }, { x: 0, duration: 0.5, ease: E.type, immediateRender: false }, 21.4);
+      MK.rise(tl, "#g3", 22.2);
+      tl.to("#sh7", { x: 1700, duration: 0.9, ease: "power2.inOut" }, 22.6);
+      tl.to("#s7 .center", { scale: 1.04, duration: 2.4, ease: "none" }, 21.15);
+
+      /* 8. carte de fin */
+      MK.pop(tl, "#e1", 23.7, { from: 0.9 });
+      MK.slide(tl, "#e2", 24.0, { y: 120 });
+      MK.fadeIn(tl, "#e2", 24.0, 0.3);
+      MK.pulse(tl, "#e2 .pill", [25.2, 26.2], 1.04);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

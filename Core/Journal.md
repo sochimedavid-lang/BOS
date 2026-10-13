@@ -96,3 +96,4 @@
 - Réalisée avec le kit : l'assiette sert de fenêtre, une cloche dorée révèle chacun des 4 engagements, les secteurs tournent en orbite, parallaxe en 3 bandes, slogan écrit à la main, contact. Voix « Micha » (prise 2). Photos Pexels (visages et plats africains). Logo recréé en vectoriel d'après l'affiche (à remplacer par le logo HD du client).
 - Output/videos/servthem/out/final.mp4, 27 s, 30 i/s.
 - Correction : uniquement des personnes afro dans les visuels (règle ajoutée). Bande parallaxe refaite avec 3 visages afro (chef, cheffe, cheffe qui dresse).
+- Version « chic » SERVTHEM dans le style Eden Food (fond fluide vert et or, frappe au clavier, pastille dorée, assiette centrale avec 4 icônes, vague crème des secteurs, coupes sur visages afro, LE PAYS, LE GOÛT DU SERVICE). Output/videos/servthem-chic/out/final.mp4. Kit : MK.rise/exitUp masquent les textes avant et après (plus rien ne dépasse).

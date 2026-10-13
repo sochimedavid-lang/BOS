@@ -1,0 +1,356 @@
+[
+  {
+    "text": "Chaque",
+    "start": 0.03,
+    "end": 0.42,
+    "id": "w0"
+  },
+  {
+    "text": "jour",
+    "start": 0.42,
+    "end": 0.57,
+    "id": "w1"
+  },
+  {
+    "text": "des",
+    "start": 0.86,
+    "end": 0.91,
+    "id": "w2"
+  },
+  {
+    "text": "milliers",
+    "start": 0.91,
+    "end": 1.47,
+    "id": "w3"
+  },
+  {
+    "text": "de",
+    "start": 1.47,
+    "end": 1.61,
+    "id": "w4"
+  },
+  {
+    "text": "repas,",
+    "start": 1.61,
+    "end": 2.4,
+    "id": "w5"
+  },
+  {
+    "text": "et",
+    "start": 2.43,
+    "end": 2.52,
+    "id": "w6"
+  },
+  {
+    "text": "à",
+    "start": 2.52,
+    "end": 2.57,
+    "id": "w7"
+  },
+  {
+    "text": "chaque",
+    "start": 2.58,
+    "end": 2.94,
+    "id": "w8"
+  },
+  {
+    "text": "assiette,",
+    "start": 2.94,
+    "end": 3.6,
+    "id": "w9"
+  },
+  {
+    "text": "la",
+    "start": 3.6,
+    "end": 3.76,
+    "id": "w10"
+  },
+  {
+    "text": "même",
+    "start": 3.76,
+    "end": 4,
+    "id": "w11"
+  },
+  {
+    "text": "exigence.",
+    "start": 4.07,
+    "end": 4.86,
+    "id": "w12"
+  },
+  {
+    "text": "Une",
+    "start": 4.89,
+    "end": 5.06,
+    "id": "w13"
+  },
+  {
+    "text": "cuisine",
+    "start": 5.06,
+    "end": 5.43,
+    "id": "w14"
+  },
+  {
+    "text": "savoureuse",
+    "start": 5.55,
+    "end": 6.21,
+    "id": "w15"
+  },
+  {
+    "text": "et",
+    "start": 6.21,
+    "end": 6.34,
+    "id": "w16"
+  },
+  {
+    "text": "équilibrée.",
+    "start": 6.34,
+    "end": 7.3,
+    "id": "w17"
+  },
+  {
+    "text": "Des",
+    "start": 7.33,
+    "end": 7.49,
+    "id": "w18"
+  },
+  {
+    "text": "produits",
+    "start": 7.49,
+    "end": 7.87,
+    "id": "w19"
+  },
+  {
+    "text": "frais,",
+    "start": 8.16,
+    "end": 8.46,
+    "id": "w20"
+  },
+  {
+    "text": "choisis",
+    "start": 8.46,
+    "end": 8.91,
+    "id": "w21"
+  },
+  {
+    "text": "avec",
+    "start": 8.91,
+    "end": 9.17,
+    "id": "w22"
+  },
+  {
+    "text": "rigueur.",
+    "start": 9.17,
+    "end": 9.86,
+    "id": "w23"
+  },
+  {
+    "text": "Un",
+    "start": 9.89,
+    "end": 9.99,
+    "id": "w24"
+  },
+  {
+    "text": "service",
+    "start": 9.99,
+    "end": 10.43,
+    "id": "w25"
+  },
+  {
+    "text": "à",
+    "start": 10.43,
+    "end": 10.54,
+    "id": "w26"
+  },
+  {
+    "text": "l'écoute",
+    "start": 10.54,
+    "end": 11.05,
+    "id": "w27"
+  },
+  {
+    "text": "de",
+    "start": 11.05,
+    "end": 11.18,
+    "id": "w28"
+  },
+  {
+    "text": "vos",
+    "start": 11.18,
+    "end": 11.38,
+    "id": "w29"
+  },
+  {
+    "text": "besoins,",
+    "start": 11.38,
+    "end": 12.04,
+    "id": "w30"
+  },
+  {
+    "text": "et",
+    "start": 12.04,
+    "end": 12.16,
+    "id": "w31"
+  },
+  {
+    "text": "une",
+    "start": 12.29,
+    "end": 12.35,
+    "id": "w32"
+  },
+  {
+    "text": "hygiène",
+    "start": 12.35,
+    "end": 12.76,
+    "id": "w33"
+  },
+  {
+    "text": "sans",
+    "start": 12.76,
+    "end": 13.02,
+    "id": "w34"
+  },
+  {
+    "text": "compromis.",
+    "start": 13.02,
+    "end": 13.82,
+    "id": "w35"
+  },
+  {
+    "text": "École,",
+    "start": 13.85,
+    "end": 14.38,
+    "id": "w36"
+  },
+  {
+    "text": "entreprise,",
+    "start": 14.38,
+    "end": 15.34,
+    "id": "w37"
+  },
+  {
+    "text": "hôpitaux,",
+    "start": 15.34,
+    "end": 16.14,
+    "id": "w38"
+  },
+  {
+    "text": "administration,",
+    "start": 16.25,
+    "end": 17.41,
+    "id": "w39"
+  },
+  {
+    "text": "nous",
+    "start": 17.41,
+    "end": 17.56,
+    "id": "w40"
+  },
+  {
+    "text": "nourrissons",
+    "start": 17.56,
+    "end": 17.96,
+    "id": "w41"
+  },
+  {
+    "text": "ceux",
+    "start": 17.96,
+    "end": 18.16,
+    "id": "w42"
+  },
+  {
+    "text": "qui",
+    "start": 18.16,
+    "end": 18.34,
+    "id": "w43"
+  },
+  {
+    "text": "font",
+    "start": 18.34,
+    "end": 18.41,
+    "id": "w44"
+  },
+  {
+    "text": "avancer",
+    "start": 18.71,
+    "end": 19.01,
+    "id": "w45"
+  },
+  {
+    "text": "le",
+    "start": 19.03,
+    "end": 19.16,
+    "id": "w46"
+  },
+  {
+    "text": "pays.",
+    "start": 19.16,
+    "end": 19.73,
+    "id": "w47"
+  },
+  {
+    "text": "Serve",
+    "start": 19.77,
+    "end": 20.15,
+    "id": "w48"
+  },
+  {
+    "text": "them.",
+    "start": 20.15,
+    "end": 20.74,
+    "id": "w49"
+  },
+  {
+    "text": "Le",
+    "start": 20.77,
+    "end": 20.88,
+    "id": "w50"
+  },
+  {
+    "text": "goût",
+    "start": 20.88,
+    "end": 21.16,
+    "id": "w51"
+  },
+  {
+    "text": "du",
+    "start": 21.16,
+    "end": 21.3,
+    "id": "w52"
+  },
+  {
+    "text": "service",
+    "start": 21.3,
+    "end": 21.82,
+    "id": "w53"
+  },
+  {
+    "text": "au",
+    "start": 21.82,
+    "end": 21.96,
+    "id": "w54"
+  },
+  {
+    "text": "cœur",
+    "start": 21.96,
+    "end": 22.25,
+    "id": "w55"
+  },
+  {
+    "text": "de",
+    "start": 22.25,
+    "end": 22.38,
+    "id": "w56"
+  },
+  {
+    "text": "vos",
+    "start": 22.38,
+    "end": 22.61,
+    "id": "w57"
+  },
+  {
+    "text": "repas.",
+    "start": 22.61,
+    "end": 23.06,
+    "id": "w58"
+  }
+]
