@@ -124,3 +124,4 @@
 - Prix : 2 900 F pour les 50 premiers élèves, ensuite 10 000 F (décision de l'entrepreneur après discussion). Site mis à jour. À faire par l'entrepreneur : prix Chariow, et passer à 10 000 F après la 50e vente.
 - Site, programme : descriptions des 6 modules réécrites (bénéfice sans dévoiler la méthode), validées par l'entrepreneur.
 - Site : « 6 formats » remplacé par « Les formats qui se vendent » (programme, inclus) ; chiffre clé « 6 formats » remplacé par « 11 vidéos d'exemple créées avec l'IA ».
+- Site : section « Est-ce que c'est pour toi ? » ajoutée après le programme (5 critères oui / 5 critères non, dont ordinateur obligatoire et abonnement Claude ~12 000 F/mois). À l'essai : l'entrepreneur décide de la garder ou non.
