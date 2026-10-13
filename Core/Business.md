@@ -47,3 +47,6 @@ Solo (+ éventuellement la personne qui détient les preuves).
 - Forces : récit perso (vidéo restaurant vendue 65 000 F, contrat > 500 000 F), autorité revendiquée (formateur officiel Chariow, « 15 000 apprenants » — chiffre contesté par l’entrepreneur), 3 bonus dont sous-traitance agence (70 000 F sur 100 000 F), section prérequis claire, « pour toi / pas pour toi ».
 - Faiblesses : design générique (violet + vert fluo, emojis, tout centré), 2 exemples vidéo seulement, pas de garantie, attente de 2 semaines avant de commencer, horaires imposés (20h GMT).
 - Notre angle : accès immédiat, à ton rythme, 9 900 F, garantie 7 jours, 10 exemples, design pro.
+
+## Clients / exemples réels
+- **SERVTHEM** (restaurant, amie de l'entrepreneur) : 2 vidéos faites (v1 et chic). Accord pour les montrer sur le site comme résultat réel.

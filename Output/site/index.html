@@ -204,6 +204,7 @@ h1{font-size:clamp(32px,6vw,60px);font-weight:800;max-width:860px;margin:0 auto}
 .reels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:40px auto 0;max-width:640px;text-align:left}
 .reel{position:relative;overflow:hidden;border-radius:18px;aspect-ratio:9/16;background:#1A1714;border:1px solid var(--line);isolation:isolate}
 .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.reel .ai.cl{background:var(--acc);border-color:var(--acc)}
 .reel .ai{position:absolute;left:12px;top:12px;z-index:3;font-size:10px;font-weight:700;letter-spacing:.06em;padding:4px 8px;border-radius:99px;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.25);color:#fff}
 .reel .lbl{position:absolute;left:12px;bottom:12px;z-index:3;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:99px;background:rgba(0,0,0,.55);color:#fff}
 .reel .snd{position:absolute;right:10px;bottom:10px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center}
@@ -411,10 +412,19 @@ footer .disc2 b{color:var(--text)}
   <h2 class="rv">Tout ça a été créé <em>avec l'IA.</em></h2>
   <p class="lead rv">Aucun logiciel de montage. Juste Claude et la méthode de la formation.</p>
   <div class="reels rv">
-    <div class="reel"><video src="media/pub-stopscroll.mp4" poster="media/pub-stopscroll.jpg" muted loop playsinline preload="metadata"></video><span class="ai">CRÉÉ AVEC L'IA</span><span class="lbl">Pub e-commerce</span><button class="snd" aria-label="Activer le son">🔇</button></div>
-    <div class="reel"><video src="media/pub-noel.mp4" poster="media/pub-noel.jpg" muted loop playsinline preload="metadata"></video><span class="ai">CRÉÉ AVEC L'IA</span><span class="lbl">Pub Noël 3D</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-servthem-chic.mp4" poster="media/pub-servthem-chic.jpg" muted loop playsinline preload="none"></video><span class="ai cl">VRAI CLIENT</span><span class="lbl">Pub restaurant</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-sikaflow.mp4" poster="media/pub-sikaflow.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Pub appli</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-rempart.mp4" poster="media/pub-rempart.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Pub tech</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-eden-recit.mp4" poster="media/pub-eden-recit.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Récit de marque</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-motion-lab.mp4" poster="media/pub-motion-lab.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Pub agence</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-stopscroll.mp4" poster="media/pub-stopscroll.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Pub e-commerce</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-noel.mp4" poster="media/pub-noel.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Pub Noël 3D</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-eden-studio.mp4" poster="media/pub-eden-studio.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Pub studio</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/post-miroir.mp4" poster="media/post-miroir.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Post motivation</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/pub-servthem.mp4" poster="media/pub-servthem.jpg" muted loop playsinline preload="none"></video><span class="ai cl">VRAI CLIENT</span><span class="lbl">Restaurant · v1</span><button class="snd" aria-label="Activer le son">🔇</button></div>
+    <div class="reel"><video src="media/menu-maquis.mp4" poster="media/menu-maquis.jpg" muted loop playsinline preload="none"></video><span class="ai">CRÉÉ AVEC L&#39;IA</span><span class="lbl">Menu animé</span></div>
   </div>
-  <p class="reels-cap">Touche 🔇 pour écouter le son.</p>
+  <p class="reels-cap">11 vidéos, toutes faites avec Claude et la méthode de la formation. Touche 🔇 pour écouter le son.</p>
   <p class="bento-h rv">Les 6 formats que tu vas apprendre</p>
   <div class="bento" style="text-align:left;margin-top:20px">
 <div class="demo d-logo"><span class="ai">CRÉÉ AVEC L'IA</span><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><text class="mono" x="70" y="86" text-anchor="middle">R</text></svg><div class="name">CHEZ MAMAN ROSE</div><span class="lbl">Logo animé</span></div>

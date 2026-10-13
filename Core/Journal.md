@@ -113,3 +113,7 @@
 ### 2026-10-13 · Portfolio : référence n°5 → « Motion/Lab » (`Output/videos/motion-lab`)
 - Pub d'une agence fictive de vidéos produit (ennui des démos → « Maintenant. » → écrans d'appli → client idéal → logo). 20,5 s, voix Paul K (4 prises passées, plus de blocage ElevenLabs), photos Pexels afro, -14,7 LUFS.
 - Corrections avant rendu : « S » rogné par le masque, photo sur le titre, « Maintenant. » trop large.
+
+### 2026-10-13 · Site : section Exemples avec les 11 vidéos
+- Ajout de toutes les vidéos produites (SERVTHEM chic et v1 marquées « VRAI CLIENT » : SERVTHEM appartient à une amie de l'entrepreneur, accord pour l'utiliser sur le site), Sikaflow, Rempart, Eden récit, Motion/Lab, STOPSCROLL, Noël, Eden Studio, Miroir, Menu maquis. Médias 720p dans `Output/site/media/`, aperçu autonome `Output/site/apercu.html` (8,8 Mo).
+- Référence n°8 (pub Kenetik d'un autre studio) envoyée pour le site : non ajoutée, car ce n'est pas notre création. Proposé d'en faire notre propre version.
