@@ -63,18 +63,27 @@ def ecrire_wav(chemin, pcm, taux=24000):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--voix", default="Sulafat")
+    ap.add_argument("--refaire", action="store_true", help="régénérer même les phrases déjà présentes")
     ap.add_argument("--modele", default=os.environ.get("GEMINI_TTS_MODEL", "gemini-2.5-flash-preview-tts"))
     a = ap.parse_args()
     cle = lire_cle()
     sortie = ICI / "voix"; sortie.mkdir(exist_ok=True)
     fichiers = []
     for i, (debut, texte) in enumerate(LIGNES, 1):
-        try:
-            pcm = synthese(cle, a.modele, a.voix, texte)
-        except urllib.error.HTTPError as e:
-            sys.exit(f"Erreur Google TTS ({e.code}) sur la ligne {i} : {e.read().decode()[:400]}")
         f = sortie / f"ligne-{i}.wav"
-        duree = ecrire_wav(f, pcm)
+        if f.exists() and not a.refaire:
+            with wave.open(str(f)) as w:
+                duree = w.getnframes() / w.getframerate()
+        else:
+            for essai in range(4):
+                try:
+                    pcm = synthese(cle, a.modele, a.voix, texte)
+                    break
+                except urllib.error.HTTPError as e:
+                    if e.code == 429 and essai < 3:
+                        print(f"quota atteint, nouvelle tentative dans 65 s (ligne {i})"); import time; time.sleep(65); continue
+                    sys.exit(f"Erreur Google TTS ({e.code}) sur la ligne {i} : {e.read().decode()[:400]}")
+            duree = ecrire_wav(f, pcm)
         fin_dispo = LIGNES[i][0] if i < len(LIGNES) else DUREE_TOTALE
         alerte = "  ⚠ dépasse la scène" if debut + duree > fin_dispo else ""
         print(f"ligne {i} : {duree:.2f} s (de {debut:.1f} à {debut + duree:.1f} s){alerte}")

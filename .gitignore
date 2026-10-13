@@ -7,3 +7,6 @@
 .env
 .env.*
 !.env.example
+
+# Dossiers de rendu régénérables
+Output/videos/*/build-*/

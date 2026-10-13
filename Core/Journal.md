@@ -57,3 +57,6 @@
 - Bloqué : aucune clé Google dans l'environnement → voix off Google TTS impossible ici. Variable à ajouter : GEMINI_API_KEY (Gemini TTS) ou GOOGLE_API_KEY (Cloud TTS), visible dans une nouvelle session.
 - Clé GEMINI_API_KEY ajoutée par l'entrepreneur dans les réglages de l'environnement (13/10). Invisible dans la session en cours : elle ne sera lue que par une nouvelle session.
 - **À faire dès la prochaine session (« voix off Noël »)** : `python3 Output/videos/noel-isometrique/voix_off.py` → vérifier les durées (alerte si une phrase dépasse sa scène) → recaler les temps de l'animation si besoin → ajouter `<audio src="voix/voix-off.wav" data-start="0" data-duration="37">` dans `index.html` → `npx hyperframes@0.8.150 render --output noel-isometrique.mp4 --quality high` → envoyer la vidéo.
+- Voix off générée avec Gemini TTS (voix « Sulafat », 6 phrases). Animations recalées sur la voix (mots « Tokyo », « Paris », « Une cheminée »… synchronisés) → durée 53,9 s.
+- Livrés : `noel-isometrique-vertical.mp4` (1080×1920, avec voix) et `noel-isometrique-voix.mp4` (1920×1080, avec voix). Générateur : `gen.py`.
+- Clé Gemini collée dans le chat par l'entrepreneur → enregistrée seulement dans `.env` (ignoré par git). Conseil donné : régénérer la clé. Quota gratuit : 3 requêtes/minute.
