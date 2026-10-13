@@ -122,3 +122,4 @@
 - Site, « Pourquoi 9 900 F » : texte réécrit (nouvelle opportunité 2026, avance des premiers, but = aider le maximum de personnes à changer leur situation, hausse « la semaine prochaine » au lieu de « lundi »). Formulation « crée des millionnaires » non reprise : promesse de gains invérifiable, proposée sans à l'entrepreneur.
 - Prix de lancement passé de 9 900 F à 2 900 F à la demande de l'entrepreneur (site mis à jour partout). BOS a signalé le risque (marge, perception de valeur) ; le prix Chariow doit être changé par l'entrepreneur.
 - Prix : 2 900 F pour les 50 premiers élèves, ensuite 10 000 F (décision de l'entrepreneur après discussion). Site mis à jour. À faire par l'entrepreneur : prix Chariow, et passer à 10 000 F après la 50e vente.
+- Site, programme : descriptions des 6 modules réécrites (bénéfice sans dévoiler la méthode), validées par l'entrepreneur.
