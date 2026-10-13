@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Inter:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root { --bg: #100E0C; --s1: #1A1714; --s2: #24201B; --tx: #F6F1EA; --mut: #A39A8F; --acc: #F4511E; --acc2: #FF7A45; --lime: #DDF247; --red: #FF5A4E; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); color: var(--tx); font-family: "Inter", sans-serif; }
+      .clip { position: absolute; inset: 0; }
+      .abs { position: absolute; }
+      .big { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; letter-spacing: -0.05em; line-height: 0.88; }
+      .ser { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; line-height: 0.9; }
+      .lab { font-family: "Inter", sans-serif; font-weight: 700; font-size: 30px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--acc); }
+      .m { overflow: hidden; padding: 0.06em 0.08em 0.12em 0; margin-left: -0.02em; }
+      .m > span, .m > div { display: inline-block; }
+      .ch { display: inline-block; }
+
+      #shake, #tilt { position: absolute; inset: 0; }
+
+      /* Flux */
+      #feedWin { position: absolute; inset: 0; overflow: hidden; }
+      #feedCam { position: absolute; inset: 0; transform-origin: 540px 960px; }
+      #track { position: absolute; left: 130px; top: 0; width: 820px; }
+      #dim { position: absolute; inset: 0; background: var(--bg); }
+
+      /* Cartes */
+      .card { position: absolute; left: 0; width: 820px; height: 1080px; border-radius: 46px; background: var(--s1); border: 2px solid #2B2621; overflow: hidden; }
+      .card .hd { position: absolute; left: 30px; top: 26px; right: 30px; height: 76px; display: flex; align-items: center; gap: 20px; }
+      .card .av { width: 72px; height: 72px; border-radius: 50%; flex: none; }
+      .card .nm { font-weight: 700; font-size: 34px; color: var(--tx); line-height: 1.1; }
+      .card .sp { font-weight: 500; font-size: 30px; color: var(--mut); line-height: 1.1; }
+      .card .img { position: absolute; left: 30px; top: 120px; width: 760px; height: 680px; border-radius: 30px; overflow: hidden; }
+      .card .ti { position: absolute; left: 30px; top: 826px; right: 30px; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+      .card .btn { position: absolute; left: 30px; top: 930px; width: 760px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; gap: 18px; font-weight: 700; font-size: 44px; }
+      .sk { position: absolute; border-radius: 12px; background: #2E2924; }
+
+      /* Carte figée */
+      #scard .img { background: linear-gradient(180deg, #34302C, #2A2723); }
+      #scard .bottle { filter: grayscale(1) brightness(0.72) contrast(0.9); }
+      #scard .btn { background: #2E2924; color: #8C847A; }
+
+      /* Carte vivante */
+      #liveCam { position: absolute; inset: 0; transform-origin: 540px 960px; }
+      #lcard { left: 130px; top: 420px; transform-origin: 410px 540px; border-color: #3A3129; }
+      #lcard .img { background: radial-gradient(520px 520px at 50% 42%, #5A3A1E 0%, #2B1D12 60%, #1A120C 100%); }
+      #lcard .btn { background: var(--acc); color: var(--bg); }
+      .bottle { position: absolute; left: 230px; top: 70px; width: 300px; height: 430px; transform-origin: 150px 430px; }
+      .sweep { position: absolute; top: -160px; left: 0; width: 170px; height: 1000px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,240,215,0.42), rgba(255,255,255,0)); transform: rotate(18deg); }
+      .shadow { position: absolute; left: 250px; top: 486px; width: 260px; height: 36px; border-radius: 50%; background: rgba(0,0,0,0.45); }
+      .pill { position: absolute; left: 30px; height: 58px; padding: 0 26px 0 22px; border-radius: 29px; display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 30px; background: rgba(16,14,12,0.78); color: var(--tx); border: 2px solid rgba(246,241,234,0.14); }
+      .pill i { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); flex: none; }
+      #price { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 60px; letter-spacing: -0.03em; color: var(--acc2); }
+      #okBtn { position: absolute; inset: 0; border-radius: 60px; background: var(--lime); color: var(--bg); display: flex; align-items: center; justify-content: center; gap: 18px; }
+      #ripple { position: absolute; left: 540px; top: 1410px; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 6px solid var(--tx); }
+      #finger { position: absolute; left: 0; top: 0; width: 96px; height: 96px; margin: -48px 0 0 -48px; border-radius: 50%; background: rgba(246,241,234,0.92); box-shadow: 0 0 0 14px rgba(246,241,234,0.22); }
+
+      /* Fond orange */
+      #orange { position: absolute; inset: 0; background: var(--acc); }
+      #orb { position: absolute; left: 868px; top: 986px; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: var(--acc); }
+      #wipe { position: absolute; inset: 0; background: var(--acc); transform-origin: 50% 100%; }
+
+      #speed { position: absolute; inset: 0; }
+      #speed b { position: absolute; width: 6px; border-radius: 3px; background: rgba(246,241,234,0.5); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="24" data-width="1080" data-height="1920">
+      <audio id="music" src="audio/soundtrack.wav" data-start="0" data-duration="24" data-track-index="10"></audio>
+      <div id="shake" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="tilt" data-layout-allow-overflow data-layout-allow-occlusion>
+          <div id="feedWin" data-layout-allow-overflow data-layout-allow-occlusion><div id="feedCam"><div id="track"></div></div></div>
+          <div id="dim" data-layout-allow-occlusion></div>
+          <div id="speed"></div>
+
+          <!-- 1-3 : accroche -->
+          <div id="hook" class="abs" style="left:90px; top:520px; width:920px; text-shadow:0 10px 40px rgba(16,14,12,.6)">
+            <div id="hLab" class="lab">Ta pub a</div>
+            <div id="cnt" class="big" style="font-size:400px; margin-top:30px; transform-origin:0 50%; white-space:nowrap"><span id="cNum">0,0</span><span class="ser" id="cS" style="font-size:330px; margin-left:22px">s</span></div>
+          </div>
+          <div id="t3" class="abs" style="left:90px; top:820px; width:940px">
+            <div class="m"><span id="t3a" class="big" style="font-size:150px">pour arrêter</span></div>
+            <div class="m" style="margin-top:6px"><span id="t3b" class="ser" style="font-size:210px; color:var(--acc)">le pouce.</span></div>
+          </div>
+
+          <!-- 4-5 : photo fixe -->
+          <div id="sLab" class="lab abs" style="left:130px; top:340px">Photo fixe</div>
+          <div id="scardW" class="abs" style="left:130px; top:420px; width:820px; height:1080px"></div>
+          <div id="sCap" class="abs" style="left:130px; top:1560px; font-weight:600; font-size:44px; color:var(--mut)">Une photo. Un prix. Rien ne bouge.</div>
+          <div id="t5" class="abs" style="left:90px; top:760px; width:920px">
+            <div class="m"><span id="t5a" class="big" style="font-size:190px; color:var(--red)">Scrollée.</span></div>
+            <div id="t5b" style="font-weight:600; font-size:48px; color:var(--tx); margin-top:20px">En 0,3 seconde. Aucune vente.</div>
+          </div>
+
+          <!-- 6 : question -->
+          <div id="t6" class="abs" style="left:90px; top:720px; width:940px">
+            <div class="m"><span id="t6a" class="big" style="font-size:150px">Et si elle</span></div>
+            <div class="m"><span id="t6b" class="ser" style="font-size:230px; color:var(--acc)"></span></div>
+          </div>
+          <div id="orb"></div>
+
+          <!-- 7-9 : la pub vivante -->
+          <div id="orange" data-layout-allow-occlusion></div>
+          <div id="oLab" class="lab abs" style="left:130px; top:330px; color:var(--bg)">La même pub, en motion</div>
+          <div id="liveCam"><div id="lcardW"></div></div>
+          <div id="t9" class="abs" style="left:130px; top:1560px; width:820px; height:150px">
+            <div class="m abs" style="left:0; top:0"><span id="t9a" class="big" style="font-size:120px; color:var(--bg)">Ça bouge.</span></div>
+            <div class="m abs" style="left:0; top:0"><span id="t9b" class="big" style="font-size:120px; color:var(--bg)">Ça rassure.</span></div>
+            <div class="m abs" style="left:0; top:0"><span id="t9c" class="big" style="font-size:120px; color:var(--bg)">Ça vend.</span></div>
+          </div>
+          <div id="ripple"></div>
+          <div id="finger"></div>
+
+          <!-- 10 : le pouce s'arrête -->
+          <div id="t10" class="abs" style="left:90px; top:200px; width:940px">
+            <div class="m"><span id="t10a" class="big" style="font-size:150px">Le pouce</span></div>
+            <div class="m"><span id="t10b" class="ser" style="font-size:200px; color:var(--acc)">s'arrête.</span></div>
+          </div>
+        </div>
+
+        <!-- 10b : résultats -->
+        <div id="s11" class="abs" style="left:0; top:0; width:1080px; height:1920px">
+          <div class="abs" style="left:90px; top:430px; width:940px">
+            <div class="m"><span id="pl" class="big" style="font-size:170px">Plus de</span></div>
+            <div style="height:30px"></div>
+            <div class="m"><span id="w1" class="ser" style="font-size:210px; color:var(--acc)">vues.</span></div>
+            <div id="u1" style="width:330px; height:10px; border-radius:5px; background:var(--acc); transform-origin:0 50%; margin:-6px 0 26px 4px"></div>
+            <div class="m"><span id="w2" class="ser" style="font-size:210px; color:var(--acc)">clics.</span></div>
+            <div id="u2" style="width:360px; height:10px; border-radius:5px; background:var(--acc); transform-origin:0 50%; margin:-6px 0 26px 4px"></div>
+            <div class="m"><span id="w3" class="ser" style="font-size:210px; color:var(--lime)">commandes.</span></div>
+            <div id="u3" style="width:860px; height:18px; border-radius:9px; background:var(--lime); transform-origin:0 50%; margin:-6px 0 0 4px"></div>
+          </div>
+        </div>
+
+        <!-- 11-12 : marque -->
+        <div id="wipe" data-layout-allow-occlusion></div>
+        <div id="brand" class="abs" style="left:90px; top:720px; width:940px; color:var(--bg); transform-origin:0 0">
+          <div style="display:flex; align-items:center; gap:28px">
+            <div id="pz" style="display:flex; gap:22px; width:190px; height:190px; flex:none; border-radius:48px; background:var(--bg); align-items:center; justify-content:center">
+              <b id="pz1" style="display:block; width:34px; height:92px; border-radius:10px; background:var(--acc)"></b>
+              <b id="pz2" style="display:block; width:34px; height:92px; border-radius:10px; background:var(--acc)"></b>
+            </div>
+            <div class="m"><span id="b1" class="big" style="font-size:250px">STOP</span></div>
+          </div>
+          <div class="m"><span id="b2" class="big" style="font-size:250px">SCROLL</span></div>
+          <div class="m" style="margin-top:-10px"><span id="b3" class="ser" style="font-size:150px; color:var(--tx)">studio</span></div>
+          <div id="b4" style="font-weight:600; font-size:50px; margin-top:28px">Pubs motion pour e-commerçants</div>
+        </div>
+        <div id="end" class="abs" style="left:90px; top:1250px; width:900px; color:var(--bg)">
+          <div class="m"><span id="e1" class="big" style="font-size:118px">Ta pub prête</span></div>
+          <div class="m"><span id="e2" class="ser" style="font-size:150px; color:var(--tx)">en 48 h.</span></div>
+          <div id="cta" style="margin-top:44px; height:132px; width:900px; border-radius:66px; background:var(--bg); color:var(--tx); display:flex; align-items:center; justify-content:center; gap:22px; font-weight:700; font-size:46px; transform-origin:50% 50%">
+            <i id="ctaDot" style="width:22px; height:22px; border-radius:50%; background:var(--lime)"></i>Écris-nous sur WhatsApp
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const $ = (s) => document.querySelector(s);
+
+      /* ---------- ressorts (oscillateur amorti, déterministe) ---------- */
+      function spring(z, w) {
+        const wd = w * Math.sqrt(1 - z * z);
+        return (t) => (t >= 1 ? 1 : 1 - Math.exp(-z * w * t) * (Math.cos(wd * t) + ((z * w) / wd) * Math.sin(wd * t)));
+      }
+      const SP_UI = spring(0.42, 20);   // pastilles, prix : nerveux
+      const SP_CARD = spring(0.55, 14); // cartes : dépassement discret
+      const SP_TYPE = spring(0.8, 12);  // grande typo : lourde
+      let seed = 7;
+      const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+
+      /* ---------- flacon (SVG) ---------- */
+      function bottle(id) {
+        return `<svg class="bottle" id="${id}" viewBox="0 0 300 430">
+          <defs>
+            <linearGradient id="${id}g" x1="0" x2="1"><stop offset="0" stop-color="#F2B25A"/><stop offset="0.55" stop-color="#C9711E"/><stop offset="1" stop-color="#7A3A0E"/></linearGradient>
+            <linearGradient id="${id}c" x1="0" x2="1"><stop offset="0" stop-color="#3B2A1A"/><stop offset="1" stop-color="#140D08"/></linearGradient>
+          </defs>
+          <rect x="20" y="125" width="260" height="300" rx="46" fill="url(#${id}g)"/>
+          <rect x="34" y="138" width="232" height="70" rx="30" fill="#FFFFFF" opacity="0.10"/>
+          <rect x="44" y="150" width="30" height="250" rx="15" fill="#FFFFFF" opacity="0.28"/>
+          <rect x="125" y="86" width="50" height="44" fill="#D9B46A"/>
+          <rect x="95" y="0" width="110" height="92" rx="16" fill="url(#${id}c)"/>
+          <rect x="95" y="62" width="110" height="10" fill="#D9B46A"/>
+          <rect x="80" y="228" width="140" height="118" rx="10" fill="#F6F1EA"/>
+          <text x="150" y="296" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="62" fill="#100E0C">Oud</text>
+          <text x="150" y="327" text-anchor="middle" font-family="Inter" font-weight="700" font-size="17" letter-spacing="5" fill="#100E0C">ROYAL</text>
+        </svg>`;
+      }
+      const check = `<svg width="44" height="44" viewBox="0 0 44 44"><polyline points="8,23 18,33 37,11" fill="none" stroke="#100E0C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      function productCard(id, live) {
+        return `<div class="card" id="${id}">
+          <div class="hd"><div class="av" style="background:${live ? "linear-gradient(135deg,#FF7A45,#F4511E)" : "#3A3530"}"></div>
+            <div><div class="nm">Maison Oud</div><div class="sp">Sponsorisé</div></div></div>
+          <div class="img">${live ? '<div class="shadow" id="shd"></div>' : ""}${bottle(live ? "lb" : "sb")}${live ? '<div class="sweep" id="sw"></div>' : ""}
+            ${live ? '<div class="pill" id="p1" style="top:540px"><i></i>Livraison gratuite</div><div class="pill" id="p2" style="top:608px"><i></i>Paiement à la livraison</div>' : ""}</div>
+          <div class="ti"><div class="big" id="${live ? "lt" : "st"}" style="font-size:60px; letter-spacing:-0.03em; color:${live ? "#F6F1EA" : "#8C847A"}">Oud Royal</div>
+            <div ${live ? 'id="price"' : 'class="big" style="font-size:60px; letter-spacing:-0.03em; color:#8C847A"'}>15 000 F</div></div>
+          <div class="btn"><span id="${live ? "bt" : "sbt"}">Commander</span>${live ? '<div id="okBtn">' + check + "Commandé</div>" : ""}</div>
+        </div>`;
+      }
+      $("#scardW").innerHTML = productCard("scard", false);
+      $("#lcardW").innerHTML = productCard("lcard", true);
+
+      /* ---------- flux de cartes génériques ---------- */
+      const hues = ["#5A4231", "#3E4A3F", "#553A41", "#3A4352", "#5A4C2E", "#4C3634"];
+      const track = $("#track");
+      for (let i = 0; i < 16; i++) {
+        const c = document.createElement("div");
+        c.className = "card"; c.style.top = i * 1100 + "px";
+        const h = hues[i % hues.length], k = Math.floor(rnd() * 3);
+        const glyph = k === 0 ? "border-radius:50%" : k === 1 ? "border-radius:40px" : "border-radius:50% 50% 24px 24px";
+        c.innerHTML = `<div class="hd"><div class="av" style="background:#3A3530"></div><div style="flex:1">
+            <div class="sk" style="position:relative; width:${220 + Math.floor(rnd() * 160)}px; height:26px"></div>
+            <div class="sk" style="position:relative; width:150px; height:22px; margin-top:12px; opacity:.6"></div></div></div>
+          <div class="img" style="background:linear-gradient(160deg, ${h}, #1E1A17)">
+            <div style="position:absolute; left:${220 + Math.floor(rnd() * 120)}px; top:${170 + Math.floor(rnd() * 80)}px; width:300px; height:300px; background:${h}; filter:brightness(1.5); ${glyph}"></div></div>
+          <div class="sk" style="left:30px; top:850px; width:${300 + Math.floor(rnd() * 200)}px; height:40px"></div>
+          <div class="sk" style="left:30px; top:930px; width:760px; height:120px; border-radius:60px; opacity:.7"></div>`;
+        track.appendChild(c);
+      }
+      const speed = $("#speed");
+      for (let i = 0; i < 9; i++) {
+        const b = document.createElement("b");
+        b.style.left = 70 + i * 118 + rnd() * 40 + "px"; b.style.top = 300 + rnd() * 900 + "px"; b.style.height = 260 + rnd() * 380 + "px";
+        speed.appendChild(b);
+      }
+      // « bougeait ? » lettre par lettre
+      $("#t6b").innerHTML = "bougeait ?".split("").map((c) => `<span class="ch">${c === " " ? "&nbsp;" : c}</span>`).join("");
+      $("#lt").innerHTML = "Oud Royal".split("").map((c) => `<span class="ch">${c === " " ? "&nbsp;" : c}</span>`).join("");
+      ["#b1", "#b2"].forEach((s) => { $(s).innerHTML = $(s).textContent.split("").map((c) => `<span class="ch">${c}</span>`).join(""); });
+
+      /* ---------- états initiaux ---------- */
+      gsap.set("#dim", { opacity: 0 });
+      tl.to("#dim", { opacity: 0.3, duration: 0.05, ease: "none" }, 0);
+      gsap.set(["#t3a", "#t3b", "#t5a", "#t6a", "#t9a", "#t9b", "#t9c", "#t10a", "#t10b", "#pl", "#w1", "#w2", "#w3", "#b3", "#e1", "#e2"], { yPercent: 115 });
+      gsap.set("#t6b .ch", { yPercent: 115 });
+      gsap.set(["#b1 .ch", "#b2 .ch"], { yPercent: 115 });
+      gsap.set(["#sLab", "#sCap", "#t5b", "#speed", "#oLab", "#b4", "#cta", "#ripple", "#finger", "#okBtn"], { opacity: 0 });
+      gsap.set(["#scardW"], { y: 1500 });
+      gsap.set(["#orb", "#orange", "#liveCam", "#s11", "#wipe", "#brand", "#end"], { opacity: 0 });
+      gsap.set("#orb", { scale: 0 });
+      gsap.set(["#u1", "#u2", "#u3"], { scaleX: 0 });
+      gsap.set("#pz", { scale: 0, rotation: -20 });
+
+      /* ===== 1. Accroche : le flux défile, le compteur tourne (0 → 1 s) ===== */
+      tl.fromTo("#track", { y: 0 }, { y: -4400, duration: 1, ease: "none" }, 0);
+      gsap.set("#track", { scaleY: 1.07, transformOrigin: "50% 0%" });
+      tl.fromTo("#feedCam", { scale: 1.0 }, { scale: 1.06, duration: 1, ease: "none" }, 0);
+      const cn = { v: 0 };
+      tl.to(cn, { v: 0.99, duration: 1, ease: "none", onUpdate: () => { $("#cNum").textContent = (Math.floor(cn.v * 10) / 10).toFixed(1).replace(".", ","); } }, 0);
+
+      /* ===== 2. Gel à 1,0 s ===== */
+      tl.set("#cNum", { textContent: "1,0" }, 1);
+      tl.set("#cnt", { color: "#F4511E" }, 1);
+      tl.fromTo("#cnt", { scale: 1.32 }, { scale: 1, duration: 0.8, ease: SP_TYPE }, 1);
+      tl.set("#hLab", { textContent: "Ta pub a" }, 1);
+      tl.fromTo("#shake", { x: 0, y: 0 }, { keyframes: [{ x: -14, y: 8 }, { x: 11, y: -9 }, { x: -6, y: 5 }, { x: 0, y: 0 }], duration: 0.28, ease: "none" }, 1);
+      tl.fromTo("#dim", { opacity: 0.3 }, { opacity: 0.72, duration: 0.15, ease: "none" }, 1);
+      tl.fromTo("#track", { scaleY: 1.07 }, { scaleY: 1, duration: 0.12, ease: "power2.out" }, 1);
+
+      /* ===== 3. Le compteur devient le titre ===== */
+      tl.to("#track", { y: -4800, duration: 4, ease: "sine.inOut" }, 2);
+      tl.to("#feedCam", { scale: 1, duration: 1.2, ease: "power3.inOut" }, 2);
+      tl.to("#dim", { opacity: 0.84, duration: 0.6, ease: "power2.out" }, 2);
+      tl.to("#cnt", { scale: 0.42, y: -120, duration: 0.7, ease: "expo.inOut" }, 2);
+      tl.to("#t3a", { yPercent: 0, duration: 0.9, ease: SP_TYPE }, 2.25);
+      tl.to("#t3b", { yPercent: 0, duration: 0.9, ease: SP_TYPE }, 2.5);
+      tl.to(["#hLab", "#cnt", "#t3a", "#t3b"], { yPercent: -120, opacity: 0, duration: 0.35, ease: "power3.in", stagger: 0.04 }, 3.75);
+
+      /* ===== 4. Photo fixe ===== */
+      tl.to("#dim", { opacity: 0.9, duration: 0.4 }, 4);
+      tl.to("#scardW", { y: 0, duration: 0.9, ease: SP_CARD }, 4);
+      tl.to("#sLab", { opacity: 1, duration: 0.3 }, 4.5);
+      tl.to("#sCap", { opacity: 1, duration: 0.3 }, 5);
+      tl.to("#scardW", { keyframes: [{ y: -26, duration: 0.25, ease: "power2.out" }, { y: 0, duration: 0.45, ease: SP_CARD }] }, 5.4);
+
+      /* ===== 5. Scrollée ===== */
+      tl.to("#scardW", { y: -1900, rotation: -4, duration: 0.24, ease: "power4.in" }, 6);
+      tl.to(["#sLab", "#sCap"], { opacity: 0, duration: 0.15 }, 6.05);
+      tl.to("#track", { y: -6600, duration: 0.6, ease: "power3.out" }, 6);
+      tl.to("#dim", { opacity: 0.86, duration: 0.2 }, 6);
+      tl.fromTo("#speed", { opacity: 0, y: 500 }, { opacity: 1, y: -700, duration: 0.45, ease: "power2.out" }, 6);
+      tl.to("#speed", { opacity: 0, duration: 0.2 }, 6.35);
+      tl.fromTo("#shake", { y: 0 }, { keyframes: [{ y: -12 }, { y: 7 }, { y: 0 }], duration: 0.2, ease: "none" }, 6.2);
+      tl.to("#t5a", { yPercent: 0, duration: 0.6, ease: SP_UI }, 6.2);
+      tl.to("#t5b", { opacity: 1, duration: 0.2 }, 6.5);
+
+      /* ===== 6. Et si elle bougeait ? ===== */
+      tl.set(["#feedWin", "#t5", "#dim"], { opacity: 0 }, 7);
+      tl.to("#t6a", { yPercent: 0, duration: 0.5, ease: SP_TYPE }, 7);
+      tl.to("#t6b .ch", { yPercent: 0, duration: 0.6, ease: SP_UI, stagger: 0.03 }, 7.1);
+      tl.to("#t6b .ch", { y: -22, duration: 0.18, ease: "sine.inOut", yoyo: true, repeat: 1, stagger: 0.035 }, 7.45);
+      tl.set("#orb", { opacity: 1, scale: 1 }, 7.55);
+      tl.to("#orb", { scale: 62, duration: 0.45, ease: "expo.in" }, 7.55);
+      tl.set(["#orange"], { opacity: 1 }, 8);
+      tl.set(["#orb", "#t6"], { opacity: 0 }, 8);
+
+      /* ===== 7. La même carte revient, vivante ===== */
+      tl.set("#liveCam", { opacity: 1 }, 8);
+      tl.fromTo("#lcard", { y: -1700, rotation: -7, scale: 1.08 }, { y: 0, rotation: 0, scale: 1, duration: 0.9, ease: SP_CARD }, 8);
+      tl.fromTo("#lb", { scale: 0.3, rotation: -16, y: 140 }, { scale: 1, rotation: 0, y: 0, duration: 0.9, ease: SP_UI }, 8.35);
+      tl.fromTo("#shd", { scaleX: 0.2, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.8, ease: SP_CARD }, 8.35);
+      tl.fromTo("#sw", { x: -320 }, { x: 980, duration: 0.8, ease: "power2.inOut" }, 9);
+      tl.fromTo("#lb", { y: 0 }, { y: -16, duration: 1, ease: "sine.inOut", yoyo: true, repeat: 4 }, 9.4);
+      tl.fromTo("#lt .ch", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.6, ease: SP_UI, stagger: 0.035 }, 8.9);
+      tl.to("#oLab", { opacity: 1, duration: 0.3 }, 8.5);
+      tl.fromTo("#lcardW", { scale: 1 }, { scale: 1.045, duration: 5, ease: "sine.inOut", transformOrigin: "540px 960px" }, 8.9);
+      tl.to("#t9a", { yPercent: 0, duration: 0.6, ease: SP_TYPE }, 9);
+
+      /* ===== 8. Prix et pastilles ===== */
+      tl.fromTo("#price", { scale: 2.2, rotation: -10, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.6, ease: SP_UI }, 10);
+      tl.fromTo("#p1", { x: -420 }, { x: 0, duration: 0.6, ease: SP_UI }, 10.5);
+      tl.fromTo("#p2", { x: -520 }, { x: 0, duration: 0.6, ease: SP_UI }, 11);
+      tl.to("#t9a", { yPercent: -115, duration: 0.3, ease: "power3.in" }, 10.3);
+      tl.to("#t9b", { yPercent: 0, duration: 0.6, ease: SP_TYPE }, 10.5);
+      tl.fromTo("#sw", { x: -320 }, { x: 980, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 11.5);
+
+      /* ===== 9. Commander ===== */
+      tl.to("#t9b", { yPercent: -115, duration: 0.3, ease: "power3.in" }, 12.2);
+      tl.to("#t9c", { yPercent: 0, duration: 0.6, ease: SP_TYPE }, 12.5);
+      tl.fromTo("#finger", { x: 860, y: 1820, opacity: 0 }, { x: 600, y: 1440, opacity: 1, duration: 0.55, ease: "power3.out" }, 12.3);
+      tl.to("#finger", { scale: 0.78, duration: 0.1, ease: "power2.in" }, 12.9);
+      tl.to("#finger", { scale: 1, duration: 0.3, ease: SP_UI }, 13);
+      tl.to("#lcard .btn", { scale: 0.94, duration: 0.1, ease: "power2.in" }, 12.9);
+      tl.to("#lcard .btn", { scale: 1, duration: 0.4, ease: SP_UI }, 13);
+      tl.set("#okBtn", { opacity: 1 }, 13);
+      tl.fromTo("#ripple", { scale: 0.4, opacity: 1 }, { scale: 9, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false }, 13);
+      tl.to("#finger", { x: 900, y: 1900, opacity: 0, duration: 0.45, ease: "power2.in" }, 13.45);
+
+      /* ===== 10. Retour dans le flux : le pouce s'arrête ===== */
+      tl.to(["#oLab", "#t9"], { opacity: 0, duration: 0.2 }, 13.85);
+      tl.set(["#feedWin"], { opacity: 1 }, 14);
+      tl.set("#dim", { opacity: 0.55 }, 14);
+      tl.set("#feedWin", { clipPath: "inset(640px 0px 0px 0px)" }, 14);
+      tl.set("#track .card:nth-child(11)", { opacity: 0 }, 14);
+      tl.fromTo("#orange", { clipPath: "circle(75% at 50% 50%)" }, { clipPath: "circle(0% at 50% 50%)", duration: 0.45, ease: "expo.in" }, 14);
+      tl.fromTo("#track", { y: -7270 }, { y: -10570, duration: 1.1, ease: "power3.out" }, 14);
+      tl.fromTo(["#feedCam", "#liveCam"], { scale: 1, y: 0 }, { scale: 0.6, y: 300, duration: 0.7, ease: "expo.inOut" }, 14);
+      tl.to("#t10a", { yPercent: 0, duration: 0.8, ease: SP_TYPE }, 14.25);
+      tl.to("#t10b", { yPercent: 0, duration: 0.8, ease: SP_TYPE }, 14.5);
+
+      /* ===== 10b. Plus de vues / clics / commandes ===== */
+      tl.to("#tilt", { y: -1920, duration: 0.45, ease: "expo.in" }, 15.5);
+      tl.set("#s11", { opacity: 1 }, 15.5);
+      tl.fromTo("#s11", { y: 1920 }, { y: 0, duration: 0.6, ease: "expo.out" }, 15.6);
+      tl.to("#pl", { yPercent: 0, duration: 0.7, ease: SP_TYPE }, 15.75);
+      [["#w1", "#u1", 16.0], ["#w2", "#u2", 16.5], ["#w3", "#u3", 17.0]].forEach(([w, u, t]) => {
+        tl.to(w, { yPercent: 0, duration: 0.7, ease: SP_TYPE }, t);
+        tl.to(u, { scaleX: 1, duration: 0.6, ease: SP_UI }, t + 0.12);
+      });
+
+      /* ===== 11. La marque ===== */
+      tl.set("#wipe", { opacity: 1 }, 17.7);
+      tl.fromTo("#wipe", { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "expo.in" }, 17.7);
+      tl.set("#s11", { opacity: 0 }, 18);
+      tl.set("#brand", { opacity: 1 }, 18);
+      tl.to("#pz", { scale: 1, rotation: 0, duration: 0.7, ease: SP_UI }, 18.05);
+      tl.fromTo(["#pz1", "#pz2"], { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: SP_UI, stagger: 0.08 }, 18.3);
+      tl.to("#b1 .ch", { yPercent: 0, duration: 0.7, ease: SP_TYPE, stagger: 0.05 }, 18.25);
+      tl.to("#b2 .ch", { yPercent: 0, duration: 0.7, ease: SP_TYPE, stagger: 0.05 }, 18.5);
+      tl.to("#b3", { yPercent: 0, duration: 0.8, ease: SP_TYPE }, 19);
+      tl.to("#b4", { opacity: 1, duration: 0.3 }, 19.5);
+      [19, 20].forEach((t) => tl.fromTo(["#pz1", "#pz2"], { opacity: 0.25 }, { opacity: 1, duration: 0.25, ease: "steps(1)" }, t));
+
+      /* ===== 12. Offre et appel à l'action ===== */
+      tl.to("#brand", { scale: 0.62, y: -380, duration: 0.7, ease: "expo.inOut" }, 20.75);
+      tl.set("#end", { opacity: 1 }, 21);
+      tl.fromTo("#end", { y: -170 }, { y: -310, duration: 0.7, ease: "expo.inOut" }, 20.75);
+      tl.to("#e1", { yPercent: 0, duration: 0.8, ease: SP_TYPE }, 21.25);
+      tl.to("#e2", { yPercent: 0, duration: 0.8, ease: SP_TYPE }, 21.5);
+      tl.fromTo("#cta", { opacity: 0, y: 60, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: SP_UI }, 22);
+      [22.5, 23, 23.5].forEach((t) => tl.fromTo("#cta", { scale: 1.045 }, { scale: 1, duration: 0.45, ease: SP_UI }, t));
+      tl.fromTo("#ctaDot", { scale: 1 }, { scale: 1.6, duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: 3 }, 22.5);
+      tl.set({}, {}, 24);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

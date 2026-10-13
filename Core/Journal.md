@@ -73,3 +73,9 @@
 - Crédits ElevenLabs presque épuisés (102 restants, il en faut 376 par prise) : une seule prise générée sur les 4 prévues.
 - En attente du choix de l'entrepreneur avant de recaler la vidéo.
 - Choix : ElevenLabs (voix Paul K). Vidéo recalée sur cette prise : 33,3 s au lieu de 37, sans accélérer ni ralentir la voix, avec de courtes respirations aux changements de scène, couvertes par les bruitages. Rendu horizontal et vertical lancé (noel-11labs*.mp4).
+
+### 2026-10-13 — Pub portfolio « STOPSCROLL »
+- Brief motion design pro (storyboard d'abord, ressorts, son, boucle qualité) appliqué à un sujet choisi par BOS : STOPSCROLL, studio fictif de pubs motion pour e-commerçants.
+- Objectif de la pub : « ta pub a 1 seconde pour arrêter le pouce ; une photo fixe se fait scroller, une pub qui bouge fait vendre ».
+- Livré : Output/videos/stopscroll/out/final.mp4 (9:16, 60 i/s, 24 s, beat synthétisé + bruitages), plus affiche, planche, charte, storyboard et README. 4 passes de correction.
+- Peut servir d'exemple n°1 sur la page de vente (l'exemple qui montre le « avant / après » vendable aux e-commerçants).
