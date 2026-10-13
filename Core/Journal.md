@@ -72,3 +72,4 @@
 - Fichiers dans Output/videos/noel-isometrique/voix-prise-unique/.
 - Crédits ElevenLabs presque épuisés (102 restants, il en faut 376 par prise) : une seule prise générée sur les 4 prévues.
 - En attente du choix de l'entrepreneur avant de recaler la vidéo.
+- Choix : ElevenLabs (voix Paul K). Vidéo recalée sur cette prise : 33,3 s au lieu de 37, sans accélérer ni ralentir la voix, avec de courtes respirations aux changements de scène, couvertes par les bruitages. Rendu horizontal et vertical lancé (noel-11labs*.mp4).

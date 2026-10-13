@@ -10,3 +10,7 @@
 
 # Dossiers de rendu régénérables
 Output/videos/*/build-*/
+__pycache__/
+Output/videos/*/.*.hf-transaction-*/
+Output/videos/*/work-*/
+Output/videos/*/render-*.log
