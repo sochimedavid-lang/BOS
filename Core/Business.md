@@ -38,7 +38,7 @@ Béninois 20-35 ans, étudiants / jeunes diplômés / salariés mal payés / fre
 Solo (+ éventuellement la personne qui détient les preuves).
 
 ## Outils
-- Claude (Pro min.), Remotion + Remotion Agent Skills, Meta Ads Manager, TikTok Ads, WhatsApp Business
+- Claude (Pro min.), HyperFrames (HeyGen, open source) + skills HyperFrames (choix de l’entrepreneur, testé par lui), Meta Ads Manager, TikTok Ads, WhatsApp Business
 - Vente : Chariow (vérifier dispo Bénin) ou FedaPay / KKiaPay (paiement mobile money)
 
 ## Concurrence

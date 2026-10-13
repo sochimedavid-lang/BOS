@@ -139,10 +139,11 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
     <tr><td><strong>Claude</strong></td><td>L'intelligence artificielle d'Anthropic. C'est elle qui écrit l'animation de tes vidéos.</td></tr>
     <tr><td><strong>Claude Pro</strong></td><td>L'abonnement payant de Claude (environ 20 $ par mois). Il est obligatoire : la version gratuite ne donne pas accès à l'outil qui crée les vidéos.</td></tr>
     <tr><td><strong>Claude Code</strong></td><td>La partie de Claude qui peut créer des fichiers et lancer des programmes sur ton ordinateur. C'est elle qu'on utilise pour fabriquer les vidéos.</td></tr>
-    <tr><td><strong>Remotion</strong></td><td>Un outil gratuit qui transforme du code en vidéo. Claude écrit le code, Remotion fabrique la vidéo.</td></tr>
-    <tr><td><strong>Skills Remotion</strong></td><td>Un « manuel » officiel que tu installes une fois. Il apprend à Claude à faire de belles animations avec Remotion.</td></tr>
-    <tr><td><strong>Remotion Studio</strong></td><td>La page qui s'ouvre dans ton navigateur pour voir ta vidéo avant de l'exporter.</td></tr>
-    <tr><td><strong>Node.js</strong></td><td>Un programme gratuit dont Remotion a besoin pour fonctionner. Tu l'installes une seule fois.</td></tr>
+    <tr><td><strong>HyperFrames</strong></td><td>Un outil gratuit et open source (créé par HeyGen) qui transforme une page web animée en vidéo. Claude écrit l'animation, HyperFrames fabrique la vidéo MP4.</td></tr>
+    <tr><td><strong>Skills HyperFrames</strong></td><td>Un « manuel » officiel que tu installes une fois. Il apprend à Claude à faire de belles vidéos avec HyperFrames. Tu l'appelles en écrivant <code>/hyperframes</code> dans ta demande.</td></tr>
+    <tr><td><strong>Aperçu (preview)</strong></td><td>La page qui s'ouvre dans ton navigateur pour voir ta vidéo avant de l'exporter. Elle se met à jour toute seule quand Claude modifie la vidéo.</td></tr>
+    <tr><td><strong>FFmpeg</strong></td><td>Un programme gratuit qui assemble les images en fichier vidéo. HyperFrames en a besoin. Tu l'installes une seule fois.</td></tr>
+    <tr><td><strong>Node.js</strong></td><td>Un programme gratuit dont HyperFrames a besoin pour fonctionner. Tu l'installes une seule fois.</td></tr>
     <tr><td><strong>Exporter / rendre (render)</strong></td><td>Transformer ton animation en vrai fichier vidéo MP4 que tu peux envoyer.</td></tr>
     <tr><td><strong>Instruction (prompt)</strong></td><td>Le message que tu écris à Claude pour lui demander une vidéo.</td></tr>
     <tr><td><strong>Format 9:16</strong></td><td>Vidéo verticale (1080 × 1920) : statuts WhatsApp, TikTok, Reels, Stories.</td></tr>
@@ -184,7 +185,7 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
 
 <section class="page cont">
   <h2 style="margin-top:0">0.3 · Installer Node.js</h2>
-  <p>Remotion (l'outil qui fabrique les vidéos) a besoin de Node.js.</p>
+  <p>HyperFrames (l'outil qui fabrique les vidéos) a besoin de Node.js, <strong>version 22 ou plus récente</strong>.</p>
   <ol class="steps">
     <li>Va sur <code>nodejs.org</code> et télécharge la version <strong>LTS</strong> (le bouton recommandé).</li>
     <li>Ouvre le fichier téléchargé et clique sur <em>Suivant</em> jusqu'à la fin, sans rien changer.</li>
@@ -214,25 +215,32 @@ h1,.lead,.tag,.mhead,.res{break-after:avoid;page-break-after:avoid}
     <li>Ouvre ce dossier avec Claude (Option A : sélectionne-le dans l'onglet Code ; Option B : dans le terminal, va dans le dossier puis tape <code>claude</code>).</li>
     <li>Colle cette instruction et envoie-la :</li>
   </ol>
-  <div class="prompt">Je suis débutant. Dans ce dossier, crée un nouveau projet vidéo Remotion (modèle vide, TypeScript) et installe tout ce qu'il faut. Ensuite installe les skills Remotion officielles avec la commande : npx skills add remotion-dev/skills
-Puis lance le Remotion Studio et dis-moi exactement quelle adresse ouvrir dans mon navigateur. Explique-moi chaque étape en français, simplement.</div>
-  <p>Claude va te demander la permission avant de lancer certaines commandes : <strong>accepte</strong>. Ça peut prendre quelques minutes. À la fin, il te donne une adresse du type <code>http://localhost:3000</code> : ouvre-la dans ton navigateur. Tu vois le Remotion Studio ? Ton atelier est prêt. 🎉</p>
+  <div class="prompt">Je suis débutant. Prépare ce dossier pour faire des vidéos avec HyperFrames :
+1. Vérifie que Node.js (version 22 ou plus) est installé.
+2. Vérifie si FFmpeg est installé. Sinon, installe-le pour moi (sur Windows avec winget, sur Mac avec Homebrew) et explique-moi ce que tu fais.
+3. Installe les skills HyperFrames avec la commande : npx skills add heygen-com/hyperframes (choisis les « Core Skills »).
+4. Lance : npx hyperframes browser ensure (ça télécharge le navigateur qui sert au rendu).
+5. Crée un projet vidéo de départ dans ce dossier.
+Explique-moi chaque étape en français, simplement.</div>
+  <p>Claude va te demander la permission avant de lancer certaines commandes : <strong>accepte</strong>. Ça peut prendre 5 à 15 minutes selon ta connexion (le navigateur de rendu pèse environ 150 Mo). Une fois les skills installées, <strong>ferme et relance Claude dans le même dossier</strong> pour qu'il les prenne en compte. Ton atelier est prêt. 🎉</p>
+  <div class="box tip"><h4>💡 FFmpeg à la main (si besoin)</h4><p>Si Claude n'arrive pas à installer FFmpeg : sur Windows, ouvre PowerShell et tape <code>winget install --id Gyan.FFmpeg -e</code>, puis redémarre l'ordinateur. Sur Mac, installe Homebrew (<code>brew.sh</code>) puis tape <code>brew install ffmpeg</code>.</p></div>
 </section>
 
 <section class="page cont">
   <h2 style="margin-top:0">0.6 · Ta première vidéo</h2>
   <p>Dans la même conversation avec Claude, colle cette instruction :</p>
-  <div class="prompt">Crée une nouvelle composition Remotion appelée LogoMamanRose : format vertical 1080x1920, 30 images par seconde, durée 6 secondes.
+  <div class="prompt">Avec /hyperframes, crée une vidéo appelée logo-maman-rose : format vertical 1080x1920, 30 images par seconde, durée 6 secondes.
 - Fond : dégradé radial orange, du #FFB54A au centre vers #FF4D1C puis #5C1500 sur les bords.
 - De 0 à 1,5 s : un cercle blanc fin se dessine au centre de l'écran.
 - De 1,2 à 2,5 s : la lettre « R » apparaît en fondu au centre du cercle, police élégante en italique.
 - De 2,5 à 4 s : le texte « CHEZ MAMAN ROSE » apparaît sous le cercle, lettres très espacées qui se resserrent doucement.
 - De 4 à 6 s : léger zoom avant sur l'ensemble.
-Utilise des animations fluides (spring ou easing). Affiche-la dans le Studio.</div>
-  <p>Regarde le résultat dans le Studio. Tu veux changer quelque chose ? Dis-le simplement :</p>
+Utilise des animations fluides. Ouvre l'aperçu dans mon navigateur quand c'est prêt.</div>
+  <p>Regarde le résultat dans l'aperçu. Tu veux changer quelque chose ? Dis-le simplement :</p>
   <div class="prompt">Rends le texte plus gros et plus gras, et fais apparaître le cercle un peu plus lentement.</div>
   <p>Quand ça te plaît, exporte :</p>
-  <div class="prompt">Exporte la composition LogoMamanRose en MP4 dans un dossier « out », puis dis-moi où se trouve le fichier.</div>
+  <div class="prompt">Exporte la vidéo logo-maman-rose en MP4 dans un dossier « out », puis dis-moi où se trouve le fichier.</div>
+  <p class="mut">Pour info, Claude utilise les commandes <code>npx hyperframes preview</code> (aperçu) et <code>npx hyperframes render --output out/video.mp4</code> (export). Tu peux aussi les taper toi-même dans le dossier du projet.</p>
   <div class="box ok"><h4>✅ Bravo !</h4><p>Ouvre le fichier MP4 : c'est ta première vidéo motion, faite avec l'IA. Envoie-la dans la communauté WhatsApp, on veut la voir. Tu viens de valider le résultat du module 0.</p></div>
 
   <h2>0.7 · Les problèmes fréquents</h2>
@@ -240,7 +248,9 @@ Utilise des animations fluides (spring ou easing). Affiche-la dans le Studio.</d
     <tr><th style="width:38%">Problème</th><th>Solution</th></tr>
     <tr><td>« claude n'est pas reconnu »</td><td>Ferme le terminal, rouvre-le, réessaie. Toujours pas ? Redémarre l'ordinateur. Sinon, utilise l'option A (l'application).</td></tr>
     <tr><td>« npm » ou « node » introuvable</td><td>Node.js n'est pas installé ou l'ordinateur n'a pas redémarré. Refais l'étape 0.3.</td></tr>
-    <tr><td>Le Studio ne s'ouvre pas</td><td>Demande à Claude : « Relance le Remotion Studio et donne-moi l'adresse. »</td></tr>
+    <tr><td>L'aperçu ne s'ouvre pas</td><td>Demande à Claude : « Relance l'aperçu HyperFrames (npx hyperframes preview) et donne-moi l'adresse. »</td></tr>
+    <tr><td>L'export échoue avec « ffmpeg » dans l'erreur</td><td>FFmpeg n'est pas installé : voir l'encadré « FFmpeg à la main » (étape 0.5).</td></tr>
+    <tr><td>Claude ne connaît pas /hyperframes</td><td>Les skills ne sont pas chargées : ferme Claude, relance-le dans le dossier du projet. Sinon, demande-lui : « Lance npx hyperframes skills update ».</td></tr>
     <tr><td>Une erreur rouge s'affiche</td><td>Copie l'erreur et colle-la à Claude : « J'ai cette erreur, corrige-la. » Il sait réparer.</td></tr>
     <tr><td>Claude dit que la limite d'utilisation est atteinte</td><td>L'abonnement Pro a des limites par période. Attends l'heure indiquée. Astuce : écris des instructions précises (comme dans ce guide) pour éviter les allers-retours.</td></tr>
     <tr><td>L'export est lent</td><td>Normal sur un petit ordinateur. Ferme les autres programmes. Une vidéo de 10 s prend en général de quelques secondes à quelques minutes.</td></tr>
@@ -261,12 +271,12 @@ Utilise des animations fluides (spring ou easing). Affiche-la dans le Studio.</d
     <tr><td><strong>4. Textes exacts</strong></td><td>Écris les textes entre guillemets, avec les accents : « -30 % ce week-end »</td></tr>
     <tr><td><strong>5. Déroulé seconde par seconde</strong></td><td>« de 0 à 2 s le logo apparaît, de 2 à 4 s le prix arrive… »</td></tr>
     <tr><td><strong>6. Style</strong></td><td>« élégant et calme » · « dynamique et énergique » · « moderne et minimaliste »</td></tr>
-    <tr><td><strong>7. Fichiers</strong></td><td>« utilise le logo public/logo.png et la photo public/produit.jpg »</td></tr>
-    <tr><td><strong>8. Son</strong></td><td>« ajoute public/musique.mp3 à 30 % du volume, fondu sur la dernière seconde »</td></tr>
+    <tr><td><strong>7. Fichiers</strong></td><td>« utilise le logo assets/logo.png et la photo assets/produit.jpg »</td></tr>
+    <tr><td><strong>8. Son</strong></td><td>« ajoute assets/musique.mp3 à 30 % du volume, fondu sur la dernière seconde »</td></tr>
   </table>
 
   <h2>Utiliser les fichiers du client</h2>
-  <p>Logo, photos de produits, musique : mets-les dans le dossier <code>public</code> de ton projet (Claude l'a créé). Donne des noms simples sans espaces : <code>logo.png</code>, <code>plat1.jpg</code>, <code>musique.mp3</code>. Puis cite-les dans ton instruction.</p>
+  <p>Logo, photos de produits, musique : mets-les dans le dossier <code>assets</code> de ton projet (crée-le s'il n'existe pas). Donne des noms simples sans espaces : <code>logo.png</code>, <code>plat1.jpg</code>, <code>musique.mp3</code>. Puis cite-les dans ton instruction.</p>
   <div class="box tip"><h4>💡 Logo de mauvaise qualité ?</h4><p>Les clients envoient souvent une photo floue de leur logo. Demande-leur le fichier d'origine (PNG, idéalement avec fond transparent). Sinon, Claude peut recréer un logo texte simple et propre avec le nom de l'entreprise : précise-le dans ton instruction.</p></div>
 
   <h2>Le vocabulaire des corrections</h2>
@@ -298,8 +308,8 @@ Utilise des animations fluides (spring ou easing). Affiche-la dans le Studio.</d
     <li>J'ai un compte Claude Pro actif</li>
     <li>Node.js est installé</li>
     <li>Claude (application ou terminal) est installé et connecté</li>
-    <li>Mon projet Remotion est créé et les skills Remotion sont installées</li>
-    <li>J'ai vu le Remotion Studio dans mon navigateur</li>
+    <li>FFmpeg est installé et les skills HyperFrames sont installées</li>
+    <li>J'ai vu l'aperçu de ma vidéo dans mon navigateur</li>
     <li>J'ai exporté ma première vidéo en MP4</li>
     <li>Je l'ai partagée dans la communauté WhatsApp</li>
   </ul>
@@ -323,8 +333,8 @@ Utilise des animations fluides (spring ou easing). Affiche-la dans le Studio.</d
 
   <h2>Format 1 · Le logo animé</h2>
   <p><strong>Pourquoi ça se vend :</strong> chaque entreprise a un logo, presque aucune ne l'a en vidéo. C'est ton produit d'appel : rapide à faire, facile à vendre, et il ouvre la porte aux autres vidéos.</p>
-  <div class="prompt">Crée une composition Remotion « Logo[NomClient] » : carré 1080x1080, 30 images/s, 6 secondes.
-Utilise le logo public/logo.png. Couleurs de la marque : [couleur 1] et [couleur 2].
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Logo[NomClient] » : carré 1080x1080, 30 images/s, 6 secondes.
+Utilise le logo assets/logo.png. Couleurs de la marque : [couleur 1] et [couleur 2].
 - 0 à 1,5 s : des formes géométriques simples aux couleurs de la marque entrent depuis les bords et convergent vers le centre.
 - 1,5 à 3 s : le logo apparaît au centre avec un effet de zoom doux (de 80 % à 100 %) et un léger rebond.
 - 3 à 4,5 s : le slogan « [slogan du client] » apparaît sous le logo, mot par mot.
@@ -335,8 +345,8 @@ Style : [élégant / moderne / dynamique]. Fond : [couleur unie ou dégradé].</
 <section class="page cont">
   <h2 style="margin-top:0">Format 2 · La promo produit</h2>
   <p><strong>Pourquoi ça se vend :</strong> les boutiques et vendeurs en ligne publient des photos fixes. Une vidéo qui met le produit en mouvement attire plus l'œil dans le fil d'actualité.</p>
-  <div class="prompt">Crée une composition « Promo[Produit] » : vertical 1080x1920, 30 images/s, 15 secondes.
-Photo du produit : public/produit.png (fond détouré si possible). Couleurs : [couleur 1], [couleur 2].
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Promo[Produit] » : vertical 1080x1920, 30 images/s, 15 secondes.
+Photo du produit : assets/produit.png (fond détouré si possible). Couleurs : [couleur 1], [couleur 2].
 - 0 à 2 s : accroche en gros texte en haut : « [Accroche, ex. Tu cherches la montre parfaite ?] ».
 - 2 à 5 s : le produit entre par le bas avec un rebond et tourne légèrement.
 - 5 à 9 s : 3 points forts apparaissent un par un à côté du produit, avec une icône : « [atout 1] », « [atout 2] », « [atout 3] ».
@@ -346,37 +356,37 @@ Style dynamique et moderne. Textes très lisibles sur téléphone.</div>
 
   <h2>Format 3 · L'annonce promo</h2>
   <p><strong>Pourquoi ça se vend :</strong> chaque boutique fait des soldes, des offres du week-end, des déstockages. C'est un besoin qui revient chaque mois, donc idéal pour un abonnement.</p>
-  <div class="prompt">Crée une composition « Promo[NomClient] » : vertical 1080x1920, 30 images/s, 10 secondes.
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Promo[NomClient] » : vertical 1080x1920, 30 images/s, 10 secondes.
 Fond [couleur foncée]. Couleur d'accent : [jaune / rouge / orange vif].
 - 0 à 1,5 s : le texte « [PROMO / SOLDES / OFFRE SPÉCIALE] » claque à l'écran avec un effet de zoom rapide.
 - 1,5 à 4 s : une étoile/badge d'accent tourne lentement derrière le chiffre « [-30 %] » qui apparaît en très gros avec un rebond.
 - 4 à 6,5 s : « [sur tous les articles / sur la nouvelle collection] » glisse depuis le bas.
 - 6,5 à 8,5 s : « [Ce week-end seulement · du ... au ...] » apparaît, avec une petite animation qui attire l'œil.
-- 8,5 à 10 s : logo public/logo.png + adresse « [quartier, ville] » + numéro WhatsApp.
+- 8,5 à 10 s : logo assets/logo.png + adresse « [quartier, ville] » + numéro WhatsApp.
 Style énergique, gros textes, contraste fort.</div>
 </section>
 
 <section class="page cont">
   <h2 style="margin-top:0">Format 4 · Le menu animé</h2>
   <p><strong>Pourquoi ça se vend :</strong> les restaurants et maquis changent leur menu du jour et leurs prix. Une vidéo de menu se partage en statut tous les jours. Excellent pour un abonnement hebdomadaire.</p>
-  <div class="prompt">Crée une composition « Menu[NomRestaurant] » : vertical 1080x1920, 30 images/s, 15 secondes.
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Menu[NomRestaurant] » : vertical 1080x1920, 30 images/s, 15 secondes.
 Fond [vert foncé / bordeaux / noir], couleur d'accent [jaune / or].
 - 0 à 2 s : en haut, le titre « Menu du jour » en police élégante italique, puis le nom « [NOM DU RESTAURANT] » en petites majuscules espacées.
 - 2 à 10 s : les plats apparaissent un par un en glissant depuis la gauche, chacun sur une ligne avec des pointillés et le prix à droite en couleur d'accent :
   « [Plat 1] — [prix] F », « [Plat 2] — [prix] F », « [Plat 3] — [prix] F », « [Plat 4] — [prix] F ».
-  Si j'ajoute des photos public/plat1.jpg, plat2.jpg…, affiche-les en petit rond à gauche de chaque plat.
+  Si j'ajoute des photos assets/plat1.jpg, plat2.jpg…, affiche-les en petit rond à gauche de chaque plat.
 - 10 à 13 s : bandeau « Sur place ou à emporter · Livraison : [numéro] ».
-- 13 à 15 s : logo public/logo.png et adresse.
+- 13 à 15 s : logo assets/logo.png et adresse.
 Style chaleureux et appétissant.</div>
 
   <h2>Format 5 · Le statut WhatsApp</h2>
   <p><strong>Pourquoi ça se vend :</strong> au Bénin, les statuts WhatsApp sont une vitrine. Les salons de coiffure, couturiers, boutiques les utilisent chaque jour, souvent avec des visuels pauvres.</p>
-  <div class="prompt">Crée une composition « Statut[NomClient] » : vertical 1080x1920, 30 images/s, 12 secondes, style « story ».
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Statut[NomClient] » : vertical 1080x1920, 30 images/s, 12 secondes, style « story ».
 Fond dégradé [couleur 1] vers [couleur 2].
 - En haut : 3 petites barres de progression comme une story, avec un rond blanc et le nom « [Nom du commerce] ».
 - 0 à 3 s : grand texte « [Message principal, ex. Nouvelles tresses] » qui apparaît mot par mot.
 - 3 à 6 s : sous-titre dans un bloc blanc arrondi : « [ex. dispo dès demain] », qui fait un petit « pop ».
-- 6 à 9 s : si j'ajoute public/photo.jpg, elle apparaît dans un cadre arrondi avec un léger zoom.
+- 6 à 9 s : si j'ajoute assets/photo.jpg, elle apparaît dans un cadre arrondi avec un léger zoom.
 - 9 à 12 s : « Réserve au [numéro] » avec une icône de téléphone qui vibre légèrement.
 Textes très gros, lisibles en un coup d'œil.</div>
 </section>
@@ -384,13 +394,13 @@ Textes très gros, lisibles en un coup d'œil.</div>
 <section class="page cont">
   <h2 style="margin-top:0">Format 6 · L'inauguration / l'événement</h2>
   <p><strong>Pourquoi ça se vend :</strong> une ouverture, un nouvel arrivage, des inscriptions scolaires, un concert, une soirée : l'entreprise veut faire du bruit vite. Le client est souvent prêt à payer plus cher, parce que c'est urgent.</p>
-  <div class="prompt">Crée une composition « Event[NomClient] » : vertical 1080x1920, 30 images/s, 15 secondes.
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Event[NomClient] » : vertical 1080x1920, 30 images/s, 15 secondes.
 Fond [couleur vive], textes en blanc et [couleur 2].
 - 0 à 3 s : « GRANDE » puis « OUVERTURE » (ou « [titre de l'événement] ») montent depuis le bas, ligne par ligne, en très grosses lettres.
 - 3 à 6 s : des confettis colorés tombent doucement sur tout l'écran.
 - 6 à 9 s : « [Jour et date] » puis « [Heure] » apparaissent dans des pastilles arrondies.
 - 9 à 12 s : « [Lieu précis, quartier, ville] » avec une icône de localisation qui rebondit.
-- 12 à 15 s : « [Offre spéciale ou message, ex. -20 % le jour J] » + logo public/logo.png.
+- 12 à 15 s : « [Offre spéciale ou message, ex. -20 % le jour J] » + logo assets/logo.png.
 Ambiance festive et joyeuse.</div>
 
   <h2>Pour aller plus loin : le reel et les chiffres</h2>
@@ -399,11 +409,11 @@ Ambiance festive et joyeuse.</div>
     <li><strong>Le reel explicatif</strong> (20 à 30 s, vertical) : 3 à 5 écrans de texte qui expliquent un service, avec transitions dynamiques. Idéal pour les agences, écoles, cabinets.</li>
     <li><strong>Les chiffres clés</strong> (10 à 15 s) : « 500 clients satisfaits », « 10 ans d'expérience » qui s'affichent avec des compteurs animés et des barres. Les entreprises adorent pour leur image.</li>
   </ul>
-  <div class="prompt">Crée une composition « Chiffres[NomClient] » : carré 1080x1080, 30 images/s, 12 secondes.
+  <div class="prompt">Avec /hyperframes, crée une vidéo « Chiffres[NomClient] » : carré 1080x1080, 30 images/s, 12 secondes.
 Fond [couleur foncée], accent en dégradé [couleur 1] vers [couleur 2].
 Affiche 3 chiffres clés l'un après l'autre (3 s chacun), avec un compteur qui monte de 0 jusqu'au chiffre et une courte légende :
 « [chiffre 1] » — « [légende 1] », « [chiffre 2] » — « [légende 2] », « [chiffre 3] » — « [légende 3] ».
-Termine sur le logo public/logo.png et le slogan « [slogan] ».</div>
+Termine sur le logo assets/logo.png et le slogan « [slogan] ».</div>
 
   <h2>Exercice du module 1</h2>
   <div class="box ok"><h4>🎯 À faire</h4><p>Produis <strong>une vidéo de chaque format</strong> pour des entreprises imaginaires (ou celles de ton quartier). Exporte-les. Tu en réutiliseras certaines dans ton portfolio au module 3.</p></div>
@@ -474,19 +484,19 @@ Termine sur le logo public/logo.png et le slogan « [slogan] ».</div>
 
   <h2>Étape 4 · Produire</h2>
   <ol class="steps">
-    <li>Mets le logo et les photos dans le dossier <code>public</code>.</li>
+    <li>Mets le logo et les photos dans le dossier <code>assets</code>.</li>
     <li>Transforme le script validé en instruction (avec les 8 ingrédients du module 0).</li>
-    <li>Regarde le résultat dans le Studio, corrige avec le vocabulaire des corrections.</li>
+    <li>Regarde le résultat dans l'aperçu, corrige avec le vocabulaire des corrections.</li>
     <li>Relis tous les textes (orthographe, prix, numéro).</li>
   </ol>
 
   <h2>Étape 5 · Le son</h2>
   <ul>
     <li><strong>Musique :</strong> utilise des musiques <strong>libres de droits pour un usage commercial</strong> (par exemple la bibliothèque musicale de Pixabay, ou la bibliothèque audio de YouTube). <strong>Vérifie toujours la licence</strong> de chaque morceau. N'utilise jamais une chanson connue sans autorisation : la vidéo du client peut être bloquée.</li>
-    <li><strong>Voix off :</strong> enregistre-la avec ton téléphone dans une pièce calme (dans un placard plein de vêtements, le son est meilleur), ou demande au client de l'enregistrer. Mets le fichier dans <code>public</code> et demande à Claude de l'ajouter et de caler les textes dessus.</li>
+    <li><strong>Voix off :</strong> enregistre-la avec ton téléphone dans une pièce calme (dans un placard plein de vêtements, le son est meilleur), ou demande au client de l'enregistrer. Mets le fichier dans <code>assets</code> et demande à Claude de l'ajouter et de caler les textes dessus.</li>
     <li><strong>Sans son :</strong> beaucoup de gens regardent sans le son. La vidéo doit se comprendre avec les textes seuls.</li>
   </ul>
-  <div class="prompt">Ajoute la musique public/musique.mp3 en fond à 25 % du volume avec un fondu d'entrée et de sortie d'une seconde. Ajoute aussi la voix public/voix.mp3 à 100 % à partir de 0,5 s, et cale l'apparition de chaque texte sur le moment où la voix le prononce.</div>
+  <div class="prompt">Ajoute la musique assets/musique.mp3 en fond à 25 % du volume avec un fondu d'entrée et de sortie d'une seconde. Ajoute aussi la voix assets/voix.mp3 à 100 % à partir de 0,5 s, et cale l'apparition de chaque texte sur le moment où la voix le prononce.</div>
 
   <h2>Étape 6 · La livraison</h2>
   <ul>
@@ -503,7 +513,7 @@ Termine sur le logo public/logo.png et le slogan « [slogan] ».</div>
   <h1>Ton système <em>de production.</em></h1>
   <p class="lead">Pour aller vite quand les clients arrivent, organise-toi dès maintenant.</p>
   <h2>Organise tes dossiers</h2>
-  <p>Un projet Remotion peut contenir plusieurs compositions. Garde un seul atelier <code>vibe-motion</code> et demande à Claude de ranger chaque client à part :</p>
+  <p>Garde un seul atelier <code>vibe-motion</code> et demande à Claude de ranger chaque client à part :</p>
   <div class="prompt">Organise le projet pour que chaque client ait son propre sous-dossier de compositions et de fichiers (logo, photos, musique). Crée le dossier pour le client « [Nom du client] » et mets-y la composition [nom].</div>
   <h2>Crée tes modèles</h2>
   <p>Chaque fois qu'un format fonctionne, transforme-le en modèle (voir l'astuce du module 0). Au bout de quelques semaines, tu auras une bibliothèque de modèles prêts : changer un nom, des couleurs et un logo te prendra quelques minutes au lieu d'une heure.</p>
@@ -561,7 +571,7 @@ Termine sur le logo public/logo.png et le slogan « [slogan] ».</div>
 
   <h2>Ta vidéo de présentation</h2>
   <p>Assemble tes 5 démos dans une seule vidéo de 30 secondes : c'est ta « bande démo », la première chose que tu envoies à un prospect.</p>
-  <div class="prompt">Crée une composition « BandeDemo » verticale 1080x1920 de 30 secondes qui enchaîne mes vidéos out/[video1].mp4, out/[video2].mp4, out/[video3].mp4, out/[video4].mp4, out/[video5].mp4 (environ 5 s de chaque, les meilleurs passages), avec des transitions rapides. Commence par « Des vidéos qui font vendre » et termine par « [Nom de ton studio] · [ton numéro WhatsApp] ».</div>
+  <div class="prompt">Avec /hyperframes, crée une vidéo « BandeDemo » verticale 1080x1920 de 30 secondes qui enchaîne mes vidéos out/[video1].mp4, out/[video2].mp4, out/[video3].mp4, out/[video4].mp4, out/[video5].mp4 (environ 5 s de chaque, les meilleurs passages), avec des transitions rapides. Commence par « Des vidéos qui font vendre » et termine par « [Nom de ton studio] · [ton numéro WhatsApp] ».</div>
 
   <h2>Checklist du module 3</h2>
   <ul class="check">
@@ -752,7 +762,7 @@ Je commence dès réception de l'acompte 🙏</div>
     <li>Ralentis toutes les animations de 30 %.</li>
     <li>Accélère le début : l'accroche doit être lisible avant la 2e seconde.</li>
     <li>Laisse chaque texte affiché au moins 1,5 seconde avant qu'il disparaisse.</li>
-    <li>Synchronise les apparitions sur le rythme de la musique public/musique.mp3.</li>
+    <li>Synchronise les apparitions sur le rythme de la musique assets/musique.mp3.</li>
     <li>Ajoute une petite vibration au téléphone ou à l'icône d'appel.</li>
   </ol>
 </section>
@@ -780,7 +790,7 @@ Je commence dès réception de l'acompte 🙏</div>
     <li>Agrandis tous les textes de 30 % : ils doivent être lisibles sur un petit téléphone.</li>
     <li>Ajoute un contour ou une ombre aux textes pour qu'ils restent lisibles sur la photo.</li>
     <li>Garde une marge de sécurité de 250 pixels en haut et en bas de l'écran.</li>
-    <li>Ajoute des sous-titres en bas, synchronisés avec la voix public/voix.mp3.</li>
+    <li>Ajoute des sous-titres en bas, synchronisés avec la voix assets/voix.mp3.</li>
     <li>Mets en surbrillance [couleur] le mot « [mot important] » quand il apparaît.</li>
   </ol>
 </section>
@@ -788,11 +798,11 @@ Je commence dès réception de l'acompte 🙏</div>
 <section class="page cont">
   <ol class="p50" start="37" style="counter-reset:p 36">
     <h3 style="margin-top:0">Médias du client</h3>
-    <li>Utilise la photo public/produit.png, détourée, et fais-la tourner légèrement en 3D.</li>
-    <li>Fais défiler les photos public/photo1.jpg à photo5.jpg en diaporama dynamique avec zoom lent.</li>
+    <li>Utilise la photo assets/produit.png, détourée, et fais-la tourner légèrement en 3D.</li>
+    <li>Fais défiler les photos assets/photo1.jpg à photo5.jpg en diaporama dynamique avec zoom lent.</li>
     <li>Affiche la photo dans un cadre de téléphone pour montrer le produit « en vrai ».</li>
     <li>Recrée un logo texte propre avec le nom « [Nom] » dans la police [style], le logo du client étant flou.</li>
-    <li>Ajoute la musique public/musique.mp3 à 25 % du volume avec fondus d'entrée et de sortie.</li>
+    <li>Ajoute la musique assets/musique.mp3 à 25 % du volume avec fondus d'entrée et de sortie.</li>
     <h3>Formats et export</h3>
     <li>Crée une version carrée 1080x1080 et une version horizontale 1920x1080 de cette vidéo, en réorganisant les éléments.</li>
     <li>Fais une version courte de 6 secondes de cette vidéo pour un statut rapide.</li>
@@ -815,7 +825,7 @@ Je commence dès réception de l'acompte 🙏</div>
   <p class="lead">Environ 1 heure par jour. Coche chaque jour terminé. À la fin de la semaine, tu as une compétence, un portfolio et tes premiers prospects.</p>
   <table>
     <tr><th style="width:15%">Jour</th><th style="width:30%">Objectif</th><th>À faire</th></tr>
-    <tr><td><strong>☐ Jour 1</strong></td><td>Tout installer</td><td>Module 0 en entier : Claude Pro, Node.js, Claude, projet Remotion. Ta première vidéo exportée et partagée dans la communauté.</td></tr>
+    <tr><td><strong>☐ Jour 1</strong></td><td>Tout installer</td><td>Module 0 en entier : Claude Pro, Node.js, Claude, FFmpeg et HyperFrames. Ta première vidéo exportée et partagée dans la communauté.</td></tr>
     <tr><td><strong>☐ Jour 2</strong></td><td>3 premiers formats</td><td>Module 1 : logo animé, promo produit, annonce promo. Une vidéo de chaque.</td></tr>
     <tr><td><strong>☐ Jour 3</strong></td><td>3 formats suivants</td><td>Menu animé, statut WhatsApp, inauguration. Lis « Ce qui rend une vidéo pro ».</td></tr>
     <tr><td><strong>☐ Jour 4</strong></td><td>Le process client</td><td>Module 2 : fais tout le process (brief, script, production, son) pour un commerce que tu connais. Crée ton premier modèle réutilisable.</td></tr>
@@ -832,7 +842,7 @@ Je commence dès réception de l'acompte 🙏</div>
   <p class="lead">Tu as entre les mains une compétence que très peu de gens autour de toi maîtrisent encore. L'outil est là, la méthode est là. Ce qui fera la différence, c'est ta pratique et ton courage d'aller voir les entreprises.</p>
   <div class="box ok"><h4>👥 La communauté WhatsApp</h4><p>Questions, blocages, vidéos à montrer, victoires à partager : <strong><span>{{LIEN_COMMUNAUTE_WHATSAPP}}</span></strong></p></div>
   <div class="box tip"><h4>🛡️ Rappel de ta garantie 7 jours</h4><p>Modules 0 à 2 suivis, exercices faits, et pas de vidéo exportée au bout de 7 jours ? Écris-nous : <strong>{{CONTACT_SUPPORT}}</strong>. Remboursement intégral.</p></div>
-  <div class="box"><h4>⚖️ À savoir</h4><p class="mut" style="font-size:9pt">Les prix et montants cités dans ce guide sont des repères. Aucun revenu n'est garanti : tes résultats dépendent de ton travail, de ta régularité et de tes clients. Claude est une marque d'Anthropic ; Remotion est un logiciel de Remotion AG ; Vibe Motion est une formation indépendante, non affiliée à ces entreprises. Vérifie les conditions de licence de Remotion pour ton usage (gratuite pour les indépendants et les petites structures selon ses conditions). Ce guide est réservé à son acheteur : merci de ne pas le partager.</p></div>
+  <div class="box"><h4>⚖️ À savoir</h4><p class="mut" style="font-size:9pt">Les prix et montants cités dans ce guide sont des repères. Aucun revenu n'est garanti : tes résultats dépendent de ton travail, de ta régularité et de tes clients. Claude est une marque d'Anthropic ; HyperFrames est un logiciel open source de HeyGen (licence Apache 2.0) ; Vibe Motion est une formation indépendante, non affiliée à ces entreprises. Ce guide est réservé à son acheteur : merci de ne pas le partager.</p></div>
 </section>
 
 </body>

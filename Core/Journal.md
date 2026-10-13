@@ -38,3 +38,4 @@
 - `Output/formation/Vibe-Motion-Guide.pdf` (~31 p.) : bienvenue, lexique, modules 0 à 5 complets avec instructions à copier, 50 instructions bonus, plan 7 jours, garantie.
 - Vérifié : install Claude Code (docs officielles), Claude Pro requis pour Claude Code, Bénin et CI dans les pays supportés, carte virtuelle MoMo Card MTN Bénin (CG déc. 2025), commande skills Remotion `npx skills add remotion-dev/skills`.
 - À compléter : lien communauté WhatsApp + contact support (repères rouges dans le PDF).
+- Guide basculé de Remotion vers HyperFrames (demande de l'entrepreneur : c'est l'outil qu'il a testé). Prérequis ajoutés : Node 22+, FFmpeg, `npx skills add heygen-com/hyperframes`, `npx hyperframes browser ensure`, preview/render. Sources : quickstart + GitHub HyperFrames.
