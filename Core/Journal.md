@@ -137,3 +137,4 @@
 - Site en ligne : https://www.vibemotionafrica.com (projet Vercel vibemotionafrica, adresse de secours vibemotionafrica.vercel.app). DNS Hostinger : A @ → 216.198.79.1 (nouvelle IP recommandée par Vercel), CNAME www → cname.vercel-dns.com ; vibemotionafrica.com redirige vers www. HTTPS vérifié. Plugin Vercel officiel ajouté au projet (actif à la prochaine session, connexion Vercel requise).
 - DNS : CNAME www → 979eb6291df8c4ac.vercel-dns-017.com (valeur recommandée par Vercel pour le projet).
 - Pages légales complétées : éditeur « Vibe Motion », Cotonou, contact risenofm@gmail.com (pas de WhatsApp ni d'IFU, choix de l'entrepreneur). Bouton Contact du site → e-mail.
+- Site : lecteur du haut commence par Sikaflow puis Eden récit. Galerie et téléphones : versions légères 540p (-40 % de poids) + préchargement ~1 écran avant d'arriver sur la vidéo, lecture dès 20 % visible.
