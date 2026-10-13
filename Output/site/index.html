@@ -605,7 +605,7 @@ const CONFIG = {
   avatarUrl: "",          // photo de profil (optionnel)
   brandName: "Vibe Motion",
   whatsappContact: "",    // ex. "22990000000"
-  metaPixelId: "",        // ID du pixel Meta
+  metaPixelId: "2092809134709164", // ID du pixel Meta (ensemble de données « Motion Vibe »)
   price: "2 900 F",
   priceNote: "Prix de lancement réservé aux 50 premiers élèves, ensuite 10 000 F.",
   testimonials: [],       // ex. [{img:"temoignages/1.jpg"}]
@@ -622,7 +622,7 @@ document.querySelectorAll(".js-price").forEach(n=>n.textContent=CONFIG.price);
 document.querySelectorAll(".js-note").forEach(n=>n.textContent=CONFIG.priceNote);
 document.querySelectorAll("#brandName,.js-brand").forEach(n=>n.textContent=CONFIG.brandName);
 document.querySelectorAll(".js-buy").forEach(a=>{a.href=CONFIG.checkoutUrl||"#";a.addEventListener("click",e=>{
-  if(window.fbq)fbq("track","InitiateCheckout");
+  if(window.fbq)fbq("track","InitiateCheckout",{value:2900,currency:"XOF",content_ids:["prd_zqv7lcu4"],content_type:"product"});
   e.preventDefault();
   const native=document.querySelector("#chariow-widget .cw-button-base");
   if(native){native.click();}   // fenêtre de paiement Chariow sur la page
@@ -645,8 +645,8 @@ addEventListener("message",ev=>{
   const d=ev.data||{}; const f=document.querySelector("#payModal .pm-if");
   if(!f||ev.source!==f.contentWindow) return;
   if(d.type==="chariow-checkout-redirect"&&typeof d.url==="string"&&d.url.startsWith("https:")){location.href=d.url;return;}
-  if(d.eventType==="PAYMENT_SUCCESSFUL"&&d.eventData&&d.eventData.return_url){location.href=d.eventData.return_url;return;}
-  if(d.type==="chariow-purchase-completed"&&d.purchaseId){location.href="https://peryal.mychariow.shop/purchase/"+d.purchaseId;return;}
+  if(d.eventType==="PAYMENT_SUCCESSFUL"&&d.eventData&&d.eventData.return_url){vmPurchase();const u=d.eventData.return_url;setTimeout(()=>location.href=u,600);return;}
+  if(d.type==="chariow-purchase-completed"&&d.purchaseId){vmPurchase();const u="https://peryal.mychariow.shop/purchase/"+d.purchaseId;setTimeout(()=>location.href=u,600);return;}
   if(d.type==="chariow-iframe-height"&&d.height){f.style.height=Math.min(d.height,innerHeight*0.86)+"px";}
 });
 if(CONFIG.whatsappContact)document.querySelectorAll(".js-contact").forEach(a=>a.href="https://wa.me/"+CONFIG.whatsappContact);
@@ -719,7 +719,14 @@ const sticky=document.getElementById("sticky");
 addEventListener("scroll",()=>sticky.classList.toggle("on",scrollY>innerHeight*.9));
 
 // Meta Pixel
-if(CONFIG.metaPixelId){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq("init",CONFIG.metaPixelId);fbq("track","PageView");}
+if(CONFIG.metaPixelId){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq("init",CONFIG.metaPixelId);fbq("track","PageView");fbq("track","ViewContent",{content_name:"Formation Vibe Motion",content_ids:["prd_zqv7lcu4"],content_type:"product",value:2900,currency:"XOF"});}
+// Achat confirmé par Chariow (fenêtre de paiement) : un seul événement Purchase par achat
+var _vmBought=false;
+function vmPurchase(){if(_vmBought||!window.fbq)return;_vmBought=true;fbq("track","Purchase",{value:2900,currency:"XOF",content_ids:["prd_zqv7lcu4"],content_type:"product"});}
+addEventListener("message",ev=>{const d=ev.data||{};
+  if(!/chariow/.test(ev.origin||""))return;
+  if(d.eventType==="PAYMENT_SUCCESSFUL"||d.type==="chariow-purchase-completed")vmPurchase();
+});
 </script>
 </body>
 </html>
