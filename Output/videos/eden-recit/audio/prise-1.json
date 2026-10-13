@@ -1,0 +1,248 @@
+[
+  {
+    "text": "Voici",
+    "start": 0.04,
+    "end": 0.3,
+    "id": "w0"
+  },
+  {
+    "text": "comment",
+    "start": 0.33,
+    "end": 0.75,
+    "id": "w1"
+  },
+  {
+    "text": "Eden",
+    "start": 0.75,
+    "end": 1,
+    "id": "w2"
+  },
+  {
+    "text": "Food",
+    "start": 1,
+    "end": 1.24,
+    "id": "w3"
+  },
+  {
+    "text": "est",
+    "start": 1.27,
+    "end": 1.44,
+    "id": "w4"
+  },
+  {
+    "text": "devenu",
+    "start": 1.44,
+    "end": 1.81,
+    "id": "w5"
+  },
+  {
+    "text": "un",
+    "start": 1.81,
+    "end": 1.92,
+    "id": "w6"
+  },
+  {
+    "text": "rendez-vous,",
+    "start": 1.92,
+    "end": 2.78,
+    "id": "w7"
+  },
+  {
+    "text": "bien",
+    "start": 2.82,
+    "end": 2.99,
+    "id": "w8"
+  },
+  {
+    "text": "plus",
+    "start": 2.99,
+    "end": 3.2,
+    "id": "w9"
+  },
+  {
+    "text": "qu'un",
+    "start": 3.2,
+    "end": 3.45,
+    "id": "w10"
+  },
+  {
+    "text": "restaurant.",
+    "start": 3.45,
+    "end": 4.24,
+    "id": "w11"
+  },
+  {
+    "text": "Ils",
+    "start": 4.28,
+    "end": 4.48,
+    "id": "w12"
+  },
+  {
+    "text": "ont",
+    "start": 4.48,
+    "end": 4.72,
+    "id": "w13"
+  },
+  {
+    "text": "misé",
+    "start": 4.72,
+    "end": 5.03,
+    "id": "w14"
+  },
+  {
+    "text": "sur",
+    "start": 5.03,
+    "end": 5.25,
+    "id": "w15"
+  },
+  {
+    "text": "l'expérience,",
+    "start": 5.35,
+    "end": 6.35,
+    "id": "w16"
+  },
+  {
+    "text": "les",
+    "start": 6.35,
+    "end": 6.52,
+    "id": "w17"
+  },
+  {
+    "text": "pauses",
+    "start": 6.55,
+    "end": 6.66,
+    "id": "w18"
+  },
+  {
+    "text": "du",
+    "start": 6.94,
+    "end": 7.02,
+    "id": "w19"
+  },
+  {
+    "text": "midi,",
+    "start": 7.06,
+    "end": 7.44,
+    "id": "w20"
+  },
+  {
+    "text": "les",
+    "start": 7.44,
+    "end": 7.56,
+    "id": "w21"
+  },
+  {
+    "text": "diners",
+    "start": 7.62,
+    "end": 7.97,
+    "id": "w22"
+  },
+  {
+    "text": "en",
+    "start": 7.97,
+    "end": 8.09,
+    "id": "w23"
+  },
+  {
+    "text": "famille,",
+    "start": 8.09,
+    "end": 8.64,
+    "id": "w24"
+  },
+  {
+    "text": "les",
+    "start": 8.68,
+    "end": 8.78,
+    "id": "w25"
+  },
+  {
+    "text": "soirées",
+    "start": 8.78,
+    "end": 9.11,
+    "id": "w26"
+  },
+  {
+    "text": "entre",
+    "start": 9.11,
+    "end": 9.59,
+    "id": "w27"
+  },
+  {
+    "text": "amis.",
+    "start": 9.59,
+    "end": 10,
+    "id": "w28"
+  },
+  {
+    "text": "Ce",
+    "start": 10.04,
+    "end": 10.11,
+    "id": "w29"
+  },
+  {
+    "text": "n'était",
+    "start": 10.11,
+    "end": 10.49,
+    "id": "w30"
+  },
+  {
+    "text": "pas",
+    "start": 10.49,
+    "end": 10.63,
+    "id": "w31"
+  },
+  {
+    "text": "une",
+    "start": 10.73,
+    "end": 10.82,
+    "id": "w32"
+  },
+  {
+    "text": "question",
+    "start": 10.82,
+    "end": 11.28,
+    "id": "w33"
+  },
+  {
+    "text": "de",
+    "start": 11.28,
+    "end": 11.34,
+    "id": "w34"
+  },
+  {
+    "text": "repas,",
+    "start": 11.4,
+    "end": 11.84,
+    "id": "w35"
+  },
+  {
+    "text": "c'était",
+    "start": 11.84,
+    "end": 12.23,
+    "id": "w36"
+  },
+  {
+    "text": "une",
+    "start": 12.23,
+    "end": 12.37,
+    "id": "w37"
+  },
+  {
+    "text": "question",
+    "start": 12.4,
+    "end": 12.86,
+    "id": "w38"
+  },
+  {
+    "text": "de",
+    "start": 12.86,
+    "end": 12.97,
+    "id": "w39"
+  },
+  {
+    "text": "moments.",
+    "start": 12.97,
+    "end": 13.6,
+    "id": "w40"
+  }
+]

@@ -97,3 +97,7 @@
 - Output/videos/servthem/out/final.mp4, 27 s, 30 i/s.
 - Correction : uniquement des personnes afro dans les visuels (règle ajoutée). Bande parallaxe refaite avec 3 visages afro (chef, cheffe, cheffe qui dresse).
 - Version « chic » SERVTHEM dans le style Eden Food (fond fluide vert et or, frappe au clavier, pastille dorée, assiette centrale avec 4 icônes, vague crème des secteurs, coupes sur visages afro, LE PAYS, LE GOÛT DU SERVICE). Output/videos/servthem-chic/out/final.mp4. Kit : MK.rise/exitUp masquent les textes avant et après (plus rien ne dépasse).
+
+### 2026-10-13 · Portfolio : référence n°4 → « Eden Food, le récit » (`Output/videos/eden-recit`)
+- Adaptation de la réf. 4 (récit de marque, gobelet produit, cartes photo en rotation 3D) pour Eden Food, Cotonou. 15,5 s, voix Micha (ElevenLabs, une prise), photos Pexels de personnes afro, nappe ambient + bruitages, -14 LUFS.
+- Corrections avant rendu : titres qui débordaient (Eden Food, l'expérience, moments.), feuille qui masquait un titre. Rendu unique en 55 s.

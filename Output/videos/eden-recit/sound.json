@@ -1,0 +1,13 @@
+{
+  "total": 15.5,
+  "voice": {"file": "audio/prise-1.mp3", "start": 0.4},
+  "music": {"preset": "ambient", "gain": -13},
+  "sfx": [
+    ["whoosh", 0.0, -14], ["swoosh_big", 0.9, -16], ["pop", 1.12, -16], ["pop", 2.3, -16],
+    ["whoosh_down", 3.0, -14], ["glass", 3.2, -16], ["pop", 3.85, -14], ["whoosh_down", 4.3, -16],
+    ["whoosh", 4.6, -12], ["whoosh", 6.4, -12], ["whoosh", 7.5, -12], ["whoosh", 8.75, -12],
+    ["whoosh_down", 10.0, -14], ["pop_low", 10.4, -12], ["thud", 11.75, -14],
+    ["whoosh", 12.15, -12], ["chord", 13.35, -14], ["ding", 14.0, -18]
+  ],
+  "out": "audio/mix.wav"
+}
