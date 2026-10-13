@@ -50,3 +50,8 @@
 ## 2026-10-13 — Exemples motion : vidéo test HyperFrames
 - HyperFrames 0.8.150 fonctionne dans l'environnement BOS (rendu local).
 - Vidéo test « Menu du jour — Maquis Le Bon Goût » : 12 s, 1080×1920, 30 i/s, sans son → `Output/videos/menu-maquis/menu-maquis.mp4` (projet HyperFrames à côté). Contrôles HyperFrames OK (mise en page, contraste). En attente de validation du style avant les 5 autres.
+
+## 2026-10-13 — Pub portfolio « Une nuit pour livrer le monde » (Noël, 3D isométrique)
+- Demande : pub motion design isométrique sur le père Noël, pièce de portfolio, voix off Google TTS.
+- Livré (sans voix) : `Output/videos/noel-isometrique/noel-isometrique.mp4` — 37 s, 1920×1080, 30 i/s, 6 scènes (île du pôle Nord, décollage 23:59→00:00, carte du monde isométrique Tokyo→Paris→Cotonou→New York, maison + zoom cheminée, salon, cadeau final + signature Vibe Motion). Script/storyboard : `script.md`.
+- Bloqué : aucune clé Google dans l'environnement → voix off Google TTS impossible ici. Variable à ajouter : GEMINI_API_KEY (Gemini TTS) ou GOOGLE_API_KEY (Cloud TTS), visible dans une nouvelle session.

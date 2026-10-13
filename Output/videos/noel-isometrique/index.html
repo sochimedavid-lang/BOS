@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="fr" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600;1,9..144,800&family=Inter+Tight:wght@500;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #070B1E; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: "Inter Tight", sans-serif; color: #F4F7FF; }
+      .clip { position: absolute; inset: 0; }
+      svg.stage { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: visible; }
+      #sky { background: radial-gradient(1400px 900px at 70% 10%, #1D2A63 0%, #0E1538 45%, #070B1E 100%); }
+      #grain { pointer-events: none; background: radial-gradient(1200px 800px at 50% 50%, transparent 55%, rgba(3,5,15,.75) 100%); }
+      #flash { background: #FFF6DC; opacity: 0; }
+
+      /* Textes */
+      .kicker { position: absolute; font-weight: 800; letter-spacing: .32em; font-size: 30px; color: #FFC857; }
+      .big { position: absolute; font-weight: 900; letter-spacing: -0.04em; line-height: .95; }
+      .serif { font-family: "Fraunces", serif; font-style: italic; font-weight: 800; letter-spacing: -0.01em; }
+      .mask { overflow: hidden; padding: 8px 0; }
+      #t1k { left: 0; right: 0; top: 230px; text-align: center; }
+      #t1a { left: 0; right: 0; top: 290px; text-align: center; font-size: 150px; }
+      #t1b { left: 0; right: 0; top: 460px; text-align: center; font-size: 58px; font-weight: 700; color: #C9D6FF; letter-spacing: -0.01em; }
+      #counter { position: absolute; left: 90px; top: 80px; text-align: left; }
+      #counter .lab { font-weight: 800; letter-spacing: .26em; font-size: 22px; color: #FFC857; }
+      #counter .num { font-weight: 900; font-size: 92px; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+      #counter .sub { font-weight: 600; font-size: 24px; color: #A9B6E8; }
+      #clock { position: absolute; left: 0; right: 0; top: 70px; text-align: center; }
+      #clock .digits { display: inline-flex; gap: 10px; font-weight: 900; font-size: 150px; font-variant-numeric: tabular-nums; letter-spacing: -0.03em; }
+      #clock .d { display: inline-block; width: 100px; height: 180px; overflow: hidden; position: relative; background: rgba(255,255,255,.06); border: 2px solid rgba(255,255,255,.14); border-radius: 22px; }
+      #clock .d span { position: absolute; left: 0; right: 0; text-align: center; line-height: 180px; }
+      #clock .colon { line-height: 180px; color: #FFC857; }
+      #clock .lab { font-weight: 800; letter-spacing: .3em; font-size: 24px; color: #FFC857; margin-top: 14px; }
+      #t4 { position: absolute; left: 90px; top: 80px; }
+      #t4 .k { font-weight: 800; letter-spacing: .28em; font-size: 24px; color: #FFC857; }
+      #t4 .h { font-weight: 900; font-size: 74px; letter-spacing: -0.035em; line-height: 1; margin-top: 10px; }
+      #t4 .h em { font-family: "Fraunces", serif; font-weight: 800; color: #FFC857; }
+      .word { position: absolute; font-weight: 900; font-size: 84px; letter-spacing: -0.035em; text-shadow: 0 6px 30px rgba(0,0,0,.45); }
+      #w1 { left: 110px; top: 120px; } #w2 { left: 110px; top: 220px; } #w3 { left: 110px; top: 320px; color: #FFC857; }
+      #endT { position: absolute; left: 0; right: 0; top: 120px; text-align: center; }
+      #endT .h { font-size: 170px; color: #FFC857; line-height: 1; }
+      #endT .s { margin-top: 18px; font-weight: 700; font-size: 44px; color: #DCE4FF; letter-spacing: -0.01em; }
+      #tag { position: absolute; left: 0; right: 0; bottom: 70px; display: flex; justify-content: center; }
+      #tag .pill { display: inline-flex; align-items: center; gap: 22px; padding: 18px 34px; border-radius: 99px; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.18); }
+      #tag .b { font-weight: 900; letter-spacing: .22em; font-size: 30px; }
+      #tag .b i { font-style: normal; color: #FF6A3D; }
+      #tag .sep { width: 2px; height: 34px; background: rgba(255,255,255,.25); }
+      #tag .t { font-weight: 600; font-size: 28px; color: #C9D6FF; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="37" data-width="1920" data-height="1080">
+
+      <div id="sky" class="clip" data-start="0" data-duration="37" data-track-index="0">
+        <svg class="stage" id="skySvg" viewBox="-960 -540 1920 1080"></svg>
+      </div>
+
+      <!-- 1-2 : ouverture + atelier -->
+      <div id="s12" class="clip" data-start="0" data-duration="12" data-track-index="1">
+        <svg class="stage" viewBox="-960 -540 1920 1080"><g id="cam12"><g id="island12"></g></g></svg>
+        <div class="kicker" id="t1k">24 DÉCEMBRE</div>
+        <div class="big mask" id="t1a"><div class="serif" id="t1aIn">Une seule nuit.</div></div>
+        <div class="big" id="t1b">pour livrer le monde entier</div>
+        <div id="counter"><div class="lab">CADEAUX PRÊTS</div><div class="num" id="cnum">0</div><div class="sub">Pôle Nord · atelier principal</div></div>
+      </div>
+
+      <!-- 3 : décollage -->
+      <div id="s3" class="clip" data-start="11.3" data-duration="5.9" data-track-index="2">
+        <svg class="stage" viewBox="-960 -540 1920 1080"><g id="cam3"><g id="island3"></g><g id="trail3"></g><g id="sled3w"><g id="sled3"></g></g></g></svg>
+        <div id="clock">
+          <div class="digits">
+            <span class="d" data-layout-allow-overlap data-layout-allow-overflow><span id="h1a">2</span><span id="h1b" style="top:180px">0</span></span>
+            <span class="d" data-layout-allow-overlap data-layout-allow-overflow><span id="h2a">3</span><span id="h2b" style="top:180px">0</span></span>
+            <span class="colon">:</span>
+            <span class="d" data-layout-allow-overlap data-layout-allow-overflow><span id="m1a">5</span><span id="m1b" style="top:180px">0</span></span>
+            <span class="d" data-layout-allow-overlap data-layout-allow-overflow><span id="m2a">9</span><span id="m2b" style="top:180px">0</span></span>
+          </div>
+          <div class="lab">MINUIT PILE · DÉCOLLAGE</div>
+        </div>
+      </div>
+
+      <!-- 4 : tour du monde -->
+      <div id="s4" class="clip" data-start="16.4" data-duration="9.6" data-track-index="3">
+        <svg class="stage" viewBox="-960 -540 1920 1080"><g id="cam4"><g id="map4"></g></g></svg>
+        <div id="t4"><div class="k">SON SECRET</div><div class="h">Il suit <em>la nuit.</em></div></div>
+      </div>
+
+      <!-- 5a : maison -->
+      <div id="s5a" class="clip" data-start="25.4" data-duration="2.9" data-track-index="4">
+        <svg class="stage" viewBox="-960 -540 1920 1080"><g id="cam5a"><g id="house5"></g></g></svg>
+      </div>
+
+      <!-- 5b : salon -->
+      <div id="s5b" class="clip" data-start="27.6" data-duration="4.4" data-track-index="5">
+        <svg class="stage" viewBox="-960 -540 1920 1080"><g id="cam5b"><g id="room5"></g></g></svg>
+        <div class="word" id="w1">Une cheminée.</div>
+        <div class="word" id="w2">Un sapin.</div>
+        <div class="word" id="w3">Un cadeau.</div>
+      </div>
+
+      <!-- 6 : fin -->
+      <div id="s6" class="clip" data-start="31.4" data-duration="5.6" data-track-index="6">
+        <svg class="stage" viewBox="-960 -540 1920 1080"><g id="cam6"><g id="rays6"></g><g id="gift6"></g></g></svg>
+        <div id="endT"><div class="mask"><div class="serif h" id="endH">Joyeux Noël</div></div><div class="s" id="endS">Et si votre marque avait, elle aussi, sa vidéo magique ?</div></div>
+        <div id="tag"><div class="pill" id="pill"><span class="b">VIBE <i>MOTION</i></span><span class="sep"></span><span class="t">Motion design pour les marques</span></div></div>
+      </div>
+
+      <div id="snowL" data-layout-allow-occlusion class="clip" data-start="0" data-duration="37" data-track-index="7">
+        <svg class="stage" id="snowSvg" viewBox="-960 -540 1920 1080"></svg>
+      </div>
+      <div id="grain" data-layout-allow-occlusion class="clip" data-start="0" data-duration="37" data-track-index="8"></div>
+      <div id="flash" data-layout-allow-occlusion class="clip" data-start="0" data-duration="37" data-track-index="9"></div>
+    </div>
+
+    <script>
+      /* ================= Moteur isométrique ================= */
+      const NS = "http://www.w3.org/2000/svg";
+      const CO = Math.cos(Math.PI / 6);
+      function el(tag, attrs, parent) {
+        const e = document.createElementNS(NS, tag);
+        for (const k in attrs) e.setAttribute(k, attrs[k]);
+        if (parent) parent.appendChild(e);
+        return e;
+      }
+      function P(x, y, z, s) { return [(x - y) * CO * s, (x + y) * 0.5 * s - z * s]; }
+      function pts(a) { return a.map((p) => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "); }
+      function poly(parent, a, fill, extra) { return el("polygon", Object.assign({ points: pts(a), fill: fill }, extra || {}), parent); }
+      // Pavé isométrique : dessus, face avant-gauche (y+d), face avant-droite (x+w)
+      function box(parent, x, y, z, w, d, h, c, s) {
+        const g = el("g", {}, parent);
+        poly(g, [P(x, y + d, z, s), P(x + w, y + d, z, s), P(x + w, y + d, z + h, s), P(x, y + d, z + h, s)], c[1]);
+        poly(g, [P(x + w, y, z, s), P(x + w, y + d, z, s), P(x + w, y + d, z + h, s), P(x + w, y, z + h, s)], c[2]);
+        poly(g, [P(x, y, z + h, s), P(x + w, y, z + h, s), P(x + w, y + d, z + h, s), P(x, y + d, z + h, s)], c[0]);
+        return g;
+      }
+      // Rectangle sur un plan y = constante (face avant-gauche) ou x = constante (face avant-droite)
+      function rectY(parent, x, y, z, w, h, fill, s) { return poly(parent, [P(x, y, z, s), P(x + w, y, z, s), P(x + w, y, z + h, s), P(x, y, z + h, s)], fill); }
+      function rectX(parent, x, y, z, d, h, fill, s) { return poly(parent, [P(x, y, z, s), P(x, y + d, z, s), P(x, y + d, z + h, s), P(x, y, z + h, s)], fill); }
+      // Toit à deux pans (faîtage parallèle à x)
+      function roof(parent, x, y, z, w, d, rh, c, s) {
+        const g = el("g", {}, parent);
+        poly(g, [P(x, y, z, s), P(x + w, y, z, s), P(x + w, y + d / 2, z + rh, s), P(x, y + d / 2, z + rh, s)], c[0]);
+        poly(g, [P(x + w, y, z, s), P(x + w, y + d, z, s), P(x + w, y + d / 2, z + rh, s)], c[2]);
+        poly(g, [P(x, y + d, z, s), P(x + w, y + d, z, s), P(x + w, y + d / 2, z + rh, s), P(x, y + d / 2, z + rh, s)], c[1]);
+        return g;
+      }
+      // Cadeau avec ruban
+      const GIFTC = [
+        [["#FF5D5D", "#D63A3A", "#A82828"], "#FFD95A"],
+        [["#5DD39E", "#2FA36B", "#1F7A52"], "#FFFFFF"],
+        [["#6FA8FF", "#3E7BE0", "#2A59B0"], "#FFD95A"],
+        [["#FFD95A", "#F2B33D", "#C98A1E"], "#E63946"],
+        [["#C08BFF", "#9258E8", "#6C3CB8"], "#FFFFFF"],
+      ];
+      function gift(parent, x, y, z, w, d, h, k, s) {
+        const g = el("g", {}, parent);
+        const c = GIFTC[k % GIFTC.length];
+        box(g, x, y, z, w, d, h, c[0], s);
+        const r = c[1];
+        box(g, x + w / 2 - 0.07, y, z, 0.14, d, h + 0.02, [r, r, r], s);
+        box(g, x, y + d / 2 - 0.07, z, w, 0.14, h + 0.02, [r, r, r], s);
+        const t = P(x + w / 2, y + d / 2, z + h + 0.02, s);
+        el("ellipse", { cx: t[0] - 0.12 * s, cy: t[1] - 0.12 * s, rx: 0.22 * s, ry: 0.14 * s, fill: "none", stroke: r, "stroke-width": Math.max(2, 0.07 * s) }, g);
+        el("ellipse", { cx: t[0] + 0.12 * s, cy: t[1] - 0.12 * s, rx: 0.22 * s, ry: 0.14 * s, fill: "none", stroke: r, "stroke-width": Math.max(2, 0.07 * s) }, g);
+        return g;
+      }
+      // Sapin isométrique (cônes empilés, côté droit plus sombre)
+      function tree(parent, x, y, z, hgt, s, lights) {
+        const g = el("g", {}, parent);
+        const b = P(x, y, z, s);
+        el("rect", { x: b[0] - 0.12 * s, y: b[1] - 0.5 * s, width: 0.24 * s, height: 0.55 * s, fill: "#6B3E1F" }, g);
+        const lv = [[0.35, 1.05, 1.5], [1.1, 0.85, 1.35], [1.8, 0.6, 1.2]];
+        const out = [];
+        lv.forEach(([zz, r, hh]) => {
+          const y0 = b[1] - zz * s * hgt, top = y0 - hh * s * hgt, rr = r * s * hgt;
+          el("polygon", { points: pts([[b[0] - rr, y0], [b[0], top], [b[0], y0 + 0.28 * rr]]), fill: "#2FA36B" }, g);
+          el("polygon", { points: pts([[b[0] + rr, y0], [b[0], top], [b[0], y0 + 0.28 * rr]]), fill: "#1E7A50" }, g);
+          el("path", { d: `M${b[0] - rr} ${y0} Q ${b[0]} ${y0 + 0.36 * rr} ${b[0] + rr} ${y0} L ${b[0] + rr * 0.92} ${y0 - 0.12 * rr} Q ${b[0]} ${y0 + 0.2 * rr} ${b[0] - rr * 0.92} ${y0 - 0.12 * rr} Z`, fill: "#F4F7FF", opacity: 0.85 }, g);
+          if (lights) {
+            for (let i = 0; i < 4; i++) {
+              const u = -0.75 + i * 0.5, px = b[0] + u * rr * 0.9, py = y0 - 0.25 * hh * s * hgt + Math.abs(u) * 0.1 * rr;
+              out.push(el("circle", { cx: px, cy: py, r: Math.max(3, 0.09 * s), fill: ["#FFD95A", "#FF5D5D", "#6FA8FF", "#FFFFFF"][i % 4] }, g));
+            }
+          }
+        });
+        const st = [b[0], b[1] - (1.8 * s + 1.2 * s) * hgt];
+        el("polygon", { points: pts(starPts(st[0], st[1], 0.32 * s * hgt, 0.14 * s * hgt)), fill: "#FFD95A" }, g);
+        return { g, lights: out };
+      }
+      function starPts(cx, cy, R, r) { const a = []; for (let i = 0; i < 10; i++) { const ang = -Math.PI / 2 + i * Math.PI / 5, rad = i % 2 ? r : R; a.push([cx + Math.cos(ang) * rad, cy + Math.sin(ang) * rad]); } return a; }
+      // Générateur pseudo-aléatoire déterministe
+      let SEED = 7; function rnd() { SEED = (SEED * 16807) % 2147483647; return (SEED - 1) / 2147483646; }
+
+      /* ================= Traîneau (vue de profil, posée sur le plan isométrique) ================= */
+      function sleigh(parent) {
+        const g = el("g", {}, parent);
+        const legs = [];
+        // rennes
+        for (let i = 0; i < 4; i++) {
+          const rx = 250 + i * 95, ry = -35 - (i % 2) * 8;
+          const r = el("g", { transform: `translate(${rx},${ry})` }, g);
+          el("ellipse", { cx: 0, cy: 0, rx: 42, ry: 20, fill: "#9A6237" }, r);
+          el("ellipse", { cx: -6, cy: 6, rx: 28, ry: 10, fill: "#C98E5C" }, r);
+          const l1 = el("g", {}, r); el("rect", { x: -26, y: 8, width: 7, height: 34, rx: 3, fill: "#6E4223" }, l1);
+          const l2 = el("g", {}, r); el("rect", { x: 20, y: 8, width: 7, height: 34, rx: 3, fill: "#6E4223" }, l2);
+          legs.push(l1, l2);
+          el("path", { d: "M30 -6 Q 46 -30 52 -44", stroke: "#9A6237", "stroke-width": 14, fill: "none", "stroke-linecap": "round" }, r);
+          el("ellipse", { cx: 60, cy: -50, rx: 18, ry: 13, fill: "#9A6237" }, r);
+          el("circle", { cx: 76, cy: -48, r: 7, fill: i === 3 ? "#FF3B3B" : "#3A2412" }, r);
+          el("path", { d: "M52 -60 L 46 -84 M 49 -72 L 38 -78 M 60 -62 L 66 -86 M 64 -74 L 75 -80", stroke: "#E9D3A8", "stroke-width": 5, "stroke-linecap": "round", fill: "none" }, r);
+          el("rect", { x: -40, y: -6, width: 80, height: 6, fill: "#E63946", opacity: 0.9 }, r);
+        }
+        el("path", { d: "M 175 -10 L 590 -40", stroke: "#FFC857", "stroke-width": 4, fill: "none" }, g);
+        // patin
+        el("path", { d: "M -40 40 L 170 40 Q 205 40 205 12", stroke: "#FFC857", "stroke-width": 9, fill: "none", "stroke-linecap": "round" }, g);
+        el("path", { d: "M 20 40 L 30 22 M 130 40 L 120 22", stroke: "#FFC857", "stroke-width": 7 }, g);
+        // sac
+        el("path", { d: "M -35 -20 Q -60 -120 10 -125 Q 70 -120 45 -20 Z", fill: "#7A3FB8" }, g);
+        el("path", { d: "M -10 -118 Q 10 -140 30 -118", stroke: "#FFC857", "stroke-width": 6, fill: "none" }, g);
+        // caisse
+        el("path", { d: "M -50 25 L 160 25 Q 200 25 195 -15 L 190 -40 Q 150 -10 120 -12 L -30 -12 Q -55 -12 -50 25 Z", fill: "#E63946" }, g);
+        el("path", { d: "M -46 16 L 165 16", stroke: "#FFC857", "stroke-width": 5 }, g);
+        // père Noël
+        el("ellipse", { cx: 95, cy: -38, rx: 38, ry: 34, fill: "#D62F3A" }, g);
+        el("rect", { x: 60, y: -22, width: 70, height: 10, fill: "#2A1A12" }, g);
+        el("circle", { cx: 108, cy: -88, r: 22, fill: "#F6C9A8" }, g);
+        el("path", { d: "M 86 -86 Q 108 -40 132 -86 Q 120 -70 108 -72 Q 96 -70 86 -86 Z", fill: "#FFFFFF" }, g);
+        el("path", { d: "M 84 -96 Q 100 -140 140 -120 L 128 -100 Z", fill: "#D62F3A" }, g);
+        el("circle", { cx: 142, cy: -120, r: 9, fill: "#FFFFFF" }, g);
+        el("rect", { x: 82, y: -104, width: 52, height: 11, rx: 5, fill: "#FFFFFF" }, g);
+        return { g, legs };
+      }
+
+      /* ================= Île du pôle Nord ================= */
+      function island(root, s, opt) {
+        const R = { smoke: [], wins: [], belt: [], elves: [] };
+        const snow = ["#F7FAFF", "#C9DCEF", "#A7C2DE"];
+        // rocher flottant
+        poly(root, [P(0, 11, -1.2, s), P(14, 11, -1.2, s), P(9, 7.5, -6.5, s)], "#26335E");
+        poly(root, [P(14, 11, -1.2, s), P(14, 0, -1.2, s), P(9, 7.5, -6.5, s)], "#1A244A");
+        box(root, 0, 0, -1.2, 14, 11, 1.2, snow, s);
+        // sapins arrière
+        tree(root, 0.8, 0.8, 0, 0.9, s);
+        tree(root, 12.6, 0.9, 0, 0.8, s);
+        // atelier
+        box(root, 1.5, 1.5, 0, 6, 4.5, 3.2, ["#B33A3A", "#C0392B", "#922B21"], s);
+        [2.0, 3.9, 5.8].forEach((wx) => { R.wins.push(rectY(root, wx, 6.0, 1.1, 1.0, 1.3, "#FFD27A", s)); });
+        rectX(root, 7.5, 2.9, 0, 1.3, 2.1, "#5D3A1A", s);
+        rectX(root, 7.5, 2.95, 1.95, 1.2, 0.12, "#FFC857", s);
+        box(root, 5.4, 2.0, 3.0, 0.8, 0.8, 3.0, ["#5A2A22", "#8E3B2E", "#6E2C22"], s);
+        roof(root, 1.2, 1.2, 3.2, 6.6, 5.1, 2.0, ["#DCE6F4", "#FFFFFF", "#A8352A"], s);
+        const ch = P(5.8, 2.4, 6.0, s);
+        for (let i = 0; i < 4; i++) R.smoke.push(el("circle", { cx: ch[0], cy: ch[1], r: 0.35 * s, fill: "#DCE6F4", opacity: 0 }, root));
+        // poteau + enseigne
+        box(root, 10.4, 3.0, 0, 0.3, 0.3, 4.2, ["#FFFFFF", "#F2F2F2", "#D9D9D9"], s);
+        for (let k = 0; k < 6; k++) box(root, 10.39, 2.99, 0.3 + k * 0.7, 0.32, 0.32, 0.25, ["#E63946", "#E63946", "#B32834"], s);
+        box(root, 9.4, 3.15, 3.0, 2.3, 0.15, 0.9, ["#C98A1E", "#8A5A23", "#6B4419"], s);
+        const sg = el("g", { transform: `matrix(${CO * s},${0.5 * s},0,${s},${P(9.55, 3.3, 3.62, s)[0]},${P(9.55, 3.3, 3.62, s)[1]})` }, root);
+        el("text", { x: 0, y: 0, "font-size": 0.5, "font-weight": 900, fill: "#FFF4E0", "font-family": "Inter Tight", "letter-spacing": "0.02" }, sg).textContent = "PÔLE NORD";
+        // tapis roulant + cadeaux
+        box(root, 7.6, 7.0, 0, 5.4, 1.3, 0.7, ["#56627F", "#3D4A6B", "#2C3756"], s);
+        const beltG = el("g", {}, root);
+        for (let i = 0; i < 5; i++) { const gg = el("g", {}, beltG); gift(gg, 7.7, 7.2, 0.7, 0.8, 0.8, 0.7, i, s); R.belt.push(gg); }
+        // pile de cadeaux
+        gift(root, 12.4, 8.6, 0, 1.0, 1.0, 0.8, 1, s); gift(root, 11.2, 9.3, 0, 1.1, 0.9, 0.9, 2, s);
+        gift(root, 12.5, 8.7, 0.8, 0.8, 0.8, 0.6, 3, s); gift(root, 13.0, 9.8, 0, 0.8, 0.8, 0.7, 4, s);
+        // lutins
+        [[9.0, 9.0], [10.6, 9.2], [3.2, 7.6]].forEach(([ex, ey], i) => {
+          const p = P(ex, ey, 0, s); const e = el("g", {}, root);
+          el("ellipse", { cx: p[0], cy: p[1] - 0.35 * s, rx: 0.28 * s, ry: 0.36 * s, fill: "#2FA36B" }, e);
+          el("circle", { cx: p[0], cy: p[1] - 0.85 * s, r: 0.2 * s, fill: "#F6C9A8" }, e);
+          el("polygon", { points: pts([[p[0] - 0.22 * s, p[1] - 0.95 * s], [p[0] + 0.22 * s, p[1] - 0.95 * s], [p[0] + 0.32 * s, p[1] - 1.45 * s]]), fill: "#E63946" }, e);
+          el("circle", { cx: p[0] + 0.32 * s, cy: p[1] - 1.45 * s, r: 0.07 * s, fill: "#FFFFFF" }, e);
+          R.elves.push(e);
+        });
+        tree(root, 1.2, 9.6, 0, 0.8, s); tree(root, 0.7, 7.2, 0, 0.6, s);
+        R.beltStep = [CO * s, 0.5 * s];
+        return R;
+      }
+
+      /* ================= Ciel et neige ================= */
+      const tl = gsap.timeline({ paused: true });
+      const sky = document.getElementById("skySvg");
+      el("circle", { cx: 640, cy: -330, r: 90, fill: "#FFF6DC" }, sky);
+      el("circle", { cx: 610, cy: -350, r: 18, fill: "#EFE4C3" }, sky);
+      el("circle", { cx: 670, cy: -300, r: 12, fill: "#EFE4C3" }, sky);
+      el("circle", { cx: 640, cy: -330, r: 160, fill: "#FFF6DC", opacity: 0.08 }, sky);
+      SEED = 11;
+      for (let i = 0; i < 90; i++) {
+        const st = el("circle", { cx: -960 + rnd() * 1920, cy: -540 + rnd() * 760, r: 1 + rnd() * 2.2, fill: "#FFFFFF", opacity: 0.4 + rnd() * 0.5 }, sky);
+        if (i % 3 === 0) tl.fromTo(st, { opacity: 0.15 }, { opacity: 1, duration: 0.6 + rnd(), yoyo: true, repeat: 12, ease: "sine.inOut" }, rnd() * 2);
+      }
+      const snowSvg = document.getElementById("snowSvg");
+      SEED = 23;
+      const wrapY = gsap.utils.wrap(-600, 600);
+      for (let i = 0; i < 110; i++) {
+        const r = 1.5 + rnd() * 3.5, x = -960 + rnd() * 1920, y0 = -600 + rnd() * 1200, speed = 70 + rnd() * 90;
+        const f = el("circle", { cx: x, cy: 0, r: r, fill: "#FFFFFF", opacity: 0.35 + r / 10 }, snowSvg);
+        tl.fromTo(f, { y: y0 }, { y: y0 + speed * 37, duration: 37, ease: "none", modifiers: { y: gsap.utils.unitize(wrapY) } }, 0);
+        tl.fromTo(f, { x: 0 }, { x: 40 - rnd() * 80, duration: 2 + rnd() * 2, yoyo: true, repeat: 10, ease: "sine.inOut" }, 0);
+      }
+
+      /* ================= Scène 1-2 ================= */
+      const S12 = 52;
+      const isl = island(document.getElementById("island12"), S12);
+      const ig = document.getElementById("island12");
+      ig.setAttribute("transform", `translate(${-P(7, 5.5, 0, S12)[0]},${-P(7, 5.5, 0, S12)[1] + 40})`);
+      tl.fromTo("#cam12", { scale: 0.32, y: 520, svgOrigin: "0 0" }, { scale: 0.42, y: 330, duration: 3.6, ease: "power2.out" }, 0);
+      tl.to("#cam12", { scale: 1.0, y: 30, duration: 1.4, ease: "power3.inOut" }, 3.7);
+      tl.to("#cam12", { scale: 1.12, x: -40, y: 10, duration: 6.4, ease: "sine.inOut" }, 5.1);
+      tl.fromTo("#t1k", { opacity: 0, y: -20, scale: 1.15 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 0.3);
+      tl.fromTo("#t1aIn", { y: 180 }, { y: 0, duration: 0.9, ease: "expo.out" }, 0.9);
+      tl.fromTo("#t1b", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 2.4);
+      tl.to(["#t1k", "#t1a", "#t1b"], { opacity: 0, y: -60, duration: 0.6, ease: "power2.in", stagger: 0.06 }, 3.8);
+      // vie de l'atelier
+      isl.smoke.forEach((sm, i) => { tl.fromTo(sm, { y: 0, scale: 0.4, opacity: 0.9 }, { y: -140, x: 40, scale: 1.8, opacity: 0, duration: 2.2, ease: "power1.out", repeat: 4 }, i * 0.55); });
+      isl.wins.forEach((w, i) => { tl.fromTo(w, { opacity: 0.75 }, { opacity: 1, duration: 0.5 + i * 0.13, yoyo: true, repeat: 15, ease: "sine.inOut" }, 0.2 * i); });
+      isl.belt.forEach((b, i) => {
+        const L = 3.9, dx = isl.beltStep[0] * L, dy = isl.beltStep[1] * L;
+        tl.fromTo(b, { x: (dx * i) / 5, y: (dy * i) / 5, opacity: 1 }, { x: dx, y: dy, duration: 3.2 * (1 - i / 5), ease: "none" }, 5.0);
+        tl.fromTo(b, { x: 0, y: 0 }, { x: dx, y: dy, duration: 3.2, ease: "none", repeat: 2 }, 5.0 + 3.2 * (1 - i / 5));
+      });
+      isl.elves.forEach((e, i) => { tl.fromTo(e, { y: 0 }, { y: -14, duration: 0.32, yoyo: true, repeat: 15, ease: "power1.out" }, 5.2 + i * 0.15); });
+      // compteur
+      tl.fromTo("#counter", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" }, 5.6);
+      const cn = { v: 0 }, cEl = document.getElementById("cnum");
+      tl.to(cn, { v: 4718306, duration: 5.4, ease: "power2.out", onUpdate: () => { cEl.textContent = Math.round(cn.v).toLocaleString("fr-FR"); } }, 5.7);
+      tl.to("#counter", { opacity: 0, duration: 0.4 }, 11.2);
+      tl.to("#s12", { opacity: 0, duration: 0.5 }, 11.4);
+
+      /* ================= Scène 3 : décollage ================= */
+      const S3 = 30;
+      const isl3 = island(document.getElementById("island3"), S3);
+      document.getElementById("island3").setAttribute("transform", `translate(${-560},${200})`);
+      const sl = sleigh(document.getElementById("sled3"));
+      document.getElementById("sled3").setAttribute("transform", "matrix(0.866,-0.5,0,1,0,0)");
+      gsap.set("#sled3w", { x: -420, y: 140, scale: 0.42, svgOrigin: "0 0" });
+      tl.fromTo("#s3", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 11.3);
+      tl.fromTo("#cam3", { scale: 1.15, svgOrigin: "0 0" }, { scale: 1.0, duration: 5.5, ease: "sine.out" }, 11.3);
+      // horloge 23:59 -> 00:00
+      tl.fromTo("#clock", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)" }, 11.5);
+      [["#h1a", "#h1b"], ["#h2a", "#h2b"], ["#m1a", "#m1b"], ["#m2a", "#m2b"]].forEach(([a, b], i) => {
+        tl.to(a, { y: -180, duration: 0.35, ease: "power3.in" }, 12.4 + (3 - i) * 0.07);
+        tl.to(b, { y: -180, duration: 0.45, ease: "back.out(1.6)" }, 12.55 + (3 - i) * 0.07);
+      });
+      tl.to("#clock .lab", { scale: 1.12, duration: 0.2, yoyo: true, repeat: 1 }, 12.9);
+      // décollage
+      const path = [];
+      for (let i = 0; i <= 30; i++) { const t = i / 30; path.push([-420 + t * 1250, 140 - t * 520 - Math.sin(t * Math.PI) * 120]); }
+      const trail = document.getElementById("trail3");
+      path.forEach((p, i) => {
+        const sp = el("polygon", { points: pts(starPts(p[0] + 60, p[1] + 40, 10, 4)), fill: "#FFC857", opacity: 0 }, trail);
+        tl.fromTo(sp, { opacity: 0, scale: 0.2, svgOrigin: `${p[0] + 60} ${p[1] + 40}` }, { opacity: 0.95, scale: 1.4, duration: 0.25, ease: "back.out(3)" }, 13.1 + i * 0.075);
+        tl.to(sp, { opacity: 0, duration: 0.8 }, 13.6 + i * 0.075);
+      });
+      const motion = { t: 0 };
+      tl.to(motion, { t: 1, duration: 2.3, ease: "power2.in", onUpdate: () => {
+        const t = motion.t; gsap.set("#sled3w", { x: -420 + t * 1250, y: 140 - t * 520 - Math.sin(t * Math.PI) * 120, scale: 0.42 + t * 0.35 });
+      } }, 13.0);
+      sl.legs.forEach((l, i) => { tl.fromTo(l, { rotation: -18, svgOrigin: "0 8" }, { rotation: 18, duration: 0.18, yoyo: true, repeat: 22, ease: "sine.inOut" }, 12.9 + (i % 2) * 0.09); });
+      tl.to("#sled3w", { scale: 4.5, x: 120, y: -40, duration: 0.7, ease: "power3.in" }, 15.5);
+      tl.to("#flash", { opacity: 1, duration: 0.22, ease: "power2.in" }, 15.95);
+      tl.to("#flash", { opacity: 0, duration: 0.6, ease: "power2.out" }, 16.3);
+      tl.to("#s3", { opacity: 0, duration: 0.2 }, 16.2);
+
+      /* ================= Scène 4 : carte du monde ================= */
+      const MAP = [
+        "....****.....********.....",
+        "..######.###.##########...",
+        ".#########...############.",
+        "..#######....##.#########.",
+        "...#####....####.#######..",
+        "....###.....#####..####...",
+        ".....##....^^^^^#...##.#..",
+        "......#....^^^^##.....#...",
+        "......###...####......##..",
+        ".......####..###.......##.",
+        "........###...##....####..",
+        ".........#....#......##...",
+        "..........................",
+      ];
+      const S4 = 34, mg = document.getElementById("map4");
+      const W = 26, H = MAP.length;
+      box(mg, -0.5, -0.5, -0.8, W + 1, H + 1, 0.8, ["#123A6B", "#0D2C54", "#0A2244"], S4);
+      for (let r = 0; r < H; r++) for (let c = 0; c < W; c++) {
+        const ch = MAP[r][c] || ".";
+        if (ch === ".") continue;
+        const col = ch === "*" ? ["#F7FAFF", "#C9DCEF", "#A7C2DE"] : ch === "^" ? ["#F2C77B", "#D9A657", "#B78638"] : ["#46C084", "#2E9A64", "#227A4E"];
+        const hh = ch === "*" ? 0.35 : 0.3 + ((r * 7 + c * 3) % 3) * 0.12;
+        box(mg, c, r, 0, 1, 1, hh, col, S4);
+      }
+      mg.setAttribute("transform", `translate(${-P(W / 2, H / 2, 0, S4)[0]},${-P(W / 2, H / 2, 0, S4)[1] + 70})`);
+      // bande de nuit (est -> ouest)
+      const night = el("polygon", { points: pts([P(0, -0.5, 0.9, S4), P(7, -0.5, 0.9, S4), P(7, H + 0.5, 0.9, S4), P(0, H + 0.5, 0.9, S4)]), fill: "#050A24", opacity: 0.5 }, mg);
+      const CITIES = [["TOKYO", 22, 3], ["PARIS", 13, 2], ["COTONOU", 12, 7], ["NEW YORK", 5, 4]];
+      const pins = CITIES.map(([n, c, r], i) => {
+        const base = P(c + 0.5, r + 0.5, 0.5, S4);
+        const g = el("g", { opacity: 0 }, mg);
+        el("ellipse", { cx: base[0], cy: base[1], rx: 26, ry: 13, fill: "#FFC857", opacity: 0.35 }, g);
+        el("line", { x1: base[0], y1: base[1], x2: base[0], y2: base[1] - 70, stroke: "#FFF4E0", "stroke-width": 4 }, g);
+        el("circle", { cx: base[0], cy: base[1] - 78, r: 15, fill: n === "COTONOU" ? "#FFC857" : "#FF5D5D", stroke: "#FFF4E0", "stroke-width": 4 }, g);
+        const lab = el("g", {}, g);
+        const w = 26 + n.length * 17 + 92;
+        el("rect", { x: base[0] - w / 2, y: base[1] - 150, width: w, height: 48, rx: 24, fill: "#0B1230", stroke: "rgba(255,255,255,.25)", "stroke-width": 2 }, lab);
+        const tx = el("text", { x: base[0] - w / 2 + 22, y: base[1] - 118, "font-size": 24, "font-weight": 900, fill: "#FFFFFF", "font-family": "Inter Tight" }, lab);
+        tx.textContent = n;
+        const tt = el("text", { x: base[0] + w / 2 - 22, y: base[1] - 118, "font-size": 22, "font-weight": 800, fill: "#FFC857", "font-family": "Inter Tight", "text-anchor": "end" }, lab);
+        tt.textContent = "00:00";
+        return { g, base, n };
+      });
+      // traîneau miniature + traînée
+      const mini = el("g", {}, mg);
+      const ms = sleigh(mini);
+      mini.setAttribute("opacity", 0);
+      const miniInner = mini.firstChild;
+      miniInner.setAttribute("transform", "matrix(0.26,0.15,0,0.3,0,0)");
+      const T0 = 16.4;
+      tl.fromTo("#s4", { opacity: 0 }, { opacity: 1, duration: 0.5 }, T0);
+      tl.fromTo("#cam4", { scale: 1.25, svgOrigin: "0 0" }, { scale: 0.95, duration: 1.6, ease: "power3.out" }, T0);
+      tl.fromTo("#t4", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" }, T0 + 0.5);
+      tl.to("#t4", { opacity: 0, duration: 0.5 }, T0 + 2.6);
+      const nStep = [CO * S4, 0.5 * S4];
+      tl.fromTo(night, { x: nStep[0] * 21, y: nStep[1] * 21 }, { x: nStep[0] * -2, y: nStep[1] * -2, duration: 8.2, ease: "none" }, T0 + 0.6);
+      const visits = [T0 + 2.0, T0 + 4.2, T0 + 5.4, T0 + 7.2];
+      tl.fromTo(mini, { opacity: 0 }, { opacity: 1, duration: 0.3 }, T0 + 1.6);
+      let prev = [pins[0].base[0] + 260, pins[0].base[1] - 260];
+      pins.forEach((p, i) => {
+        const tgt = [p.base[0], p.base[1] - 40];
+        const st = i === 0 ? T0 + 1.6 : visits[i - 1] + 0.25;
+        const dur = visits[i] - st;
+        const from = prev.slice();
+        const o = { t: 0 };
+        tl.to(o, { t: 1, duration: dur, ease: "sine.inOut", onUpdate: () => {
+          const t = o.t, x = from[0] + (tgt[0] - from[0]) * t, y = from[1] + (tgt[1] - from[1]) * t - Math.sin(t * Math.PI) * 120;
+          gsap.set(mini, { x: x, y: y });
+        } }, st);
+        prev = tgt;
+        tl.fromTo(p.g, { opacity: 0, scale: 0, svgOrigin: `${p.base[0]} ${p.base[1]}` }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.2)" }, visits[i] - 0.1);
+        for (let k = 0; k < 6; k++) {
+          const ang = -Math.PI / 2 + (k - 2.5) * 0.45;
+          const gb = el("g", { opacity: 0 }, mg);
+          gift(gb, 0, 0, 0, 0.5, 0.5, 0.45, k + i, S4);
+          gsap.set(gb, { x: p.base[0], y: p.base[1] - 60 });
+          tl.fromTo(gb, { opacity: 1, x: p.base[0], y: p.base[1] - 60, scale: 0.4 }, { x: p.base[0] + Math.cos(ang) * 120, y: p.base[1] - 60 + Math.sin(ang) * 110, scale: 1, opacity: 0, duration: 0.9, ease: "power2.out" }, visits[i] + 0.05);
+        }
+      });
+      ms.legs.forEach((l, i) => { tl.fromTo(l, { rotation: -18, svgOrigin: "0 8" }, { rotation: 18, duration: 0.18, yoyo: true, repeat: 40, ease: "sine.inOut" }, T0 + 1.6 + (i % 2) * 0.09); });
+      // zoom sur Cotonou
+      const cot = pins[2].base;
+      tl.to("#cam4", { scale: 1.45, x: -cot[0] * 0.5 - 60, y: -cot[1] * 0.5 + 40, duration: 0.9, ease: "power3.inOut" }, visits[2] - 0.7);
+      tl.to("#cam4", { scale: 0.95, x: 0, y: 0, duration: 0.9, ease: "power3.inOut" }, visits[2] + 0.75);
+      tl.to("#s4", { opacity: 0, duration: 0.5 }, 25.5);
+
+      /* ================= Scène 5a : la maison ================= */
+      const S5 = 62, hg = document.getElementById("house5");
+      box(hg, -1, -1, -0.6, 10, 9, 0.6, ["#F7FAFF", "#C9DCEF", "#A7C2DE"], S5);
+      box(hg, 1.5, 1.5, 0, 5, 4, 2.8, ["#F3E3C3", "#E8D2A8", "#C9AE80"], S5);
+      [[2.2, 1.0], [4.4, 1.0]].forEach(([wx]) => rectY(hg, wx, 5.5, 1.0, 1.0, 1.1, "#FFD27A", S5));
+      rectX(hg, 6.5, 2.4, 0, 1.0, 1.9, "#7A3B22", S5);
+      rectX(hg, 6.5, 4.0, 1.0, 1.0, 1.0, "#FFD27A", S5);
+      box(hg, 4.8, 2.0, 2.6, 0.9, 0.9, 2.6, ["#3A1E18", "#9B4A36", "#7A3A2A"], S5);
+      roof(hg, 1.2, 1.2, 2.8, 5.6, 4.6, 1.8, ["#DCE6F4", "#FFFFFF", "#C9AE80"], S5);
+      tree(hg, 0.0, 6.6, 0, 1.0, S5); tree(hg, 8.0, 1.0, 0, 0.8, S5); tree(hg, 8.2, 6.8, 0, 0.7, S5);
+      for (let k = 0; k < 7; k++) box(hg, -0.6 + k * 1.3, 7.6, 0, 0.18, 0.18, 0.8, ["#FFFFFF", "#E3E8F0", "#C9D2E0"], S5);
+      box(hg, -0.6, 7.6, 0.5, 8.0, 0.14, 0.12, ["#FFFFFF", "#E3E8F0", "#C9D2E0"], S5);
+      const chimTop = P(5.25, 2.45, 5.2, S5);
+      hg.setAttribute("transform", `translate(${-P(4, 3.5, 2, S5)[0]},${-P(4, 3.5, 2, S5)[1]})`);
+      const hOff = [-P(4, 3.5, 2, S5)[0], -P(4, 3.5, 2, S5)[1]];
+      const ms5 = el("g", {}, hg); const sl5 = sleigh(ms5); ms5.setAttribute("opacity", 0);
+      sl5.g.setAttribute("transform", "matrix(0.45,0.26,0,0.52,0,0)");
+      tl.fromTo("#s5a", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 25.4);
+      tl.fromTo("#cam5a", { scale: 0.75, svgOrigin: "0 0" }, { scale: 1.0, duration: 1.4, ease: "power3.out" }, 25.4);
+      tl.fromTo(ms5, { opacity: 0, x: chimTop[0] - 650, y: chimTop[1] - 420 }, { opacity: 1, x: chimTop[0] - 210, y: chimTop[1] - 70, duration: 1.2, ease: "power2.out" }, 25.5);
+      tl.to("#cam5a", { scale: 9, svgOrigin: `${chimTop[0] + hOff[0]} ${chimTop[1] + hOff[1]}`, duration: 0.9, ease: "power3.in" }, 27.0);
+      tl.to("#s5a", { opacity: 0, duration: 0.3 }, 27.75);
+
+      /* ================= Scène 5b : le salon ================= */
+      const S6 = 66, rg = document.getElementById("room5");
+      box(rg, 0, 0, -0.4, 9, 8, 0.4, ["#C98E5C", "#9A6237", "#7A4C2A"], S6);
+      for (let k = 1; k < 9; k++) poly(rg, [P(k, 0, 0, S6), P(k + 0.03, 0, 0, S6), P(k + 0.03, 8, 0, S6), P(k, 8, 0, S6)], "rgba(90,50,25,.35)");
+      box(rg, 0, -0.3, -0.4, 9, 0.3, 5.6, ["#2A3A6E", "#3B4F8F", "#2A3A6E"], S6);
+      box(rg, -0.3, -0.3, -0.4, 0.3, 8.3, 5.6, ["#2A3A6E", "#22305C", "#33467F"], S6);
+      for (let k = 0; k < 9; k++) rectY(rg, k + 0.45, 0, 0, 0.08, 5.2, "rgba(255,255,255,.05)", S6);
+      // fenêtre (mur droit)
+      rectX(rg, 0, 4.6, 1.8, 2.4, 2.2, "#0B1240", S6);
+      rectX(rg, 0, 4.6, 1.8, 2.4, 0.12, "#F7FAFF", S6); rectX(rg, 0, 4.6, 3.88, 2.4, 0.12, "#F7FAFF", S6);
+      rectX(rg, 0, 5.74, 1.8, 0.12, 2.2, "#F7FAFF", S6);
+      const winSnow = []; SEED = 5;
+      for (let k = 0; k < 10; k++) { const p = P(0, 4.8 + rnd() * 2, 2 + rnd() * 1.8, S6); winSnow.push(el("circle", { cx: p[0], cy: p[1], r: 3, fill: "#FFFFFF" }, rg)); }
+      // tapis
+      const rc = P(4.5, 4.5, 0.01, S6);
+      el("ellipse", { cx: rc[0], cy: rc[1], rx: 2.6 * CO * S6 * 1.4, ry: 2.6 * 0.5 * S6 * 1.4, fill: "#B33A3A" }, rg);
+      el("ellipse", { cx: rc[0], cy: rc[1], rx: 2.0 * CO * S6 * 1.4, ry: 2.0 * 0.5 * S6 * 1.4, fill: "none", stroke: "#FFC857", "stroke-width": 5, "stroke-dasharray": "14 10" }, rg);
+      // cheminée (mur gauche)
+      box(rg, 2.2, 0, 0, 3.2, 0.9, 3.2, ["#8E3B2E", "#B24A38", "#8E3B2E"], S6);
+      rectY(rg, 2.85, 0.9, 0.2, 1.9, 1.7, "#1C0E0A", S6);
+      const fire = [];
+      [[3.3, "#FF8A3D"], [3.75, "#FFC857"], [4.2, "#FF5D3D"]].forEach(([fx, col], i) => {
+        const p = P(fx, 0.95, 0.25, S6);
+        fire.push([p, el("path", { d: `M${p[0] - 18} ${p[1]} Q ${p[0] - 22} ${p[1] - 45} ${p[0]} ${p[1] - 85} Q ${p[0] + 22} ${p[1] - 45} ${p[0] + 18} ${p[1]} Z`, fill: col }, rg)]);
+      });
+      box(rg, 2.0, 0, 3.2, 3.6, 1.15, 0.28, ["#5D3A1A", "#7A4C2A", "#5D3A1A"], S6);
+      const stock = [];
+      [2.6, 3.7, 4.8].forEach((sx, i) => { const p = P(sx, 1.15, 3.0, S6); const g = el("g", {}, rg); el("path", { d: `M${p[0] - 12} ${p[1]} L ${p[0] + 12} ${p[1]} L ${p[0] + 12} ${p[1] + 50} L ${p[0] + 30} ${p[1] + 62} L ${p[0] + 24} ${p[1] + 76} L ${p[0] - 12} ${p[1] + 66} Z`, fill: ["#E63946", "#2FA36B", "#3E7BE0"][i] }, g); el("rect", { x: p[0] - 14, y: p[1] - 4, width: 28, height: 14, rx: 4, fill: "#FFFFFF" }, g); stock.push([g, p]); });
+      // sapin
+      const tr = tree(rg, 7.0, 1.6, 0, 1.55, S6, true);
+      // cadeaux qui tombent
+      const drops = [[5.6, 2.4, 0.9, 0.8, 0.7], [6.6, 3.2, 1.1, 1.0, 0.9], [5.2, 3.6, 0.7, 0.7, 0.6], [7.6, 3.4, 0.8, 0.8, 0.8], [6.2, 4.4, 1.0, 0.9, 0.7]];
+      const dropG = drops.map((d, i) => { const g = el("g", { opacity: 0 }, rg); gift(g, d[0], d[1], 0, d[2], d[3], d[4], i, S6); return g; });
+      rg.setAttribute("transform", `translate(${-P(4.5, 4, 2, S6)[0] + 120},${-P(4.5, 4, 2, S6)[1] + 40})`);
+      tl.fromTo("#s5b", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 27.6);
+      tl.fromTo("#cam5b", { scale: 1.5, svgOrigin: "0 0" }, { scale: 1.0, duration: 1.3, ease: "power3.out" }, 27.6);
+      tl.to("#cam5b", { scale: 1.08, duration: 2.9, ease: "sine.inOut" }, 29.0);
+      fire.forEach(([p, f], i) => { tl.fromTo(f, { scaleY: 0.85, svgOrigin: `${p[0]} ${p[1]}` }, { scaleY: 1.15, duration: 0.22 + i * 0.05, yoyo: true, repeat: 18, ease: "sine.inOut" }, 27.6); });
+      tr.lights.forEach((l, i) => { tl.fromTo(l, { opacity: 0.25 }, { opacity: 1, duration: 0.3, yoyo: true, repeat: 12, ease: "steps(1)" }, 27.7 + (i % 3) * 0.15); });
+      winSnow.forEach((w, i) => { tl.fromTo(w, { y: -40 }, { y: 40, duration: 1.6 + (i % 3) * 0.3, repeat: 3, ease: "none" }, 27.6 + i * 0.1); });
+      stock.forEach(([s, p], i) => { tl.fromTo(s, { rotation: -6, svgOrigin: `${p[0]} ${p[1]}` }, { rotation: 6, duration: 0.6, yoyo: true, repeat: 6, ease: "sine.inOut" }, 27.8 + i * 0.2); });
+      [["#w1", 27.9], ["#w2", 28.7], ["#w3", 29.5]].forEach(([w, t]) => { tl.fromTo(w, { opacity: 0, x: -50, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "back.out(2)" }, t); });
+      dropG.forEach((g, i) => { tl.fromTo(g, { opacity: 0, y: -520 }, { opacity: 1, y: 0, duration: 0.75, ease: "bounce.out" }, 29.6 + i * 0.22); });
+      tl.to(["#w1", "#w2", "#w3"], { opacity: 0, y: -20, duration: 0.4, stagger: 0.05 }, 31.2);
+      tl.to("#s5b", { opacity: 0, duration: 0.5 }, 31.4);
+
+      /* ================= Scène 6 : fin ================= */
+      const S7 = 90, gg6 = document.getElementById("gift6");
+      const base6 = el("g", {}, gg6), lid6 = el("g", {}, gg6);
+      box(base6, -1.5, -1.5, 0, 3, 3, 2.2, ["#FF5D5D", "#D63A3A", "#A82828"], S7);
+      box(base6, -0.15, -1.5, 0, 0.3, 3, 2.22, ["#FFD95A", "#F2B33D", "#C98A1E"], S7);
+      box(base6, -1.5, -0.15, 0, 3, 0.3, 2.22, ["#FFD95A", "#F2B33D", "#C98A1E"], S7);
+      box(lid6, -1.7, -1.7, 2.2, 3.4, 3.4, 0.55, ["#FF7070", "#E04545", "#B33030"], S7);
+      box(lid6, -0.17, -1.7, 2.2, 0.34, 3.4, 0.57, ["#FFD95A", "#F2B33D", "#C98A1E"], S7);
+      box(lid6, -1.7, -0.17, 2.2, 3.4, 0.34, 0.57, ["#FFD95A", "#F2B33D", "#C98A1E"], S7);
+      const bw = P(0, 0, 2.77, S7);
+      el("ellipse", { cx: bw[0] - 34, cy: bw[1] - 26, rx: 46, ry: 28, fill: "none", stroke: "#FFD95A", "stroke-width": 14 }, lid6);
+      el("ellipse", { cx: bw[0] + 34, cy: bw[1] - 26, rx: 46, ry: 28, fill: "none", stroke: "#FFD95A", "stroke-width": 14 }, lid6);
+      gg6.setAttribute("transform", "translate(0,250) scale(0.82)");
+      const rays = document.getElementById("rays6");
+      for (let k = 0; k < 14; k++) { const a = (k / 14) * Math.PI * 2; el("polygon", { points: pts([[0, 0], [Math.cos(a - 0.09) * 1400, Math.sin(a - 0.09) * 1400], [Math.cos(a + 0.09) * 1400, Math.sin(a + 0.09) * 1400]]), fill: "#FFC857", opacity: 0.08 }, rays); }
+      rays.setAttribute("transform", "translate(0,250)");
+      const sparks = []; SEED = 99;
+      for (let k = 0; k < 18; k++) { const sp = el("polygon", { points: pts(starPts(0, 0, 14, 6)), fill: ["#FFD95A", "#FFFFFF", "#FF7070"][k % 3], opacity: 0 }, gg6); sparks.push([sp, (rnd() - 0.5) * 900, -200 - rnd() * 500]); }
+      tl.fromTo("#s6", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 31.4);
+      tl.fromTo("#gift6", { scale: 0, rotation: -8, svgOrigin: "0 250" }, { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.7)" }, 31.5);
+      tl.to(base6, { scaleY: 0.9, svgOrigin: "0 0", duration: 0.14, yoyo: true, repeat: 1, ease: "power1.inOut" }, 32.15);
+      tl.to(lid6, { y: -150, rotation: -35, x: -480, duration: 0.5, ease: "power3.out" }, 32.3);
+      tl.to(lid6, { y: 700, rotation: -80, x: -1000, opacity: 0, duration: 0.6, ease: "power2.in" }, 32.75);
+      tl.fromTo("#rays6", { scale: 0, rotation: 0, opacity: 0, svgOrigin: "0 0" }, { scale: 1, rotation: 40, opacity: 1, duration: 4.5, ease: "power2.out" }, 32.3);
+      sparks.forEach(([sp, dx, dy], i) => { tl.fromTo(sp, { x: 0, y: 120, opacity: 1, scale: 0.3 }, { x: dx, y: dy, opacity: 0, scale: 1.4, rotation: 180, duration: 1.4, ease: "power2.out" }, 32.35 + i * 0.03); });
+      tl.fromTo("#endH", { y: 200 }, { y: 0, duration: 0.9, ease: "expo.out" }, 33.35);
+      tl.fromTo("#endS", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 33.9);
+      tl.fromTo("#pill", { opacity: 0, y: 40, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(2)" }, 34.8);
+      tl.to("#cam6", { scale: 1.05, svgOrigin: "0 250", duration: 5, ease: "sine.inOut" }, 31.9);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
