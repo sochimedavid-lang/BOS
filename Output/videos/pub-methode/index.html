@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter+Tight:wght@500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Instrument+Serif:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      /* Pub 4 « Fais-la avant qu'il la demande » : plan-séquence, caméra unique qui plonge d'écran en écran */
+      :root { --night: #0A0C18; --sodium: #FFB547; --acc: #F4511E; --acc2: #FF7A45; --lime: #DDF247; --cream: #FCEFD6; --wa: #25D366;
+              --font: "Inter Tight", sans-serif; --display: "Syne", sans-serif; }
+      #root { background: var(--night); font-family: var(--font); }
+      .L { position: absolute; }
+      span.m { display: inline-block; }
+      .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; overflow: visible; }
+      .fill { position: absolute; inset: 0; }
+
+      /* ---------- A : la rue de nuit ---------- */
+      #sky { background: linear-gradient(180deg, #05060E 0%, #0C0D22 38%, #1D1430 62%, #2A1626 100%); }
+      .star { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff; }
+      .bld { position: absolute; background: #0E0B1C; }
+      .bld i { position: absolute; width: 18px; height: 26px; background: rgba(255,181,71,.35); }
+      #roof { left: 30px; top: 585px; width: 1020px; height: 70px; background: repeating-linear-gradient(90deg, #4E3E36 0 26px, #5E4C42 26px 52px); border-radius: 8px; box-shadow: 0 18px 30px rgba(0,0,0,.5); }
+      #facade { left: 60px; top: 640px; width: 960px; height: 990px; background: linear-gradient(180deg, #33241E 0%, #2A1E1A 60%, #1E1614 100%); }
+      #sign { left: 130px; top: 690px; width: 820px; height: 170px; border-radius: 16px; background: linear-gradient(180deg, #22664A, #174A35); border: 6px solid #E8B547; box-shadow: 0 0 60px rgba(255,181,71,.35), inset 0 0 30px rgba(0,0,0,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      #sign b { font-family: var(--display); font-weight: 800; font-size: 70px; color: var(--cream); letter-spacing: .01em; text-shadow: 0 0 18px rgba(255,190,90,.75), 0 0 2px #fff; line-height: 1; }
+      #sign small { font-weight: 700; font-size: 26px; color: #E8B547; letter-spacing: .3em; margin-top: 10px; }
+      #lights { left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+      .bulb { position: absolute; width: 26px; height: 26px; margin: -6px 0 0 -13px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #FFF6D8, #FFC55A 55%, #E0892A); box-shadow: 0 0 22px 8px rgba(255,190,90,.55); }
+      #opening { left: 520px; top: 1000px; width: 440px; height: 420px; border-radius: 10px 10px 0 0; background: radial-gradient(420px 360px at 50% 30%, #FFD58A 0%, #F09A3E 45%, #8A3E16 100%); box-shadow: inset 0 0 60px rgba(60,20,0,.6); overflow: hidden; }
+      #opening .pot { position: absolute; top: 0; width: 6px; background: #3A2016; }
+      #opening .pot::after { content: ""; position: absolute; left: -36px; bottom: -40px; width: 78px; height: 42px; border-radius: 0 0 40px 40px; background: #3A2016; }
+      #ledge { left: 500px; top: 1410px; width: 480px; height: 46px; background: #6B4A35; border-radius: 6px; box-shadow: 0 16px 30px rgba(0,0,0,.6); }
+      #poster { left: 120px; top: 1010px; width: 330px; height: 450px; background: linear-gradient(170deg, #E9E2D3, #CFC6B4); transform: rotate(-4deg); box-shadow: 0 20px 40px rgba(0,0,0,.55); filter: saturate(.25) brightness(.78); padding: 30px 28px; font-family: "Caveat", cursive; color: #4C463F; }
+      #poster h4 { font-size: 86px; line-height: 1; text-align: center; font-weight: 700; margin-bottom: 18px; }
+      #poster p { font-size: 40px; line-height: 1.5; display: flex; justify-content: space-between; border-bottom: 2px dashed rgba(0,0,0,.18); }
+      #poster .tape { position: absolute; width: 110px; height: 34px; background: rgba(240,235,220,.75); top: -14px; }
+      #nov { left: 360px; top: 930px; width: 150px; height: 150px; border-radius: 50%; background: rgba(15,12,20,.75); border: 4px solid rgba(255,255,255,.75); display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 40px rgba(0,0,0,.6); }
+      #novStrike { position: absolute; left: 14px; top: 68px; width: 122px; height: 10px; border-radius: 5px; background: #FF4A3D; transform: rotate(-45deg); }
+      #ground { left: 0; top: 1630px; width: 1080px; height: 290px; background: linear-gradient(180deg, #17101A, #0A0810); }
+      #near { left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+      .bok { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255,190,100,.55) 0%, rgba(255,160,70,.18) 45%, rgba(255,160,70,0) 70%); }
+
+      /* téléphone tenu en main (POV) */
+      #bez { left: 315px; top: 560px; width: 486px; height: 880px; border-radius: 66px; background: #0E0D0C; box-shadow: 0 0 0 3px #3A3633, 0 40px 90px rgba(0,0,0,.7); }
+      #bez i { position: absolute; left: 193px; top: 12px; width: 100px; height: 22px; border-radius: 12px; background: #000; }
+      #scrA { left: 333px; top: 600px; width: 450px; height: 800px; border-radius: 44px; overflow: hidden; background: #131110; }
+      .skin { position: absolute; background: linear-gradient(160deg, #8A5634 0%, #6A3F25 55%, #4E2D1A 100%); }
+
+      /* ---------- B : la conversation avec Claude (plein écran, réduit dans le téléphone) ---------- */
+      #B { left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; transform: scale(.4166667); background: #131110; color: #EDE6DC; }
+      #B .bar { position: absolute; left: 60px; right: 60px; top: 46px; display: flex; justify-content: space-between; font-weight: 700; font-size: 36px; color: #EDE6DC; }
+      #B .hd { position: absolute; left: 0; right: 0; top: 120px; height: 120px; display: flex; align-items: center; justify-content: center; gap: 16px; font-weight: 700; font-size: 46px; border-bottom: 2px solid rgba(255,255,255,.08); }
+      #B .hd b, .ast { color: var(--acc2); }
+      #askB { position: absolute; right: 50px; top: 300px; width: 820px; min-height: 120px; padding: 34px 40px; border-radius: 44px 44px 10px 44px; background: #2E2A26; font-size: 48px; line-height: 1.36; font-weight: 500; color: #F3EEE6; }
+      #replyB { position: absolute; left: 60px; top: 730px; font-size: 46px; font-weight: 700; display: flex; gap: 16px; align-items: center; }
+      #progB { position: absolute; left: 60px; right: 60px; top: 820px; height: 190px; border-radius: 34px; background: #1F1B18; border: 2px solid rgba(255,255,255,.07); }
+      #progB .track { position: absolute; left: 34px; right: 34px; top: 34px; height: 14px; border-radius: 7px; background: rgba(255,255,255,.08); overflow: hidden; }
+      #progB .track b { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: linear-gradient(90deg, var(--acc), var(--acc2)); transform-origin: 0 50%; }
+      #progB .chips { position: absolute; left: 34px; right: 34px; top: 80px; display: flex; gap: 18px; }
+      #progB .chip { flex: 1; height: 76px; border-radius: 38px; background: #2A2521; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 32px; font-weight: 700; color: #BDB3A8; }
+      #progB .chip svg { width: 32px; height: 32px; }
+      #vcB { left: 60px; top: 1060px; width: 360px; height: 640px; border-radius: 28px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,.6); }
+      #C1 { left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; transform: scale(.3333333); }
+      #C1 video, #C2 video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #readyB { left: 470px; top: 1110px; font-size: 50px; font-weight: 800; line-height: 1.15; }
+      #readyB small { display: block; font-size: 32px; font-weight: 600; color: #9C9188; margin-top: 12px; }
+      #dlB { left: 470px; top: 1290px; padding: 24px 40px; border-radius: 40px; background: var(--acc); color: #fff; font-size: 38px; font-weight: 800; }
+      #inB { left: 40px; right: 40px; top: 1780px; height: 100px; border-radius: 50px; background: #1E1B18; border: 2px solid rgba(255,255,255,.08); }
+      #inB i { position: absolute; right: 12px; top: 12px; width: 76px; height: 76px; border-radius: 50%; background: var(--acc); }
+
+      /* ---------- D : WhatsApp ---------- */
+      #D { background: #0B141A; }
+      #D .wall { position: absolute; inset: 0; opacity: .06; background-image: radial-gradient(circle at 20px 20px, #fff 3px, transparent 4px), radial-gradient(circle at 60px 70px, #fff 2px, transparent 3px); background-size: 90px 90px; }
+      #waHd { left: 0; right: 0; top: 0; height: 220px; background: #1F2C34; display: flex; align-items: flex-end; padding: 0 40px 36px; gap: 26px; }
+      #waHd .av { width: 104px; height: 104px; border-radius: 50%; background: linear-gradient(160deg, #22664A, #174A35); border: 4px solid #E8B547; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: 40px; color: var(--cream); }
+      #waHd b { display: block; font-size: 46px; font-weight: 700; color: #E9EDEF; }
+      #waHd small { display: block; font-size: 32px; color: #8696A0; margin-top: 6px; }
+      #bub { left: 300px; top: 500px; width: 600px; height: 1110px; border-radius: 30px 6px 30px 30px; background: #005C4B; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+      #vcD { left: 330px; top: 520px; width: 540px; height: 960px; border-radius: 0; overflow: hidden; background: #000; }
+      #C2 { left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; transform: scale(.5); }
+      #msgD { left: 330px; top: 1500px; width: 540px; font-size: 38px; line-height: 1.3; color: #E9EDEF; font-weight: 500; }
+      #tickD { left: 700px; top: 1566px; font-size: 28px; color: #8696A0; display: flex; gap: 8px; align-items: center; }
+      #dayD { left: 0; right: 0; top: 380px; margin: 0 auto; width: max-content; padding: 10px 26px; border-radius: 16px; background: #182229; color: #8696A0; font-size: 30px; font-weight: 600; }
+
+      /* repères (écran) */
+      .call { position: absolute; padding: 14px 30px; border-radius: 999px; background: var(--lime); color: #111; font-weight: 800; font-size: 44px; white-space: nowrap; box-shadow: 0 14px 34px rgba(0,0,0,.5); }
+      #callSvg { left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+
+      /* notification */
+      #notif { left: 40px; top: 60px; width: 1000px; height: 196px; border-radius: 44px; background: #202024; border: 2px solid rgba(255,255,255,.1); box-shadow: 0 30px 70px rgba(0,0,0,.6); }
+      #notif .ic { position: absolute; left: 32px; top: 43px; width: 110px; height: 110px; border-radius: 28px; background: #2EAD5B; display: flex; align-items: center; justify-content: center; }
+      #notif .tx { position: absolute; left: 170px; top: 34px; right: 40px; }
+      #notif .tx small { font-size: 30px; font-weight: 700; color: #9A9AA2; letter-spacing: .08em; }
+      #notif .tx b { display: block; font-size: 50px; font-weight: 800; color: #fff; margin-top: 6px; }
+      #notif .tx span { display: block; font-size: 34px; color: #B9B9C0; margin-top: 4px; }
+      #notif em { position: absolute; right: 36px; top: 38px; font-style: normal; font-size: 28px; color: #8D8D96; }
+
+      /* ---------- E : premier client payant ---------- */
+      #E { background: var(--lime); }
+      .ew { position: absolute; left: 80px; font-family: var(--display); font-weight: 800; color: #111; line-height: .95; letter-spacing: -.02em; text-transform: uppercase; }
+      #e1 { top: 480px; font-size: 76px; } #e2 { top: 600px; font-size: 140px; } #e3 { top: 780px; font-size: 140px; }
+      .ew { white-space: nowrap; }
+      #e3 span { color: var(--acc); }
+      #eChk { left: 640px; top: 1150px; width: 340px; height: 340px; }
+      #ePill { left: 80px; top: 1270px; padding: 18px 34px; border-radius: 999px; background: #111; color: var(--lime); font-weight: 800; font-size: 42px; }
+
+      /* ---------- F : la méthode ---------- */
+      #F { background: radial-gradient(900px 800px at 50% 25%, rgba(244,81,30,.35) 0%, rgba(244,81,30,0) 70%), var(--night); }
+      #fLab { left: 0; right: 0; top: 300px; text-align: center; font-weight: 800; font-size: 36px; letter-spacing: .32em; color: var(--acc2); }
+      #fBrand { left: 0; right: 0; top: 380px; text-align: center; font-size: 190px; line-height: 1; white-space: nowrap; }
+      #fBrand .v { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; color: #fff; letter-spacing: -.03em; }
+      #fBrand .mo { font-family: "Instrument Serif", serif; font-style: italic; color: var(--acc2); font-size: 210px; }
+      #fBrand .ch { display: inline-block; }
+      #fPath { left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+      .node { position: absolute; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: #1C1A24; border: 5px solid rgba(255,255,255,.25); }
+      .nlab { position: absolute; font-weight: 800; font-size: 46px; color: #fff; white-space: nowrap; }
+      .nlab small { display: block; font-size: 30px; font-weight: 700; color: var(--acc2); letter-spacing: .18em; margin-bottom: 4px; }
+      #dot { position: absolute; left: 0; top: 0; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 30px 10px rgba(221,242,71,.55); }
+
+      /* ---------- G : prix + bouton ---------- */
+      #G { background: radial-gradient(900px 700px at 50% 22%, #2B1710 0%, var(--night) 70%); }
+      #odo { left: 110px; top: 300px; height: 300px; display: flex; align-items: center; }
+      .col { position: relative; width: 150px; height: 280px; overflow: hidden; }
+      .col.gap { width: 50px; }
+      .col .strip { position: absolute; left: 0; top: 0; width: 100%; }
+      .col .strip b { display: block; height: 280px; line-height: 280px; text-align: center; font-family: var(--font); font-weight: 800; font-size: 250px; letter-spacing: -.04em; color: #fff; }
+      #odoF { font-family: var(--font); font-weight: 800; font-size: 250px; color: var(--acc2); margin-left: 24px; line-height: 280px; }
+      #seatLab { left: 0; right: 0; top: 690px; text-align: center; font-weight: 800; font-size: 42px; color: var(--lime); }
+      #seats { left: 211px; top: 770px; width: 658px; display: grid; grid-template-columns: repeat(10, 46px); gap: 22px; }
+      #seats i { width: 46px; height: 46px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px rgba(221,242,71,.45); display: block; }
+      #cta { left: 90px; width: 900px; top: 1170px; padding: 44px 0; border-radius: 999px; background: var(--acc); color: #fff; text-align: center; font-weight: 800; font-size: 66px; box-shadow: 0 26px 60px rgba(244,81,30,.5); }
+      #hand { left: 720px; top: 1270px; width: 130px; height: 130px; }
+      #url { left: 0; right: 0; top: 1380px; text-align: center; font-weight: 700; font-size: 48px; color: var(--cream); }
+      #arrow { left: 475px; top: 1450px; width: 130px; height: 130px; }
+
+      /* ---------- finitions ---------- */
+      #title { left: 0; right: 0; top: 230px; text-align: center; font-family: var(--display); font-weight: 800; font-size: 128px; color: var(--cream); line-height: 1; text-shadow: 0 10px 40px rgba(0,0,0,.6); }
+      #title em { font-style: normal; color: var(--acc2); }
+      #vig { left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; background: radial-gradient(1300px 1500px at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%), linear-gradient(180deg, rgba(0,0,0,0) 74%, rgba(0,0,0,.55) 100%); }
+      #grain { left: -200px; top: -200px; width: 1480px; height: 2320px; pointer-events: none; opacity: .09; mix-blend-mode: overlay;
+               background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); background-size: 300px 300px; }
+      #cap { position: absolute; z-index: 50; left: 50px; right: 50px; top: 1700px; height: 200px; text-align: center; }
+      .cg { position: absolute; left: 0; right: 0; top: 0; font-family: var(--font); font-weight: 800; font-size: 64px; line-height: 1.12; color: #fff; text-shadow: 0 4px 0 rgba(0,0,0,.45), 0 0 28px rgba(0,0,0,.8); }
+      .cg .w { display: inline-block; margin: 0 .12em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="26.5" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="26.5" data-track-index="10"></audio>
+
+      <!-- ================= MONDE 1 : rue → téléphone → conversation → vidéo ================= -->
+      <div id="w1" class="world" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="sky" class="fill"></div>
+        <div id="stars" class="fill"></div>
+        <div id="far" class="fill"></div>
+        <div id="roof" class="L"></div>
+        <div id="facade" class="L"></div>
+        <div id="sign" class="L"><b>MAQUIS LE BON GOÛT</b><small>CUISINE LOCALE</small></div>
+        <svg id="lights" class="L" viewBox="0 0 1080 1920"><path d="M60 905 Q 540 1020 1020 905" fill="none" stroke="#2A1A12" stroke-width="5"/></svg>
+        <div id="bulbs" class="fill"></div>
+        <div id="opening" class="L"><i class="pot" style="left:120px;height:130px"></i><i class="pot" style="left:250px;height:90px"></i><i class="pot" style="left:360px;height:150px"></i></div>
+        <div id="ledge" class="L"></div>
+        <div id="poster" class="L"><i class="tape" style="left:20px;transform:rotate(-8deg)"></i><i class="tape" style="right:20px;transform:rotate(7deg)"></i>
+          <h4>MENU</h4><p><span>Riz sauce</span><span>500</span></p><p><span>Atassi</span><span>700</span></p><p><span>Poulet</span><span>2000</span></p><p><span>Poisson</span><span>1500</span></p></div>
+        <div id="nov" class="L"><svg width="70" height="70" viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5z"/></svg><i id="novStrike"></i></div>
+        <div id="ground" class="L"></div>
+        <svg id="near" class="L" viewBox="0 0 1080 1920" style="filter:blur(2px)">
+          <g fill="#A3241C"><path d="M40 1560 h170 v26 h-20 v300 h-24 v-150 h-82 v150 h-24 v-300 h-20z"/><path d="M58 1420 h134 v140 h-134z" opacity=".9"/></g>
+          <g fill="#B42A20"><path d="M860 1590 h180 v26 h-22 v300 h-24 v-150 h-88 v150 h-24 v-300 h-22z"/><path d="M880 1440 h140 v150 h-140z" opacity=".9"/></g>
+          <path d="M300 1700 h480 v30 h-30 v200 h-30 v-200 h-360 v200 h-30 v-200 h-30z" fill="#5A1A14"/>
+        </svg>
+        <div id="bokeh" class="fill"></div>
+
+        <!-- le téléphone en main -->
+        <div id="phG" class="fill">
+          <i class="skin" style="left:330px; top:1250px; width:440px; height:760px; border-radius:200px 200px 60px 60px; transform:rotate(-6deg)"></i>
+          <div id="bez" class="L"><i></i></div>
+          <div id="scrA" class="L">
+            <div id="B" class="L">
+              <div class="bar"><span>18:40</span><span>●●● 87%</span></div>
+              <div class="hd"><b>✳</b>Claude</div>
+              <div id="askB"></div>
+              <div id="replyB"><span class="ast">✳</span>Je crée ta vidéo…</div>
+              <div id="progB"><div class="track"><b></b></div>
+                <div class="chips">
+                  <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#DDF247" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Textes</div>
+                  <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#DDF247" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Couleurs</div>
+                  <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#DDF247" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Animation</div>
+                  <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#DDF247" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Son</div>
+                </div></div>
+              <div id="vcB" class="L"><div id="C1" class="L"><video id="v-c1" src="img/maquis.mp4" muted playsinline data-start="6.9" data-duration="1.7" data-media-start="3.0" data-track-index="1"></video></div></div>
+              <div id="readyB" class="L">Ta vidéo est prête.<small>0:12 · format vertical</small></div>
+              <div id="dlB" class="L">Télécharger</div>
+              <div id="inB" class="L"><i></i></div>
+            </div>
+          </div>
+          <i class="skin" style="left:256px; top:860px; width:72px; height:64px; border-radius:32px"></i>
+          <i class="skin" style="left:250px; top:950px; width:78px; height:64px; border-radius:32px"></i>
+          <i class="skin" style="left:256px; top:1040px; width:72px; height:64px; border-radius:32px"></i>
+          <i class="skin" style="left:808px; top:1120px; width:84px; height:230px; border-radius:42px; transform:rotate(16deg)"></i>
+        </div>
+      </div>
+
+      <!-- ================= MONDE 2 : WhatsApp, la vidéo envoyée au gérant ================= -->
+      <div id="w2" class="world" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="D" class="fill"><div class="wall"></div>
+          <div id="waHd" class="L"><div class="av">BG</div><div><b>Maquis Le Bon Goût</b><small>en ligne</small></div></div>
+          <div id="dayD" class="L">Aujourd'hui</div>
+          <div id="bub" class="L"></div>
+          <div id="vcD" class="L"><div id="C2" class="L"><video id="v-c2" src="img/maquis.mp4" muted playsinline data-start="8.5" data-duration="6.4" data-media-start="4.6" data-track-index="2"></video></div></div>
+          <div id="msgD" class="L">Bonjour ! J'ai fait cette vidéo pour votre maquis.</div>
+          <div id="tickD" class="L">18:42 <svg id="ticks" width="44" height="28" viewBox="0 0 30 18" fill="none" stroke="#8696A0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l4 4 9-10"/><path d="M11 13l1.5 1.5 9-10"/></svg></div>
+        </div>
+      </div>
+
+      <!-- repères sur la vidéo -->
+      <div id="calls" class="fill" data-layout-allow-overflow data-layout-allow-overlap>
+        <svg id="callSvg" class="L" viewBox="0 0 1080 1920">
+          <path id="cl1" d="M250 345 C 300 360, 330 385, 372 392" fill="none" stroke="#DDF247" stroke-width="6" stroke-linecap="round"/>
+          <circle id="cd1" cx="380" cy="393" r="12" fill="#DDF247"/>
+          <path id="cl2" d="M250 1150 C 290 1110, 300 1040, 335 1000" fill="none" stroke="#DDF247" stroke-width="6" stroke-linecap="round"/>
+          <circle id="cd2" cx="338" cy="996" r="12" fill="#DDF247"/>
+        </svg>
+        <div id="ca1" class="call" style="left:30px; top:270px">Son nom</div>
+        <div id="ca2" class="call" style="left:30px; top:1150px">Ses plats</div>
+      </div>
+
+      <!-- notification de paiement -->
+      <div id="notif" class="L">
+        <div class="ic"><svg width="66" height="66" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <div class="tx"><small>MOBILE MONEY</small><b>Paiement reçu</b><span>de Maquis Le Bon Goût</span></div>
+        <em>maintenant</em>
+      </div>
+
+      <!-- ================= E : premier client payant ================= -->
+      <div id="E" class="fill" data-layout-allow-overflow data-layout-allow-overlap>
+        <div id="e1" class="ew"><span class="m"><span id="e1t">Ton premier</span></span></div>
+        <div id="e2" class="ew"><span class="m"><span id="e2t">client</span></span></div>
+        <div id="e3" class="ew"><span class="m"><span id="e3t"><span>payant.</span></span></span></div>
+        <svg id="eChk" class="L" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#111" stroke-width="6"/><path id="eck" d="M28 52l15 15 30-32" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div id="ePill" class="L">Paiement reçu ✓</div>
+      </div>
+
+      <!-- ================= F : la méthode, étape par étape ================= -->
+      <div id="F" class="fill" data-layout-allow-overflow data-layout-allow-overlap>
+        <div id="fLab" class="L">LA FORMATION</div>
+        <div id="fBrand" class="L"><span class="v" id="fv">Vibe</span> <span class="mo" id="fm">Motion</span></div>
+        <svg id="fPath" class="L" viewBox="0 0 1080 1920"><path id="fp" d="M180 860 C 420 860, 300 1110, 540 1110 S 660 1360, 900 1360" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="6" stroke-dasharray="2 16" stroke-linecap="round"/></svg>
+        <i id="n1" class="node" style="left:180px; top:860px"></i>
+        <i id="n2" class="node" style="left:540px; top:1110px"></i>
+        <i id="n3" class="node" style="left:900px; top:1360px"></i>
+        <div id="l1" class="nlab" style="left:250px; top:800px"><small>ÉTAPE 1</small>Tu crées la vidéo</div>
+        <div id="l2" class="nlab" style="left:610px; top:1050px"><small>ÉTAPE 2</small>Tu la montres</div>
+        <div id="l3" class="nlab" style="left:200px; top:1300px; text-align:right; width:640px"><small>ÉTAPE 3</small>Tu décroches le client</div>
+        <i id="dot"></i>
+      </div>
+
+      <!-- ================= G : prix + bouton ================= -->
+      <div id="G" class="fill" data-layout-allow-overflow data-layout-allow-overlap>
+        <div id="odo" class="L"></div>
+        <div id="seatLab" class="L">50 places au prix de lancement</div>
+        <div id="seats" class="L"></div>
+        <div id="cta" class="L">Profite de l'opportunité</div>
+        <svg id="hand" class="L" viewBox="0 0 24 24" fill="#fff" stroke="#161311" stroke-width="1.2" stroke-linejoin="round"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V10l.5-.1V8a1.5 1.5 0 0 1 3 0v2.2l.4-.1a1.5 1.5 0 0 1 2.6 1V15c0 3.3-2.4 6-5.7 6h-1.1a5 5 0 0 1-4-2l-3-4a1.5 1.5 0 0 1 2.3-1.9L9 15z"/></svg>
+        <div id="url" class="L">www.vibemotionafrica.com</div>
+        <svg id="arrow" class="L" viewBox="0 0 100 100" fill="none" stroke="#FF7A45" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M50 12v70M20 54l30 30 30-30"/></svg>
+      </div>
+
+      <div id="title" class="L"><span class="m"><span id="tt">Pas de vidéo <em>?</em></span></span></div>
+      <div id="vig" class="L"></div>
+      <div id="grain" class="L"></div>
+      <div id="cap"></div>
+    </div>
+
+    <script>
+      const TOTAL = 26.5;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease, R = MK.rng(11);
+      const q = (s) => document.querySelector(s);
+
+      /* ---------- décor de la rue (déterministe) ---------- */
+      for (let i = 0; i < 36; i++) MK.el("i", "star", "#stars", "", { left: R() * 1080 + "px", top: R() * 560 + "px", opacity: (0.25 + R() * 0.6).toFixed(2), transform: `scale(${(0.5 + R()).toFixed(2)})` });
+      [[0, 430, 250, 400], [230, 350, 190, 480], [830, 400, 250, 420], [620, 470, 230, 300]].forEach(([x, y, w, h]) => {
+        const b = MK.el("div", "bld", "#far", "", { left: x + "px", top: y + "px", width: w + "px", height: h + "px" });
+        for (let j = 0; j < 6; j++) if (R() > 0.35) MK.el("i", "", b, "", { left: 20 + (j % 3) * (w / 3) + "px", top: 30 + Math.floor(j / 3) * 70 + "px" });
+      });
+      const BULBS = [];
+      for (let i = 0; i < 13; i++) { const x = 90 + i * 75, u = (x - 540) / 480, y = 905 + 115 * (1 - u * u) * 0.5; BULBS.push(MK.el("i", "bulb", "#bulbs", "", { left: x + "px", top: y + "px" })); }
+      [[120, 240, 260], [930, 380, 200], [80, 1520, 330], [980, 1700, 380], [540, 1840, 260], [420, 160, 150]].forEach(([x, y, r]) => MK.el("i", "bok", "#bokeh", "", { left: x - r + "px", top: y - r + "px", width: 2 * r + "px", height: 2 * r + "px" }));
+
+      /* ---------- caméras : une seule pilote par monde, calculée depuis le temps ---------- */
+      // cadre = { k, x, y } : écran = monde × k + (x, y). Zoom exponentiel autour du point fixe commun aux deux cadres.
+      const frame = (rx, ry, rw) => ({ k: 1080 / rw, x: -rx * 1080 / rw, y: -ry * 1080 / rw });
+      const ID = { k: 1, x: 0, y: 0 };
+      function camAt(segs, t) {
+        let f = segs[0].f0;
+        for (const s of segs) {
+          if (t < s.t0) break;
+          if (t >= s.t1) { f = s.f1; continue; }
+          const z = gsap.parseEase(s.ease)((t - s.t0) / (s.t1 - s.t0)), a = s.f0, b = s.f1, dk = b.k - a.k;
+          const k = a.k * Math.pow(b.k / a.k, z);
+          if (Math.abs(dk) < 1e-6) return { k, x: a.x + (b.x - a.x) * z, y: a.y + (b.y - a.y) * z };
+          const Qx = (a.x - b.x) / dk, Qy = (a.y - b.y) / dk, Sx = Qx * a.k + a.x, Sy = Qy * a.k + a.y;
+          return { k, x: Sx - Qx * k, y: Sy - Qy * k };
+        }
+        return f;
+      }
+      function driveCam(sel, segs) { const o = { t: 0 }; tl.to(o, { t: TOTAL, duration: TOTAL, ease: "none", onUpdate: () => { const c = camAt(segs, o.t); gsap.set(sel, { x: c.x, y: c.y, scale: c.k }); } }, 0); }
+
+      const S1 = 450 / 1080;
+      const PUSH = { k: 1.07, x: 540 - 540 * 1.07, y: 1150 - 1150 * 1.07 };
+      const FB = frame(333, 600, 450);
+      const FC = frame(333 + 60 * S1, 600 + 1060 * S1, 360 * S1);
+      driveCam("#w1", [
+        { t0: 0, t1: 2.7, f0: ID, f1: PUSH, ease: "sine.inOut" },
+        { t0: 3.45, t1: 4.3, f0: PUSH, f1: FB, ease: "power3.inOut" },
+        { t0: 7.55, t1: 8.4, f0: FB, f1: FC, ease: "power3.inOut" }
+      ]);
+      const FC2 = frame(330, 520, 540);
+      const PEEK = { k: 1.3, x: 540 - 600 * 1.3, y: 880 - 1000 * 1.3 };
+      driveCam("#w2", [
+        { t0: 8.5, t1: 8.55, f0: FC2, f1: FC2, ease: "none" },
+        { t0: 8.55, t1: 9.5, f0: FC2, f1: ID, ease: "expo.out" },
+        { t0: 10.0, t1: 10.6, f0: ID, f1: PEEK, ease: "power2.inOut" },
+        { t0: 12.35, t1: 12.9, f0: PEEK, f1: ID, ease: "power2.inOut" }
+      ]);
+
+      /* ---------- visibilité des couches ---------- */
+      const SHOW = [["#w1", 0, 8.5], ["#w2", 8.5, 14.8], ["#calls", 10.9, 12.45], ["#notif", 13.3, 14.8], ["#E", 14.3, 16.1], ["#F", 16.0, 20.3], ["#G", 20.2, TOTAL], ["#title", 0, 2.9]];
+      SHOW.forEach(([s, a, b]) => { gsap.set(s, { opacity: 0 }); tl.set(s, { opacity: 1 }, a); if (b < TOTAL) tl.set(s, { opacity: 0 }, b); });
+
+      /* ---------- A : la rue ---------- */
+      // néon qui grésille, ampoules qui respirent
+      [0.55, 0.62, 1.48, 1.53].forEach((t, i) => tl.to("#sign b", { opacity: i % 2 ? 1 : 0.35, duration: 0.03 }, t));
+      BULBS.forEach((b, i) => tl.to(b, { opacity: 0.65, duration: 0.5 + R() * 0.6, yoyo: true, repeat: 5, ease: "sine.inOut" }, R() * 0.8));
+      tl.to("#far", { y: 30, duration: 3, ease: "sine.inOut" }, 0);
+      tl.to(["#near", "#bokeh"], { scale: 1.08, transformOrigin: "50% 80%", duration: 3, ease: "sine.inOut" }, 0);
+      gsap.set("#nov", { scale: 0, opacity: 0 });
+      tl.to("#nov", { scale: 1, opacity: 1, duration: 0.5, ease: E.ui }, 1.9);
+      gsap.set("#novStrike", { scaleX: 0 });
+      tl.to("#novStrike", { scaleX: 1, duration: 0.22, ease: "power3.out" }, 2.4);
+      MK.shake(tl, "#nov", 2.42, 8);
+      MK.rise(tl, "#tt", 1.95, { dur: 0.55 });
+      tl.to("#tt", { yPercent: -130, duration: 0.3, ease: "power3.in" }, 2.6);
+
+      /* ---------- le téléphone arrive, on plonge dedans ---------- */
+      gsap.set("#phG", { y: 1400 });
+      tl.to("#phG", { y: 0, duration: 0.7, ease: E.card }, 2.78);
+      tl.to("#scrA", { borderRadius: 0, duration: 0.85, ease: "power3.inOut" }, 3.45);
+      MK.type(tl, "#askB", "Fais une vidéo motion pour le Maquis Le Bon Goût : menu du jour, prix, ambiance chaleureuse.", 3.0, { cps: 42 });
+      tl.to("#inB i", { scale: 0.8, duration: 0.08 }, 5.3); tl.to("#inB i", { scale: 1, duration: 0.3, ease: E.ui }, 5.38);
+      MK.fadeIn(tl, "#replyB", 5.7, 0.25);
+      MK.pop(tl, "#progB", 5.85, { from: 0.9, dur: 0.4 });
+      gsap.set("#progB .track b", { scaleX: 0 });
+      tl.to("#progB .track b", { scaleX: 1, duration: 1.15, ease: "power1.inOut" }, 5.95);
+      gsap.set("#progB .chip svg", { scale: 0, opacity: 0 });
+      [6.15, 6.45, 6.75, 7.0].forEach((t, i) => { tl.to(`#progB .chip:nth-child(${i + 1}) svg`, { scale: 1, opacity: 1, duration: 0.3, ease: E.ui }, t); tl.to(`#progB .chip:nth-child(${i + 1})`, { color: "#F3EEE6", background: "#2E3A12", duration: 0.15 }, t); });
+      MK.pop(tl, "#vcB", 6.95, { from: 0.6 });
+      MK.fadeIn(tl, "#readyB", 7.1, 0.25);
+      MK.pop(tl, "#dlB", 7.25, { from: 0.6 });
+      tl.to("#vcB", { borderRadius: 0, duration: 0.85, ease: "power3.inOut" }, 7.55);
+
+      /* ---------- D : WhatsApp ---------- */
+      tl.fromTo("#vcD", { borderRadius: 0 }, { borderRadius: 24, duration: 0.9, ease: "expo.out", immediateRender: false }, 8.55);
+      gsap.set(["#msgD", "#tickD"], { opacity: 0 });
+      tl.to(["#msgD", "#tickD"], { opacity: 1, duration: 0.3 }, 9.25);
+      tl.to("#ticks", { stroke: "#53BDEB", duration: 0.15 }, 9.79);
+      MK.pulse(tl, "#tickD", [9.79], 1.15);
+      // repères « son nom » / « ses plats »
+      MK.draw(tl, "#cl1", 11.1, 0.35, "power2.out"); MK.pop(tl, "#cd1", 11.35, { dur: 0.3 }); MK.pop(tl, "#ca1", 11.16);
+      MK.draw(tl, "#cl2", 11.8, 0.35, "power2.out"); MK.pop(tl, "#cd2", 12.05, { dur: 0.3 }); MK.pop(tl, "#ca2", 11.83);
+      // notification de paiement
+      gsap.set("#notif", { y: -320 });
+      tl.to("#notif", { y: 0, duration: 0.55, ease: E.card }, 13.35);
+      MK.pulse(tl, "#notif .ic", [13.74, 14.1], 1.12);
+      tl.to("#w2", { filter: "brightness(.55)", duration: 0.4 }, 13.4);
+
+      /* ---------- E : premier client payant ---------- */
+      MK.circleIn(tl, "#E", 14.3, { x: 127, y: 158, dur: 0.45 });
+      MK.rise(tl, "#e1t", 14.45, { dur: 0.5 });
+      MK.rise(tl, "#e2t", 15.25, { dur: 0.45 });
+      MK.rise(tl, "#e3t", 15.42, { dur: 0.45 });
+      MK.draw(tl, "#eck", 15.55, 0.35, "power3.out");
+      gsap.set("#eChk circle", { scale: 0, transformOrigin: "50px 50px" });
+      tl.to("#eChk circle", { scale: 1, duration: 0.5, ease: E.ui }, 15.45);
+      MK.pop(tl, "#ePill", 15.7);
+      MK.shake(tl, "#e2", 15.29, 10);
+
+      /* ---------- F : la méthode ---------- */
+      tl.fromTo("#F", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.35, ease: "expo.out", immediateRender: false }, 16.0);
+      MK.fadeIn(tl, "#fLab", 16.15, 0.3);
+      const letters = [...MK.split("#fv"), ...MK.split("#fm")];
+      gsap.set(letters, { opacity: 0, y: 60, filter: "blur(14px)" });
+      tl.to(letters, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out", stagger: 0.045 }, 16.85);
+      MK.pop(tl, ["#n1", "#n2", "#n3"], 17.9, { stagger: 0.1, dur: 0.4 });
+      MK.draw(tl, "#fp", 18.2, 0.5, "none");
+      const fpath = q("#fp");
+      gsap.set("#dot", { opacity: 0 });
+      tl.set("#dot", { opacity: 1 }, 18.7);
+      MK.follow(tl, "#dot", "#fp", 18.7, 1.0, { ease: "power1.inOut" });
+      gsap.set(["#l1", "#l2", "#l3"], { opacity: 0, x: -30 });
+      [["#n1", "#l1", 18.76], ["#n2", "#l2", 19.19], ["#n3", "#l3", 19.67]].forEach(([n, l, t]) => {
+        tl.to(n, { background: "#DDF247", borderColor: "#DDF247", boxShadow: "0 0 34px 10px rgba(221,242,71,.5)", scale: 1.15, duration: 0.25, ease: E.ui }, t);
+        tl.to(l, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, t);
+      });
+
+      /* ---------- G : prix (compteur à rouleaux), places, bouton ---------- */
+      const odo = q("#odo");
+      const COLS = [["2", 20.2, 0.55], [" "], ["9", 20.2, 0.7], ["0", 20.2, 0.85], ["0", 20.2, 1.0]];
+      COLS.forEach(([d, t, dur]) => {
+        if (d === " ") { MK.el("div", "col gap", odo); return; }
+        const c = MK.el("div", "col", odo), st = MK.el("div", "strip", c);
+        const seq = []; for (let i = 0; i < 9; i++) seq.push(Math.floor(R() * 10)); seq.push(+d);
+        st.innerHTML = seq.map((n) => `<b>${n}</b>`).join("");
+        tl.fromTo(st, { y: 0 }, { y: -(seq.length - 1) * 280, duration: dur, ease: "power3.out", immediateRender: false }, t);
+      });
+      MK.el("div", "", odo, "F").id = "odoF";
+      MK.pop(tl, "#odoF", 21.1, { from: 0.4 });
+      for (let i = 0; i < 50; i++) MK.el("i", "", "#seats");
+      MK.fadeIn(tl, "#seatLab", 21.8, 0.3);
+      MK.pop(tl, "#seats i", 21.95, { stagger: { each: 0.012, from: "start" }, dur: 0.4 });
+      MK.pop(tl, "#cta", 22.94, { from: 0.6 });
+      gsap.set("#hand", { x: 160, y: 240, opacity: 0 });
+      tl.to("#hand", { x: 0, y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 23.25);
+      tl.to("#cta", { scale: 0.94, duration: 0.08 }, 23.72); tl.to("#cta", { scale: 1, duration: 0.4, ease: E.ui }, 23.8);
+      MK.pulse(tl, "#cta", [24.54, 25.5], 1.05);
+      MK.fadeIn(tl, "#url", 23.95, 0.3);
+      MK.pop(tl, "#arrow", 24.2);
+      for (let k = 0; k < 5; k++) { tl.to("#arrow", { y: 26, duration: 0.22, ease: "power2.in" }, 24.5 + k * 0.38); tl.to("#arrow", { y: 0, duration: 0.16, ease: "power2.out" }, 24.72 + k * 0.38); }
+
+      /* ---------- grain pellicule ---------- */
+      tl.to("#grain", { backgroundPosition: "-2400px -1700px", duration: TOTAL, ease: `steps(${Math.round(TOTAL * 15)})` }, 0);
+
+      /* ---------- sous-titres mot à mot (mot prononcé en orange) ---------- */
+      const G = [
+        [[0.34, "Le"], [0.43, "maquis"], [0.89, "en"], [1.08, "face"], [1.29, "de"], [1.42, "chez"], [1.69, "toi"]],
+        [[1.95, "n'a"], [2.07, "pas"], [2.27, "de"], [2.4, "vidéo ?"]],
+        [[2.86, "Fais-la…"]],
+        [[3.84, "avant"], [4.19, "même"], [4.47, "qu'il"], [4.82, "te"], [4.96, "la"], [5.2, "demande."]],
+        [[5.7, "Avec"], [6.01, "l'IA,"], [6.27, "depuis"], [6.8, "ton"], [7.06, "téléphone."]],
+        [[7.98, "Puis"], [8.18, "va"], [8.42, "la"], [8.5, "lui"], [8.75, "montrer."]],
+        [[9.67, "Il"], [9.79, "voit"], [10.13, "sa"], [10.3, "pub,"]],
+        [[10.56, "avec"], [10.9, "son"], [11.16, "nom"], [11.42, "et"], [11.59, "ses"], [12.28, "plats…"]],
+        [[12.62, "C'est"], [12.85, "comme"], [13.13, "ça"], [13.24, "que"], [13.41, "tu"], [13.52, "peux"], [13.74, "décrocher…"]],
+        [[16.1, "La"], [16.2, "formation"], [16.85, "Vibe Motion"]],
+        [[17.58, "te"], [17.73, "montre"], [18.18, "cette"], [18.76, "méthode,"]],
+        [[19.02, "étape"], [19.51, "par"], [19.67, "étape."]],
+        [[20.34, "2 900"], [21.09, "francs"], [21.48, "pour"], [21.74, "les"], [21.95, "50"], [22.34, "premiers."]],
+        [[22.94, "Clique"], [23.23, "sur"], [23.39, "le"], [23.5, "lien"]],
+        [[23.72, "pour"], [23.94, "profiter"], [24.38, "de"], [24.54, "l'opportunité."]]
+      ];
+      const CAP_END = [14.3, 25.8];
+      G.forEach((grp, gi) => {
+        const g = MK.el("div", "cg", "#cap");
+        const ws = grp.map(([t, w]) => MK.el("span", "w", g, w));
+        const start = grp[0][0], next = gi < G.length - 1 ? G[gi + 1][0][0] : CAP_END[1];
+        const end = gi === 8 ? CAP_END[0] : next;
+        gsap.set(g, { opacity: 0 }); tl.set(g, { opacity: 1 }, start); tl.set(g, { opacity: 0 }, end);
+        ws.forEach((w, i) => {
+          const t = grp[i][0], tn = i < grp.length - 1 ? grp[i + 1][0] : end;
+          gsap.set(w, { opacity: 0, y: 18 });
+          tl.to(w, { opacity: 1, y: 0, duration: 0.14, ease: "power2.out" }, t);
+          tl.set(w, { color: "#FF7A45" }, t); tl.set(w, { color: "#FFFFFF" }, Math.min(tn, t + 0.6));
+        });
+      });
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

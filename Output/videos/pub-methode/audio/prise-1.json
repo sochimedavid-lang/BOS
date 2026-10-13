@@ -1,0 +1,440 @@
+[
+  {
+    "text": "Le",
+    "start": 0.04,
+    "end": 0.13,
+    "id": "w0"
+  },
+  {
+    "text": "make-up",
+    "start": 0.13,
+    "end": 0.59,
+    "id": "w1"
+  },
+  {
+    "text": "en",
+    "start": 0.59,
+    "end": 0.69,
+    "id": "w2"
+  },
+  {
+    "text": "face",
+    "start": 0.78,
+    "end": 0.99,
+    "id": "w3"
+  },
+  {
+    "text": "de",
+    "start": 0.99,
+    "end": 1.12,
+    "id": "w4"
+  },
+  {
+    "text": "chez",
+    "start": 1.12,
+    "end": 1.39,
+    "id": "w5"
+  },
+  {
+    "text": "toi",
+    "start": 1.39,
+    "end": 1.57,
+    "id": "w6"
+  },
+  {
+    "text": "n'a",
+    "start": 1.65,
+    "end": 1.77,
+    "id": "w7"
+  },
+  {
+    "text": "pas",
+    "start": 1.77,
+    "end": 1.97,
+    "id": "w8"
+  },
+  {
+    "text": "de",
+    "start": 1.97,
+    "end": 2.1,
+    "id": "w9"
+  },
+  {
+    "text": "vidéo?",
+    "start": 2.1,
+    "end": 2.52,
+    "id": "w10"
+  },
+  {
+    "text": "Fais-la,",
+    "start": 2.56,
+    "end": 3.54,
+    "id": "w11"
+  },
+  {
+    "text": "avant",
+    "start": 3.54,
+    "end": 3.89,
+    "id": "w12"
+  },
+  {
+    "text": "même",
+    "start": 3.89,
+    "end": 4.09,
+    "id": "w13"
+  },
+  {
+    "text": "qu'il",
+    "start": 4.17,
+    "end": 4.52,
+    "id": "w14"
+  },
+  {
+    "text": "te",
+    "start": 4.52,
+    "end": 4.66,
+    "id": "w15"
+  },
+  {
+    "text": "la",
+    "start": 4.66,
+    "end": 4.73,
+    "id": "w16"
+  },
+  {
+    "text": "demande.",
+    "start": 5.23,
+    "end": 5.36,
+    "id": "w17"
+  },
+  {
+    "text": "Avec",
+    "start": 5.4,
+    "end": 5.71,
+    "id": "w18"
+  },
+  {
+    "text": "Lia",
+    "start": 5.71,
+    "end": 5.97,
+    "id": "w19"
+  },
+  {
+    "text": "depuis",
+    "start": 5.97,
+    "end": 6.5,
+    "id": "w20"
+  },
+  {
+    "text": "ton",
+    "start": 6.5,
+    "end": 6.76,
+    "id": "w21"
+  },
+  {
+    "text": "téléphone.",
+    "start": 6.76,
+    "end": 7.64,
+    "id": "w22"
+  },
+  {
+    "text": "Kui",
+    "start": 7.68,
+    "end": 7.88,
+    "id": "w23"
+  },
+  {
+    "text": "va",
+    "start": 7.88,
+    "end": 8,
+    "id": "w24"
+  },
+  {
+    "text": "la",
+    "start": 8.12,
+    "end": 8.2,
+    "id": "w25"
+  },
+  {
+    "text": "lui",
+    "start": 8.2,
+    "end": 8.45,
+    "id": "w26"
+  },
+  {
+    "text": "montrer.",
+    "start": 8.45,
+    "end": 9.32,
+    "id": "w27"
+  },
+  {
+    "text": "Il",
+    "start": 9.37,
+    "end": 9.49,
+    "id": "w28"
+  },
+  {
+    "text": "voit",
+    "start": 9.49,
+    "end": 9.83,
+    "id": "w29"
+  },
+  {
+    "text": "sa",
+    "start": 9.83,
+    "end": 10,
+    "id": "w30"
+  },
+  {
+    "text": "pub",
+    "start": 10,
+    "end": 10.25,
+    "id": "w31"
+  },
+  {
+    "text": "avec",
+    "start": 10.26,
+    "end": 10.54,
+    "id": "w32"
+  },
+  {
+    "text": "son",
+    "start": 10.6,
+    "end": 10.86,
+    "id": "w33"
+  },
+  {
+    "text": "nom",
+    "start": 10.86,
+    "end": 11.11,
+    "id": "w34"
+  },
+  {
+    "text": "et",
+    "start": 11.12,
+    "end": 11.29,
+    "id": "w35"
+  },
+  {
+    "text": "ses",
+    "start": 11.29,
+    "end": 11.53,
+    "id": "w36"
+  },
+  {
+    "text": "plats.",
+    "start": 11.98,
+    "end": 12.28,
+    "id": "w37"
+  },
+  {
+    "text": "C'est",
+    "start": 12.32,
+    "end": 12.55,
+    "id": "w38"
+  },
+  {
+    "text": "comme",
+    "start": 12.55,
+    "end": 12.83,
+    "id": "w39"
+  },
+  {
+    "text": "ça",
+    "start": 12.83,
+    "end": 12.94,
+    "id": "w40"
+  },
+  {
+    "text": "que",
+    "start": 12.94,
+    "end": 13.11,
+    "id": "w41"
+  },
+  {
+    "text": "tu",
+    "start": 13.11,
+    "end": 13.21,
+    "id": "w42"
+  },
+  {
+    "text": "peux",
+    "start": 13.22,
+    "end": 13.44,
+    "id": "w43"
+  },
+  {
+    "text": "décrocher",
+    "start": 13.44,
+    "end": 14,
+    "id": "w44"
+  },
+  {
+    "text": "ton",
+    "start": 14,
+    "end": 14.2,
+    "id": "w45"
+  },
+  {
+    "text": "premier",
+    "start": 14.2,
+    "end": 14.49,
+    "id": "w46"
+  },
+  {
+    "text": "client",
+    "start": 14.99,
+    "end": 15.12,
+    "id": "w47"
+  },
+  {
+    "text": "payant.",
+    "start": 15.12,
+    "end": 15.76,
+    "id": "w48"
+  },
+  {
+    "text": "La",
+    "start": 15.8,
+    "end": 15.9,
+    "id": "w49"
+  },
+  {
+    "text": "formation",
+    "start": 15.9,
+    "end": 16.55,
+    "id": "w50"
+  },
+  {
+    "text": "Vibemotion",
+    "start": 16.55,
+    "end": 17.28,
+    "id": "w51"
+  },
+  {
+    "text": "te",
+    "start": 17.28,
+    "end": 17.43,
+    "id": "w52"
+  },
+  {
+    "text": "montre",
+    "start": 17.43,
+    "end": 17.88,
+    "id": "w53"
+  },
+  {
+    "text": "cette",
+    "start": 17.88,
+    "end": 17.98,
+    "id": "w54"
+  },
+  {
+    "text": "méthode",
+    "start": 18.46,
+    "end": 18.72,
+    "id": "w55"
+  },
+  {
+    "text": "étape",
+    "start": 18.72,
+    "end": 19.11,
+    "id": "w56"
+  },
+  {
+    "text": "par",
+    "start": 19.21,
+    "end": 19.34,
+    "id": "w57"
+  },
+  {
+    "text": "étape.",
+    "start": 19.37,
+    "end": 20,
+    "id": "w58"
+  },
+  {
+    "text": "2900",
+    "start": 20.04,
+    "end": 20.79,
+    "id": "w59"
+  },
+  {
+    "text": "francs",
+    "start": 20.79,
+    "end": 21.18,
+    "id": "w60"
+  },
+  {
+    "text": "pour",
+    "start": 21.18,
+    "end": 21.44,
+    "id": "w61"
+  },
+  {
+    "text": "les",
+    "start": 21.44,
+    "end": 21.57,
+    "id": "w62"
+  },
+  {
+    "text": "50",
+    "start": 21.65,
+    "end": 22.04,
+    "id": "w63"
+  },
+  {
+    "text": "premiers.",
+    "start": 22.04,
+    "end": 22.6,
+    "id": "w64"
+  },
+  {
+    "text": "Clique",
+    "start": 22.64,
+    "end": 22.93,
+    "id": "w65"
+  },
+  {
+    "text": "sur",
+    "start": 22.93,
+    "end": 23.09,
+    "id": "w66"
+  },
+  {
+    "text": "le",
+    "start": 23.09,
+    "end": 23.2,
+    "id": "w67"
+  },
+  {
+    "text": "lien",
+    "start": 23.2,
+    "end": 23.42,
+    "id": "w68"
+  },
+  {
+    "text": "pour",
+    "start": 23.42,
+    "end": 23.64,
+    "id": "w69"
+  },
+  {
+    "text": "profiter",
+    "start": 23.64,
+    "end": 24.08,
+    "id": "w70"
+  },
+  {
+    "text": "de",
+    "start": 24.08,
+    "end": 24.17,
+    "id": "w71"
+  },
+  {
+    "text": "l'opportunité.",
+    "start": 24.24,
+    "end": 25.12,
+    "id": "w72"
+  }
+]
