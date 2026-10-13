@@ -14,7 +14,7 @@
 | 3 | **Produit Chariow + lien de paiement** | Toi | Encaisser | Mar 13 | ✓ Fait (prd_zqv7lcu4) — reste : lien WhatsApp dans le message post-achat |
 | 4 | **Envoyer : méthode exacte de paiement Claude via MTN MoMo, preuves + accord, numéro WhatsApp** | Toi (15 min) | Module 0 + section preuves + contact | Mar 13 | À faire |
 | 5 | **3 scripts de pub conformes Meta (angle « créé sans savoir monter »)** | BOS | Trafic | Mar 13 | À faire |
-| 6 | Mettre le site en ligne (Netlify Drop) + pixel Meta | Toi (10 min, guidé) | Page publique | Mer 14 | À faire |
+| 6 | Mettre le site en ligne (Netlify Drop) + pixel Meta | Toi, quand TU valides la page | Page publique | — | En attente de ta validation |
 | 7 | Lancer la campagne Meta, Bénin, budget test | Toi (45 min, guidé) | Premières ventes + métriques | Mer 14 | À faire |
 | 8 | Modules 2 à 5 | BOS écrit / Toi enregistres | Livraison | Dim 18 | À faire |
 
