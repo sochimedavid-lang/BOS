@@ -91,3 +91,7 @@
 - Demande de l'entrepreneur : aller plus vite sans perdre en qualité. Création du skill `.claude/skills/motion-kit` : briques d'animation, sous-titres automatiques, moteur de son générique, générateur de projet, méthode et garde-fous. Partageable avec les apprenants. Règle de vitesse ajoutée dans CLAUDE.md.
 - ⚠ ElevenLabs a refusé 1 prise sur 4 : « activité inhabituelle, accès gratuit désactivé, passer à un abonnement payant ». Le compte est encore sur le palier gratuit, ou signalé. À régler avant les prochaines voix.
 - Correction demandée : poubelle passée en blanc (elle était noire, peu visible) ; les étiquettes disparaissent dès qu'elles tombent dedans.
+
+### 2026-10-13 — Vidéo SERVTHEM (restauration collective, à partir de leur affiche)
+- Réalisée avec le kit : l'assiette sert de fenêtre, une cloche dorée révèle chacun des 4 engagements, les secteurs tournent en orbite, parallaxe en 3 bandes, slogan écrit à la main, contact. Voix « Micha » (prise 2). Photos Pexels (visages et plats africains). Logo recréé en vectoriel d'après l'affiche (à remplacer par le logo HD du client).
+- Output/videos/servthem/out/final.mp4, 27 s, 30 i/s.

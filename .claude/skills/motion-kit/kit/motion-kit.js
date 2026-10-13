@@ -49,7 +49,8 @@
   MK.marquee = (tl, sel, t, dur, dx) => tl.to(sel, { x: dx, duration: dur, ease: "none" }, t);
 
   /* ---------- tracés ---------- */
-  MK.draw = (tl, path, t, dur = 1, ease = "power2.inOut") => { const p = $(path), L = p.getTotalLength(); gsap.set(p, { strokeDasharray: L, strokeDashoffset: L }); tl.to(p, { strokeDashoffset: 0, duration: dur, ease }, t); };
+  // (opacity 0 avant le départ : sinon un bout arrondi laisse un point visible)
+  MK.draw = (tl, path, t, dur = 1, ease = "power2.inOut") => { const p = $(path), L = p.getTotalLength(); gsap.set(p, { strokeDasharray: L, strokeDashoffset: L, opacity: 0 }); tl.set(p, { opacity: 1 }, t); tl.to(p, { strokeDashoffset: 0, duration: dur, ease }, t); };
   // fait suivre un tracé SVG à un élément (dx, dy = position du SVG dans son parent)
   MK.follow = (tl, sel, path, t, dur = 1, { dx = 0, dy = 0, ease = "power2.inOut" } = {}) => { const p = $(path), o = { k: 0 }; tl.to(o, { k: 1, duration: dur, ease, onUpdate: () => { const q = p.getPointAtLength(p.getTotalLength() * o.k); gsap.set(sel, { x: dx + q.x, y: dy + q.y }); } }, t); };
 

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #0C221E; --gold: #D9B25E; --gold2: #F0D58F; --cream: #F5EFE3; --teal: #3FB59F; }
+      #root { background: var(--bg); }
+      .bgG { position: absolute; inset: 0; background: radial-gradient(1000px 1100px at 50% 55%, #17423A 0%, #0E2B26 45%, #071613 100%); }
+      .script { font-family: "Kaushan Script", cursive; color: var(--gold); line-height: 1.05; }
+      .mont { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; color: var(--cream); }
+      .lab { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 30px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+      .sub { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 42px; color: rgba(245,239,227,.85); }
+      /* assiette */
+      .plate { position: absolute; width: 780px; height: 780px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #FFFFFF 0%, #F3EFE8 55%, #D9D2C6 100%); box-shadow: 0 50px 90px rgba(0,0,0,.55), inset 0 0 0 6px rgba(217,178,94,.0); }
+      .plate::after { content: ""; position: absolute; inset: 22px; border-radius: 50%; border: 4px solid var(--gold); opacity: .9; }
+      .plate .ph { position: absolute; inset: 70px; border-radius: 50%; overflow: hidden; box-shadow: inset 0 0 40px rgba(0,0,0,.45); }
+      .plate .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.12) contrast(1.05); }
+      .medal { position: absolute; width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--gold); background: rgba(12,34,30,.92); display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+      .medal svg { width: 78px; height: 78px; fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .medal.on { background: var(--gold); } .medal.on svg { stroke: #0C221E; }
+      .strip { position: absolute; top: 0; height: 1920px; overflow: hidden; }
+      .strip img { position: absolute; left: 50%; top: 0; height: 2300px; transform: translateX(-50%); object-fit: cover; filter: saturate(1.1) brightness(.62); }
+      .pillc { display: inline-flex; align-items: center; gap: 22px; padding: 22px 38px; border-radius: 999px; border: 3px solid var(--gold); color: var(--cream); font-family: "Poppins", sans-serif; font-weight: 600; font-size: 42px; background: rgba(7,22,19,.6); }
+      .pillc i { width: 64px; height: 64px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="27" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="27" data-track-index="10"></audio>
+      <div class="bgG" data-layout-allow-occlusion></div>
+
+      <!-- 1. Des milliers de repas -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <svg id="ring1" class="abs" style="left:90px; top:510px" width="900" height="900" viewBox="0 0 900 900"><circle id="r1" cx="450" cy="450" r="420" fill="none" stroke="#D9B25E" stroke-width="5"/><circle id="r1b" cx="450" cy="450" r="380" fill="none" stroke="#D9B25E" stroke-width="1.5" opacity=".6"/></svg>
+        <div class="abs center" style="inset:0; flex-direction:column">
+          <div id="l1" class="lab">Chaque jour</div>
+          <div id="cnt" class="mont" style="font-size:210px; margin-top:20px; letter-spacing:-.02em">0</div>
+          <div class="m" style="font-size:150px"><span id="rep" class="script" style="font-size:150px">repas</span></div>
+        </div>
+      </div>
+
+      <!-- 2. La même exigence -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="pl2" class="plate" style="left:150px; top:420px"><div class="ph"><img src="img/p17952748.jpg" style="object-position:50% 60%"></div></div>
+        <div class="abs center" style="left:0; right:0; top:1330px; flex-direction:column">
+          <div id="l2" class="lab">À chaque assiette</div>
+          <div class="m" style="font-size:118px; margin-top:24px"><span id="t2" class="script" style="font-size:118px">la même exigence.</span></div>
+          <svg class="abs" style="left:250px; top:250px" width="580" height="40" viewBox="0 0 580 40"><path id="u2" d="M10 28 C 150 8, 380 4, 570 20" fill="none" stroke="#D9B25E" stroke-width="6" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+      <!-- 3. Les 4 engagements : cloche qui se soulève -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="pillars"></div>
+      </div>
+
+      <!-- 4. Secteurs autour de l'assiette -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="pl4" class="plate" style="left:150px; top:560px"><div class="ph">
+          <img id="sp1" src="img/p9090821.jpg" style="object-position:62% 50%"><img id="sp2" src="img/p8166269.jpg"><img id="sp3" src="img/p13994299.jpg"><img id="sp4" src="img/p12253094.jpg" style="object-position:50% 70%">
+        </div></div>
+        <div id="orbit" class="abs" style="left:540px; top:950px; width:0; height:0"></div>
+        <div class="abs" style="left:0; right:0; top:1520px; text-align:center">
+          <div id="secName" class="mont" style="font-size:96px">Écoles</div>
+        </div>
+        <div id="l4" class="lab abs" style="left:0; right:0; top:330px; text-align:center">Ils nous font confiance</div>
+      </div>
+
+      <!-- 5. Ceux qui font avancer le pays -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="strip" style="left:0; width:360px"><img id="st1" src="img/p28736731.jpg"></div>
+        <div class="strip" style="left:360px; width:360px"><img id="st2" src="img/p9090821.jpg"></div>
+        <div class="strip" style="left:720px; width:360px"><img id="st3" src="img/p36505864.jpg"></div>
+        <div class="abs" style="left:0; right:0; top:0; height:1920px; background:linear-gradient(180deg, rgba(7,22,19,.2), rgba(7,22,19,.75) 55%, rgba(7,22,19,.95))"></div>
+        <div class="abs center" style="left:0; right:0; top:1080px; flex-direction:column; text-align:center">
+          <div class="m" style="font-size:96px"><span id="t5a" class="mont" style="font-size:96px">Nous nourrissons</span></div>
+          <div class="m" style="font-size:60px; margin-top:16px"><span id="t5b" style="font-family:Poppins; font-weight:500; font-size:60px; color:var(--cream)">ceux qui font avancer</span></div>
+          <div class="m" style="font-size:150px"><span id="t5c" class="script" style="font-size:150px">le pays.</span></div>
+        </div>
+      </div>
+
+      <!-- 6. Marque + contact -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="logo" class="abs center" style="left:0; right:0; top:330px; flex-direction:column">
+          <svg width="330" height="120" viewBox="0 0 330 120">
+            <defs><linearGradient id="lg1" x1="0" x2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#BFC6C4"/></linearGradient><linearGradient id="lg2" x1="0" x2="1"><stop offset="0" stop-color="#7FD9C4"/><stop offset="1" stop-color="#2E9C86"/></linearGradient></defs>
+            <polygon id="b1" points="110,6 320,6 290,30 80,30" fill="url(#lg1)"/>
+            <polygon id="b2" points="60,40 300,40 268,72 28,72" fill="url(#lg2)"/>
+            <polygon id="b3" points="30,82 250,82 222,108 2,108" fill="#1F6F60"/>
+          </svg>
+          <div class="m" style="font-size:130px; margin-top:18px"><span id="lgName" class="mont" style="font-size:130px; letter-spacing:.12em; color:#E9F4F1">SERVTHEM</span></div>
+          <div id="lgSub" class="lab" style="font-size:26px; letter-spacing:.24em">Solutions en restauration collective</div>
+        </div>
+        <div id="tag" class="abs" style="left:90px; top:860px; width:960px; white-space:nowrap">
+          <div id="tg1" class="script" style="font-size:100px; color:var(--cream)">Le goût du service,</div>
+          <div id="tg2" class="script" style="font-size:100px; color:var(--cream); margin-left:40px">au cœur de vos repas</div>
+          <svg class="abs" style="left:150px; top:240px" width="700" height="50" viewBox="0 0 700 50"><path id="u6" d="M10 38 C 200 10, 460 4, 690 24" fill="none" stroke="#D9B25E" stroke-width="8" stroke-linecap="round"/></svg>
+        </div>
+        <div id="contact" class="abs" style="left:0; right:0; top:1300px; display:flex; flex-direction:column; align-items:center; gap:26px">
+          <div id="c1" class="pillc"><i><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></i>+229 42 88 19 22</div>
+          <div id="c2" class="pillc" style="font-size:38px"><i><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i>servthemofficiel@gmail.com</div>
+          <div id="c3" class="script" style="font-size:50px; margin-top:24px; white-space:nowrap">Ensemble pour une alimentation de qualité !</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const TOTAL = 27;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+      const ICON = {
+        chef: '<svg viewBox="0 0 24 24"><path d="M7 14a4 4 0 0 1-1-7.9A5 5 0 0 1 12 3a5 5 0 0 1 6 3.1A4 4 0 0 1 17 14"/><path d="M7 14h10v6H7z"/><path d="M10 17h4"/></svg>',
+        leaf: '<svg viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19L13 11"/></svg>',
+        people: '<svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6"/><path d="M14 20c.3-3 1.6-4.5 3-4.5 2.4 0 4.5 1.5 5 4.5"/></svg>',
+        shield: '<svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>',
+        school: '<svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18"/><path d="M16 3c2 1 3 3 3 6s-1 4-3 4v8"/></svg>',
+        building: '<svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg>',
+        hospital: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M9 6V3h6v3M12 10v7M8.5 13.5h7"/></svg>',
+        admin: '<svg viewBox="0 0 24 24"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 9V7M10 7h4"/></svg>',
+      };
+
+      /* ---------- construction des 4 engagements ---------- */
+      const PILLARS = [
+        ["01", "Qualité culinaire", "Savoureux et équilibré", "img/p13994299.jpg", "chef", "50% 50%"],
+        ["02", "Produits frais", "Choisis avec rigueur", "img/p2252584.jpg", "leaf", "40% 50%"],
+        ["03", "Service personnalisé", "À l'écoute de vos besoins", "img/p28736731.jpg", "people", "45% 40%"],
+        ["04", "Hygiène & sécurité", "Sans compromis", "img/p36505864.jpg", "shield", "45% 45%"],
+      ];
+      const pw = MK.$("#pillars");
+      PILLARS.forEach(([n, t, s, img, ic, pos], i) => {
+        pw.insertAdjacentHTML("beforeend", `
+          <div id="pp${i}" class="abs" style="inset:0">
+            <div class="abs" style="left:110px; top:250px; width:880px">
+              <div class="lab">${n} / 04</div>
+              <div class="m" style="font-size:86px; margin-top:14px"><span id="pt${i}" class="mont" style="font-size:86px; line-height:1.02">${t}</span></div>
+              <div class="m" style="font-size:42px; margin-top:12px"><span id="ps${i}" class="sub">${s}</span></div>
+            </div>
+            <div id="pplate${i}" class="plate" style="left:150px; top:660px"><div class="ph"><img src="${img}" style="object-position:${pos}"></div></div>
+            <div id="pmed${i}" class="medal" style="left:770px; top:640px">${ICON[ic]}</div>
+            <svg id="cl${i}" class="abs" style="left:40px; top:760px; overflow:visible" width="1000" height="650" viewBox="-430 -540 860 560">
+              <defs><linearGradient id="cg${i}" x1="0" x2="1"><stop offset="0" stop-color="#8E7334"/><stop offset=".35" stop-color="#F3DA9A"/><stop offset=".55" stop-color="#D9B25E"/><stop offset="1" stop-color="#6E5524"/></linearGradient></defs>
+              <path d="M-400 0 C-400 -330 -230 -470 0 -480 C230 -470 400 -330 400 0 Z" fill="url(#cg${i})"/>
+              <path d="M-300 -60 C-300 -260 -190 -380 -40 -410" fill="none" stroke="#FFF6D8" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+              <rect x="-430" y="-8" width="860" height="26" rx="13" fill="#B58E40"/>
+              <circle cx="0" cy="-505" r="34" fill="url(#cg${i})"/>
+            </svg>
+          </div>`);
+      });
+      // médaillons des secteurs en orbite
+      const SECT = [["school", "Écoles"], ["building", "Entreprises"], ["hospital", "Hôpitaux"], ["admin", "Administrations"]];
+      SECT.forEach(([ic], i) => { const a = -Math.PI / 2 + i * Math.PI / 2 - Math.PI / 4; MK.el("div", "medal", "#orbit", ICON[ic], { left: Math.cos(a) * 450 - 75 + "px", top: Math.sin(a) * 450 - 75 + "px" }).id = "sm" + i; });
+
+      /* ---------- scènes ---------- */
+      MK.scenes(tl, [["#s1", 0, 2.75], ["#s2", 2.7, 5.2], ["#s3", 5.15, 14.15], ["#s4", 14.1, 17.75], ["#s5", 17.7, 20.1], ["#s6", 20.05, TOTAL]], TOTAL);
+
+      /* 1. compteur + assiette dessinée en or */
+      MK.fadeIn(tl, "#l1", 0.2, 0.4);
+      MK.count(tl, "#cnt", 0, 10000, 0.5, 1.5, (v) => (v >= 10000 ? "10 000" : Math.round(v).toLocaleString("fr-FR")));
+      tl.to("#cnt", { scale: 1.06, duration: 0.15, yoyo: true, repeat: 1 }, 2.0);
+      MK.rise(tl, "#rep", 1.7);
+      MK.draw(tl, "#r1", 0.4, 1.6, "power2.inOut");
+      MK.draw(tl, "#r1b", 0.7, 1.4, "power2.inOut");
+      tl.to("#s1 .center", { scale: 0.4, opacity: 0, duration: 0.45, ease: "power3.in" }, 2.35);
+      tl.to("#ring1", { scale: 0.92, duration: 0.45, ease: "power3.in" }, 2.35);
+
+      /* 2. on plonge dans l'assiette */
+      gsap.set("#pl2", { scale: 0.2, opacity: 0 });
+      tl.to("#pl2", { scale: 1, opacity: 1, duration: 0.8, ease: E.card }, 2.7);
+      tl.fromTo("#pl2 img", { scale: 1.35 }, { scale: 1.05, duration: 2.6, ease: "sine.out", immediateRender: false }, 2.7);
+      tl.to("#pl2", { rotation: 8, duration: 2.4, ease: "sine.inOut" }, 2.8);
+      MK.fadeIn(tl, "#l2", 3.0, 0.3);
+      MK.rise(tl, "#t2", 4.0);
+      MK.draw(tl, "#u2", 4.5, 0.6);
+      tl.to("#pl2", { x: -1100, rotation: -20, duration: 0.5, ease: "power3.in" }, 4.75);
+      tl.to("#s2 .center", { opacity: 0, duration: 0.3 }, 4.85);
+
+      /* 3. engagements : la cloche se soulève sur chaque mot */
+      const T3 = [5.25, 7.7, 10.25, 12.4];
+      PILLARS.forEach((p, i) => {
+        const t = T3[i], end = i < 3 ? T3[i + 1] : 14.1;
+        gsap.set(`#pp${i}`, { opacity: 0 });
+        tl.set(`#pp${i}`, { opacity: 1 }, t - 0.05);
+        if (i < 3) tl.set(`#pp${i}`, { opacity: 0 }, end);
+        // l'assiette et sa cloche arrivent de la droite
+        gsap.set([`#pplate${i}`, `#cl${i}`], { x: 1100 });
+        tl.to([`#pplate${i}`, `#cl${i}`], { x: 0, duration: 0.55, ease: E.card }, t - 0.05);
+        // la cloche se soulève
+        tl.to(`#cl${i}`, { y: -1500, x: 260, rotation: 22, duration: 0.65, ease: "power3.in" }, t + 0.45);
+        tl.set(`#cl${i}`, { opacity: 0 }, t + 1.1);
+        tl.fromTo(`#pplate${i} img`, { scale: 1.3 }, { scale: 1.05, duration: 2.0, ease: "sine.out", immediateRender: false }, t + 0.45);
+        MK.pop(tl, `#pmed${i}`, t + 0.75);
+        MK.rise(tl, `#pt${i}`, t + 0.2);
+        MK.rise(tl, `#ps${i}`, t + 0.55);
+        tl.to(`#pplate${i}`, { rotation: 6, duration: 1.8, ease: "sine.inOut" }, t + 0.5);
+        if (i < 3) { tl.to([`#pplate${i}`, `#pmed${i}`], { x: -1100, duration: 0.45, ease: "power3.in" }, end - 0.45); tl.to([`#pt${i}`, `#ps${i}`], { yPercent: -115, duration: 0.3, ease: "power3.in" }, end - 0.35); }
+      });
+      tl.to(["#pplate3", "#pmed3"], { scale: 0.85, opacity: 0, duration: 0.4, ease: "power3.in" }, 13.75);
+      tl.to(["#pt3", "#ps3"], { yPercent: -115, duration: 0.3, ease: "power3.in" }, 13.8);
+
+      /* 4. secteurs en orbite autour de l'assiette */
+      gsap.set("#pl4", { scale: 0.6, opacity: 0 });
+      tl.to("#pl4", { scale: 1, opacity: 1, duration: 0.6, ease: E.card }, 14.1);
+      MK.pop(tl, ["#sm0", "#sm1", "#sm2", "#sm3"], 14.15, { stagger: 0.06 });
+      MK.fadeIn(tl, "#l4", 14.2, 0.3);
+      tl.to("#orbit", { rotation: 90, duration: 3.6, ease: "none" }, 14.1);
+      tl.to(["#sm0", "#sm1", "#sm2", "#sm3"], { rotation: -90, duration: 3.6, ease: "none" }, 14.1);
+      gsap.set(["#sp2", "#sp3", "#sp4"], { opacity: 0 });
+      [[14.25, 0, "Écoles"], [14.78, 1, "Entreprises"], [15.74, 2, "Hôpitaux"], [16.65, 3, "Administrations"]].forEach(([t, i, name]) => {
+        tl.set("#secName", { textContent: name }, t);
+        tl.fromTo("#secName", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, t);
+        tl.set(`#sm${i}`, { className: "medal on" }, t);
+        if (i > 0) { tl.set(`#sm${i - 1}`, { className: "medal" }, t); tl.to(`#sp${i + 1}`, { opacity: 1, duration: 0.25 }, t); }
+        MK.pulse(tl, `#sm${i}`, [t], 1.15);
+      });
+      tl.to(["#pl4", "#orbit", "#secName", "#l4"], { opacity: 0, scale: 1.1, duration: 0.35, ease: "power2.in" }, 17.4);
+
+      /* 5. parallaxe en 3 bandes */
+      tl.fromTo("#st1", { y: 0 }, { y: -380, duration: 2.6, ease: "none" }, 17.7);
+      tl.fromTo("#st2", { y: -380 }, { y: 0, duration: 2.6, ease: "none" }, 17.7);
+      tl.fromTo("#st3", { y: 0 }, { y: -300, duration: 2.6, ease: "none" }, 17.7);
+      gsap.set(".strip", { clipPath: "inset(100% 0 0 0)" });
+      tl.to(".strip", { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.out", stagger: 0.08 }, 17.7);
+      MK.rise(tl, "#t5a", 17.85);
+      MK.rise(tl, "#t5b", 18.4);
+      MK.rise(tl, "#t5c", 19.05);
+
+      /* 6. logo, slogan écrit à la main, contact */
+      gsap.set(["#b1", "#b2", "#b3"], { x: -380, opacity: 0 });
+      tl.to(["#b3", "#b2", "#b1"], { x: 0, opacity: 1, duration: 0.6, ease: E.card, stagger: 0.09 }, 20.1);
+      MK.rise(tl, "#lgName", 20.3);
+      MK.fadeIn(tl, "#lgSub", 20.7, 0.4);
+      gsap.set(["#tg1", "#tg2"], { clipPath: "inset(0 100% 0 0)" });
+      tl.to("#tg1", { clipPath: "inset(0 0% 0 0)", duration: 0.75, ease: "power1.inOut" }, 21.15);
+      tl.to("#tg2", { clipPath: "inset(0 0% 0 0)", duration: 0.85, ease: "power1.inOut" }, 22.2);
+      MK.draw(tl, "#u6", 23.0, 0.6);
+      MK.slide(tl, ["#c1", "#c2"], 23.6, { y: 80, stagger: 0.15 });
+      MK.fadeIn(tl, ["#c1", "#c2"], 23.6, 0.3);
+      MK.fadeIn(tl, "#c3", 24.4, 0.5);
+      MK.pulse(tl, "#c1", [25.2, 26.2], 1.04);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
