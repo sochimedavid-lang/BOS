@@ -105,3 +105,7 @@
 ### 2026-10-13 · Portfolio : référence n°9 → « Sikaflow » (`Output/videos/sikaflow`)
 - Pub d'appli fintech fictive (gestion d'argent pour freelances et commerçants, Mobile Money, F CFA). 25,5 s, voix Paul K en une prise, musique pulse + bruitages, -14 LUFS.
 - Corrections avant rendu : tableau de bord absent sur l'écran de fin, icônes et billets passant devant le texte, émojis sur « GRATUIT ».
+
+### 2026-10-13 · Portfolio : référence n°6 → « Rempart Défense » (`Output/videos/rempart`)
+- Pub d'un service de cybersécurité fictif pour PME (intro dorée → univers sarcelle néon, bouclier 3D, jauge, CTA démo). 25,8 s, voix Paul K, -14 LUFS.
+- ElevenLabs : 3 prises sur 4 refusées (« Free Tier access disabled, unusual activity »). Une prise est passée. Risque de blocage total : passer sur un forfait payant (Starter) avant la prochaine vidéo.

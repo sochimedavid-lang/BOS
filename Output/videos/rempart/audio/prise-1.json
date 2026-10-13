@@ -1,0 +1,350 @@
+[
+  {
+    "text": "Protégez",
+    "start": 0.06,
+    "end": 0.52,
+    "id": "w0"
+  },
+  {
+    "text": "les",
+    "start": 0.52,
+    "end": 0.72,
+    "id": "w1"
+  },
+  {
+    "text": "données",
+    "start": 0.72,
+    "end": 1.2,
+    "id": "w2"
+  },
+  {
+    "text": "de",
+    "start": 1.2,
+    "end": 1.33,
+    "id": "w3"
+  },
+  {
+    "text": "ton",
+    "start": 1.33,
+    "end": 1.53,
+    "id": "w4"
+  },
+  {
+    "text": "entreprise.",
+    "start": 1.59,
+    "end": 2.28,
+    "id": "w5"
+  },
+  {
+    "text": "Prendez-moi.",
+    "start": 2.33,
+    "end": 3.46,
+    "id": "w6"
+  },
+  {
+    "text": "Écoute",
+    "start": 3.52,
+    "end": 4.02,
+    "id": "w7"
+  },
+  {
+    "text": "des",
+    "start": 4.02,
+    "end": 4.3,
+    "id": "w8"
+  },
+  {
+    "text": "millions.",
+    "start": 4.3,
+    "end": 5.18,
+    "id": "w9"
+  },
+  {
+    "text": "Voici",
+    "start": 5.24,
+    "end": 5.71,
+    "id": "w10"
+  },
+  {
+    "text": "Rempart",
+    "start": 5.71,
+    "end": 6.46,
+    "id": "w11"
+  },
+  {
+    "text": "défense.",
+    "start": 6.46,
+    "end": 7.24,
+    "id": "w12"
+  },
+  {
+    "text": "On",
+    "start": 7.29,
+    "end": 7.4,
+    "id": "w13"
+  },
+  {
+    "text": "sécurise",
+    "start": 7.4,
+    "end": 8.05,
+    "id": "w14"
+  },
+  {
+    "text": "tout,",
+    "start": 8.05,
+    "end": 8.42,
+    "id": "w15"
+  },
+  {
+    "text": "de",
+    "start": 8.42,
+    "end": 8.57,
+    "id": "w16"
+  },
+  {
+    "text": "bout",
+    "start": 8.57,
+    "end": 8.87,
+    "id": "w17"
+  },
+  {
+    "text": "en",
+    "start": 8.87,
+    "end": 9.02,
+    "id": "w18"
+  },
+  {
+    "text": "bout.",
+    "start": 9.02,
+    "end": 9.44,
+    "id": "w19"
+  },
+  {
+    "text": "Tes",
+    "start": 9.64,
+    "end": 9.75,
+    "id": "w20"
+  },
+  {
+    "text": "comptes,",
+    "start": 9.82,
+    "end": 10.3,
+    "id": "w21"
+  },
+  {
+    "text": "tes",
+    "start": 10.3,
+    "end": 10.48,
+    "id": "w22"
+  },
+  {
+    "text": "fichiers",
+    "start": 10.48,
+    "end": 10.94,
+    "id": "w23"
+  },
+  {
+    "text": "clients,",
+    "start": 10.99,
+    "end": 11.5,
+    "id": "w24"
+  },
+  {
+    "text": "ton",
+    "start": 11.5,
+    "end": 11.71,
+    "id": "w25"
+  },
+  {
+    "text": "mobile",
+    "start": 12.02,
+    "end": 12.25,
+    "id": "w26"
+  },
+  {
+    "text": "monnaie.",
+    "start": 12.25,
+    "end": 12.88,
+    "id": "w27"
+  },
+  {
+    "text": "Ton",
+    "start": 12.94,
+    "end": 13.05,
+    "id": "w28"
+  },
+  {
+    "text": "rapport",
+    "start": 13.12,
+    "end": 13.52,
+    "id": "w29"
+  },
+  {
+    "text": "de",
+    "start": 13.59,
+    "end": 13.66,
+    "id": "w30"
+  },
+  {
+    "text": "sécurité,",
+    "start": 13.66,
+    "end": 14.34,
+    "id": "w31"
+  },
+  {
+    "text": "près",
+    "start": 14.34,
+    "end": 14.6,
+    "id": "w32"
+  },
+  {
+    "text": "en",
+    "start": 14.6,
+    "end": 14.73,
+    "id": "w33"
+  },
+  {
+    "text": "moins",
+    "start": 14.73,
+    "end": 14.99,
+    "id": "w34"
+  },
+  {
+    "text": "de",
+    "start": 14.99,
+    "end": 15.12,
+    "id": "w35"
+  },
+  {
+    "text": "30",
+    "start": 15.32,
+    "end": 15.59,
+    "id": "w36"
+  },
+  {
+    "text": "minutes.",
+    "start": 15.59,
+    "end": 16.08,
+    "id": "w37"
+  },
+  {
+    "text": "Ton",
+    "start": 16.34,
+    "end": 16.45,
+    "id": "w38"
+  },
+  {
+    "text": "score",
+    "start": 16.51,
+    "end": 16.84,
+    "id": "w39"
+  },
+  {
+    "text": "de",
+    "start": 16.84,
+    "end": 16.91,
+    "id": "w40"
+  },
+  {
+    "text": "protection,",
+    "start": 16.98,
+    "end": 17.81,
+    "id": "w41"
+  },
+  {
+    "text": "en",
+    "start": 17.87,
+    "end": 17.97,
+    "id": "w42"
+  },
+  {
+    "text": "temps",
+    "start": 17.97,
+    "end": 18.32,
+    "id": "w43"
+  },
+  {
+    "text": "réel.",
+    "start": 18.32,
+    "end": 18.84,
+    "id": "w44"
+  },
+  {
+    "text": "Soit",
+    "start": 18.89,
+    "end": 19.11,
+    "id": "w45"
+  },
+  {
+    "text": "protégé",
+    "start": 19.11,
+    "end": 19.58,
+    "id": "w46"
+  },
+  {
+    "text": "en",
+    "start": 19.58,
+    "end": 19.72,
+    "id": "w47"
+  },
+  {
+    "text": "quelques",
+    "start": 19.72,
+    "end": 20.26,
+    "id": "w48"
+  },
+  {
+    "text": "jours,",
+    "start": 20.28,
+    "end": 20.79,
+    "id": "w49"
+  },
+  {
+    "text": "sans",
+    "start": 20.79,
+    "end": 20.99,
+    "id": "w50"
+  },
+  {
+    "text": "te",
+    "start": 21.19,
+    "end": 21.21,
+    "id": "w51"
+  },
+  {
+    "text": "ruiner.",
+    "start": 21.28,
+    "end": 21.96,
+    "id": "w52"
+  },
+  {
+    "text": "Rempart",
+    "start": 22.06,
+    "end": 22.65,
+    "id": "w53"
+  },
+  {
+    "text": "défense.",
+    "start": 22.7,
+    "end": 23.34,
+    "id": "w54"
+  },
+  {
+    "text": "Réserve",
+    "start": 23.4,
+    "end": 23.76,
+    "id": "w55"
+  },
+  {
+    "text": "ta",
+    "start": 23.76,
+    "end": 23.88,
+    "id": "w56"
+  },
+  {
+    "text": "démo.",
+    "start": 23.88,
+    "end": 24.34,
+    "id": "w57"
+  }
+]
