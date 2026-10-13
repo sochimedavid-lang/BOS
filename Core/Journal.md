@@ -131,3 +131,4 @@
 - Site : « PRIX DE LANCEMENT · RÉSERVÉ AUX 50 PREMIERS ÉLÈVES » à la place de la date ; compte à rebours en sessions de 4 jours qui s'enchaînent (même heure pour tous les visiteurs, fin à minuit heure du Bénin, première fin le 18/10 00:00), placé dans le bloc prix, le bloc final et la barre collante mobile. Choix de l'entrepreneur : relance automatique à la fin de chaque session.
 - Site, bloc final : prix 2 900 F centré en grand, « Valeur 80 000 F » (montant barré) au-dessus.
 - Site : valeur affichée passée de 80 000 F à 25 000 F (bloc prix + bloc final), montants des éléments de la liste réajustés pour totaliser 25 000 F.
+- Hébergement : passage sur Vercel (pas encore de projet). Création d'un dépôt dédié refusée depuis la session → Vercel importera le dépôt bos avec Root Directory = Output/site. Ajout de vercel.json (cache des vidéos, redéploiement seulement si le site change) et .vercelignore (apercu.html, v1-rejetee.html, directions/ non publiés).
