@@ -510,6 +510,28 @@ footer .disc2 b{color:var(--text)}
 
 <div class="sticky" id="sticky"><div><b class="js-price">9 900 F</b><small>Prix de lancement</small></div><a class="js-buy" href="#">Accéder →</a></div>
 
+
+<!-- Chariow : le bouton natif est masqué, les boutons de la page ouvrent la fenêtre de paiement -->
+<div id="chariow-widget" data-product-id="prd_zqv7lcu4"
+    data-store-domain="peryal.mychariow.shop"
+    data-style="tap"
+    data-border-style="rounded"
+    data-cta-width="xs"
+    data-background-color="#FFFFFF"
+    data-cta-animation="none"
+    data-locale="fr"
+    data-custom-cta-text="Accéder maintenant"
+    data-primary-color="#F4511E"></div>
+<style>
+#chariow-widget .cw-button-base{position:fixed!important;left:-9999px!important;top:0!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+#chariow-widget .cw-modal-content{border-radius:16px}
+</style>
+<script>
+(function(){
+  var sc=document.createElement('script');sc.src='https://js.chariowcdn.com/v1/widget.min.js';sc.async=true;document.head.appendChild(sc);
+  var l=document.createElement('link');l.rel='stylesheet';l.href='https://js.chariowcdn.com/v1/widget.min.css';document.head.appendChild(l);
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
@@ -536,7 +558,12 @@ if (STATIC) document.documentElement.classList.add("static");
 document.querySelectorAll(".js-price").forEach(n=>n.textContent=CONFIG.price);
 document.querySelectorAll(".js-note").forEach(n=>n.textContent=CONFIG.priceNote);
 document.querySelectorAll("#brandName,.js-brand").forEach(n=>n.textContent=CONFIG.brandName);
-document.querySelectorAll(".js-buy").forEach(a=>{a.href=CONFIG.checkoutUrl||"#";a.addEventListener("click",()=>{if(window.fbq)fbq("track","InitiateCheckout");});});
+document.querySelectorAll(".js-buy").forEach(a=>{a.href=CONFIG.checkoutUrl||"#";a.addEventListener("click",e=>{
+  if(window.fbq)fbq("track","InitiateCheckout");
+  const native=document.querySelector("#chariow-widget .cw-button-base");
+  if(native){e.preventDefault();native.click();}   // fenêtre de paiement Chariow sur la page
+  // sinon (widget pas encore chargé ou bloqué) : le lien ouvre la page de paiement Chariow
+});});
 if(CONFIG.whatsappContact)document.querySelectorAll(".js-contact").forEach(a=>a.href="https://wa.me/"+CONFIG.whatsappContact);
 if(CONFIG.avatarUrl)document.querySelectorAll("#avatar,.js-avatar").forEach(d=>d.innerHTML=`<img src="${CONFIG.avatarUrl}" alt="">`);
 

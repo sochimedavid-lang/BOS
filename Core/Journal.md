@@ -42,3 +42,4 @@
 
 ## 2026-10-13 — Paiement branché
 - Produit Chariow créé : https://peryal.mychariow.shop/prd_zqv7lcu4/checkout (boutique « peryal »). Branché sur tous les boutons de la page de vente (lien direct plutôt que widget, pour garder le design).
+- Widget Chariow intégré à la demande de l'entrepreneur : bouton natif masqué, nos 6 boutons ouvrent la fenêtre de paiement Chariow (couleur #F4511E) ; repli automatique sur le lien de paiement si le widget ne charge pas. Testé : widget chargé + fenêtre ouverte au clic.
