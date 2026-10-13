@@ -237,6 +237,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 - **Production vidéo : vitesse par défaut sans baisser la qualité.** Lancer directement avec la recommandation de BOS (texte, voix, marque) et laisser l'entrepreneur corriger après, plutôt que d'attendre une validation à chaque étape ; utiliser le kit `motion-kit` ; 30 i/s par défaut (60 seulement si demandé) ; un seul rendu final, vérifications sur captures avant. Ajouté le 2026-10-13 après la remarque « ça te prend beaucoup de temps ».
 - **Visuels avec des personnes : uniquement des personnes afro / africaines** (marché Bénin–Côte d'Ivoire), visages visibles de préférence ; vérifier chaque photo avant de l'utiliser. Ajouté le 2026-10-13 à la demande de l'entrepreneur.
 - **Ne jamais supposer les prérequis ou le contenu de la formation Vibe Motion** : les vérifier dans `Core/Business.md` (section Prérequis) et demander si l'info manque. La formation se fait **depuis un téléphone** (Claude + dépôt GitHub), pas besoin d'ordinateur. Ajouté le 2026-10-13 après une section « pour qui » qui excluait à tort les personnes sans ordinateur.
+- **Pubs de Vibe Motion (ses propres pubs) : valider les textes avec l'entrepreneur AVANT de générer la voix et de produire.** La règle « lancer directement » vaut pour les vidéos de portfolio, pas pour les pubs qui portent son offre. Ajouté le 2026-10-13 après « on doit s'entendre sur les textes d'abord ».
 
 ## Ton
 
