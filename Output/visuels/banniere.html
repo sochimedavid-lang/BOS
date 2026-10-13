@@ -1,0 +1,93 @@
+<!doctype html><html class="static"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@500;600;700&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet"><style>/* Démos motion animées en CSS — utilisées par les deux directions */
+.demo{container-type:inline-size;position:relative;overflow:hidden;border-radius:18px;aspect-ratio:9/16;color:#fff;font-family:"Inter Tight",Inter,sans-serif;isolation:isolate}
+.demo .lbl{position:absolute;left:12px;bottom:12px;z-index:5;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:99px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+.demo .ai{position:absolute;right:12px;top:12px;z-index:5;font-size:10px;font-weight:700;letter-spacing:.06em;padding:4px 8px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
+
+/* 1. Logo animé */
+.d-logo{background:radial-gradient(circle at 50% 42%,#ffb54a,#ff4d1c 55%,#5c1500);display:grid;place-items:center}
+.d-logo svg{width:58%;overflow:visible}
+.d-logo circle{fill:none;stroke:#fff;stroke-width:3;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 4s ease-in-out infinite;transform-origin:center}
+.d-logo .mono{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:46px;fill:#fff;opacity:0;animation:fadeIn 4s ease infinite}
+.d-logo .name{position:absolute;top:66%;left:0;right:0;text-align:center;font-weight:800;font-size:6cqw;letter-spacing:.32em;opacity:0;animation:track 4s ease infinite}
+@keyframes draw{0%{stroke-dashoffset:420;transform:rotate(-90deg)}45%,85%{stroke-dashoffset:0;transform:rotate(0)}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes fadeIn{0%,30%{opacity:0;transform:translateY(8px)}50%,88%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes track{0%,45%{opacity:0;letter-spacing:.9em}65%,88%{opacity:1;letter-spacing:.32em}100%{opacity:0}}
+
+/* 2. Promo */
+.d-promo{background:#111;display:grid;place-items:center}
+.d-promo .burst{position:absolute;width:85%;aspect-ratio:1;background:#FFD23F;clip-path:polygon(50% 0,61% 13%,77% 6%,79% 23%,95% 25%,88% 40%,100% 50%,88% 60%,95% 75%,79% 77%,77% 94%,61% 87%,50% 100%,39% 87%,23% 94%,21% 77%,5% 75%,12% 60%,0 50%,12% 40%,5% 25%,21% 23%,23% 6%,39% 13%);animation:spin 9s linear infinite,pop 3s ease-in-out infinite}
+.d-promo .pct{position:relative;z-index:2;font-weight:900;font-size:30cqw;letter-spacing:-.05em;color:#111;animation:pop 3s ease-in-out infinite}
+.d-promo .sub{position:absolute;bottom:22%;left:0;right:0;text-align:center;font-weight:800;font-size:6.5cqw;letter-spacing:.06em;text-transform:uppercase;animation:slideUp 3s ease infinite}
+@keyframes spin{to{rotate:360deg}}
+@keyframes pop{0%,100%{scale:.92}15%{scale:1.08}30%{scale:1}}
+@keyframes slideUp{0%,20%{opacity:0;transform:translateY(16px)}35%,90%{opacity:1;transform:none}100%{opacity:0}}
+
+/* 3. Menu animé */
+.d-menu{background:#123D2F;padding:28px 16px}
+.d-menu h4{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;font-size:15cqw;color:#FFD23F;margin:0 0 6px}
+.d-menu small{display:block;font-size:10px;letter-spacing:.24em;opacity:.7;margin-bottom:20px}
+.d-menu .it{display:flex;justify-content:space-between;gap:8px;font-size:6.6cqw;font-weight:600;padding:5cqw 0;border-bottom:1px dashed rgba(255,255,255,.25);opacity:0;animation:row 5s ease infinite}
+.d-menu .it b{color:#FFD23F;white-space:nowrap}
+.d-menu .i2{animation-delay:.25s}.d-menu .i3{animation-delay:.5s}.d-menu .i4{animation-delay:.75s}
+@keyframes row{0%,8%{opacity:0;transform:translateX(-20px)}20%,85%{opacity:1;transform:none}100%{opacity:0}}
+
+/* 4. Inauguration */
+.d-open{background:#FF4D1C;display:flex;flex-direction:column;justify-content:center;padding:0 16px}
+.d-open .l{overflow:hidden;font-weight:900;font-size:17cqw;line-height:.92;letter-spacing:-.04em;text-transform:uppercase}
+.d-open .l span{display:block;animation:rise 4s cubic-bezier(.2,.8,.2,1) infinite}
+.d-open .l2 span{animation-delay:.15s;color:#111}
+.d-open .date{margin-top:14px;font-weight:700;font-size:6cqw;animation:slideUp 4s ease infinite}
+.d-open i{position:absolute;width:8px;height:14px;top:-20px;border-radius:2px;animation:fall 3.2s linear infinite}
+.d-open i:nth-of-type(1){left:12%;background:#FFD23F}.d-open i:nth-of-type(2){left:35%;background:#fff;animation-delay:.7s}.d-open i:nth-of-type(3){left:58%;background:#111;animation-delay:1.3s}.d-open i:nth-of-type(4){left:80%;background:#FFD23F;animation-delay:2s}.d-open i:nth-of-type(5){left:48%;background:#fff;animation-delay:2.5s}
+@keyframes rise{0%,10%{transform:translateY(110%)}25%,85%{transform:none}100%{transform:translateY(-110%)}}
+@keyframes fall{to{transform:translateY(560px) rotate(540deg)}}
+
+/* 5. Statut WhatsApp */
+.d-story{background:linear-gradient(160deg,#8E2DE2,#E94F86);padding:22px 16px}
+.d-story .bars{display:flex;gap:4px;margin-bottom:16px}.d-story .bars span{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+.d-story .bars span::after{content:"";display:block;height:100%;width:0;background:#fff;animation:fill 4s linear infinite}
+.d-story .bars span:nth-child(1)::after{width:100%;animation:none}
+.d-story .who{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:700}.d-story .who b{width:26px;height:26px;border-radius:50%;background:#fff}
+.d-story .txt{margin-top:38%;font-weight:900;font-size:14cqw;line-height:1;letter-spacing:-.03em}
+.d-story .txt span{display:inline-block;background:#fff;color:#8E2DE2;padding:2px 8px;border-radius:8px;margin-top:8px;animation:pop 4s ease infinite}
+@keyframes fill{to{width:100%}}
+
+/* 6. Chiffres */
+.d-stats{background:#0E1016;padding:26px 16px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
+.d-stats .t{position:absolute;top:24px;left:16px;right:16px;font-weight:800;font-size:9cqw;line-height:1.1}
+.d-stats .bar{height:34px;border-radius:8px;background:linear-gradient(90deg,#8B7CFF,#4FD1C5);transform-origin:left;animation:grow 4s cubic-bezier(.2,.8,.2,1) infinite;display:flex;align-items:center;padding-left:10px;font-size:12px;font-weight:800;color:#0E1016}
+.d-stats .b1{width:55%;animation-delay:.1s}.d-stats .b2{width:75%;animation-delay:.2s}.d-stats .b3{width:100%;animation-delay:.3s}
+@keyframes grow{0%,8%{transform:scaleX(0)}30%,88%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+
+@media (prefers-reduced-motion:reduce){.demo *{animation:none!important;opacity:1!important}}
+/* Aperçu figé (captures) : afficher l'animation à mi-parcours */
+.static .demo *, .static .demo *::after{animation-delay:-2.2s!important;animation-play-state:paused!important}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1620px;height:600px;overflow:hidden;background:#100E0C}
+body{position:relative;font-family:Inter,sans-serif;color:#F6F1EA}
+.glow{position:absolute;inset:0;background:radial-gradient(900px 520px at 70% 0%,rgba(160,62,18,.9),rgba(90,30,10,.4) 45%,transparent 78%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,236,214,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,236,214,.08) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(1300px 700px at 60% 30%,#000 35%,transparent 85%)}
+.ph{position:absolute;border-radius:9%/4.6%;padding:1.6%;background:#1b1714;border:1px solid rgba(255,236,214,.18);box-shadow:0 40px 80px -20px rgba(0,0,0,.7),0 0 0 6px rgba(0,0,0,.25)}
+.ph .demo{border-radius:7.5%/3.8%;width:100%}
+.static .demo *, .static .demo *::after{animation-delay:-2.2s!important;animation-play-state:paused!important}
+
+.txt{position:absolute;left:90px;top:0;bottom:0;width:820px;display:flex;flex-direction:column;justify-content:center}
+.pill{display:inline-flex;align-self:flex-start;border:1px solid rgba(255,236,214,.18);background:rgba(255,255,255,.05);border-radius:99px;font-size:17px;font-weight:600;letter-spacing:.08em;overflow:hidden;margin-bottom:26px}
+.pill span{padding:9px 16px}.pill span:first-child{color:#A39A8F;display:flex;gap:9px;align-items:center}
+.pill span:first-child::before{content:"";width:10px;height:10px;border-radius:50%;background:#DDF247;box-shadow:0 0 12px #DDF247}
+.pill span:last-child{background:rgba(255,255,255,.08)}
+h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:76px;line-height:1;letter-spacing:-.04em}
+h1 em{font-family:"Instrument Serif";font-weight:400;font-style:italic;color:#FF7A45;letter-spacing:-.01em}
+.chk{display:inline-flex;align-self:flex-start;gap:10px;background:#DDF247;color:#14120f;font-weight:700;font-size:20px;border-radius:99px;padding:10px 20px;margin-top:30px}
+.p1{width:230px;left:1010px;top:150px;transform:rotate(-10deg)}
+.p2{width:270px;left:1190px;top:70px;z-index:3}
+.p3{width:230px;left:1385px;top:160px;transform:rotate(10deg)}
+.static .d-logo *{animation-delay:-3.1s!important}
+.static .d-logo circle{animation-delay:-2.3s!important}
+</style></head><body><div class="glow"></div><div class="grid"></div>
+<div class="txt"><div class="pill"><span>Nouveau</span><span>Vibe Motion</span></div>
+<h1>Ta première vidéo motion en 7 jours, <em>ou tu es remboursé.</em></h1>
+<span class="chk">✓ Aucune expérience en montage requise</span></div>
+<div class="ph p1"><div class="demo d-promo"><div class="burst"></div><div class="pct">-30%</div><div class="sub">Ce week-end seulement</div></div></div><div class="ph p2"><div class="demo d-logo"><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="66"/><text class="mono" x="70" y="86" text-anchor="middle">R</text></svg><div class="name">CHEZ MAMAN ROSE</div></div></div><div class="ph p3"><div class="demo d-menu"><h4>Menu du jour</h4><small>MAQUIS LE BON GOÛT</small><div class="it">Amiwo poulet<b>3 000 F</b></div><div class="it i2">Pâte rouge<b>1 500 F</b></div><div class="it i3">Atassi<b>1 000 F</b></div><div class="it i4">Poisson braisé<b>2 500 F</b></div></div></div>
+</body></html>

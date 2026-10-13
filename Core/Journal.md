@@ -30,3 +30,6 @@
 - BOS a proposé Motion Starter (reco), Motion 7, Studio IA, Prompt Motion. L'entrepreneur choisit « Vibe Motion ».
 - BOS a déconseillé (nom du challenge d'Ibrahim Oué). Vérif. bibliothèque pub Meta : aucune pub « Vibe Motion » active, mais Ibrahim a déjà fait des pubs (sept. 2025, juin 2026) et des affiliés diffusent des pubs à son nom (dont une créée le 11/10/2026). Décision de l'entrepreneur respectée.
 - Page renommée « Vibe Motion ». Description Chariow rédigée : `Output/2026-10-13_Description_Chariow_Vibe_Motion.md`.
+
+## 2026-10-13 — Visuels Chariow
+- Vignette 1200×1200 (1:1, sans texte superposé) et bannière 1620×600 (ratio 2,7) aux formats recommandés par Chariow → `Output/visuels/`.
