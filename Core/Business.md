@@ -8,7 +8,7 @@
 - Apprendre à créer des vidéos motion design avec Claude (Remotion + skills officielles), puis vendre ce service aux entreprises locales (contrats 50 000 – 500 000 FCFA d'après l'entrepreneur).
 - Contenu voulu : payer Claude, installer skills, produire du motion, prospecter, pitcher.
 - Spec complète : `Output/2026-10-12_Offre_Formation_Motion_IA.md`
-- Prix décidé (12/10) : **9 900 FCFA** prix de lancement jusqu'au 18/10, puis 15 000 FCFA (plafond fixé par l'entrepreneur). Devient de fait un low ticket : la marge viendra d'une offre complémentaire.
+- Prix décidé (12/10) : 9 900 FCFA. **Modifié le 13/10 par l'entrepreneur : 2 900 FCFA** prix de lancement jusqu'au 18/10, puis 15 000 FCFA (plafond fixé par l'entrepreneur). À répercuter dans Chariow. Devient de fait un low ticket : la marge viendra d'une offre complémentaire.
 - Funnel décidé : pub → page de vente (site) → paiement Chariow → accès + communauté WhatsApp. Pas de closing WhatsApp.
 - Page de vente V1 : `Output/site/index.html`
 
@@ -46,7 +46,7 @@ Solo (+ éventuellement la personne qui détient les preuves).
 - Même produit, même marché (Cotonou cité). 20 000 FCFA, 3 lives (26/10 → 01/11), 20 places, inscriptions closes le 15/10.
 - Forces : récit perso (vidéo restaurant vendue 65 000 F, contrat > 500 000 F), autorité revendiquée (formateur officiel Chariow, « 15 000 apprenants » — chiffre contesté par l’entrepreneur), 3 bonus dont sous-traitance agence (70 000 F sur 100 000 F), section prérequis claire, « pour toi / pas pour toi ».
 - Faiblesses : design générique (violet + vert fluo, emojis, tout centré), 2 exemples vidéo seulement, pas de garantie, attente de 2 semaines avant de commencer, horaires imposés (20h GMT).
-- Notre angle : accès immédiat, à ton rythme, 9 900 F, garantie 7 jours, 10 exemples, design pro.
+- Notre angle : accès immédiat, à ton rythme, 2 900 F, garantie 7 jours, 10 exemples, design pro.
 
 ## Clients / exemples réels
 - **SERVTHEM** (restaurant, amie de l'entrepreneur) : 2 vidéos faites (v1 et chic). Accord pour les montrer sur le site comme résultat réel.
