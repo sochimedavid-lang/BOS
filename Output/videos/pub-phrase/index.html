@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #100E0C; --acc: #F4511E; --acc2: #FF7A45; --lime: #DDF247; --tx: #F6F1EA; --mut: #A39A8F; --red: #FF5A4E;
+              --font: "Inter", sans-serif; --display: "Bricolage Grotesque", sans-serif; }
+      .display { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; }
+      .serif { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; }
+      .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,236,214,.05) 2px, transparent 2px), linear-gradient(90deg, rgba(255,236,214,.05) 2px, transparent 2px); background-size: 90px 90px; }
+      .warm { position: absolute; inset: 0; background: radial-gradient(900px 900px at 50% 42%, #2A1A12 0%, #100E0C 70%); }
+      #cap { top: 1450px; left: 60px; right: 60px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 60px; line-height: 1.15; color: #fff;
+             text-shadow: 0 3px 0 rgba(0,0,0,.55), 0 0 26px rgba(0,0,0,.85), 0 0 8px rgba(0,0,0,.9); }
+      .tag { position: absolute; display: inline-flex; align-items: center; gap: 14px; padding: 16px 34px; border-radius: 999px; font-weight: 800; font-size: 44px; white-space: nowrap; }
+      .tag i { width: 16px; height: 16px; border-radius: 50%; background: currentColor; display: block; }
+      .ctr { left: 0; right: 0; margin: 0 auto; width: max-content; }
+
+      /* téléphone */
+      .phone { position: absolute; border-radius: 66px; background: #0B0A09; border: 12px solid #2B2723; box-shadow: 0 50px 110px rgba(0,0,0,.7), 0 0 0 2px rgba(255,255,255,.08); overflow: hidden; }
+      .phone .notch { position: absolute; left: 50%; top: 14px; width: 130px; height: 32px; margin-left: -65px; border-radius: 20px; background: #000; z-index: 3; }
+      #ph1 { left: 280px; top: 390px; width: 520px; height: 1030px; }
+      #hook { position: absolute; left: 0; right: 0; top: 140px; text-align: center; font-size: 170px; line-height: 1; color: #fff; text-transform: uppercase; }
+      #hook em { font-style: normal; color: var(--acc2); }
+      #ph1 .hd { position: absolute; left: 0; right: 0; top: 60px; height: 80px; display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 700; font-size: 32px; color: #EDE6DC; border-bottom: 2px solid rgba(255,255,255,.07); }
+      #ph1 .hd b { color: var(--acc2); font-size: 36px; }
+      #ask { position: absolute; right: 20px; top: 170px; width: 420px; min-height: 76px; padding: 22px 26px; border-radius: 30px 30px 6px 30px; background: #2E2A26; color: #F3EEE6; font-size: 31px; line-height: 1.38; font-weight: 500; }
+      #dots { position: absolute; left: 30px; top: 520px; display: flex; gap: 12px; }
+      #dots i { width: 18px; height: 18px; border-radius: 50%; background: var(--acc2); display: block; }
+      #bar { position: absolute; left: 22px; right: 22px; bottom: 26px; height: 84px; border-radius: 42px; background: #1E1B18; border: 2px solid rgba(255,255,255,.1); }
+      #send { position: absolute; right: 10px; top: 9px; width: 62px; height: 62px; border-radius: 50%; background: var(--acc); display: flex; align-items: center; justify-content: center; }
+      #ph2 { left: 290px; top: 290px; width: 500px; height: 1000px; }
+      #ph2 video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #ok { position: absolute; left: 720px; top: 250px; width: 130px; height: 130px; border-radius: 50%; background: var(--lime); display: flex; align-items: center; justify-content: center; box-shadow: 0 18px 40px rgba(0,0,0,.5); }
+
+      /* explosion : la vidéo rendue */
+      #s2 video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #s2shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.55) 80%, rgba(0,0,0,.25) 100%); }
+      #tagVid { top: 110px; background: var(--acc); color: #fff; box-shadow: 0 16px 40px rgba(244,81,30,.45); }
+
+      /* barrés */
+      .no { position: absolute; left: 0; right: 0; text-align: center; color: #fff; text-transform: uppercase; }
+      #no1 { top: 400px; font-size: 150px; line-height: .95; }
+      #no2 { top: 820px; font-size: 150px; line-height: .95; }
+      .strike { position: absolute; left: 70px; width: 940px; height: 26px; border-radius: 13px; background: var(--red); transform-origin: 0 50%; box-shadow: 0 6px 20px rgba(255,90,78,.5); }
+      #st1 { top: 520px; transform: rotate(-4deg); } #st2 { top: 880px; transform: rotate(3deg); }
+
+      /* mur de vidéos */
+      .col { position: absolute; top: 0; width: 330px; display: flex; flex-direction: column; gap: 24px; }
+      .col .tl { position: relative; width: 330px; height: 587px; border-radius: 26px; overflow: hidden; border: 3px solid rgba(255,255,255,.12); }
+      .col video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #c1 { left: 15px; } #c2 { left: 375px; } #c3 { left: 735px; }
+      #wallShade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16,14,12,.15) 0%, rgba(16,14,12,.1) 50%, rgba(16,14,12,.85) 76%, rgba(16,14,12,.6) 100%); }
+      .net { top: 0; color: #fff; font-size: 52px; box-shadow: 0 18px 44px rgba(0,0,0,.5); }
+      #wa { top: 560px; left: 60px; background: #25D366; transform: rotate(-5deg); }
+      #tt { top: 790px; left: 420px; background: #111; border: 3px solid #fff; transform: rotate(4deg); }
+      #fb { top: 1020px; left: 170px; background: #1877F2; transform: rotate(-3deg); }
+
+      /* promesses */
+      #p5 { position: absolute; inset: 0; background: radial-gradient(760px 760px at 50% 40%, rgba(244,81,30,.38) 0%, rgba(244,81,30,0) 70%), #100E0C; }
+      #brand { position: absolute; left: 0; right: 0; top: 380px; text-align: center; font-size: 170px; line-height: 1; }
+      #brand .display { color: #fff; text-transform: none; }
+      #brand .serif { color: var(--acc2); font-size: 190px; }
+      .prom { position: absolute; left: 110px; width: 860px; padding: 34px 40px; border-radius: 32px; background: #fff; color: #161311; display: flex; align-items: center; gap: 28px; font-weight: 800; font-size: 60px; letter-spacing: -.01em; box-shadow: 0 26px 60px rgba(0,0,0,.5); }
+      .prom b { width: 84px; height: 84px; flex: none; border-radius: 50%; background: var(--acc); display: flex; align-items: center; justify-content: center; }
+      #pr1 { top: 760px; } #pr2 { top: 990px; }
+
+      /* prix + bouton */
+      #p6 { position: absolute; inset: 0; background: radial-gradient(900px 700px at 50% 40%, #2B1710 0%, #100E0C 70%); }
+      #price { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font-size: 270px; line-height: 1.05; color: #fff; white-space: nowrap; }
+      #price em { font-style: normal; color: var(--acc2); }
+      #fifty { top: 660px; background: var(--lime); color: #161311; font-size: 46px; }
+      #cta { position: absolute; left: 110px; width: 860px; top: 820px; padding: 40px 0; border-radius: 999px; background: var(--acc); color: #fff; text-align: center; font-weight: 800; font-size: 64px; box-shadow: 0 26px 60px rgba(244,81,30,.45); }
+      #hand { position: absolute; left: 700px; top: 930px; width: 120px; height: 120px; }
+      #url { position: absolute; left: 0; right: 0; top: 1070px; text-align: center; font-weight: 700; font-size: 48px; color: var(--tx); letter-spacing: .01em; }
+      #arrow { position: absolute; left: 475px; top: 1180px; width: 130px; height: 130px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="25" data-track-index="10"></audio>
+
+      <!-- S1 : une phrase à l'IA -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div class="warm"></div><div class="grid"></div>
+        <div id="hook" class="display">1 <em>phrase.</em></div>
+        <div id="ph1" class="phone">
+          <div class="notch"></div>
+          <div class="hd"><b>✳</b>Claude</div>
+          <div id="ask"></div>
+          <div id="dots"><i></i><i></i><i></i></div>
+          <div id="bar"><div id="send"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div></div>
+        </div>
+      </div>
+
+      <!-- S2 : et voilà ce qu'elle m'a rendu -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <video id="v-sika" class="clip" src="img/sikaflow.mp4" muted playsinline data-start="2.3" data-duration="2" data-media-start="0.4" data-track-index="1"></video>
+        <div id="s2shade"></div>
+        <div id="tagVid" class="tag ctr"><i></i>1 phrase = 1 vidéo</div>
+      </div>
+
+      <!-- S3 : pas de logiciel, pas d'ordinateur, juste mon téléphone -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div class="warm"></div><div class="grid"></div>
+        <div id="no1" class="no display">Logiciel<br>de montage</div>
+        <div id="st1" class="strike"></div>
+        <div id="no2" class="no display">Ordinateur</div>
+        <div id="st2" class="strike"></div>
+        <div id="ph2" class="phone"><div class="notch"></div><video id="v-ph2" class="clip" src="img/sikaflow.mp4" muted playsinline data-start="6.7" data-duration="2.1" data-media-start="2.6" data-track-index="2"></video></div>
+        <div id="ok"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#161311" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      </div>
+
+      <!-- S4 : le mur de vidéos + les réseaux -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div class="warm"></div>
+        <div id="c1" class="col"><div class="tl"><video id="w-c1-0" src="img/menu-maquis.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="0.0" data-track-index="3"></video></div><div class="tl"><video id="w-c1-1" src="img/stopscroll.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="0.7" data-track-index="4"></video></div><div class="tl"><video id="w-c1-2" src="img/rempart.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="1.4" data-track-index="5"></video></div><div class="tl"><video id="w-c1-3" src="img/noel.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="2.1" data-track-index="6"></video></div></div>
+        <div id="c2" class="col"><div class="tl"><video id="w-c2-0" src="img/servthem-chic.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="0.0" data-track-index="7"></video></div><div class="tl"><video id="w-c2-1" src="img/eden-studio.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="0.7" data-track-index="8"></video></div><div class="tl"><video id="w-c2-2" src="img/motion-lab.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="1.4" data-track-index="9"></video></div><div class="tl"><video id="w-c2-3" src="img/menu-maquis.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="2.1" data-track-index="10"></video></div></div>
+        <div id="c3" class="col"><div class="tl"><video id="w-c3-0" src="img/eden-recit.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="0.0" data-track-index="11"></video></div><div class="tl"><video id="w-c3-1" src="img/noel.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="0.7" data-track-index="12"></video></div><div class="tl"><video id="w-c3-2" src="img/stopscroll.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="1.4" data-track-index="13"></video></div><div class="tl"><video id="w-c3-3" src="img/servthem-chic.mp4" muted playsinline data-start="8.6" data-duration="5.35" data-media-start="2.1" data-track-index="14"></video></div></div>
+        <div id="wallShade"></div>
+        <div id="wa" class="tag net">WhatsApp</div>
+        <div id="tt" class="tag net">TikTok</div>
+        <div id="fb" class="tag net">Facebook</div>
+      </div>
+
+      <!-- S5 : Vibe Motion, les faire + trouver tes clients -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="p5"></div>
+        <div id="brand"><div class="m"><span id="brandIn"><span class="display">Vibe </span><span class="serif">Motion</span></span></div></div>
+        <div id="pr1" class="prom"><b><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></b>Les faire</div>
+        <div id="pr2" class="prom"><b><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></b>Trouver tes clients</div>
+      </div>
+
+      <!-- S6 : prix + bouton -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+        <div id="p6"></div>
+        <div id="price" class="display">2 900 <em>F</em></div>
+        <div id="fifty" class="tag ctr">Réservé aux 50 premiers élèves</div>
+        <div id="cta">Profite de l'opportunité</div>
+        <svg id="hand" viewBox="0 0 24 24" fill="#fff" stroke="#161311" stroke-width="1.2" stroke-linejoin="round"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V10l.5-.1V8a1.5 1.5 0 0 1 3 0v2.2l.4-.1a1.5 1.5 0 0 1 2.6 1V15c0 3.3-2.4 6-5.7 6h-1.1a5 5 0 0 1-4-2l-3-4a1.5 1.5 0 0 1 2.3-1.9L9 15z"/></svg>
+        <div id="url">www.vibemotionafrica.com</div>
+        <svg id="arrow" viewBox="0 0 100 100" fill="none" stroke="#FF7A45" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M50 12v70M20 54l30 30 30-30"/></svg>
+      </div>
+
+      <div id="cap"></div>
+    </div>
+    <script>
+      const TOTAL = 25;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      MK.scenes(tl, [["#s1", 0, 2.75], ["#s2", 2.3, 4.15], ["#s3", 4.05, 8.75], ["#s4", 8.6, 13.95], ["#s5", 13.8, 18.2], ["#s6", 18.05, TOTAL]], TOTAL);
+
+      /* ---------- S1 : la phrase tapée ---------- */
+      gsap.set("#ph1", { scale: 1.06 });
+      tl.to("#ph1", { scale: 1, duration: 1.2, ease: E.card }, 0);
+      MK.type(tl, "#ask", "Fais une pub motion pour Sikaflow, une appli qui aide les freelances à gérer leur argent.", 0.0, { cps: 48 });
+      MK.pulse(tl, "#hook", [1.32], 1.06);
+      tl.to("#send", { scale: 0.82, duration: 0.08 }, 1.95);
+      tl.to("#send", { scale: 1, duration: 0.3, ease: E.ui }, 2.03);
+      MK.fadeIn(tl, "#dots", 2.05, 0.1);
+      [0, 1, 2].forEach((i) => { tl.to(`#dots i:nth-child(${i + 1})`, { y: -10, duration: 0.12, yoyo: true, repeat: 1 }, 2.05 + i * 0.08); });
+
+      /* ---------- S2 : la vidéo rendue, en plein écran ---------- */
+      MK.circleIn(tl, "#s2", 2.3, { x: 540, y: 1300, dur: 0.45 });
+      gsap.set("#v-sika", { scale: 1.15 });
+      tl.to("#v-sika", { scale: 1, duration: 1.0, ease: E.card }, 2.4);
+      MK.pop(tl, "#tagVid", 2.46);
+      MK.pulse(tl, "#tagVid", [3.49], 1.08);
+      MK.shake(tl, "#v-sika", 3.49, 10);
+
+      /* ---------- S3 : barrés, puis le téléphone ---------- */
+      MK.wipeUp(tl, "#s3 .warm", 4.05, 0.25);
+      MK.rise(tl, "#no1", 4.13, { dur: 0.5 });
+      gsap.set(["#st1", "#st2"], { scaleX: 0 });
+      tl.to("#st1", { scaleX: 1, duration: 0.3, ease: "power3.out" }, 5.0);
+      MK.rise(tl, "#no2", 5.67, { dur: 0.5 });
+      tl.to("#st2", { scaleX: 1, duration: 0.3, ease: "power3.out" }, 6.35);
+      tl.to(["#no1", "#st1", "#no2", "#st2"], { opacity: 0, y: -200, duration: 0.35, ease: "power3.in" }, 6.65);
+      MK.slide(tl, "#ph2", 6.85, { y: 1750, dur: 0.7 });
+      MK.pop(tl, "#ok", 8.01);
+
+      /* ---------- S4 : le mur de vidéos ---------- */
+      gsap.set("#c1", { y: -260 }); gsap.set("#c2", { y: -700 }); gsap.set("#c3", { y: -160 });
+      tl.to("#c1", { y: -700, duration: 5.4, ease: "none" }, 8.6);
+      tl.to("#c2", { y: -200, duration: 5.4, ease: "none" }, 8.6);
+      tl.to("#c3", { y: -620, duration: 5.4, ease: "none" }, 8.6);
+      gsap.set(".col", { scale: 1.15, transformOrigin: "50% 50%" });
+      tl.to(".col", { scale: 1, duration: 0.8, ease: E.card }, 8.6);
+      MK.pop(tl, "#wa", 11.54); MK.pop(tl, "#tt", 12.57); MK.pop(tl, "#fb", 12.98);
+
+      /* ---------- S5 : Vibe Motion ---------- */
+      MK.circleIn(tl, "#s5", 13.8, { x: 540, y: 960, dur: 0.4 });
+      MK.rise(tl, "#brandIn", 13.93);
+      MK.slide(tl, "#pr1", 15.92, { x: -1100, dur: 0.6 });
+      MK.slide(tl, "#pr2", 17.24, { x: 1100, dur: 0.6 });
+      MK.pulse(tl, "#pr2", [17.81], 1.05);
+
+      /* ---------- S6 : prix + bouton ---------- */
+      MK.wipeUp(tl, "#p6", 18.05, 0.25);
+      MK.stamp(tl, "#price", 18.17);
+      MK.pop(tl, "#fifty", 20.06);
+      MK.pop(tl, "#cta", 20.89, { from: 0.6 });
+      gsap.set("#hand", { x: 160, y: 220, opacity: 0 });
+      tl.to("#hand", { x: 0, y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 21.2);
+      tl.to("#cta", { scale: 0.94, duration: 0.08 }, 21.69);
+      tl.to("#cta", { scale: 1, duration: 0.4, ease: E.ui }, 21.77);
+      MK.pulse(tl, "#cta", [22.43, 23.4, 24.2], 1.05);
+      MK.fadeIn(tl, "#url", 21.9, 0.3);
+      MK.pop(tl, "#arrow", 22.2);
+      for (let k = 0; k < 6; k++) {
+        tl.to("#arrow", { y: 26, duration: 0.22, ease: "power2.in" }, 22.5 + k * 0.38);
+        tl.to("#arrow", { y: 0, duration: 0.16, ease: "power2.out" }, 22.72 + k * 0.38);
+      }
+
+      /* ---------- sous-titres ---------- */
+      MK.captions(tl, "#cap", [
+        [0.33, "J'ai écrit une phrase à l'IA…"],
+        [2.34, "… et voilà ce qu'elle m'a rendu."],
+        [4.13, "Pas de logiciel de montage,"],
+        [5.67, "pas d'ordinateur,"],
+        [6.9, "juste mon téléphone."],
+        [8.69, "Ces vidéos,"],
+        [9.66, "les commerces les paient"],
+        [10.78, "pour vendre sur WhatsApp,"],
+        [12.57, "TikTok et Facebook."],
+        [13.93, "Vibe Motion te montre comment les faire…"],
+        [16.34, "et comment trouver tes clients."],
+        [18.17, "2 900 F pour les 50 premiers."],
+        [20.89, "Clique sur le lien"],
+        [21.69, "pour profiter de l'opportunité."],
+        [23.7, ""]
+      ]);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

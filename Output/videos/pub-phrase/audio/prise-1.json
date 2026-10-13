@@ -1,0 +1,362 @@
+[
+  {
+    "text": "J'ai",
+    "start": 0.03,
+    "end": 0.29,
+    "id": "w0"
+  },
+  {
+    "text": "écrit",
+    "start": 0.37,
+    "end": 0.76,
+    "id": "w1"
+  },
+  {
+    "text": "une",
+    "start": 0.76,
+    "end": 1.02,
+    "id": "w2"
+  },
+  {
+    "text": "phrase",
+    "start": 1.02,
+    "end": 1.44,
+    "id": "w3"
+  },
+  {
+    "text": "à",
+    "start": 1.44,
+    "end": 1.58,
+    "id": "w4"
+  },
+  {
+    "text": "Lia,",
+    "start": 1.92,
+    "end": 2.04,
+    "id": "w5"
+  },
+  {
+    "text": "et",
+    "start": 2.04,
+    "end": 2.16,
+    "id": "w6"
+  },
+  {
+    "text": "voilà",
+    "start": 2.16,
+    "end": 2.47,
+    "id": "w7"
+  },
+  {
+    "text": "ce",
+    "start": 2.47,
+    "end": 2.59,
+    "id": "w8"
+  },
+  {
+    "text": "qu'elle",
+    "start": 2.59,
+    "end": 3,
+    "id": "w9"
+  },
+  {
+    "text": "m'a",
+    "start": 3.01,
+    "end": 3.19,
+    "id": "w10"
+  },
+  {
+    "text": "rendue.",
+    "start": 3.19,
+    "end": 3.8,
+    "id": "w11"
+  },
+  {
+    "text": "Pas",
+    "start": 3.83,
+    "end": 4.01,
+    "id": "w12"
+  },
+  {
+    "text": "de",
+    "start": 4.01,
+    "end": 4.09,
+    "id": "w13"
+  },
+  {
+    "text": "logiciel",
+    "start": 4.17,
+    "end": 4.69,
+    "id": "w14"
+  },
+  {
+    "text": "de",
+    "start": 4.69,
+    "end": 4.83,
+    "id": "w15"
+  },
+  {
+    "text": "montage,",
+    "start": 4.83,
+    "end": 5.37,
+    "id": "w16"
+  },
+  {
+    "text": "pas",
+    "start": 5.37,
+    "end": 5.72,
+    "id": "w17"
+  },
+  {
+    "text": "d'ordinateur,",
+    "start": 5.72,
+    "end": 6.6,
+    "id": "w18"
+  },
+  {
+    "text": "juste",
+    "start": 6.6,
+    "end": 7.01,
+    "id": "w19"
+  },
+  {
+    "text": "mon",
+    "start": 7.01,
+    "end": 7.21,
+    "id": "w20"
+  },
+  {
+    "text": "téléphone.",
+    "start": 7.71,
+    "end": 8.36,
+    "id": "w21"
+  },
+  {
+    "text": "Ces",
+    "start": 8.39,
+    "end": 8.63,
+    "id": "w22"
+  },
+  {
+    "text": "vidéos,",
+    "start": 8.63,
+    "end": 9.36,
+    "id": "w23"
+  },
+  {
+    "text": "les",
+    "start": 9.36,
+    "end": 9.51,
+    "id": "w24"
+  },
+  {
+    "text": "commerçent",
+    "start": 9.51,
+    "end": 9.95,
+    "id": "w25"
+  },
+  {
+    "text": "les",
+    "start": 9.95,
+    "end": 10.28,
+    "id": "w26"
+  },
+  {
+    "text": "paix",
+    "start": 10.28,
+    "end": 10.48,
+    "id": "w27"
+  },
+  {
+    "text": "pour",
+    "start": 10.48,
+    "end": 10.68,
+    "id": "w28"
+  },
+  {
+    "text": "vendre",
+    "start": 10.68,
+    "end": 11,
+    "id": "w29"
+  },
+  {
+    "text": "sur",
+    "start": 11,
+    "end": 11.24,
+    "id": "w30"
+  },
+  {
+    "text": "WhatsApp,",
+    "start": 11.24,
+    "end": 11.89,
+    "id": "w31"
+  },
+  {
+    "text": "TikTok",
+    "start": 12.27,
+    "end": 12.52,
+    "id": "w32"
+  },
+  {
+    "text": "et",
+    "start": 12.52,
+    "end": 12.68,
+    "id": "w33"
+  },
+  {
+    "text": "Facebook.",
+    "start": 12.68,
+    "end": 13.56,
+    "id": "w34"
+  },
+  {
+    "text": "Vibemotion",
+    "start": 13.63,
+    "end": 14.23,
+    "id": "w35"
+  },
+  {
+    "text": "te",
+    "start": 14.32,
+    "end": 14.45,
+    "id": "w36"
+  },
+  {
+    "text": "montre",
+    "start": 14.45,
+    "end": 14.89,
+    "id": "w37"
+  },
+  {
+    "text": "comment",
+    "start": 14.89,
+    "end": 15.12,
+    "id": "w38"
+  },
+  {
+    "text": "les",
+    "start": 15.52,
+    "end": 15.62,
+    "id": "w39"
+  },
+  {
+    "text": "faire",
+    "start": 15.62,
+    "end": 16.04,
+    "id": "w40"
+  },
+  {
+    "text": "et",
+    "start": 16.04,
+    "end": 16.16,
+    "id": "w41"
+  },
+  {
+    "text": "comment",
+    "start": 16.16,
+    "end": 16.58,
+    "id": "w42"
+  },
+  {
+    "text": "trouver",
+    "start": 16.58,
+    "end": 16.94,
+    "id": "w43"
+  },
+  {
+    "text": "tes",
+    "start": 16.94,
+    "end": 17.09,
+    "id": "w44"
+  },
+  {
+    "text": "clients.",
+    "start": 17.51,
+    "end": 17.84,
+    "id": "w45"
+  },
+  {
+    "text": "2900",
+    "start": 17.87,
+    "end": 18.66,
+    "id": "w46"
+  },
+  {
+    "text": "francs",
+    "start": 18.66,
+    "end": 19.06,
+    "id": "w47"
+  },
+  {
+    "text": "pour",
+    "start": 19.06,
+    "end": 19.31,
+    "id": "w48"
+  },
+  {
+    "text": "les",
+    "start": 19.31,
+    "end": 19.41,
+    "id": "w49"
+  },
+  {
+    "text": "50",
+    "start": 19.76,
+    "end": 19.94,
+    "id": "w50"
+  },
+  {
+    "text": "premiers.",
+    "start": 19.94,
+    "end": 20.56,
+    "id": "w51"
+  },
+  {
+    "text": "Clique",
+    "start": 20.59,
+    "end": 20.86,
+    "id": "w52"
+  },
+  {
+    "text": "sur",
+    "start": 20.93,
+    "end": 21.06,
+    "id": "w53"
+  },
+  {
+    "text": "le",
+    "start": 21.06,
+    "end": 21.17,
+    "id": "w54"
+  },
+  {
+    "text": "lien",
+    "start": 21.17,
+    "end": 21.39,
+    "id": "w55"
+  },
+  {
+    "text": "pour",
+    "start": 21.39,
+    "end": 21.61,
+    "id": "w56"
+  },
+  {
+    "text": "profiter",
+    "start": 21.61,
+    "end": 22.04,
+    "id": "w57"
+  },
+  {
+    "text": "de",
+    "start": 22.04,
+    "end": 22.13,
+    "id": "w58"
+  },
+  {
+    "text": "l'opportunité.",
+    "start": 22.13,
+    "end": 23.12,
+    "id": "w59"
+  }
+]
