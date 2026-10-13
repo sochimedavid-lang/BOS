@@ -101,3 +101,7 @@
 ### 2026-10-13 · Portfolio : référence n°4 → « Eden Food, le récit » (`Output/videos/eden-recit`)
 - Adaptation de la réf. 4 (récit de marque, gobelet produit, cartes photo en rotation 3D) pour Eden Food, Cotonou. 15,5 s, voix Micha (ElevenLabs, une prise), photos Pexels de personnes afro, nappe ambient + bruitages, -14 LUFS.
 - Corrections avant rendu : titres qui débordaient (Eden Food, l'expérience, moments.), feuille qui masquait un titre. Rendu unique en 55 s.
+
+### 2026-10-13 · Portfolio : référence n°9 → « Sikaflow » (`Output/videos/sikaflow`)
+- Pub d'appli fintech fictive (gestion d'argent pour freelances et commerçants, Mobile Money, F CFA). 25,5 s, voix Paul K en une prise, musique pulse + bruitages, -14 LUFS.
+- Corrections avant rendu : tableau de bord absent sur l'écran de fin, icônes et billets passant devant le texte, émojis sur « GRATUIT ».

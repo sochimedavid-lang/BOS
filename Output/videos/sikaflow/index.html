@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      @font-face { font-family: "Noto Color Emoji"; src: local("Noto Color Emoji"), url("https://cdn.jsdelivr.net/npm/@fontsource/noto-color-emoji@5.0.13/files/noto-color-emoji-emoji-400-normal.woff2") format("woff2"); }
+      :root { --bg: #F3F9EA; --lime: #B8F23E; --g: #2E9E3A; --dk: #0A2614; --dk2: #061A0E; --ink: #0A2614; --red: #F0584A; }
+      #root { color: var(--ink); }
+      .emo { font-family: "Noto Color Emoji", sans-serif; position: absolute; line-height: 1; }
+      .blob { position: absolute; border-radius: 50%; }
+      #bgL { position: absolute; inset: 0; background: #F3F9EA; overflow: hidden; }
+      #bgD { position: absolute; inset: 0; background: radial-gradient(1100px 900px at 50% 108%, #1F6B26 0%, #0C3A18 40%, #061A0E 75%); overflow: hidden; }
+      .t { font-weight: 700; letter-spacing: -.02em; line-height: 1.05; white-space: nowrap; }
+
+      /* s1 : boîte de mots */
+      #row { position: absolute; left: 0; right: 0; top: 820px; display: flex; justify-content: center; align-items: center; gap: 26px; }
+      #box { position: relative; height: 150px; border-radius: 22px; background: var(--lime); overflow: hidden; box-shadow: 0 18px 40px rgba(80,140,20,.25); }
+      #box .col { position: absolute; left: 0; top: 0; }
+      #box .w { height: 150px; line-height: 150px; padding: 0 34px; font-size: 96px; font-weight: 700; color: var(--dk); white-space: nowrap; letter-spacing: -.02em; }
+      #bar { position: absolute; right: -10px; top: 18px; width: 10px; height: 114px; background: var(--dk); border-radius: 4px; }
+
+      /* notifications */
+      .nt { position: absolute; width: 760px; display: flex; align-items: center; gap: 26px; padding: 26px 32px; border-radius: 34px; background: rgba(255,255,255,.94); box-shadow: 0 24px 60px rgba(0,0,0,.35); color: #142017; }
+      .nt .ic { flex: none; width: 84px; height: 84px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 800; color: #fff; }
+      .nt .tx { flex: 1; min-width: 0; }
+      .nt b { display: block; font-size: 34px; font-weight: 700; }
+      .nt span { display: block; font-size: 32px; color: #4E5A51; white-space: nowrap; }
+      .nt em { position: absolute; right: 30px; top: 22px; font-style: normal; font-size: 24px; color: #8A948C; }
+      .xls { position: absolute; width: 150px; height: 180px; border-radius: 20px; background: linear-gradient(160deg, #3FC060, #1E8B3C); box-shadow: 0 20px 40px rgba(0,0,0,.4); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 26px; font-weight: 800; font-size: 40px; color: #fff; }
+      .xls::before { content: ""; position: absolute; left: 30px; right: 30px; top: 30px; height: 70px; border-radius: 6px; background: repeating-linear-gradient(0deg, rgba(255,255,255,.85) 0 4px, transparent 4px 22px), repeating-linear-gradient(90deg, rgba(255,255,255,.85) 0 4px, transparent 4px 30px); opacity: .75; }
+
+      /* tableau de bord */
+      .dash { position: absolute; width: 920px; height: 640px; border-radius: 34px; background: #0D1A11; border: 2px solid #22382A; box-shadow: 0 40px 90px rgba(10,40,20,.45); color: #fff; overflow: hidden; }
+      .dash .top { position: absolute; left: 36px; right: 36px; top: 30px; display: flex; align-items: center; gap: 16px; font-size: 30px; font-weight: 600; }
+      .dash .top i { margin-left: auto; width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--lime), var(--g)); }
+      .dash .kpis { position: absolute; left: 36px; right: 36px; top: 110px; display: flex; gap: 20px; }
+      .dash .kpi { flex: 1; padding: 20px 22px; border-radius: 22px; background: #15261A; }
+      .dash .kpi small { display: block; font-size: 22px; color: #8FA595; }
+      .dash .kpi b { display: block; font-size: 34px; font-weight: 700; margin-top: 4px; white-space: nowrap; }
+      .dash svg { position: absolute; left: 36px; top: 270px; }
+
+      .lg { display: flex; align-items: center; gap: 22px; font-weight: 700; font-size: 92px; letter-spacing: -.03em; color: var(--dk); }
+      .lg .ico { width: 120px; height: 120px; border-radius: 34px; background: var(--lime); display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 40px rgba(120,200,30,.35); }
+
+      /* cartes fonctionnalités */
+      .fc { position: absolute; width: 660px; padding: 38px 40px; border-radius: 34px; background: #fff; box-shadow: 0 30px 70px rgba(20,70,20,.22); color: #142017; }
+      .fc h4 { font-size: 34px; font-weight: 700; display: flex; align-items: center; gap: 16px; white-space: nowrap; }
+      .fc .chip { margin-left: auto; font-size: 26px; padding: 6px 16px; border-radius: 99px; background: #E6F8D2; color: #2B8A2E; }
+      .fc .big { font-size: 60px; font-weight: 800; margin-top: 10px; letter-spacing: -.02em; white-space: nowrap; }
+      .fc .ln { display: flex; justify-content: space-between; font-size: 28px; padding: 14px 0; border-bottom: 2px solid #EEF2EE; white-space: nowrap; }
+      .fc .tot { font-weight: 800; font-size: 34px; border: 0; }
+      .paid { position: absolute; right: 36px; top: 34px; padding: 8px 20px; border: 4px solid #2B8A2E; border-radius: 14px; color: #2B8A2E; font-weight: 800; font-size: 30px; transform: rotate(-8deg); }
+      .leg { display: grid; grid-template-columns: auto 1fr auto; gap: 10px 14px; align-items: center; font-size: 28px; white-space: nowrap; }
+      .leg i { width: 22px; height: 22px; border-radius: 6px; }
+
+      .btn { display: inline-flex; padding: 30px 64px; border-radius: 999px; background: var(--dk); color: var(--lime); font-weight: 700; font-size: 46px; box-shadow: 0 20px 44px rgba(10,38,20,.35); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25.5" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="25.5" data-track-index="10"></audio>
+
+      <!-- fonds : clair (lime) et sombre (vert profond) en fondu -->
+      <div id="bgL" data-layout-allow-overflow>
+        <div class="blob" id="L1" style="left:-300px; top:-260px; width:1100px; height:1100px; background:radial-gradient(circle, rgba(184,242,62,.75), rgba(184,242,62,0) 65%)"></div>
+        <div class="blob" id="L2" style="left:300px; top:1150px; width:1200px; height:1200px; background:radial-gradient(circle, rgba(120,214,60,.7), rgba(120,214,60,0) 65%)"></div>
+        <div class="blob" id="L3" style="left:520px; top:200px; width:800px; height:800px; background:radial-gradient(circle, rgba(255,255,255,.95), rgba(255,255,255,0) 65%)"></div>
+      </div>
+      <div id="bgD" data-layout-allow-overflow>
+        <div class="blob" id="D1" style="left:-420px; top:-300px; width:1100px; height:1100px; background:radial-gradient(circle, rgba(60,170,60,.45), rgba(60,170,60,0) 65%)"></div>
+        <div class="blob" id="D2" style="left:420px; top:1250px; width:1100px; height:1100px; background:radial-gradient(circle, rgba(184,242,62,.42), rgba(184,242,62,0) 62%)"></div>
+      </div>
+
+      <!-- 1. T'es [freelance] ? -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="row">
+          <div class="m" style="font-size:104px"><span id="a1" class="t" style="font-size:104px">T'es</span></div>
+          <div id="box">
+            <div class="col" id="col"><div class="w">freelance</div><div class="w">créateur</div><div class="w">commerçant</div></div>
+            <div id="bar"></div>
+          </div>
+        </div>
+        <svg class="abs" style="left:180px; top:1010px; overflow:visible" width="720" height="80" viewBox="0 0 720 80"><path id="sq1" d="M10 50 C 120 10, 200 80, 320 40 S 520 10, 700 46" fill="none" stroke="#2E9E3A" stroke-width="12" stroke-linecap="round"/></svg>
+      </div>
+
+      <!-- 2. Tu galères encore avec tes finances ? -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:700px; flex-direction:column; gap:14px">
+          <div class="m" style="font-size:96px"><span id="b1" class="t" style="font-size:96px; color:#fff">Tu galères encore</span></div>
+          <div class="m" style="font-size:96px"><span id="b2" class="t" style="font-size:96px; color:var(--lime)">avec tes finances ?</span></div>
+        </div>
+        <svg class="abs" style="left:250px; top:560px; overflow:visible" width="200" height="90" viewBox="0 0 200 90"><path id="sq2" d="M10 70 C 60 20, 120 10, 190 20" fill="none" stroke="#F5D33A" stroke-width="16" stroke-linecap="round"/></svg>
+        <svg class="abs" style="left:640px; top:1060px; overflow:visible" width="240" height="80" viewBox="0 0 240 80"><path id="sq3" d="M10 20 C 80 70, 160 60, 230 30" fill="none" stroke="#F5D33A" stroke-width="16" stroke-linecap="round"/></svg>
+      </div>
+
+      <!-- 3. Paiements / Dépenses / Fichiers Excel -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="n1" class="nt" style="left:60px; top:250px"><div class="ic" style="background:#F5B400">₣</div><div class="tx"><b>Mobile Money</b><span>Paiement reçu : +25 000 F</span></div><em>maintenant</em></div>
+        <div id="n2" class="nt" style="left:260px; top:470px"><div class="ic" style="background:#2E9E3A">✉</div><div class="tx"><b>Client</b><span>Tu as bien reçu mon paiement ?</span></div><em>1 min</em></div>
+        <div id="n3" class="nt" style="left:40px; top:1290px"><div class="ic" style="background:#F5B400">₣</div><div class="tx"><b>Mobile Money</b><span>Retrait : −40 000 F</span></div><em>2 min</em></div>
+        <div id="n4" class="nt" style="left:280px; top:1500px"><div class="ic" style="background:var(--red)">!</div><div class="tx"><b>Loyer de la boutique</b><span>À payer : 150 000 F</span></div><em>hier</em></div>
+        <div id="n5" class="nt" style="left:120px; top:1710px"><div class="ic" style="background:var(--red)">!</div><div class="tx"><b>Fournisseur</b><span>Facture en retard</span></div><em>hier</em></div>
+        <div id="xl" data-layout-allow-overlap></div>
+        <div class="abs center" style="left:0; right:0; top:860px; height:200px">
+          <div class="m" style="font-size:120px; position:absolute"><span id="w1" class="t" style="font-size:120px; color:#fff">Paiements</span></div>
+          <div class="m" style="font-size:120px; position:absolute"><span id="w2" class="t" style="font-size:120px; color:#fff">Dépenses</span></div>
+          <div class="m" style="font-size:112px; position:absolute"><span id="w3" class="t" style="font-size:112px; color:var(--lime)">Fichiers Excel</span></div>
+        </div>
+      </div>
+
+      <!-- 4. Où est passé ton argent ? -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="money"></div>
+        <div class="abs center" style="left:0; right:0; top:760px; flex-direction:column; gap:10px">
+          <div class="m" style="font-size:104px"><span id="c1" class="t" style="font-size:104px; color:#fff">Mais où est passé</span></div>
+          <div class="m" style="font-size:132px"><span id="c2" class="t" style="font-size:132px; color:var(--lime)">ton argent ?</span></div>
+        </div>
+      </div>
+
+      <!-- 5. Voici Sikaflow + tableau de bord -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="logo" class="abs center" style="left:0; right:0; top:860px">
+          <div class="lg"><div class="ico"><svg width="76" height="76" viewBox="0 0 76 76"><path d="M14 28 C 26 12, 44 40, 62 22" fill="none" stroke="#0A2614" stroke-width="10" stroke-linecap="round"/><path d="M14 52 C 26 36, 44 64, 62 46" fill="none" stroke="#0A2614" stroke-width="10" stroke-linecap="round"/></svg></div><span>sikaflow</span></div>
+        </div>
+        <div class="abs center" style="left:0; right:0; top:520px; flex-direction:column; gap:6px">
+          <div class="m" style="font-size:64px"><span id="e1" class="t" style="font-size:64px; font-weight:600">Ton gestionnaire financier</span></div>
+          <div class="m" style="font-size:96px"><span id="e2" class="t" style="font-size:96px; color:var(--g)">intelligent ✦</span></div>
+        </div>
+        <div id="dash" class="dash" style="left:80px; top:840px">
+          <div class="top"><svg width="40" height="40" viewBox="0 0 76 76"><rect width="76" height="76" rx="22" fill="#B8F23E"/><path d="M14 28 C 26 12, 44 40, 62 22 M14 52 C 26 36, 44 64, 62 46" fill="none" stroke="#0A2614" stroke-width="9" stroke-linecap="round"/></svg>Tableau de bord<i></i></div>
+          <div class="kpis">
+            <div class="kpi"><small>Revenus</small><b style="color:var(--lime)"><span id="k1">0</span> F</b></div>
+            <div class="kpi"><small>Dépenses</small><b style="color:#FF8A7A"><span id="k2">0</span> F</b></div>
+            <div class="kpi"><small>Solde</small><b><span id="k3">0</span> F</b></div>
+          </div>
+          <svg width="848" height="330" viewBox="0 0 848 330">
+            <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B8F23E" stop-opacity=".45"/><stop offset="1" stop-color="#B8F23E" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="#1D3324" stroke-width="2"><line x1="0" y1="60" x2="848" y2="60"/><line x1="0" y1="140" x2="848" y2="140"/><line x1="0" y1="220" x2="848" y2="220"/><line x1="0" y1="300" x2="848" y2="300"/></g>
+            <path id="area" d="M0 250 C 70 230, 110 170, 180 190 S 300 120, 370 150 S 480 210, 550 130 S 690 60, 760 90 L 848 70 L 848 330 L 0 330 Z" fill="url(#ga)"/>
+            <path id="line" d="M0 250 C 70 230, 110 170, 180 190 S 300 120, 370 150 S 480 210, 550 130 S 690 60, 760 90 L 848 70" fill="none" stroke="#B8F23E" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 6. revenus / factures / business -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:250px; height:140px">
+          <div class="m" style="font-size:88px; position:absolute"><span id="f1" class="t" style="font-size:88px">Suis tes <span style="color:var(--g)">revenus</span></span></div>
+          <div class="m" style="font-size:88px; position:absolute"><span id="f2" class="t" style="font-size:88px">Crée tes <span style="color:var(--g)">factures</span></span></div>
+          <div class="m" style="font-size:80px; position:absolute"><span id="f3" class="t" style="font-size:80px">Comprends ton <span style="color:var(--g)">business</span></span></div>
+        </div>
+        <div id="fc1" class="fc" style="left:210px; top:560px">
+          <h4>Revenus du mois <span class="chip">+18 %</span></h4>
+          <div class="big"><span id="r1">0</span> F</div>
+          <svg width="580" height="230" viewBox="0 0 580 230" style="margin-top:16px; display:block">
+            <path d="M0 200 L 80 170 L 160 182 L 240 120 L 320 138 L 400 80 L 480 96 L 580 30 L 580 230 L 0 230 Z" fill="#E6F8D2"/>
+            <path id="rl" d="M0 200 L 80 170 L 160 182 L 240 120 L 320 138 L 400 80 L 480 96 L 580 30" fill="none" stroke="#2E9E3A" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div id="fc2" class="fc" style="left:210px; top:560px">
+          <h4>Facture n° 024</h4>
+          <div style="font-size:28px; color:#5A665D; margin:6px 0 14px">Client : Studio Awa · Cotonou</div>
+          <div class="ln"><span>Logo + charte</span><b>150 000 F</b></div>
+          <div class="ln"><span>Site vitrine</span><b>350 000 F</b></div>
+          <div class="ln tot"><span>Total</span><span>500 000 F</span></div>
+          <div id="paid" class="paid">PAYÉE ✓</div>
+        </div>
+        <div id="fc3" class="fc" style="left:210px; top:560px">
+          <h4>Où va ton argent</h4>
+          <div style="display:flex; align-items:center; gap:40px; margin-top:24px">
+            <svg width="240" height="240" viewBox="0 0 240 240" style="flex:none; transform:rotate(-90deg)">
+              <circle cx="120" cy="120" r="90" fill="none" stroke="#EEF2EE" stroke-width="40"/>
+              <circle id="dn1" cx="120" cy="120" r="90" fill="none" stroke="#2E9E3A" stroke-width="40" stroke-dasharray="254.5 565.5"/>
+              <circle id="dn2" cx="120" cy="120" r="90" fill="none" stroke="#B8F23E" stroke-width="40" stroke-dasharray="141.4 565.5" stroke-dashoffset="-254.5"/>
+              <circle id="dn3" cx="120" cy="120" r="90" fill="none" stroke="#F5B400" stroke-width="40" stroke-dasharray="84.8 565.5" stroke-dashoffset="-395.9"/>
+              <circle id="dn4" cx="120" cy="120" r="90" fill="none" stroke="#F0584A" stroke-width="40" stroke-dasharray="84.8 565.5" stroke-dashoffset="-480.7"/>
+            </svg>
+            <div class="leg">
+              <i style="background:#2E9E3A"></i><span>Stock</span><b>45 %</b>
+              <i style="background:#B8F23E"></i><span>Pub</span><b>25 %</b>
+              <i style="background:#F5B400"></i><span>Transport</span><b>15 %</b>
+              <i style="background:#F0584A"></i><span>Autres</span><b>15 %</b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Le meilleur ? Gratuit pour commencer -->
+      <div id="s7" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs center" style="left:0; right:0; top:830px; height:200px">
+          <div class="m" style="font-size:110px; position:absolute"><span id="g1" class="t" style="font-size:110px">Le meilleur ?</span></div>
+        </div>
+        <div class="abs center" style="left:0; right:0; top:640px; flex-direction:column; gap:0">
+          <div class="m" style="font-size:72px"><span id="g2" class="t" style="font-size:72px; font-weight:600">C'est</span></div>
+          <div id="g3" class="t" style="font-size:190px; font-weight:800; color:var(--g); letter-spacing:-.04em; line-height:1.1">GRATUIT</div>
+          <div class="m" style="font-size:72px"><span id="g4" class="t" style="font-size:72px; font-weight:600">pour commencer</span></div>
+        </div>
+        <div id="emos"></div>
+      </div>
+
+      <!-- 8. Fin : liste d'attente -->
+      <div id="s8" class="sc" data-layout-allow-overflow data-layout-allow-occlusion style="background:#FBFDF7">
+        <div id="lg2" class="abs center" style="left:0; right:0; top:300px"><div class="lg" style="font-size:80px"><div class="ico" style="width:104px; height:104px"><svg width="66" height="66" viewBox="0 0 76 76"><path d="M14 28 C 26 12, 44 40, 62 22 M14 52 C 26 36, 44 64, 62 46" fill="none" stroke="#0A2614" stroke-width="10" stroke-linecap="round"/></svg></div><span>sikaflow</span></div></div>
+        <div class="abs center" style="left:0; right:0; top:500px">
+          <div class="m" style="font-size:84px"><span id="h1" class="t" style="font-size:84px">Rejoins la liste d'attente</span></div>
+        </div>
+        <div id="mini" class="abs" style="left:80px; top:700px; width:920px; height:640px"></div>
+        <div id="cta" class="abs center" style="left:0; right:0; top:1440px"><div class="btn" id="btn">Je m'inscris</div></div>
+        <div id="bio" class="abs center" style="left:0; right:0; top:1640px; font-size:34px; color:#5A665D; font-weight:500">Lien en bio · Gratuit pour commencer</div>
+        <svg id="cur" class="abs" style="left:0; top:0" width="70" height="86" viewBox="0 0 70 86"><path d="M6 4 L6 70 L24 54 L36 82 L48 76 L36 50 L60 50 Z" fill="#0A2614" stroke="#fff" stroke-width="5" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+    <script>
+      const TOTAL = 25.5;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+      const r = MK.rng(11);
+
+      MK.scenes(tl, [["#s1", 0, 3.05], ["#s2", 3.05, 5.45], ["#s3", 5.45, 9.25], ["#s4", 9.25, 11.3], ["#s5", 11.3, 14.95], ["#s6", 14.95, 18.85], ["#s7", 18.85, 21.6], ["#s8", 21.6, TOTAL]], TOTAL);
+
+      /* fonds */
+      gsap.set("#bgD", { opacity: 0 });
+      tl.to("#bgD", { opacity: 1, duration: 0.25 }, 2.95);
+      tl.to("#bgD", { opacity: 0, duration: 0.3 }, 11.15);
+      [["#L1", 120, 160], ["#L2", -160, -220], ["#L3", -200, 260], ["#D1", 260, 200], ["#D2", -240, -260]].forEach(([s, x, y]) => tl.to(s, { x, y, duration: TOTAL / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0));
+
+      /* 1. T'es [freelance] [créateur] [commerçant] */
+      const ws = [...document.querySelectorAll("#box .w")];
+      const wd = ws.map((w) => w.offsetWidth);
+      gsap.set("#box", { width: wd[0], scaleX: 0, transformOrigin: "0% 50%" });
+      MK.rise(tl, "#a1", 0.1);
+      tl.to("#box", { scaleX: 1, duration: 0.5, ease: E.card }, 0.3);
+      [[1.33, 1], [2.12, 2]].forEach(([t, i]) => {
+        tl.to("#col", { y: -150 * i, duration: 0.45, ease: E.ui }, t);
+        tl.to("#box", { width: wd[i], duration: 0.45, ease: E.ui }, t);
+      });
+      MK.draw(tl, "#sq1", 0.55, 0.6);
+      tl.to("#s1 > *", { y: -200, opacity: 0, duration: 0.3, ease: "power3.in" }, 2.8);
+
+      /* 2. Tu galères encore avec tes finances ? */
+      MK.rise(tl, "#b1", 3.1); MK.rise(tl, "#b2", 4.6);
+      MK.draw(tl, "#sq2", 3.4, 0.4); MK.draw(tl, "#sq3", 4.85, 0.4);
+      gsap.set("#s2 .center", { scale: 1 });
+      tl.to("#s2 .center", { scale: 1.08, duration: 2.4, ease: "none" }, 3.05);
+
+      /* 3. paiements, dépenses, Excel */
+      MK.rise(tl, "#w1", 5.6); MK.exitUp(tl, "#w1", 7.15);
+      MK.rise(tl, "#w2", 7.3); MK.exitUp(tl, "#w2", 8.05);
+      MK.rise(tl, "#w3", 8.2);
+      [["#n1", 5.9, -900, -6], ["#n2", 6.35, 900, 5], ["#n3", 6.75, -900, 4], ["#n4", 7.3, 900, -5], ["#n5", 7.65, -900, 3]].forEach(([s, t, x, rot]) => {
+        gsap.set(s, { x, rotation: rot * 3, opacity: 0 });
+        tl.set(s, { opacity: 1 }, t);
+        tl.to(s, { x: 0, rotation: rot, duration: 0.6, ease: E.card }, t);
+      });
+      const XL = [];
+      for (let i = 0; i < 14; i++) {
+        const e = MK.el("div", "xls", "#xl", "XLS", { left: 40 + r() * 880 + "px", top: 120 + r() * 1600 + "px" });
+        gsap.set(e, { scale: 0, rotation: (r() - 0.5) * 60, opacity: 0 });
+        const t = 8.2 + i * 0.055;
+        tl.set(e, { opacity: 1 }, t);
+        tl.to(e, { scale: 0.7 + r() * 0.5, duration: 0.45, ease: E.ui }, t);
+        XL.push(e);
+      }
+      tl.to(["#n1", "#n2", "#n3", "#n4", "#n5", ...XL], { y: 2200, rotation: "+=40", duration: 0.5, ease: "power3.in", stagger: 0.012 }, 8.95);
+      MK.exitUp(tl, "#w3", 9.1);
+
+      /* 4. Où est passé ton argent ? */
+      MK.rise(tl, "#c1", 9.3); MK.rise(tl, "#c2", 9.95);
+      MK.shake(tl, "#c2", 10.55, 10);
+      for (let i = 0; i < 9; i++) {
+        const e = MK.el("div", "emo", "#money", "💸", { left: 60 + r() * 900 + "px", top: "1950px", fontSize: 90 + r() * 70 + "px" });
+        const t = 9.7 + i * 0.12;
+        tl.to(e, { y: -2300 - r() * 300, rotation: (r() - 0.5) * 90, duration: 1.6, ease: "none" }, t);
+      }
+
+      /* 5. Voici Sikaflow */
+      MK.circleIn(tl, "#s5", 11.3, { dur: 0.4 });
+      gsap.set("#logo", { scale: 0, opacity: 0 });
+      tl.set("#logo", { opacity: 1 }, 11.4);
+      tl.to("#logo", { scale: 1.25, duration: 0.6, ease: E.ui }, 11.4);
+      tl.to("#logo", { y: -620, scale: 0.85, duration: 0.6, ease: E.card }, 12.2);
+      MK.rise(tl, "#e1", 12.4); MK.rise(tl, "#e2", 13.35);
+      MK.slide(tl, "#dash", 12.5, { y: 1300 });
+      gsap.set("#dash", { rotationX: 0 });
+      MK.count(tl, "#k1", 0, 1245000, 12.8, 1.3, (v) => Math.round(v / 500) * 500 > 0 ? (Math.round(v / 500) * 500).toLocaleString("fr-FR") : "0");
+      MK.count(tl, "#k2", 0, 312500, 12.9, 1.3, (v) => (Math.round(v / 500) * 500).toLocaleString("fr-FR"));
+      MK.count(tl, "#k3", 0, 932500, 13.0, 1.3, (v) => (Math.round(v / 500) * 500).toLocaleString("fr-FR"));
+      MK.draw(tl, "#line", 13.0, 1.2);
+      gsap.set("#area", { opacity: 0 }); tl.to("#area", { opacity: 1, duration: 0.6 }, 13.6);
+      tl.to("#dash", { y: 1400, rotation: 6, duration: 0.45, ease: "power3.in" }, 14.6);
+      tl.to(["#logo", "#s5 .center"], { y: "-=500", opacity: 0, duration: 0.4, ease: "power3.in" }, 14.6);
+
+      /* 6. fonctionnalités */
+      MK.rise(tl, "#f1", 15.1); MK.exitUp(tl, "#f1", 16.05);
+      MK.rise(tl, "#f2", 16.2); MK.exitUp(tl, "#f2", 17.15);
+      MK.rise(tl, "#f3", 17.3);
+      const FC = [["#fc1", 15.05], ["#fc2", 16.15], ["#fc3", 17.25]];
+      FC.forEach(([s, t], i) => {
+        gsap.set(s, { y: 1400, rotation: 10, opacity: 0 });
+        tl.set(s, { opacity: 1 }, t);
+        tl.to(s, { y: 0, rotation: [-2, 2, -1][i], duration: 0.6, ease: E.card }, t);
+        if (i < 2) tl.to(s, { x: [-300, 300][i], y: [640, 800][i], scale: 0.7, rotation: [-10, 9][i], duration: 0.55, ease: E.card }, FC[i + 1][1]);
+      });
+      MK.count(tl, "#r1", 0, 1245000, 15.3, 1.0, (v) => (Math.round(v / 500) * 500).toLocaleString("fr-FR"));
+      MK.draw(tl, "#rl", 15.3, 0.9);
+      MK.stamp(tl, "#paid", 16.75);
+      ["#dn1", "#dn2", "#dn3", "#dn4"].forEach((s, i) => { gsap.set(s, { opacity: 0 }); tl.to(s, { opacity: 1, duration: 0.2 }, 17.5 + i * 0.15); });
+      tl.to(["#fc1", "#fc2", "#fc3", "#f3"], { y: "-=1800", rotation: "+=8", duration: 0.5, ease: "power3.in", stagger: 0.04 }, 18.5);
+
+      /* 7. gratuit */
+      MK.rise(tl, "#g1", 18.95); MK.exitUp(tl, "#g1", 19.6);
+      MK.rise(tl, "#g2", 19.7);
+      MK.stamp(tl, "#g3", 20.05);
+      MK.rise(tl, "#g4", 20.6);
+      const EM = ["😎", "🔥", "🤩", "🤑", "🎉", "😎", "🔥", "🤩", "🎉", "🤑", "😎", "🔥"];
+      const POS = [[90, 330], [800, 300], [460, 210], [120, 1290], [820, 1250], [470, 1480], [110, 1640], [880, 1690], [160, 540], [700, 1560], [850, 520], [340, 1230]];
+      EM.forEach((c, i) => {
+        const e = MK.el("div", "emo", "#emos", c, { left: POS[i][0] + "px", top: POS[i][1] + "px", fontSize: 110 + (i % 3) * 25 + "px" });
+        gsap.set(e, { scale: 0, rotation: (r() - 0.5) * 50 });
+        tl.to(e, { scale: 1, duration: 0.5, ease: E.ui }, 20.1 + i * 0.05);
+        tl.to(e, { y: -40 - r() * 60, rotation: "+=" + (r() - 0.5) * 30, duration: 1.4, ease: "sine.inOut" }, 20.6);
+      });
+
+      /* 8. fin */
+      const mini = document.getElementById("dash").cloneNode(true);
+      mini.id = "dash2"; mini.style.cssText = "left:0; top:0";
+      mini.querySelectorAll("[id]").forEach((n) => n.removeAttribute("id"));
+      mini.querySelectorAll(".kpi b")[0].innerHTML = "1 245 000 F"; mini.querySelectorAll(".kpi b")[1].innerHTML = "312 500 F"; mini.querySelectorAll(".kpi b")[2].innerHTML = "932 500 F";
+      mini.querySelector("path[fill='none']").style.opacity = 1;
+      mini.querySelectorAll("path").forEach((p) => { p.style.strokeDasharray = "none"; p.style.strokeDashoffset = 0; p.style.opacity = 1; });
+      document.getElementById("mini").appendChild(mini);
+      MK.pop(tl, "#lg2", 21.65);
+      MK.rise(tl, "#h1", 22.0);
+      MK.slide(tl, "#mini", 21.8, { y: 1300 });
+      MK.pop(tl, "#cta", 22.9);
+      MK.fadeIn(tl, "#bio", 23.4, 0.4);
+      gsap.set("#cur", { x: 1100, y: 1900 });
+      tl.to("#cur", { x: 640, y: 1500, duration: 0.7, ease: "power2.out" }, 23.2);
+      tl.to("#cur", { scale: 0.85, duration: 0.08 }, 23.95); tl.to("#cur", { scale: 1, duration: 0.2 }, 24.03);
+      MK.pulse(tl, "#btn", [23.95], 0.92);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
