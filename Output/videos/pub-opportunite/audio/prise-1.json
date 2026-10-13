@@ -1,0 +1,422 @@
+[
+  {
+    "text": "Autour",
+    "start": 0.06,
+    "end": 0.42,
+    "id": "w0"
+  },
+  {
+    "text": "de",
+    "start": 0.42,
+    "end": 0.48,
+    "id": "w1"
+  },
+  {
+    "text": "toi,",
+    "start": 0.57,
+    "end": 0.82,
+    "id": "w2"
+  },
+  {
+    "text": "chaque",
+    "start": 0.98,
+    "end": 1.25,
+    "id": "w3"
+  },
+  {
+    "text": "commerce",
+    "start": 1.42,
+    "end": 1.9,
+    "id": "w4"
+  },
+  {
+    "text": "a",
+    "start": 1.9,
+    "end": 1.97,
+    "id": "w5"
+  },
+  {
+    "text": "besoin",
+    "start": 1.97,
+    "end": 2.35,
+    "id": "w6"
+  },
+  {
+    "text": "de",
+    "start": 2.39,
+    "end": 2.53,
+    "id": "w7"
+  },
+  {
+    "text": "vidéos.",
+    "start": 2.53,
+    "end": 3.04,
+    "id": "w8"
+  },
+  {
+    "text": "Mais",
+    "start": 3.1,
+    "end": 3.32,
+    "id": "w9"
+  },
+  {
+    "text": "très",
+    "start": 3.32,
+    "end": 3.52,
+    "id": "w10"
+  },
+  {
+    "text": "peu",
+    "start": 3.61,
+    "end": 3.81,
+    "id": "w11"
+  },
+  {
+    "text": "de",
+    "start": 3.81,
+    "end": 3.86,
+    "id": "w12"
+  },
+  {
+    "text": "gens",
+    "start": 4.02,
+    "end": 4.23,
+    "id": "w13"
+  },
+  {
+    "text": "savent",
+    "start": 4.23,
+    "end": 4.65,
+    "id": "w14"
+  },
+  {
+    "text": "les",
+    "start": 4.65,
+    "end": 4.85,
+    "id": "w15"
+  },
+  {
+    "text": "faire.",
+    "start": 4.86,
+    "end": 5.24,
+    "id": "w16"
+  },
+  {
+    "text": "Avec",
+    "start": 5.3,
+    "end": 5.59,
+    "id": "w17"
+  },
+  {
+    "text": "Lian,",
+    "start": 5.59,
+    "end": 6.06,
+    "id": "w18"
+  },
+  {
+    "text": "tu",
+    "start": 6.22,
+    "end": 6.25,
+    "id": "w19"
+  },
+  {
+    "text": "peux",
+    "start": 6.25,
+    "end": 6.49,
+    "id": "w20"
+  },
+  {
+    "text": "les",
+    "start": 6.66,
+    "end": 6.7,
+    "id": "w21"
+  },
+  {
+    "text": "créer",
+    "start": 6.7,
+    "end": 7.02,
+    "id": "w22"
+  },
+  {
+    "text": "depuis",
+    "start": 7.02,
+    "end": 7.42,
+    "id": "w23"
+  },
+  {
+    "text": "ton",
+    "start": 7.42,
+    "end": 7.6,
+    "id": "w24"
+  },
+  {
+    "text": "téléphone.",
+    "start": 7.6,
+    "end": 8.44,
+    "id": "w25"
+  },
+  {
+    "text": "La",
+    "start": 8.5,
+    "end": 8.58,
+    "id": "w26"
+  },
+  {
+    "text": "formation",
+    "start": 8.58,
+    "end": 9.23,
+    "id": "w27"
+  },
+  {
+    "text": "Vibemotion",
+    "start": 9.23,
+    "end": 9.96,
+    "id": "w28"
+  },
+  {
+    "text": "te",
+    "start": 9.96,
+    "end": 10.1,
+    "id": "w29"
+  },
+  {
+    "text": "montre",
+    "start": 10.1,
+    "end": 10.6,
+    "id": "w30"
+  },
+  {
+    "text": "exactement",
+    "start": 10.6,
+    "end": 11.21,
+    "id": "w31"
+  },
+  {
+    "text": "comment",
+    "start": 11.62,
+    "end": 11.92,
+    "id": "w32"
+  },
+  {
+    "text": "les",
+    "start": 11.92,
+    "end": 12.1,
+    "id": "w33"
+  },
+  {
+    "text": "faire,",
+    "start": 12.19,
+    "end": 12.62,
+    "id": "w34"
+  },
+  {
+    "text": "étape",
+    "start": 12.62,
+    "end": 12.97,
+    "id": "w35"
+  },
+  {
+    "text": "par",
+    "start": 12.97,
+    "end": 13.2,
+    "id": "w36"
+  },
+  {
+    "text": "étape.",
+    "start": 13.2,
+    "end": 13.8,
+    "id": "w37"
+  },
+  {
+    "text": "Comment",
+    "start": 13.86,
+    "end": 14.25,
+    "id": "w38"
+  },
+  {
+    "text": "monter",
+    "start": 14.25,
+    "end": 14.6,
+    "id": "w39"
+  },
+  {
+    "text": "ton",
+    "start": 14.78,
+    "end": 14.83,
+    "id": "w40"
+  },
+  {
+    "text": "portfolio",
+    "start": 14.83,
+    "end": 15.44,
+    "id": "w41"
+  },
+  {
+    "text": "et",
+    "start": 15.44,
+    "end": 15.55,
+    "id": "w42"
+  },
+  {
+    "text": "comment",
+    "start": 15.55,
+    "end": 15.95,
+    "id": "w43"
+  },
+  {
+    "text": "trouver",
+    "start": 15.95,
+    "end": 16.35,
+    "id": "w44"
+  },
+  {
+    "text": "tes",
+    "start": 16.35,
+    "end": 16.52,
+    "id": "w45"
+  },
+  {
+    "text": "premiers",
+    "start": 16.52,
+    "end": 16.57,
+    "id": "w46"
+  },
+  {
+    "text": "clients.",
+    "start": 16.98,
+    "end": 17.6,
+    "id": "w47"
+  },
+  {
+    "text": "Ta",
+    "start": 17.66,
+    "end": 17.74,
+    "id": "w48"
+  },
+  {
+    "text": "première",
+    "start": 17.74,
+    "end": 18.33,
+    "id": "w49"
+  },
+  {
+    "text": "vidéo",
+    "start": 18.33,
+    "end": 18.7,
+    "id": "w50"
+  },
+  {
+    "text": "en",
+    "start": 18.7,
+    "end": 18.84,
+    "id": "w51"
+  },
+  {
+    "text": "7",
+    "start": 18.84,
+    "end": 19.06,
+    "id": "w52"
+  },
+  {
+    "text": "jours",
+    "start": 19.06,
+    "end": 19.43,
+    "id": "w53"
+  },
+  {
+    "text": "où",
+    "start": 19.43,
+    "end": 19.57,
+    "id": "w54"
+  },
+  {
+    "text": "rembourser.",
+    "start": 19.57,
+    "end": 20.37,
+    "id": "w55"
+  },
+  {
+    "text": "2900",
+    "start": 20.62,
+    "end": 21.3,
+    "id": "w56"
+  },
+  {
+    "text": "francs",
+    "start": 21.3,
+    "end": 21.66,
+    "id": "w57"
+  },
+  {
+    "text": "pour",
+    "start": 21.66,
+    "end": 21.8,
+    "id": "w58"
+  },
+  {
+    "text": "les",
+    "start": 21.98,
+    "end": 22.08,
+    "id": "w59"
+  },
+  {
+    "text": "50",
+    "start": 22.08,
+    "end": 22.45,
+    "id": "w60"
+  },
+  {
+    "text": "premiers.",
+    "start": 22.45,
+    "end": 23.16,
+    "id": "w61"
+  },
+  {
+    "text": "Clique",
+    "start": 23.22,
+    "end": 23.5,
+    "id": "w62"
+  },
+  {
+    "text": "sur",
+    "start": 23.5,
+    "end": 23.64,
+    "id": "w63"
+  },
+  {
+    "text": "le",
+    "start": 23.74,
+    "end": 23.78,
+    "id": "w64"
+  },
+  {
+    "text": "lien",
+    "start": 23.78,
+    "end": 23.98,
+    "id": "w65"
+  },
+  {
+    "text": "pour",
+    "start": 24.14,
+    "end": 24.24,
+    "id": "w66"
+  },
+  {
+    "text": "profiter",
+    "start": 24.24,
+    "end": 24.7,
+    "id": "w67"
+  },
+  {
+    "text": "de",
+    "start": 24.7,
+    "end": 24.81,
+    "id": "w68"
+  },
+  {
+    "text": "l'opportunité.",
+    "start": 24.81,
+    "end": 25.76,
+    "id": "w69"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "total": 27.0,
+  "voice": {"file": "audio/prise-1.mp3", "start": 0.3},
+  "music": {"preset": "pulse", "bpm": 112, "gain": -8,
+    "sections": [[0, 3.35, "half"], [3.35, 5.55, "pad"], [5.55, 17.9, "full"], [17.9, 20.85, "half"], [20.85, 27.0, "half"]]},
+  "sfx": [
+    ["whoosh", 0.0, -12], ["whoosh", 0.6, -14], ["whoosh", 1.5, -14], ["swoosh_big", 0.5, -16], ["pop", 2.83, -12], ["whoosh_down", 3.1, -14],
+    ["glass", 3.7, -14], ["thud", 4.53, -12], ["whoosh_down", 5.2, -14],
+    ["whoosh", 5.55, -12], ["pop", 5.89, -14], ["typing", 5.95, -18, 0, 0.9], ["swoosh_big", 7.0, -12], ["pop", 7.9, -14], ["whoosh_down", 8.4, -14],
+    ["chord", 9.53, -14, 0, 1.2], ["swoosh_big", 9.0, -16], ["pop", 12.22, -14], ["whoosh", 12.92, -12], ["whoosh", 14.16, -12], ["whoosh", 15.85, -12], ["ding", 17.28, -16],
+    ["whoosh", 17.9, -12], ["boom", 19.14, -12], ["thud", 19.73, -12],
+    ["whoosh", 20.85, -14], ["thud", 20.92, -12], ["pop", 22.38, -14], ["whoosh", 23.52, -14], ["thud", 25.11, -14], ["pop_low", 25.6, -14], ["chord", 26.0, -14, 0, 1.0]
+  ],
+  "out": "audio/mix.wav"
+}

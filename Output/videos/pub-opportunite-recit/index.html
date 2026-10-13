@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600;1,700&family=Poppins:wght@500;600;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      /* gabarit « récit » d'Eden Food, aux couleurs de Vibe Motion */
+      :root { --bg: #F3ECE3; --ink: #1E1712; --acc: #E2451A; --acc2: #FF8A57; }
+      #root { background: var(--bg); }
+      .bgc { position: absolute; inset: 0; background: radial-gradient(900px 1100px at 50% 45%, #FCF8F3 0%, #F3ECE3 55%, #E4D8CB 100%); }
+      .pf { font-family: "Playfair Display", serif; font-style: italic; color: var(--ink); line-height: 1; white-space: nowrap; }
+      .sm { font-size: 48px; font-weight: 500; color: #5E534A; }
+      .big { font-weight: 700; }
+      .or { color: var(--acc); }
+      .leaf { position: absolute; filter: blur(5px); }
+      .card { position: absolute; border-radius: 44px; overflow: hidden; box-shadow: 0 50px 90px rgba(60,30,10,.35); }
+      .card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .phone { position: absolute; border-radius: 64px; background: #fff; padding: 16px; box-shadow: 0 50px 100px rgba(60,30,10,.38), inset 0 0 0 2px #E7DED4; }
+      .screen { position: relative; width: 100%; height: 100%; border-radius: 50px; overflow: hidden; background: #15110E; }
+      .screen .notch { position: absolute; left: 50%; top: 14px; width: 110px; height: 28px; margin-left: -55px; border-radius: 16px; background: #000; z-index: 2; }
+      #ph { left: 325px; top: 500px; width: 430px; height: 880px; }
+      #ask { position: absolute; right: 16px; top: 70px; width: 330px; min-height: 56px; padding: 16px 20px; border-radius: 22px 22px 6px 22px; background: #2E2A26; color: #F3EEE6; font-family: Poppins; font-size: 24px; line-height: 1.38; font-weight: 500; }
+      #pv { position: absolute; left: 16px; top: 220px; width: 330px; height: 587px; border-radius: 22px; overflow: hidden; }
+      #pv video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .k { left: 290px; top: 520px; width: 500px; height: 820px; }
+      .sig { font-family: Poppins; font-weight: 800; color: var(--ink); letter-spacing: -.02em; }
+      .hd { position: absolute; left: 0; right: 0; text-align: center; }
+      #you { position: absolute; left: 340px; top: 620px; width: 400px; height: 400px; border-radius: 50%; background: var(--acc); display: flex; align-items: center; justify-content: center; box-shadow: 0 40px 80px rgba(120,40,10,.35); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="27" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="27" data-track-index="10"></audio>
+      <div class="bgc" data-layout-allow-occlusion></div>
+
+      <svg id="wm" class="abs" style="left:90px; top:510px; opacity:.07" width="900" height="900" viewBox="0 0 24 24"><path d="M7 4.2 C 7 3.2, 8 2.7, 8.9 3.2 L 20 10.3 C 20.8 10.8, 20.8 12.2, 20 12.7 L 8.9 19.8 C 8 20.3, 7 19.8, 7 18.8 Z" fill="#E2451A"/></svg>
+
+      <svg id="rib" class="abs" style="left:0; top:0" width="1080" height="1920" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+        <path id="rb1" d="M-120 520 C 200 640, 420 760, 560 980 S 900 1300, 1220 1180" fill="none" stroke="#E2451A" stroke-width="64" stroke-linecap="round"/>
+        <path id="rb2" d="M-120 520 C 200 640, 420 760, 560 980 S 900 1300, 1220 1180" fill="none" stroke="#FF9A6B" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+      </svg>
+      <svg id="ribB" class="abs" style="left:0; top:0" width="1080" height="1920" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+        <path id="rc1" d="M1220 1740 C 940 1640, 720 1840, 520 1770 S 160 1640, -140 1760" fill="none" stroke="#E2451A" stroke-width="64" stroke-linecap="round"/>
+        <path id="rc2" d="M1220 1740 C 940 1640, 720 1840, 520 1770 S 160 1640, -140 1760" fill="none" stroke="#FF9A6B" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+      </svg>
+
+      <!-- objets qui traversent les scènes -->
+      <div id="q1" class="card k"><video id="v-q1" src="img/menu-maquis.mp4" muted playsinline data-start="0" data-duration="1.3" data-media-start="0.5" data-track-index="1"></video></div>
+      <div id="q2" class="card k"><video id="v-q2" src="img/servthem-chic.mp4" muted playsinline data-start="0.85" data-duration="1.3" data-media-start="0.5" data-track-index="2"></video></div>
+      <div id="q3" class="card k"><video id="v-q3" src="img/stopscroll.mp4" muted playsinline data-start="1.75" data-duration="1.8" data-media-start="0.5" data-track-index="3"></video></div>
+      <div id="ph" class="phone"><div class="screen"><div class="notch"></div><div id="ask"></div>
+        <div id="pv"><video id="v-pv" src="img/menu-maquis.mp4" muted playsinline data-start="6.9" data-duration="1.95" data-media-start="0.2" data-track-index="4"></video></div>
+      </div></div>
+
+      <!-- 1. Autour de toi, chaque commerce a besoin de vidéos. -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:110px; top:250px; transform:rotate(-6deg); transform-origin:0 0">
+          <div class="m" style="font-size:52px"><span id="a1" class="pf sm" style="font-size:52px">Autour de toi,</span></div>
+          <div class="m" style="font-size:104px"><span id="a2" class="pf big" style="font-size:104px">chaque commerce</span></div>
+        </div>
+        <div class="abs" style="left:250px; top:1440px; transform:rotate(-4deg); transform-origin:0 0">
+          <div class="m" style="font-size:48px"><span id="a3" class="pf sm">a besoin de</span></div>
+          <div class="m" style="font-size:150px"><span id="a4" class="pf big or" style="font-size:150px">vidéos.</span></div>
+        </div>
+      </div>
+
+      <!-- 2. Mais très peu de gens savent les faire. -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="hd" style="top:380px">
+          <div class="m" style="font-size:52px"><span id="b1" class="pf sm" style="font-size:52px">Mais très peu de gens</span></div>
+        </div>
+        <svg id="dash" class="abs" style="left:250px; top:530px" width="580" height="580" viewBox="0 0 580 580"><circle cx="290" cy="290" r="270" fill="none" stroke="#1E1712" stroke-width="3" stroke-dasharray="10 12"/></svg>
+        <div id="you"><svg width="220" height="220" viewBox="0 0 24 24" fill="#FCF8F3"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z"/></svg></div>
+        <div class="hd" style="top:1300px">
+          <div class="m" style="font-size:140px"><span id="b2" class="pf big" style="font-size:140px">savent les faire.</span></div>
+        </div>
+      </div>
+
+      <!-- 3. Avec l'IA, tu peux les créer depuis ton téléphone. -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:250px; top:250px; transform:rotate(-5deg); transform-origin:0 0">
+          <div class="m" style="font-size:52px"><span id="c1" class="pf sm" style="font-size:52px">Avec</span></div>
+          <div class="m" style="font-size:130px"><span id="c2" class="pf big or" style="font-size:130px">l'IA,</span></div>
+        </div>
+        <div class="abs" style="left:170px; top:1440px; transform:rotate(-4deg); transform-origin:0 0">
+          <div class="m" style="font-size:48px"><span id="c3" class="pf sm">tu peux les créer depuis ton</span></div>
+          <div class="m" style="font-size:140px"><span id="c4" class="pf big" style="font-size:140px">téléphone.</span></div>
+        </div>
+      </div>
+
+      <!-- 4. La formation Vibe Motion te montre exactement comment les faire… -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="abs" style="left:170px; top:300px; transform:rotate(-5deg); transform-origin:0 0">
+          <div class="m" style="font-size:52px"><span id="d1" class="pf sm" style="font-size:52px">La formation</span></div>
+          <div class="m" style="font-size:130px"><span id="d2" class="pf big" style="font-size:130px">Vibe <span class="or">Motion</span></span></div>
+        </div>
+        <div class="hd" style="top:760px">
+          <div class="m" style="font-size:48px"><span id="d3" class="pf sm">te montre exactement</span></div>
+          <div class="m" style="font-size:104px"><span id="d4" class="pf big" style="font-size:104px">comment les faire,</span></div>
+        </div>
+        <div id="e1" class="hd" style="top:1220px"><div class="pf big or" style="font-size:120px">étape par étape…</div></div>
+        <div id="e2" class="hd" style="top:1200px"><div class="pf sm">comment monter</div><div class="pf big or" style="font-size:120px; margin-top:14px">ton portfolio,</div></div>
+        <div id="e3" class="hd" style="top:1160px"><div class="pf sm">et comment trouver</div><div class="pf big or" style="font-size:120px; margin-top:14px">tes premiers</div><div class="pf big or" style="font-size:120px">clients.</div></div>
+      </div>
+
+      <!-- 5. Ta première vidéo en 7 jours, ou remboursé. -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="hd" style="top:420px">
+          <div class="m" style="font-size:56px"><span id="f1" class="pf sm" style="font-size:56px">Ta première vidéo</span></div>
+          <div class="m" style="font-size:190px"><span id="f2" class="pf big" style="font-size:190px">en 7 jours,</span></div>
+        </div>
+        <svg id="dash2" class="abs" style="left:70px; top:975px" width="940" height="230" viewBox="0 0 940 230"><rect x="6" y="6" width="928" height="218" rx="109" fill="none" stroke="#1E1712" stroke-width="3" stroke-dasharray="10 12"/></svg>
+        <div class="hd" style="top:1010px">
+          <div class="m" style="font-size:120px"><span id="f3" class="pf big or" style="font-size:120px">ou remboursé.</span></div>
+        </div>
+      </div>
+
+      <!-- 6. Prix + lien -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="hd" style="top:300px">
+          <div class="m" style="font-size:44px"><span id="g0" class="pf sm" style="font-size:44px">Prix de lancement</span></div>
+          <div class="m" style="font-size:210px"><span id="g1" class="pf big" style="font-size:210px">2 900 <span class="or">F</span></span></div>
+        </div>
+        <div class="hd" style="top:660px">
+          <div class="m" style="font-size:48px"><span id="g2" class="pf sm">pour les</span></div>
+          <div class="m" style="font-size:120px"><span id="g3" class="pf big" style="font-size:120px">50 premiers.</span></div>
+        </div>
+        <div class="hd" style="top:960px">
+          <div class="m" style="font-size:48px"><span id="g4" class="pf sm">Clique sur le lien pour</span></div>
+          <div class="m" style="font-size:104px"><span id="g5" class="pf big" style="font-size:104px">profiter de</span></div>
+          <div class="m" style="font-size:104px"><span id="g6" class="pf big or" style="font-size:104px">l'opportunité.</span></div>
+        </div>
+        <div id="sig" class="abs center" style="left:0; right:0; top:1380px; flex-direction:column">
+          <div class="sig" style="font-size:64px">Vibe <span style="color:var(--acc)">Motion</span></div>
+          <div style="font-family:Poppins; font-weight:600; font-size:32px; color:#5E534A; letter-spacing:.12em; margin-top:8px">www.vibemotionafrica.com</div>
+        </div>
+        <svg id="arrow" class="abs" style="left:490px; top:1555px" width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#E2451A" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M50 12v70M20 54l30 30 30-30"/></svg>
+      </div>
+
+      <div id="leaves" class="clip" data-layout-allow-occlusion style="pointer-events:none"></div>
+    </div>
+
+    <script>
+      const TOTAL = 27;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      const leafSVG = (n, rot) => `<svg width="520" height="520" viewBox="-260 -260 520 520">${Array.from({ length: n }, (_, i) => `<ellipse cx="0" cy="-120" rx="34" ry="130" fill="#2A160C" transform="rotate(${rot + i * (360 / n)})"/>`).join("")}<circle r="20" fill="#2A160C"/></svg>`;
+      const L = [[-200, 1450, 5, 10], [760, -180, 6, 0], [820, 1550, 4, 30], [-280, 760, 3, 60]].map(([x, y, n, r]) => MK.el("div", "leaf", "#leaves", leafSVG(n, r), { left: x + "px", top: y + "px" }));
+      L.forEach((l, i) => tl.to(l, { rotation: (i % 2 ? -1 : 1) * 40, x: (i % 2 ? 60 : -60), y: (i < 2 ? 40 : -40), duration: TOTAL, ease: "sine.inOut" }, 0));
+
+      MK.scenes(tl, [["#s1", 0, 3.35], ["#s2", 3.35, 5.55], ["#s3", 5.55, 8.75], ["#s4", 8.75, 17.9], ["#s5", 17.9, 20.85], ["#s6", 20.85, TOTAL]], TOTAL);
+      gsap.set(["#q1", "#q2", "#q3", "#ph"], { transformPerspective: 1600 });
+
+      /* filigrane + rubans */
+      tl.fromTo("#wm", { scale: 0.9, rotation: -8 }, { scale: 1.08, rotation: 6, duration: TOTAL, ease: "none", immediateRender: false }, 0);
+      MK.draw(tl, "#rb1", 0.5, 1.5); MK.draw(tl, "#rb2", 0.6, 1.5);
+      tl.to("#rib", { y: -120, duration: 9, ease: "sine.inOut" }, 2.5);
+      tl.to("#rib", { opacity: 0, duration: 0.4 }, 8.5);
+      MK.draw(tl, "#rc1", 9.0, 1.4); MK.draw(tl, "#rc2", 9.1, 1.4);
+      tl.to("#ribB", { y: -40, duration: 10, ease: "sine.inOut" }, 10.5);
+
+      /* 1. cartes : chaque commerce */
+      const Q = [[0.0, "#q1"], [0.9, "#q2"], [1.8, "#q3"]];
+      Q.forEach(([t, k], i) => {
+        gsap.set(k, { x: i ? 1000 : 0, y: i ? 0 : 1200, rotationY: i ? -35 : 0, rotation: i ? 8 : -10, opacity: 0 });
+        tl.set(k, { opacity: 1 }, t);
+        tl.to(k, { x: 0, y: 0, rotationY: 0, rotation: (i % 2 ? 3 : -3), duration: 0.55, ease: E.card }, t);
+        if (i < Q.length - 1) tl.to(k, { x: -1000, rotationY: 35, rotation: -8, duration: 0.4, ease: "power3.in" }, Q[i + 1][0] - 0.3);
+      });
+      tl.to("#q3", { y: -1800, rotation: -12, duration: 0.45, ease: "power3.in" }, 3.1);
+      tl.set("#q3", { opacity: 0 }, 3.6);
+      MK.rise(tl, "#a1", 0.36); MK.rise(tl, "#a2", 1.28);
+      MK.rise(tl, "#a3", 2.2); MK.rise(tl, "#a4", 2.83);
+
+      /* 2. très peu savent les faire */
+      gsap.set("#you", { scale: 0.3, opacity: 0 });
+      tl.to("#you", { scale: 1, opacity: 1, duration: 0.7, ease: E.card }, 3.6);
+      MK.draw(tl, "#dash circle", 3.7, 0.6);
+      tl.to("#dash", { rotation: 120, duration: 2.2, ease: "none" }, 3.35);
+      MK.rise(tl, "#b1", 3.4); MK.rise(tl, "#b2", 4.53);
+      tl.to(["#you", "#dash"], { y: 1300, rotation: 40, duration: 0.4, ease: "power3.in" }, 5.2);
+
+      /* 3. téléphone */
+      gsap.set("#ph", { y: 1700, rotation: 10 });
+      tl.to("#ph", { y: 0, rotation: -3, duration: 0.7, ease: E.card }, 5.55);
+      MK.rise(tl, "#c1", 5.6); MK.rise(tl, "#c2", 5.89);
+      MK.type(tl, "#ask", "Crée la vidéo du menu de mon maquis.", 5.95, { cps: 40 });
+      gsap.set("#pv", { scale: 0.7, opacity: 0 });
+      tl.to("#pv", { scale: 1, opacity: 1, duration: 0.5, ease: E.card }, 7.0);
+      MK.rise(tl, "#c3", 6.52); MK.rise(tl, "#c4", 7.9);
+      tl.to("#ph", { y: -1800, rotation: -15, duration: 0.45, ease: "power3.in" }, 8.4);
+      tl.set("#ph", { opacity: 0 }, 8.9);
+
+      /* 4. la formation */
+      MK.rise(tl, "#d1", 8.8); MK.rise(tl, "#d2", 9.53);
+      MK.rise(tl, "#d3", 10.26); MK.rise(tl, "#d4", 12.22);
+      [["#e1", 12.92, 14.0], ["#e2", 14.16, 15.7], ["#e3", 15.85, 18.0]].forEach(([s, a, b]) => {
+        gsap.set(s, { opacity: 0 });
+        tl.fromTo(s, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, a);
+        if (b < 17.9) tl.to(s, { opacity: 0, y: -30, duration: 0.2 }, b);
+      });
+
+      /* 5. 7 jours ou remboursé */
+      MK.rise(tl, "#f1", 17.96); MK.rise(tl, "#f2", 19.0);
+      MK.draw(tl, "#dash2 rect", 19.5, 0.5);
+      MK.rise(tl, "#f3", 19.73);
+
+      /* 6. prix + lien */
+      MK.rise(tl, "#g0", 20.85); MK.rise(tl, "#g1", 20.92);
+      MK.rise(tl, "#g2", 21.96); MK.rise(tl, "#g3", 22.38);
+      MK.rise(tl, "#g4", 23.52); MK.rise(tl, "#g5", 24.44); MK.rise(tl, "#g6", 25.11);
+      MK.fadeIn(tl, "#sig", 25.4, 0.5);
+      MK.pop(tl, "#arrow", 25.6);
+      for (let k = 0; k < 3; k++) {
+        tl.to("#arrow", { y: 26, duration: 0.22, ease: "power2.in" }, 25.95 + k * 0.36);
+        tl.to("#arrow", { y: 0, duration: 0.14, ease: "power2.out" }, 26.17 + k * 0.36);
+      }
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
