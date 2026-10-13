@@ -322,7 +322,23 @@ footer .disc2 b{color:var(--text)}
   .sticky{display:none}
 }
 </style>
-<!-- Meta Pixel injecté par le script si CONFIG.metaPixelId est rempli -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2092809134709164');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2092809134709164&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <div class="bg"></div>
@@ -719,7 +735,8 @@ const sticky=document.getElementById("sticky");
 addEventListener("scroll",()=>sticky.classList.toggle("on",scrollY>innerHeight*.9));
 
 // Meta Pixel
-if(CONFIG.metaPixelId){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq("init",CONFIG.metaPixelId);fbq("track","PageView");fbq("track","ViewContent",{content_name:"Formation Vibe Motion",content_ids:["prd_zqv7lcu4"],content_type:"product",value:2900,currency:"XOF"});}
+// Le pixel Meta est chargé dans <head> (code officiel) ; ici on ajoute les événements de la page de vente
+if(window.fbq){fbq("track","ViewContent",{content_name:"Formation Vibe Motion",content_ids:["prd_zqv7lcu4"],content_type:"product",value:2900,currency:"XOF"});}
 // Achat confirmé par Chariow (fenêtre de paiement) : un seul événement Purchase par achat
 var _vmBought=false;
 function vmPurchase(){if(_vmBought||!window.fbq)return;_vmBought=true;fbq("track","Purchase",{value:2900,currency:"XOF",content_ids:["prd_zqv7lcu4"],content_type:"product"});}
