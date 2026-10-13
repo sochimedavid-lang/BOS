@@ -79,3 +79,4 @@
 - Objectif de la pub : « ta pub a 1 seconde pour arrêter le pouce ; une photo fixe se fait scroller, une pub qui bouge fait vendre ».
 - Livré : Output/videos/stopscroll/out/final.mp4 (9:16, 60 i/s, 24 s, beat synthétisé + bruitages), plus affiche, planche, charte, storyboard et README. 4 passes de correction.
 - Peut servir d'exemple n°1 sur la page de vente (l'exemple qui montre le « avant / après » vendable aux e-commerçants).
+- Validé par l'entrepreneur. STOPSCROLL et la pub Noël (version ElevenLabs, verticale) ajoutées en tête de la section Exemples de la page de vente : 2 vraies vidéos, lecture muette quand elles sont visibles, bouton son. Versions web légères dans Output/site/media/ (1,1 Mo et 2,4 Mo). Paquet de mise en ligne mis à jour (pas encore hébergé : on attend le feu vert).
