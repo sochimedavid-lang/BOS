@@ -44,3 +44,4 @@
 - Produit Chariow créé : https://peryal.mychariow.shop/prd_zqv7lcu4/checkout (boutique « peryal »). Branché sur tous les boutons de la page de vente (lien direct plutôt que widget, pour garder le design).
 - Widget Chariow intégré à la demande de l'entrepreneur : bouton natif masqué, nos 6 boutons ouvrent la fenêtre de paiement Chariow (couleur #F4511E) ; repli automatique sur le lien de paiement si le widget ne charge pas. Testé : widget chargé + fenêtre ouverte au clic.
 - Consigne de l'entrepreneur : livrer la page en HTML pour vérification ; c'est lui qui décide quand héberger.
+- Lien communauté WhatsApp reçu et intégré au PDF (cliquable). Contact support provisoire : message privé à l'admin du groupe (en attente d'un numéro/e-mail dédié).
