@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #5A0606; --acc: #D7261E; --red: #B3121F; }
+      .white { position: absolute; inset: 0; background: #F7F5F3; }
+      .tw { color: #fff; font-weight: 700; }
+      .lab { font-weight: 600; font-size: 30px; color: #fff; text-align: center; margin-top: 12px; }
+      .logo-card { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="32.5" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="32.5" data-track-index="10"></audio>
+
+      <!-- fond rouge fluide commun -->
+      <div id="redbg" class="clip" data-layout-allow-occlusion style="background:#5A0606"></div>
+
+      <!-- 1. Ton business commence -->
+      <div id="s1" class="sc" data-layout-allow-overflow>
+        <div class="abs" style="left:80px; top:880px; font-weight:700; font-size:68px; color:#fff; white-space:nowrap">
+          <span id="ty1"></span><span id="hl1" class="hl" style="background:#fff; color:var(--red); margin-left:14px">commence</span>
+        </div>
+        <svg id="cur1" class="cursor" viewBox="0 0 24 32" style="left:0; top:0"><path d="M2 2 L2 26 L8 20 L12 30 L16 28 L12 18 L20 18 Z" fill="#fff" stroke="#000" stroke-width="1.5"/></svg>
+      </div>
+
+      <!-- 2. Page blanche -->
+      <div id="s2" class="sc"><div class="white"></div>
+        <div class="abs center" style="inset:0; flex-direction:column">
+          <div class="m"><span id="pb1" style="font-weight:700; font-size:170px; color:#8E8E8E; line-height:.95">Page</span></div>
+          <div class="m"><span id="pb2" style="font-weight:700; font-size:170px; color:#8E8E8E; line-height:.95">blanche</span></div>
+        </div>
+      </div>
+
+      <!-- 3. Les problèmes à la poubelle -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="pills" data-layout-allow-overlap class="abs" style="left:0; right:0; top:560px; height:400px">
+          <div id="pl1" data-layout-allow-overlap class="pill abs" style="left:260px; top:0">Message flou</div>
+          <div id="pl2" data-layout-allow-overlap class="pill abs" style="left:200px; top:0">Visuels au hasard</div>
+          <div id="pl3" data-layout-allow-overlap class="pill abs" style="left:215px; top:0">Posts sans vues</div>
+        </div>
+        <svg id="bin" class="abs" style="left:290px; top:1290px" width="500" height="560" viewBox="0 0 500 560">
+          <g id="lid"><rect x="20" y="20" width="460" height="46" rx="14" fill="#1A0303"/><rect x="190" y="0" width="120" height="34" rx="10" fill="#1A0303"/></g>
+          <path d="M50 90 L450 90 L415 560 L85 560 Z" fill="#1A0303"/>
+          <g fill="#3A0707"><rect x="140" y="140" width="34" height="380" rx="17"/><rect x="233" y="140" width="34" height="380" rx="17"/><rect x="326" y="140" width="34" height="380" rx="17"/></g>
+        </svg>
+      </div>
+
+      <!-- 4. Puis tout devient clair -->
+      <div id="s4" class="sc" data-layout-allow-overflow><div class="white"></div>
+        <div id="mq" class="abs" style="left:0; top:880px; white-space:nowrap; font-size:96px; color:#111">
+          <span style="font-style:italic; font-weight:500">Puis tout devient</span>
+          <span id="clair" class="hl" style="background:var(--red); font-weight:700; margin:0 24px; outline:4px dashed rgba(255,255,255,.7); outline-offset:-10px">clair</span>
+          <span style="font-style:italic; font-weight:500">Puis tout devient</span>
+        </div>
+        <svg id="cur4" class="cursor" viewBox="0 0 24 32" style="left:0; top:0; width:52px; height:70px"><path d="M2 2 L2 26 L8 20 L12 30 L16 28 L12 18 L20 18 Z" fill="#fff" stroke="#000" stroke-width="1.5"/></svg>
+      </div>
+
+      <!-- 5. L'œil et les 4 piliers -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <svg id="eye" class="abs" style="left:240px; top:810px" width="600" height="300" viewBox="0 0 600 300">
+          <defs><clipPath id="eyeClip"><path d="M10 150 Q300 -60 590 150 Q300 360 10 150 Z"/></clipPath></defs>
+          <g id="eyeOpen">
+            <path d="M10 150 Q300 -60 590 150 Q300 360 10 150 Z" fill="#fff"/>
+            <g clip-path="url(#eyeClip)"><g id="iris"><circle cx="300" cy="150" r="95" fill="#B3121F"/><circle cx="300" cy="150" r="45" fill="#3A0303"/><circle cx="330" cy="118" r="20" fill="#fff" opacity=".85"/></g></g>
+          </g>
+        </svg>
+        <div id="ic1" class="abs" style="left:800px; top:330px; width:160px"><div class="icon-disc" style="margin:auto"><svg width="70" height="70" viewBox="0 0 24 24"><path d="M12 2 L14.6 9 L22 9.3 L16.2 14 L18.2 21.2 L12 17 L5.8 21.2 L7.8 14 L2 9.3 L9.4 9 Z" fill="#B3121F"/></svg></div><div class="lab">Logo</div></div>
+        <div id="ic2" class="abs" style="left:110px; top:430px; width:160px"><div class="icon-disc" style="margin:auto"><svg width="64" height="64" viewBox="0 0 24 24"><path d="M6 3 L21 12 L6 21 Z" fill="#B3121F"/></svg></div><div class="lab">Vidéos</div></div>
+        <div id="ic3" class="abs" style="left:110px; top:1290px; width:160px"><div class="icon-disc" style="margin:auto"><svg width="70" height="70" viewBox="0 0 24 24"><path d="M3 5 Q7 3 12 6 Q17 3 21 5 L21 20 Q17 18 12 21 Q7 18 3 20 Z" fill="none" stroke="#B3121F" stroke-width="2.2"/><path d="M12 6 L12 21" stroke="#B3121F" stroke-width="2.2"/></svg></div><div class="lab">Histoire</div></div>
+        <div id="ic4" class="abs" style="left:800px; top:1390px; width:160px"><div class="icon-disc" style="margin:auto"><svg width="76" height="76" viewBox="0 0 24 24" fill="#B3121F"><circle cx="8" cy="8" r="3.2"/><circle cx="16.5" cy="9" r="2.6"/><path d="M2 20 Q2 13 8 13 Q14 13 14 20 Z"/><path d="M13.5 20 Q14 14.5 17 14.5 Q22 14.5 22 20 Z"/></svg></div><div class="lab">Clients</div></div>
+      </div>
+
+      <!-- 6. C'est là que ton business prend vie -->
+      <div id="s6" class="sc">
+        <div class="abs center" style="inset:0">
+          <div id="w6a" class="tw" style="position:absolute; font-size:72px">C'est là que</div>
+          <div id="w6b" class="tw" style="position:absolute; font-weight:800; font-size:150px; letter-spacing:-.03em">TON BUSINESS</div>
+          <div id="w6c" class="tw" style="position:absolute; font-size:110px">prend <span style="color:#FFB4A8">vie.</span></div>
+        </div>
+      </div>
+
+      <!-- 7. Plus de vues / clients / confiance -->
+      <div id="s7" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <svg id="wave" class="abs" style="left:0; top:1180px" width="2160" height="800" viewBox="0 0 2160 800">
+          <defs><linearGradient id="wg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#F7E9E7"/></linearGradient></defs>
+          <path d="M0 160 C 270 20, 540 300, 810 160 S 1350 20, 1620 160 S 2160 300, 2160 160 L2160 800 L0 800 Z" fill="url(#wg)"/>
+        </svg>
+        <div id="disc7" class="abs" style="left:110px; top:760px"><div class="icon-disc" style="width:220px; height:220px; box-shadow:0 0 0 14px rgba(255,255,255,.18), 0 20px 50px rgba(0,0,0,.4)">
+          <svg id="i7a" class="abs" width="110" height="110" viewBox="0 0 24 24"><path d="M1 12 Q12 1 23 12 Q12 23 1 12 Z" fill="none" stroke="#B3121F" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#B3121F"/></svg>
+          <svg id="i7b" class="abs" width="120" height="120" viewBox="0 0 24 24" fill="#B3121F"><circle cx="8" cy="8" r="3.2"/><circle cx="16.5" cy="9" r="2.6"/><path d="M2 20 Q2 13 8 13 Q14 13 14 20 Z"/><path d="M13.5 20 Q14 14.5 17 14.5 Q22 14.5 22 20 Z"/></svg>
+          <svg id="i7c" class="abs" width="110" height="110" viewBox="0 0 24 24"><path d="M12 2 L14.6 9 L22 9.3 L16.2 14 L18.2 21.2 L12 17 L5.8 21.2 L7.8 14 L2 9.3 L9.4 9 Z" fill="#B3121F"/></svg>
+        </div></div>
+        <div class="abs" style="left:400px; top:740px; width:640px; height:280px">
+          <div id="st1" class="abs"><div class="tw" style="font-size:54px">Plus de vues</div><div class="display" style="font-size:150px; color:#fff">+<span id="n1">0</span></div></div>
+          <div id="st2" class="abs"><div class="tw" style="font-size:54px">Plus de clients</div><div class="display" style="font-size:150px; color:#fff">+<span id="n2">0</span></div></div>
+          <div id="st3" class="abs"><div class="tw" style="font-size:54px">Plus de confiance</div><div class="display" style="font-size:150px; color:#fff"><span id="n3">0</span> ★</div></div>
+        </div>
+      </div>
+
+      <!-- 8. Ils nous ont fait confiance -->
+      <div id="s8" class="sc" data-layout-allow-overflow>
+        <div id="lg0" class="logo-card"><div class="tw" style="font-size:64px">Ils nous ont fait</div><div class="tw" style="font-weight:800; font-size:130px; letter-spacing:-.03em">confiance</div></div>
+        <div id="lg1" class="logo-card" style="background:#123D2C">
+          <svg width="170" height="170" viewBox="0 0 24 24"><path d="M12 22 C 4 18, 3 9, 12 2 C 21 9, 20 18, 12 22 Z" fill="#7BC67E"/><path d="M12 22 L12 8" stroke="#123D2C" stroke-width="1.4"/><path d="M12 14 L8.5 11 M12 17 L15.5 14" stroke="#123D2C" stroke-width="1.2"/></svg>
+          <div style="font-family:Poppins; font-weight:800; font-size:150px; color:#F5EFD8; letter-spacing:-.03em; line-height:.9">Eden</div>
+          <div style="font-weight:600; font-size:46px; color:#7BC67E; letter-spacing:.5em; margin-left:.5em">FOOD</div>
+          <div style="font-weight:500; font-size:30px; color:#F5EFD8; opacity:.75; margin-top:20px">Restaurant · Cotonou</div>
+        </div>
+        <div id="lg2" class="logo-card" style="background:#0F3A2C"><div style="font-family:Poppins; font-style:italic; font-weight:700; font-size:110px; color:#F2B33D">Le Bon Goût</div><div style="font-weight:600; font-size:36px; letter-spacing:.4em; color:#FFF4E0">MAQUIS</div></div>
+        <div id="lg3" class="logo-card" style="background:#5B2A86"><div style="font-weight:800; font-size:120px; color:#fff">Élégance</div><div style="font-weight:600; font-size:36px; letter-spacing:.4em; color:#F7C6FF">SALON · ABIDJAN</div></div>
+        <div id="lg4" class="logo-card" style="background:#0D1B3D"><div style="font-weight:800; font-size:110px; color:#fff">Transfert<span style="color:#3DDC84">X</span></div><div style="font-weight:600; font-size:36px; letter-spacing:.4em; color:#9DB1F2">EXPRESS</div></div>
+        <div id="lg5" class="logo-card" style="background:#2B1D12"><div style="font-family:Poppins; font-style:italic; font-weight:500; font-size:130px; color:#F2B25A">Maison Oud</div></div>
+        <div id="lg6" class="logo-card">
+          <div class="m"><span id="ca" class="display" style="font-size:210px; color:#fff">De Cotonou</span></div>
+          <div class="m"><span id="cb" class="display" style="font-size:210px; color:#fff">à Abidjan</span></div>
+        </div>
+      </div>
+
+      <!-- 9. Si tu veux grandir en 2027 -->
+      <div id="s9" class="sc"><div id="w9" class="white"></div>
+        <div class="abs center" style="inset:0; flex-direction:column; gap:10px">
+          <div class="m"><span id="g1" style="font-weight:600; font-size:76px; color:var(--red)">Si tu veux <b style="font-weight:800">grandir</b></span></div>
+          <div class="m"><span id="g2" style="font-weight:800; font-size:110px; color:var(--red)">en 2027</span></div>
+        </div>
+      </div>
+
+      <!-- 10. Fais bouger ta marque -->
+      <div id="s10" class="sc" data-layout-allow-overflow>
+        <div id="f10" class="abs center" style="inset:0"><div id="fb" style="font-weight:700; font-size:80px; color:#fff">Fais bouger ta marque</div></div>
+        <div id="bg10" class="abs center" style="inset:0; flex-direction:column">
+          <div id="bo1" class="display" style="font-size:420px; color:#fff; line-height:.86">Bou</div>
+          <div id="bo2" class="display" style="font-size:420px; color:#fff; line-height:.86">ger</div>
+        </div>
+        <div id="sl10" class="abs" style="left:0; top:860px; width:1080px; height:90px; background:#F7F5F3; mix-blend-mode:difference"></div>
+      </div>
+
+      <!-- 11. Signature STOPSCROLL -->
+      <div id="s11" class="sc"><div class="white"></div>
+        <div class="abs center" style="inset:0; flex-direction:column">
+          <div style="display:flex; align-items:center; gap:26px">
+            <div id="pz" style="width:170px; height:170px; border-radius:44px; background:#100E0C; display:flex; gap:20px; align-items:center; justify-content:center"><b style="width:30px; height:84px; border-radius:9px; background:#F4511E; display:block"></b><b style="width:30px; height:84px; border-radius:9px; background:#F4511E; display:block"></b></div>
+            <div class="m"><span id="sb1" style="font-weight:800; font-size:190px; color:#100E0C; letter-spacing:-.05em; line-height:.9">STOP</span></div>
+          </div>
+          <div class="m"><span id="sb2" style="font-weight:800; font-size:190px; color:#100E0C; letter-spacing:-.05em; line-height:.9">SCROLL</span></div>
+          <div id="sb3" style="font-weight:500; font-size:44px; color:#5E5650; margin-top:30px">Studio motion pour les marques</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const TOTAL = 32.5;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      // fond fluide rouge
+      const blobs = MK.fluid("#redbg", ["#E0301E", "#B3121F", "#FF5A3C", "#2A0303", "#C81E1E", "#7A0A0A"], 9);
+      MK.drift(tl, blobs, TOTAL, 4);
+      // les fonds blancs (s2, s4, s9, s11) recouvrent le rouge
+      MK.scenes(tl, [["#s1", 0, 1.95], ["#s2", 1.95, 2.95], ["#s3", 2.95, 8.4], ["#s4", 8.4, 10.1], ["#s5", 10.1, 16.95], ["#s6", 16.95, 19.15], ["#s7", 19.15, 22.55], ["#s8", 22.55, 25.95], ["#s9", 25.95, 28.15], ["#s10", 28.15, 29.95], ["#s11", 29.95, TOTAL]], TOTAL);
+
+      /* 1. frappe + surlignage */
+      MK.type(tl, "#ty1", "Ton business", 0.45, { cps: 16 });
+      MK.pop(tl, "#hl1", 1.25, { from: 0.6 });
+      gsap.set("#cur1", { x: 820, y: 1100, opacity: 0 });
+      tl.to("#cur1", { opacity: 1, duration: 0.1 }, 0.9);
+      tl.to("#cur1", { x: 640, y: 930, duration: 0.4, ease: "power2.out" }, 0.9);
+
+      /* 2. page blanche */
+      MK.rise(tl, ["#pb1", "#pb2"], 1.97, { stagger: 0.1 });
+      tl.to("#s2 .center", { scale: 1.06, duration: 1.1, ease: "none" }, 1.95);
+
+      /* 3. étiquettes → poubelle */
+      [["#pl1", 2.98], ["#pl2", 4.41], ["#pl3", 5.88]].forEach(([p, t], i) => {
+        gsap.set(p, { y: -200, opacity: 0, rotation: 0 });
+        tl.to(p, { y: 0, opacity: 1, duration: 0.6, ease: E.card }, t);
+        // les anciennes descendent et s'inclinent
+        ["#pl1", "#pl2"].slice(0, i).forEach((q, j) => tl.to(q, { y: `+=${70}`, rotation: (j % 2 ? 4 : -5), scale: `-=${0.06}`, duration: 0.5, ease: E.card }, t));
+      });
+      gsap.set("#bin", { y: 500 });
+      tl.to("#bin", { y: 0, duration: 0.7, ease: E.card }, 3.1);
+      tl.to("#lid", { rotation: -28, transformOrigin: "20px 60px", duration: 0.3, ease: "power2.out" }, 7.2);
+      tl.to(["#pl3", "#pl2", "#pl1"], { y: 860, rotation: 25, scale: 0.6, duration: 0.45, ease: "power3.in", stagger: 0.12 }, 7.35);
+      tl.to("#lid", { rotation: 0, duration: 0.35, ease: E.ui }, 8.0);
+      MK.shake(tl, "#bin", 8.05, 8);
+
+      /* 4. puis tout devient clair */
+      gsap.set("#mq", { x: 900 });
+      tl.to("#mq", { x: -560, duration: 1.7, ease: "power2.out" }, 8.4);
+      gsap.set("#cur4", { x: 760, y: 1200, opacity: 0 });
+      tl.to("#cur4", { opacity: 1, duration: 0.1 }, 9.0);
+      tl.to("#cur4", { x: 560, y: 990, duration: 0.45, ease: "power2.out" }, 9.0);
+      MK.pulse(tl, "#clair", [9.55], 1.12);
+
+      /* 5. l'œil s'ouvre, les 4 piliers apparaissent */
+      gsap.set("#eyeOpen", { scaleY: 0.05, transformOrigin: "300px 150px" });
+      tl.to("#eyeOpen", { scaleY: 1, duration: 0.6, ease: E.card }, 10.15);
+      const look = [[10.14, "#ic1", 50, -30], [11.57, "#ic2", -50, -30], [13.2, "#ic3", -50, 30], [14.92, "#ic4", 50, 30]];
+      look.forEach(([t, ic, dx, dy]) => { MK.pop(tl, ic, t); tl.to("#iris", { x: dx, y: dy, duration: 0.4, ease: E.card }, t); });
+      tl.to("#iris", { x: 0, y: 0, duration: 0.4, ease: E.card }, 16.0);
+      tl.to("#eyeOpen", { scaleY: 0.05, duration: 0.15, ease: "power2.in" }, 16.55);
+      tl.to(["#ic1", "#ic2", "#ic3", "#ic4"], { x: (i) => [-260, 330, 330, -260][i], y: (i) => [560, 470, -390, -490][i], scale: 0.2, opacity: 0, duration: 0.4, ease: "power3.in" }, 16.55);
+
+      /* 6. C'est là que TON BUSINESS prend vie */
+      gsap.set(["#w6a", "#w6b", "#w6c"], { opacity: 0 });
+      tl.to("#w6a", { opacity: 1, duration: 0.2 }, 17.0);
+      tl.set("#w6a", { opacity: 0 }, 17.6);
+      tl.set("#w6b", { opacity: 1 }, 17.6);
+      tl.fromTo("#w6b", { scale: 1.4 }, { scale: 1, duration: 0.6, ease: E.type, immediateRender: false }, 17.6);
+      tl.set("#w6b", { opacity: 0 }, 18.3);
+      tl.set("#w6c", { opacity: 1 }, 18.3);
+      MK.pop(tl, "#w6c", 18.3, { from: 0.8 });
+
+      /* 7. chiffres sur la vague */
+      gsap.set("#wave", { y: 500 });
+      tl.to("#wave", { y: 0, duration: 0.6, ease: E.card }, 19.15);
+      tl.to("#wave", { x: -1080, duration: 3.4, ease: "none" }, 19.15);
+      MK.pop(tl, "#disc7", 19.2);
+      gsap.set(["#i7a", "#i7b", "#i7c", "#st1", "#st2", "#st3"], { opacity: 0 });
+      [[19.22, "#i7a", "#st1"], [20.01, "#i7b", "#st2"], [21.12, "#i7c", "#st3"]].forEach(([t, ic, st], i, arr) => {
+        tl.set([ic, st], { opacity: 1 }, t);
+        MK.slide(tl, st, t, { x: 120, dur: 0.6 });
+        if (i < arr.length - 1) tl.set([ic, st], { opacity: 0 }, arr[i + 1][0]);
+      });
+      MK.count(tl, "#n1", 0, 10000, 19.25, 0.7);
+      MK.count(tl, "#n2", 0, 400, 20.05, 0.7);
+      MK.count(tl, "#n3", 0, 4.9, 21.15, 0.7, (v) => v.toFixed(1).replace(".", ","));
+
+      /* 8. clients */
+      gsap.set(["#lg0", "#lg1", "#lg2", "#lg3", "#lg4", "#lg5", "#lg6"], { opacity: 0 });
+      tl.set("#lg0", { opacity: 1 }, 22.6);
+      MK.pop(tl, "#lg0 > div", 22.6, { from: 0.85, stagger: 0.12 });
+      [["#lg1", 23.3, 24.0], ["#lg2", 24.0, 24.2], ["#lg3", 24.2, 24.4], ["#lg4", 24.4, 24.55], ["#lg5", 24.55, 24.7]].forEach(([l, a, b]) => { tl.set(l, { opacity: 1 }, a); tl.set(l, { opacity: 0 }, b); });
+      tl.set("#lg0", { opacity: 0 }, 23.3);
+      tl.fromTo("#lg1 > *", { y: 60 }, { y: 0, duration: 0.6, ease: E.card, stagger: 0.06, immediateRender: false }, 23.3);
+      tl.set("#lg6", { opacity: 1 }, 24.7);
+      MK.rise(tl, ["#ca", "#cb"], 24.7, { stagger: 0.35 });
+
+      /* 9. Si tu veux grandir en 2027 */
+      MK.circleIn(tl, "#w9", 25.95, { x: 540, y: 960, dur: 0.4 });
+      MK.rise(tl, "#g1", 26.1);
+      MK.rise(tl, "#g2", 27.1);
+
+      /* 10. BOUGER */
+      gsap.set("#bg10", { opacity: 0 });
+      MK.pop(tl, "#fb", 28.15, { from: 0.9 });
+      tl.set("#f10", { opacity: 0 }, 28.6);
+      tl.set("#bg10", { opacity: 1 }, 28.6);
+      gsap.set(["#bo1", "#bo2"], { x: 0 });
+      tl.fromTo("#bo1", { x: -700 }, { x: 0, duration: 0.45, ease: E.type, immediateRender: false }, 28.6);
+      tl.fromTo("#bo2", { x: 700 }, { x: 0, duration: 0.45, ease: E.type, immediateRender: false }, 28.7);
+      gsap.set("#sl10", { opacity: 0 });
+      [29.1, 29.4].forEach((t) => { tl.set("#sl10", { opacity: 1, y: t === 29.1 ? -120 : 180 }, t); tl.set("#sl10", { opacity: 0 }, t + 0.08); tl.to(["#bo1", "#bo2"], { x: (i) => (i ? 26 : -26), duration: 0.04 }, t); tl.to(["#bo1", "#bo2"], { x: 0, duration: 0.06 }, t + 0.06); });
+      MK.shake(tl, "#s10", 28.65, 14);
+
+      /* 11. signature */
+      MK.pop(tl, "#pz", 30.0);
+      MK.rise(tl, "#sb1", 30.2);
+      MK.rise(tl, "#sb2", 30.4);
+      MK.fadeIn(tl, "#sb3", 30.9, 0.4);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

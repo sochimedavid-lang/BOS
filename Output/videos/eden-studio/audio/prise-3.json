@@ -1,0 +1,458 @@
+[
+  {
+    "text": "Ton",
+    "start": 0.1,
+    "end": 0.19,
+    "id": "w0"
+  },
+  {
+    "text": "business",
+    "start": 0.19,
+    "end": 0.7,
+    "id": "w1"
+  },
+  {
+    "text": "commence",
+    "start": 0.7,
+    "end": 1.08,
+    "id": "w2"
+  },
+  {
+    "text": "comme",
+    "start": 1.23,
+    "end": 1.47,
+    "id": "w3"
+  },
+  {
+    "text": "une",
+    "start": 1.53,
+    "end": 1.72,
+    "id": "w4"
+  },
+  {
+    "text": "page",
+    "start": 1.72,
+    "end": 1.96,
+    "id": "w5"
+  },
+  {
+    "text": "blanche.",
+    "start": 1.96,
+    "end": 2.48,
+    "id": "w6"
+  },
+  {
+    "text": "Un",
+    "start": 2.58,
+    "end": 2.68,
+    "id": "w7"
+  },
+  {
+    "text": "message",
+    "start": 2.68,
+    "end": 3.41,
+    "id": "w8"
+  },
+  {
+    "text": "flou,",
+    "start": 3.41,
+    "end": 3.94,
+    "id": "w9"
+  },
+  {
+    "text": "des",
+    "start": 4.01,
+    "end": 4.2,
+    "id": "w10"
+  },
+  {
+    "text": "visuels",
+    "start": 4.2,
+    "end": 4.7,
+    "id": "w11"
+  },
+  {
+    "text": "au",
+    "start": 4.7,
+    "end": 5.07,
+    "id": "w12"
+  },
+  {
+    "text": "hasard,",
+    "start": 5.07,
+    "end": 5.48,
+    "id": "w13"
+  },
+  {
+    "text": "des",
+    "start": 5.48,
+    "end": 5.72,
+    "id": "w14"
+  },
+  {
+    "text": "postes",
+    "start": 5.72,
+    "end": 6.16,
+    "id": "w15"
+  },
+  {
+    "text": "que",
+    "start": 6.42,
+    "end": 6.47,
+    "id": "w16"
+  },
+  {
+    "text": "personne",
+    "start": 6.51,
+    "end": 7.14,
+    "id": "w17"
+  },
+  {
+    "text": "ne",
+    "start": 7.14,
+    "end": 7.3,
+    "id": "w18"
+  },
+  {
+    "text": "regarde.",
+    "start": 7.3,
+    "end": 7.92,
+    "id": "w19"
+  },
+  {
+    "text": "Puis",
+    "start": 8.02,
+    "end": 8.21,
+    "id": "w20"
+  },
+  {
+    "text": "tout",
+    "start": 8.21,
+    "end": 8.5,
+    "id": "w21"
+  },
+  {
+    "text": "devient",
+    "start": 8.5,
+    "end": 9,
+    "id": "w22"
+  },
+  {
+    "text": "clair.",
+    "start": 9.15,
+    "end": 9.64,
+    "id": "w23"
+  },
+  {
+    "text": "Un",
+    "start": 9.74,
+    "end": 9.85,
+    "id": "w24"
+  },
+  {
+    "text": "logo",
+    "start": 9.85,
+    "end": 10.27,
+    "id": "w25"
+  },
+  {
+    "text": "qui",
+    "start": 10.27,
+    "end": 10.58,
+    "id": "w26"
+  },
+  {
+    "text": "vit,",
+    "start": 10.58,
+    "end": 11.1,
+    "id": "w27"
+  },
+  {
+    "text": "des",
+    "start": 11.17,
+    "end": 11.36,
+    "id": "w28"
+  },
+  {
+    "text": "vidéos",
+    "start": 11.36,
+    "end": 11.83,
+    "id": "w29"
+  },
+  {
+    "text": "qui",
+    "start": 11.83,
+    "end": 11.86,
+    "id": "w30"
+  },
+  {
+    "text": "bougent,",
+    "start": 12.29,
+    "end": 12.8,
+    "id": "w31"
+  },
+  {
+    "text": "une",
+    "start": 12.8,
+    "end": 12.88,
+    "id": "w32"
+  },
+  {
+    "text": "histoire",
+    "start": 12.98,
+    "end": 13.31,
+    "id": "w33"
+  },
+  {
+    "text": "qu'on",
+    "start": 13.58,
+    "end": 13.87,
+    "id": "w34"
+  },
+  {
+    "text": "retient,",
+    "start": 13.87,
+    "end": 14.5,
+    "id": "w35"
+  },
+  {
+    "text": "des",
+    "start": 14.52,
+    "end": 14.7,
+    "id": "w36"
+  },
+  {
+    "text": "clients",
+    "start": 14.72,
+    "end": 15.24,
+    "id": "w37"
+  },
+  {
+    "text": "qui",
+    "start": 15.24,
+    "end": 15.37,
+    "id": "w38"
+  },
+  {
+    "text": "te",
+    "start": 15.45,
+    "end": 15.53,
+    "id": "w39"
+  },
+  {
+    "text": "reconnaissent.",
+    "start": 15.53,
+    "end": 16.6,
+    "id": "w40"
+  },
+  {
+    "text": "C'est",
+    "start": 16.66,
+    "end": 16.91,
+    "id": "w41"
+  },
+  {
+    "text": "là",
+    "start": 16.91,
+    "end": 17.02,
+    "id": "w42"
+  },
+  {
+    "text": "que",
+    "start": 17.04,
+    "end": 17.23,
+    "id": "w43"
+  },
+  {
+    "text": "ton",
+    "start": 17.23,
+    "end": 17.42,
+    "id": "w44"
+  },
+  {
+    "text": "business",
+    "start": 17.42,
+    "end": 17.94,
+    "id": "w45"
+  },
+  {
+    "text": "prend",
+    "start": 17.94,
+    "end": 18.27,
+    "id": "w46"
+  },
+  {
+    "text": "vie.",
+    "start": 18.27,
+    "end": 18.72,
+    "id": "w47"
+  },
+  {
+    "text": "Plus",
+    "start": 18.82,
+    "end": 19.02,
+    "id": "w48"
+  },
+  {
+    "text": "de",
+    "start": 19.02,
+    "end": 19.14,
+    "id": "w49"
+  },
+  {
+    "text": "vues,",
+    "start": 19.17,
+    "end": 19.61,
+    "id": "w50"
+  },
+  {
+    "text": "plus",
+    "start": 19.61,
+    "end": 19.79,
+    "id": "w51"
+  },
+  {
+    "text": "de",
+    "start": 19.95,
+    "end": 20.06,
+    "id": "w52"
+  },
+  {
+    "text": "clients,",
+    "start": 20.06,
+    "end": 20.72,
+    "id": "w53"
+  },
+  {
+    "text": "plus",
+    "start": 20.72,
+    "end": 20.94,
+    "id": "w54"
+  },
+  {
+    "text": "de",
+    "start": 21.05,
+    "end": 21.06,
+    "id": "w55"
+  },
+  {
+    "text": "confiance.",
+    "start": 21.37,
+    "end": 22.16,
+    "id": "w56"
+  },
+  {
+    "text": "Ils",
+    "start": 22.26,
+    "end": 22.4,
+    "id": "w57"
+  },
+  {
+    "text": "nous",
+    "start": 22.4,
+    "end": 22.72,
+    "id": "w58"
+  },
+  {
+    "text": "ont",
+    "start": 22.72,
+    "end": 22.96,
+    "id": "w59"
+  },
+  {
+    "text": "fait",
+    "start": 22.96,
+    "end": 23.24,
+    "id": "w60"
+  },
+  {
+    "text": "confiance",
+    "start": 23.28,
+    "end": 24,
+    "id": "w61"
+  },
+  {
+    "text": "de",
+    "start": 24,
+    "end": 24.14,
+    "id": "w62"
+  },
+  {
+    "text": "Kotonu",
+    "start": 24.15,
+    "end": 24.64,
+    "id": "w63"
+  },
+  {
+    "text": "à",
+    "start": 24.64,
+    "end": 24.81,
+    "id": "w64"
+  },
+  {
+    "text": "Abidjan.",
+    "start": 24.81,
+    "end": 25.56,
+    "id": "w65"
+  },
+  {
+    "text": "Si",
+    "start": 25.66,
+    "end": 25.71,
+    "id": "w66"
+  },
+  {
+    "text": "tu",
+    "start": 25.71,
+    "end": 25.86,
+    "id": "w67"
+  },
+  {
+    "text": "veux",
+    "start": 25.86,
+    "end": 26.15,
+    "id": "w68"
+  },
+  {
+    "text": "grandir",
+    "start": 26.15,
+    "end": 26.64,
+    "id": "w69"
+  },
+  {
+    "text": "en",
+    "start": 26.79,
+    "end": 26.81,
+    "id": "w70"
+  },
+  {
+    "text": "2027,",
+    "start": 26.81,
+    "end": 27.78,
+    "id": "w71"
+  },
+  {
+    "text": "fais",
+    "start": 27.78,
+    "end": 28.21,
+    "id": "w72"
+  },
+  {
+    "text": "bouger",
+    "start": 28.21,
+    "end": 28.58,
+    "id": "w73"
+  },
+  {
+    "text": "ta",
+    "start": 28.58,
+    "end": 28.72,
+    "id": "w74"
+  },
+  {
+    "text": "marque.",
+    "start": 28.72,
+    "end": 29.27,
+    "id": "w75"
+  }
+]
