@@ -2,3 +2,8 @@
 *.tmp
 *.swp
 *~
+
+# Clés et secrets : ne jamais envoyer sur GitHub
+.env
+.env.*
+!.env.example
