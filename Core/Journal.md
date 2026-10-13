@@ -63,3 +63,12 @@
 - Retour entrepreneur : version 54 s trop lente, voix trop lente → règle ajoutée dans CLAUDE.md (la voix s'adapte à la vidéo, rythme dynamique, bruitages par défaut).
 - Version dynamique livrée : `noel-dynamique.mp4` (16:9) et `noel-dynamique-vertical.mp4` (9:16), 37 s, voix rapide calée segment par segment (villes une par une), ~45 bruitages synthétisés (souffles, clochettes, pops, clics d'horloge, boom, feu, chocs, scintillements), mixage -14 LUFS avec atténuation sous la voix. Scripts : `voix_dyn.py`, `voix3_gen.py`, `mix.py`, `gen2.py`.
 - Quota Gemini gratuit : 10 voix/jour/modèle. 2.5-flash épuisé le 13/10 ; voix finale faite avec gemini-3.8-flash-tts (qui lit la consigne de style à voix haute → découpée, vérifiée par transcription).
+
+### 2026-10-13 — Voix off Noël : prise unique
+- Version 37 s (voix découpée) rejetée : le débit changeait d'une phrase à l'autre, tantôt trop rapide, tantôt lent.
+- Nouvelle approche : tout le texte enregistré en une seule prise, avec deux moteurs à comparer.
+  - ElevenLabs v4, voix « Paul K » (pub/bande-annonce) : 27,6 s, transcription propre.
+  - Gemini 3.8 Flash TTS, voix Sulafat, sans consigne de style : 27,0 s.
+- Fichiers dans Output/videos/noel-isometrique/voix-prise-unique/.
+- Crédits ElevenLabs presque épuisés (102 restants, il en faut 376 par prise) : une seule prise générée sur les 4 prévues.
+- En attente du choix de l'entrepreneur avant de recaler la vidéo.

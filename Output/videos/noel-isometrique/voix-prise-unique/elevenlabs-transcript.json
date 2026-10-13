@@ -1,0 +1,356 @@
+[
+  {
+    "text": "24",
+    "start": 0.03,
+    "end": 0.64,
+    "id": "w0"
+  },
+  {
+    "text": "décembre.",
+    "start": 0.64,
+    "end": 1.7,
+    "id": "w1"
+  },
+  {
+    "text": "Une",
+    "start": 1.7,
+    "end": 1.89,
+    "id": "w2"
+  },
+  {
+    "text": "seule",
+    "start": 2.02,
+    "end": 2.24,
+    "id": "w3"
+  },
+  {
+    "text": "nuit",
+    "start": 2.24,
+    "end": 2.5,
+    "id": "w4"
+  },
+  {
+    "text": "pour",
+    "start": 2.6,
+    "end": 2.78,
+    "id": "w5"
+  },
+  {
+    "text": "livrer",
+    "start": 2.78,
+    "end": 3.18,
+    "id": "w6"
+  },
+  {
+    "text": "le",
+    "start": 3.18,
+    "end": 3.31,
+    "id": "w7"
+  },
+  {
+    "text": "monde",
+    "start": 3.31,
+    "end": 3.65,
+    "id": "w8"
+  },
+  {
+    "text": "entier.",
+    "start": 3.65,
+    "end": 4.22,
+    "id": "w9"
+  },
+  {
+    "text": "Au",
+    "start": 4.47,
+    "end": 4.61,
+    "id": "w10"
+  },
+  {
+    "text": "Pôle",
+    "start": 4.61,
+    "end": 4.93,
+    "id": "w11"
+  },
+  {
+    "text": "Nord,",
+    "start": 4.99,
+    "end": 5.45,
+    "id": "w12"
+  },
+  {
+    "text": "l'atelier",
+    "start": 5.46,
+    "end": 6.14,
+    "id": "w13"
+  },
+  {
+    "text": "tourne",
+    "start": 6.14,
+    "end": 6.6,
+    "id": "w14"
+  },
+  {
+    "text": "à",
+    "start": 6.6,
+    "end": 6.67,
+    "id": "w15"
+  },
+  {
+    "text": "fond.",
+    "start": 6.67,
+    "end": 7.24,
+    "id": "w16"
+  },
+  {
+    "text": "Des",
+    "start": 7.24,
+    "end": 7.44,
+    "id": "w17"
+  },
+  {
+    "text": "millions",
+    "start": 7.44,
+    "end": 7.98,
+    "id": "w18"
+  },
+  {
+    "text": "de",
+    "start": 7.98,
+    "end": 8.11,
+    "id": "w19"
+  },
+  {
+    "text": "cadeaux,",
+    "start": 8.11,
+    "end": 8.64,
+    "id": "w20"
+  },
+  {
+    "text": "emballés,",
+    "start": 8.79,
+    "end": 9.2,
+    "id": "w21"
+  },
+  {
+    "text": "triés,",
+    "start": 9.2,
+    "end": 10.18,
+    "id": "w22"
+  },
+  {
+    "text": "chargés.",
+    "start": 10.24,
+    "end": 11,
+    "id": "w23"
+  },
+  {
+    "text": "Minuit",
+    "start": 11.03,
+    "end": 11.49,
+    "id": "w24"
+  },
+  {
+    "text": "piles,",
+    "start": 11.55,
+    "end": 12.18,
+    "id": "w25"
+  },
+  {
+    "text": "décollage.",
+    "start": 12.18,
+    "end": 13.32,
+    "id": "w26"
+  },
+  {
+    "text": "Son",
+    "start": 13.32,
+    "end": 13.5,
+    "id": "w27"
+  },
+  {
+    "text": "secret?",
+    "start": 13.61,
+    "end": 14.27,
+    "id": "w28"
+  },
+  {
+    "text": "Il",
+    "start": 14.28,
+    "end": 14.46,
+    "id": "w29"
+  },
+  {
+    "text": "suit",
+    "start": 14.46,
+    "end": 14.82,
+    "id": "w30"
+  },
+  {
+    "text": "la",
+    "start": 14.82,
+    "end": 15,
+    "id": "w31"
+  },
+  {
+    "text": "nuit.",
+    "start": 15,
+    "end": 15.64,
+    "id": "w32"
+  },
+  {
+    "text": "Tokyo,",
+    "start": 15.67,
+    "end": 16.32,
+    "id": "w33"
+  },
+  {
+    "text": "Paris,",
+    "start": 16.32,
+    "end": 16.96,
+    "id": "w34"
+  },
+  {
+    "text": "Kotonu,",
+    "start": 17.01,
+    "end": 17.76,
+    "id": "w35"
+  },
+  {
+    "text": "New",
+    "start": 17.76,
+    "end": 18.05,
+    "id": "w36"
+  },
+  {
+    "text": "York.",
+    "start": 18.05,
+    "end": 18.8,
+    "id": "w37"
+  },
+  {
+    "text": "Une",
+    "start": 18.8,
+    "end": 19,
+    "id": "w38"
+  },
+  {
+    "text": "cheminée,",
+    "start": 19.01,
+    "end": 19.72,
+    "id": "w39"
+  },
+  {
+    "text": "un",
+    "start": 19.72,
+    "end": 19.84,
+    "id": "w40"
+  },
+  {
+    "text": "sapin,",
+    "start": 19.91,
+    "end": 20.64,
+    "id": "w41"
+  },
+  {
+    "text": "un",
+    "start": 20.64,
+    "end": 20.86,
+    "id": "w42"
+  },
+  {
+    "text": "cadeau.",
+    "start": 20.86,
+    "end": 21.71,
+    "id": "w43"
+  },
+  {
+    "text": "Et",
+    "start": 21.71,
+    "end": 21.75,
+    "id": "w44"
+  },
+  {
+    "text": "on",
+    "start": 21.91,
+    "end": 21.95,
+    "id": "w45"
+  },
+  {
+    "text": "recommence.",
+    "start": 21.95,
+    "end": 22.8,
+    "id": "w46"
+  },
+  {
+    "text": "Joyeux",
+    "start": 22.83,
+    "end": 23.7,
+    "id": "w47"
+  },
+  {
+    "text": "Noël!",
+    "start": 23.7,
+    "end": 24.32,
+    "id": "w48"
+  },
+  {
+    "text": "Et",
+    "start": 24.35,
+    "end": 24.46,
+    "id": "w49"
+  },
+  {
+    "text": "si",
+    "start": 24.46,
+    "end": 24.6,
+    "id": "w50"
+  },
+  {
+    "text": "votre",
+    "start": 24.6,
+    "end": 24.95,
+    "id": "w51"
+  },
+  {
+    "text": "marque",
+    "start": 24.95,
+    "end": 25.36,
+    "id": "w52"
+  },
+  {
+    "text": "avait",
+    "start": 25.36,
+    "end": 25.62,
+    "id": "w53"
+  },
+  {
+    "text": "elle",
+    "start": 25.62,
+    "end": 26,
+    "id": "w54"
+  },
+  {
+    "text": "aussi",
+    "start": 26,
+    "end": 26.35,
+    "id": "w55"
+  },
+  {
+    "text": "sa",
+    "start": 26.35,
+    "end": 26.49,
+    "id": "w56"
+  },
+  {
+    "text": "vidéo",
+    "start": 26.49,
+    "end": 26.81,
+    "id": "w57"
+  },
+  {
+    "text": "magique?",
+    "start": 26.92,
+    "end": 27.59,
+    "id": "w58"
+  }
+]
