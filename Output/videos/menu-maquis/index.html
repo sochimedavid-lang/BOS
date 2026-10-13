@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600;1,9..144,800&family=Inter+Tight:wght@500;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0B2A20; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Inter Tight", sans-serif; color: #FFF4E0; }
+      .clip { position: absolute; inset: 0; }
+
+      /* Décor permanent */
+      #bg { background: radial-gradient(900px 900px at 50% 30%, #1B5A43 0%, #0F3A2C 45%, #08201A 100%); }
+      .ring { position: absolute; border-radius: 50%; border: 2px solid rgba(242,179,61,.18); left: 50%; top: 50%; }
+      #ring1 { width: 1500px; height: 1500px; margin: -750px 0 0 -750px; }
+      #ring2 { width: 1100px; height: 1100px; margin: -550px 0 0 -550px; border-style: dashed; }
+      .dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #F2B33D; }
+
+      /* Scène 1 : accroche */
+      #burst { position: absolute; left: 50%; top: 50%; width: 760px; height: 760px; margin: -380px 0 0 -380px; border-radius: 50%; background: #F2B33D; }
+      #faim { position: absolute; left: 0; right: 0; top: 760px; text-align: center; font-weight: 900; font-size: 230px; letter-spacing: -0.05em; color: #0B2A20; line-height: 1; }
+      #faimSub { position: absolute; left: 0; right: 0; top: 1010px; text-align: center; font-weight: 800; font-size: 54px; color: #0B2A20; }
+
+      /* Scène 2-3 : menu */
+      #head { position: absolute; left: 90px; right: 90px; top: 190px; text-align: center; }
+      #resto { font-weight: 800; font-size: 34px; letter-spacing: .34em; color: #F2B33D; }
+      .mask { overflow: hidden; padding-top: 10px; }
+      #titre { font-family: "Fraunces", serif; font-style: italic; font-weight: 800; font-size: 150px; line-height: 1.05; letter-spacing: -0.02em; }
+      #rule { width: 360px; height: 6px; background: #F2B33D; border-radius: 3px; margin: 26px auto 0; transform-origin: center; }
+
+      #plate { position: absolute; left: 50%; top: 545px; width: 170px; height: 170px; margin-left: -85px; }
+      #plate .p1 { position: absolute; inset: 0; border-radius: 50%; background: #FFF4E0; }
+      #plate .p2 { position: absolute; inset: 26px; border-radius: 50%; background: #F7E6C4; border: 4px solid #E8CF9E; }
+      #plate .food { position: absolute; left: 50px; top: 54px; width: 76px; height: 64px; border-radius: 40% 50% 45% 50%; background: #C84B1E; }
+      #plate .food2 { position: absolute; left: 82px; top: 48px; width: 40px; height: 40px; border-radius: 50%; background: #E9A23B; }
+      .steam { position: absolute; top: -110px; width: 14px; height: 90px; border-radius: 7px; background: rgba(255,244,224,.55); }
+
+      #list { position: absolute; left: 80px; right: 80px; top: 790px; }
+      .row { position: relative; display: flex; align-items: center; gap: 26px; padding: 24px 30px; margin-bottom: 18px; border-radius: 28px; background: rgba(255,244,224,.07); border: 2px solid rgba(255,244,224,.12); }
+      .num { flex: 0 0 64px; height: 64px; border-radius: 18px; background: #F2B33D; color: #0B2A20; font-weight: 900; font-size: 34px; display: flex; align-items: center; justify-content: center; }
+      .name { flex: 1; font-weight: 800; font-size: 46px; letter-spacing: -0.02em; line-height: 1.1; }
+      .name small { display: block; font-weight: 500; font-size: 28px; color: rgba(255,244,224,.65); letter-spacing: 0; margin-top: 4px; }
+      .price { flex: 0 0 auto; font-weight: 900; font-size: 44px; color: #0B2A20; background: #FFF4E0; border-radius: 99px; padding: 10px 24px; }
+      #star { position: absolute; right: -14px; top: -112px; width: 140px; height: 140px; }
+      #star .s { position: absolute; inset: 0; background: #E9472B; clip-path: polygon(50% 0,61% 13%,77% 6%,79% 23%,95% 25%,88% 40%,100% 50%,88% 60%,95% 75%,79% 77%,77% 94%,61% 87%,50% 100%,39% 87%,23% 94%,21% 77%,5% 75%,12% 60%,0 50%,12% 40%,5% 25%,21% 23%,23% 6%,39% 13%); }
+      #star .t { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 900; font-size: 24px; line-height: 1; color: #FFF4E0; }
+
+      /* Scène 4 : appel à l'action */
+      #cta { position: absolute; left: 80px; right: 80px; top: 1420px; text-align: center; }
+      #chips { display: flex; justify-content: center; gap: 16px; margin-bottom: 34px; }
+      .chip { font-weight: 700; font-size: 32px; padding: 14px 26px; border-radius: 99px; border: 2px solid rgba(242,179,61,.7); color: #F2B33D; }
+      #order { display: inline-flex; align-items: center; gap: 22px; background: #25D366; color: #08201A; font-weight: 900; font-size: 50px; padding: 26px 46px; border-radius: 99px; }
+      #order .ico { width: 64px; height: 64px; border-radius: 50%; background: #08201A; display: flex; align-items: center; justify-content: center; }
+      #addr { margin-top: 30px; font-weight: 600; font-size: 34px; color: rgba(255,244,224,.75); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1080" data-height="1920">
+
+      <!-- Décor -->
+      <div id="bg" class="clip" data-start="0" data-duration="12" data-track-index="0">
+        <div id="ring1" class="ring" data-layout-allow-overflow></div>
+        <div id="ring2" class="ring" data-layout-allow-overflow></div>
+        <span class="dot" id="d1" style="left:120px;top:180px"></span>
+        <span class="dot" id="d2" style="left:930px;top:420px;background:#E9472B"></span>
+        <span class="dot" id="d3" style="left:150px;top:1780px"></span>
+        <span class="dot" id="d4" style="left:900px;top:1700px"></span>
+      </div>
+
+      <!-- Scène 1 : accroche -->
+      <div id="s1" class="clip" data-start="0" data-duration="2.6" data-track-index="1">
+        <div id="burst"></div>
+        <div id="faim">FAIM&nbsp;?</div>
+        <div id="faimSub">Le menu du jour est prêt</div>
+      </div>
+
+      <!-- Scène 2-4 : menu + appel à l'action -->
+      <div id="s2" class="clip" data-start="2.3" data-duration="9.7" data-track-index="2">
+        <div id="head">
+          <div id="resto">MAQUIS LE BON GOÛT</div>
+          <div class="mask"><div id="titre">Menu du jour</div></div>
+          <div id="rule"></div>
+        </div>
+
+        <div id="plate">
+          <span class="steam" id="st1" style="left:58px"></span>
+          <span class="steam" id="st2" style="left:94px;height:110px;top:-130px"></span>
+          <span class="steam" id="st3" style="left:130px"></span>
+          <div class="p1"></div><div class="p2"></div><div class="food"></div><div class="food2"></div>
+        </div>
+
+        <div id="list">
+          <div class="row" id="r1" data-layout-allow-overflow>
+            <div class="num">1</div>
+            <div class="name">Amiwo au poulet<small>sauce tomate maison</small></div>
+            <div class="price">3 000 F</div>
+            <div id="star"><div class="s"></div><div class="t">PLAT<br>STAR</div></div>
+          </div>
+          <div class="row" id="r2" data-layout-allow-overflow><div class="num">2</div><div class="name">Pâte rouge &amp; poisson<small>piment à part</small></div><div class="price">2 000 F</div></div>
+          <div class="row" id="r3" data-layout-allow-overflow><div class="num">3</div><div class="name">Atassi<small>riz &amp; haricots, gari</small></div><div class="price">1 000 F</div></div>
+          <div class="row" id="r4" data-layout-allow-overflow><div class="num">4</div><div class="name">Poisson braisé<small>avec alloco</small></div><div class="price">2 500 F</div></div>
+        </div>
+
+        <div id="cta">
+          <div id="chips"><span class="chip" id="c1">Sur place</span><span class="chip" id="c2">À emporter</span><span class="chip" id="c3">Livraison</span></div>
+          <div id="order"><span class="ico"><svg width="36" height="36" viewBox="0 0 24 24"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2s-1 .3-3.4-.7a11.8 11.8 0 0 1-4.6-4.1c-.4-.5-1-1.6-1-2.7s.6-1.7.8-1.9.5-.3.6-.3h.5c.1 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6a8.6 8.6 0 0 0 1.6 2 7.8 7.8 0 0 0 2.3 1.4c.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.5.2.5.3a2.2 2.2 0 0 1-.1 1.4z"/></svg></span>Commande sur WhatsApp</div>
+          <div id="addr">Fidjrossè · Cotonou · ouvert 11 h – 22 h</div>
+        </div>
+      </div>
+
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Décor : anneaux et points qui vivent pendant toute la vidéo
+      tl.fromTo("#ring1", { scale: 0.9, rotation: 0 }, { scale: 1.05, rotation: 25, duration: 12, ease: "none" }, 0);
+      tl.fromTo("#ring2", { scale: 1, rotation: 0 }, { scale: 0.92, rotation: -40, duration: 12, ease: "none" }, 0);
+      ["#d1", "#d2", "#d3", "#d4"].forEach((d, i) => {
+        tl.fromTo(d, { y: 0, opacity: 0.4 }, { y: -40, opacity: 1, duration: 3, ease: "sine.inOut", yoyo: true, repeat: 3 }, i * 0.4);
+      });
+
+      // Scène 1 : accroche
+      tl.fromTo("#burst", { scale: 0 }, { scale: 1, duration: 0.6, ease: "back.out(1.6)" }, 0.05);
+      tl.fromTo("#faim", { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power4.out" }, 0.25);
+      tl.fromTo("#faimSub", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.75);
+      tl.to("#faim", { scale: 1.06, duration: 0.18, ease: "power1.inOut", yoyo: true, repeat: 3 }, 1.0);
+      tl.to("#burst", { scale: 4, duration: 0.55, ease: "power3.in" }, 1.95);
+      tl.to(["#faim", "#faimSub"], { opacity: 0, scale: 0.8, duration: 0.3, ease: "power2.in" }, 1.95);
+
+      // Scène 2 : titre
+      tl.fromTo("#resto", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.4);
+      tl.fromTo("#titre", { y: 180 }, { y: 0, duration: 0.7, ease: "expo.out" }, 2.55);
+      tl.fromTo("#rule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.inOut" }, 2.9);
+      tl.fromTo("#plate", { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.7)" }, 3.0);
+      ["#st1", "#st2", "#st3"].forEach((s, i) => {
+        tl.fromTo(s, { y: 30, opacity: 0, scaleY: 0.6 }, { y: -30, opacity: 0.9, scaleY: 1, duration: 1.1, ease: "sine.out", repeat: 6, yoyo: true }, 3.4 + i * 0.25);
+      });
+
+      // Scène 3 : les plats arrivent un par un
+      ["#r1", "#r2", "#r3", "#r4"].forEach((r, i) => {
+        const t = 3.7 + i * 0.75;
+        tl.fromTo(r, { x: -1000, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, t);
+        tl.fromTo(r + " .price", { scale: 0 }, { scale: 1, duration: 0.45, ease: "back.out(2.4)" }, t + 0.3);
+        tl.fromTo(r + " .num", { rotation: -180, scale: 0 }, { rotation: 0, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, t + 0.15);
+      });
+      tl.fromTo("#star", { scale: 0, rotation: -120 }, { scale: 1, rotation: 0, duration: 0.6, ease: "back.out(2)" }, 4.3);
+      tl.to("#star", { rotation: 360, duration: 7, ease: "none" }, 4.9);
+      tl.to("#r1 .price", { scale: 1.12, duration: 0.25, ease: "power1.inOut", yoyo: true, repeat: 1 }, 7.0);
+
+      // Scène 4 : appel à l'action
+      ["#c1", "#c2", "#c3"].forEach((c, i) => {
+        tl.fromTo(c, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 7.1 + i * 0.12);
+      });
+      tl.fromTo("#order", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.8)" }, 7.6);
+      tl.to("#order", { scale: 1.05, duration: 0.35, ease: "sine.inOut", yoyo: true, repeat: 7 }, 8.3);
+      tl.fromTo("#order .ico", { rotation: -12 }, { rotation: 12, duration: 0.12, ease: "none", yoyo: true, repeat: 9 }, 8.4);
+      tl.fromTo("#addr", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 8.1);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

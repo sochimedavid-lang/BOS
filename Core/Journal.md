@@ -46,3 +46,7 @@
 - Consigne de l'entrepreneur : livrer la page en HTML pour vérification ; c'est lui qui décide quand héberger.
 - Lien communauté WhatsApp reçu et intégré au PDF (cliquable). Contact support provisoire : message privé à l'admin du groupe (en attente d'un numéro/e-mail dédié).
 - Paiement 100 % dans la page : si le widget Chariow n'est pas chargé/bloqué, une fenêtre de secours affiche le même formulaire Chariow (iframe widget checkout) au lieu d'ouvrir la page Chariow. Testé : widget OK, secours OK, le visiteur reste sur la page.
+
+## 2026-10-13 — Exemples motion : vidéo test HyperFrames
+- HyperFrames 0.8.150 fonctionne dans l'environnement BOS (rendu local).
+- Vidéo test « Menu du jour — Maquis Le Bon Goût » : 12 s, 1080×1920, 30 i/s, sans son → `Output/videos/menu-maquis/menu-maquis.mp4` (projet HyperFrames à côté). Contrôles HyperFrames OK (mise en page, contraste). En attente de validation du style avant les 5 autres.
