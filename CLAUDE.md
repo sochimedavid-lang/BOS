@@ -231,6 +231,7 @@ Le flow de session quotidien (scan → check-in → mise à jour → proposer �
 
 ## Règles apprises (boucle d'auto-amélioration)
 - **Livrables visuels (site, page, design) : demander d'abord 2-3 références de goût** à l'entrepreneur (sites, comptes, captures qu'il trouve beaux) avant de maquetter. Le goût est un contexte personnel que BOS ne peut pas deviner. Ajouté le 2026-10-12 après le rejet de 3 directions maquettées à l'aveugle.
+- **Vidéos motion / pubs : rythme dynamique par défaut, et c'est la voix off qui s'adapte à la vidéo** (texte court, débit énergique, ton bande-annonce), jamais l'inverse. Ne jamais rallonger une vidéo pour caser une voix lente ; ajouter des bruitages par défaut. Ajouté le 2026-10-13 après une version de 54 s jugée trop lente.
 
 ## Ton
 

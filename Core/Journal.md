@@ -60,3 +60,6 @@
 - Voix off générée avec Gemini TTS (voix « Sulafat », 6 phrases). Animations recalées sur la voix (mots « Tokyo », « Paris », « Une cheminée »… synchronisés) → durée 53,9 s.
 - Livrés : `noel-isometrique-vertical.mp4` (1080×1920, avec voix) et `noel-isometrique-voix.mp4` (1920×1080, avec voix). Générateur : `gen.py`.
 - Clé Gemini collée dans le chat par l'entrepreneur → enregistrée seulement dans `.env` (ignoré par git). Conseil donné : régénérer la clé. Quota gratuit : 3 requêtes/minute.
+- Retour entrepreneur : version 54 s trop lente, voix trop lente → règle ajoutée dans CLAUDE.md (la voix s'adapte à la vidéo, rythme dynamique, bruitages par défaut).
+- Version dynamique livrée : `noel-dynamique.mp4` (16:9) et `noel-dynamique-vertical.mp4` (9:16), 37 s, voix rapide calée segment par segment (villes une par une), ~45 bruitages synthétisés (souffles, clochettes, pops, clics d'horloge, boom, feu, chocs, scintillements), mixage -14 LUFS avec atténuation sous la voix. Scripts : `voix_dyn.py`, `voix3_gen.py`, `mix.py`, `gen2.py`.
+- Quota Gemini gratuit : 10 voix/jour/modèle. 2.5-flash épuisé le 13/10 ; voix finale faite avec gemini-3.8-flash-tts (qui lit la consigne de style à voix haute → découpée, vérifiée par transcription).
