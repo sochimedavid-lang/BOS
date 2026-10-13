@@ -47,10 +47,12 @@
           <div id="pl2" data-layout-allow-overlap class="pill abs" style="left:200px; top:0">Visuels au hasard</div>
           <div id="pl3" data-layout-allow-overlap class="pill abs" style="left:215px; top:0">Posts sans vues</div>
         </div>
-        <svg id="bin" class="abs" style="left:290px; top:1290px" width="500" height="560" viewBox="0 0 500 560">
-          <g id="lid"><rect x="20" y="20" width="460" height="46" rx="14" fill="#1A0303"/><rect x="190" y="0" width="120" height="34" rx="10" fill="#1A0303"/></g>
-          <path d="M50 90 L450 90 L415 560 L85 560 Z" fill="#1A0303"/>
-          <g fill="#3A0707"><rect x="140" y="140" width="34" height="380" rx="17"/><rect x="233" y="140" width="34" height="380" rx="17"/><rect x="326" y="140" width="34" height="380" rx="17"/></g>
+        <svg id="bin" class="abs" style="left:290px; top:1290px; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))" width="500" height="560" viewBox="0 0 500 560">
+          <defs><linearGradient id="binG" x1="0" x2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#F3EEEA"/><stop offset="1" stop-color="#D9D0CB"/></linearGradient></defs>
+          <g id="lid"><rect x="20" y="20" width="460" height="46" rx="14" fill="url(#binG)"/><rect x="190" y="0" width="120" height="34" rx="10" fill="#F3EEEA"/></g>
+          <path d="M50 90 L450 90 L415 560 L85 560 Z" fill="url(#binG)"/>
+          <rect x="50" y="90" width="400" height="14" fill="#C9BFB9"/>
+          <g fill="#B3121F" opacity=".55"><rect x="140" y="140" width="34" height="380" rx="17"/><rect x="233" y="140" width="34" height="380" rx="17"/><rect x="326" y="140" width="34" height="380" rx="17"/></g>
         </svg>
       </div>
 
@@ -188,7 +190,8 @@
       gsap.set("#bin", { y: 500 });
       tl.to("#bin", { y: 0, duration: 0.7, ease: E.card }, 3.1);
       tl.to("#lid", { rotation: -28, transformOrigin: "20px 60px", duration: 0.3, ease: "power2.out" }, 7.2);
-      tl.to(["#pl3", "#pl2", "#pl1"], { y: 860, rotation: 25, scale: 0.6, duration: 0.45, ease: "power3.in", stagger: 0.12 }, 7.35);
+      tl.to(["#pl3", "#pl2", "#pl1"], { y: 790, rotation: 25, scale: 0.5, duration: 0.45, ease: "power3.in", stagger: 0.12 }, 7.35);
+      ["#pl3", "#pl2", "#pl1"].forEach((q, i) => tl.set(q, { opacity: 0 }, 7.35 + 0.45 + i * 0.12));
       tl.to("#lid", { rotation: 0, duration: 0.35, ease: E.ui }, 8.0);
       MK.shake(tl, "#bin", 8.05, 8);
 

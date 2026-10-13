@@ -90,3 +90,4 @@
 - Vidéo n° 11 adaptée : pub du studio STOPSCROLL, avec Eden Food (restaurant) en client vedette. Texte version 2, voix ElevenLabs « Paul K » (prise 3). Output/videos/eden-studio/out/final.mp4, 32,5 s, 30 i/s.
 - Demande de l'entrepreneur : aller plus vite sans perdre en qualité. Création du skill `.claude/skills/motion-kit` : briques d'animation, sous-titres automatiques, moteur de son générique, générateur de projet, méthode et garde-fous. Partageable avec les apprenants. Règle de vitesse ajoutée dans CLAUDE.md.
 - ⚠ ElevenLabs a refusé 1 prise sur 4 : « activité inhabituelle, accès gratuit désactivé, passer à un abonnement payant ». Le compte est encore sur le palier gratuit, ou signalé. À régler avant les prochaines voix.
+- Correction demandée : poubelle passée en blanc (elle était noire, peu visible) ; les étiquettes disparaissent dès qu'elles tombent dedans.
