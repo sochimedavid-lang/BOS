@@ -7,7 +7,7 @@
 <meta name="description" content="Apprends à créer avec l'IA des vidéos motion design pour les boutiques, restaurants et entreprises autour de toi. Accès immédiat, garantie 7 jours.">
 <meta property="og:title" content="Vibe Motion — Ta première vidéo motion en 7 jours, ou remboursé">
 <meta property="og:description" content="Aucune expérience en montage requise. Accès immédiat. Paiement MTN MoMo, Moov, carte.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://peryal.mychariow.shop"><link rel="preconnect" href="https://api-edge.chariow.com" crossorigin><link rel="preconnect" href="https://js.chariowcdn.com"><link rel="preconnect" href="https://images.chariowcdn.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* Démos motion animées en CSS — utilisées par les deux directions */
@@ -598,7 +598,9 @@ src="https://www.facebook.com/tr?id=2092809134709164&ev=PageView&noscript=1"
 <style>
 #chariow-widget .cw-button-base{position:fixed!important;left:-9999px!important;top:0!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
 #chariow-widget .cw-modal-content{border-radius:16px}
-#payModal{display:none}#payModal.on{display:block}
+#payModal{visibility:hidden;pointer-events:none}#payModal.on{visibility:visible;pointer-events:auto}
+#payModal .pm-ld{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:16px;z-index:2}#payModal.ready .pm-ld{display:none}
+#payModal .pm-ld i{width:34px;height:34px;border:3px solid #eee;border-top-color:#F4511E;border-radius:50%;animation:pmspin .8s linear infinite}@keyframes pmspin{to{transform:rotate(360deg)}}
 #payModal .pm-bg{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000}
 #payModal .pm-box{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(600px,calc(100% - 24px));background:#fff;border-radius:16px;z-index:1001;overflow:visible}
 #payModal .pm-if{display:block;width:100%;height:min(720px,86vh);border:0;border-radius:16px}
@@ -640,26 +642,38 @@ document.querySelectorAll("#brandName,.js-brand").forEach(n=>n.textContent=CONFI
 document.querySelectorAll(".js-buy").forEach(a=>{a.href=CONFIG.checkoutUrl||"#";a.addEventListener("click",e=>{
   if(window.fbq)fbq("track","InitiateCheckout",{value:2900,currency:"XOF",content_ids:["prd_zqv7lcu4"],content_type:"product"});
   e.preventDefault();
-  const native=document.querySelector("#chariow-widget .cw-button-base");
-  if(native){native.click();}   // fenêtre de paiement Chariow sur la page
-  else{openPay();}              // widget pas encore chargé ou bloqué : notre propre fenêtre de paiement
+  openPay();                    // fenêtre de paiement Chariow préchargée (s'ouvre sans attente)
 });});
 
-// Fenêtre de paiement de secours (même formulaire Chariow, sans quitter la page)
-const PAY_URL="https://peryal.mychariow.shop/widget/prd_zqv7lcu4/checkout?primary_color=%23F4511E&background_color=%23FFFFFF&border_style=rounded&locale=fr";
-function openPay(){
+// Fenêtre de paiement Chariow : préchargée en arrière-plan pendant la lecture de la page,
+// pour s'afficher instantanément au clic (le widget natif ne charge le formulaire qu'au clic : 2-3 s d'attente)
+const PAY_BASE="https://peryal.mychariow.shop/widget/prd_zqv7lcu4/checkout";
+const PAY_PARAMS={primary_color:"#F4511E",background_color:"#FFFFFF",border_style:"rounded",locale:"fr"};
+function payUrl(extra){return PAY_BASE+"?"+new URLSearchParams(Object.assign({},PAY_PARAMS,extra||{})).toString();}
+function payModal(){
   let m=document.getElementById("payModal");
   if(!m){
     m=document.createElement("div");m.id="payModal";
-    m.innerHTML='<div class="pm-bg"></div><div class="pm-box"><button class="pm-x" aria-label="Fermer">✕</button><iframe class="pm-if" src="'+PAY_URL+'" allow="payment"></iframe></div>';
+    m.innerHTML='<div class="pm-bg"></div><div class="pm-box"><button class="pm-x" aria-label="Fermer">✕</button><div class="pm-ld"><i></i></div><iframe class="pm-if" allow="payment" title="Paiement"></iframe></div>';
     document.body.appendChild(m);
+    const f=m.querySelector(".pm-if");
+    f.addEventListener("load",()=>{if(f.src)m.classList.add("ready");});
+    f.src=payUrl();
     m.querySelector(".pm-bg").onclick=m.querySelector(".pm-x").onclick=()=>m.classList.remove("on");
   }
-  m.classList.add("on");
+  return m;
 }
+function openPay(){payModal().classList.add("on");}
+// Préchargement : dès que le visiteur fait défiler la page, ou au plus tard 4 s après le chargement
+(function(){
+  let done=false;const go=()=>{if(done)return;done=true;(window.requestIdleCallback||setTimeout)(payModal);};
+  addEventListener("scroll",go,{once:true,passive:true});addEventListener("touchstart",go,{once:true,passive:true});
+  addEventListener("load",()=>setTimeout(go,4000));
+})();
 addEventListener("message",ev=>{
   const d=ev.data||{}; const f=document.querySelector("#payModal .pm-if");
   if(!f||ev.source!==f.contentWindow) return;
+  if(d.type==="chariow-country-change"&&d.country&&d.currency){document.getElementById("payModal").classList.remove("ready");f.src=payUrl({country:d.country,currency:d.currency});return;}
   if(d.type==="chariow-checkout-redirect"&&typeof d.url==="string"&&d.url.startsWith("https:")){location.href=d.url;return;}
   if(d.eventType==="PAYMENT_SUCCESSFUL"&&d.eventData&&d.eventData.return_url){vmPurchase();const u=d.eventData.return_url;setTimeout(()=>location.href=u,600);return;}
   if(d.type==="chariow-purchase-completed"&&d.purchaseId){vmPurchase();const u="https://peryal.mychariow.shop/purchase/"+d.purchaseId;setTimeout(()=>location.href=u,600);return;}
