@@ -3,7 +3,7 @@
 **Semaine du :** 12/10/2026 → 18/10/2026
 **Focus :** Lancer la formation motion au Bénin d'ici mardi soir / mercredi max — 10 ventes avant dimanche (Diagnosis #1)
 
-> Prochaine étape : feu vert de l'entrepreneur pour publier la campagne de test (brouillon prêt, 7 pubs, 8 $/jour), puis validation des textes B et C pour la vague 2.
+> Prochaine étape : laisser tourner la campagne (en ligne depuis le 14/10, 01 h), bilan au jour 3 par pub et par pays ; confirmer avec l'entrepreneur que l'achat remonté dans le pixel est bien son 2e achat test ; envisager l'optimisation Achat quand les achats remontent régulièrement.
 
 ---
 
@@ -18,7 +18,7 @@
 | 5 | 6 pubs Meta (3 angles × pleine image + récit) | BOS ✓ | Trafic | Mar 13 | ✓ Fait : pub-flyer-plein / -recit, pub-phrase / -recit, pub-opportunite / -recit |
 | 6 | Mettre le site en ligne + pixel Meta | Toi + BOS | Page publique | — | ✓ En ligne sur www.vibemotionafrica.com + pixel Meta installé et confirmé |
 | 6b | **Guide PDF : parcours téléphone + kit Vibe Motion** | BOS ✓ / Toi : mettre les 2 fichiers dans Chariow | Le site promet « depuis ton téléphone » mais le guide dit « il faut un ordinateur » → risque de remboursements | Avant la 1re vente | Fichiers prêts |
-| 7 | Lancer la campagne Meta, Bénin + CI, 8 $/jour | BOS (brouillon) + Toi (feu vert) | Premières ventes + métriques | Mer 14 | Brouillon prêt sans erreur — attend le « go » |
+| 7 | Lancer la campagne Meta, Bénin + CI, 8 $/jour | BOS (brouillon) + Toi (feu vert) | Premières ventes + métriques | Mer 14 | ✓ Publiée par l'entrepreneur dans la nuit du 13 au 14/10 (8 $/jour) |
 | 8 | Modules 2 à 5 | BOS écrit / Toi enregistres | Livraison | Dim 18 | À faire |
 
 ---
