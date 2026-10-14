@@ -18,7 +18,7 @@
 | 5 | 6 pubs Meta (3 angles × pleine image + récit) | BOS ✓ | Trafic | Mar 13 | ✓ Fait : pub-flyer-plein / -recit, pub-phrase / -recit, pub-opportunite / -recit |
 | 6 | Mettre le site en ligne + pixel Meta | Toi + BOS | Page publique | — | ✓ En ligne sur www.vibemotionafrica.com + pixel Meta installé et confirmé |
 | 6b | **Guide PDF : parcours téléphone + kit Vibe Motion** | BOS ✓ / Toi : mettre les 2 fichiers dans Chariow | Le site promet « depuis ton téléphone » mais le guide dit « il faut un ordinateur » → risque de remboursements | Avant la 1re vente | Fichiers prêts |
-| 7 | Lancer la campagne Meta, Bénin + CI, 8 $/jour | BOS (brouillon) + Toi (feu vert) | Premières ventes + métriques | Mer 14 | ✓ Publiée par l'entrepreneur dans la nuit du 13 au 14/10 (8 $/jour) |
+| 7 | Lancer la campagne Meta, Bénin + CI, 8 $/jour | BOS (brouillon) + Toi (feu vert) | Premières ventes + métriques | Mer 14 | ✓ Test 1 en pause (Audience Network) → Test 2 en ligne le 14/10 (FB+IG+WA, optimisation Achat) |
 | 8 | Modules 2 à 5 | BOS écrit / Toi enregistres | Livraison | Dim 18 | À faire |
 
 ---
