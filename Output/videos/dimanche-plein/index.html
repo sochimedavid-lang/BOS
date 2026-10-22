@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #140A1C; --sun: #FF8A1F; --pink: #FF4F8B; --yel: #FFD23F; --tx: #FFF4E8; --plum: #2A1236; }
+      #root { background: var(--bg); }
+      .serif { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; text-transform: none; }
+      .wh { color: var(--tx); }
+      .ctr { position: absolute; left: 0; right: 0; text-align: center; }
+      .grain { position: absolute; inset: 0; opacity: .07; mix-blend-mode: overlay; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+      .vig { position: absolute; inset: 0; background: radial-gradient(1200px 1500px at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
+      #cap { top: 1650px; left: 60px; right: 60px; font-family: "Poppins", sans-serif; font-weight: 800; font-size: 56px; line-height: 1.15; color: #fff;
+             text-shadow: 0 3px 0 rgba(0,0,0,.6), 0 0 26px rgba(0,0,0,.85), 0 0 8px rgba(0,0,0,.9); }
+      .tag { position: absolute; display: inline-flex; align-items: center; gap: 14px; padding: 14px 32px; border-radius: 999px; font-weight: 800; font-size: 40px; white-space: nowrap; letter-spacing: .02em; }
+      .num { font-family: "Anton", sans-serif; font-size: 46px; }
+      .ph { position: absolute; overflow: hidden; border-radius: 40px; box-shadow: 0 40px 90px rgba(0,0,0,.6); border: 6px solid rgba(255,244,232,.92); }
+      .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .bleed { position: absolute; inset: 0; overflow: hidden; }
+      .bleed img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,10,28,.75) 0%, rgba(20,10,28,.05) 32%, rgba(20,10,28,.1) 62%, rgba(20,10,28,.85) 100%); }
+
+      /* 1. accroche */
+      #qm { position: absolute; left: 0; right: 0; top: 520px; text-align: center; font-family: "Anton"; font-size: 900px; line-height: 1; color: var(--yel); text-shadow: 0 30px 80px rgba(255,138,31,.45); }
+      /* 2. calendrier */
+      #cal { position: absolute; left: 330px; top: 760px; width: 420px; height: 470px; border-radius: 44px; background: #FFF4E8; box-shadow: 0 40px 90px rgba(0,0,0,.55); overflow: hidden; }
+      #cal .top { height: 130px; background: var(--pink); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 50px; color: #fff; letter-spacing: .14em; }
+      #cal .day { text-align: center; font-family: "Anton"; font-size: 270px; line-height: 1.15; color: #1C0F24; }
+      #cal .rings { position: absolute; top: -18px; left: 90px; right: 90px; display: flex; justify-content: space-between; }
+      #cal .rings i { width: 34px; height: 64px; border-radius: 17px; background: #3B2347; display: block; }
+      .q { position: absolute; font-family: "Anton"; color: var(--yel); font-size: 150px; }
+      /* 4. cartes */
+      #eqc { position: absolute; left: 90px; top: 520px; width: 470px; height: 640px; border-radius: 40px; background: linear-gradient(160deg, #3A1A4A, #1C0D26); border: 6px solid rgba(255,244,232,.92); box-shadow: 0 40px 90px rgba(0,0,0,.6); overflow: hidden; }
+      #vinyl { position: absolute; left: 75px; top: 70px; width: 320px; height: 320px; border-radius: 50%; background: repeating-radial-gradient(circle, #111 0 6px, #1E1E1E 6px 9px); box-shadow: 0 20px 50px rgba(0,0,0,.6); }
+      #vinyl b { position: absolute; left: 105px; top: 105px; width: 110px; height: 110px; border-radius: 50%; background: var(--sun); display: block; }
+      #vinyl b::after { content: ""; position: absolute; left: 47px; top: 47px; width: 16px; height: 16px; border-radius: 50%; background: #111; }
+      #vinyl i { position: absolute; left: 40px; top: 60px; width: 90px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.12); transform: rotate(-35deg); display: block; }
+      #eq { position: absolute; left: 60px; right: 60px; bottom: 70px; height: 150px; display: flex; align-items: flex-end; gap: 14px; }
+      #eq i { flex: 1; height: 100%; border-radius: 10px; background: linear-gradient(0deg, var(--sun), var(--yel)); transform-origin: 50% 100%; display: block; }
+      .lbl { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); padding: 10px 28px; border-radius: 999px; background: var(--yel); color: #1C0F24; font-weight: 800; font-size: 38px; white-space: nowrap; }
+      /* 5. bulles */
+      .bub { position: absolute; padding: 26px 34px; border-radius: 40px 40px 40px 10px; background: #fff; color: #1C0F24; font-weight: 700; font-size: 42px; white-space: nowrap; box-shadow: 0 20px 50px rgba(0,0,0,.45); }
+      .bub.r { border-radius: 40px 40px 10px 40px; background: var(--pink); color: #fff; }
+      .dots { display: flex; gap: 12px; } .dots i { width: 20px; height: 20px; border-radius: 50%; background: #1C0F24; display: block; }
+      /* 6. disques */
+      .disc { position: absolute; width: 340px; height: 340px; border-radius: 50%; overflow: hidden; border: 8px solid #FFF4E8; box-shadow: 0 30px 70px rgba(0,0,0,.6); }
+      .disc img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .disc span { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center; font-family: "Anton"; font-size: 54px; color: #fff; text-shadow: 0 4px 16px rgba(0,0,0,.8); }
+      #big { position: absolute; left: 230px; top: 630px; width: 620px; height: 620px; width: 700px; height: 700px; border-radius: 50%; overflow: hidden; border: 10px solid var(--yel); box-shadow: 0 0 0 26px rgba(255,210,63,.18), 0 50px 120px rgba(0,0,0,.6); }
+      #big img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #flash { position: absolute; inset: 0; background: #FFF4E8; }
+      /* 7. commentaires */
+      #post { position: absolute; left: 80px; top: 300px; width: 920px; border-radius: 40px; background: #FFF4E8; color: #1C0F24; padding: 40px 44px; box-shadow: 0 40px 90px rgba(0,0,0,.55); }
+      #post .hd { display: flex; align-items: center; gap: 22px; font-weight: 800; font-size: 38px; }
+      #post .av { width: 84px; height: 84px; border-radius: 50%; background: linear-gradient(135deg, var(--sun), var(--pink)); display: flex; align-items: center; justify-content: center; }
+      #post .tx { margin-top: 26px; font-weight: 700; font-size: 50px; line-height: 1.2; }
+      #post .acts { margin-top: 30px; display: flex; gap: 40px; align-items: center; font-weight: 700; font-size: 34px; color: #6B5A72; }
+      #post .acts span { display: flex; align-items: center; gap: 12px; }
+      .cm { position: absolute; left: 80px; display: flex; align-items: center; gap: 20px; }
+      .cm .a { width: 86px; height: 86px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 38px; color: #fff; }
+      .cm .b { padding: 22px 32px; border-radius: 34px; background: rgba(255,244,232,.12); border: 2px solid rgba(255,244,232,.18); color: #fff; font-weight: 600; font-size: 40px; white-space: nowrap; }
+      #inp { position: absolute; left: 80px; top: 1340px; width: 920px; height: 120px; border-radius: 60px; background: #FFF4E8; display: flex; align-items: center; padding: 0 40px; font-weight: 600; font-size: 42px; color: #1C0F24; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+      #inp b { width: 4px; height: 52px; background: var(--pink); margin-left: 4px; display: block; }
+      #send { position: absolute; right: 14px; top: 14px; width: 92px; height: 92px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; }
+      #heart { position: absolute; left: 850px; top: 220px; width: 170px; height: 170px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(255,79,139,.5); }
+      #endT { position: absolute; left: 0; right: 0; top: 330px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="24" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="24" data-track-index="10"></audio>
+      <div id="bgf" class="clip" data-layout-allow-occlusion data-layout-allow-overflow></div>
+
+      <!-- 1. Petite question ! -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="qm">?</div>
+        <div class="ctr" style="top:260px"><div class="m"><span id="a1" class="display wh" style="font-size:190px">Petite</span></div></div>
+        <div class="ctr" style="top:1330px"><div class="m"><span id="a2" class="display" style="font-size:190px; color:var(--sun)">question</span></div></div>
+      </div>
+
+      <!-- 2. Ton dimanche entre amis, il ressemble à quoi ? -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="ctr" style="top:230px"><div class="m"><span id="b1" class="display wh" style="font-size:170px">Ton dimanche</span></div></div>
+        <div class="ctr" style="top:440px"><div class="m"><span id="b2" class="display hl" style="font-size:130px; background:var(--pink)">entre amis</span></div></div>
+        <div id="cal"><div class="rings"><i></i><i></i><i></i></div><div class="top">DIMANCHE</div><div class="day">7</div></div>
+        <div id="qa" class="q" style="left:150px; top:820px; transform:rotate(-16deg)">?</div>
+        <div id="qb" class="q" style="left:830px; top:720px; transform:rotate(14deg)">?</div>
+        <div id="qc" class="q" style="left:840px; top:1140px; transform:rotate(-8deg); color:var(--pink)">?</div>
+        <div class="ctr" style="top:1330px"><div class="m"><span id="b3" class="serif wh" style="font-size:120px">il ressemble à quoi ?</span></div></div>
+      </div>
+
+      <!-- 3. Un bon repas autour d'une belle table -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="t3" class="tag" style="left:80px; top:170px; background:var(--yel); color:#1C0F24">OPTION <span class="num">01</span></div>
+        <div class="abs" style="left:80px; top:290px"><div class="m"><span id="c1" class="display wh" style="font-size:180px">Un bon repas</span></div></div>
+        <div id="ph3" class="ph" style="left:210px; top:560px; width:660px; height:900px"><img src="img/p31412505.jpg" style="object-position:50% 40%"></div>
+        <div id="plate" class="icon-disc" style="position:absolute; left:760px; top:1300px; width:190px; height:190px; background:var(--sun)">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="6.5"/><circle cx="12" cy="13" r="3.5"/><path d="M3 4v6M5 4v6M3 7h2M4 10v10M20 4c-2 1-2 5 0 6v10"/></svg>
+        </div>
+        <div class="abs" style="left:80px; top:1480px"><div class="m"><span id="c2" class="serif" style="font-size:96px; color:var(--yel)">autour d'une belle table</span></div></div>
+      </div>
+
+      <!-- 4. De la musique, des jeux et des fous rires -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="t4" class="tag" style="left:80px; top:170px; background:var(--pink); color:#fff">OPTION <span class="num">02</span></div>
+        <div class="ctr" style="top:300px"><div class="m"><span id="d0" class="display wh" style="font-size:150px">L'ambiance</span></div></div>
+        <div id="eqc"><div id="vinyl"><i></i><b></b></div><div id="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="lbl" style="bottom:auto; top:420px">MUSIQUE</div></div>
+        <div id="k2" class="ph" style="left:540px; top:640px; width:460px; height:600px"><img src="img/p3316259.jpg" style="object-position:50% 50%"><div class="lbl">JEUX</div></div>
+        <div id="k3" class="ph" style="left:170px; top:1020px; width:740px; height:520px"><img src="img/p7149169.jpg" style="object-position:40% 40%"><div class="lbl" style="background:var(--pink); color:#fff">FOUS RIRES</div></div>
+      </div>
+
+      <!-- 5. Ou un coin agréable… -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="f1" class="bleed"><img src="img/p16934845.jpg" style="object-position:55% 50%"></div>
+        <div id="f2" class="bleed"><img src="img/p9287491.jpg" style="object-position:50% 50%"></div>
+        <div id="f3" class="bleed"><img src="img/p36861445.jpg" style="object-position:50% 50%"></div>
+        <div class="shade"></div>
+        <div id="t5" class="tag" style="left:80px; top:170px; background:var(--sun); color:#fff">OPTION <span class="num">03</span></div>
+        <div class="abs" style="left:80px; top:290px"><div class="m"><span id="e1" class="display wh" style="font-size:126px">Un coin agréable</span></div></div>
+        <div id="bu1" class="bub" style="left:90px; top:760px">On se pose ici ?</div>
+        <div id="bu2" class="bub r" style="left:560px; top:930px"><div class="dots"><i style="background:#fff"></i><i style="background:#fff"></i><i style="background:#fff"></i></div></div>
+        <div class="abs" style="left:80px; top:450px"><div class="m"><span id="e2" class="serif wh" style="font-size:110px">pour discuter,</span></div></div>
+        <div class="abs" style="left:80px; top:450px"><div class="m"><span id="e3" class="display" style="font-size:112px; color:var(--yel); white-space:nowrap">rencontrer du monde</span></div></div>
+        <div class="abs" style="left:80px; top:450px"><div class="m"><span id="e4" class="serif wh" style="font-size:120px">et juste profiter</span></div></div>
+        <div class="abs" style="left:80px; top:600px"><div class="m"><span id="e5" class="display" style="font-size:170px; color:var(--yel)">du moment</span></div></div>
+      </div>
+
+      <!-- 6. Et si tu pouvais tout réunir dans une seule expérience ? -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="ctr" style="top:220px"><div class="m"><span id="g1" class="serif wh" style="font-size:120px">Et si tu pouvais</span></div></div>
+        <div class="ctr" style="top:380px"><div class="m"><span id="g2" class="display" style="font-size:180px; color:var(--yel)">tout réunir</span></div></div>
+        <div id="dA" class="disc" style="left:60px; top:760px"><img src="img/p4262170.jpg" style="object-position:40% 50%"><span>01</span></div>
+        <div id="dB" class="disc" style="left:680px; top:760px"><img src="img/p3316259.jpg"><span>02</span></div>
+        <div id="dC" class="disc" style="left:370px; top:1150px"><img src="img/p16934845.jpg"><span>03</span></div>
+        <div id="big"><img src="img/p4262170.jpg" style="object-position:45% 50%"></div>
+        <div class="ctr" style="top:1290px"><div class="m"><span id="g3" class="serif wh" style="font-size:100px">dans une seule</span></div></div>
+        <div class="ctr" style="top:1445px"><span id="g4" class="display hl" style="font-size:150px; background:var(--pink)">expérience</span></div>
+        <div id="flash"></div>
+      </div>
+
+      <!-- 7. Dis-nous en commentaire -->
+      <div id="s7" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="post">
+          <div class="hd"><div class="av"><svg width="46" height="46" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.5 5c2 0 3.5 1.2 4.5 2.6l1 1.3 1-1.3C14 6.2 15.5 5 17.5 5 21 5 23 8.6 21.6 11.8 19.5 16.4 12 21 12 21z"/></svg></div>Dimanche entre amis</div>
+          <div class="tx">À quoi ressemble ton dimanche idéal ?</div>
+          <div class="acts"><span><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6B5A72" stroke-width="2"><path d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.5 5c2 0 3.5 1.2 4.5 2.6l1 1.3 1-1.3C14 6.2 15.5 5 17.5 5 21 5 23 8.6 21.6 11.8 19.5 16.4 12 21 12 21z"/></svg>J'aime</span><span><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6B5A72" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg>Commenter</span></div>
+        </div>
+        <div id="heart"><svg width="90" height="90" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.5 5c2 0 3.5 1.2 4.5 2.6l1 1.3 1-1.3C14 6.2 15.5 5 17.5 5 21 5 23 8.6 21.6 11.8 19.5 16.4 12 21 12 21z"/></svg></div>
+        <div id="cm1" class="cm" style="top:830px"><div class="a" style="background:var(--sun)">A</div><div class="b">Un bon repas, direct !</div></div>
+        <div id="cm2" class="cm" style="top:980px"><div class="a" style="background:var(--pink)">K</div><div class="b">Musique et jeux, obligé</div></div>
+        <div id="cm3" class="cm" style="top:1130px"><div class="a" style="background:#7B4BD6">S</div><div class="b">Moi je veux tout !</div></div>
+        <div id="inp"><span id="typ"></span><b id="caret"></b><div id="send"><svg width="46" height="46" viewBox="0 0 24 24" fill="#fff"><path d="M3 20l18-8L3 4l2 8-2 8zm2-8h9"/></svg></div></div>
+      </div>
+
+      <!-- 7b. carte finale -->
+      <div id="s8" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="endT">
+          <div class="m"><span id="h1" class="serif wh" style="font-size:120px">C'est quoi, ton</span></div>
+          <div class="m"><span id="h2" class="display" style="font-size:230px; color:var(--yel)">dimanche</span></div>
+          <div style="margin-top:30px"><span id="h3" class="display hl" style="font-size:200px; background:var(--pink)">idéal ?</span></div>
+        </div>
+        <div id="cta" class="tag" style="left:0; right:0; margin:0 auto; width:max-content; top:1180px; background:#FFF4E8; color:#1C0F24; font-size:46px; padding:26px 46px">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#FF4F8B" stroke-width="2.4"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg>Réponds en commentaire
+        </div>
+        <div id="eA" class="disc" style="left:80px; top:1400px; width:280px; height:280px"><img src="img/p31412505.jpg"><span>01</span></div>
+        <div id="eB" class="disc" style="left:400px; top:1400px; width:280px; height:280px"><img src="img/p7149169.jpg"><span>02</span></div>
+        <div id="eC" class="disc" style="left:720px; top:1400px; width:280px; height:280px"><img src="img/p36861445.jpg"><span>03</span></div>
+      </div>
+
+      <div class="vig" data-layout-allow-occlusion></div>
+      <div class="grain" data-layout-allow-occlusion></div>
+      <div id="cap"></div>
+    </div>
+    <script>
+      const TOTAL = 24;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+
+      // fond fluide chaud (coucher de soleil du dimanche)
+      const blobs = MK.fluid("#bgf", ["#FF8A1F", "#FF4F8B", "#5B1E7A", "#2A1236", "#FFB347"], 4);
+      blobs.forEach((b) => (b.style.opacity = 0.55));
+      MK.drift(tl, blobs, TOTAL, 9);
+
+      MK.scenes(tl, [["#s1", 0, 1.62], ["#s2", 1.62, 4.2], ["#s3", 4.2, 6.5], ["#s4", 6.5, 9.48], ["#s5", 9.48, 15.22], ["#s6", 15.22, 18.8], ["#s7", 18.8, 21.0], ["#s8", 21.0, TOTAL]], TOTAL);
+
+      /* 1. accroche */
+      gsap.set("#qm", { scale: 0, rotation: -25, opacity: 0 });
+      tl.to("#qm", { scale: 1, rotation: 0, opacity: 1, duration: 0.6, ease: E.ui }, 0.05);
+      tl.to("#qm", { rotation: 8, duration: 1.2, ease: "sine.inOut" }, 0.6);
+      MK.rise(tl, "#a1", 0.38); MK.rise(tl, "#a2", 0.7);
+      MK.shake(tl, "#qm", 0.72, 16);
+      tl.to("#qm", { scale: 2.6, opacity: 0, duration: 0.3, ease: "power3.in" }, 1.38);
+      MK.exitUp(tl, ["#a1", "#a2"], 1.36);
+
+      /* 2. calendrier */
+      MK.rise(tl, "#b1", 1.65); MK.rise(tl, "#b2", 2.3);
+      gsap.set("#cal", { y: 1100, rotation: 20 });
+      tl.to("#cal", { y: 0, rotation: -5, duration: 0.8, ease: E.card }, 1.7);
+      tl.to("#cal", { rotation: 4, duration: 1.6, ease: "sine.inOut" }, 2.5);
+      MK.rise(tl, "#b3", 2.9);
+      MK.pop(tl, ["#qa", "#qb", "#qc"], 3.6, { stagger: 0.08 });
+      MK.shake(tl, "#cal", 3.67, 14);
+      tl.to("#cal", { y: -1300, rotation: -30, duration: 0.4, ease: "power3.in" }, 3.9);
+      tl.to(["#qa", "#qb", "#qc"], { scale: 0, duration: 0.25 }, 3.95);
+      MK.exitUp(tl, ["#b1", "#b2", "#b3"], 3.9);
+
+      /* 3. repas */
+      MK.pop(tl, "#t3", 4.22);
+      MK.rise(tl, "#c1", 4.25);
+      gsap.set("#ph3", { x: 900, rotation: 18 });
+      tl.to("#ph3", { x: 0, rotation: -3, duration: 0.7, ease: E.card }, 4.3);
+      gsap.set("#ph3 img", { scale: 1.3 });
+      tl.to("#ph3 img", { scale: 1.05, duration: 2.2, ease: "sine.out" }, 4.3);
+      MK.rise(tl, "#c2", 4.8);
+      MK.pop(tl, "#plate", 5.85);
+      tl.to("#plate", { rotation: 360, duration: 0.7, ease: "power2.out" }, 5.85);
+      tl.to(["#ph3", "#plate"], { x: -1200, rotation: -20, duration: 0.4, ease: "power3.in" }, 6.15);
+      MK.exitUp(tl, ["#c1", "#c2"], 6.12); tl.to("#t3", { scale: 0, duration: 0.2 }, 6.2);
+
+      /* 4. musique, jeux, fous rires */
+      MK.pop(tl, "#t4", 6.5);
+      MK.rise(tl, "#d0", 6.52);
+      gsap.set("#eqc", { y: 1200, rotation: -14 });
+      tl.to("#eqc", { y: 0, rotation: -5, duration: 0.65, ease: E.card }, 6.55);
+      tl.to("#vinyl", { rotation: 900, duration: 3, ease: "none" }, 6.5);
+      const bars = MK.$$("#eq i"), r = MK.rng(21);
+      gsap.set(bars, { scaleY: 0.2 });
+      for (let t = 6.7; t < 9.4; t += 0.254) bars.forEach((b) => tl.to(b, { scaleY: 0.15 + r() * 0.85, duration: 0.2, ease: "power1.out" }, t));
+      gsap.set("#k2", { x: 900, rotation: 20 });
+      tl.to("#k2", { x: 0, rotation: 5, duration: 0.6, ease: E.card }, 7.65);
+      gsap.set("#k3", { y: 1000, rotation: -10, scale: 0.8 });
+      tl.to("#k3", { y: 0, rotation: -2, scale: 1, duration: 0.6, ease: E.card }, 8.4);
+      MK.shake(tl, "#k3", 8.75, 10);
+      tl.to("#eqc", { x: -1100, rotation: -25, duration: 0.4, ease: "power3.in" }, 9.15);
+      tl.to("#k2", { x: 1100, rotation: 25, duration: 0.4, ease: "power3.in" }, 9.15);
+      tl.to("#k3", { y: 1300, duration: 0.4, ease: "power3.in" }, 9.15);
+      MK.exitUp(tl, "#d0", 9.1); tl.to("#t4", { scale: 0, duration: 0.2 }, 9.2);
+
+      /* 5. coin agréable : photos plein cadre */
+      MK.circleIn(tl, "#f1", 9.48, { x: 540, y: 1000, dur: 0.45 });
+      gsap.set("#f1 img", { scale: 1.25 }); tl.to("#f1 img", { scale: 1.05, x: -40, duration: 2.6, ease: "sine.out" }, 9.48);
+      MK.pop(tl, "#t5", 9.55); MK.rise(tl, "#e1", 9.55);
+      MK.rise(tl, "#e2", 10.78);
+      MK.pop(tl, "#bu1", 10.95); MK.pop(tl, "#bu2", 11.35);
+      const dots = MK.$$("#bu2 .dots i");
+      [11.5, 11.8].forEach((t0) => dots.forEach((d, i) => { tl.to(d, { y: -12, duration: 0.12 }, t0 + i * 0.08); tl.to(d, { y: 0, duration: 0.12 }, t0 + 0.12 + i * 0.08); }));
+      tl.to(["#bu1", "#bu2"], { scale: 0, opacity: 0, duration: 0.25, stagger: 0.05 }, 11.9);
+      MK.exitUp(tl, "#e2", 11.9);
+      MK.circleIn(tl, "#f2", 12.0, { x: 540, y: 1100, dur: 0.4 });
+      gsap.set("#f2 img", { scale: 1.3 }); tl.to("#f2 img", { scale: 1.08, duration: 1.4, ease: "sine.out" }, 12.0);
+      MK.rise(tl, "#e3", 12.07);
+      MK.exitUp(tl, ["#e1", "#e3"], 13.1);
+      MK.circleIn(tl, "#f3", 13.2, { x: 540, y: 900, dur: 0.4 });
+      gsap.set("#f3 img", { scale: 1.3 }); tl.to("#f3 img", { scale: 1.06, duration: 2, ease: "sine.out" }, 13.2);
+      MK.rise(tl, "#e4", 13.31); MK.rise(tl, "#e5", 14.1);
+      MK.pulse(tl, "#e5", [14.44]);
+      tl.to("#s5 .m", { yPercent: -60, opacity: 0, duration: 0.3, ease: "power3.in" }, 14.95);
+      tl.to("#t5", { scale: 0, duration: 0.2 }, 14.95);
+
+      /* 6. tout réunir */
+      MK.rise(tl, "#g1", 15.29);
+      gsap.set("#dA", { x: -600, rotation: -40 }); gsap.set("#dB", { x: 600, rotation: 40 }); gsap.set("#dC", { y: 900 });
+      tl.to("#dA", { x: 0, rotation: 0, duration: 0.6, ease: E.card }, 15.3);
+      tl.to("#dB", { x: 0, rotation: 0, duration: 0.6, ease: E.card }, 15.42);
+      tl.to("#dC", { y: 0, duration: 0.6, ease: E.card }, 15.54);
+      MK.rise(tl, "#g2", 16.0);
+      tl.to("#dA", { x: 310, y: 220, scale: 0.6, duration: 0.45, ease: "power3.in" }, 16.1);
+      tl.to("#dB", { x: -310, y: 220, scale: 0.6, duration: 0.45, ease: "power3.in" }, 16.1);
+      tl.to("#dC", { y: -170, scale: 0.6, duration: 0.45, ease: "power3.in" }, 16.1);
+      gsap.set("#flash", { opacity: 0 });
+      tl.to("#flash", { opacity: 0.85, duration: 0.06 }, 16.52); tl.to("#flash", { opacity: 0, duration: 0.35 }, 16.6);
+      tl.set(["#dA", "#dB", "#dC"], { opacity: 0 }, 16.55);
+      gsap.set("#big", { scale: 0, rotation: -30 });
+      tl.to("#big", { scale: 1, rotation: 0, duration: 0.7, ease: E.ui }, 16.52);
+      gsap.set("#big img", { scale: 1.3 }); tl.to("#big img", { scale: 1.05, duration: 2.2, ease: "sine.out" }, 16.52);
+      tl.to("#big", { rotation: 4, duration: 1.6, ease: "sine.inOut" }, 17.2);
+      MK.rise(tl, "#g3", 17.2); MK.stamp(tl, "#g4", 17.83);
+      MK.shake(tl, "#big", 17.85, 12);
+      tl.to("#big", { scale: 0, duration: 0.35, ease: "power3.in" }, 18.5);
+      MK.exitUp(tl, ["#g1", "#g2", "#g3"], 18.45); tl.to("#g4", { scale: 0, duration: 0.3 }, 18.5);
+
+      /* 7. commentaires */
+      gsap.set("#post", { y: -900, rotation: -6 });
+      tl.to("#post", { y: 0, rotation: 0, duration: 0.65, ease: E.card }, 18.82);
+      MK.pop(tl, "#heart", 19.2); MK.pulse(tl, "#heart", [19.6, 20.4], 1.15);
+      gsap.set("#inp", { y: 600 }); tl.to("#inp", { y: 0, duration: 0.55, ease: E.card }, 19.25);
+      MK.type(tl, "#typ", "Mon dimanche idéal, c'est…", 19.55, { cps: 20 });
+      [["#cm1", 19.6], ["#cm2", 19.95], ["#cm3", 20.3]].forEach(([s, t]) => { MK.slide(tl, s, t, { x: -900, dur: 0.5 }); });
+      [0, 1, 2, 3, 4, 5].forEach((k) => { tl.set("#caret", { opacity: 0 }, 19.3 + k * 0.4); tl.set("#caret", { opacity: 1 }, 19.5 + k * 0.4); });
+      tl.to(["#post", "#heart"], { y: -1300, duration: 0.35, ease: "power3.in" }, 20.75);
+      tl.to(["#cm1", "#cm2", "#cm3"], { x: -1100, duration: 0.35, stagger: 0.04, ease: "power3.in" }, 20.75);
+      tl.to("#inp", { y: 700, duration: 0.35, ease: "power3.in" }, 20.75);
+
+      /* 8. fin */
+      MK.rise(tl, "#h1", 21.02); MK.rise(tl, "#h2", 21.12); MK.stamp(tl, "#h3", 21.55);
+      MK.pulse(tl, "#h3", [22.4, 23.2], 1.05);
+      MK.pop(tl, "#cta", 22.1);
+      MK.pop(tl, ["#eA", "#eB", "#eC"], 21.3, { stagger: 0.12 });
+      tl.to(["#eA", "#eC"], { y: -18, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 22.0);
+      tl.to("#eB", { y: 18, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 22.0);
+      tl.to("#cta", { y: -14, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 2 }, 22.6);
+
+      MK.captions(tl, "#cap", [
+        [0.41, "Petite question !"], [1.65, "Ton dimanche entre amis,"], [2.9, "il ressemble à quoi ?"],
+        [4.25, "Un bon repas,"], [4.8, "autour d'une belle table ?"], [6.53, "De la musique,"], [7.71, "des jeux…"], [8.06, "et des fous rires ?"],
+        [9.53, "Ou un coin agréable,"], [10.78, "pour discuter,"], [12.07, "rencontrer du monde…"], [13.31, "et juste profiter du moment ?"],
+        [15.29, "Et si tu pouvais"], [16.02, "tout réunir…"], [16.82, "dans une seule expérience ?"],
+        [18.85, "Alors dis-nous en commentaire :"], [20.37, "c'est quoi, ton dimanche idéal ?"], [21.0, ""]
+      ]);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

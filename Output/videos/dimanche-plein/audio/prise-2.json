@@ -1,0 +1,350 @@
+[
+  {
+    "text": "Petite",
+    "start": 0.12,
+    "end": 0.3,
+    "id": "w0"
+  },
+  {
+    "text": "question!",
+    "start": 0.42,
+    "end": 0.84,
+    "id": "w1"
+  },
+  {
+    "text": "Ton",
+    "start": 0.84,
+    "end": 1.3,
+    "id": "w2"
+  },
+  {
+    "text": "dimanche",
+    "start": 1.3,
+    "end": 1.8,
+    "id": "w3"
+  },
+  {
+    "text": "entre",
+    "start": 1.8,
+    "end": 2.17,
+    "id": "w4"
+  },
+  {
+    "text": "amis,",
+    "start": 2.17,
+    "end": 2.6,
+    "id": "w5"
+  },
+  {
+    "text": "il",
+    "start": 2.63,
+    "end": 2.72,
+    "id": "w6"
+  },
+  {
+    "text": "ressemble",
+    "start": 2.72,
+    "end": 3.15,
+    "id": "w7"
+  },
+  {
+    "text": "à",
+    "start": 3.29,
+    "end": 3.35,
+    "id": "w8"
+  },
+  {
+    "text": "quoi?",
+    "start": 3.35,
+    "end": 3.84,
+    "id": "w9"
+  },
+  {
+    "text": "Un",
+    "start": 3.89,
+    "end": 3.99,
+    "id": "w10"
+  },
+  {
+    "text": "bon",
+    "start": 3.99,
+    "end": 4.22,
+    "id": "w11"
+  },
+  {
+    "text": "repas",
+    "start": 4.22,
+    "end": 4.6,
+    "id": "w12"
+  },
+  {
+    "text": "autour",
+    "start": 4.6,
+    "end": 5.08,
+    "id": "w13"
+  },
+  {
+    "text": "d'une",
+    "start": 5.15,
+    "end": 5.38,
+    "id": "w14"
+  },
+  {
+    "text": "belle",
+    "start": 5.5,
+    "end": 5.78,
+    "id": "w15"
+  },
+  {
+    "text": "table?",
+    "start": 5.78,
+    "end": 6.34,
+    "id": "w16"
+  },
+  {
+    "text": "De",
+    "start": 6.38,
+    "end": 6.48,
+    "id": "w17"
+  },
+  {
+    "text": "la",
+    "start": 6.48,
+    "end": 6.62,
+    "id": "w18"
+  },
+  {
+    "text": "musique,",
+    "start": 6.62,
+    "end": 7.25,
+    "id": "w19"
+  },
+  {
+    "text": "des",
+    "start": 7.25,
+    "end": 7.42,
+    "id": "w20"
+  },
+  {
+    "text": "jeux",
+    "start": 7.71,
+    "end": 7.74,
+    "id": "w21"
+  },
+  {
+    "text": "et",
+    "start": 7.74,
+    "end": 7.88,
+    "id": "w22"
+  },
+  {
+    "text": "des",
+    "start": 7.88,
+    "end": 8.09,
+    "id": "w23"
+  },
+  {
+    "text": "fourrires?",
+    "start": 8.09,
+    "end": 8.96,
+    "id": "w24"
+  },
+  {
+    "text": "Ou",
+    "start": 8.97,
+    "end": 9.16,
+    "id": "w25"
+  },
+  {
+    "text": "un",
+    "start": 9.17,
+    "end": 9.36,
+    "id": "w26"
+  },
+  {
+    "text": "coin",
+    "start": 9.36,
+    "end": 9.76,
+    "id": "w27"
+  },
+  {
+    "text": "agréable",
+    "start": 9.76,
+    "end": 10.5,
+    "id": "w28"
+  },
+  {
+    "text": "pour",
+    "start": 10.57,
+    "end": 10.71,
+    "id": "w29"
+  },
+  {
+    "text": "discuter,",
+    "start": 10.88,
+    "end": 11.48,
+    "id": "w30"
+  },
+  {
+    "text": "rencontrer",
+    "start": 11.48,
+    "end": 12.22,
+    "id": "w31"
+  },
+  {
+    "text": "du",
+    "start": 12.22,
+    "end": 12.35,
+    "id": "w32"
+  },
+  {
+    "text": "monde",
+    "start": 12.36,
+    "end": 12.73,
+    "id": "w33"
+  },
+  {
+    "text": "et",
+    "start": 12.73,
+    "end": 12.87,
+    "id": "w34"
+  },
+  {
+    "text": "juste",
+    "start": 12.87,
+    "end": 13.1,
+    "id": "w35"
+  },
+  {
+    "text": "profiter",
+    "start": 13.39,
+    "end": 13.82,
+    "id": "w36"
+  },
+  {
+    "text": "du",
+    "start": 13.82,
+    "end": 13.91,
+    "id": "w37"
+  },
+  {
+    "text": "moment?",
+    "start": 13.98,
+    "end": 14.72,
+    "id": "w38"
+  },
+  {
+    "text": "Et",
+    "start": 14.72,
+    "end": 14.92,
+    "id": "w39"
+  },
+  {
+    "text": "si",
+    "start": 14.92,
+    "end": 15.11,
+    "id": "w40"
+  },
+  {
+    "text": "tu",
+    "start": 15.2,
+    "end": 15.32,
+    "id": "w41"
+  },
+  {
+    "text": "pouvais",
+    "start": 15.32,
+    "end": 16.02,
+    "id": "w42"
+  },
+  {
+    "text": "tout",
+    "start": 16.02,
+    "end": 16.38,
+    "id": "w43"
+  },
+  {
+    "text": "réunir",
+    "start": 16.43,
+    "end": 17.06,
+    "id": "w44"
+  },
+  {
+    "text": "dans",
+    "start": 17.18,
+    "end": 17.31,
+    "id": "w45"
+  },
+  {
+    "text": "une",
+    "start": 17.31,
+    "end": 17.49,
+    "id": "w46"
+  },
+  {
+    "text": "seule",
+    "start": 17.49,
+    "end": 17.8,
+    "id": "w47"
+  },
+  {
+    "text": "expérience?",
+    "start": 17.8,
+    "end": 18.64,
+    "id": "w48"
+  },
+  {
+    "text": "Alors",
+    "start": 18.64,
+    "end": 18.94,
+    "id": "w49"
+  },
+  {
+    "text": "dis-nous",
+    "start": 19,
+    "end": 19.4,
+    "id": "w50"
+  },
+  {
+    "text": "en",
+    "start": 19.4,
+    "end": 19.69,
+    "id": "w51"
+  },
+  {
+    "text": "commentaire,",
+    "start": 19.69,
+    "end": 20.38,
+    "id": "w52"
+  },
+  {
+    "text": "c'est",
+    "start": 20.38,
+    "end": 20.52,
+    "id": "w53"
+  },
+  {
+    "text": "quoi",
+    "start": 20.94,
+    "end": 21,
+    "id": "w54"
+  },
+  {
+    "text": "ton",
+    "start": 21,
+    "end": 21.08,
+    "id": "w55"
+  },
+  {
+    "text": "dimanche",
+    "start": 21.08,
+    "end": 21.41,
+    "id": "w56"
+  },
+  {
+    "text": "idéal?",
+    "start": 21.6,
+    "end": 21.98,
+    "id": "w57"
+  }
+]

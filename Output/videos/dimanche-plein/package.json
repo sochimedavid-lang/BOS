@@ -1,0 +1,9 @@
+{
+  "name": "dimanche-plein",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.8.150 check",
+    "render": "npx --yes hyperframes@0.8.150 render"
+  }
+}
