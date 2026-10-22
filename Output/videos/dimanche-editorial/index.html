@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="kit/motion-kit.css" />
+    <script src="kit/motion-kit.js"></script>
+    <style>
+      :root { --bg: #0D0A08; --cream: #F3E9DC; --tang: #FF6B2C; --mute: #A89A8A; }
+      #root { background: var(--bg); color: var(--cream); }
+      .an { font-family: "Anton", sans-serif; text-transform: uppercase; line-height: .9; letter-spacing: -.005em; }
+      .fr { font-family: "Fraunces", serif; font-style: italic; font-weight: 400; line-height: 1; }
+      .mono { font-family: "Space Mono", monospace; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      .fill { color: transparent; -webkit-background-clip: text; background-clip: text; background-size: cover; background-position: 50% 50%; }
+      .ctr { position: absolute; left: 0; right: 0; text-align: center; }
+      .full { position: absolute; inset: 0; overflow: hidden; }
+      .full img, .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,10,8,.55) 0%, rgba(13,10,8,0) 22%, rgba(13,10,8,0) 52%, rgba(13,10,8,.92) 88%); }
+      .grain { position: absolute; inset: 0; opacity: .09; mix-blend-mode: overlay; pointer-events: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+      /* HUD éditorial permanent */
+      .hud { position: absolute; z-index: 40; font-size: 26px; color: var(--cream); }
+      #rule { position: absolute; z-index: 40; left: 60px; right: 60px; top: 132px; height: 2px; background: rgba(243,233,220,.35); transform-origin: 0 50%; }
+      #flash { position: absolute; inset: 0; z-index: 45; background: #FFF8EE; opacity: 0; pointer-events: none; }
+      /* 2. rafale */
+      #burst { position: absolute; left: 150px; top: 470px; width: 780px; height: 1000px; overflow: hidden; border-radius: 6px; }
+      #burst img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+      #burstBar { position: absolute; left: 150px; top: 1490px; width: 780px; display: flex; gap: 10px; }
+      #burstBar i { flex: 1; height: 8px; background: rgba(243,233,220,.25); display: block; }
+      /* 3. stores */
+      .blind { position: absolute; top: 0; height: 1920px; background: var(--bg); }
+      .pola { position: absolute; background: #FBF7F0; padding: 18px 18px 80px; box-shadow: 0 30px 70px rgba(0,0,0,.55); }
+      .pola .ph { position: relative; overflow: hidden; }
+      .pola .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .pola .cap { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font-family: "Caveat", cursive; font-size: 54px; color: #2B2118; }
+      .tape { position: absolute; width: 170px; height: 52px; background: rgba(243,233,220,.55); top: -24px; left: 50%; margin-left: -85px; transform: rotate(-4deg); }
+      /* 4. accordéon */
+      #acc { position: absolute; left: 0; right: 0; top: 230px; height: 1440px; }
+      .col { position: absolute; top: 0; height: 1440px; overflow: hidden; }
+      .col img { position: absolute; left: 50%; top: 0; height: 100%; width: 1000px; margin-left: -500px; object-fit: cover; }
+      .col .vl { position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%); white-space: nowrap; }
+      .col .sh { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,10,8,0) 55%, rgba(13,10,8,.8) 100%); }
+      /* 5. viseur */
+      .vf { position: absolute; z-index: 30; width: 90px; height: 90px; border: 0 solid var(--cream); }
+      #vf1 { left: 70px; top: 230px; border-top-width: 6px; border-left-width: 6px; }
+      #vf2 { right: 70px; top: 230px; border-top-width: 6px; border-right-width: 6px; }
+      #vf3 { left: 70px; bottom: 150px; border-bottom-width: 6px; border-left-width: 6px; }
+      #vf4 { right: 70px; bottom: 150px; border-bottom-width: 6px; border-right-width: 6px; }
+      #focus { position: absolute; z-index: 30; width: 220px; height: 220px; border: 4px solid var(--tang); }
+      #rec { position: absolute; z-index: 30; left: 110px; top: 270px; display: flex; align-items: center; gap: 14px; font-size: 28px; }
+      #rec b { width: 22px; height: 22px; border-radius: 50%; background: #FF3B30; display: block; }
+      #exif { position: absolute; z-index: 30; left: 110px; bottom: 180px; font-size: 24px; color: rgba(243,233,220,.85); }
+      /* 6. grille */
+      .tile { position: absolute; background: #FBF7F0; box-shadow: 0 24px 50px rgba(0,0,0,.5); }
+      .tile .in { position: absolute; overflow: hidden; }
+      .tile .a, .tile .b { position: absolute; inset: 0; }
+      .tile .b { background-image: url(img/q0_13.jpg); background-size: 900px 1200px; opacity: 0; }
+      /* 7. questionnaire */
+      #form { position: absolute; left: 80px; top: 330px; width: 920px; padding: 56px 60px 64px; background: #F6EEE2; color: #1B140E; box-shadow: 0 40px 90px rgba(0,0,0,.6); }
+      #form .hd { font-size: 24px; color: #7A6A58; display: flex; justify-content: space-between; border-bottom: 2px solid #1B140E; padding-bottom: 18px; }
+      #form h2 { margin-top: 40px; font-size: 92px; color: #1B140E; }
+      .row { position: relative; display: flex; align-items: center; gap: 30px; margin-top: 40px; font-family: "Fraunces", serif; font-size: 58px; font-weight: 600; }
+      .box { width: 64px; height: 64px; border: 4px solid #1B140E; flex: none; position: relative; }
+      .box svg { position: absolute; left: -6px; top: -14px; overflow: visible; }
+      #ring { position: absolute; left: 30px; top: -38px; overflow: visible; }
+      #cta { position: absolute; left: 0; right: 0; top: 1500px; text-align: center; font-size: 34px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="24" data-width="1080" data-height="1920">
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="24" data-track-index="10"></audio>
+
+      <!-- 1. Petite question ! -->
+      <div id="s1" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="ctr" style="top:250px"><div class="m"><span id="a1" class="fr" style="font-size:140px">Petite</span></div></div>
+        <div id="qm" class="ctr an fill" style="top:360px; font-size:1150px; line-height:1; background-image:url(img/r0_07.jpg)">?</div>
+        <div class="ctr" style="top:1500px"><div class="m"><span id="a2" class="an" style="font-size:210px; color:var(--tang)">question</span></div></div>
+      </div>
+
+      <!-- 2. Ton dimanche entre amis / il ressemble à quoi ? -->
+      <div id="s2" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="ctr" style="top:600px"><div class="m"><span id="b1" class="fr" style="font-size:120px">Ton</span></div></div>
+        <div class="ctr" style="top:740px"><div class="m" style="font-size:250px"><span id="b2" class="an fill" style="font-size:250px; background-image:url(img/q0_13.jpg); background-size:1300px auto">Dimanche</span></div></div>
+        <div class="ctr" style="top:1060px"><div class="m"><span id="b3" class="fr" style="font-size:140px; color:var(--tang)">entre amis</span></div></div>
+        <div id="burst">
+          <img src="img/r0_00.jpg"><img src="img/q0_07.jpg"><img src="img/r3_02.jpg"><img src="img/q1_07.jpg"><img src="img/r1_05.jpg"><img src="img/q5_11.jpg"><img src="img/r0_10.jpg"><img src="img/q1_01.jpg"><img src="img/r3_07.jpg">
+        </div>
+        <div id="burstBar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="ctr" style="top:330px"><div class="m"><span id="b4" class="mono" style="font-size:36px">il ressemble</span></div></div>
+        <div class="ctr" style="top:1560px"><div class="m"><span id="b5" class="fr" style="font-size:180px">à quoi ?</span></div></div>
+      </div>
+
+      <!-- 3. N°01 la table -->
+      <div id="s3" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="p3" class="full"><img src="img/q0_05.jpg" style="object-position:50% 40%"></div>
+        <div class="grad"></div>
+        <div id="blinds"></div>
+        <div class="abs" style="left:70px; top:1290px"><div class="m"><span id="c1" class="fr" style="font-size:160px">Un bon repas,</span></div></div>
+        <div class="abs" style="left:74px; top:1480px"><div class="m"><span id="c2" class="fr" style="font-size:76px; color:var(--tang)">autour d'une belle table</span></div></div>
+        <div id="pol3" class="pola" style="left:560px; top:300px; transform:rotate(7deg)"><div class="tape"></div><div class="ph" style="width:380px; height:470px"><img src="img/q6_05.jpg"></div><div class="cap">la table</div></div>
+      </div>
+
+      <!-- 4. N°02 l'ambiance : accordéon -->
+      <div id="s4" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="acc">
+          <div id="cl1" class="col" style="left:0; width:360px"><img src="img/r1_03.jpg"><div class="sh"></div><div class="vl an" style="font-size:150px">Musique</div></div>
+          <div id="cl2" class="col" style="left:360px; width:360px"><img src="img/q3_10.jpg"><div class="sh"></div><div class="vl an" style="font-size:150px">Jeux</div></div>
+          <div id="cl3" class="col" style="left:720px; width:360px"><img src="img/r3_14.jpg" style="object-position:40% 50%"><div class="sh"></div><div class="vl an" style="font-size:150px; color:var(--tang)">Fous rires</div></div>
+        </div>
+        <div class="ctr" style="top:1700px"><div class="m"><span id="d1" class="fr" style="font-size:80px">l'ambiance qui fait du bien</span></div></div>
+      </div>
+
+      <!-- 5. N°03 le coin : viseur -->
+      <div id="s5" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="v1" class="full"><img src="img/r0_07.jpg" style="object-position:50% 50%"></div>
+        <div id="v2" class="full"><img src="img/r4_01.jpg" style="object-position:40% 50%"></div>
+        <div id="v3" class="full"><img src="img/r1_07.jpg" style="object-position:50% 50%"></div>
+        <div id="v4" class="full"><img src="img/r0_00.jpg" style="object-position:50% 35%"></div>
+        <div class="grad"></div>
+        <div id="vfx"><div id="vf1" class="vf"></div><div id="vf2" class="vf"></div><div id="vf3" class="vf"></div><div id="vf4" class="vf"></div>
+          <div id="rec" class="mono"><b></b>REC</div><div id="exif" class="mono">ISO 400 · 1/125 · f2.8</div><div id="focus"></div></div>
+        <div class="abs" style="left:80px; top:1180px"><div class="m"><span id="e1" class="fr" style="font-size:96px">Ou un coin</span></div></div>
+        <div class="abs" style="left:76px; top:1290px"><div class="m" style="font-size:210px"><span id="e2" class="an" style="font-size:210px">agréable</span></div></div>
+        <div class="abs" style="left:80px; top:1290px"><div class="m"><span id="e3" class="fr" style="font-size:150px">pour discuter,</span></div></div>
+        <div class="abs" style="left:76px; top:1200px"><div class="m" style="font-size:170px"><span id="e4" class="an" style="font-size:170px">rencontrer</span></div></div>
+        <div class="abs" style="left:76px; top:1370px"><div class="m" style="font-size:170px"><span id="e5" class="an" style="font-size:170px; color:var(--tang)">du monde</span></div></div>
+        <div class="abs" style="left:80px; top:1200px"><div class="m"><span id="e6" class="fr" style="font-size:110px">et juste profiter</span></div></div>
+        <div class="abs" style="left:76px; top:1330px"><div class="m" style="font-size:190px"><span id="e7" class="an" style="font-size:190px; color:var(--tang)">du moment</span></div></div>
+      </div>
+
+      <!-- 6. tout réunir -->
+      <div id="s6" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="ctr" style="top:210px"><div class="m"><span id="g1" class="fr" style="font-size:110px">Et si tu pouvais</span></div></div>
+        <div id="grid"></div>
+        <div class="ctr" style="top:205px"><div class="m" style="font-size:150px"><span id="g2" class="an" style="font-size:150px">tout réunir</span></div></div>
+        <div class="ctr" style="top:1400px"><div class="m"><span id="g3" class="fr" style="font-size:100px">dans une seule</span></div></div>
+        <div class="ctr" style="top:1510px"><div class="m" style="font-size:200px"><span id="g4" class="an" style="font-size:200px; color:var(--tang)">expérience</span></div></div>
+      </div>
+
+      <!-- 7. questionnaire -->
+      <div id="s7" class="sc" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="ctr" style="top:205px"><div class="m"><span id="h0" class="fr" style="font-size:84px">Alors dis-nous en commentaire</span></div></div>
+        <div id="form">
+          <div class="hd mono"><span>Questionnaire</span><span>Dimanche · N°07</span></div>
+          <h2 class="fr">Ton dimanche idéal, c'est…</h2>
+          <div id="r1" class="row"><div class="box"><svg width="80" height="80" viewBox="0 0 80 80"><path id="k1" d="M10 42 L32 64 L76 8" fill="none" stroke="#FF6B2C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Un bon repas</div>
+          <div id="r2" class="row"><div class="box"><svg width="80" height="80" viewBox="0 0 80 80"><path id="k2" d="M10 42 L32 64 L76 8" fill="none" stroke="#FF6B2C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Musique, jeux, fous rires</div>
+          <div id="r3" class="row"><div class="box"><svg width="80" height="80" viewBox="0 0 80 80"><path id="k3" d="M10 42 L32 64 L76 8" fill="none" stroke="#FF6B2C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Un coin pour discuter</div>
+          <div id="r4" class="row"><div class="box"></div>Tout à la fois
+            <svg id="ring" width="600" height="150" viewBox="0 0 600 150"><path id="rg" d="M60 80 C 60 20, 560 10, 570 70 C 580 130, 120 145, 70 110 C 40 90, 70 50, 140 40" fill="none" stroke="#FF6B2C" stroke-width="8" stroke-linecap="round"/></svg></div>
+        </div>
+        <div id="cta" class="mono">↓ Réponds en commentaire ↓</div>
+      </div>
+
+      <!-- HUD -->
+      <div id="hl" class="hud mono" style="left:60px; top:84px">Dimanche · N°07</div>
+      <div id="hr" class="hud mono" style="right:60px; top:84px">16:42:<span id="sec">00</span></div>
+      <div id="rule"></div>
+      <div id="hs" class="hud mono" style="left:60px; top:150px; color:var(--tang)"><span id="sect">N°01 — La table</span></div>
+      <div class="grain" data-layout-allow-occlusion></div>
+      <div id="flash"></div>
+    </div>
+    <script>
+      const TOTAL = 24;
+      const tl = gsap.timeline({ paused: true });
+      const E = MK.ease;
+      const flash = (t, k = 0.9) => { tl.to("#flash", { opacity: k, duration: 0.04 }, t); tl.to("#flash", { opacity: 0, duration: 0.3, ease: "power2.out" }, t + 0.05); };
+
+      MK.scenes(tl, [["#s1", 0, 1.62], ["#s2", 1.62, 4.2], ["#s3", 4.2, 6.5], ["#s4", 6.5, 9.5], ["#s5", 9.5, 15.22], ["#s6", 15.22, 18.8], ["#s7", 18.8, TOTAL]], TOTAL);
+
+      /* HUD : règle qui se trace, horloge, rubrique */
+      gsap.set("#rule", { scaleX: 0 }); tl.to("#rule", { scaleX: 1, duration: 0.8, ease: "power3.out" }, 0.1);
+      MK.fadeIn(tl, ["#hl", "#hr"], 0.15, 0.4);
+      MK.count(tl, "#sec", 0, 23, 0, 23, (v) => String(Math.floor(v)).padStart(2, "0"));
+      gsap.set("#sect", { textContent: "" }); gsap.set("#hs", { opacity: 0 });
+      [[4.22, "N°01 — La table"], [6.5, "N°02 — L'ambiance"], [9.5, "N°03 — Le coin"], [15.22, "Le tout"], [18.8, "À toi"]].forEach(([t, s]) => { tl.set("#hs", { opacity: 1 }, t); MK.type(tl, "#sect", s, t, { cps: 34 }); });
+
+      /* 1. le « ? » rempli d'une photo */
+      flash(0.02, 1);
+      gsap.set("#qm", { scale: 0.6, opacity: 0, backgroundPosition: "30% 20%" });
+      tl.to("#qm", { scale: 1, opacity: 1, duration: 0.7, ease: E.card }, 0.05);
+      tl.to("#qm", { backgroundPosition: "70% 70%", duration: 1.6, ease: "none" }, 0.05);
+      MK.rise(tl, "#a1", 0.38); MK.rise(tl, "#a2", 0.7);
+      tl.to("#qm", { scale: 3, opacity: 0, duration: 0.3, ease: "power3.in" }, 1.36);
+      MK.exitUp(tl, ["#a1", "#a2"], 1.34);
+
+      /* 2. DIMANCHE rempli + rafale */
+      MK.rise(tl, "#b1", 1.62); MK.rise(tl, "#b2", 1.76, { from: 110 }); MK.rise(tl, "#b3", 2.24);
+      gsap.set("#b2", { backgroundPosition: "0% 40%" }); tl.to("#b2", { backgroundPosition: "100% 60%", duration: 1.4, ease: "none" }, 1.62);
+      MK.exitUp(tl, ["#b1", "#b2", "#b3"], 2.8, { stagger: 0.03 });
+      gsap.set("#burst", { clipPath: "inset(50% 0% 50% 0%)" }); tl.to("#burst", { clipPath: "inset(0% 0% 0% 0%)", duration: 0.35, ease: "power3.out" }, 2.95);
+      const B = MK.$$("#burst img"), BB = MK.$$("#burstBar i");
+      gsap.set("#burstBar", { opacity: 0 }); tl.set("#burstBar", { opacity: 1 }, 2.95);
+      B.forEach((im, i) => { const t = 2.95 + i * 0.125; tl.set(im, { opacity: 1 }, t); gsap.set(im, { scale: 1.12 }); tl.to(im, { scale: 1, duration: 0.3, ease: "power2.out" }, t); tl.set(BB[i], { backgroundColor: "#FF6B2C" }, t); });
+      MK.rise(tl, "#b4", 2.9); MK.rise(tl, "#b5", 3.55);
+      MK.shake(tl, "#burst", 3.67, 10);
+      tl.to("#burst", { clipPath: "inset(0% 0% 100% 0%)", duration: 0.3, ease: "power3.in" }, 3.95);
+      tl.to("#burstBar", { opacity: 0, duration: 0.2 }, 3.95);
+      MK.exitUp(tl, ["#b4", "#b5"], 3.95);
+
+      /* 3. stores qui s'ouvrent sur la table */
+      const N = 6, W = 1080 / N;
+      const bl = Array.from({ length: N }, (_, i) => MK.el("div", "blind", "#blinds", "", { left: i * W - 1 + "px", width: W + 2 + "px" }));
+      bl.forEach((b, i) => { gsap.set(b, { transformOrigin: i % 2 ? "50% 100%" : "50% 0%" }); tl.to(b, { scaleY: 0, duration: 0.55, ease: "power4.inOut" }, 4.2 + i * 0.045); });
+      gsap.set("#p3 img", { scale: 1.25 }); tl.to("#p3 img", { scale: 1.04, duration: 2.3, ease: "sine.out" }, 4.2);
+      MK.rise(tl, "#c1", 4.3); MK.rise(tl, "#c2", 4.8);
+      gsap.set("#pol3", { y: -1100, rotation: 30 });
+      tl.to("#pol3", { y: 0, rotation: 7, duration: 0.7, ease: E.card }, 5.45);
+      MK.shake(tl, "#pol3", 5.85, 6);
+      bl.forEach((b, i) => { gsap.set(b, {}); tl.to(b, { scaleY: 1, duration: 0.4, ease: "power4.in" }, 6.08 + i * 0.03); });
+      tl.to("#pol3", { y: -1300, rotation: -20, duration: 0.35, ease: "power3.in" }, 6.1);
+      MK.exitUp(tl, ["#c1", "#c2"], 6.05);
+
+      /* 4. accordéon : chaque colonne s'ouvre sur son mot */
+      const C = ["#cl1", "#cl2", "#cl3"];
+      C.forEach((c, i) => { gsap.set(c, { yPercent: i % 2 ? 110 : -110 }); tl.to(c, { yPercent: 0, duration: 0.6, ease: E.card }, 6.5 + i * 0.07); });
+      gsap.set(".col .vl", { opacity: 0 });
+      const open = (k, t) => {
+        const w = [130, 130, 130]; w[k] = 820; let x = 0;
+        C.forEach((c, i) => { tl.to(c, { left: x, width: w[i], duration: 0.5, ease: "power4.inOut" }, t); x += w[i]; });
+        C.forEach((c, i) => tl.to(`${c} .vl`, { opacity: i === k ? 1 : 0, duration: 0.2 }, i === k ? t + 0.25 : t));
+        gsap.set(`${C[k]} .vl`, { y: 60 }); tl.to(`${C[k]} .vl`, { y: 0, duration: 0.5, ease: E.card }, t + 0.2);
+      };
+      open(0, 6.75); open(1, 7.62); open(2, 8.38);
+      tl.to("#cl1 img", { scale: 1.08, duration: 3, ease: "none" }, 6.5);
+      MK.shake(tl, "#cl3", 8.7, 12);
+      MK.rise(tl, "#d1", 7.0);
+      C.forEach((c, i) => tl.to(c, { yPercent: i % 2 ? -110 : 110, duration: 0.4, ease: "power3.in" }, 9.12 + i * 0.04));
+      MK.exitUp(tl, "#d1", 9.1);
+
+      /* 5. viseur d'appareil photo, coupes en filé */
+      const V = ["#v1", "#v2", "#v3", "#v4"];
+      gsap.set(V.slice(1), { xPercent: 100 });
+      gsap.set("#v1", { clipPath: "inset(48% 0% 48% 0%)" }); tl.to("#v1", { clipPath: "inset(0% 0% 0% 0%)", duration: 0.45, ease: "power4.out" }, 9.5);
+      gsap.set("#v1 img", { scale: 1.3 }); tl.to("#v1 img", { scale: 1.05, duration: 1.4, ease: "sine.out" }, 9.5);
+      [[10.72, "#v2"], [12.0, "#v3"], [13.24, "#v4"]].forEach(([t, v]) => {
+        tl.to(v, { xPercent: 0, duration: 0.32, ease: "power4.inOut" }, t);
+        tl.fromTo(v + " img", { filter: "blur(18px)", scale: 1.25 }, { filter: "blur(0px)", scale: 1.06, duration: 0.6, ease: "power2.out", immediateRender: false }, t);
+      });
+      tl.to("#v3 img", { rotation: 8, duration: 1.3, ease: "none" }, 12.0);
+      tl.set(["#v1", "#v2", "#v3"], { opacity: 0 }, 13.7);
+      gsap.set("#vfx", { opacity: 0 }); tl.to("#vfx", { opacity: 1, duration: 0.3 }, 9.6);
+      gsap.set(["#vf1", "#vf2", "#vf3", "#vf4"], { scale: 1.6 }); tl.to(["#vf1", "#vf2", "#vf3", "#vf4"], { scale: 1, duration: 0.5, ease: E.ui }, 9.6);
+      [0, 1, 2, 3, 4, 5, 6].forEach((k) => { tl.set("#rec b", { opacity: 0 }, 9.9 + k * 0.7); tl.set("#rec b", { opacity: 1 }, 10.25 + k * 0.7); });
+      gsap.set("#focus", { left: 430, top: 560, scale: 1.4, opacity: 0 });
+      [[9.9, 430, 520], [11.0, 600, 600], [12.3, 420, 700], [13.5, 380, 520]].forEach(([t, x, y]) => {
+        tl.set("#focus", { opacity: 1 }, t);
+        tl.to("#focus", { left: x, top: y, scale: 1.4, duration: 0.01 }, t);
+        tl.to("#focus", { scale: 1, duration: 0.35, ease: E.ui }, t + 0.02);
+      });
+      MK.rise(tl, "#e1", 9.55); MK.rise(tl, "#e2", 10.05);
+      MK.exitUp(tl, ["#e1", "#e2"], 10.62);
+      MK.rise(tl, "#e3", 10.8);
+      MK.exitUp(tl, "#e3", 11.9);
+      MK.rise(tl, "#e4", 12.07); MK.rise(tl, "#e5", 12.62);
+      MK.exitUp(tl, ["#e4", "#e5"], 13.15);
+      MK.rise(tl, "#e6", 13.31); MK.rise(tl, "#e7", 14.3);
+      // déclic sur « moment »
+      flash(14.44, 1);
+      tl.to("#vfx", { opacity: 0, duration: 0.1 }, 14.44);
+      tl.to("#v4", { clipPath: "inset(9% 11% 23% 11%)", duration: 0.45, ease: "power3.inOut" }, 14.5);
+      tl.to("#v4", { rotation: -5, scale: 0.92, duration: 0.6, ease: E.card }, 14.5);
+      MK.exitUp(tl, ["#e6", "#e7"], 14.98);
+      tl.to("#v4", { y: 1400, rotation: 14, duration: 0.3, ease: "power3.in" }, 14.95);
+
+      /* 6. polaroïds éparpillés → grille → une seule photo */
+      const imgs = ["q0_05", "r1_03", "q3_10", "r3_14", "r0_07", "r4_01", "r1_07", "r0_00", "q6_05"];
+      const TW = 300, TH = 400, r = MK.rng(12);
+      const tiles = imgs.map((k, i) => {
+        const c = i % 3, ro = Math.floor(i / 3);
+        const t = MK.el("div", "tile", "#grid", `<div class="in" style="left:14px; top:14px; right:14px; bottom:56px"><div class="a"><img src="img/${k}.jpg"></div><div class="b" style="background-position:${-c * TW}px ${-ro * TH}px"></div></div>`, { width: TW + "px", height: TH + "px", left: "0px", top: "0px" });
+        return { t, c, ro };
+      });
+      tiles.forEach(({ t, c, ro }, i) => {
+        const sx = 40 + r() * 700, sy = 380 + r() * 1000, rot = (r() - 0.5) * 36;
+        gsap.set(t, { x: sx, y: 2100, rotation: rot * 2 });
+        tl.to(t, { y: sy, rotation: rot, duration: 0.6, ease: E.card }, 15.25 + i * 0.07);
+        // rangement en grille (avec marges) sur « tout »
+        tl.to(t, { x: 66 + c * 324, y: 330 + ro * 424, rotation: 0, duration: 0.45, ease: "power4.inOut" }, 15.98 + i * 0.015);
+        // retournement : chaque case devient un morceau de la même photo
+        const tf = 16.45 + (c + ro) * 0.05;
+        tl.to(t, { scaleX: 0, duration: 0.1, ease: "power2.in" }, tf);
+        tl.set(t.querySelector(".a"), { opacity: 0 }, tf + 0.1); tl.set(t.querySelector(".b"), { opacity: 1 }, tf + 0.1);
+        tl.set(t.querySelector(".in"), { left: 0, top: 0, right: -1, bottom: -1 }, tf + 0.1);
+        tl.set(t, { backgroundColor: "transparent", boxShadow: "none" }, tf + 0.1);
+        tl.to(t, { scaleX: 1, duration: 0.12, ease: "power2.out" }, tf + 0.1);
+        // les joints se referment : une seule image
+        tl.to(t, { x: 90 + c * TW, y: 400 + ro * TH, duration: 0.4, ease: "power3.inOut" }, 16.85);
+      });
+      gsap.set("#grid", { transformOrigin: "540px 450px" }); tl.to("#grid", { scale: 0.76, duration: 0.5, ease: "power3.inOut" }, 16.85); tl.to("#grid", { scale: 0.79, duration: 1.1, ease: "sine.inOut" }, 17.35);
+      MK.rise(tl, "#g1", 15.29); MK.exitUp(tl, "#g1", 15.9);
+      MK.rise(tl, "#g2", 16.0);
+      MK.rise(tl, "#g3", 17.1); MK.rise(tl, "#g4", 17.78);
+      flash(16.85, 0.5);
+      tl.to("#grid", { y: -1500, duration: 0.35, ease: "power3.in" }, 18.45);
+      MK.exitUp(tl, ["#g2", "#g3", "#g4"], 18.42);
+
+      /* 7. questionnaire */
+      MK.rise(tl, "#h0", 18.85);
+      gsap.set("#form", { y: 1500, rotation: 6 }); tl.to("#form", { y: 0, rotation: -1.5, duration: 0.7, ease: E.card }, 19.0);
+      gsap.set(["#r1", "#r2", "#r3", "#r4"], { opacity: 0, x: -40 });
+      tl.to(["#r1", "#r2", "#r3", "#r4"], { opacity: 1, x: 0, duration: 0.3, stagger: 0.1, ease: "power2.out" }, 19.5);
+      MK.draw(tl, "#k1", 20.37, 0.22); MK.draw(tl, "#k2", 20.71, 0.22); MK.draw(tl, "#k3", 21.07, 0.22);
+      MK.draw(tl, "#rg", 21.5, 0.5, "power2.out");
+      MK.shake(tl, "#form", 21.55, 8);
+      MK.fadeIn(tl, "#cta", 22.1, 0.3);
+      tl.to("#cta", { y: 16, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 3 }, 22.3);
+
+      MK.done(tl, TOTAL);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
