@@ -26,3 +26,7 @@ Douteuses (correspondance partielle, écartées par prudence) : 7615210462732504
 
 ## Préférence de l'entrepreneur
 Par lot de 10 : majorité d'hommes, mais au moins 3 vidéos de femmes.
+
+## Vidéos Gambie : accroche + carte de fin
+- Accroches en anglais, style Peryal (bandeau noir, texte blanc, mot clé jaune).
+- Carte de fin : photo MOOYAM de la boutique (pas le flacon Viorine des vidéos), ORDER NOW, Cash on delivery, Available in Gambia. **Jamais de prix sur la carte** (demande de l'entrepreneur, 2026-11-24).
