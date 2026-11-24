@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;font-family:Montserrat,sans-serif}
+.flag{display:inline-block;width:64px;height:44px;border-radius:6px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 2px rgba(255,255,255,.6)}
+.flag i{display:block}
+.flag .r{height:33%;background:#ce1126}.flag .w{height:3%;background:#fff}.flag .b{height:28%;background:#0c1c8c}.flag .g{height:33%;background:#3a7728}
